@@ -42,7 +42,8 @@ ROCK = "#8f969b"
 # sits on a vertex, so the roads double as the graph the trail is routed over. Tracks are drawn
 # dotted but are routed over like roads.
 ROADS = {
-    "Old Svalich Road (east)": [(998, 388), (935, 392), (880, 410), (835, 428), (795, 440)],
+    "Old Svalich Road (east)": [(998, 388), (966, 390), (935, 392), (880, 410), (835, 428), (795, 440)],
+    "Manor lane": [(966, 390), (970, 378), (974, 366)],
     "Village to Tser Pool": [(795, 440), (770, 452), (745, 470), (710, 490), (675, 478), (652, 445)],
     "Tser Pool to the falls": [(652, 445), (632, 425), (612, 410)],
     "Tser Falls to the fork": [(612, 410), (600, 378), (596, 345), (590, 312)],
@@ -122,7 +123,7 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Ivlis River", (830, 478), 11, 0),
     ("Raven River", (66, 250), 10, 0),
     ("Mount Ghakis", (470, 694), 15, 0),
-    ("Old Svalich Road", (880, 400), 10, -18),
+    ("Old Svalich Road", (852, 432), 10, -22),
     ("Tser Falls", (624, 448), 10, 0),
 ]
 
@@ -198,6 +199,15 @@ def castle(x: float, y: float) -> str:
         f'<path d="M{x - 21},{y + 4} v-16 h7 v16 Z M{x + 14},{y + 4} v-18 h7 v18 Z" fill="{stone}"/>'
         f'<path d="M{x - 21},{y - 12} l3.5,-8 l3.5,8 Z M{x + 14},{y - 14} l3.5,-9 l3.5,9 Z" fill="{dark}"/>'
         f'<path d="M{x - 3},{y + 2} v-7 h6 v7" fill="{INK}"/></g>')
+
+
+def manor(x: float, y: float) -> str:
+    """Durst Manor: a tall townhouse with a pointed roof, out past the gates in the mists."""
+    return (f'<g stroke="{INK}" stroke-width="0.8" stroke-linejoin="round">'
+            f'<path d="M{x - 8},{y + 2} v-16 h16 v16 Z" fill="#8a7e74"/>'
+            f'<path d="M{x - 10},{y - 14} l10,-10 l10,10 Z" fill="#4a3b33"/>'
+            f'<path d="M{x - 5},{y - 10} h3 v3 h-3 Z M{x + 2},{y - 10} h3 v3 h-3 Z M{x - 5},{y - 4} h3 v3 h-3 Z '
+            f'M{x + 2},{y - 4} h3 v3 h-3 Z" fill="#e9d79b" stroke-width="0.4"/></g>')
 
 
 def village(rng: random.Random, x: float, y: float, n: int = 5) -> str:
@@ -316,6 +326,7 @@ def draw_base() -> str:
     parts.append("".join(tree(rng, x, y) for x, y in trees))
 
     parts.append(castle(707, 357))
+    parts.append(manor(974, 366))
     for x, y in [(795, 440), (388, 243), (102, 232)]:
         parts.append(village(rng, x, y + 12, 6))
     parts.append(f'<path d="M86,342 h12 v10 h-12 Z M100,346 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')

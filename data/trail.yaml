@@ -1,14 +1,15 @@
 # Where the party actually went each session, in order (places from data/map.yaml).
 # Written by having Claude read each post; mentions of a place are not visits. Review like any
 # other content: the quote after each entry is the evidence. An empty list means nowhere on the map.
+# Chris: the sessions before the village were at Durst Manor, east of the gates, not in the village.
 
 sessions:
-  2023-11-07-session-zero: [barovia]   # "came across a four story manor" (Durst Manor) after leaving Daggerford through the mists
-  2023-11-28-entering-durst-manor: [barovia]   # "spoke with the two children outside the Manor"
-  2023-12-12-deeper-into-the-manor: [barovia]   # "Heading up to the third floor" of Durst Manor
-  2024-01-09-finishing-the-manor: [barovia]   # attic, then "proceeded down the staircase" under Durst Manor
-  2024-01-30-walter-we-are-coming-for-you: [barovia]   # kills Walter under the manor; "climbed out of the house, which then collapsed"
-  2024-02-13-barovia-barovia: [gates-of-barovia, barovia]   # "reached some stonework and a closed gate"; "entered a village"; "Blood on the Vine Tavern"
+  2023-11-07-session-zero: [durst-manor]   # "came across a four story manor" (Durst Manor) after leaving Daggerford through the mists
+  2023-11-28-entering-durst-manor: [durst-manor]   # "spoke with the two children outside the Manor"
+  2023-12-12-deeper-into-the-manor: [durst-manor]   # "Heading up to the third floor" of Durst Manor
+  2024-01-09-finishing-the-manor: [durst-manor]   # attic, then "proceeded down the staircase" under Durst Manor
+  2024-01-30-walter-we-are-coming-for-you: [durst-manor]   # kills Walter under the manor; "climbed out of the house, which then collapsed"
+  2024-02-13-barovia-barovia: [durst-manor, gates-of-barovia, barovia]   # "reached some stonework and a closed gate"; "entered a village"; "Blood on the Vine Tavern"
   2024-02-27-rest-for-the-wicked: [barovia]   # "took Ismark's father up to the church"; Doru beneath the church
   2024-03-26-leaving-village-barovia: [barovia]   # Doru dissolved in stream, shopping; "At noon we ... ventured forth towards Tser pool" (ends at the oak, not on map)
   2024-04-02-we-meet-again-for-the-first-time: [tser-pool]   # "found a clearing by a lake ... Perhaps this is the Vistani encampment with Madam Eva"
