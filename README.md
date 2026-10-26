@@ -57,7 +57,8 @@ just import <export-folder>     # re-import an Obsidian Portal export into conte
    it sets the page address `/posts/<slug>/`. `tagline` and `tags` are optional. Quote titles that
    contain a colon.
 2. Run `just serve` and check the post at <http://localhost:8000/>.
-3. Commit the file. Netlify rebuilds on push once the site is connected.
+3. Commit the file and open a pull request (see `CONTRIBUTING.md`). GitHub runs the tests and a
+   build on every pull request; Netlify publishes the site when it is merged to `main`.
 
 ## Importing from Obsidian Portal
 
