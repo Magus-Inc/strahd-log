@@ -154,3 +154,40 @@ code { background: var(--panel); padding: 0.05rem 0.3rem; }
 .search-form input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
 #results .snippet { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.95rem; }
 #results mark { background: rgba(201, 166, 107, 0.3); color: var(--text); padding: 0 0.1rem; }
+
+/* Map: our own drawing as the background, places and the party's trail drawn over it */
+.map-figure { margin: 1.2rem 0; }
+.map { display: block; width: 100%; height: auto; border: 1px solid var(--panel-edge); background: #3e2614; }
+.map .pin { cursor: pointer; }
+.map .pin-ring { fill: rgba(27, 18, 11, 0.15); stroke: #1b120b; stroke-width: 2; }
+.map .pin-dot { fill: #1b120b; }
+.map .pin text {
+  font: italic 15px "Palatino Linotype", Palatino, Georgia, serif;
+  fill: #1b120b;
+  stroke: #b48a5c;
+  stroke-width: 4px;
+  paint-order: stroke;
+  stroke-linejoin: round;
+}
+.map .pin:hover .pin-ring, .map .pin:focus .pin-ring { fill: rgba(139, 15, 15, 0.35); stroke: #8b0f0f; }
+.map .trail path { fill: none; stroke: #8b0f0f; stroke-width: 3; stroke-dasharray: 9 6; stroke-linecap: round; opacity: 0.85; }
+.map .trail path.faded { opacity: 0.25; }
+.map .trail path.current { stroke-width: 4.5; opacity: 1; stroke-dasharray: none; }
+.map .trail path.hidden, .map.no-trail .trail { display: none; }
+.map-controls { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; justify-content: center; font-size: 0.95rem; color: var(--muted); }
+.map-controls input[type="range"] { vertical-align: middle; width: 10rem; accent-color: var(--blood); }
+.map-controls input[type="checkbox"] { accent-color: var(--blood); }
+.trail-now { text-align: center; min-height: 1.5em; margin: 0.4rem 0 0; }
+.place-panel { position: relative; background: var(--panel); border: 1px solid var(--panel-edge); border-left: 3px solid var(--blood); padding: 0.8rem 1.2rem; }
+.place-panel h2 { margin: 0 0 0.2rem; font-size: 1.25rem; }
+.place-close { position: absolute; top: 0.3rem; right: 0.6rem; background: none; border: 0; color: var(--muted); font-size: 1.6rem; cursor: pointer; }
+.where-we-were { margin-top: 2.5rem; }
+.where-we-were h2 { font-size: 1.2rem; }
+.trail-list { margin-top: 2rem; }
+.site-footer .legal { font-style: normal; font-size: 0.78rem; max-width: 40rem; margin: 0.8rem auto 0; }
+/* On a phone the map keeps a readable size and scrolls sideways instead of shrinking. */
+@media (max-width: 40rem) {
+  .map-figure { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-left: -1rem; margin-right: -1rem; }
+  .map-figure .map { min-width: 760px; }
+  .map-figure::after { content: "Swipe the map sideways to explore."; display: block; text-align: center; color: var(--muted); font-size: 0.85rem; padding-top: 0.3rem; }
+}

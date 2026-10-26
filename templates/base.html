@@ -17,6 +17,9 @@
     <nav class="site-nav">
       <a href="{{ base }}">Chronicle</a>
       <a href="{{ base }}wiki/">Wiki</a>
+{% if all_places %}
+      <a href="{{ base }}map/">Map</a>
+{% endif %}
       <a href="{{ base }}search/">Search</a>
       <a href="{{ base }}tags/">Tags</a>
       <a href="{{ base }}feed.xml">Feed</a>
@@ -27,6 +30,7 @@
   </main>
   <footer class="site-footer">
     <p>The eye is ever watchful.</p>
+    <p class="legal">{{ site_title }} is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. &copy;Wizards of the Coast LLC.</p>
   </footer>
 </body>
 </html>

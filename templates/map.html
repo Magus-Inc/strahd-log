@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% from "_map.html" import barovia %}
+{% block title %}Map | {{ site_title }}{% endblock %}
+{% block content %}
+    <h1 class="page-title">Barovia</h1>
+    <p class="empty">Tap a place for its wiki page and the sessions that happened there.</p>
+    <div class="map-controls">
+      <label><input type="checkbox" id="show-trail" checked> Show the party's trail</label>
+      <label class="trail-range">Up to session <input type="range" id="trail-upto" min="1" max="{{ legs | length }}" value="{{ legs | length }}"> <output id="trail-n">{{ legs | length }}</output></label>
+    </div>
+    <p class="trail-now" id="trail-now"></p>
+    {{ barovia(places, legs, interactive=True) }}
+    <aside class="place-panel" id="place-panel" hidden>
+      <button type="button" class="place-close" aria-label="Close">&times;</button>
+      <h2><a id="place-title" href="#"></a></h2>
+      <p id="place-summary" class="tagline"></p>
+      <ol id="place-sessions" class="post-list compact"></ol>
+    </aside>
+    <section class="trail-list">
+      <h2>The trail, session by session</h2>
+      <ol class="post-list compact">
+{% for leg in legs %}
+        <li><a class="post-link" href="{{ base }}{{ leg.post.path }}">{{ leg.post.title }}</a> <time datetime="{{ leg.post.date.isoformat() }}">{{ leg.post.date | nice_date }}</time>
+          <p class="snippet">{% for slug in leg.stops %}{{ all_places[slug].title }}{% if not loop.last %} &rarr; {% endif %}{% endfor %}</p></li>
+{% endfor %}
+      </ol>
+    </section>
+    <script>
+    (function () {
+      var base = {{ base | tojson }};
+      var data = {{ map_data | tojson }};
+      var svg = document.querySelector(".map");
+      var show = document.getElementById("show-trail");
+      var upto = document.getElementById("trail-upto");
+      var n = document.getElementById("trail-n");
+      var now = document.getElementById("trail-now");
+      var panel = document.getElementById("place-panel");
+
+      function esc(s) {
+        return s.replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; });
+      }
+      function redraw() {
+        var limit = +upto.value;
+        svg.classList.toggle("no-trail", !show.checked);
+        upto.disabled = !show.checked;
+        n.textContent = limit;
+        svg.querySelectorAll(".leg").forEach(function (line) {
+          var i = +line.getAttribute("data-i");
+          line.classList.toggle("hidden", i > limit);
+          line.classList.toggle("current", i === limit && limit < data.legs.length);
+        });
+        var leg = data.legs[limit - 1];
+        now.innerHTML = show.checked && leg ? 'Session ' + limit + ': <a href="' + base + leg.u + '">' + esc(leg.t) + "</a>" : "";
+      }
+      show.addEventListener("change", redraw);
+      upto.addEventListener("input", redraw);
+
+      svg.querySelectorAll(".js-pin").forEach(function (pin) {
+        pin.addEventListener("click", function (event) {
+          var place = data.places[pin.getAttribute("data-place")];
+          if (!place) return;
+          event.preventDefault();
+          var title = document.getElementById("place-title");
+          title.textContent = place.t;
+          title.href = base + place.u;
+          document.getElementById("place-summary").textContent = place.s || "";
+          document.getElementById("place-sessions").innerHTML = place.sessions.length
+            ? place.sessions.map(function (s) { return '<li><a class="post-link" href="' + base + s.u + '">' + esc(s.t) + "</a> <time>" + esc(s.d) + "</time></li>"; }).join("")
+            : '<li class="empty">No session has stopped here yet.</li>';
+          panel.hidden = false;
+          panel.scrollIntoView({block: "nearest", behavior: "smooth"});
+        });
+      });
+      panel.querySelector(".place-close").addEventListener("click", function () { panel.hidden = true; });
+      redraw();
+    })();
+    </script>
+{% endblock %}
