@@ -45,6 +45,7 @@ class WikiPage:
     aliases: list[str] = field(default_factory=list)
     summary: str = ""
     player: str = ""
+    former: bool = False  # a player character no longer played
     source: str = ""
     obsidian_portal_url: str = ""
     body_md: str = ""
@@ -77,6 +78,7 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         aliases=[str(a) for a in aliases],
         summary=str(meta.get("summary") or ""),
         player=str(meta.get("player") or ""),
+        former=bool(meta.get("former")),
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         body_md=body,

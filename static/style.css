@@ -265,3 +265,6 @@ main.wide { max-width: 80rem; }
 }
 .map .labels { pointer-events: none; }
 .session-list.numbered time { margin-left: 0; }
+.chip.former { vertical-align: middle; font-family: var(--sans); font-size: 0.7rem; color: var(--muted); background: var(--surface-2); border-color: var(--line); }
+h1 .chip.former { font-size: 0.8rem; }
+.meta.player { margin-top: 0.1rem; }

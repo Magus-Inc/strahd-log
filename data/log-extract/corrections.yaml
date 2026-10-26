@@ -68,3 +68,8 @@ summaries:
   Vasilka: The flesh-built "perfect bride" the Abbot made for Strahd.
   Vladimir Hornguard: Slain commander of the Order of the Silver Dragon, now a vengeful presence at Argynvostholt.
   Dimitri Krezkov: The baron of Krezk, husband of Anna.
+
+# Confirmed by Chris: Zorpheus was a player character Grant played for a while.
+players:
+  Zorpheus: Grant Haseloff
+former: [Zorpheus]

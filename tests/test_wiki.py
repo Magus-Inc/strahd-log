@@ -288,3 +288,16 @@ def test_corrections_merge_fix_move_and_retype(tmp_path):
     assert werewolf["summary"] == "A werewolf." and werewolf["title"] == "Bianca (werewolf)"
     zollst_meta, zollst = build.split_front_matter((wiki_dir / "zollst.md").read_text(encoding="utf-8"))
     assert zollst_meta["type"] == "npc" and "Wrong fact" not in zollst
+
+
+def test_corrections_set_player_and_former_pc(tmp_path):
+    posts = tmp_path / "posts"
+    write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Zorpheus", "type": "character", "facts": [{"text": "A fate bard", "post": "2024-01-09-first"}]}]))
+    wiki_from_extract.apply([extract], tmp_path / "wiki", posts,
+                            {"players": {"Zorpheus": "Grant Haseloff"}, "former": ["Zorpheus"]})
+    meta = build.split_front_matter((tmp_path / "wiki" / "zorpheus.md").read_text(encoding="utf-8"))[0]
+    assert meta["player"] == "Grant Haseloff" and meta["former"] is True
+    page = wiki.parse_wiki_page(tmp_path / "wiki" / "zorpheus.md", build.split_front_matter)
+    assert page.former and page.player == "Grant Haseloff"

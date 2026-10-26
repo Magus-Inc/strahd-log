@@ -7,7 +7,7 @@
     <article class="post">
       <header class="post-head">
         <p class="eyebrow"><a href="{{ base }}wiki/">Wiki</a> &middot; <a href="{{ base }}wiki/#{{ types[page.type] | tag_slug }}">{{ types[page.type] }}</a></p>
-        <h1>{{ page.title }}</h1>
+        <h1>{{ page.title }}{% if page.former %} <span class="chip former">Former PC</span>{% endif %}</h1>
 {% if page.summary %}
         <p class="lede">{{ page.summary }}</p>
 {% endif %}

@@ -57,6 +57,8 @@ def load_corrections(path: Path) -> dict:
     move_facts: {"exact fact text": "Other Entity"}       # e.g. two people who share a name
     types: {Name: type}
     summaries: {Name: "summary"}
+    players: {Name: "Player Name"}                         # who played a player character
+    former: [Name, ...]                                    # player characters no longer played
     """
     if not path.exists():
         return {}
@@ -155,6 +157,8 @@ def apply(extract_files: list[Path], wiki_dir: Path, posts_dir: Path,
     refused = {n.lower() for n in fixes.get("not_alias") or []}
     types = {k.lower(): v for k, v in (fixes.get("types") or {}).items()}
     summaries = {k.lower(): v for k, v in (fixes.get("summaries") or {}).items()}
+    players = {k.lower(): v for k, v in (fixes.get("players") or {}).items()}
+    former = {n.lower() for n in fixes.get("former") or []}
     posts = load_posts(posts_dir)
     wiki_dir.mkdir(parents=True, exist_ok=True)
 
@@ -227,13 +231,15 @@ def apply(extract_files: list[Path], wiki_dir: Path, posts_dir: Path,
             summary = fixed or next((e["summary"] for e in group if e.get("summary")), "")
             if summary:
                 meta["summary"] = summary
-        player = next((e["player"] for e in group if e.get("player")), "")
+        player = next((players[n.lower()] for n in [meta["title"], *names] if n.lower() in players), "")             or next((e["player"] for e in group if e.get("player")), "")
         if player and not meta.get("player"):
             meta["player"] = player
+        if meta["title"].lower() in former and target["new"]:
+            meta["former"] = True
         if target["new"]:
             meta["source"] = COMPILED
         if front is None or meta != original:
-            order = ["title", "type", "aliases", "summary", "player", "source", "obsidian_portal_url"]
+            order = ["title", "type", "aliases", "summary", "player", "former", "source", "obsidian_portal_url"]
             meta = {k: meta[k] for k in order if k in meta} | {k: v for k, v in meta.items() if k not in order}
             front = "---\n" + yaml.safe_dump(meta, sort_keys=False, allow_unicode=True, width=1000) + "---\n"
         body = (body_prefix + "\n\n" if body_prefix.strip() else "") + log_section(fact_lines(group, posts))
