@@ -20,7 +20,8 @@ def content(tmp_path):
     folder = tmp_path / "content"
     write_post(folder, "2024-01-09-first.md",
                "title: First Night\ndate: '2024-01-09T21:00:00-06:00'\nslug: first\ntags: [Barovia]\n",
-               "## Arrival\n\n* **Mist:** thick\n\n> A quote\n\n| A | B |\n| --- | --- |\n| 1 | 2 |\n")
+               "## Arrival\n\n* **Mist:** thick\n\n> A quote\n\n| A | B |\n| --- | --- |\n| 1 | 2 |\n\n"
+               "![Icon](/favicon.svg)\n")
     write_post(folder, "2024-02-13-second.md",
                "title: 'Second: Wolves'\ndate: '2024-02-13T21:00:00-06:00'\ntagline: Wolves love them\n"
                "tags: [Barovia, Wolves]\n")
@@ -123,3 +124,12 @@ def test_base_path_from_environment(content, tmp_path, monkeypatch):
     out = tmp_path / "public"
     build.build(content, out, site_url="https://example.github.io")
     assert 'href="/strahd-log/style.css"' in (out / "index.html").read_text(encoding="utf-8")
+
+
+def test_post_images_follow_base_path_and_are_absolute_in_feed(content, tmp_path):
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://example.github.io", base_path="/strahd-log/")
+    page = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
+    assert '<img alt="Icon" src="/strahd-log/favicon.svg"' in page
+    feed = (out / "feed.xml").read_text(encoding="utf-8")
+    assert "https://example.github.io/strahd-log/favicon.svg" in feed

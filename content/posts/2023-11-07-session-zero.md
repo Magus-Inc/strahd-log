@@ -13,4 +13,4 @@ The group was unsure what to do next but felt compelled to follow these relics a
 
 After an unknown amount of time walking in the mists the group came across a [four story manor](https://curseofstrahdowlbear.obsidianportal.com/wikis/manor) with a balcony on the third floor. A boy and a girl were standing near the front of the manor, perhaps ready to greet the group. The mists retreated, and from looking around there wasn’t a clear path behind the group to indicate how they could get back to Daggerford if they wanted to.
 
-![IMG_1002.jpeg](https://db4sgowjqfwig.cloudfront.net/campaigns/319855/assets/1368608/IMG_1002.jpeg?1700409066)
+![IMG_1002.jpeg](/images/session-zero-1.jpeg)

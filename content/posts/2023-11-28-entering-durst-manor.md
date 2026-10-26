@@ -20,7 +20,7 @@ The party braved entering the [Durst Manor](https://curseofstrahdowlbear.obsidia
 
 Based on the chimes heard earlier the party assumed it was 6 pm and they may only have six hours until midnight, at which point something terrible might happen. If you believe in such things.
 
-![durst_floor1__Small_.jpg](https://db4sgowjqfwig.cloudfront.net/campaigns/319855/assets/1370971/durst_floor1__Small_.jpg?1701396705)
+![durst_floor1__Small_.jpg](/images/entering-durst-manor-1.jpg)
 
 The party tried to open the entrance door but found them locked shut and then went to explore the south west room, which they at first believed to contain a live wolf; upon further inspection discovered that there were three stuffed wolves contained within, one dark or gray, and two brown, one brown wolf snarling at another in some way. Two smaller wolves, like toys built by children, were also found on the floor, one with Rose and one with Thorn stitched on them.
 
@@ -50,7 +50,7 @@ The last room of the first floor to be explored was a banquet hall which had eig
 
 The party then carefully proceeded up to the second floor.
 
-![durst_floor2__Small_.jpg](https://db4sgowjqfwig.cloudfront.net/campaigns/319855/assets/1370972/durst_floor2__Small_.jpg?1701396707)
+![durst_floor2__Small_.jpg](/images/entering-durst-manor-2.jpg)
 
 They found four suits of armor and a long sword with a windmill on it.
 

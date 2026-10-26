@@ -16,7 +16,7 @@
         </p>
       </header>
       <div class="post-body">
-{{ post.html | safe }}
+{{ body | safe }}
       </div>
 {% if post.obsidian_portal_url %}
       <p class="source">Originally posted on <a href="{{ post.obsidian_portal_url }}">Obsidian Portal</a>.</p>

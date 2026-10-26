@@ -101,6 +101,12 @@ def render_markdown(text: str) -> str:
     return markdown.markdown(text, extensions=["extra", "sane_lists", "smarty"], output_format="html")
 
 
+def rebase(html: str, prefix: str) -> str:
+    """Point root-relative links in rendered Markdown ("/images/x.png") at prefix ("/strahd-log/" or
+    an absolute site address), so post bodies can use /images/... whatever the base path."""
+    return re.sub(r'((?:src|href)=")/(?!/)', lambda m: m.group(1) + prefix, html)
+
+
 def load_posts(content_dir: Path) -> list[Post]:
     posts = [parse_post(p) for p in sorted(content_dir.glob("*.md"))]
     slugs = [p.slug for p in posts]
@@ -167,7 +173,7 @@ def build_feed(posts: list[Post], root: str, limit: int = 20) -> str:
             sub(entry, "summary", post.tagline)
         for tag in post.tags:
             sub(entry, "category", term=tag)
-        sub(entry, "content", post.html, type="html")
+        sub(entry, "content", rebase(post.html, root), type="html")
     return '<?xml version="1.0" encoding="utf-8"?>\n' + ET.tostring(feed, encoding="unicode") + "\n"
 
 
@@ -196,7 +202,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         newer = posts[i - 1] if i > 0 else None
         older = posts[i + 1] if i + 1 < len(posts) else None
         write(out_dir / "posts" / post.slug / "index.html",
-              env.get_template("post.html").render(post=post, newer=newer, older=older))
+              env.get_template("post.html").render(post=post, body=rebase(post.html, base),
+                                                   newer=newer, older=older))
 
     tags: dict[str, list[Post]] = {}
     for post in posts:
