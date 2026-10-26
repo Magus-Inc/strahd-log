@@ -191,3 +191,4 @@ code { background: var(--panel); padding: 0.05rem 0.3rem; }
   .map-figure .map { min-width: 760px; }
   .map-figure::after { content: "Swipe the map sideways to explore."; display: block; text-align: center; color: var(--muted); font-size: 0.85rem; padding-top: 0.3rem; }
 }
+.feed-link { font-size: 0.85rem; margin-left: 0.4rem; }

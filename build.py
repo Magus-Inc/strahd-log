@@ -230,6 +230,11 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     env.filters["nice_date"] = nice_date
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
                        types=wiki.TYPES, all_places=places)
+    tags: dict[str, list[Post]] = {}
+    for post in posts:
+        for tag in post.tags:
+            tags.setdefault(tag, []).append(post)
+    env.globals["has_tags"] = bool(tags)
 
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -245,12 +250,10 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
                   leg=leg_by_post.get(post.slug),
                   stops=[places[s] for s in leg_by_post[post.slug]["stops"]] if post.slug in leg_by_post else []))
 
-    tags: dict[str, list[Post]] = {}
-    for post in posts:
-        for tag in post.tags:
-            tags.setdefault(tag, []).append(post)
-    write(out_dir / "tags" / "index.html",
-          env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
+    # The tags page and its menu link only exist once some post has tags.
+    if tags:
+        write(out_dir / "tags" / "index.html",
+              env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
     groups = [(label, [w for w in pages if w.type == kind]) for kind, label in wiki.TYPES.items()]
     write(out_dir / "wiki" / "index.html",
           env.get_template("wiki_index.html").render(groups=[g for g in groups if g[1]], count=len(pages)))

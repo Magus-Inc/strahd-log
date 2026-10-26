@@ -21,15 +21,16 @@
       <a href="{{ base }}map/">Map</a>
 {% endif %}
       <a href="{{ base }}search/">Search</a>
+{% if has_tags %}
       <a href="{{ base }}tags/">Tags</a>
-      <a href="{{ base }}feed.xml">Feed</a>
+{% endif %}
     </nav>
   </header>
   <main>
 {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
-    <p>The eye is ever watchful.</p>
+    <p>The eye is ever watchful. <a class="feed-link" href="{{ base }}feed.xml">Follow new sessions (feed)</a></p>
     <p class="legal">{{ site_title }} is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. &copy;Wizards of the Coast LLC.</p>
   </footer>
 </body>
