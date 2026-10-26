@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Tags | {{ site_title }}{% endblock %}
+{% block content %}
+    <h1 class="page-title">Tags</h1>
+{% if not tags %}
+    <p class="empty">No posts are tagged yet. Add <code>tags:</code> to a post's front matter.</p>
+{% else %}
+    <p class="tag-cloud">
+{% for tag, tagged in tags %}
+      <a class="tag" href="#{{ tag | tag_slug }}">{{ tag }} <small>{{ tagged | length }}</small></a>
+{% endfor %}
+    </p>
+{% for tag, tagged in tags %}
+    <section class="tag-section" id="{{ tag | tag_slug }}">
+      <h2>{{ tag }}</h2>
+      <ol class="post-list compact">
+{% for post in tagged %}
+        <li><a class="post-link" href="{{ post.url }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></li>
+{% endfor %}
+      </ol>
+    </section>
+{% endfor %}
+{% endif %}
+{% endblock %}

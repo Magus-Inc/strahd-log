@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site_title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site_subtitle }}{% endblock %}">
+  <meta name="theme-color" content="#0b0708">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="/feed.xml">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="/">{{ site_title }}</a>
+    <p class="site-subtitle">{{ site_subtitle }}</p>
+    <nav class="site-nav">
+      <a href="/">Chronicle</a>
+      <a href="/tags/">Tags</a>
+      <a href="/feed.xml">Feed</a>
+    </nav>
+  </header>
+  <main>
+{% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <p>The eye is ever watchful.</p>
+  </footer>
+</body>
+</html>

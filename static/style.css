@@ -1,0 +1,132 @@
+/* Curse of Strahd adventure log: blood red on black, serif headings, readable on a phone. */
+:root {
+  --bg: #0b0708;
+  --panel: #150d0f;
+  --panel-edge: #2b1418;
+  --text: #e4d9cf;
+  --muted: #a3958b;
+  --blood: #9e1b24;
+  --blood-bright: #d13b43;
+  --gold: #c9a66b;
+  --heading: "Cinzel", "Trajan Pro", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --body: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg) radial-gradient(ellipse at top, #2a0b10 0%, var(--bg) 60%) no-repeat;
+  color: var(--text);
+  font: 1.125rem/1.7 var(--body);
+}
+
+a { color: var(--blood-bright); text-underline-offset: 0.15em; }
+a:hover, a:focus { color: var(--gold); }
+
+main { max-width: 46rem; margin: 0 auto; padding: 0 1rem 3rem; }
+
+.site-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+  border-bottom: 1px solid var(--panel-edge);
+  margin-bottom: 2rem;
+}
+.site-title {
+  font: 700 clamp(1.6rem, 6vw, 2.6rem)/1.2 var(--heading);
+  letter-spacing: 0.06em;
+  color: var(--blood-bright);
+  text-decoration: none;
+  text-shadow: 0 0 18px rgba(158, 27, 36, 0.55);
+}
+.site-subtitle { margin: 0.4rem 0 1rem; color: var(--muted); font-style: italic; }
+.site-nav { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+.site-nav a {
+  font-family: var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--heading); color: var(--gold); line-height: 1.25; letter-spacing: 0.02em; }
+h1 { color: var(--blood-bright); }
+.post-body h1 { font-size: 1.6rem; }
+.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--panel-edge); padding-bottom: 0.2rem; margin-top: 2.2rem; }
+.post-body h3 { font-size: 1.15rem; }
+
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list > li {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-left: 3px solid var(--blood);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+.post-list.compact > li { padding: 0.6rem 1rem; margin-bottom: 0.5rem; }
+.post-link { font: 600 1.2rem/1.35 var(--heading); color: var(--text); text-decoration: none; display: block; }
+.post-list.compact .post-link { display: inline; font-size: 1rem; }
+.post-link:hover { color: var(--blood-bright); }
+.post-list time, .post-meta time { color: var(--muted); font-size: 0.9rem; }
+.tagline { margin: 0.35rem 0 0; color: var(--muted); font-style: italic; }
+
+.post-header { text-align: center; margin-bottom: 2rem; }
+.post-header h1 { font-size: clamp(1.6rem, 6vw, 2.3rem); margin: 0 0 0.5rem; }
+.post-meta { margin: 0.5rem 0 0; }
+.tag {
+  display: inline-block;
+  margin: 0.15rem 0.2rem;
+  padding: 0 0.55rem;
+  border: 1px solid var(--blood);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-body img { max-width: 100%; height: auto; display: block; margin: 1rem auto; border: 1px solid var(--panel-edge); }
+.post-body blockquote {
+  margin: 1.2rem 0;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--blood);
+  background: var(--panel);
+  font-style: italic;
+}
+.post-body table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
+.post-body th, .post-body td { border: 1px solid var(--panel-edge); padding: 0.35rem 0.6rem; text-align: left; }
+.post-body th { background: var(--panel); color: var(--gold); }
+.post-body ul, .post-body ol { padding-left: 1.4rem; }
+.post-body li { margin: 0.25rem 0; }
+.post-body strong { color: #f2e6da; }
+.post-body hr { border: 0; border-top: 1px solid var(--panel-edge); margin: 2rem 0; }
+code { background: var(--panel); padding: 0.05rem 0.3rem; }
+
+.source { color: var(--muted); font-size: 0.9rem; margin-top: 2.5rem; text-align: center; }
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--panel-edge);
+  padding-top: 1.5rem;
+}
+.pager a { text-decoration: none; color: var(--text); font-family: var(--heading); font-size: 0.95rem; line-height: 1.35; }
+.pager a span { display: block; color: var(--blood-bright); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.pager .newer { text-align: right; grid-column: 2; }
+
+.page-title { text-align: center; }
+.tag-cloud { text-align: center; }
+.tag-section { margin-top: 2rem; }
+.empty { text-align: center; color: var(--muted); }
+
+.site-footer { text-align: center; color: var(--muted); font-style: italic; padding: 2rem 1rem; border-top: 1px solid var(--panel-edge); }
+
+@media (max-width: 30rem) {
+  body { font-size: 1.05rem; }
+  .pager { grid-template-columns: 1fr; }
+  .pager .newer { grid-column: 1; grid-row: 1; }
+}

@@ -1,0 +1,86 @@
+from datetime import datetime
+from pathlib import Path
+from xml.etree import ElementTree as ET
+
+import pytest
+
+import build
+
+ATOM = "{http://www.w3.org/2005/Atom}"
+
+
+def write_post(folder: Path, name: str, front: str, body: str = "Body.\n") -> None:
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / name).write_text(f"---\n{front}---\n\n{body}", encoding="utf-8")
+
+
+@pytest.fixture
+def content(tmp_path):
+    folder = tmp_path / "content"
+    write_post(folder, "2024-01-09-first.md",
+               "title: First Night\ndate: '2024-01-09T21:00:00-06:00'\nslug: first\ntags: [Barovia]\n",
+               "## Arrival\n\n* **Mist:** thick\n\n> A quote\n\n| A | B |\n| --- | --- |\n| 1 | 2 |\n")
+    write_post(folder, "2024-02-13-second.md",
+               "title: 'Second: Wolves'\ndate: '2024-02-13T21:00:00-06:00'\ntagline: Wolves love them\n"
+               "tags: [Barovia, Wolves]\n")
+    write_post(folder, "2026-09-01-third.md", "title: Third & Last\ndate: '2026-09-01T17:00:00-05:00'\n")
+    return folder
+
+
+def test_split_front_matter():
+    meta, body = build.split_front_matter("---\ntitle: 'A: B'\ntags: [x]\n---\n\nHello\n")
+    assert meta == {"title": "A: B", "tags": ["x"]}
+    assert body.strip() == "Hello"
+    assert build.split_front_matter("No front matter") == ({}, "No front matter")
+
+
+def test_parse_post_reads_fields_and_defaults_slug(content):
+    post = build.parse_post(content / "2026-09-01-third.md")
+    assert post.slug == "third"  # from the file name
+    assert post.date == datetime.fromisoformat("2026-09-01T17:00:00-05:00")
+    assert post.tags == [] and post.tagline == ""
+
+
+def test_parse_post_requires_title(tmp_path):
+    write_post(tmp_path, "2024-01-01-x.md", "date: '2024-01-01'\n")
+    with pytest.raises(ValueError, match="title"):
+        build.parse_post(tmp_path / "2024-01-01-x.md")
+
+
+def test_build_writes_pages_feed_and_links(content, tmp_path):
+    out = tmp_path / "public"
+    posts = build.build(content, out, site_url="https://log.example")
+    assert [p.slug for p in posts] == ["third", "second", "first"]
+
+    for slug in ("first", "second", "third"):
+        assert (out / "posts" / slug / "index.html").is_file()
+    assert (out / "style.css").is_file()
+
+    home = (out / "index.html").read_text(encoding="utf-8")
+    assert home.index("Third &amp; Last") < home.index("Second: Wolves") < home.index("First Night")
+    assert "Wolves love them" in home and "September 1, 2026" in home
+
+    middle = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    assert 'href="/posts/first/"' in middle and 'href="/posts/third/"' in middle
+    newest = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    assert 'href="/posts/second/"' in newest and "Next &rarr;" not in newest
+
+    first = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
+    assert "<h2>Arrival</h2>" in first and "<blockquote>" in first and "<table>" in first
+
+    tags = (out / "tags" / "index.html").read_text(encoding="utf-8")
+    assert 'id="barovia"' in tags and 'id="wolves"' in tags
+
+    feed = ET.parse(out / "feed.xml").getroot()
+    assert feed.tag == f"{ATOM}feed"
+    entries = feed.findall(f"{ATOM}entry")
+    assert [e.find(f"{ATOM}title").text for e in entries] == ["Third & Last", "Second: Wolves", "First Night"]
+    assert entries[0].find(f"{ATOM}link").get("href") == "https://log.example/posts/third/"
+    assert feed.find(f"{ATOM}updated").text == "2026-09-01T17:00:00-05:00"
+
+
+def test_duplicate_slugs_fail(tmp_path):
+    write_post(tmp_path, "2024-01-01-a.md", "title: A\ndate: '2024-01-01'\nslug: same\n")
+    write_post(tmp_path, "2024-01-02-b.md", "title: B\ndate: '2024-01-02'\nslug: same\n")
+    with pytest.raises(ValueError, match="duplicate"):
+        build.load_posts(tmp_path)

@@ -1,0 +1,7 @@
+# Site build (what Netlify installs) plus the importer and tests.
+-r requirements.txt
+textile==4.0.4
+markdownify==1.2.3
+beautifulsoup4==4.15.0
+tzdata
+pytest==9.1.1

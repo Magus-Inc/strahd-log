@@ -1,0 +1,224 @@
+"""Build the Curse of Strahd adventure log into public/.
+
+Reads content/posts/*.md (YAML front matter + Markdown) and writes the home page, one page per
+post at /posts/<slug>/, a tags page at /tags/ and an Atom feed at /feed.xml.
+
+    python build.py            # build
+    python build.py --serve    # build, then serve public/ on http://localhost:8000
+"""
+
+from __future__ import annotations
+
+import argparse
+import functools
+import http.server
+import os
+import re
+import shutil
+import sys
+from dataclasses import dataclass, field
+from datetime import date, datetime, timezone
+from pathlib import Path
+from xml.etree import ElementTree as ET
+
+import markdown
+import yaml
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+ROOT = Path(__file__).resolve().parent
+SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
+SITE_SUBTITLE = "An adventure log from the mists of Barovia"
+# Netlify sets URL to the site's main address during builds.
+DEFAULT_SITE_URL = "http://localhost:8000"
+
+
+@dataclass
+class Post:
+    title: str
+    date: datetime
+    slug: str
+    body_md: str
+    tagline: str = ""
+    tags: list[str] = field(default_factory=list)
+    obsidian_portal_url: str = ""
+    html: str = ""
+    source: Path | None = None
+
+    @property
+    def url(self) -> str:
+        return f"/posts/{self.slug}/"
+
+
+def split_front_matter(text: str) -> tuple[dict, str]:
+    """'---\\n<yaml>\\n---\\n<body>' -> (dict, body). Text without front matter has empty meta."""
+    text = text.replace("\r\n", "\n").lstrip("﻿")
+    m = re.match(r"^---\n(.*?)\n---\n?(.*)$", text, re.S)
+    if not m:
+        return {}, text
+    meta = yaml.safe_load(m.group(1)) or {}
+    if not isinstance(meta, dict):
+        raise ValueError("front matter is not a mapping")
+    return meta, m.group(2)
+
+
+def to_datetime(value) -> datetime:
+    if isinstance(value, datetime):
+        return value
+    if isinstance(value, date):
+        return datetime(value.year, value.month, value.day)
+    return datetime.fromisoformat(str(value).strip())
+
+
+def slug_from_filename(path: Path) -> str:
+    return re.sub(r"^\d{4}-\d\d-\d\d-", "", path.stem)
+
+
+def parse_post(path: Path) -> Post:
+    meta, body = split_front_matter(path.read_text(encoding="utf-8"))
+    for key in ("title", "date"):
+        if key not in meta:
+            raise ValueError(f"{path.name}: front matter has no {key}")
+    tags = meta.get("tags") or []
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(",") if t.strip()]
+    return Post(
+        title=str(meta["title"]),
+        date=to_datetime(meta["date"]),
+        slug=str(meta.get("slug") or slug_from_filename(path)),
+        body_md=body,
+        tagline=str(meta.get("tagline") or ""),
+        tags=[str(t) for t in tags],
+        obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
+        source=path,
+    )
+
+
+def render_markdown(text: str) -> str:
+    return markdown.markdown(text, extensions=["extra", "sane_lists", "smarty"], output_format="html")
+
+
+def load_posts(content_dir: Path) -> list[Post]:
+    posts = [parse_post(p) for p in sorted(content_dir.glob("*.md"))]
+    slugs = [p.slug for p in posts]
+    dupes = {s for s in slugs if slugs.count(s) > 1}
+    if dupes:
+        raise ValueError(f"duplicate slugs: {', '.join(sorted(dupes))}")
+    for post in posts:
+        post.html = render_markdown(post.body_md)
+    # Newest first; slug breaks ties so the order never depends on the file system.
+    return sorted(posts, key=lambda p: (sort_key(p.date), p.slug), reverse=True)
+
+
+def sort_key(when: datetime) -> float:
+    return (when if when.tzinfo else when.replace(tzinfo=timezone.utc)).timestamp()
+
+
+def tag_slug(tag: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", tag.lower()).strip("-")
+
+
+def nice_date(when: datetime) -> str:
+    """September 1, 2026 (strftime's %-d is not portable to Windows)."""
+    return f"{when:%B} {when.day}, {when:%Y}"
+
+
+def atom_time(when: datetime) -> str:
+    return (when if when.tzinfo else when.replace(tzinfo=timezone.utc)).isoformat()
+
+
+def build_feed(posts: list[Post], site_url: str, limit: int = 20) -> str:
+    ns = "http://www.w3.org/2005/Atom"
+    ET.register_namespace("", ns)
+    feed = ET.Element(f"{{{ns}}}feed")
+
+    def sub(parent, tag, text=None, **attrs):
+        el = ET.SubElement(parent, f"{{{ns}}}{tag}", attrs)
+        if text is not None:
+            el.text = text
+        return el
+
+    sub(feed, "title", SITE_TITLE)
+    sub(feed, "subtitle", SITE_SUBTITLE)
+    sub(feed, "id", site_url + "/")
+    sub(feed, "link", href=site_url + "/feed.xml", rel="self")
+    sub(feed, "link", href=site_url + "/")
+    sub(feed, "updated", atom_time(posts[0].date) if posts else "1970-01-01T00:00:00+00:00")
+    author = sub(feed, "author")
+    sub(author, "name", "The Owlbear Party")
+    for post in posts[:limit]:
+        entry = sub(feed, "entry")
+        sub(entry, "title", post.title)
+        sub(entry, "link", href=site_url + post.url)
+        sub(entry, "id", site_url + post.url)
+        sub(entry, "published", atom_time(post.date))
+        sub(entry, "updated", atom_time(post.date))
+        if post.tagline:
+            sub(entry, "summary", post.tagline)
+        for tag in post.tags:
+            sub(entry, "category", term=tag)
+        sub(entry, "content", post.html, type="html")
+    return '<?xml version="1.0" encoding="utf-8"?>\n' + ET.tostring(feed, encoding="unicode") + "\n"
+
+
+def write(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8", newline="\n")
+
+
+def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
+          site_url: str | None = None) -> list[Post]:
+    site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
+    posts = load_posts(content_dir)
+    env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]),
+                      trim_blocks=True, lstrip_blocks=True)
+    env.filters["tag_slug"] = tag_slug
+    env.filters["nice_date"] = nice_date
+    env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url)
+
+    if out_dir.exists():
+        shutil.rmtree(out_dir)
+    shutil.copytree(ROOT / "static", out_dir)
+
+    write(out_dir / "index.html", env.get_template("index.html").render(posts=posts))
+    for i, post in enumerate(posts):
+        newer = posts[i - 1] if i > 0 else None
+        older = posts[i + 1] if i + 1 < len(posts) else None
+        write(out_dir / "posts" / post.slug / "index.html",
+              env.get_template("post.html").render(post=post, newer=newer, older=older))
+
+    tags: dict[str, list[Post]] = {}
+    for post in posts:
+        for tag in post.tags:
+            tags.setdefault(tag, []).append(post)
+    write(out_dir / "tags" / "index.html",
+          env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
+    write(out_dir / "404.html", env.get_template("404.html").render())
+    write(out_dir / "feed.xml", build_feed(posts, site_url))
+    return posts
+
+
+def serve(out_dir: Path, port: int) -> None:
+    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(out_dir))
+    with http.server.ThreadingHTTPServer(("127.0.0.1", port), handler) as httpd:
+        print(f"Serving {out_dir} at http://localhost:{port}/ (Ctrl+C to stop)")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            pass
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Build the adventure log into public/")
+    parser.add_argument("--serve", action="store_true", help="serve public/ after building")
+    parser.add_argument("--port", type=int, default=8000)
+    args = parser.parse_args(argv)
+    site_url = f"http://localhost:{args.port}" if args.serve else None
+    posts = build(site_url=site_url)
+    print(f"Built {len(posts)} posts into {ROOT / 'public'}")
+    if args.serve:
+        serve(ROOT / "public", args.port)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
