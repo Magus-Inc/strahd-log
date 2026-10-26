@@ -1,6 +1,6 @@
 ---
 title: Escher
-type: creature
+type: npc
 summary: A golden-haired vampire spawn, once a Barovian bard and Doru's lieutenant.
 source: Compiled from the adventure log
 ---

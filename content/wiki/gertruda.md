@@ -1,7 +1,9 @@
 ---
 title: Gertruda
 type: npc
-summary: Mary's daughter from the Village of Barovia, held at Castle Ravenloft.
+aliases:
+- Gertrude
+summary: A girl from Barovia village who left alone for Vallaki at night.
 source: Compiled from the adventure log
 ---
 
@@ -10,6 +12,7 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
+* Reported missing in the tavern; Ismark promised to send someone. ([Barovia, Barovia](/posts/barovia-barovia/))
 * Sasha asked the party to rescue her; she was once Doru's fiancée. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Was confirmed to be in the King's Bedchamber. ([Welcome Back To Vellanki](/posts/welcome-back-to-vellanki/))
 * Her slipper was found on a spiral staircase. ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/))

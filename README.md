@@ -79,7 +79,10 @@ Pages come from two places, and the tools keep them apart:
 - **Compiled from the adventure log.** `just wiki-from-log` reads entity lists in
   `data/log-extract/*.json` (name, type, aliases, summary, facts, each fact citing the post it came
   from) and adds a "From the adventure log" section below any hand-written text, or creates a
-  draft page. Re-running replaces only that section. Today the lists were made by having Claude read
+  draft page. Re-running replaces only that section, and regenerates the compiled draft pages
+  (`source: Compiled from the adventure log`) from scratch. Reviewed fixes (two spellings of one
+  person, a wrong fact, an alias that mislinks, a wrong type) go in
+  `data/log-extract/corrections.yaml`, so they survive the extraction being redone. Today the lists were made by having Claude read
   the posts; the same step can later run on session transcripts and open a pull request for review.
 
 ```

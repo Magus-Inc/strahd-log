@@ -1,6 +1,8 @@
 ---
 title: Stanimir
 type: npc
+aliases:
+- Stanimere
 summary: A Vistani man at the Tser Pool camp.
 source: Compiled from the adventure log
 ---
@@ -12,3 +14,4 @@ source: Compiled from the adventure log
 
 * Welcomed the party and told a tale of a prince turned tyrant. ([Tser Pool](/posts/tser-pool/))
 * Told the true story of Arturi's curse. ([Tser Pool](/posts/tser-pool/))
+* Met the party near Sarepool and gave them a Clairvoyance Stone. ([Unwelcome Guests](/posts/unwelcome-guests/))

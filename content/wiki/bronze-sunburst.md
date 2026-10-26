@@ -11,4 +11,4 @@ source: Compiled from the adventure log
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Taken by vampire Doru. ([Rest for the Wicked](/posts/rest-for-the-wicked/))
-* Returned to Father Donavich by Schlopkht. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
+* Schlopkht volunteered to return it to Father Donavich. ([Leaving Village Barovia](/posts/leaving-village-barovia/))

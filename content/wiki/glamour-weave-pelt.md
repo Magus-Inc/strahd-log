@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Aera bought it from Zoldar for 50 gold. ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/))
+* Aera bought it for 50 gold at the shack of Zoldar and his brother Yvgeny. ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/))

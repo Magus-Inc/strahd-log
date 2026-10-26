@@ -2,7 +2,6 @@
 title: Baron's Mansion
 type: place
 aliases:
-- Burgomaster Mansion
 - Valokovitch Manor
 summary: The Baron of Vallaki's home, haunted by a spirit.
 source: Compiled from the adventure log

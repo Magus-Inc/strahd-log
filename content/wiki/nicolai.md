@@ -12,4 +12,3 @@ source: Compiled from the adventure log
 
 * Pranked with a stuffed bat at the inn; against the Baron along with Carl. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
 * Took Stella for a walk around the grounds. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))
-* Carl says a Nicolai, their father, died of a wasting sickness. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))

@@ -12,4 +12,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Refused King Barov's demand for fealty and was killed by Rahadin. ([A doll for Arabelle](/posts/a-doll-for-arabelle/))
+* Refused King Barov's demand for fealty; Rahadin shattered his blade and executed his family. ([A doll for Arabelle](/posts/a-doll-for-arabelle/))

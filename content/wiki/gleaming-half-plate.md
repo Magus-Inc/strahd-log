@@ -1,8 +1,6 @@
 ---
 title: Gleaming Half Plate
 type: item
-aliases:
-- Half Plate
 summary: Magic armor.
 source: Compiled from the adventure log
 ---

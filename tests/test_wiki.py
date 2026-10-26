@@ -43,7 +43,8 @@ def test_linker_skips_links_headings_and_self():
         "<p>Ireena again, Strahd again.</p>", self_slug=None)
     # The heading and the external link are left alone; the first plain mention of Strahd is linked.
     assert "<h2>Strahd</h2>" in html
-    assert html.count('href="/wiki/strahd/"') == 1 and "Strahd again" not in html.split("/wiki/strahd/")[0][-40:]
+    assert '<a class="wiki-link" href="/wiki/strahd/" title="Strahd">Strahd</a> again' in html
+    assert html.count('href="/wiki/strahd/"') == 1
     # Ireena was already linked by hand, so it is not linked a second time.
     assert html.count('href="/wiki/ireena/"') == 1
     assert mentioned == {"strahd", "ireena"}
@@ -182,3 +183,108 @@ def test_wiki_from_extract_keeps_author_text_and_adds_facts(tmp_path):
     before = {p.name: p.read_text(encoding="utf-8") for p in wiki_dir.iterdir()}
     wiki_from_extract.apply([extract], wiki_dir, posts)
     assert {p.name: p.read_text(encoding="utf-8") for p in wiki_dir.iterdir()} == before
+
+
+# --- regressions from the review of PR #1 --------------------------------------------------------
+
+def test_linker_matches_names_with_apostrophes_and_ampersands():
+    linker = wiki.Linker([page("mansion", "Baron's Mansion"), page("tower", "Kazan’s Tower"),
+                          page("inn", "Blood & Vine")])
+    html = build.render_markdown("We hid in the Baron's Mansion, then Kazan's Tower, then the Blood & Vine.")
+    linked, mentioned = linker.link(html)
+    assert mentioned == {"mansion", "tower", "inn"}
+    assert linked.count('class="wiki-link"') == 3
+
+
+def test_linker_leaves_quoted_attributes_alone():
+    linker = wiki.Linker([page("strahd", "Strahd")])
+    html, _ = linker.link('<span title="a > Strahd">hi</span> Strahd')
+    assert html == '<span title="a > Strahd">hi</span> <a class="wiki-link" href="/wiki/strahd/" title="Strahd">Strahd</a>'
+
+
+def test_load_wiki_rejects_duplicate_slugs(tmp_path):
+    write(tmp_path / "a.md", "---\ntitle: A\nslug: same\n---\n")
+    write(tmp_path / "b.md", "---\ntitle: B\nslug: same\n---\n")
+    with pytest.raises(ValueError, match="duplicate wiki slugs"):
+        wiki.load_wiki(tmp_path, build.split_front_matter)
+
+
+def test_wiki_from_extract_adds_up_groups_that_land_on_one_page(tmp_path):
+    posts = tmp_path / "posts"
+    write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")
+    wiki_dir = tmp_path / "wiki"
+    page_file = write(wiki_dir / "ismark.md", "---\ntitle: Ismark Kolyanovich\naliases: [Ismark, Ismark the Lesser]\n---\n")
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Ismark", "type": "npc", "facts": [{"text": "Fought wolves", "post": "2024-01-09-first"},
+                                                     {"text": "Buried his father", "post": "2024-01-09-first"}]},
+        {"name": "Ismark the Lesser", "type": "npc", "facts": [{"text": "Mocked by villagers", "post": "2024-01-09-first"}]},
+    ]))
+    assert wiki_from_extract.apply([extract], wiki_dir, posts) == (1, 0)
+    assert page_file.read_text(encoding="utf-8").count("\n* ") == 3
+
+
+def test_wiki_from_extract_leaves_hand_written_front_matter_alone(tmp_path):
+    posts = tmp_path / "posts"
+    write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")
+    front = "---\n# my note\ntitle: Doru\ntype: npc\nsummary: Son of the priest\n---\n"
+    page_file = write(tmp_path / "wiki" / "doru.md", front + "\nMine.\n")
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Doru", "type": "npc", "summary": "Other", "facts": [{"text": "A vampire", "post": "2024-01-09-first"}]}]))
+    wiki_from_extract.apply([extract], tmp_path / "wiki", posts)
+    text = page_file.read_text(encoding="utf-8")
+    assert text.startswith(front + "\nMine.\n") and "Compiled from the adventure log" not in text.split("<!--")[0]
+
+
+def test_wiki_from_extract_skips_generic_titles(tmp_path):
+    posts = tmp_path / "posts"
+    write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Abbot", "type": "npc", "facts": [{"text": "Builds things", "post": "2024-01-09-first"}]}]))
+    assert wiki_from_extract.apply([extract], tmp_path / "wiki", posts) == (0, 0)
+
+
+def test_import_keeps_aliases_added_later_and_post_text_near_skipped_links(tmp_path):
+    site = import_op_wiki.SITE
+    export = {"/wikis/doru": {"title": "Doru", "final": "/wikis/doru", "md": "## Doru\n\nA vampire." + FOOTER.format(t="Doru")},
+              "/wikis/notes-july-9": {"title": "Notes", "final": "/wikis/notes-july-9", "md": "x"}}
+    wiki_dir = tmp_path / "wiki"
+    write(wiki_dir / "doru.md", "---\ntitle: Doru\ntype: npc\naliases: [Dorru]\nsummary: Son of the priest\n---\n\nold\n")
+    post = write(tmp_path / "posts" / "2024-01-01-a.md",
+                 f"---\ntitle: A\n---\n\nThe party agreed on this:\n\n[Notes]({site}/wikis/notes-july-9) are where Crusty kept the map.\n")
+    import_op_wiki.import_pages(export, wiki_dir, tmp_path / "posts")
+    meta = build.split_front_matter((wiki_dir / "doru.md").read_text(encoding="utf-8"))[0]
+    assert meta["aliases"] == ["Dorru"] and meta["summary"] == "Son of the priest"
+    assert "The party agreed on this:\n\nNotes are where Crusty kept the map." in post.read_text(encoding="utf-8")
+
+
+def test_corrections_merge_fix_move_and_retype(tmp_path):
+    posts = tmp_path / "posts"
+    write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")
+    wiki_dir = tmp_path / "wiki"
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Blinsky", "type": "npc", "aliases": ["Toy Shop"], "summary": "A toymaker.",
+         "facts": [{"text": "Sells toys", "post": "2024-01-09-first"}]},
+        {"name": "Blinksy", "type": "npc", "facts": [{"text": "Store burned", "post": "2024-01-09-first"}]},
+        {"name": "Bianca", "type": "npc", "facts": [{"text": "Franz's sister", "post": "2024-01-09-first"},
+                                                    {"text": "A werewolf named Bianca", "post": "2024-01-09-first"}]},
+        {"name": "Zollst", "type": "creature", "facts": [{"text": "Wrong fact", "post": "2024-01-09-first"},
+                                                         {"text": "A trapper", "post": "2024-01-09-first"}]},
+    ]))
+    fixes = {"same": [["Blinsky", "Blinksy"]], "not_alias": ["Toy Shop"],
+             "facts": {"Wrong fact": None, "Sells toys": "Makes and sells toys"},
+             "move_facts": {"A werewolf named Bianca": "Bianca (werewolf)"},
+             "types": {"Zollst": "npc"}, "summaries": {"Bianca (werewolf)": "A werewolf."}}
+    # A stale compiled page from an earlier run is removed; a hand-written one is kept.
+    write(wiki_dir / "blinksy.md", "---\ntitle: Blinksy\nsource: Compiled from the adventure log\n---\n")
+    write(wiki_dir / "mine.md", "---\ntitle: Mine\n---\n")
+    wiki_from_extract.apply([extract], wiki_dir, posts, fixes)
+
+    assert sorted(p.name for p in wiki_dir.iterdir()) == ["bianca-werewolf.md", "bianca.md", "blinsky.md", "mine.md", "zollst.md"]
+    blinsky_meta, blinsky = build.split_front_matter((wiki_dir / "blinsky.md").read_text(encoding="utf-8"))
+    assert blinsky_meta["aliases"] == ["Blinksy"]
+    assert "Makes and sells toys." in blinsky and "Store burned." in blinsky
+    assert "werewolf" not in (wiki_dir / "bianca.md").read_text(encoding="utf-8")
+    werewolf = build.split_front_matter((wiki_dir / "bianca-werewolf.md").read_text(encoding="utf-8"))[0]
+    assert werewolf["summary"] == "A werewolf." and werewolf["title"] == "Bianca (werewolf)"
+    zollst_meta, zollst = build.split_front_matter((wiki_dir / "zollst.md").read_text(encoding="utf-8"))
+    assert zollst_meta["type"] == "npc" and "Wrong fact" not in zollst

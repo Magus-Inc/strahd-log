@@ -201,6 +201,7 @@ def write(path: Path, text: str) -> None:
 
 def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
     """JSON the search page loads: title, address (relative to the base path), label, plain text."""
+    # Text is NFC-normalised so the search page's accent folding keeps character positions.
     entries = [{"t": p.title, "u": p.path, "l": nice_date(p.date), "x": wiki.plain_text(p.html)}
                for p in posts]
     entries += [{"t": w.title, "u": w.path, "l": wiki.LABELS[w.type],

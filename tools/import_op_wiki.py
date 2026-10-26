@@ -91,7 +91,7 @@ def import_pages(export: dict, wiki_dir: Path, posts_dir: Path) -> dict[str, str
         def drop(m: re.Match) -> str:
             href = m.group(1).split("#")[0].rstrip("/").removeprefix(SITE)
             return "" if href in unlinked or skipped(href) else m.group(0)
-        md = re.sub(r"^(?:[\w ]+:\s*)?\[[^\]]*\]\(([^)\s]+)\)[ \t]*\n?", drop, md, flags=re.M)
+        md = re.sub(r"^(?:[\w ]+:[ \t]*)?\[[^\]\n]*\]\(([^)\s]+)\)[ \t]*$\n?", drop, md, flags=re.M)
 
         def swap(m: re.Match) -> str:
             href = m.group(2).split("#")[0].rstrip("/")
@@ -119,18 +119,24 @@ def import_pages(export: dict, wiki_dir: Path, posts_dir: Path) -> dict[str, str
     written = []
     for path, entry in merged.items():
         kind = "character" if path.startswith("/characters/") else TYPES.get(path.rsplit("/", 1)[1], "npc")
+        slug = addresses[path].strip("/").rsplit("/", 1)[1]
+        target = wiki_dir / f"{slug}.md"
+        existing = target.read_text(encoding="utf-8") if target.exists() else ""
+        # Keep the aliases, summary and player that tools/wiki_from_extract.py or a person added.
+        before = yaml.safe_load(existing.split("\n---", 1)[0].removeprefix("---\n")) if existing.startswith("---\n") else {}
+        before = before if isinstance(before, dict) else {}
+        aliases = entry["aliases"] + [a for a in before.get("aliases") or [] if a not in entry["aliases"]]
         meta = {"title": entry["title"], "type": kind}
-        if entry["aliases"]:
-            meta["aliases"] = entry["aliases"]
-        if entry["summary"]:
-            meta["summary"] = entry["summary"]
+        if aliases:
+            meta["aliases"] = aliases
+        if entry["summary"] or before.get("summary"):
+            meta["summary"] = entry["summary"] or before["summary"]
+        if before.get("player"):
+            meta["player"] = before["player"]
         meta["source"] = "Written on Obsidian Portal"
         meta["obsidian_portal_url"] = SITE + path
         body = relink("\n\n".join(entry["parts"]))
-        slug = addresses[path].strip("/").rsplit("/", 1)[1]
         text = "---\n" + yaml.safe_dump(meta, sort_keys=False, allow_unicode=True, width=1000) + "---\n\n" + body + "\n"
-        target = wiki_dir / f"{slug}.md"
-        existing = target.read_text(encoding="utf-8") if target.exists() else ""
         # Keep anything the log-extraction step added below the imported text.
         marker = "<!-- from-the-log -->"
         if marker in existing:

@@ -3,6 +3,7 @@ title: Tower of Kazan
 type: place
 aliases:
 - Kazan's Tower
+- Kazan’s Tower
 - Khazan's tower
 summary: A tower by Lake Baratok tied to the mage Khazan.
 source: Compiled from the adventure log
@@ -17,3 +18,4 @@ source: Compiled from the adventure log
 * Opened with the signet ring pattern. ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/))
 * Its top floor held signs of recent living and a journal. ([The Staff is a lie](/posts/the-staff-is-a-lie/))
 * Has a permanent antimagic field. ([Finding Arabelle!](/posts/finding-arabelle/))
+* The party had met the eight-schools rune sequence there before. ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/))

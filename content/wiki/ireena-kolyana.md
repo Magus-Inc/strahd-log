@@ -4,6 +4,7 @@ type: npc
 aliases:
 - Ireena
 - Irena
+- Ireena Strazni
 - Irina
 summary: Ismark's adopted sister, whom the party escorts to sanctuary.
 source: Written on Obsidian Portal
@@ -27,6 +28,7 @@ According to the records, however, Ireena Strazni died more than eighteen years 
 * Told a tale of a wolf by a lake that she claimed was a dream. ([Tser Pool](/posts/tser-pool/))
 * Was enraged by the refugee camp and the Baron's callousness. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
 * A doll resembling her was seen in Blinsky's toy store. ([A doll for Arabelle](/posts/a-doll-for-arabelle/))
+* Records say she died over eighteen years ago, presumed devoured by wolves. ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/))
 * Escorted to St. Andral's Church, where Father Lucien offered her shelter. ([Finding Arabelle!](/posts/finding-arabelle/))
 * Was to stay at the church under the renewed ward. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))
 * Izek ransacked the Blue Water Inn looking for her. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))

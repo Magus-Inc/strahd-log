@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import html as htmllib
 import re
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -86,6 +87,10 @@ def load_wiki(wiki_dir: Path, split_front_matter) -> list[WikiPage]:
     if not wiki_dir.is_dir():
         return []
     pages = [parse_wiki_page(p, split_front_matter) for p in sorted(wiki_dir.glob("*.md"))]
+    slugs = [p.slug for p in pages]
+    dupes = {s for s in slugs if slugs.count(s) > 1}
+    if dupes:
+        raise ValueError(f"duplicate wiki slugs: {', '.join(sorted(dupes))}")
     seen: dict[str, str] = {}
     for page in pages:
         for name in page.names:
@@ -95,13 +100,33 @@ def load_wiki(wiki_dir: Path, split_front_matter) -> list[WikiPage]:
     return sorted(pages, key=lambda p: p.title.lower())
 
 
+# An HTML tag, allowing ">" inside quoted attribute values.
+TAG = re.compile(r"""(<(?:[^>"']|"[^"]*"|'[^']*')*>)""")
+# Markdown's smarty extension turns ' into &rsquo; and & into &amp;; a name written either way
+# should match text written either way.
+APOSTROPHES = "(?:'|’|‘|&rsquo;|&lsquo;|&#8217;|&#39;)"
+AMPERSAND = "(?:&amp;|&)"
+
+
+def fold(name: str) -> str:
+    """A name as text, with curly apostrophes straightened: the key names are matched under."""
+    return htmllib.unescape(name).replace("’", "'").replace("‘", "'")
+
+
+def name_pattern(name: str) -> str:
+    parts = []
+    for ch in name:
+        parts.append(APOSTROPHES if ch == "'" else AMPERSAND if ch == "&" else re.escape(ch))
+    return "".join(parts)
+
+
 class Linker:
     """Finds wiki names in rendered HTML and links the first mention of each page."""
 
     def __init__(self, pages: list[WikiPage]):
-        self.by_name = {name: page for page in pages for name in page.names}
+        self.by_name = {fold(name): page for page in pages for name in page.names}
         names = sorted(self.by_name, key=len, reverse=True)  # longest first: "Rose Durst" before "Rose"
-        alternation = "|".join(re.escape(n) for n in names)
+        alternation = "|".join(name_pattern(n) for n in names)
         self.pattern = re.compile(rf"(?<!\w)({alternation})(?!\w)") if names else None
         self.by_href = {f"/wiki/{p.slug}/": p for p in pages}
 
@@ -116,7 +141,7 @@ class Linker:
                 mentioned.add(self.by_href[href].slug)
         linked = set(mentioned)
         out, skip_depth = [], 0
-        for token in re.split(r"(<[^>]+>)", html):
+        for token in TAG.split(html):
             if token.startswith("<"):
                 m = re.match(r"<(/?)([a-zA-Z0-9]+)", token)
                 if m and m.group(2).lower() in SKIP_TAGS and not token.endswith("/>"):
@@ -126,7 +151,7 @@ class Linker:
                 continue
 
             def replace(match: re.Match) -> str:
-                page = self.by_name[match.group(1)]
+                page = self.by_name[fold(match.group(1))]
                 if page.slug == self_slug:
                     return match.group(0)
                 mentioned.add(page.slug)
@@ -142,5 +167,5 @@ class Linker:
 
 def plain_text(html: str) -> str:
     """Rendered HTML -> plain text for the search index."""
-    text = re.sub(r"<[^>]+>", " ", html)
-    return re.sub(r"\s+", " ", htmllib.unescape(text)).strip()
+    text = TAG.sub(" ", html)
+    return unicodedata.normalize("NFC", re.sub(r"\s+", " ", htmllib.unescape(text)).strip())

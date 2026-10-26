@@ -1,6 +1,6 @@
 ---
 title: Zollst
-type: creature
+type: npc
 summary: A trapper and werewolf.
 source: Compiled from the adventure log
 ---
