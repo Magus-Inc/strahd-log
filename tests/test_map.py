@@ -143,3 +143,10 @@ def test_every_mapped_place_sits_on_a_road():
     graph = barovia_map.road_graph()
     for slug, place in spec["places"].items():
         assert tuple(place["xy"]) in graph, slug
+
+
+def test_trail_passes_the_east_gate_only_once():
+    # The party came through the east gate of Barovia once, from Durst Manor into the village.
+    import yaml
+    sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
+    assert [stem for stem, stops in sessions.items() if "gates-of-barovia" in (stops or [])] == ["2024-02-13-barovia-barovia"]

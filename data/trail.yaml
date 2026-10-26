@@ -1,7 +1,9 @@
 # Where the party actually went each session, in order (places from data/map.yaml).
 # Written by having Claude read each post; mentions of a place are not visits. Review like any
 # other content: the quote after each entry is the evidence. An empty list means nowhere on the map.
-# Chris: the sessions before the village were at Durst Manor, east of the gates, not in the village.
+# Chris: the sessions before the village were at Durst Manor, east of the gates, not in the village,
+# and the party passed the east gate only once; the statue-flanked "gates of Barovia" on the way
+# to the castle are the castle approach (castle-ravenloft).
 
 sessions:
   2023-11-07-session-zero: [durst-manor]   # "came across a four story manor" (Durst Manor) after leaving Daggerford through the mists
@@ -41,8 +43,8 @@ sessions:
   2025-05-06-echoes-of-the-black-terro: [lake-baratok]   # "concealed hollow near the entrance to the werewolf den" (den = "cave at Lake Baratok" per prior post)
   2025-05-13-blood-and-oaths-under-moonligh: [lake-baratok, argynvostholt]   # "Within the cave ... Shrine of Mother Night"; "press forward to Argynvostholt"
   2025-06-03-echoes-of-the-silver-dragon: [argynvostholt]   # "continues their exploration of Argynvostholt"
-  2025-07-29-the-oath-the-spy-and-the-silver-moon: [argynvostholt, vallaki, gates-of-barovia]   # "fourth floor of Argynvostholt"; "Blue Water Inn"; "approach the gates of Barovia ... A black carriage awaits"
-  2025-08-12-velvet-vintages-and-veiled-intentions: [gates-of-barovia, castle-ravenloft]   # "arrives at Castle Ravenloft in a black carriage"
+  2025-07-29-the-oath-the-spy-and-the-silver-moon: [argynvostholt, vallaki, castle-ravenloft]   # "fourth floor of Argynvostholt"; "Blue Water Inn"; "approach the gates of Barovia ... A black carriage awaits"
+  2025-08-12-velvet-vintages-and-veiled-intentions: [castle-ravenloft]   # "arrives at Castle Ravenloft in a black carriage"
   2025-08-26-the-boon-the-bride-and-the-beating-heart: [castle-ravenloft]   # "continues their uneasy stay at Castle Ravenloft"
   2026-02-03-notebook: [vallaki]   # "gathered beneath the flickering lamps of the Blue Water Inn in Vallaki" (planning session)
   2026-02-03-welcome-back-to-vellanki: [castle-ravenloft, vallaki]   # "escorted from the guest quarters by Rahadin ... departed by carriage"; "Upon arriving in ... town"
