@@ -29,4 +29,3 @@ The tower door, marked with a red seal and the name Kazan, had no handles. Olfin
 
 With the tower’s entrance open, our adventure continues…
 
-[Notes - October 1st, 2024](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-october-1st-2024)

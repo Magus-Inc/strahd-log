@@ -21,4 +21,4 @@ We used the key Father Donavan gave us to unlock the latch keeping a trap door s
 
 I believe the vampire to be Doru, but don’t for certain. Based on the guidance we were given earlier, I would like to take the body to a stream or river to see if it will dissolve and provide a final resting place for this creature.
 
-- [Malron Lichtstrahl](https://curseofstrahdowlbear.obsidianportal.com/characters/mal)
+- [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)

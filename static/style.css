@@ -130,3 +130,27 @@ code { background: var(--panel); padding: 0.05rem 0.3rem; }
   .pager { grid-template-columns: 1fr; }
   .pager .newer { grid-column: 1; grid-row: 1; }
 }
+
+/* Wiki and search */
+.post-body a.wiki-link { color: var(--gold); text-decoration-style: dotted; }
+.post-body a.wiki-link:hover { color: var(--blood-bright); }
+.wiki-type { margin: 0 0 0.3rem; font-family: var(--heading); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.wiki-type a { color: var(--muted); text-decoration: none; }
+.wiki-list { list-style: none; padding: 0; margin: 0; }
+.wiki-list li { padding: 0.45rem 0; border-bottom: 1px solid var(--panel-edge); }
+.wiki-list .post-link { display: inline; font-size: 1.05rem; }
+.wiki-summary { display: block; color: var(--muted); font-size: 0.95rem; }
+.appears-in { margin-top: 2.5rem; }
+.appears-in h2 { font-size: 1.2rem; }
+.search-form input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--blood);
+  border-radius: 4px;
+}
+.search-form input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+#results .snippet { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.95rem; }
+#results mark { background: rgba(201, 166, 107, 0.3); color: var(--text); padding: 0 0.1rem; }

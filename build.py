@@ -1,7 +1,8 @@
 """Build the Curse of Strahd adventure log into public/.
 
-Reads content/posts/*.md (YAML front matter + Markdown) and writes the home page, one page per
-post at /posts/<slug>/, a tags page at /tags/ and an Atom feed at /feed.xml.
+Reads content/posts/*.md and content/wiki/*.md (YAML front matter + Markdown) and writes the home
+page, one page per post at /posts/<slug>/, the wiki at /wiki/, a tags page at /tags/, a search page
+at /search/ (with /search-index.json) and an Atom feed at /feed.xml.
 
     python build.py            # build
     python build.py --serve    # build, then serve public/ on http://localhost:8000
@@ -13,6 +14,7 @@ from __future__ import annotations
 import argparse
 import functools
 import http.server
+import json
 import os
 import re
 import shutil
@@ -25,6 +27,8 @@ from xml.etree import ElementTree as ET
 import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+import wiki
 
 ROOT = Path(__file__).resolve().parent
 SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
@@ -46,6 +50,7 @@ class Post:
     obsidian_portal_url: str = ""
     html: str = ""
     source: Path | None = None
+    mentions: set[str] = field(default_factory=set)  # wiki slugs
 
     @property
     def path(self) -> str:
@@ -105,6 +110,18 @@ def rebase(html: str, prefix: str) -> str:
     """Point root-relative links in rendered Markdown ("/images/x.png") at prefix ("/strahd-log/" or
     an absolute site address), so post bodies can use /images/... whatever the base path."""
     return re.sub(r'((?:src|href)=")/(?!/)', lambda m: m.group(1) + prefix, html)
+
+
+def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
+    """Link wiki names in posts and wiki pages, and record which posts mention each page."""
+    linker = wiki.Linker(pages)
+    by_slug = {w.slug: w for w in pages}
+    for post in posts:  # newest first, so mentioned_in comes out newest first too
+        post.html, post.mentions = linker.link(post.html)
+        for slug in sorted(post.mentions):
+            by_slug[slug].mentioned_in.append(post)
+    for page in pages:
+        page.html, _ = linker.link(render_markdown(page.body_md), self_slug=page.slug)
 
 
 def load_posts(content_dir: Path) -> list[Post]:
@@ -182,16 +199,31 @@ def write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8", newline="\n")
 
 
+def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
+    """JSON the search page loads: title, address (relative to the base path), label, plain text."""
+    # Text is NFC-normalised so the search page's accent folding keeps character positions.
+    entries = [{"t": p.title, "u": p.path, "l": nice_date(p.date), "x": wiki.plain_text(p.html)}
+               for p in posts]
+    entries += [{"t": w.title, "u": w.path, "l": wiki.LABELS[w.type],
+                 "x": " ".join([*w.aliases, w.summary, wiki.plain_text(w.html).replace(wiki.LOG_NOTE, "")])}
+                for w in pages]
+    return json.dumps(entries, ensure_ascii=False, separators=(",", ":"))
+
+
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
-          site_url: str | None = None, base_path: str | None = None) -> list[Post]:
+          site_url: str | None = None, base_path: str | None = None,
+          wiki_dir: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
+    pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
+    link_wiki(posts, pages)
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["tag_slug"] = tag_slug
     env.filters["nice_date"] = nice_date
-    env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base)
+    env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
+                       types=wiki.TYPES)
 
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -211,6 +243,14 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
             tags.setdefault(tag, []).append(post)
     write(out_dir / "tags" / "index.html",
           env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
+    groups = [(label, [w for w in pages if w.type == kind]) for kind, label in wiki.TYPES.items()]
+    write(out_dir / "wiki" / "index.html",
+          env.get_template("wiki_index.html").render(groups=[g for g in groups if g[1]], count=len(pages)))
+    for page in pages:
+        write(out_dir / "wiki" / page.slug / "index.html",
+              env.get_template("wiki_page.html").render(page=page, body=rebase(page.html, base)))
+    write(out_dir / "search" / "index.html", env.get_template("search.html").render())
+    write(out_dir / "search-index.json", build_search_index(posts, pages))
     write(out_dir / "404.html", env.get_template("404.html").render())
     write(out_dir / "feed.xml", build_feed(posts, site_url + base))
     return posts

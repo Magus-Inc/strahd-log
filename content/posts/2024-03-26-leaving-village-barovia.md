@@ -6,15 +6,15 @@ slug: leaving-village-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/leaving-village-barovia
 ---
 
-[Grom Shield-Breaker](https://curseofstrahdowlbear.obsidianportal.com/characters/grom), that’s the Dwarf’s name. He’s always been with our party, or so I’m told, but maybe I never noticed since he’s so short. Maybe he can help carry the corpse of [Doru](https://curseofstrahdowlbear.obsidianportal.com/wikis/doru) up the ladder and out to a stream. Truth be told I’m not sure if a vampire with a stake through the heart can really be considered a corpse, but that’s what I’ll call the poor wretch until we can figure out if the advice Aera read about running water will truly keep us safe from the abomination.
+[Grom Shield-Breaker](/wiki/grom-shield-breaker/), that’s the Dwarf’s name. He’s always been with our party, or so I’m told, but maybe I never noticed since he’s so short. Maybe he can help carry the corpse of [Doru](/wiki/doru/) up the ladder and out to a stream. Truth be told I’m not sure if a vampire with a stake through the heart can really be considered a corpse, but that’s what I’ll call the poor wretch until we can figure out if the advice Aera read about running water will truly keep us safe from the abomination.
 
-Scholpkht has volunteered to bring the sunburst relic back to [Father Donavich](https://curseofstrahdowlbear.obsidianportal.com/wikis/father-donavich) and side-step the part where we killed his undead son, and that we plan to kill him for good so that we may learn how to be rid of vampires.
+Scholpkht has volunteered to bring the sunburst relic back to [Father Donavich](/wiki/father-donavich/) and side-step the part where we killed his undead son, and that we plan to kill him for good so that we may learn how to be rid of vampires.
 
 Faher Donavich agreed to perform the burial rights for Ismarks father by praying to the “Morninglord”. I wonder if he’s any relation to Lathander, the “Lord of Birth and Renewal”, but decide this isn’t the time to ask academic questions.
 
 After the ritual a ton of bats fly from the church up to the west, perhaps towards the castle.
 
-Ismark asks us to escort [Ireena](https://curseofstrahdowlbear.obsidianportal.com/wikis/ireena-kolyana) to the Abbey of Saint Markovia in Krezk, and that the Church of Saint Andral in Vallaki could be a sanctuary along the way. My notes also mention “Red har – bad luck” but I can no longer make sense of it.
+Ismark asks us to escort [Ireena](/wiki/ireena-kolyana/) to the Abbey of Saint Markovia in Krezk, and that the Church of Saint Andral in Vallaki could be a sanctuary along the way. My notes also mention “Red har – bad luck” but I can no longer make sense of it.
 
 ![](https://cdn.discordapp.com/attachments/946888425800368353/1207185923452960818/Ireena.png?ex=66cb5fc0&is=66ca0e40&hm=e7c3f65a51d70e9eea9f72b30b059724f0e7040c243f0d623b9e4fbebcc11212&)
 

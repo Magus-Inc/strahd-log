@@ -1,0 +1,2283 @@
+[
+ {
+  "name": "Aera shan Ravanór",
+  "type": "character",
+  "aliases": [
+   "Aera"
+  ],
+  "player": "Liz Mathews",
+  "summary": "A Wood-elf Rogue, the party's lead scout, archer and lockpicker.",
+  "facts": [
+   {
+    "text": "Gained a pseudodragon companion at Argynvostholt and found hidden relics behind a painting.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   },
+   {
+    "text": "Recited the knight's oath that awakened Horngaard's prophecy and received Arrigal's secret note.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Reached Level 7 and gained Evasion; scouted the Heart of Sorrow alone and met Strahd.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Flew to Ravenloft's parapets, stole the wights' alarm horns and lowered the drawbridge.",
+    "post": "2026-02-10-unwelcome-guests"
+   },
+   {
+    "text": "Picked the lock to the King's Bedchamber and gave amber teeth for Olfin's Revivify.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "Took the bat-style bone wings and shot the Abbot through the heart with a second natural 20.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Walked through St. Markovia's false door hoping to reach her lost husband and children; it was a trap.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Received the Reliquary of Two Flames holding the echoes of Liren and Gumbo.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Malron Lichtstrahl",
+  "type": "character",
+  "aliases": [
+   "Malron"
+  ],
+  "player": "Christopher O’Toole",
+  "summary": "A Reborn Cleric of Lathander and spirit medium whose body is shared with an ancient elven spirit.",
+  "facts": [
+   {
+    "text": "Noticed pulleys and a Strahd mannequin used to scare intruders at Castle Ravenloft.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Was brought back by a botched resurrection that let an elven spirit share his body; needs no breath or food.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Pulled Olfin out of a hall of 40 zombies with an invisible Mage Hand and telekinesis.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Found the Icon of Dawn's Grace in Saint Markovia's crypt, and the Icon speaks to him telepathically.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "Killed Anastrasia with Scorching Ray and revived Olfin with a scroll of Revivify.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "Revived Olfin with his saved 3rd-level slot and helped redeem the Abbot by calling on St. Markovia.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Warned Aera that the false meadow was a trap and read Strahd's mocking letter aloud.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Zorpheus",
+  "type": "character",
+  "aliases": [],
+  "summary": "A mysterious wanderer and bard drawn to fate and prophecy.",
+  "facts": [
+   {
+    "text": "Explored Argynvostholt with Aera and Malron.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   },
+   {
+    "text": "Helped Sasha clean spilled wine and received her tip about the organ's sixth pedal.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Was asked by Sasha to rescue Gertruda and was escorted upstairs by Escher.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   }
+  ]
+ },
+ {
+  "name": "Shabasta",
+  "type": "character",
+  "aliases": [
+   "Sibasa",
+   "Shipnasty"
+  ],
+  "player": "Grant Haseloff",
+  "summary": "A porcupine Bard of fate with a prickly, satirical wit.",
+  "facts": [
+   {
+    "text": "Reached Level 7 and gained Dimension Door and Silvery Barbs.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Earned the nickname \"Shipnasty\" and cast Vicious Mockery at the bone mounds in the Hall of Bones.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   },
+   {
+    "text": "Was grappled and dragged up the wall by Volenta Popofsky.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   },
+   {
+    "text": "Lied to the Belviews that Cyrus had been \"perfected\" and cast Heat Metal on the Abbot's gauntlets.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Was polymorphed into a giant ape that soaked about 124 damage from the Fallen Star.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Was a druid's sheep for a time, died, and was reincarnated as Shabasta again.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Is the brother of Doru, whose voice spoke from the Abbot's first vessel.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Olfin Darning",
+  "type": "character",
+  "aliases": [
+   "Olfin"
+  ],
+  "player": "Seth Booth",
+  "summary": "A Hexblood Paladin who carries the Symbol of Ravenkind.",
+  "facts": [
+   {
+    "text": "Took half of a tarnished silver locket from a silver box atop the ancient oak.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Wields the Symbol of Ravenkind, and his Aura of Devotion protects allies from charm.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Grabbed Cyrus's heirloom spoon from a hall of zombies, then was teleported into an Iron Maiden by a trap.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Broke Gertruda's charm with Protection from Evil and Good; was killed by Anastrasia and revivified.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "Took the eagle-style bone wings, whose command word is \"America!\", and started the fight with the Abbot.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Died and, in a heroic moment, landed a 47-point smite that killed the Fallen Star; Malron revived him.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Has the Sentinel feat and led the way down past the red door.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Krusty",
+  "type": "character",
+  "aliases": [
+   "Crusty",
+   "Ralph Kristofferson",
+   "Krusty – Ralph Kristofferson"
+  ],
+  "player": "Cole Smarr",
+  "summary": "A Wizard (High Elf Sage Wizard) new to the party, later revealed as a Divination wizard.",
+  "facts": [
+   {
+    "text": "Joined as a Level 7 wizard commanding Polymorph and Greater Invisibility.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Cast Fly and Invisibility on Aera so she could cross the chasm to Ravenloft.",
+    "post": "2026-02-10-unwelcome-guests"
+   },
+   {
+    "text": "Used Reduce on Argynvost's skull to fit it into the Chest of Holding.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   },
+   {
+    "text": "Attuned to the Staff of Kazan after solving the rune puzzle.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   },
+   {
+    "text": "Has a tawny owl familiar and hit dire wolves with Lightning Bolt.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "Counterspelled the Abbot's healing touch.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Polymorphed Shabasta into a giant ape and took no damage in the fight.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Revealed he is a Divination wizard.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Gumbo",
+  "type": "character",
+  "aliases": [],
+  "player": "Michael Child",
+  "summary": "A pragmatic Half-orc Rogue and old companion of the party.",
+  "facts": [
+   {
+    "text": "Was part of the party at Argynvostholt and on the road to Barovia's gates.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Was handed a sword to judge a prisoner and found a map in a clock showing the castle's beating heart.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Returned from the abbey well with Liren after being long thought lost.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Faded into the Reliquary of Two Flames after the first vessel was destroyed.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Liren",
+  "type": "character",
+  "aliases": [],
+  "player": "Kane Child",
+  "summary": "A Dragonborn Barbarian, wary of everyone but Malron.",
+  "facts": [
+   {
+    "text": "Was listed among the party at Argynvostholt.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Returned from the abbey well with Gumbo; for them only hours had passed.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Killed the Abbot's first vessel with her battleaxe.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Faded into the Reliquary of Two Flames.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Oogway",
+  "type": "character",
+  "aliases": [],
+  "summary": "A turtle Wizard Bladesinger.",
+  "facts": [
+   {
+    "text": "Was part of the party at Argynvostholt and on the road east.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Arrived at Castle Ravenloft with the party.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   }
+  ]
+ },
+ {
+  "name": "Strahd von Zarovich",
+  "type": "npc",
+  "aliases": [
+   "Strahd",
+   "Strahd Von Zarovich",
+   "Lord Von Zarovich",
+   "Count Strahd"
+  ],
+  "summary": "The vampire lord and master of Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Murdered his brother Sergei and seeks Ireena, believing she is Tatiana reborn.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Hosted the party at Castle Ravenloft and recommended they visit the Amber Temple.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Granted the party resistance to necrotic damage for 36 hours, saying \"The cows have teeth after all.\"",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Follows a 14-day hunting cycle, which the party planned to exploit.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Was seen leaving the castle on his nightmare, Becephalus.",
+    "post": "2026-02-10-unwelcome-guests"
+   },
+   {
+    "text": "Sent dire wolves, scarecrows and a duplicate of Aera's corpse to punish her for stealing.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "Left a mocking letter in a black carriage: \"Even the dead return for an encore.\"",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Rahadin",
+  "type": "npc",
+  "aliases": [
+   "Rod Dean"
+  ],
+  "summary": "Strahd's chamberlain at Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Greeted the party when they arrived at Castle Ravenloft.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Brought a chained prisoner for judgment and locked the party in the guest room.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Uses the tomb of King Barov and Queen Ravenovia (K88) as his sanctuary.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Escorted the party out of Ravenloft the morning after their stay.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Attacked the party in the catacombs, surrounded by a deathly choir of screaming voices.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "Was wounded and retreated from the catacomb fight.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Anastrasia",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A vampire bride of Strahd.",
+  "facts": [
+   {
+    "text": "Greeted the party at Castle Ravenloft and controlled Sasha with biting remarks.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Attacked the party in the King's Bedchamber with two wights to reclaim Gertruda.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "Turned into a giant bat abomination and killed Olfin with a bite.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "Was destroyed by Malron's Scorching Ray.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Volenta Popofsky",
+  "type": "npc",
+  "aliases": [
+   "Volenta",
+   "Volinta"
+  ],
+  "summary": "A vampire bride of Strahd.",
+  "facts": [
+   {
+    "text": "Had red wine spilled on her white dress at Strahd's reception.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Held the key to Emil's Silver Thorn Collar and appeared on the torture chamber balcony with a jar of oil.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Fought with poisoned daggers and ice shards and took on a winged monstrous form.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   },
+   {
+    "text": "Was pinned to the wall and killed; her key freed Emil.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   }
+  ]
+ },
+ {
+  "name": "Ludmila",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A vampire bride present at Strahd's reception.",
+  "facts": [
+   {
+    "text": "Was present in the Castle Ravenloft grand hall when the party arrived.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   }
+  ]
+ },
+ {
+  "name": "Escher",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A blonde vampire at Castle Ravenloft, once a friend of Doru.",
+  "facts": [
+   {
+    "text": "Was introduced by Anastrasia and is suspected of betraying Doru.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Escorted Zorpheus upstairs and guarded the party's guest room overnight.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   }
+  ]
+ },
+ {
+  "name": "Sasha",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A trembling, widowed servant at Castle Ravenloft who secretly helps the party.",
+  "facts": [
+   {
+    "text": "Told Zorpheus, \"Sixth pedal from the left on the organ.\"",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Begged the party to rescue Gertruda and revealed a rear servants' entrance.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Shared Strahd's oldest password: \"I come in Dostron's memory.\"",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   }
+  ]
+ },
+ {
+  "name": "Diabola",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A resident of Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Told the party that lightning had disabled the bridge until morning.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   }
+  ]
+ },
+ {
+  "name": "Doru",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A dissolved vampire spawn whose intelligence helped the party plan their heist; Shabasta's brother.",
+  "facts": [
+   {
+    "text": "Was a friend of Escher, who is believed to have betrayed him.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Was once engaged to Gertruda.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Was dissolved in running water, but his information formed the basis of the party's map.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "His voice spoke from the Abbot's first vessel; he is called Shabasta's brother.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Gertruda",
+  "type": "npc",
+  "aliases": [],
+  "summary": "Mary's daughter from the Village of Barovia, held at Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Sasha asked the party to rescue her; she was once Doru's fiancée.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Was confirmed to be in the King's Bedchamber.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Her slipper was found on a spiral staircase.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   },
+   {
+    "text": "Was freed from Strahd's charm by Olfin and rescued from the King's Bedchamber.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "Was returned safely to the Village of Barovia.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Mary",
+  "type": "npc",
+  "aliases": [],
+  "summary": "Gertruda's mother in the Village of Barovia.",
+  "facts": [
+   {
+    "text": "Is named as Gertruda's mother.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Lives in Barovia village.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Ismark the Lesser",
+  "type": "npc",
+  "aliases": [
+   "Ismark"
+  ],
+  "summary": "Burgomaster of Barovia and Ireena's brother.",
+  "facts": [
+   {
+    "text": "Had sent Gertruda out to recover after she was lost on the road to Vallaki.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Welcomed the party to the Burgomaster's mansion and was proud of his sister Ireena's growth.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Ireena Kolyana",
+  "type": "npc",
+  "aliases": [
+   "Ireena",
+   "Irena",
+   "Irina"
+  ],
+  "summary": "The woman Strahd is obsessed with, under the party's protection.",
+  "facts": [
+   {
+    "text": "Strahd seeks her, believing she is Tatiana reincarnated.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Stays in Vallaki as part of the party's reserve force.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Left Castle Ravenloft with the party and is under their protection in Vallaki.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Crypt 18 in the catacombs was prepared for her, empty and swept clean.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   },
+   {
+    "text": "Closely resembles the portrait of Tatyana in the King's Bedchamber.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Tatyana",
+  "type": "npc",
+  "aliases": [
+   "Tatiana"
+  ],
+  "summary": "The woman whose death triggered Strahd's curse.",
+  "facts": [
+   {
+    "text": "Took her own life, which set off Strahd's curse.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Her portrait hangs in the King's Bedchamber, wearing a silver moon-and-stars bracelet.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Sergei Von Zarovich",
+  "type": "npc",
+  "aliases": [
+   "Sergei"
+  ],
+  "summary": "Strahd's murdered brother, met as a skeletal rider.",
+  "facts": [
+   {
+    "text": "Appeared as a skeletal rider and said Strahd murdered him.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "His tomb (K85) is described as an unnatural beacon.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "His tomb is well lit and blocked by a portcullis.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   }
+  ]
+ },
+ {
+  "name": "Ezmerelda d’Avenir",
+  "type": "npc",
+  "aliases": [
+   "Ezmerelda",
+   "Esmeralda d’Avenir",
+   "Esmerelda"
+  ],
+  "summary": "A famed monster hunter travelling with and advising the party.",
+  "facts": [
+   {
+    "text": "Stays in Vallaki as part of the party's reserve force.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Left Castle Ravenloft with the party by carriage.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Told the party the Abbot can be cleansed by defeating him and using the Icon of Dawn's Grace.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Rudolph van Richten",
+  "type": "npc",
+  "aliases": [
+   "Van Richten"
+  ],
+  "summary": "A vampire hunter who gave the party maps of Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Provided the castle maps that turned the infiltration into a planned heist.",
+    "post": "2026-02-03-notebook"
+   }
+  ]
+ },
+ {
+  "name": "Emil Tornescu",
+  "type": "npc",
+  "aliases": [
+   "Emil",
+   "Emile Torenescu",
+   "Emil Terescu"
+  ],
+  "summary": "A werewolf leader held prisoner in Castle Ravenloft, later freed.",
+  "facts": [
+   {
+    "text": "The party planned to rescue him to break Strahd's alliance with the werewolves.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Was found in the Drowning Cells, exhausted and bound by a Silver Thorn Collar.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Was freed with the key taken from Volenta.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   },
+   {
+    "text": "Helped the party open Saint Markovia's crypt.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "Stays with the party as they head toward the werewolf den.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Cyrus Belview",
+  "type": "npc",
+  "aliases": [
+   "Cyrus"
+  ],
+  "summary": "A hunchbacked mongrelfolk cook at Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "A man resembling him was seen in the castle kitchen.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Asked the party to find his favorite cooking spoon in the ossuary.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   },
+   {
+    "text": "Traded a map of the Serpent's Wing for his real, oversized heirloom spoon.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Was sent to Ravenloft to be \"perfected\"; Shabasta lied to his siblings about him.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Clovin Belview",
+  "type": "npc",
+  "aliases": [
+   "Clovin"
+  ],
+  "summary": "A mongrelfolk at the Abbey of St. Markovia.",
+  "facts": [
+   {
+    "text": "Carried porridge to the padlocked shed in the abbey courtyard.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Gave the party two sets of bone wings for news of Cyrus.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Otto Belview",
+  "type": "npc",
+  "aliases": [
+   "Otto"
+  ],
+  "summary": "A mongrelfolk at the abbey's north gate.",
+  "facts": [
+   {
+    "text": "Asked about Cyrus and believed Shabasta's lie that he had been perfected.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Zygfrek Belview",
+  "type": "npc",
+  "aliases": [
+   "Zygfrek"
+  ],
+  "summary": "A mongrelfolk at the abbey's north gate.",
+  "facts": [
+   {
+    "text": "Asked about Cyrus and believed Shabasta's lie that he had been perfected.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Madam Eva",
+  "type": "npc",
+  "aliases": [
+   "Katarina"
+  ],
+  "summary": "A Vistani seer, revealed as Katarina, who survived Strahd's wrath.",
+  "facts": [
+   {
+    "text": "As Katarina, wrote a farewell letter to Varushka left by the ancient oak.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Stanimere is her messenger.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Varushka",
+  "type": "npc",
+  "aliases": [
+   "Verushka"
+  ],
+  "summary": "The recipient of Katarina's farewell letter, whose spirit the party laid to rest.",
+  "facts": [
+   {
+    "text": "Katarina's letter at the ancient oak is addressed to her.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "The party had laid her spirit to rest, which earned Stanimere's goodwill.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Stanimere",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A Vistani elder and messenger of Madam Eva.",
+  "facts": [
+   {
+    "text": "Met the party near Sarepool and gave them a Clairvoyance Stone.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Arrigal",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A contact who passed Aera a secret note.",
+  "facts": [
+   {
+    "text": "Left Aera a note at the Blue Water Inn about a spy in Castle Ravenloft.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   }
+  ]
+ },
+ {
+  "name": "Minodora",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A restless spirit at Argynvostholt.",
+  "facts": [
+   {
+    "text": "Begged the party not to help Strahd and pointed them to Brother Merik's book.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Brother Merik",
+  "type": "npc",
+  "aliases": [],
+  "summary": "The former chaplain of the Order of the Silver Dragon.",
+  "facts": [
+   {
+    "text": "His book of prayer is said to be in the west bedchambers of Argynvostholt.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Argynvost",
+  "type": "npc",
+  "aliases": [
+   "Lord Argynvost"
+  ],
+  "summary": "The silver dragon who led the Order of the Silver Dragon.",
+  "facts": [
+   {
+    "text": "His journal records his vow to fight in his true dragon form and defend the valley.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   },
+   {
+    "text": "A prophecy says his light will return when his skull rests in its rightful tomb.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "His skull was used as decoration in the Hall of Bones.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   }
+  ]
+ },
+ {
+  "name": "Andral",
+  "type": "npc",
+  "aliases": [],
+  "summary": "The writer of a letter urging Argynvost to make peace with Strahd.",
+  "facts": [
+   {
+    "text": "Signed a scroll asking Argynvost to end the war with Lord Von Zarovich.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Vladimir Hornguard",
+  "type": "npc",
+  "aliases": [
+   "Horngaard"
+  ],
+  "summary": "A figure at Argynvostholt who leads phantom warriors.",
+  "facts": [
+   {
+    "text": "Guards a gargoyle statue on Argynvostholt's fourth floor and believes Barovia's suffering is penance.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Is enraged by the party's assault on Ravenloft, according to a Revenant.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Lady Fiona Wachter",
+  "type": "npc",
+  "aliases": [
+   "Fiona Wachter"
+  ],
+  "summary": "A noble connected to a three-pointed star crest.",
+  "facts": [
+   {
+    "text": "A three-pointed star crest was intended for her.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "King Dostran the Hellborn",
+  "type": "npc",
+  "aliases": [
+   "King Dostran",
+   "King Dostron",
+   "Dostron",
+   "Dostran"
+  ],
+  "summary": "An ancient king entombed in Crypt 34 of Ravenloft's catacombs.",
+  "facts": [
+   {
+    "text": "Strahd's oldest password is \"I come in Dostron's memory.\"",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "His crypt (34) was a target of the heist.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "His ghostly voice warned the party off, but they took the Spear of the Huntress from his sarcophagus.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "King Barov",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A former king entombed with Queen Ravenovia beneath Ravenloft.",
+  "facts": [
+   {
+    "text": "His tomb with Queen Ravenovia (K88) is Rahadin's sanctuary.",
+    "post": "2026-02-03-notebook"
+   }
+  ]
+ },
+ {
+  "name": "Queen Ravenovia",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A former queen entombed with King Barov beneath Ravenloft.",
+  "facts": [
+   {
+    "text": "Her tomb with King Barov (K88) is Rahadin's sanctuary.",
+    "post": "2026-02-03-notebook"
+   }
+  ]
+ },
+ {
+  "name": "Kazan",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A dead archmage entombed in Crypt 15.",
+  "facts": [
+   {
+    "text": "His tomb held a rune puzzle that revealed the Staff of Kazan.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Growmor Nimblenobs",
+  "type": "npc",
+  "aliases": [
+   "Growmor"
+  ],
+  "summary": "A wizard entombed in Crypt 37.",
+  "facts": [
+   {
+    "text": "His staff opened a hidden compartment holding Fireball, Lightning Bolt and Cone of Cold scrolls.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Saint Markovia",
+  "type": "npc",
+  "aliases": [
+   "St. Markovia",
+   "Markovia"
+  ],
+  "summary": "A saint whose spirit still answers in Barovia.",
+  "facts": [
+   {
+    "text": "Her crypt (40) held a relic the party needed.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Her remains held the Icon of Dawn's Grace.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "Appeared in the void, called the Abbot by his name, Ethereal, and forgave him.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "An illusion of her offered the party a false door out of Barovia.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Arabelle",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A Vistani girl.",
+  "facts": [
+   {
+    "text": "Olfin had recovered a silver moon-and-stars bracelet for her, the same one shown in Tatyana's portrait.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Dimitri Krezkov",
+  "type": "npc",
+  "aliases": [
+   "Baron Dimitri Krezkov",
+   "Baron Dmitri Krezkov",
+   "Dmitri"
+  ],
+  "summary": "The baron of Krezk.",
+  "facts": [
+   {
+    "text": "Begged the party at the Blue Water Inn to save his wife Anna from the Abbot.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "Leads Krezk with his wife Anna.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Anna Krezkova",
+  "type": "npc",
+  "aliases": [
+   "Anna"
+  ],
+  "summary": "Baroness of Krezk and wife of Dimitri Krezkov.",
+  "facts": [
+   {
+    "text": "The Abbot sent word he would take her heart at dusk the next day.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "The Abbot meant to give her heart to Vasilka.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "The Abbot",
+  "type": "npc",
+  "aliases": [
+   "Abbot",
+   "Ethereal",
+   "the Fallen Star",
+   "Fallen Star"
+  ],
+  "summary": "A celestial named Ethereal who ruled the Abbey of St. Markovia and went mad.",
+  "facts": [
+   {
+    "text": "The Icon of Dawn's Grace is said to be the only cure for his madness.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Fell into madness through Strahd's manipulation and flesh-crafting a bride for him.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "Revealed his winged celestial form, Ethereal, when Olfin attacked.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "After Aera shot him through the heart he rose as the Fallen Star: lion head, ram body, bat wings, crocodile tail.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Was killed by Olfin's smite and redeemed in the void with St. Markovia's help.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Was restored as a sleeping white-winged youth.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Had collected a lost item from everyone who travelled through Barovia.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Vasilka",
+  "type": "npc",
+  "aliases": [],
+  "summary": "The flesh-built \"perfect bride\" the Abbot made for Strahd.",
+  "facts": [
+   {
+    "text": "Was scolded by the Abbot for tending the mongrelfolk, and fled when the fight began.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Was made after the Abbot's first, failed vessel.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Zora",
+  "type": "creature",
+  "aliases": [],
+  "summary": "Aera's pseudodragon companion.",
+  "facts": [
+   {
+    "text": "A pseudodragon found at Argynvostholt that began following Aera.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   },
+   {
+    "text": "Serves as Aera's eyes in the dark.",
+    "post": "2026-02-10-unwelcome-guests"
+   },
+   {
+    "text": "Scouted for Gertruda during the fight with Rahadin.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Becephalus",
+  "type": "creature",
+  "aliases": [],
+  "summary": "Strahd's nightmare steed.",
+  "facts": [
+   {
+    "text": "Carried Strahd away from the castle.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "The Flesh Golem",
+  "type": "creature",
+  "aliases": [
+   "flesh golem"
+  ],
+  "summary": "The Abbot's hulking servant that turned on him.",
+  "facts": [
+   {
+    "text": "Accepted a rope crown from Aera and fought the Abbot with thrown chalices, candlesticks and a table.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Stayed on the party's side and was asked to care for the sleeping Abbot.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   }
+  ]
+ },
+ {
+  "name": "The Abbot’s First Vessel",
+  "type": "creature",
+  "aliases": [
+   "first vessel"
+  ],
+  "summary": "The Abbot's failed first attempt at a perfect vessel, chained beneath the abbey.",
+  "facts": [
+   {
+    "text": "Woke when hundreds of trapped soul fragments flooded into it.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Stood nine feet tall with six arms and a nailed-on halo, speaking in the voices of the dead.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   },
+   {
+    "text": "Was killed by Liren's battleaxe, freeing the trapped souls.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Order of the Silver Dragon",
+  "type": "faction",
+  "aliases": [
+   "Silver Order",
+   "the Order"
+  ],
+  "summary": "The knightly order once led by Argynvost.",
+  "facts": [
+   {
+    "text": "Its knightly vow was found inscribed on a table at Argynvostholt.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   },
+   {
+    "text": "Recovering Argynvost's skull is part of the party's quest to restore it.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   }
+  ]
+ },
+ {
+  "name": "Belview family",
+  "type": "faction",
+  "aliases": [
+   "Belviews",
+   "the Belviews"
+  ],
+  "summary": "The Abbot's mongrelfolk family at the Abbey of St. Markovia.",
+  "facts": [
+   {
+    "text": "Cyrus Belview is a member of the family seen at the Abbey.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   },
+   {
+    "text": "Shabasta convinced them that Cyrus had been perfected.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Vistani",
+  "type": "faction",
+  "aliases": [],
+  "summary": "A travelling people of Barovia.",
+  "facts": [
+   {
+    "text": "A Vistani wagon led by Stanimere met the party near Sarepool.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Keepers of the Feather",
+  "type": "faction",
+  "aliases": [],
+  "summary": "A group connected to the ravens of Barovia.",
+  "facts": [
+   {
+    "text": "Ravens who heard of the party's heroics from them acted as an honor guard.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Revenants of Argynvostholt",
+  "type": "faction",
+  "aliases": [
+   "phantom warriors"
+  ],
+  "summary": "Vladimir Hornguard's undead warriors.",
+  "facts": [
+   {
+    "text": "A Revenant at the Raven River crossroads warned the party that they are watching.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Brides of Strahd",
+  "type": "faction",
+  "aliases": [],
+  "summary": "Strahd's three vampire brides.",
+  "facts": [
+   {
+    "text": "Two of the three, Volenta and Anastrasia, have been killed.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "The party has killed two of the three brides.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Lathander",
+  "type": "deity",
+  "aliases": [
+   "Morninglord",
+   "Morning Lord"
+  ],
+  "summary": "The god of the dawn served by Malron.",
+  "facts": [
+   {
+    "text": "Malron's divine connection to the Morninglord has grown stronger.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "The Icon of Dawn's Grace holds a shard of Ethereal, an angel serving the Morning Lord.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "Malron told the Abbot the Morning Lord wants second chances and rebirth.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   }
+  ]
+ },
+ {
+  "name": "Ladies Three",
+  "type": "deity",
+  "aliases": [],
+  "summary": "An ancient power linked to the Spear of the Huntress.",
+  "facts": [
+   {
+    "text": "The Spear of the Huntress is a shard of their ancient power.",
+    "post": "2026-02-03-notebook"
+   }
+  ]
+ },
+ {
+  "name": "Spirit of the Huntress",
+  "type": "deity",
+  "aliases": [],
+  "summary": "A spirit linked to the Spear of the Huntress.",
+  "facts": [
+   {
+    "text": "Communing with her can fully restore the Spear of the Huntress.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Argynvostholt",
+  "type": "place",
+  "aliases": [],
+  "summary": "The ruined stronghold of the Order of the Silver Dragon.",
+  "facts": [
+   {
+    "text": "The party explored its graveyard and second floor and found hidden relics.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   },
+   {
+    "text": "On its fourth floor, a prophecy was revealed about Argynvost's skull.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Its \"Shining Beacon\" can be lit by returning Argynvost's skull.",
+    "post": "2026-02-03-notebook"
+   }
+  ]
+ },
+ {
+  "name": "Tsolenka Pass",
+  "type": "place",
+  "aliases": [],
+  "summary": "A mountain pass guarded by a magical curtain and petrified vrocks.",
+  "facts": [
+   {
+    "text": "The Amulet of Knight's Passage lets travellers through its magical curtain.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Castle Ravenloft",
+  "type": "place",
+  "aliases": [
+   "Ravenloft"
+  ],
+  "summary": "Strahd's castle.",
+  "facts": [
+   {
+    "text": "The party arrived for a reception with Strahd's court.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "The party stayed overnight in a guest tower and was forced to sleep.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Guarded by a 1,000-foot chasm and drawbridge; the party broke in through the servants' entrance.",
+    "post": "2026-02-10-unwelcome-guests"
+   },
+   {
+    "text": "The party took Argynvost's skull from its Hall of Bones.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   },
+   {
+    "text": "Its catacombs held the Staff of Kazan and the Spear of the Huntress.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   },
+   {
+    "text": "The party left by the Brazier Room's teleportation flame.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Heart of Sorrow",
+  "type": "item",
+  "aliases": [],
+  "summary": "A huge pulsing red crystal heart in a tower of Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "A map in a clock showed the castle's beating heart in the north tower.",
+    "post": "2025-08-26-the-boon-the-bride-and-the-beating-heart"
+   },
+   {
+    "text": "Described as a 10-foot red crystal heart with darkness swirling inside.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Aera scouted it alone; the party chose to finish the heist before destroying it.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Hangs in a 65-foot-wide tower with an unrailed spiral stair, seen as the castle's weak point.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   }
+  ]
+ },
+ {
+  "name": "Hall of Bones",
+  "type": "place",
+  "aliases": [
+   "K-67"
+  ],
+  "summary": "An ossuary in Castle Ravenloft decorated with human remains.",
+  "facts": [
+   {
+    "text": "Suspected to hold Argynvost's skull.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "The party took the dragon skull from above its eastern doors, triggering a skeleton trap.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   }
+  ]
+ },
+ {
+  "name": "Catacombs of Ravenloft",
+  "type": "place",
+  "aliases": [
+   "K84",
+   "the Catacombs"
+  ],
+  "summary": "The crypts beneath Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Holds the crypts of King Dostran (34) and St. Markovia (40).",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Crypts 15 (Kazan) and 34 (King Dostran) gave up the staff and spear; Crypt 18 waits empty for Ireena.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   },
+   {
+    "text": "Crypts 40, 37 and 31 held the Icon of Dawn's Grace and spell scrolls; Rahadin attacked there.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Strahd’s Tomb",
+  "type": "place",
+  "aliases": [
+   "K86"
+  ],
+  "summary": "Strahd's personal tomb in the catacombs.",
+  "facts": [
+   {
+    "text": "Named as the ultimate target of the heist.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "A blood-stained tomb the party found but chose not to enter.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "King’s Bedchamber",
+  "type": "place",
+  "aliases": [
+   "K56"
+  ],
+  "summary": "A lavish room in the Rooms of Weeping at Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Gertruda was held here.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Holds a portrait of Tatyana; the party fought Anastrasia here.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Rooms of Weeping",
+  "type": "place",
+  "aliases": [],
+  "summary": "A desolate section of Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Contains the King's Bedchamber.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Larders of Ill Omen",
+  "type": "place",
+  "aliases": [],
+  "summary": "A cold, damp area in Castle Ravenloft's foundations.",
+  "facts": [
+   {
+    "text": "The party descended 40 feet into it; it holds the elevator trap.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Drowning Cells",
+  "type": "place",
+  "aliases": [],
+  "summary": "Flooded prison cells beneath Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Hold 3-5 feet of water; Emil was kept here.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Torture Chamber",
+  "type": "place",
+  "aliases": [
+   "Flooded Dungeon"
+  ],
+  "summary": "A flooded chamber of racks and iron maidens under a velvet-draped balcony.",
+  "facts": [
+   {
+    "text": "Olfin was teleported into an Iron Maiden here.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "The party killed Volenta Popofsky here.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   }
+  ]
+ },
+ {
+  "name": "Serpent’s Wing",
+  "type": "place",
+  "aliases": [
+   "South Tower Stair"
+  ],
+  "summary": "A stair in Castle Ravenloft linking the dungeons to the upper floors.",
+  "facts": [
+   {
+    "text": "Cyrus's map showed it connects the dungeons to the royal apartments and the Witch's Coven.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Brazier Room",
+  "type": "place",
+  "aliases": [],
+  "summary": "A room in Castle Ravenloft with a seven-stone teleportation brazier and frozen hourglass.",
+  "facts": [
+   {
+    "text": "Its colored stones teleport travellers across Barovia, explaining how Strahd moves.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   },
+   {
+    "text": "The party used an indigo stone to teleport to the Village of Barovia's cemetery.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Vallaki",
+  "type": "place",
+  "aliases": [
+   "Vellanki"
+  ],
+  "summary": "A town that serves as the party's base.",
+  "facts": [
+   {
+    "text": "The party went there for supplies.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "The party rehearsed their heist there.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   },
+   {
+    "text": "Lies 8.5 miles from Castle Ravenloft.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Blue Water Inn",
+  "type": "place",
+  "aliases": [
+   "Bluewater Inn"
+  ],
+  "summary": "An inn in Vallaki and the party's base.",
+  "facts": [
+   {
+    "text": "Aera received Arrigal's note here.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "The party planned its Ravenloft heist here.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Baron Dimitri Krezkov waited for the party here.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Sarepool",
+  "type": "place",
+  "aliases": [],
+  "summary": "A Vistani camp at a crossroads.",
+  "facts": [
+   {
+    "text": "The party met Stanimere near here.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Gates of Barovia",
+  "type": "place",
+  "aliases": [],
+  "summary": "Fog-wreathed gates flanked by headless statues.",
+  "facts": [
+   {
+    "text": "A black carriage with Strahd's puzzle chest waited here.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   }
+  ]
+ },
+ {
+  "name": "Ancient Oak",
+  "type": "place",
+  "aliases": [],
+  "summary": "A massive oak tree on the Old Windmill Road carved with \"K & V\".",
+  "facts": [
+   {
+    "text": "Katarina's letter and a silver box with half a locket were found here.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   }
+  ]
+ },
+ {
+  "name": "Village of Barovia",
+  "type": "place",
+  "aliases": [
+   "Barovia village"
+  ],
+  "summary": "A village in Barovia where Ismark is burgomaster.",
+  "facts": [
+   {
+    "text": "Gertruda disappeared from here.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   },
+   {
+    "text": "The party arrived in its cemetery and rested at the Burgomaster's mansion.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Krezk",
+  "type": "place",
+  "aliases": [],
+  "summary": "A walled village ruled by Baron Dimitri Krezkov.",
+  "facts": [
+   {
+    "text": "Remains under the rule of the Abbot's madness.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "The party went there to save Anna Krezkova.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "The party rested at the Burgomaster's house before climbing to the Abbey.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   }
+  ]
+ },
+ {
+  "name": "Abbey of Saint Markovia",
+  "type": "place",
+  "aliases": [
+   "Abbey of St. Markovia",
+   "the Abbey"
+  ],
+  "summary": "The abbey above Krezk ruled by the Abbot.",
+  "facts": [
+   {
+    "text": "The Icon of Dawn's Grace must be returned here to cure the Abbot.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "The party fought the Abbot in its asylum (S15) and received bone wings in its tower (S17).",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Liren and Gumbo rose from its courtyard well; a red door led to a hall of lost keepsakes below.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Amber Temple",
+  "type": "place",
+  "aliases": [],
+  "summary": "A temple far to the west that holds the Sunsword.",
+  "facts": [
+   {
+    "text": "Strahd recommended the party visit it.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "The Sunsword is believed to be hidden there.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "The brazier's yellow stone may lead to a mountain keep near it.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Raven River Crossroads",
+  "type": "place",
+  "aliases": [],
+  "summary": "A crossroads where a Revenant met the party.",
+  "facts": [
+   {
+    "text": "A Revenant warned the party of Vladimir Hornguard's rage here.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   }
+  ]
+ },
+ {
+  "name": "Kazan’s Tower",
+  "type": "place",
+  "aliases": [],
+  "summary": "A tower where the party first saw Kazan's rune sequence.",
+  "facts": [
+   {
+    "text": "The party had met the eight-schools rune sequence there before.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Forest Fane",
+  "type": "place",
+  "aliases": [
+   "Forest Fand"
+  ],
+  "summary": "An ancient fane that could restore the Spear of the Huntress.",
+  "facts": [
+   {
+    "text": "Reconsecrating it could fully restore the Spear of the Huntress.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Balinoks",
+  "type": "place",
+  "aliases": [],
+  "summary": "Mountains around Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "The sun set behind its peaks as the party approached the castle.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "The Void",
+  "type": "place",
+  "aliases": [],
+  "summary": "A misty space reached through the Icon of Dawn's Grace.",
+  "facts": [
+   {
+    "text": "The party found the Abbot's soul weeping in shackles there.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   }
+  ]
+ },
+ {
+  "name": "False Meadow",
+  "type": "place",
+  "aliases": [],
+  "summary": "An illusion of sunlight beneath the abbey showing the lives the heroes could have had.",
+  "facts": [
+   {
+    "text": "An illusion of St. Markovia offered a door out of Barovia there; it was a trap.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Hall of Niches",
+  "type": "place",
+  "aliases": [
+   "The Red Door"
+  ],
+  "summary": "A chamber under the abbey's red door full of keepsakes from lost souls.",
+  "facts": [
+   {
+    "text": "Held lost items, including the party's own, and was guarded by six shadows.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Moontouched Rapier",
+  "type": "item",
+  "aliases": [],
+  "summary": "A +1 rapier that glows faintly in darkness.",
+  "facts": [
+   {
+    "text": "Found by Aera behind a painting at Argynvostholt.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Amulet of Knight’s Passage",
+  "type": "item",
+  "aliases": [],
+  "summary": "A carved white stone that opens the curtain at Tsolenka Pass.",
+  "facts": [
+   {
+    "text": "Found in the hidden shelf at Argynvostholt.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Bracelet of Warding",
+  "type": "item",
+  "aliases": [],
+  "summary": "A bracelet that casts Sanctuary and Warding Bond.",
+  "facts": [
+   {
+    "text": "Found in the hidden shelf at Argynvostholt; its charges return at dawn.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Silver Tablet and Banner",
+  "type": "item",
+  "aliases": [],
+  "summary": "Historical relics of the Order of the Silver Dragon.",
+  "facts": [
+   {
+    "text": "Found in the hidden shelf at Argynvostholt.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Andral’s Scroll",
+  "type": "item",
+  "aliases": [],
+  "summary": "A letter urging Argynvost to make peace with Strahd.",
+  "facts": [
+   {
+    "text": "Found at Argynvostholt; presents Strahd's rule as stabilizing.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Brother Merik’s Book",
+  "type": "item",
+  "aliases": [],
+  "summary": "A book with a prayer to be read aloud.",
+  "facts": [
+   {
+    "text": "Said to be in the west bedchambers of Argynvostholt.",
+    "post": "2025-06-03-echoes-of-the-silver-dragon"
+   }
+  ]
+ },
+ {
+  "name": "Tarnished Silver Locket",
+  "type": "item",
+  "aliases": [
+   "locket"
+  ],
+  "summary": "Half of a two-piece silver locket.",
+  "facts": [
+   {
+    "text": "Olfin took it from a silver box atop the ancient oak.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   }
+  ]
+ },
+ {
+  "name": "Katarina’s Letter",
+  "type": "item",
+  "aliases": [],
+  "summary": "A farewell letter from Katarina to Varushka.",
+  "facts": [
+   {
+    "text": "Found near the ancient oak.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   }
+  ]
+ },
+ {
+  "name": "Chest of Holding",
+  "type": "item",
+  "aliases": [
+   "Chest of Holden",
+   "Puzzle Chest",
+   "chest of holding"
+  ],
+  "summary": "A puzzle chest that works like a Bag of Holding.",
+  "facts": [
+   {
+    "text": "Found in Strahd's carriage; opened by solving an animal-tile riddle.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "Holds up to 500 pounds and was planned as the way to smuggle relics out.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Argynvost's shrunken skull was stored in it.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   }
+  ]
+ },
+ {
+  "name": "Velvet-Trimmed Gloves",
+  "type": "item",
+  "aliases": [],
+  "summary": "Elegant gloves from Strahd's puzzle chest.",
+  "facts": [
+   {
+    "text": "Claimed from the puzzle chest.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   }
+  ]
+ },
+ {
+  "name": "Wolf-Trimmed Cloaks",
+  "type": "item",
+  "aliases": [],
+  "summary": "Cloaks from Strahd's puzzle chest.",
+  "facts": [
+   {
+    "text": "Claimed from the puzzle chest.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   }
+  ]
+ },
+ {
+  "name": "Symbol of Ravenkind",
+  "type": "item",
+  "aliases": [
+   "Holy Symbol of Ravenkind"
+  ],
+  "summary": "A legendary holy symbol for fighting vampires.",
+  "facts": [
+   {
+    "text": "Held by Olfin Darning.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Olfin wielded it against Volenta.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   }
+  ]
+ },
+ {
+  "name": "Van Richten’s Maps",
+  "type": "item",
+  "aliases": [],
+  "summary": "Maps of Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Given by Van Richten to plan the heist.",
+    "post": "2026-02-03-notebook"
+   }
+  ]
+ },
+ {
+  "name": "Argynvost’s Skull",
+  "type": "item",
+  "aliases": [
+   "Dragon Skull",
+   "Skull of Argynvost",
+   "Argynvost Skull"
+  ],
+  "summary": "The skull of the silver dragon Argynvost.",
+  "facts": [
+   {
+    "text": "Prophecy says returning it to its tomb could weaken Strahd's hold.",
+    "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
+   },
+   {
+    "text": "The party's top heist priority, to be returned to the beacon at Argynvostholt.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Taken from the Hall of Bones, reduced and stored in the Chest of Holding.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   }
+  ]
+ },
+ {
+  "name": "Icon of Dawn’s Grace",
+  "type": "item",
+  "aliases": [
+   "Icon of Ravenloft",
+   "Shard of Divinity"
+  ],
+  "summary": "A sentient silver statuette holding a shard of the angel Ethereal.",
+  "facts": [
+   {
+    "text": "Said to be the only cure for the Abbot's madness.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Found by Malron in Saint Markovia's crypt; it speaks telepathically.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   },
+   {
+    "text": "Told the party the Abbot's tragic history.",
+    "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
+   },
+   {
+    "text": "Took the party into the void to redeem the Abbot.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   },
+   {
+    "text": "Has not answered since the fight with the Abbot.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Spear of the Huntress",
+  "type": "item",
+  "aliases": [],
+  "summary": "A +1 blood spear tied to the Ladies Three.",
+  "facts": [
+   {
+    "text": "A heist goal and a shard of the Ladies Three's power.",
+    "post": "2026-02-03-notebook"
+   },
+   {
+    "text": "Taken from King Dostran's sarcophagus in Crypt 34.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Sunsword",
+  "type": "item",
+  "aliases": [],
+  "summary": "A sword of solar energy.",
+  "facts": [
+   {
+    "text": "The party's main goal for fighting Strahd; believed to be in the Amber Temple.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Strahd’s Gemstones",
+  "type": "item",
+  "aliases": [],
+  "summary": "Stones taken from Strahd.",
+  "facts": [
+   {
+    "text": "The party planned to use them with Locate Object during the heist.",
+    "post": "2026-02-03-welcome-back-to-vellanki"
+   }
+  ]
+ },
+ {
+  "name": "Clairvoyance Stone",
+  "type": "item",
+  "aliases": [],
+  "summary": "A palm-sized stone with 3 charges of Clairvoyance.",
+  "facts": [
+   {
+    "text": "Given to the party by Stanimere.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
+  "name": "Cyrus’s Heirloom Spoon",
+  "type": "item",
+  "aliases": [
+   "lonely spoon"
+  ],
+  "summary": "Cyrus Belview's oversized, \"lonely\" cooking spoon.",
+  "facts": [
+   {
+    "text": "The party took the wrong spoon from a bone chair.",
+    "post": "2026-02-17-retrieval-of-the-dragon-skull"
+   },
+   {
+    "text": "Olfin grabbed the real spoon from a hall of 40 zombies and it was traded for a map.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Candle of Long Resting",
+  "type": "item",
+  "aliases": [],
+  "summary": "A one-use candle that gives a long rest during a short rest.",
+  "facts": [
+   {
+    "text": "Given by the DM to help with Ravenloft's difficulty.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Silver Thorn Collar",
+  "type": "item",
+  "aliases": [],
+  "summary": "A collar binding Emil.",
+  "facts": [
+   {
+    "text": "Forcing it open deals lethal damage; Volenta held the key.",
+    "post": "2026-03-10-depths-of-ravenloft"
+   },
+   {
+    "text": "Unlocked with the iron key from Volenta's body.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   }
+  ]
+ },
+ {
+  "name": "Platinum Skull Mask",
+  "type": "item",
+  "aliases": [],
+  "summary": "A mask worth 750 gold pieces.",
+  "facts": [
+   {
+    "text": "Taken from Volenta's body.",
+    "post": "2026-03-31-the-fall-of-volenta-popofsky"
+   }
+  ]
+ },
+ {
+  "name": "Staff of Kazan",
+  "type": "item",
+  "aliases": [
+   "Kazan’s Staff"
+  ],
+  "summary": "A legendary platinum staff.",
+  "facts": [
+   {
+    "text": "Appeared after the rune puzzle in Kazan's tomb; Crusty attuned to it.",
+    "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
+   }
+  ]
+ },
+ {
+  "name": "Growmor’s Staff",
+  "type": "item",
+  "aliases": [],
+  "summary": "A wooden staff with brass and marble knobs.",
+  "facts": [
+   {
+    "text": "Opened the hidden compartment in Crypt 37.",
+    "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
+   }
+  ]
+ },
+ {
+  "name": "Tatyana’s Bracelet",
+  "type": "item",
+  "aliases": [],
+  "summary": "A silver bracelet of the moon and stars.",
+  "facts": [
+   {
+    "text": "Shown in Tatyana's portrait; Olfin had earlier recovered it for Arabelle.",
+    "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
+   }
+  ]
+ },
+ {
+  "name": "Bone Wings of Flying",
+  "type": "item",
+  "aliases": [],
+  "summary": "Two sets of animated bone wings (eagle and bat).",
+  "facts": [
+   {
+    "text": "Given by Clovin Belview; Olfin took the eagle set and Aera the bat set.",
+    "post": "2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star"
+   },
+   {
+    "text": "Olfin flew on the eagle wings against the Fallen Star.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   }
+  ]
+ },
+ {
+  "name": "Shepherd Card",
+  "type": "item",
+  "aliases": [
+   "Four of Glyphs"
+  ],
+  "summary": "A Taroka card carrying a message from St. Markovia.",
+  "facts": [
+   {
+    "text": "Drifted down in the void and helped summon St. Markovia.",
+    "post": "2026-08-25-the-fallen-star-ape-sacrifice-and-redemption"
+   }
+  ]
+ },
+ {
+  "name": "Reliquary of Two Flames",
+  "type": "item",
+  "aliases": [],
+  "summary": "A silver reliquary holding the echoes of Liren and Gumbo.",
+  "facts": [
+   {
+    "text": "Found by Aera in the vessel's remains; it can once return a companion to life.",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ },
+ {
+  "name": "Strahd’s Letter",
+  "type": "item",
+  "aliases": [],
+  "summary": "A mocking letter Strahd left in a black carriage.",
+  "facts": [
+   {
+    "text": "Malron read it aloud: \"There are so few left to come back.\"",
+    "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
+   }
+  ]
+ }
+]

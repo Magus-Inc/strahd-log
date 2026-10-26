@@ -1,0 +1,16 @@
+---
+title: Fortune Reading
+type: other
+source: Written on Obsidian Portal
+obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/fortune-reading
+---
+
+**Traitor**: Look for a wealthy woman, a staunch ally of the devil. Lock and key with the bones of an ancient enemy.
+
+**Myrmidon**: Look for a den of wolves in the hills overlooking a mountain lake. Treasure belongs to mother night.
+
+**Bishop**: What you seek lies in a pile of treasure, beyond a set of amber doors.
+
+**Mists**: A vistano wanders alone searching for a mentor. Doesn’t stay in one place for long. Seek her out in St. Markova Abbey near the mists
+
+**Marionette**: Look to Great heights, find the beating heart of the castle.

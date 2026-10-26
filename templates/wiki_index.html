@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Wiki | {{ site_title }}{% endblock %}
+{% block content %}
+    <h1 class="page-title">Wiki</h1>
+{% if not groups %}
+    <p class="empty">No wiki pages yet. Add one as <code>content/wiki/&lt;name&gt;.md</code>.</p>
+{% else %}
+    <p class="empty">{{ count }} pages on the people, places and things of Barovia.</p>
+    <nav class="tag-cloud">
+{% for label, entries in groups %}
+      <a class="tag" href="#{{ label | tag_slug }}">{{ label }} <small>{{ entries | length }}</small></a>
+{% endfor %}
+    </nav>
+{% for label, entries in groups %}
+    <section class="tag-section" id="{{ label | tag_slug }}">
+      <h2>{{ label }}</h2>
+      <ul class="wiki-list">
+{% for page in entries %}
+        <li><a class="post-link" href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% if page.summary %} <span class="wiki-summary">{{ page.summary }}</span>{% endif %}</li>
+{% endfor %}
+      </ul>
+    </section>
+{% endfor %}
+{% endif %}
+{% endblock %}

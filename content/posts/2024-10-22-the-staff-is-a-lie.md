@@ -33,4 +33,3 @@ The journal revealed a tale of a man, likely Rictavio—possibly Van Richten—h
 **Encounter with Werewolves**  
 On our journey back north to town, we encountered Zollst and Matilda, trappers from Krethi, who warned us of a bloodthirsty lady. As they turned into werewolves, we battled fiercely and eventually defeated them, continuing our trek back to town.
 
-[Notes - October 22nd, 2024](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-october-22nd-2024)

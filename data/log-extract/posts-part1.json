@@ -1,0 +1,1189 @@
+[
+  {
+    "name": "Aera shan Ravanór",
+    "type": "character",
+    "aliases": ["Aera"],
+    "summary": "A party member and skilled archer whose tooth necklace led the group through the mists to Barovia.",
+    "facts": [
+      {"text": "Her tooth necklace levitated and pulled the party into the mists out of Daggerford.", "post": "2023-11-07-session-zero"},
+      {"text": "Found a red book that opened a hidden door behind the office bookshelf in Durst Manor.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Rose Durst's spirit joined with her body.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Killed the creature in the manor basement, two ghouls, a mimic and the boneless, and cut off Walter's head.", "post": "2024-01-30-walter-we-are-coming-for-you"},
+      {"text": "Found a guide to killing vampires in the burgomaster's mansion.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Pilfered two healing potions from an overpriced shop in Barovia village.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Madam Eva asked her to deliver 10 gold to Blinsky's toy shop to buy something for her grandchild Arabelle.", "post": "2024-04-16-tser-pool"},
+      {"text": "Bought a wolf pelt from Zoldar that turned out to be glamour weave.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Weeble Wobleston",
+    "type": "character",
+    "aliases": ["Weeble"],
+    "summary": "A party member whose glowing pendant led the group through the mists.",
+    "facts": [
+      {"text": "His pendant glowed and hovered toward the barn wall, leading the party into the mists.", "post": "2023-11-07-session-zero"},
+      {"text": "Destroyed an animated broom on the third floor of Durst Manor.", "post": "2023-12-12-deeper-into-the-manor"},
+      {"text": "Promised Rose to bury the Durst children's bones in the garden.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Was attacked by a mimic and a boneless in the manor basement, and was given first rights to the footlocker loot.", "post": "2024-01-30-walter-we-are-coming-for-you"},
+      {"text": "Found a compass on a dead young man's body on the road into Barovia.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Nearly provoked Strahd and cast Sleep on an injured bird.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
+      {"text": "Cast Sleep on a bandit leader during a fight over a road toll.", "post": "2024-07-09-skeletal-rider"}
+    ]
+  },
+  {
+    "name": "Schlopkht",
+    "type": "character",
+    "aliases": ["Scholpkht", "Schloptk"],
+    "summary": "A sneaky party member who often scouts ahead and tries clever ruses.",
+    "facts": [
+      {"text": "Moved the snarling stuffed wolf and found Lady Lovina Wachter's invitation in a coat closet.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Broke a mirror after seeing Elisabeth Durst's apparition and kept a shard; was knocked out by the creature in the basement.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Raised the portcullis and broke a window so the party could escape the collapsing manor.", "post": "2024-01-30-walter-we-are-coming-for-you"},
+      {"text": "Scouted through the looping fog on a rope to find the fourth marked tree.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Volunteered to return the sunburst relic to Father Donavich.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Tried to bribe the Vallaki guards with dream pies.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Staged a fall to reveal the signet ring to Viktor.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Olfin Darning",
+    "type": "character",
+    "aliases": ["Olfin"],
+    "summary": "A Hexblood party member who heals with laying on of hands.",
+    "facts": [
+      {"text": "Found a teapot with wine, lace and a contraceptive powder in the Durst Manor pantry.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Was knocked out by an animated broom.", "post": "2023-12-12-deeper-into-the-manor"},
+      {"text": "Thorn Durst's spirit joined with his body.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Recovered Ireena's keepsakes and was given a silver bracelet inscribed Tatiana; noticed bite marks on her neck.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Healed an injured bird and tied a lock of his hair to its leg.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
+      {"text": "Told a lie about being raised by hags and read Van Richten's werewolf manuscript aloud.", "post": "2024-04-16-tser-pool"},
+      {"text": "Used the signet ring's pattern to unlock the Tower of Kazan.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Malron Lichtstrahl",
+    "type": "character",
+    "aliases": ["Malron", "Malon"],
+    "summary": "A cleric of Lathander in the party and author of several log entries.",
+    "facts": [
+      {"text": "Found a book titled 'Tale of Malron' telling his own life story in Durst Manor.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Convinced Gustav Durst's ghost to let the party escape the manor.", "post": "2024-01-30-walter-we-are-coming-for-you"},
+      {"text": "Staked the vampire beneath the church, believed to be Doru.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Was blessed by Father Donavich with the 'Strength of a new dawn'.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Sneaked upstairs in the Baron's mansion and found a book of Vallaki births and deaths.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Cured Gumbo of lycanthropy with a Remove Curse scroll and received the Talisman of Echoes from Rictavio.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Grom Shield-Breaker",
+    "type": "character",
+    "aliases": ["Grom"],
+    "summary": "A confrontational dwarf in the party.",
+    "facts": [
+      {"text": "Introduced as the party's dwarf, said to have always been with them.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Challenged the hidden scouts on the road to Tser Pool.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Carries a tooth, as does each member of his family.", "post": "2024-04-16-tser-pool"},
+      {"text": "Won the Vistani storytelling game and its prizes.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Shabasta",
+    "type": "character",
+    "aliases": ["Shivasta", "Shivasta the Great"],
+    "summary": "A porcupine-like bard met at the Vistani encampment who travels with the party.",
+    "facts": [
+      {"text": "Met at the Vistani encampment near Vallaki, telling tales and playing a lute.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Found wolf tracks and a hollow full of paint near the wagon at the Tower of Kazan.", "post": "2024-10-01-looking-for-zoldars-tower"},
+      {"text": "Triggered a silver net and fire potions in Esmeralda's wagon.", "post": "2024-10-22-the-staff-is-a-lie"},
+      {"text": "Performed at the Blue Water Inn for a bed and beer.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Gumbo",
+    "type": "character",
+    "aliases": [],
+    "summary": "A half-orc rogue with the party who was bitten by a werewolf.",
+    "facts": [
+      {"text": "Got a festering werewolf bite and was cured of lycanthropy by Malron's Remove Curse scroll.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Liren",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A golden dragonborn barbarian with a great axe met at the Blue Water Inn.",
+    "facts": [
+      {"text": "Met by the party at the Blue Water Inn.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Rose Durst",
+    "type": "npc",
+    "aliases": ["Rose"],
+    "summary": "The ghostly daughter of Gustav and Elisabeth Durst, tied to Durst Manor.",
+    "facts": [
+      {"text": "Met outside the manor with her brother Thorn; afraid to go inside.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Her skeleton was found locked in the attic with Thorn's; she showed the party a secret stair to the basement.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Her spirit joined with Aera.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Her power let Aera make a rock glow and cast Mend.", "post": "2024-01-30-walter-we-are-coming-for-you"},
+      {"text": "Her remains were buried near the tower.", "post": "2024-02-13-barovia-barovia"}
+    ]
+  },
+  {
+    "name": "Thorn Durst",
+    "type": "npc",
+    "aliases": ["Thorn"],
+    "summary": "The ghostly son of Gustav and Elisabeth Durst, tied to Durst Manor.",
+    "facts": [
+      {"text": "Thought he heard noises from below the manor.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "His spirit joined with Olfin.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "His remains were buried near the tower.", "post": "2024-02-13-barovia-barovia"}
+    ]
+  },
+  {
+    "name": "Gustav Durst",
+    "type": "npc",
+    "aliases": ["Gustav"],
+    "summary": "Father of the Durst family who had an affair with the nursemaid Klara.",
+    "facts": [
+      {"text": "Rose named her parents as Gustav and Elisabeth.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Seen as an apparition dancing with Klara in the ballroom.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "The creature that attacked from the bones appeared to be his remains.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "His ghost let the party escape after Malron's plea.", "post": "2024-01-30-walter-we-are-coming-for-you"}
+    ]
+  },
+  {
+    "name": "Elisabeth Durst",
+    "type": "npc",
+    "aliases": ["Elisabeth"],
+    "summary": "Mother of the Durst family, a cultist servant of Strahd.",
+    "facts": [
+      {"text": "Seen as an apparition glaring at Gustav and Klara, her amber shard flashing.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Left a note naming Drasha the Beast's custodian with an amber shard.", "post": "2023-12-12-deeper-into-the-manor"},
+      {"text": "Strahd's letter to her led the party to think she was the monster.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Her apparition vowed to kill the party for destroying her pet.", "post": "2024-01-30-walter-we-are-coming-for-you"}
+    ]
+  },
+  {
+    "name": "Walter Durst",
+    "type": "creature",
+    "aliases": ["Walter"],
+    "summary": "Klara's son by Gustav, an undead baby inside the flesh mound beneath Durst Manor.",
+    "facts": [
+      {"text": "His name was carved into the headrest of a crib.", "post": "2023-12-12-deeper-into-the-manor"},
+      {"text": "Was Klara's son; the cult fed victims to him.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Found undead inside a flesh mound; Aera cut off his head.", "post": "2024-01-30-walter-we-are-coming-for-you"}
+    ]
+  },
+  {
+    "name": "Klara",
+    "type": "npc",
+    "aliases": ["Miss Klara"],
+    "summary": "The Durst children's nursemaid, who had Gustav's child.",
+    "facts": [
+      {"text": "Left a note asking leave because of her condition.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Seen as an apparition dancing with Gustav.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Her tortured apparition appeared in a third floor mirror.", "post": "2023-12-12-deeper-into-the-manor"},
+      {"text": "Walter was her son.", "post": "2024-01-09-finishing-the-manor"}
+    ]
+  },
+  {
+    "name": "Drasha",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A servant chosen by Elisabeth Durst as the Beast's custodian.",
+    "facts": [
+      {"text": "Elisabeth left her a note and an amber shard to soothe the Beast.", "post": "2023-12-12-deeper-into-the-manor"}
+    ]
+  },
+  {
+    "name": "Lady Lovina Wachter",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A guest invited to the Durst Mill anniversary celebration.",
+    "facts": [
+      {"text": "An invitation addressed to her fell from a coat in Durst Manor.", "post": "2023-11-28-entering-durst-manor"}
+    ]
+  },
+  {
+    "name": "Strahd von Zarovich",
+    "type": "npc",
+    "aliases": ["Strahd", "Count Strahd von Zarovich", "Vlahd"],
+    "summary": "The vampire lord of Barovia.",
+    "facts": [
+      {"text": "Wrote a scornful letter to Elisabeth Durst.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "His forces besieged Barovia village; Ismark warned of his spies.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Bit and controlled Ireena in the past.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Met the party on the road with seven dire wolves and let Ireena stay with them for now.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
+      {"text": "Fears Madam Eva because she can see the future.", "post": "2024-04-16-tser-pool"},
+      {"text": "Crushed the Dusk Elves' revolt after his father died.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Put a bounty on dark-haired, olive-skinned girls with lavender irises.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Ireena Kolyana",
+    "type": "npc",
+    "aliases": ["Ireena", "Irena"],
+    "summary": "Ismark's adopted sister, whom the party escorts to sanctuary.",
+    "facts": [
+      {"text": "Ismark's adopted sister, found in the forest as a little girl.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Has two bite marks from Strahd; gave Olfin a silver bracelet.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Strahd called out to her on the road but let her stay with the party.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
+      {"text": "Told a tale of a wolf by a lake that she claimed was a dream.", "post": "2024-04-16-tser-pool"},
+      {"text": "Was enraged by the refugee camp and the Baron's callousness.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "A doll resembling her was seen in Blinsky's toy store.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Escorted to St. Andral's Church, where Father Lucien offered her shelter.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Ismark",
+    "type": "npc",
+    "aliases": ["Ismark the lesser", "Imsark"],
+    "summary": "Ireena's brother and grandson of Ismark Antonovich the Great, in Barovia village.",
+    "facts": [
+      {"text": "Met at the Blood on the Vine Tavern; asked the party to help his sister.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "His father died in the attack on the village.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Asked the party to escort Ireena to the Abbey of Saint Markovia in Krezk.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Ismark Antonovich the Great",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A past burgomaster of Barovia honored with a statue.",
+    "facts": [
+      {"text": "His statue's plaque calls him Burgomaster of Barovia and Bane of Vampires.", "post": "2024-02-13-barovia-barovia"}
+    ]
+  },
+  {
+    "name": "Billdrath",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A man in the Blood on the Vine Tavern who scorned Ismark.",
+    "facts": [
+      {"text": "Called Ismark's mission a fool's errand.", "post": "2024-02-13-barovia-barovia"}
+    ]
+  },
+  {
+    "name": "Gertrude",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A girl from Barovia village who left alone for Vallaki at night.",
+    "facts": [
+      {"text": "Reported missing in the tavern; Ismark promised to send someone.", "post": "2024-02-13-barovia-barovia"}
+    ]
+  },
+  {
+    "name": "Father Donavich",
+    "type": "npc",
+    "aliases": ["Father Donavan", "Donavitch", "Faher Donavich"],
+    "summary": "The priest of the Morninglord at Barovia village's church, father of Doru.",
+    "facts": [
+      {"text": "His son Doru led a party to the castle.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Lost his Bronze Sunburst and trapped vampire Doru beneath the church.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Performed burial rites for Ismark's father and blessed Malron.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Doru",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Father Donavich's son, who became a vampire.",
+    "facts": [
+      {"text": "Recruited a party to clear the castle and was said to have woken Strahd.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Returned as a vampire, took the holy symbol, and was staked beneath the church.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "His body dissolved in a stream.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Blackmailed Van Richten into leading a revolt on the castle.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Kreza",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Barovia village scout searching for the Landston family.",
+    "facts": [
+      {"text": "Met on the trail to Tser Pool with fellow scout Conga.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Conga",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Barovia village scout searching for the Landston family.",
+    "facts": [
+      {"text": "Met on the trail to Tser Pool with fellow scout Kreza.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Landston family",
+    "type": "faction",
+    "aliases": [],
+    "summary": "A missing family of two parents and five children from Barovia village.",
+    "facts": [
+      {"text": "Scouts were searching for them; the party fought and killed figures by an ancient oak believed to be them.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Madam Eva",
+    "type": "npc",
+    "aliases": ["Eva"],
+    "summary": "An old Vistani seer at Tser Pool who reads fortunes.",
+    "facts": [
+      {"text": "Appeared in the party's dreams and asked them to seek her at Tser Pool.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Read the party's fortune with five cards.", "post": "2024-04-16-tser-pool"},
+      {"text": "Once had a pet raven named Turo.", "post": "2024-04-16-tser-pool"},
+      {"text": "Asked Aera to buy a toy for her grandchild Arabelle.", "post": "2024-04-16-tser-pool"},
+      {"text": "Warned Van Richten not to return to the village.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Turo",
+    "type": "creature",
+    "aliases": [],
+    "summary": "Madam Eva's former pet raven.",
+    "facts": [
+      {"text": "Madam Eva said the party's bird companion reminded her of him.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Stanimir",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Vistani man at the Tser Pool camp.",
+    "facts": [
+      {"text": "Welcomed the party and told a tale of a prince turned tyrant.", "post": "2024-04-16-tser-pool"},
+      {"text": "Told the true story of Arturi's curse.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Eliza",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A woman at the Tser Pool camp curious about the party.",
+    "facts": [
+      {"text": "Asked many questions; Malron feared she served the shadow.", "post": "2024-04-16-tser-pool"},
+      {"text": "Told a tale of ravens and a Holy Symbol of Raven Kind.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Arturi Vedonavich",
+    "type": "npc",
+    "aliases": ["Arturi"],
+    "summary": "A cursed Vistani-looking visitor searching for Van Richten.",
+    "facts": [
+      {"text": "Claimed to know Rudolf Von Richten.", "post": "2024-04-16-tser-pool"},
+      {"text": "Left the camp at night and was found in a tree surrounded by 12 zombies.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Rudolph van Richten",
+    "type": "npc",
+    "aliases": ["Rudolf Von Richten", "Van Richten", "R V Richten", "Rictavio", "Ric Tavio", "Rictavio Von Richten"],
+    "summary": "A vampire hunter and scholar disguised in Vallaki as the carnival showman Rictavio.",
+    "facts": [
+      {"text": "A chest carved 'R V Richten' held silver bolts and holy water.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
+      {"text": "Wrote 'A Study of the Werewolf's Curse'.", "post": "2024-04-16-tser-pool"},
+      {"text": "As Rictavio, claimed to be an agent of the Keepers of the Feather.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "A journal in the Tower of Kazan revealed Rictavio is Van Richten.", "post": "2024-10-22-the-staff-is-a-lie"},
+      {"text": "Rescued Arabelle and hid her in his wagon.", "post": "2024-10-29-finding-arabelle"},
+      {"text": "Gave Malron the Talisman of Echoes.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Morgantha",
+    "type": "npc",
+    "aliases": ["Morantha"],
+    "summary": "A fiend who sells dream pastries from the windmill with her daughters.",
+    "facts": [
+      {"text": "Sold her cart to Aera and warned that Vallaki guards take silver.", "post": "2024-07-16-dream-pies"},
+      {"text": "Vallaki guards warned to be careful what you tell her.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Bella",
+    "type": "npc",
+    "aliases": [],
+    "summary": "One of Morgantha's daughters.",
+    "facts": [
+      {"text": "Lives at the windmill with Morgantha.", "post": "2024-07-16-dream-pies"}
+    ]
+  },
+  {
+    "name": "Offailia",
+    "type": "npc",
+    "aliases": [],
+    "summary": "One of Morgantha's daughters.",
+    "facts": [
+      {"text": "Lives at the windmill with Morgantha.", "post": "2024-07-16-dream-pies"}
+    ]
+  },
+  {
+    "name": "Sir Godfried William",
+    "type": "creature",
+    "aliases": [],
+    "summary": "A revenant knight guarding the Tser Falls bridge.",
+    "facts": [
+      {"text": "Claims to be a Knight of the Order of the Silver Dragon banished by Vladimir Horngaard.", "post": "2024-07-16-dream-pies"}
+    ]
+  },
+  {
+    "name": "Vladimir Horngaard",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Commander who banished Sir Godfried William.",
+    "facts": [
+      {"text": "Named as Sir Godfried William's commander.", "post": "2024-07-16-dream-pies"}
+    ]
+  },
+  {
+    "name": "Skeletal Rider",
+    "type": "creature",
+    "aliases": [],
+    "summary": "A skeletal rider on a war horse that emerges from the mists.",
+    "facts": [
+      {"text": "Encountered on the path out of the Vistani camp.", "post": "2024-04-16-tser-pool"},
+      {"text": "Wears chain mail and holds a lantern that sheds no light; the party followed it south then turned back.", "post": "2024-07-09-skeletal-rider"}
+    ]
+  },
+  {
+    "name": "Izek Strazni",
+    "type": "npc",
+    "aliases": ["Izek"],
+    "summary": "A Vallaki guard who serves the Baron.",
+    "facts": [
+      {"text": "Summoned fire to drive refugees from the gate.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Led a procession with the Baron and pushed an old woman into the mud.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Records say his younger sister was Ireena Strazni.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Ireena Strazni",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Izek's younger sister, recorded as dead at age four.",
+    "facts": [
+      {"text": "Records say she died over eighteen years ago, presumed devoured by wolves.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Grygori Strazni",
+    "type": "npc",
+    "aliases": ["Grygori"],
+    "summary": "Father of Izek and Ireena Strazni.",
+    "facts": [
+      {"text": "Recorded as dying by hanging soon after his daughter.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Fatima Strazni",
+    "type": "npc",
+    "aliases": ["Fatima"],
+    "summary": "Mother of Izek and Ireena Strazni.",
+    "facts": [
+      {"text": "Recorded as dying by hanging soon after her daughter.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Baron of Vallaki",
+    "type": "npc",
+    "aliases": [],
+    "summary": "The harsh ruler of Vallaki.",
+    "facts": [
+      {"text": "Refused to come out to the refugees; led a procession with Izek.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Said a malevolent spirit plagues his mansion.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Viktor",
+    "type": "npc",
+    "aliases": ["Victor"],
+    "summary": "The Baron's son, a secretive student of magic.",
+    "facts": [
+      {"text": "Appeared invisible in the library; his spellbook bore the ring's symbol.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Studies necromancy and is curious about Khazan's tower.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Has a teleportation circle in the attic.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Irwin",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A man at the Blue Water Inn bar, married to Danica.",
+    "facts": [
+      {"text": "Welcomed the party into the inn.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Danica",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Runs the Blue Water Inn.",
+    "facts": [
+      {"text": "Runs the inn and is married to Irwin.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Told the party Rictavio was at his yellow wagon.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Carl",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A man at the Blue Water Inn who opposes the Baron.",
+    "facts": [
+      {"text": "Pranked with a stuffed bat at the inn; against the Baron along with Nicolai.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Nicolai",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A man at the Blue Water Inn who opposes the Baron.",
+    "facts": [
+      {"text": "Pranked with a stuffed bat at the inn; against the Baron along with Carl.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Brom",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A boy at the Blue Water Inn.",
+    "facts": [
+      {"text": "Noted along with Bray for having good masks.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Bray",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A boy at the Blue Water Inn.",
+    "facts": [
+      {"text": "Noted along with Brom for having good masks.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Udo",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Vallaki man imprisoned by the Baron.",
+    "facts": [
+      {"text": "Imprisoned; his mother was also taken to the stocks.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Blinsky",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Toymaker who runs Blinsky's Toy Store in Vallaki.",
+    "facts": [
+      {"text": "Whispered of a clockwork creation in Castle Ravenloft.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Arabelle",
+    "type": "npc",
+    "aliases": ["Aerabelle", "Aerabel", "Aerabell", "eraville"],
+    "summary": "Madam Eva's young Vistani grandchild, kidnapped and then hidden by Van Richten.",
+    "facts": [
+      {"text": "Madam Eva wanted a toy bought for her.", "post": "2024-04-16-tser-pool"},
+      {"text": "Went missing; her father Alexi offered 500 gold for her safe return.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Van Richten rescued her from a sack and hid her in his wagon.", "post": "2024-10-29-finding-arabelle"},
+      {"text": "Delivered a prophecy to the party.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Alexi",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Vistani at the Vallaki encampment, Arabelle's father.",
+    "facts": [
+      {"text": "Was drugged by Yann and offered 500 gold to recover Arabelle alive.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Yann",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Vistani accused of kidnapping Arabelle.",
+    "facts": [
+      {"text": "Drugged Alexi and was found beheaded near the Luna River.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "His head was questioned with the Talisman of Echoes.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Kasimir",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A Dusk Elf mage and scribe who held a sigil-bearing signet ring.",
+    "facts": [
+      {"text": "Held the signet ring and told the history of the Dusk Elves.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Was a mage and scribe in his uncle Erevan's court.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Rahadin",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Kasimir's cousin who betrayed the elves to King Barov.",
+    "facts": [
+      {"text": "Shattered Erevan's blade and executed his family.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "King Barov von Zarovich II",
+    "type": "npc",
+    "aliases": ["Barov", "King Barov"],
+    "summary": "Strahd's father, who conquered the elves of Othrondil.",
+    "facts": [
+      {"text": "Demanded fealty from the elves and conquered them when refused.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Erevan Löwenhart",
+    "type": "npc",
+    "aliases": ["Erevan"],
+    "summary": "Kasimir's uncle and leader of the elven council of princes, a bladesong master.",
+    "facts": [
+      {"text": "Refused King Barov's demand for fealty and was killed by Rahadin.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Khazan",
+    "type": "npc",
+    "aliases": ["Kazan"],
+    "summary": "The original mage tied to the ring's symbol and the Tower of Kazan.",
+    "facts": [
+      {"text": "The ring's symbol connects to him.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "His name is on the red seal of the tower door.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Zoldar",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A guide who led the party toward the Tower of Kazan.",
+    "facts": [
+      {"text": "Lives in a shack with his brother Yvgeny and sold Aera a glamour weave pelt.", "post": "2024-10-01-looking-for-zoldars-tower"},
+      {"text": "Returned to his hut afterward.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Yvgeny",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Zoldar's brother.",
+    "facts": [
+      {"text": "Met in the shack with Zoldar.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Ezmerelda d'Avenir",
+    "type": "npc",
+    "aliases": ["Esmeralda", "Esmeralda dasramir"],
+    "summary": "Van Richten's former apprentice, whose wagon sits at the Tower of Kazan.",
+    "facts": [
+      {"text": "A sign at the tower names it her home and property.", "post": "2024-10-01-looking-for-zoldars-tower"},
+      {"text": "Her trapped wagon held weapons, kits and spell scrolls.", "post": "2024-10-22-the-staff-is-a-lie"},
+      {"text": "Van Richten's former apprentice; her amulet went to Arabelle.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Zollst",
+    "type": "creature",
+    "aliases": [],
+    "summary": "A trapper and werewolf.",
+    "facts": [
+      {"text": "With Matilda, warned of a bloodthirsty lady, then turned into a werewolf and was defeated.", "post": "2024-10-22-the-staff-is-a-lie"}
+    ]
+  },
+  {
+    "name": "Matilda",
+    "type": "creature",
+    "aliases": [],
+    "summary": "A trapper and werewolf.",
+    "facts": [
+      {"text": "With Zollst, turned into a werewolf and was defeated.", "post": "2024-10-22-the-staff-is-a-lie"}
+    ]
+  },
+  {
+    "name": "Escher",
+    "type": "creature",
+    "aliases": [],
+    "summary": "A golden-haired vampire spawn, once a Barovian bard and Doru's lieutenant.",
+    "facts": [
+      {"text": "Received a kidnapped Arabelle and was scarred by Van Richten.", "post": "2024-10-29-finding-arabelle"},
+      {"text": "Betrayed the revolt by vanishing in the castle catacombs.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Drusilla",
+    "type": "creature",
+    "aliases": [],
+    "summary": "Van Richten's horse.",
+    "facts": [
+      {"text": "Hidden at the tower at Lake Baratok.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Arrigal",
+    "type": "npc",
+    "aliases": ["Aeragul"],
+    "summary": "A Vistani who tailed the party and disagrees with Van Richten about Arabelle.",
+    "facts": [
+      {"text": "Revealed himself after tailing the party; cleared of the plot to abduct Arabelle.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Heinrich",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A man delivering church repair materials in Vallaki.",
+    "facts": [
+      {"text": "Met delivering materials to St. Andral's Church.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Milvoj",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A worker repairing St. Andral's Church, suspected in the bone theft.",
+    "facts": [
+      {"text": "Has black hair and a gray cloak, making him the prime suspect.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Father Lucien",
+    "type": "npc",
+    "aliases": [],
+    "summary": "The priest of St. Andral's Church in Vallaki.",
+    "facts": [
+      {"text": "Offered Ireena permanent shelter; the church's warding bones were stolen.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Yeska",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A boy working at St. Andral's Church.",
+    "facts": [
+      {"text": "Knew of the bones' protection and ritual, so the priest suspects him.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Daggerford",
+    "type": "place",
+    "aliases": [],
+    "summary": "The town where the party first met.",
+    "facts": [
+      {"text": "The party sheltered in a barn here before the mists took them.", "post": "2023-11-07-session-zero"},
+      {"text": "Nowhere in sight from the manor balcony.", "post": "2023-12-12-deeper-into-the-manor"}
+    ]
+  },
+  {
+    "name": "Durst Manor",
+    "type": "place",
+    "aliases": ["Manor"],
+    "summary": "The haunted four-story home of the Durst family.",
+    "facts": [
+      {"text": "The party found it after walking through the mists.", "post": "2023-11-07-session-zero"},
+      {"text": "A blood message warned of a beast beneath the house.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "A hidden stair led to a cult dungeon below.", "post": "2024-01-09-finishing-the-manor"},
+      {"text": "Collapsed into the ground after Walter was destroyed.", "post": "2024-01-30-walter-we-are-coming-for-you"}
+    ]
+  },
+  {
+    "name": "Durst Mill",
+    "type": "place",
+    "aliases": [],
+    "summary": "The Durst family's mill.",
+    "facts": [
+      {"text": "An invitation celebrated its one-year anniversary.", "post": "2023-11-28-entering-durst-manor"}
+    ]
+  },
+  {
+    "name": "Wizard of Wines Winery",
+    "type": "place",
+    "aliases": [],
+    "summary": "A winery whose wine was found in Durst Manor.",
+    "facts": [
+      {"text": "A bottle of its wine was hidden in a teapot.", "post": "2023-11-28-entering-durst-manor"}
+    ]
+  },
+  {
+    "name": "Barovia",
+    "type": "place",
+    "aliases": ["Barovia Village", "Village Barovia"],
+    "summary": "Both the land ruled by Strahd and the village beneath his castle.",
+    "facts": [
+      {"text": "The village was recently besieged by Strahd's forces.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Shop prices were five times standard for the party.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Strahd named the valley Barovia after claiming it.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Blood on the Vine Tavern",
+    "type": "place",
+    "aliases": ["Blood of the Vine Tavern"],
+    "summary": "A tavern in Barovia village.",
+    "facts": [
+      {"text": "Recently renamed; where the party met Ismark.", "post": "2024-02-13-barovia-barovia"}
+    ]
+  },
+  {
+    "name": "Castle Ravenloft",
+    "type": "place",
+    "aliases": ["Ravenloft"],
+    "summary": "Strahd's stone castle high above Barovia village.",
+    "facts": [
+      {"text": "Seen above the village before the fog covered it.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "A procession of souls went into it from the graveyard.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Reached by the east fork of the road.", "post": "2024-07-16-dream-pies"},
+      {"text": "Blinsky spoke of a clockwork creation within.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Vallaki",
+    "type": "place",
+    "aliases": ["Vellaki", "Velaki"],
+    "summary": "A walled town west of Barovia village ruled by a harsh Baron.",
+    "facts": [
+      {"text": "Some villagers fled here.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Guards charge a gold toll and confiscate silver; refugees camp outside.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Preparing for the Festival of the Blazing Sun.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Church of Saint Andral",
+    "type": "place",
+    "aliases": ["St. Andrals Church"],
+    "summary": "A church in Vallaki and possible sanctuary for Ireena.",
+    "facts": [
+      {"text": "Ismark suggested it as a sanctuary.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Hallowed by bones in its crypt that were recently stolen.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Abbey of Saint Markovia",
+    "type": "place",
+    "aliases": ["St. Markova Abbey"],
+    "summary": "An abbey in Krezk near the mists.",
+    "facts": [
+      {"text": "Ismark asked the party to escort Ireena here.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Madam Eva's Mists card points to a Vistana found here.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Krezk",
+    "type": "place",
+    "aliases": [],
+    "summary": "A place where the Abbey of Saint Markovia stands.",
+    "facts": [
+      {"text": "Home of the Abbey of Saint Markovia.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Tser Pool",
+    "type": "place",
+    "aliases": ["Test Pool", "Tser pool"],
+    "summary": "A lake west of Barovia village where Madam Eva's Vistani camp sits.",
+    "facts": [
+      {"text": "Madam Eva said her tent was here.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Two hours west of Barovia village.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "The party had their fortunes read at the camp.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Blue Water Inn",
+    "type": "place",
+    "aliases": ["Blue Inn"],
+    "summary": "An inn in Vallaki run by Danica.",
+    "facts": [
+      {"text": "Recommended by the guards; the party rented rooms there.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Where the party confronted Rictavio.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Blinsky's Toy Store",
+    "type": "place",
+    "aliases": ["Blinsky toys", "Blilnksly toys"],
+    "summary": "A toy shop in Vallaki.",
+    "facts": [
+      {"text": "Madam Eva sent coins to buy something there.", "post": "2024-04-16-tser-pool"},
+      {"text": "Had a doll resembling Ireena.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Baron's Mansion",
+    "type": "place",
+    "aliases": [],
+    "summary": "The Baron of Vallaki's home, haunted by a spirit.",
+    "facts": [
+      {"text": "The party entered claiming an appointment to see the library.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Its attic hides a teleportation circle.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+    ]
+  },
+  {
+    "name": "Luna River",
+    "type": "place",
+    "aliases": [],
+    "summary": "A river near Vallaki.",
+    "facts": [
+      {"text": "Yann's head lay toward it.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Van Richten saw Arabelle handed to Escher on its banks.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Tower of Kazan",
+    "type": "place",
+    "aliases": ["Kazan's Tower", "Khazan's tower"],
+    "summary": "A tower by Lake Baratok tied to the mage Khazan.",
+    "facts": [
+      {"text": "Viktor was curious about it.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Opened with the signet ring pattern.", "post": "2024-10-01-looking-for-zoldars-tower"},
+      {"text": "Its top floor held signs of recent living and a journal.", "post": "2024-10-22-the-staff-is-a-lie"},
+      {"text": "Has a permanent antimagic field.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Lake Baratok",
+    "type": "place",
+    "aliases": [],
+    "summary": "A lake with the tower where Van Richten hid.",
+    "facts": [
+      {"text": "Van Richten laid low in the tower here.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Othrondil",
+    "type": "place",
+    "aliases": ["Forest of Twilight"],
+    "summary": "The former home of the Dusk Elves.",
+    "facts": [
+      {"text": "Conquered by King Barov's forces.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Vistani",
+    "type": "faction",
+    "aliases": ["Vistana", "Vistano"],
+    "summary": "Traveling people of Barovia with camps near Tser Pool and Vallaki.",
+    "facts": [
+      {"text": "Three Vistani were at the Blood on the Vine; Ismark warned some spy for Strahd.", "post": "2024-02-13-barovia-barovia"},
+      {"text": "Their camp at Tser Pool hosted the party.", "post": "2024-04-16-tser-pool"},
+      {"text": "Sheltered the Dusk Elves from Strahd.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Dusk Elves",
+    "type": "faction",
+    "aliases": [],
+    "summary": "Elves who have lived in Barovia for five centuries under Vistani protection.",
+    "facts": [
+      {"text": "Survived Strahd's genocide and were led to the valley by the Vistani.", "post": "2024-08-13-a-doll-for-arabelle"}
+    ]
+  },
+  {
+    "name": "Keepers of the Feather",
+    "type": "faction",
+    "aliases": [],
+    "summary": "A secret society against Strahd.",
+    "facts": [
+      {"text": "Rictavio claimed to be their secret agent.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Order of the Silver Dragon",
+    "type": "faction",
+    "aliases": [],
+    "summary": "A knightly order.",
+    "facts": [
+      {"text": "Sir Godfried William claims to be one of its knights.", "post": "2024-07-16-dream-pies"}
+    ]
+  },
+  {
+    "name": "Morninglord",
+    "type": "deity",
+    "aliases": ["Morning Lord"],
+    "summary": "The god of Father Donavich's church.",
+    "facts": [
+      {"text": "The Bronze Sunburst is his holy symbol.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Malron and Father Donavich agree he is Lathander by another name.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Lathander",
+    "type": "deity",
+    "aliases": [],
+    "summary": "The Lord of Birth and Renewal, Malron's god.",
+    "facts": [
+      {"text": "Malron wonders if the Morninglord is the same god.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Mother Night",
+    "type": "deity",
+    "aliases": [],
+    "summary": "A power named in Madam Eva's reading.",
+    "facts": [
+      {"text": "The Myrmidon card's treasure belongs to her.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Ladies Three",
+    "type": "deity",
+    "aliases": [],
+    "summary": "Figures honored on an ancient monument.",
+    "facts": [
+      {"text": "Honored with the Seeker on a stone slab with a star and raven.", "post": "2024-07-16-dream-pies"},
+      {"text": "Honored with the Dreamer on an ancient monument.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Dark Powers",
+    "type": "faction",
+    "aliases": [],
+    "summary": "Powers of Barovia mentioned in Strahd's letter.",
+    "facts": [
+      {"text": "Strahd denies being a messiah sent by them.", "post": "2024-01-09-finishing-the-manor"}
+    ]
+  },
+  {
+    "name": "Amber shard",
+    "type": "item",
+    "aliases": [],
+    "summary": "An amber shard meant to soothe the Beast beneath Durst Manor.",
+    "facts": [
+      {"text": "Elisabeth's amber shard flashed in the ballroom vision.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Found in a silver jewelry box with a note to Drasha.", "post": "2023-12-12-deeper-into-the-manor"},
+      {"text": "Malron held it up calling Walter's name, with no effect.", "post": "2024-01-30-walter-we-are-coming-for-you"}
+    ]
+  },
+  {
+    "name": "Bronze Sunburst",
+    "type": "item",
+    "aliases": ["sunburst relic"],
+    "summary": "Father Donavich's holy symbol of the Morninglord.",
+    "facts": [
+      {"text": "Taken by vampire Doru.", "post": "2024-02-27-rest-for-the-wicked"},
+      {"text": "Returned to Father Donavich by Schlopkht.", "post": "2024-03-26-leaving-village-barovia"}
+    ]
+  },
+  {
+    "name": "Holy Symbol of Raven Kind",
+    "type": "item",
+    "aliases": [],
+    "summary": "A holy symbol mentioned in Eliza's tale.",
+    "facts": [
+      {"text": "Seemed a key element of Eliza's raven story.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Sword of Sunlight",
+    "type": "item",
+    "aliases": [],
+    "summary": "A weapon of vengeance named in Madam Eva's reading.",
+    "facts": [
+      {"text": "The Bishop card says it lies in treasure beyond amber doors.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "A Study of the Werewolf's Curse",
+    "type": "item",
+    "aliases": [],
+    "summary": "A manuscript on werewolves by Van Richten.",
+    "facts": [
+      {"text": "Won by Grom and read aloud by Olfin.", "post": "2024-04-16-tser-pool"}
+    ]
+  },
+  {
+    "name": "Dream Pastries",
+    "type": "item",
+    "aliases": ["Dream Pies", "dream pie"],
+    "summary": "Sleep-inducing pies sold by Morgantha.",
+    "facts": [
+      {"text": "A cat slept five hours after eating one; one put a wolf out of a fight.", "post": "2024-07-16-dream-pies"},
+      {"text": "A quarter of the refugees are addicted to them.", "post": "2024-07-30-welcome-to-vellaki-"}
+    ]
+  },
+  {
+    "name": "Signet ring",
+    "type": "item",
+    "aliases": [],
+    "summary": "A sigil-bearing ring linked to Khazan.",
+    "facts": [
+      {"text": "Kasimir held it; its design mixed necromancy and evocation.", "post": "2024-08-13-a-doll-for-arabelle"},
+      {"text": "Its symbol matched Viktor's spellbook.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Its pattern unlocked the Tower of Kazan.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Staff of Kazan",
+    "type": "item",
+    "aliases": [],
+    "summary": "A legendary staff the party sought in the Tower of Kazan.",
+    "facts": [
+      {"text": "Zoldar was to guide the party to the tower holding it.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Talisman of Echoes",
+    "type": "item",
+    "aliases": ["talisman of echoes"],
+    "summary": "A talisman with four charges for asking the dead questions.",
+    "facts": [
+      {"text": "Van Richten used it on a Vistana's head, then gave it to Malron.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Amulet of proof against detection and location",
+    "type": "item",
+    "aliases": [],
+    "summary": "An amulet that hides its wearer, once Ezmerelda's.",
+    "facts": [
+      {"text": "Van Richten gave a spare to Arabelle.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Hat of disguise",
+    "type": "item",
+    "aliases": [],
+    "summary": "Van Richten's disguise hat.",
+    "facts": [
+      {"text": "Used to sneak into the Vistani camp in a dead man's guise.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  },
+  {
+    "name": "Glamour weave pelt",
+    "type": "item",
+    "aliases": ["glamour weave"],
+    "summary": "A wolf pelt made of rare magical glamour weave.",
+    "facts": [
+      {"text": "Aera bought it from Zoldar for 50 gold.", "post": "2024-10-01-looking-for-zoldars-tower"}
+    ]
+  },
+  {
+    "name": "Tale of Malron",
+    "type": "item",
+    "aliases": [],
+    "summary": "A book in Durst Manor telling Malron's life story.",
+    "facts": [
+      {"text": "Its ending described him being watched by an evil presence.", "post": "2023-11-28-entering-durst-manor"}
+    ]
+  },
+  {
+    "name": "Waltz for Kara",
+    "type": "item",
+    "aliases": [],
+    "summary": "Sheet music hidden in the Durst Manor harpsichord.",
+    "facts": [
+      {"text": "Playing it summoned dancing apparitions.", "post": "2023-11-28-entering-durst-manor"}
+    ]
+  },
+  {
+    "name": "Rictavio's Carnival of Wonders",
+    "type": "item",
+    "aliases": [],
+    "summary": "Van Richten's disguised wagon where Arabelle hides.",
+    "facts": [
+      {"text": "Painted with stolen Vistani paint and enchanted to seem undesirable.", "post": "2024-10-29-finding-arabelle"}
+    ]
+  }
+]

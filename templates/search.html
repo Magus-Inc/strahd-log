@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Search | {{ site_title }}{% endblock %}
+{% block content %}
+    <h1 class="page-title">Search</h1>
+    <form class="search-form" action="{{ base }}search/" method="get" role="search">
+      <input id="q" name="q" type="search" placeholder="Strahd, Ireena, the amber temple..." autocomplete="off" aria-label="Search the chronicle and wiki">
+    </form>
+    <p id="search-status" class="empty">Type to search every session and wiki page.</p>
+    <ol id="results" class="post-list compact"></ol>
+    <noscript><p class="empty">Search needs JavaScript. Browse the <a href="{{ base }}">chronicle</a> or the <a href="{{ base }}wiki/">wiki</a> instead.</p></noscript>
+    <script>
+    (function () {
+      var base = {{ base | tojson }};
+      var input = document.getElementById("q");
+      var list = document.getElementById("results");
+      var status = document.getElementById("search-status");
+      var entries = null;
+
+      function fold(s) {
+        return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+      }
+      function esc(s) {
+        return s.replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; });
+      }
+      function snippet(text, folded, term) {
+        var at = folded.indexOf(term);
+        if (at < 0) return esc(text.slice(0, 160)) + (text.length > 160 ? "…" : "");
+        var start = Math.max(0, at - 70), end = Math.min(text.length, at + term.length + 90);
+        return (start ? "…" : "") + esc(text.slice(start, at)) + "<mark>" + esc(text.slice(at, at + term.length)) +
+          "</mark>" + esc(text.slice(at + term.length, end)) + (end < text.length ? "…" : "");
+      }
+      function run() {
+        var q = fold(input.value.trim());
+        list.innerHTML = "";
+        if (!q) { status.textContent = "Type to search every session and wiki page."; return; }
+        var terms = q.split(/\s+/);
+        var hits = [];
+        entries.forEach(function (e) {
+          var title = fold(e.t), body = e.f || (e.f = fold(e.x));
+          var score = 0;
+          for (var i = 0; i < terms.length; i++) {
+            var inTitle = title.indexOf(terms[i]) >= 0, inBody = body.indexOf(terms[i]) >= 0;
+            if (!inTitle && !inBody) return;
+            score += (inTitle ? 10 : 0) + (inBody ? 1 + Math.min(body.split(terms[i]).length - 1, 9) : 0);
+          }
+          hits.push({e: e, score: score});
+        });
+        hits.sort(function (a, b) { return b.score - a.score; });
+        status.textContent = hits.length ? hits.length + (hits.length === 1 ? " match" : " matches") : "No matches.";
+        hits.slice(0, 50).forEach(function (h) {
+          var li = document.createElement("li");
+          li.innerHTML = '<a class="post-link" href="' + base + h.e.u + '">' + esc(h.e.t) + "</a> <time>" + esc(h.e.l) +
+            '</time><p class="snippet">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>";
+          list.appendChild(li);
+        });
+      }
+      fetch(base + "search-index.json").then(function (r) { return r.json(); }).then(function (data) {
+        entries = data;
+        var q = new URLSearchParams(location.search).get("q");
+        if (q) input.value = q;
+        input.addEventListener("input", function () {
+          history.replaceState(null, "", input.value ? "?q=" + encodeURIComponent(input.value) : location.pathname);
+          run();
+        });
+        run();
+        input.focus();
+      }).catch(function () { status.textContent = "Search could not load its index."; });
+    })();
+    </script>
+{% endblock %}

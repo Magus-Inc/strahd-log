@@ -1,0 +1,70 @@
+# Reviewed fixes to the entities extracted from the adventure logs.
+# Applied by tools/wiki_from_extract.py (`just wiki-from-log`); see load_corrections there for the
+# format. Each entry here came from checking a compiled wiki page against the post it cites.
+
+# One entity, several spellings or names. The first name becomes the page title.
+same:
+  - [Dimitri Krezkov, Dimitry Krezkov]
+  - [Blinsky, Blinksy]
+  - [Blinsky's Toy Store, Blinksys]
+  - [Clovin Belview, Cloven]
+  - [Belladonna Sunbane, Bella]
+  - [Offalia Wormwiggle, Offailia]
+  - [Ezmerelda d'Avenir, Esmerelda]
+  - [Abbey of Saint Markovia, St. Markovia Abbey]
+  - [Cyrus Belview, Syrus Bellview]
+  - [Wizard of Wines, Wizard of Wines Winery]
+  - [Vladimir Hornguard, Vladimir Horngaard, Hornguard]
+  - [Sir Godfried William, Sir Godfried Gwilym]
+  - [Vasilka, Vasilica]
+  - [Silver-thorn Collars, Silver Thorn Collar]
+  - [Spear of the Huntress, Spear of the Ladies]
+  - [Stanimir, Stanimere]
+  - [Tower of Kazan, Kazan’s Tower, Kazan's Tower]
+  - [Gray Stones, Strahd’s Gemstones]
+  - [Gertruda, Gertrude]
+  - [Ireena Kolyana, Ireena Strazni]
+  - [Ismark Kolyanovich, Ismark]
+  - [Milivoj, Milvoj]
+  - [King Dostran the Hellborn, King Doestron]
+  - [Sergei Von Zarovich, Prince Sergei]
+  # Confirmed by Chris: Lady Fiona's mentor "Lysa" (or "Lisa") is Baba Lasaga, and the Sword of
+  # Sunlight is the Sunsword. Still open: whether the Spirit of the Huntress is the Huntress.
+  - [Baba Lasaga, Lysa]
+  - [Sunsword, Sword of Sunlight]
+
+# Names that would link the wrong thing: "Burgomaster Mansion" is also Ismark's home in the
+# village of Barovia, and "Half Plate" is any suit of armour.
+not_alias: [Burgomaster Mansion, Half Plate]
+
+facts:
+  "Killed the creature in the manor basement, two ghouls, a mimic and the boneless, and cut off Walter's head.":
+    "Killed two ghouls, a mimic and the boneless, and cut off Walter's head."
+  "Returned to Father Donavich by Schlopkht.": "Schlopkht volunteered to return it to Father Donavich."
+  "Refused King Barov's demand for fealty and was killed by Rahadin.":
+    "Refused King Barov's demand for fealty; Rahadin shattered his blade and executed his family."
+  "Aera bought it from Zoldar for 50 gold.": "Aera bought it for 50 gold at the shack of Zoldar and his brother Yvgeny."
+  "Bought a wolf pelt from Zoldar that turned out to be glamour weave.":
+    "Bought a wolf pelt at Zoldar's shack that turned out to be glamour weave."
+  "Lets certain people pass unchallenged through Strahd's domain.":
+    "Gives Strahd information, which lets certain people pass unchallenged through his domain."
+  # A different Nicolai: Carl's father, not the Nicolai on that page.
+  "Carl says a Nicolai, their father, died of a wasting sickness.": null
+
+# Two people named Bianca.
+move_facts:
+  "A werewolf Bianca, torn between love and survival, told the party about the pack.": Bianca (werewolf)
+
+types:
+  Escher: npc
+  Zollst: npc
+  Matilda: npc
+  Bianca (werewolf): npc
+
+summaries:
+  Bianca: Franz's sister, who cares for him.
+  Bianca (werewolf): A werewolf with ties to Kiril, torn between love and survival.
+  Gray Stones: Gemstones Strahd gave the party at the Whispering Wall; crushed, they cast Locate Object.
+  Vasilka: The flesh-built "perfect bride" the Abbot made for Strahd.
+  Vladimir Hornguard: Slain commander of the Order of the Silver Dragon, now a vengeful presence at Argynvostholt.
+  Dimitri Krezkov: The baron of Krezk, husband of Anna.

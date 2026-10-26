@@ -61,4 +61,3 @@ The party encounters cultist-like individuals outside the Wachter house and is w
 - The elf Rahadin’s arrival on a phantom steed, delivering an invitation to dinner at Castle Ravenloft.  
 - The dramatic scene in the town square with the condemnation of Milovaj and Heinrich.
 
-[Notes - December 17th 2024](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-december-17th-2024)

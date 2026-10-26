@@ -5,13 +5,13 @@ slug: deeper-into-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/deeper-into-the-manor
 ---
 
-Heading up to the third floor the party arrived in a dusty room with a suit of black plate armor. Oil lamps and woodland beasts and leaves decorate the wall. Suddenly the suit of armor starts moving towards [Olfin Darning](https://curseofstrahdowlbear.obsidianportal.com/characters/olfin) attempting to shove him over the rail. Olfin was able to ward off the first attack.
+Heading up to the third floor the party arrived in a dusty room with a suit of black plate armor. Oil lamps and woodland beasts and leaves decorate the wall. Suddenly the suit of armor starts moving towards [Olfin Darning](/wiki/olfin-darning/) attempting to shove him over the rail. Olfin was able to ward off the first attack.
 
-After a tough fight the armor was destroyed, but Olfin and [Weeble Wobleston](https://curseofstrahdowlbear.obsidianportal.com/characters/weeble) took a beating. The party moved west to a bedroom with a yellow book and a wardrobe with full length mirror. Next door was a nursery with a crib that has a strange substance on the floor. It seemed as if something was breathing under the bed as the sheets moved up and down rhythmically.
+After a tough fight the armor was destroyed, but Olfin and [Weeble Wobleston](/wiki/weeble-wobleston/) took a beating. The party moved west to a bedroom with a yellow book and a wardrobe with full length mirror. Next door was a nursery with a crib that has a strange substance on the floor. It seemed as if something was breathing under the bed as the sheets moved up and down rhythmically.
 
 The yellow book is titled “Blue blooded lips” and is a romance story of an affair with a wealthy duke.
 
-[Aera shan Ravanór](https://curseofstrahdowlbear.obsidianportal.com/characters/aera) investigated the mirror and saw what looked to be an apparition of [Klara](https://curseofstrahdowlbear.obsidianportal.com/wikis/klara), except it was severely disfigured as if tortured and hacked to pieces.
+[Aera shan Ravanór](/wiki/aera-shan-ravanor/) investigated the mirror and saw what looked to be an apparition of [Klara](/wiki/klara/), except it was severely disfigured as if tortured and hacked to pieces.
 
 Weeble pulled the sheet from the bed and found nothing beneath it other than a blood stained mattress and crude hand and foot restraints.
 
@@ -19,9 +19,9 @@ The party asked the aparition they believed to be Klara some questions and disco
 
 In the crib there was a finger with teeth marks and the name Walter carved into the headrest of the crib.
 
-There is also a balcony which revealed that the town of [Daggerford](https://curseofstrahdowlbear.obsidianportal.com/wikis/daggerford) is nowhere near and there is only an endless vast mist beyond the property.
+There is also a balcony which revealed that the town of [Daggerford](/wiki/daggerford/) is nowhere near and there is only an endless vast mist beyond the property.
 
-In a norther room dusty shelves and a broom can be found. When Olfin tried to pick up the broom it started moving and tried to attack. It knocked Olfin out, but Weeble was able to destroy the broom. [Malron Lichtstrahl](https://curseofstrahdowlbear.obsidianportal.com/characters/mal) cast healing word on Olfin.
+In a norther room dusty shelves and a broom can be found. When Olfin tried to pick up the broom it started moving and tried to attack. It knocked Olfin out, but Weeble was able to destroy the broom. [Malron Lichtstrahl](/wiki/malron-lichtstrahl/) cast healing word on Olfin.
 
 The final room was a master bedroom, and a silhouette behind closed doors which was chilling to the party. It looked towards the party and had an amber glow, then it vanished.
 
