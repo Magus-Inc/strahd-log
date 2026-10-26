@@ -90,6 +90,23 @@ just import-wiki <export.json>  # Obsidian Portal character and wiki pages (see 
 just wiki-from-log              # merge data/log-extract/*.json into content/wiki/
 ```
 
+## The map
+
+`/map/` shows our own map of Barovia, drawn by `barovia_map.py` in black quill ink on brown
+leather (generated from a fixed seed, so every build draws the same map; nothing is traced from a
+published map). The base image, `/map/barovia.svg`, is clean: places and the party's trail are an
+overlay drawn on top, so the background can be swapped later without touching anything else.
+
+- `data/map.yaml` places wiki pages on the map (`xy` in the map's 1000 x 750 space, optional
+  `label`, `anchor` and `names`) and says which rooms and buildings are `within` which place.
+- `data/trail.yaml` lists where the party actually went each session, in order. Mentions are not
+  visits; a session missing from the file falls back to the places its post mentions.
+- On `/map/`, tap a place for its wiki page and the sessions there; a toggle shows or hides the
+  red trail and a slider steps through it session by session. Each post shows "Where we were", and
+  each place's wiki page shows where it is. On a phone the map keeps its size and swipes sideways.
+
+The footer carries the disclaimer the Wizards of the Coast Fan Content Policy asks for.
+
 ## Importing from Obsidian Portal
 
 `just import ../strahd-blog-export` reads `posts/<slug>.textile` (with `title:`/`date:`/`tagline:`/

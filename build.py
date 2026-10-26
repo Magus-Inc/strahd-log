@@ -28,6 +28,7 @@ import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+import barovia_map
 import wiki
 
 ROOT = Path(__file__).resolve().parent
@@ -212,18 +213,28 @@ def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
 
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
           site_url: str | None = None, base_path: str | None = None,
-          wiki_dir: Path | None = None) -> list[Post]:
+          wiki_dir: Path | None = None, map_file: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
     link_wiki(posts, pages)
+    places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
+    map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
+    visits = barovia_map.load_visits(map_dir / "trail.yaml", places) if places else {}
+    legs = barovia_map.trail(posts, places, parent, pages, visits) if places else []
+    leg_by_post = {leg["post"].slug: leg for leg in legs}
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["tag_slug"] = tag_slug
     env.filters["nice_date"] = nice_date
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
-                       types=wiki.TYPES)
+                       types=wiki.TYPES, all_places=places)
+    tags: dict[str, list[Post]] = {}
+    for post in posts:
+        for tag in post.tags:
+            tags.setdefault(tag, []).append(post)
+    env.globals["has_tags"] = bool(tags)
 
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -234,22 +245,34 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         newer = posts[i - 1] if i > 0 else None
         older = posts[i + 1] if i + 1 < len(posts) else None
         write(out_dir / "posts" / post.slug / "index.html",
-              env.get_template("post.html").render(post=post, body=rebase(post.html, base),
-                                                   newer=newer, older=older))
+              env.get_template("post.html").render(
+                  post=post, body=rebase(post.html, base), newer=newer, older=older, legs=legs,
+                  leg=leg_by_post.get(post.slug),
+                  stops=[places[s] for s in leg_by_post[post.slug]["stops"]] if post.slug in leg_by_post else []))
 
-    tags: dict[str, list[Post]] = {}
-    for post in posts:
-        for tag in post.tags:
-            tags.setdefault(tag, []).append(post)
-    write(out_dir / "tags" / "index.html",
-          env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
+    # The tags page and its menu link only exist once some post has tags.
+    if tags:
+        write(out_dir / "tags" / "index.html",
+              env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
     groups = [(label, [w for w in pages if w.type == kind]) for kind, label in wiki.TYPES.items()]
     write(out_dir / "wiki" / "index.html",
           env.get_template("wiki_index.html").render(groups=[g for g in groups if g[1]], count=len(pages)))
     for page in pages:
         write(out_dir / "wiki" / page.slug / "index.html",
-              env.get_template("wiki_page.html").render(page=page, body=rebase(page.html, base)))
+              env.get_template("wiki_page.html").render(
+                  page=page, body=rebase(page.html, base),
+                  place=places.get(parent.get(page.slug, "")) if places else None))
     write(out_dir / "search" / "index.html", env.get_template("search.html").render())
+    if places:
+        write(out_dir / "map" / "barovia.svg", barovia_map.draw_base())
+        map_data = {
+            "legs": [{"t": leg["post"].title, "u": leg["post"].path} for leg in legs],
+            "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
+                                "sessions": [{"t": s.title, "u": s.path, "d": nice_date(s.date)} for s in p.sessions]}
+                       for p in places.values()},
+        }
+        write(out_dir / "map" / "index.html",
+              env.get_template("map.html").render(places=list(places.values()), legs=legs, map_data=map_data))
     write(out_dir / "search-index.json", build_search_index(posts, pages))
     write(out_dir / "404.html", env.get_template("404.html").render())
     write(out_dir / "feed.xml", build_feed(posts, site_url + base))

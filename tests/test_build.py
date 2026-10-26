@@ -134,3 +134,22 @@ def test_post_images_follow_base_path_and_are_absolute_in_feed(content, tmp_path
     assert '<img alt="Icon" src="/strahd-log/favicon.svg"' in page
     feed = (out / "feed.xml").read_text(encoding="utf-8")
     assert "https://example.github.io/strahd-log/favicon.svg" in feed
+
+
+def test_tags_page_and_menu_link_only_when_posts_have_tags(tmp_path):
+    write_post(tmp_path / "content", "2024-01-09-a.md", "title: A\ndate: '2024-01-09'\n")
+    out = tmp_path / "public"
+    build.build(tmp_path / "content", out, site_url="https://log.example")
+    home = (out / "index.html").read_text(encoding="utf-8")
+    assert not (out / "tags").exists() and 'href="/tags/"' not in home
+    # The feed is still built, and linked from the footer rather than the menu.
+    assert (out / "feed.xml").is_file()
+    nav = home[home.index('<nav class="site-nav">'):home.index("</nav>")]
+    assert "feed.xml" not in nav and "Tags" not in nav
+    assert 'class="feed-link" href="/feed.xml"' in home[home.index("site-footer"):]
+
+
+def test_tags_page_and_menu_link_appear_with_tags(content, tmp_path):
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example")
+    assert (out / "tags" / "index.html").is_file() and 'href="/tags/"' in (out / "index.html").read_text(encoding="utf-8")

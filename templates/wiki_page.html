@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_map.html" import barovia %}
 {% block title %}{{ page.title }} | {{ site_title }}{% endblock %}
 {% block description %}{{ page.summary or page.title }}{% endblock %}
 {% block content %}
@@ -18,6 +19,17 @@
       <div class="post-body">
 {{ body | safe }}
       </div>
+{% if place %}
+      <section class="where-we-were">
+        <h2>On the map</h2>
+{% if place.slug != page.slug %}
+        <p class="snippet">In <a href="{{ base }}{{ place.path }}">{{ place.title }}</a>. <a href="{{ base }}map/">Open the map</a>.</p>
+{% else %}
+        <p class="snippet"><a href="{{ base }}map/">Open the map</a>.</p>
+{% endif %}
+        {{ barovia([place], label="Where " ~ page.title ~ " is") }}
+      </section>
+{% endif %}
 {% if page.mentioned_in %}
       <section class="appears-in">
         <h2>Appears in</h2>

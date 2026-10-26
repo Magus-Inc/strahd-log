@@ -1,0 +1,30 @@
+{# Our map of Barovia with the places we track drawn over it.
+   places: Place objects to pin; legs: trail legs to draw (or none); current: slug of the post
+   whose leg is highlighted; interactive: pins open the place panel on the map page. #}
+{% macro barovia(places, legs=[], current=None, interactive=False, label="Map of Barovia") %}
+<figure class="map-figure">
+  <svg class="map" viewBox="0 0 1000 750" role="img" aria-label="{{ label }}">
+    <image href="{{ base }}map/barovia.svg" width="1000" height="750"/>
+{% if legs %}
+    <g class="trail" aria-label="The party's trail">
+{% for leg in legs %}
+{% set i = loop.index %}
+{% for d in leg.strokes %}
+      <path class="leg{% if current and leg.post.slug == current %} current{% elif current %} faded{% endif %}" data-i="{{ i }}" d="{{ d }}"/>
+{% endfor %}
+{% endfor %}
+    </g>
+{% endif %}
+    <g class="pins">
+{% for p in places %}
+      <a class="pin{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
+        <title>{{ p.title }}{% if p.sessions %}: {{ p.sessions | length }} session{{ "s" if p.sessions | length != 1 }}{% endif %}</title>
+        <circle cx="{{ p.x }}" cy="{{ p.y }}" r="7" class="pin-ring"/>
+        <circle cx="{{ p.x }}" cy="{{ p.y }}" r="2.6" class="pin-dot"/>
+        <text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.anchor }}">{{ p.title }}</text>
+      </a>
+{% endfor %}
+    </g>
+  </svg>
+</figure>
+{% endmacro %}
