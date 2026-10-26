@@ -43,7 +43,7 @@ ROCK = "#8f969b"
 # dotted but are routed over like roads.
 ROADS = {
     "Old Svalich Road (east)": [(998, 388), (966, 390), (935, 392), (880, 410), (835, 428), (795, 440)],
-    "Manor lane": [(966, 390), (970, 378), (974, 366)],
+    "Manor lane": [(966, 390), (962, 370), (952, 348), (944, 326)],
     "Village to Tser Pool": [(795, 440), (770, 452), (745, 470), (710, 490), (675, 478), (652, 445)],
     "Tser Pool to the falls": [(652, 445), (632, 425), (612, 410)],
     "Tser Falls to the fork": [(612, 410), (600, 378), (596, 345), (590, 312)],
@@ -261,8 +261,13 @@ def draw_base() -> str:
     water = list(LAKES.values())
     lines = list(ROADS.values()) + list(TRACKS.values()) + list(RIVERS.values())
 
+    # Clearings around the buildings, so no tree or peak is drawn over them.
+    clearings = [((707, 350), 26), ((944, 318), 20)]
+
     def clear(point, margin=9) -> bool:
-        return not any(inside(point, lake) for lake in water) and not any(near_line(point, l, margin) for l in lines)
+        return (not any(inside(point, lake) for lake in water)
+                and not any(near_line(point, l, margin) for l in lines)
+                and not any(math.dist(point, c) < r for c, r in clearings))
 
     parts = []
     # Faint grass so the open country reads as land.
@@ -326,7 +331,7 @@ def draw_base() -> str:
     parts.append("".join(tree(rng, x, y) for x, y in trees))
 
     parts.append(castle(707, 357))
-    parts.append(manor(974, 366))
+    parts.append(manor(944, 326))
     for x, y in [(795, 440), (388, 243), (102, 232)]:
         parts.append(village(rng, x, y + 12, 6))
     parts.append(f'<path d="M86,342 h12 v10 h-12 Z M100,346 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')

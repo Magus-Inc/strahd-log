@@ -17,7 +17,7 @@ places:
     names: [Village of Barovia, Barovia Village, Village Barovia]
   # Durst Manor stands outside the village, east of the gates: the party walked for hours from it
   # and came to the gates before they reached the village.
-  durst-manor: {xy: [974, 366], anchor: end}
+  durst-manor: {xy: [944, 326], anchor: end}
   gates-of-barovia: {xy: [935, 392], label: Gates, anchor: end}
   tser-pool: {xy: [652, 445], anchor: end}
   castle-ravenloft: {xy: [707, 357]}
