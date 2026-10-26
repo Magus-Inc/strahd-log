@@ -1,27 +1,32 @@
 {% extends "base.html" %}
 {% from "_map.html" import barovia %}
 {% block title %}Map | {{ site_title }}{% endblock %}
+{% block main_class %}wide{% endblock %}
 {% block content %}
-    <h1 class="page-title">Barovia</h1>
-    <p class="empty">Tap a place for its wiki page and the sessions that happened there.</p>
+    <header class="page-head">
+      <p class="eyebrow">The land of mists</p>
+      <h1>Map of Barovia</h1>
+      <p class="lede">The red breadcrumbs follow the roads the party took, session by session. Tap a place for its wiki page and every session there; tap a numbered crumb to read that session.</p>
+    </header>
     <div class="map-controls">
-      <label><input type="checkbox" id="show-trail" checked> Show the party's trail</label>
-      <label class="trail-range">Up to session <input type="range" id="trail-upto" min="1" max="{{ legs | length }}" value="{{ legs | length }}"> <output id="trail-n">{{ legs | length }}</output></label>
+      <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
+      <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs | length }}" value="{{ legs | length }}"> <output id="trail-n">{{ legs | length }}</output></label>
+      <p class="trail-now" id="trail-now" aria-live="polite"></p>
     </div>
-    <p class="trail-now" id="trail-now"></p>
     {{ barovia(places, legs, interactive=True) }}
-    <aside class="place-panel" id="place-panel" hidden>
+    <aside class="place-panel card" id="place-panel" hidden>
       <button type="button" class="place-close" aria-label="Close">&times;</button>
+      <p class="eyebrow">Place</p>
       <h2><a id="place-title" href="#"></a></h2>
-      <p id="place-summary" class="tagline"></p>
-      <ol id="place-sessions" class="post-list compact"></ol>
+      <p id="place-summary" class="muted"></p>
+      <ol id="place-sessions" class="session-list"></ol>
     </aside>
     <section class="trail-list">
-      <h2>The trail, session by session</h2>
-      <ol class="post-list compact">
+      <h2>The road so far</h2>
+      <ol class="session-list numbered">
 {% for leg in legs %}
-        <li><a class="post-link" href="{{ base }}{{ leg.post.path }}">{{ leg.post.title }}</a> <time datetime="{{ leg.post.date.isoformat() }}">{{ leg.post.date | nice_date }}</time>
-          <p class="snippet">{% for slug in leg.stops %}{{ all_places[slug].title }}{% if not loop.last %} &rarr; {% endif %}{% endfor %}</p></li>
+        <li><span class="num">{{ leg.n }}</span><a href="{{ base }}{{ leg.post.path }}">{{ leg.post.title }}</a> <time datetime="{{ leg.post.date.isoformat() }}">{{ leg.post.date | nice_date }}</time>
+          <span class="route">{% for slug in leg.stops %}{{ all_places[slug].title }}{% if not loop.last %} &rarr; {% endif %}{% endfor %}</span></li>
 {% endfor %}
       </ol>
     </section>
@@ -44,10 +49,10 @@
         svg.classList.toggle("no-trail", !show.checked);
         upto.disabled = !show.checked;
         n.textContent = limit;
-        svg.querySelectorAll(".leg").forEach(function (line) {
-          var i = +line.getAttribute("data-i");
-          line.classList.toggle("hidden", i > limit);
-          line.classList.toggle("current", i === limit && limit < data.legs.length);
+        svg.querySelectorAll(".crumb, .marker").forEach(function (el) {
+          var i = +el.getAttribute("data-i");
+          el.classList.toggle("hidden", i > limit);
+          el.classList.toggle("latest", i === limit);
         });
         var leg = data.legs[limit - 1];
         now.innerHTML = show.checked && leg ? 'Session ' + limit + ': <a href="' + base + leg.u + '">' + esc(leg.t) + "</a>" : "";
@@ -65,13 +70,46 @@
           title.href = base + place.u;
           document.getElementById("place-summary").textContent = place.s || "";
           document.getElementById("place-sessions").innerHTML = place.sessions.length
-            ? place.sessions.map(function (s) { return '<li><a class="post-link" href="' + base + s.u + '">' + esc(s.t) + "</a> <time>" + esc(s.d) + "</time></li>"; }).join("")
-            : '<li class="empty">No session has stopped here yet.</li>';
+            ? place.sessions.map(function (s) { return '<li><a href="' + base + s.u + '">' + esc(s.t) + "</a> <time>" + esc(s.d) + "</time></li>"; }).join("")
+            : '<li class="muted">No session has stopped here yet.</li>';
           panel.hidden = false;
-          panel.scrollIntoView({block: "nearest", behavior: "smooth"});
+          panel.scrollIntoView({block: "nearest"});
         });
       });
       panel.querySelector(".place-close").addEventListener("click", function () { panel.hidden = true; });
+
+      // Zoom with the buttons, pan by dragging; the view never leaves the map.
+      var full = {x: 0, y: 0, w: 1000, h: 750}, view = Object.assign({}, full);
+      function apply() {
+        view.w = Math.min(full.w, Math.max(160, view.w)); view.h = view.w * 0.75;
+        view.x = Math.min(full.w - view.w, Math.max(0, view.x)); view.y = Math.min(full.h - view.h, Math.max(0, view.y));
+        svg.setAttribute("viewBox", [view.x, view.y, view.w, view.h].join(" "));
+        svg.classList.toggle("zoomed", view.w < full.w);
+      }
+      function zoom(f) {
+        var cx = view.x + view.w / 2, cy = view.y + view.h / 2;
+        view.w *= f; view.h = view.w * 0.75; view.x = cx - view.w / 2; view.y = cy - view.h / 2; apply();
+      }
+      document.querySelectorAll("[data-zoom]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var z = b.getAttribute("data-zoom");
+          if (z === "in") zoom(0.66); else if (z === "out") zoom(1.5); else { view = Object.assign({}, full); apply(); }
+        });
+      });
+      var drag = null;
+      svg.addEventListener("pointerdown", function (e) {
+        if (view.w >= full.w) return;
+        drag = {x: e.clientX, y: e.clientY, vx: view.x, vy: view.y, moved: false};
+      });
+      window.addEventListener("pointermove", function (e) {
+        if (!drag) return;
+        var scale = view.w / svg.getBoundingClientRect().width;
+        var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+        if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
+        view.x = drag.vx - dx * scale; view.y = drag.vy - dy * scale; apply();
+      });
+      window.addEventListener("pointerup", function () { setTimeout(function () { drag = null; }, 0); });
+      svg.addEventListener("click", function (e) { if (drag && drag.moved) { e.preventDefault(); e.stopPropagation(); } }, true);
       redraw();
     })();
     </script>

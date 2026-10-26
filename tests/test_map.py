@@ -47,7 +47,7 @@ def test_load_places_labels_names_and_parents(places):
     by_slug, parent = places
     assert by_slug["barovia"].title == "Village of Barovia" and by_slug["barovia"].names == ["Village of Barovia"]
     assert by_slug["vallaki"].names == ["Vallaki", "Vellaki"]
-    assert by_slug["krezk"].label_xy == (91.0, 235.0)
+    assert by_slug["krezk"].label_xy == (92.0, 234.0)
     assert parent["blue-water-inn"] == "vallaki" and "strahd" not in parent
 
 
@@ -76,10 +76,18 @@ def test_visits_override_mentions_and_draw_strokes(tmp_path, places):
     legs = barovia_map.trail(posts, by_slug, parent, PAGES, visits)
     # A talks about Vallaki but was in the village; B has no entry, so its mentions count.
     assert [(leg["post"].title, leg["stops"]) for leg in legs] == [("A", ["barovia"]), ("B", ["krezk"]), ("C", ["vallaki", "krezk"])]
-    assert [len(leg["strokes"]) for leg in legs] == [0, 1, 2]
-    # The second Vallaki-Krezk trip bows the other way from the first.
-    first = re.findall(r"Q(\d+),(\d+)", legs[2]["strokes"][1])[0]
-    assert legs[2]["strokes"][1].startswith("M390,244 Q") and first != re.findall(r"Q(\d+),(\d+)", legs[1]["strokes"][0])[0]
+    assert [len(leg["segments"]) for leg in legs] == [0, 1, 2]
+    assert [leg["n"] for leg in legs] == [1, 2, 3]
+    # Every hop follows the roads: each step of its path is a road (or track) edge.
+    graph = barovia_map.road_graph()
+    for leg in legs:
+        for seg in leg["segments"]:
+            assert seg["road"]
+            assert all(b in graph[a] for a, b in zip(seg["points"], seg["points"][1:]))
+    # Barovia to Krezk is a long way round by road, not a straight line.
+    assert len(legs[1]["segments"][0]["points"]) > 10
+    # Sessions ending at the same place get markers fanned around it, not on top of each other.
+    assert legs[1]["marker"] != legs[2]["marker"]
     assert [p.title for p in by_slug["krezk"].sessions] == ["C", "B"]
 
 
@@ -102,10 +110,11 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
 
     assert (out / "map" / "barovia.svg").is_file()
     page_html = (out / "map" / "index.html").read_text(encoding="utf-8")
-    assert 'href="/strahd-log/map/barovia.svg"' in page_html and 'class="leg' in page_html
+    assert 'href="/strahd-log/map/barovia.svg"' in page_html and 'class="crumb' in page_html
+    assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
-    assert "Where we were" in second and 'class="leg current"' in second
+    assert "Where we were" in second and 'class="crumb current"' in second and 'class="marker current"' in second
     inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
     assert "On the map" in inn and 'data-place="vallaki"' in inn
     assert 'href="/strahd-log/map/"' in (out / "index.html").read_text(encoding="utf-8")
@@ -116,3 +125,21 @@ def test_no_map_file_means_no_map(tmp_path):
     out = tmp_path / "public"
     build.build(tmp_path / "content" / "posts", out, site_url="https://x.example")
     assert not (out / "map").exists() and "/map/" not in (out / "index.html").read_text(encoding="utf-8")
+
+
+def test_route_follows_roads_between_junctions():
+    graph = barovia_map.road_graph()
+    vallaki, castle = (388, 243), (707, 357)
+    path = barovia_map.route(graph, vallaki, castle)
+    assert path[0] == vallaki and path[-1] == castle
+    assert (590, 312) in path  # through the fork below the castle, as the road runs
+    assert all(b in graph[a] for a, b in zip(path, path[1:]))
+    assert barovia_map.route(graph, vallaki, vallaki) == [vallaki]
+
+
+def test_every_mapped_place_sits_on_a_road():
+    import yaml
+    spec = yaml.safe_load(Path("data/map.yaml").read_text(encoding="utf-8"))
+    graph = barovia_map.road_graph()
+    for slug, place in spec["places"].items():
+        assert tuple(place["xy"]) in graph, slug

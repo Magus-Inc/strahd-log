@@ -5,33 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ site_title }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ site_subtitle }}{% endblock %}">
-  <meta name="theme-color" content="#0b0708">
+  <meta name="theme-color" content="#121014">
+  <meta name="color-scheme" content="dark">
   <link rel="stylesheet" href="{{ base }}style.css">
   <link rel="icon" href="{{ base }}favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ base }}feed.xml">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="site-title" href="{{ base }}">{{ site_title }}</a>
-    <p class="site-subtitle">{{ site_subtitle }}</p>
-    <nav class="site-nav">
-      <a href="{{ base }}">Chronicle</a>
-      <a href="{{ base }}wiki/">Wiki</a>
+    <div class="bar">
+      <a class="brand" href="{{ base }}"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">{{ site_title }}</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Show the menu">
+      <label for="menu-toggle" class="menu-button" aria-label="Menu"><span class="menu-icon" aria-hidden="true"></span></label>
+        <nav class="site-nav" aria-label="Main">
+          <a href="{{ base }}"{% if section == "chronicle" %} aria-current="page"{% endif %}>Chronicle</a>
+          <a href="{{ base }}wiki/"{% if section == "wiki" %} aria-current="page"{% endif %}>Wiki</a>
 {% if all_places %}
-      <a href="{{ base }}map/">Map</a>
+          <a href="{{ base }}map/"{% if section == "map" %} aria-current="page"{% endif %}>Map</a>
 {% endif %}
-      <a href="{{ base }}search/">Search</a>
+          <a href="{{ base }}search/"{% if section == "search" %} aria-current="page"{% endif %}>Search</a>
 {% if has_tags %}
-      <a href="{{ base }}tags/">Tags</a>
+          <a href="{{ base }}tags/"{% if section == "tags" %} aria-current="page"{% endif %}>Tags</a>
 {% endif %}
-    </nav>
+        </nav>
+    </div>
   </header>
-  <main>
+  <main id="main" class="{% block main_class %}{% endblock %}">
 {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
-    <p>The eye is ever watchful. <a class="feed-link" href="{{ base }}feed.xml">Follow new sessions (feed)</a></p>
-    <p class="legal">{{ site_title }} is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. &copy;Wizards of the Coast LLC.</p>
+    <div class="footer-inner">
+      <p class="brand-name">{{ site_title }}</p>
+      <p>{{ site_subtitle }}. <a href="{{ base }}feed.xml">Follow new sessions (feed)</a> &middot; <a href="#main">Back to top</a></p>
+      <p class="legal">{{ site_title }} is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. &copy;Wizards of the Coast LLC.</p>
+    </div>
   </footer>
+{% block scripts %}{% endblock %}
 </body>
 </html>

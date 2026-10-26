@@ -1,25 +1,60 @@
 {% extends "base.html" %}
+{% set section = "wiki" %}
 {% block title %}Wiki | {{ site_title }}{% endblock %}
 {% block content %}
-    <h1 class="page-title">Wiki</h1>
+    <header class="page-head">
+      <p class="eyebrow">Campaign wiki</p>
+      <h1>People, places and things</h1>
+      <p class="lede">{{ count }} pages on Barovia and the party, written by us or compiled from the adventure logs.</p>
+    </header>
 {% if not groups %}
-    <p class="empty">No wiki pages yet. Add one as <code>content/wiki/&lt;name&gt;.md</code>.</p>
+    <p class="muted">No wiki pages yet. Add one as <code>content/wiki/&lt;name&gt;.md</code>.</p>
 {% else %}
-    <p class="empty">{{ count }} pages on the people, places and things of Barovia.</p>
-    <nav class="tag-cloud">
+    <div class="filter">
+      <input id="wiki-filter" type="search" placeholder="Filter the wiki: Ireena, Vallaki, sword…" aria-label="Filter wiki pages" autocomplete="off">
+    </div>
+    <nav class="year-chips" aria-label="Categories">
 {% for label, entries in groups %}
-      <a class="tag" href="#{{ label | tag_slug }}">{{ label }} <small>{{ entries | length }}</small></a>
+      <a class="chip" href="#{{ label | tag_slug }}">{{ label }} <small>{{ entries | length }}</small></a>
 {% endfor %}
     </nav>
 {% for label, entries in groups %}
-    <section class="tag-section" id="{{ label | tag_slug }}">
+    <section class="wiki-group" id="{{ label | tag_slug }}">
       <h2>{{ label }}</h2>
-      <ul class="wiki-list">
+      <ul class="card-grid compact">
 {% for page in entries %}
-        <li><a class="post-link" href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% if page.summary %} <span class="wiki-summary">{{ page.summary }}</span>{% endif %}</li>
+        <li class="card wiki-card" data-search="{{ (page.title ~ ' ' ~ page.aliases | join(' ') ~ ' ' ~ page.summary) | lower }}">
+          <h3><a class="stretched" href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% if page.former %} <span class="chip former">Former PC</span>{% endif %}</h3>
+{% if page.player %}
+          <p class="meta player">Played by {{ page.player }}</p>
+{% endif %}
+{% if page.summary %}
+          <p class="teaser">{{ page.summary }}</p>
+{% endif %}
+{% if page.mentioned_in %}
+          <p class="meta">{{ page.mentioned_in | length }} session{{ "s" if page.mentioned_in | length != 1 }}</p>
+{% endif %}
+        </li>
 {% endfor %}
       </ul>
     </section>
 {% endfor %}
+    <p class="muted empty-filter" hidden>Nothing matches. Try <a href="{{ base }}search/">searching the whole site</a>.</p>
 {% endif %}
+{% endblock %}
+{% block scripts %}
+  <script>
+  (function () {
+    var input = document.getElementById("wiki-filter");
+    if (!input) return;
+    var cards = document.querySelectorAll(".wiki-card"), groups = document.querySelectorAll(".wiki-group");
+    var empty = document.querySelector(".empty-filter");
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase(), shown = 0;
+      cards.forEach(function (c) { var hit = !q || c.getAttribute("data-search").indexOf(q) >= 0; c.hidden = !hit; shown += hit; });
+      groups.forEach(function (g) { g.hidden = !g.querySelector(".wiki-card:not([hidden])"); });
+      empty.hidden = shown > 0;
+    });
+  })();
+  </script>
 {% endblock %}

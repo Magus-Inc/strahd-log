@@ -60,7 +60,9 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
 
     home = (out / "index.html").read_text(encoding="utf-8")
     assert home.index("Third &amp; Last") < home.index("Second: Wolves") < home.index("First Night")
-    assert "Wolves love them" in home and "September 1, 2026" in home
+    assert "Latest session" in home and "September 1, 2026" in home
+    assert 'id="y2024"' in home  # older sessions grouped by year
+    assert "Wolves love them" in (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
 
     middle = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
     assert 'href="/posts/first/"' in middle and 'href="/posts/third/"' in middle
@@ -68,7 +70,7 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
     assert 'href="/posts/second/"' in newest and "Next &rarr;" not in newest
 
     first = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
-    assert "<h2>Arrival</h2>" in first and "<blockquote>" in first and "<table>" in first
+    assert '<h2 id="arrival">Arrival</h2>' in first and "<blockquote>" in first and "<table>" in first
 
     tags = (out / "tags" / "index.html").read_text(encoding="utf-8")
     assert 'id="barovia"' in tags and 'id="wolves"' in tags
@@ -144,9 +146,9 @@ def test_tags_page_and_menu_link_only_when_posts_have_tags(tmp_path):
     assert not (out / "tags").exists() and 'href="/tags/"' not in home
     # The feed is still built, and linked from the footer rather than the menu.
     assert (out / "feed.xml").is_file()
-    nav = home[home.index('<nav class="site-nav">'):home.index("</nav>")]
+    nav = home[home.index('<nav class="site-nav"'):home.index("</nav>")]
     assert "feed.xml" not in nav and "Tags" not in nav
-    assert 'class="feed-link" href="/feed.xml"' in home[home.index("site-footer"):]
+    assert 'href="/feed.xml">Follow new sessions' in home[home.index("site-footer"):]
 
 
 def test_tags_page_and_menu_link_appear_with_tags(content, tmp_path):

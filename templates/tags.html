@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% set section = "tags" %}
 {% block title %}Tags | {{ site_title }}{% endblock %}
 {% block content %}
-    <h1 class="page-title">Tags</h1>
+    <h1>Tags</h1>
 {% if not tags %}
     <p class="empty">No posts are tagged yet. Add <code>tags:</code> to a post's front matter.</p>
 {% else %}

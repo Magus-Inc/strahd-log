@@ -2,6 +2,8 @@
 title: Zorpheus
 type: character
 summary: A mysterious wanderer and bard, a former thief, drawn to fate and prophecy.
+player: Grant Haseloff
+former: true
 source: Compiled from the adventure log
 ---
 

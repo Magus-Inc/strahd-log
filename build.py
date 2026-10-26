@@ -28,6 +28,7 @@ import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+import article
 import barovia_map
 import wiki
 
@@ -52,6 +53,11 @@ class Post:
     html: str = ""
     source: Path | None = None
     mentions: set[str] = field(default_factory=set)  # wiki slugs
+    toc: list[dict] = field(default_factory=list)
+    minutes: int = 1
+    glance: list[str] = field(default_factory=list)
+    teaser: str = ""
+    cast: list = field(default_factory=list)
 
     @property
     def path(self) -> str:
@@ -123,6 +129,16 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
         page.html, _ = linker.link(render_markdown(page.body_md), self_slug=page.slug)
+
+
+def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
+    """Reading time, table of contents, glance callout, card teaser and cast for every post."""
+    for post in posts:
+        post.minutes = article.reading_minutes(post.html)
+        post.glance = article.glance_items(post.html)
+        post.teaser = article.teaser(post.html)
+        post.cast = article.cast(post.mentions, pages)
+        post.html, post.toc = article.add_heading_ids(article.wrap_glance(post.html))
 
 
 def load_posts(content_dir: Path) -> list[Post]:
@@ -219,6 +235,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
     link_wiki(posts, pages)
+    add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
     visits = barovia_map.load_visits(map_dir / "trail.yaml", places) if places else {}
@@ -228,6 +245,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["tag_slug"] = tag_slug
     env.filters["nice_date"] = nice_date
+    env.filters["rebase"] = lambda html: rebase(html, base)
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
                        types=wiki.TYPES, all_places=places)
     tags: dict[str, list[Post]] = {}
@@ -240,7 +258,12 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         shutil.rmtree(out_dir)
     shutil.copytree(ROOT / "static", out_dir)
 
-    write(out_dir / "index.html", env.get_template("index.html").render(posts=posts))
+    years: dict[int, list[Post]] = {}
+    for post in posts[1:]:
+        years.setdefault(post.date.year, []).append(post)
+    write(out_dir / "index.html",
+          env.get_template("index.html").render(latest=posts[0] if posts else None, years=list(years.items()),
+                                                count=len(posts)))
     for i, post in enumerate(posts):
         newer = posts[i - 1] if i > 0 else None
         older = posts[i + 1] if i + 1 < len(posts) else None
