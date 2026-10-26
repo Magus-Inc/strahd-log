@@ -70,4 +70,3 @@ As they leave the camp, Liren hears Victor’s voice asking her to return to him
 - The party’s interaction with refugees and the uncovering of Franz’s nightmare.  
 - Three black hearts beating as one. In the millstone under the windmill. **The gnarled arm holds the key.**
 
-[Notes - January 7th 2025](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-january-7th-2025)

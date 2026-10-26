@@ -98,7 +98,8 @@ def test_normalize_base_path():
 def site_links(out: Path) -> list[str]:
     links = []
     for page in out.rglob("*.html"):
-        links += re.findall(r'(?:href|src)="([^"]*)"', page.read_text(encoding="utf-8"))
+        text = re.sub(r"<script>.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
+        links += re.findall(r'(?:href|src)="([^"]*)"', text)
     return links
 
 

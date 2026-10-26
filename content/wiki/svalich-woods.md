@@ -1,0 +1,13 @@
+---
+title: Svalich Woods
+type: place
+summary: The forest where the Forest Folk live.
+source: Compiled from the adventure log
+---
+
+<!-- from-the-log -->
+## From the adventure log
+
+*Compiled from the session posts. Each line links to the session it comes from.*
+
+* The Forest Folk dwell there. ([The Hunt for the Heart Stone](/posts/the-hunt-for-the-heart-stone/))

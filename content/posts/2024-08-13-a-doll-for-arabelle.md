@@ -58,4 +58,3 @@ A story from Kasimir:
 
 And so, dear reader, our adventurers sit in the waiting room, surrounded by dusty tomes and whispered secrets. The path ahead winds through darkness, but courage and curiosity light their way.
 
-[Notes - August 13, 2024](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-august-13-2024)

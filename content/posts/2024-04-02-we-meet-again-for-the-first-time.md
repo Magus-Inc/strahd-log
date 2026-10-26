@@ -14,7 +14,7 @@ We found a locked wooden chest nestled in the bottom of the great oak tree with 
 
 We continued walking along the river until we met up with the road again and a cliff which prevented us from following the river further. Just then some of us heard a carriage coming along the road so we all hid near the road. The carriage came with wolves or dire wolves with yellow eyes escorting it. It stopped along the road, just where we were hiding. Out stepped a tall gaunt aristocrat wearing a red brooch and a Longsword.
 
-The man, or creature, was none other than Count Strahd von Zarovich and he called out to [Ireena Kolyana](https://curseofstrahdowlbear.obsidianportal.com/wikis/ireena-kolyana), looking directly at where she was hiding. He looked directly at where each of us was hiding as he talked to us. He made it clear that he would not give many warnings if we disrespected him, and his seven dire wolves looked eager to tear us apart.
+The man, or creature, was none other than Count Strahd von Zarovich and he called out to [Ireena Kolyana](/wiki/ireena-kolyana/), looking directly at where she was hiding. He looked directly at where each of us was hiding as he talked to us. He made it clear that he would not give many warnings if we disrespected him, and his seven dire wolves looked eager to tear us apart.
 
 Strahd was upset about some vassal of his, which I first thought was some peasant and a case of mistaken identity, but later came to realize that he was talking about the Durst Manor and their supply of grain from the windmill. He indicated that he has plenty of wine and the vineyard was not of concern to him.
 
@@ -28,4 +28,4 @@ Next thing we knew there was a giant artificial bird creature flying towards us.
 
 After the battle Olfin attempted to place a lock of hair on the bird but it escaped him. Weeble cast sleep on it again, and Olfin tied his lock of hair around the birds leg. It must be some kind of Hexblood sign of life debt. I must be sure to avoid finding myself in such a predicament with Olfin. I’m not sure a Hexblood is much better than a vampire, paladin or not.
 
-We continued along the wagon path until we found a clearing by a lake. There were five tents there with wagons and horses, along with a large tent. Perhaps this is the Vistani encampment with [Madam Eva](https://curseofstrahdowlbear.obsidianportal.com/wikis/madam-eva)
+We continued along the wagon path until we found a clearing by a lake. There were five tents there with wagons and horses, along with a large tent. Perhaps this is the Vistani encampment with [Madam Eva](/wiki/madam-eva/)

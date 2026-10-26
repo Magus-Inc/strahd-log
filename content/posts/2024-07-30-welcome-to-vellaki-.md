@@ -8,7 +8,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ### Continue on Road to Vellaki * Road ends at iron gates with wolves’ heads impaled on them.
 
-### Refugee Camp * Ireena is enraged and heartbroken at the sight of the refugee camp. * [Schlopkht](https://curseofstrahdowlbear.obsidianportal.com/characters/schlopkht) tries to persuade Ireena to feed the dream pies to the refugees to help them sleep and relax. * Refugees arrived at the gate some days ago but are not allowed to enter. They tried to enter by force, but Izek, a guard, summoned fire to ward the refugees off. The town Baron won’t even come out. Wolves and bats have attacked the camp. Refugees are unwilling to risk heading back home. 25% are addicted to dream pastries. Many are cold to Irena and unwilling to accept her offer of help, blaming her brother and father for their misfortune. They believe a red-haired woman has cursed them. * Ireena becomes enraged by the Baron’s callousness and heads off with Aera.
+### Refugee Camp * Ireena is enraged and heartbroken at the sight of the refugee camp. * [Schlopkht](/wiki/schlopkht/) tries to persuade Ireena to feed the dream pies to the refugees to help them sleep and relax. * Refugees arrived at the gate some days ago but are not allowed to enter. They tried to enter by force, but Izek, a guard, summoned fire to ward the refugees off. The town Baron won’t even come out. Wolves and bats have attacked the camp. Refugees are unwilling to risk heading back home. 25% are addicted to dream pastries. Many are cold to Irena and unwilling to accept her offer of help, blaming her brother and father for their misfortune. They believe a red-haired woman has cursed them. * Ireena becomes enraged by the Baron’s callousness and heads off with Aera.
 
 ### Entering Vellaki * Heavy iron chains and padlock keep the gate closed. * One guard has a silvered spear, the other silver crossbow bolts. * We have our teeth checked and are tested with garlic. * Rules for entering: \* 1 gold piece toll to enter. \* Must surrender any silver to the town. * Schlopkht tries to convince the guards to accept pies as a bribe instead of the normal payment requirement. * We each pay one gold to enter. * Guards recommend the Blue Water Inn and the meat pie there.
 
@@ -18,4 +18,3 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ### LEVEL 4!!!
 
-[Notes - July 30, 2024](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-july-30-2024)

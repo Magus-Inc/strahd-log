@@ -60,6 +60,33 @@ just import <export-folder>     # re-import an Obsidian Portal export into conte
 3. Commit the file and open a pull request (see `CONTRIBUTING.md`). GitHub runs the tests and a
    build on every pull request; Netlify publishes the site when it is merged to `main`.
 
+## Wiki and search
+
+`content/wiki/<slug>.md` holds one page per character, person, place, item or faction. Front
+matter: `title`, `type` (`character`, `npc`, `creature`, `place`, `item`, `faction`, `deity`,
+`other`), optional `aliases`, `summary`, `player`, `source`. The build
+(`wiki.py`):
+
+- links the first mention of each page's title or alias in every post and wiki page,
+- lists on every wiki page the sessions that mention it ("Appears in"),
+- writes `/wiki/`, one page per entry, and `/search/` with a prebuilt `search-index.json`. Search
+  runs in the browser with a few lines of the site's own JavaScript; no outside scripts.
+
+Pages come from two places, and the tools keep them apart:
+
+- **Written by us** (`source: Written on Obsidian Portal`, or anything you add by hand). Never
+  rewritten by the tools except to re-import from Obsidian Portal.
+- **Compiled from the adventure log.** `just wiki-from-log` reads entity lists in
+  `data/log-extract/*.json` (name, type, aliases, summary, facts, each fact citing the post it came
+  from) and adds a "From the adventure log" section below any hand-written text, or creates a
+  draft page. Re-running replaces only that section. Today the lists were made by having Claude read
+  the posts; the same step can later run on session transcripts and open a pull request for review.
+
+```
+just import-wiki <export.json>  # Obsidian Portal character and wiki pages (see tools/import_op_wiki.py)
+just wiki-from-log              # merge data/log-extract/*.json into content/wiki/
+```
+
 ## Importing from Obsidian Portal
 
 `just import ../strahd-blog-export` reads `posts/<slug>.textile` (with `title:`/`date:`/`tagline:`/

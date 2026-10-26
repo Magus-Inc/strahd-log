@@ -40,6 +40,13 @@ reviews and merges them, and every merge to `main` publishes the site.
 Edit the Markdown file in `content/posts/` directly. The posts came from Obsidian Portal through
 `tools/import_op.py`; do not re-run the import, or it will overwrite edits made since.
 
+## Wiki pages
+
+Each page is `content/wiki/<name>.md`. Write anything above the `<!-- from-the-log -->` line; the
+section below it ("From the adventure log") is generated from the posts and is replaced when the
+wiki is rebuilt, so fix a wrong fact there by fixing the post or by noting the correction above the
+line. Add `aliases:` for other names a page goes by and posts will link to it automatically.
+
 ## Other changes
 
 The site's look lives in `templates/` and `static/style.css`; the build is `build.py`. Keep the

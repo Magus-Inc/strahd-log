@@ -37,4 +37,3 @@ Malron found a book about births and deaths of Vellaki families. I see a familia
 
 And so, dear reader, our adventurers stand at the precipice—the Baron’s mansion concealing more than mere specters. The path forward winds through deception, magic, and the unknown. 🌌🔍✨
 
-Raw Notes: [Notes - August 20, 2024](https://curseofstrahdowlbear.obsidianportal.com/wikis/notes-august-20-2024)
