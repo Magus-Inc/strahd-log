@@ -1,13 +1,18 @@
 {% extends "base.html" %}
+{% set section = "search" %}
 {% block title %}Search | {{ site_title }}{% endblock %}
 {% block content %}
-    <h1 class="page-title">Search</h1>
+    <header class="page-head">
+      <p class="eyebrow">Search</p>
+      <h1>Find anything</h1>
+      <p class="lede">Every session and wiki page.</p>
+    </header>
     <form class="search-form" action="{{ base }}search/" method="get" role="search">
       <input id="q" name="q" type="search" placeholder="Strahd, Ireena, the amber temple..." autocomplete="off" aria-label="Search the chronicle and wiki">
     </form>
-    <p id="search-status" class="empty">Type to search every session and wiki page.</p>
-    <ol id="results" class="post-list compact"></ol>
-    <noscript><p class="empty">Search needs JavaScript. Browse the <a href="{{ base }}">chronicle</a> or the <a href="{{ base }}wiki/">wiki</a> instead.</p></noscript>
+    <p id="search-status" class="muted">Type to search every session and wiki page.</p>
+    <ol id="results" class="results"></ol>
+    <noscript><p class="muted">Search needs JavaScript. Browse the <a href="{{ base }}">chronicle</a> or the <a href="{{ base }}wiki/">wiki</a> instead.</p></noscript>
     <script>
     (function () {
       var base = {{ base | tojson }};
@@ -49,8 +54,9 @@
         status.textContent = hits.length ? hits.length + (hits.length === 1 ? " match" : " matches") : "No matches.";
         hits.slice(0, 50).forEach(function (h) {
           var li = document.createElement("li");
-          li.innerHTML = '<a class="post-link" href="' + base + h.e.u + '">' + esc(h.e.t) + "</a> <time>" + esc(h.e.l) +
-            '</time><p class="snippet">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>";
+          li.className = "card result";
+          li.innerHTML = '<span class="chip">' + esc(h.e.l) + '</span><h2><a class="stretched" href="' + base + h.e.u + '">' + esc(h.e.t) +
+            '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>";
           list.appendChild(li);
         });
       }

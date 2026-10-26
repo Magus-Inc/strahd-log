@@ -92,20 +92,34 @@ just wiki-from-log              # merge data/log-extract/*.json into content/wik
 
 ## The map
 
-`/map/` shows our own map of Barovia, drawn by `barovia_map.py` in black quill ink on brown
-leather (generated from a fixed seed, so every build draws the same map; nothing is traced from a
-published map). The base image, `/map/barovia.svg`, is clean: places and the party's trail are an
-overlay drawn on top, so the background can be swapped later without touching anything else.
+`/map/` shows our own map of Barovia, drawn by `barovia_map.py` in the style of a hand-coloured
+regional map: parchment, green conifer woods, snow-capped mountains, blue lakes and rivers, tan
+roads and mist at the edges. It is generated from a fixed seed, so every build draws the same map;
+the geography follows the table map, and nothing is traced from a published map. The base image,
+`/map/barovia.svg`, is clean: places and the trail are an overlay, so the background can be
+swapped later without touching anything else.
 
-- `data/map.yaml` places wiki pages on the map (`xy` in the map's 1000 x 750 space, optional
-  `label`, `anchor` and `names`) and says which rooms and buildings are `within` which place.
-- `data/trail.yaml` lists where the party actually went each session, in order. Mentions are not
-  visits; a session missing from the file falls back to the places its post mentions.
-- On `/map/`, tap a place for its wiki page and the sessions there; a toggle shows or hides the
-  red trail and a slider steps through it session by session. Each post shows "Where we were", and
-  each place's wiki page shows where it is. On a phone the map keeps its size and swipes sideways.
+- The roads in `barovia_map.ROADS` (and dotted `TRACKS`) are also a graph. Each leg of the party's
+  trail follows the roads between two places by the shortest route, drawn as a thin red
+  breadcrumb line; repeat trips sit side by side, so a well-worn road shows several lines.
+- Each session gets a small numbered marker where it ended; hover for its date and title, tap to
+  read it. Markers for sessions that ended in the same place fan out around it.
+- `data/map.yaml` places wiki pages on the map (each on a road vertex) and says which rooms and
+  buildings are `within` which place. `data/trail.yaml` lists where the party actually went each
+  session; mentions are not visits.
+- On `/map/` a toggle shows or hides the trail, a slider steps through it session by session, and
+  buttons zoom and pan. Each post shows "Where we were"; each place's wiki page shows where it is.
 
 The footer carries the disclaimer the Wizards of the Coast Fan Content Policy asks for.
+
+## Design
+
+`static/style.css` is a dark editorial theme with one blood-red accent: a serif for display, the
+system sans for reading, an 18px body on a 68-character measure, colours that meet WCAG AA. No web
+fonts, frameworks or outside scripts; a few lines of the site's own JavaScript drive the map,
+search, the wiki filter and the table of contents highlight. `article.py` adds the reading aids:
+reading time, heading ids and a table of contents, the "At a Glance" callout, card teasers and
+the cast list.
 
 ## Importing from Obsidian Portal
 

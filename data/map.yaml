@@ -1,6 +1,7 @@
 # Places on our own map of Barovia (drawn by barovia_map.py; not traced from any published map).
 # Coordinates are in the map's 1000 x 750 drawing space, x to the east, y to the south, placed
-# from where the adventure logs and the table map put things relative to each other.
+# from where the adventure logs and the table map put things relative to each other. Each place
+# sits on a road vertex in barovia_map.ROADS, so the trail can follow the roads to it.
 #
 # places:   wiki page slug -> {xy: [x, y], label: text shown on the map (default: page title),
 #           names: only these names of the page count as a visit (default: all of them),
@@ -14,22 +15,22 @@ places:
     label: Village of Barovia
     # "Barovia" alone usually means the whole land, so only the village's own names count.
     names: [Village of Barovia, Barovia Village, Village Barovia]
-  gates-of-barovia: {xy: [948, 418], label: Gates, anchor: end}
-  tser-pool: {xy: [672, 458], anchor: end}
-  castle-ravenloft: {xy: [707, 352]}
-  the-windmill: {xy: [492, 318], label: Old Bonegrinder}
-  vallaki: {xy: [390, 244]}
-  raven-river-crossroads: {xy: [232, 262], label: Crossroads, anchor: start}
-  lake-baratok: {xy: [204, 198], anchor: start}
-  tower-of-kazan: {xy: [222, 172], anchor: start}
-  krezk: {xy: [102, 230], anchor: end}
-  abbey-of-saint-markovia: {xy: [128, 196], label: Abbey of St. Markovia}
-  wizard-of-wines: {xy: [90, 352]}
-  yester-hill: {xy: [48, 418], anchor: start}
-  argynvostholt: {xy: [326, 362]}
-  berez: {xy: [306, 446], label: Ruins of Berez}
-  tsolenka-pass: {xy: [272, 548]}
-  amber-temple: {xy: [354, 612]}
+  gates-of-barovia: {xy: [935, 392], label: Gates, anchor: end}
+  tser-pool: {xy: [652, 445], anchor: end}
+  castle-ravenloft: {xy: [707, 357]}
+  the-windmill: {xy: [492, 316], label: Old Bonegrinder}
+  vallaki: {xy: [388, 243]}
+  raven-river-crossroads: {xy: [226, 266], label: Crossroads, anchor: start}
+  lake-baratok: {xy: [204, 205], anchor: start}
+  tower-of-kazan: {xy: [226, 182], anchor: start}
+  krezk: {xy: [102, 232], anchor: end}
+  abbey-of-saint-markovia: {xy: [122, 206], label: Abbey of St. Markovia}
+  wizard-of-wines: {xy: [92, 350]}
+  yester-hill: {xy: [52, 412], anchor: start}
+  argynvostholt: {xy: [325, 365]}
+  berez: {xy: [305, 440], label: Ruins of Berez}
+  tsolenka-pass: {xy: [230, 520]}
+  amber-temple: {xy: [352, 612]}
 
 within:
   durst-manor: barovia

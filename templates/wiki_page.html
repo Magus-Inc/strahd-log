@@ -1,47 +1,42 @@
 {% extends "base.html" %}
 {% from "_map.html" import barovia %}
+{% set section = "wiki" %}
 {% block title %}{{ page.title }} | {{ site_title }}{% endblock %}
 {% block description %}{{ page.summary or page.title }}{% endblock %}
 {% block content %}
     <article class="post">
-      <header class="post-header">
-        <p class="wiki-type"><a href="{{ base }}wiki/#{{ types[page.type] | tag_slug }}">{{ types[page.type] }}</a></p>
+      <header class="post-head">
+        <p class="eyebrow"><a href="{{ base }}wiki/">Wiki</a> &middot; <a href="{{ base }}wiki/#{{ types[page.type] | tag_slug }}">{{ types[page.type] }}</a></p>
         <h1>{{ page.title }}</h1>
 {% if page.summary %}
-        <p class="tagline">{{ page.summary }}</p>
+        <p class="lede">{{ page.summary }}</p>
 {% endif %}
 {% if page.aliases or page.player %}
-        <p class="post-meta">
-{% if page.player %}Played by {{ page.player }}{% endif %}{% if page.player and page.aliases %} &middot; {% endif %}{% if page.aliases %}Also known as {{ page.aliases | join(", ") }}{% endif %}
-        </p>
+        <p class="muted">{% if page.player %}Played by {{ page.player }}{% endif %}{% if page.player and page.aliases %} &middot; {% endif %}{% if page.aliases %}Also known as {{ page.aliases | join(", ") }}{% endif %}</p>
 {% endif %}
       </header>
-      <div class="post-body">
+      <div class="prose">
 {{ body | safe }}
       </div>
 {% if place %}
       <section class="where-we-were">
         <h2>On the map</h2>
-{% if place.slug != page.slug %}
-        <p class="snippet">In <a href="{{ base }}{{ place.path }}">{{ place.title }}</a>. <a href="{{ base }}map/">Open the map</a>.</p>
-{% else %}
-        <p class="snippet"><a href="{{ base }}map/">Open the map</a>.</p>
-{% endif %}
+        <p class="muted">{% if place.slug != page.slug %}In <a href="{{ base }}{{ place.path }}">{{ place.title }}</a> &middot; {% endif %}<a href="{{ base }}map/">Open the map</a></p>
         {{ barovia([place], label="Where " ~ page.title ~ " is") }}
       </section>
 {% endif %}
 {% if page.mentioned_in %}
       <section class="appears-in">
-        <h2>Appears in</h2>
-        <ol class="post-list compact">
+        <h2>Appears in {{ page.mentioned_in | length }} session{{ "s" if page.mentioned_in | length != 1 }}</h2>
+        <ol class="session-list">
 {% for post in page.mentioned_in %}
-          <li><a class="post-link" href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></li>
+          <li><a href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></li>
 {% endfor %}
         </ol>
       </section>
 {% endif %}
 {% if page.source %}
-      <p class="source">{{ page.source }}{% if page.obsidian_portal_url %} (<a href="{{ page.obsidian_portal_url }}">original</a>){% endif %}.</p>
+      <p class="source muted">{{ page.source }}{% if page.obsidian_portal_url %} (<a href="{{ page.obsidian_portal_url }}">original</a>){% endif %}.</p>
 {% endif %}
     </article>
 {% endblock %}

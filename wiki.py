@@ -167,5 +167,6 @@ class Linker:
 
 def plain_text(html: str) -> str:
     """Rendered HTML -> plain text for the search index."""
-    text = TAG.sub(" ", html)
+    text = re.sub(r"</?(?:p|li|ul|ol|h[1-6]|br|div|tr|td|th|blockquote|aside|table)[^>]*>", " ", html)
+    text = TAG.sub("", text)
     return unicodedata.normalize("NFC", re.sub(r"\s+", " ", htmllib.unescape(text)).strip())

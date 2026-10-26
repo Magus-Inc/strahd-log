@@ -1,14 +1,49 @@
 {% extends "base.html" %}
+{% set section = "chronicle" %}
 {% block content %}
-    <ol class="post-list">
-{% for post in posts %}
-      <li>
-        <a class="post-link" href="{{ base }}{{ post.path }}">{{ post.title }}</a>
-        <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time>
-{% if post.tagline %}
-        <p class="tagline">{{ post.tagline }}</p>
+{% if latest %}
+    <section class="hero">
+      <p class="eyebrow">Latest session &middot; <time datetime="{{ latest.date.isoformat() }}">{{ latest.date | nice_date }}</time></p>
+      <h1><a href="{{ base }}{{ latest.path }}">{{ latest.title }}</a></h1>
+{% if latest.tagline %}
+      <p class="lede">{{ latest.tagline }}</p>
 {% endif %}
-      </li>
+{% if latest.glance %}
+      <ul class="glance-list">
+{% for item in latest.glance[:5] %}
+        <li>{{ item | rebase | safe }}</li>
 {% endfor %}
-    </ol>
+      </ul>
+{% else %}
+      <p class="lede">{{ latest.teaser }}</p>
+{% endif %}
+      <p class="hero-actions"><a class="button" href="{{ base }}{{ latest.path }}">Read the session</a> <span class="muted">{{ latest.minutes }} min read</span></p>
+    </section>
+{% endif %}
+    <section class="chronicle" aria-labelledby="chronicle-title">
+      <div class="section-head">
+        <h2 id="chronicle-title">The chronicle</h2>
+        <p class="muted">{{ count }} sessions, newest first</p>
+      </div>
+{% if years %}
+      <nav class="year-chips" aria-label="Jump to a year">
+{% for year, _ in years %}
+        <a class="chip" href="#y{{ year }}">{{ year }}</a>
+{% endfor %}
+      </nav>
+{% endif %}
+{% for year, posts in years %}
+      <h3 class="year" id="y{{ year }}">{{ year }}</h3>
+      <ol class="card-grid">
+{% for post in posts %}
+        <li class="card session-card">
+          <time class="chip date" datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time>
+          <h4><a class="stretched" href="{{ base }}{{ post.path }}">{{ post.title }}</a></h4>
+          <p class="teaser">{{ post.teaser }}</p>
+          <p class="meta">{{ post.minutes }} min read</p>
+        </li>
+{% endfor %}
+      </ol>
+{% endfor %}
+    </section>
 {% endblock %}
