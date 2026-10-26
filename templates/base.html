@@ -6,18 +6,18 @@
   <title>{% block title %}{{ site_title }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ site_subtitle }}{% endblock %}">
   <meta name="theme-color" content="#0b0708">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="/feed.xml">
+  <link rel="stylesheet" href="{{ base }}style.css">
+  <link rel="icon" href="{{ base }}favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ base }}feed.xml">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-title" href="/">{{ site_title }}</a>
+    <a class="site-title" href="{{ base }}">{{ site_title }}</a>
     <p class="site-subtitle">{{ site_subtitle }}</p>
     <nav class="site-nav">
-      <a href="/">Chronicle</a>
-      <a href="/tags/">Tags</a>
-      <a href="/feed.xml">Feed</a>
+      <a href="{{ base }}">Chronicle</a>
+      <a href="{{ base }}tags/">Tags</a>
+      <a href="{{ base }}feed.xml">Feed</a>
     </nav>
   </header>
   <main>

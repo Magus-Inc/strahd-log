@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -84,3 +85,41 @@ def test_duplicate_slugs_fail(tmp_path):
     write_post(tmp_path, "2024-01-02-b.md", "title: B\ndate: '2024-01-02'\nslug: same\n")
     with pytest.raises(ValueError, match="duplicate"):
         build.load_posts(tmp_path)
+
+
+def test_normalize_base_path():
+    assert build.normalize_base_path("") == "/"
+    assert build.normalize_base_path("/") == "/"
+    assert build.normalize_base_path("strahd-log") == "/strahd-log/"
+    assert build.normalize_base_path("/strahd-log") == "/strahd-log/"
+
+
+def site_links(out: Path) -> list[str]:
+    links = []
+    for page in out.rglob("*.html"):
+        links += re.findall(r'(?:href|src)="([^"]*)"', page.read_text(encoding="utf-8"))
+    return links
+
+
+@pytest.mark.parametrize("base", ["/", "/strahd-log/"])
+def test_every_internal_link_respects_base_path(content, tmp_path, base):
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://example.github.io", base_path=base)
+    internal = [l for l in site_links(out) if not l.startswith(("http://", "https://", "#", "mailto:"))]
+    assert internal, "expected some internal links"
+    for link in internal:
+        assert link.startswith(base), link
+        target = out / link[len(base):].split("#")[0]
+        assert target.exists() or (target / "index.html").exists(), link
+
+    feed = ET.parse(out / "feed.xml").getroot()
+    root = "https://example.github.io" + base
+    assert feed.find(f"{ATOM}id").text == root
+    assert feed.find(f"{ATOM}entry").find(f"{ATOM}link").get("href") == root + "posts/third/"
+
+
+def test_base_path_from_environment(content, tmp_path, monkeypatch):
+    monkeypatch.setenv("BASE_PATH", "strahd-log")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://example.github.io")
+    assert 'href="/strahd-log/style.css"' in (out / "index.html").read_text(encoding="utf-8")

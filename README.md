@@ -74,3 +74,10 @@ and then re-import.
 
 `netlify.toml` installs `requirements.txt` and runs `python build.py`, publishing `public/`. The feed
 uses Netlify's `URL` variable for absolute links (it falls back to `http://localhost:8000` locally).
+
+## GitHub Pages preview
+
+`.github/workflows/pages.yml` publishes a preview to <https://magus-inc.github.io/strahd-log/> on
+every push to `main`. A site under a sub-path needs its links prefixed, so the build takes a base
+path (`--base-path /strahd-log/` or the `BASE_PATH` variable); Netlify and `just serve` use `/`.
+Pages needs the repository to be public and Settings > Pages > Source set to "GitHub Actions".

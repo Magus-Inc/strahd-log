@@ -5,6 +5,7 @@ post at /posts/<slug>/, a tags page at /tags/ and an Atom feed at /feed.xml.
 
     python build.py            # build
     python build.py --serve    # build, then serve public/ on http://localhost:8000
+    BASE_PATH=/strahd-log/ python build.py   # links for a site under a sub-path (GitHub Pages)
 """
 
 from __future__ import annotations
@@ -30,6 +31,8 @@ SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
 SITE_SUBTITLE = "An adventure log from the mists of Barovia"
 # Netlify sets URL to the site's main address during builds.
 DEFAULT_SITE_URL = "http://localhost:8000"
+# Where the site lives under its host: "/" on Netlify and locally, "/strahd-log/" on GitHub Pages.
+DEFAULT_BASE_PATH = "/"
 
 
 @dataclass
@@ -45,8 +48,9 @@ class Post:
     source: Path | None = None
 
     @property
-    def url(self) -> str:
-        return f"/posts/{self.slug}/"
+    def path(self) -> str:
+        """Address relative to the site root; templates prefix it with the base path."""
+        return f"posts/{self.slug}/"
 
 
 def split_front_matter(text: str) -> tuple[dict, str]:
@@ -126,7 +130,14 @@ def atom_time(when: datetime) -> str:
     return (when if when.tzinfo else when.replace(tzinfo=timezone.utc)).isoformat()
 
 
-def build_feed(posts: list[Post], site_url: str, limit: int = 20) -> str:
+def normalize_base_path(base: str) -> str:
+    """'strahd-log' or '/strahd-log' -> '/strahd-log/'; '' -> '/'."""
+    base = base.strip().strip("/")
+    return f"/{base}/" if base else "/"
+
+
+def build_feed(posts: list[Post], root: str, limit: int = 20) -> str:
+    """Atom feed; root is the site's absolute address ending in '/'."""
     ns = "http://www.w3.org/2005/Atom"
     ET.register_namespace("", ns)
     feed = ET.Element(f"{{{ns}}}feed")
@@ -139,17 +150,17 @@ def build_feed(posts: list[Post], site_url: str, limit: int = 20) -> str:
 
     sub(feed, "title", SITE_TITLE)
     sub(feed, "subtitle", SITE_SUBTITLE)
-    sub(feed, "id", site_url + "/")
-    sub(feed, "link", href=site_url + "/feed.xml", rel="self")
-    sub(feed, "link", href=site_url + "/")
+    sub(feed, "id", root)
+    sub(feed, "link", href=root + "feed.xml", rel="self")
+    sub(feed, "link", href=root)
     sub(feed, "updated", atom_time(posts[0].date) if posts else "1970-01-01T00:00:00+00:00")
     author = sub(feed, "author")
     sub(author, "name", "The Owlbear Party")
     for post in posts[:limit]:
         entry = sub(feed, "entry")
         sub(entry, "title", post.title)
-        sub(entry, "link", href=site_url + post.url)
-        sub(entry, "id", site_url + post.url)
+        sub(entry, "link", href=root + post.path)
+        sub(entry, "id", root + post.path)
         sub(entry, "published", atom_time(post.date))
         sub(entry, "updated", atom_time(post.date))
         if post.tagline:
@@ -166,14 +177,15 @@ def write(path: Path, text: str) -> None:
 
 
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
-          site_url: str | None = None) -> list[Post]:
+          site_url: str | None = None, base_path: str | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
+    base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["tag_slug"] = tag_slug
     env.filters["nice_date"] = nice_date
-    env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url)
+    env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base)
 
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -193,7 +205,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     write(out_dir / "tags" / "index.html",
           env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
     write(out_dir / "404.html", env.get_template("404.html").render())
-    write(out_dir / "feed.xml", build_feed(posts, site_url))
+    write(out_dir / "feed.xml", build_feed(posts, site_url + base))
     return posts
 
 
@@ -211,9 +223,11 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Build the adventure log into public/")
     parser.add_argument("--serve", action="store_true", help="serve public/ after building")
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--base-path", help='path the site lives under, e.g. "/strahd-log/" '
+                        '(default: $BASE_PATH or "/")')
     args = parser.parse_args(argv)
     site_url = f"http://localhost:{args.port}" if args.serve else None
-    posts = build(site_url=site_url)
+    posts = build(site_url=site_url, base_path=args.base_path)
     print(f"Built {len(posts)} posts into {ROOT / 'public'}")
     if args.serve:
         serve(ROOT / "public", args.port)

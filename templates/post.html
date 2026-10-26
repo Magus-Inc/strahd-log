@@ -11,7 +11,7 @@
         <p class="post-meta">
           <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time>
 {% for tag in post.tags %}
-          <a class="tag" href="/tags/#{{ tag | tag_slug }}">{{ tag }}</a>
+          <a class="tag" href="{{ base }}tags/#{{ tag | tag_slug }}">{{ tag }}</a>
 {% endfor %}
         </p>
       </header>
@@ -24,12 +24,12 @@
     </article>
     <nav class="pager">
 {% if older %}
-      <a class="older" href="{{ older.url }}"><span>&larr; Previous</span>{{ older.title }}</a>
+      <a class="older" href="{{ base }}{{ older.path }}"><span>&larr; Previous</span>{{ older.title }}</a>
 {% else %}
       <span></span>
 {% endif %}
 {% if newer %}
-      <a class="newer" href="{{ newer.url }}"><span>Next &rarr;</span>{{ newer.title }}</a>
+      <a class="newer" href="{{ base }}{{ newer.path }}"><span>Next &rarr;</span>{{ newer.title }}</a>
 {% endif %}
     </nav>
 {% endblock %}

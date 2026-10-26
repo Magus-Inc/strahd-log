@@ -15,7 +15,7 @@
       <h2>{{ tag }}</h2>
       <ol class="post-list compact">
 {% for post in tagged %}
-        <li><a class="post-link" href="{{ post.url }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></li>
+        <li><a class="post-link" href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></li>
 {% endfor %}
       </ol>
     </section>
