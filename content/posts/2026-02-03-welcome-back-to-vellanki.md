@@ -92,7 +92,7 @@ No new loot was gained this session. The party took stock of what they carry and
 * **Chest of Holding**: A dimensional vessel with a 500-pound capacity, the key to smuggling large relics out of the castle.
 * **Van Richten's Maps**: The hunter's maps strip Ravenloft of its greatest defense, its power to swallow the lost in its corridors.
 * **Strahd's Gemstones**: Stones acquired earlier, to be used for **Locate Object** during the heist.
-* **Heist objectives**: **Argynvost's Skull** (Hall of Bones), the **Icon of Dawn's Grace** (the recap also calls it the Icon of Ravenloft; believed to be in the crypts) and the **Spear of the Huntress** (in the south crypts).
+* **Heist objectives**: **Argynvost's Skull** (Hall of Bones), the **Icon of Dawn's Grace** (believed to be in the crypts) and the **Spear of the Huntress** (in the south crypts).
 
 ## Notable NPCs:
 
