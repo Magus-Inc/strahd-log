@@ -22,17 +22,13 @@ The party returns to the Wizard of Wines and learns about the history of the hol
 
 ## The Reading:
 
-*The cards as read at the table:*
+*The cards as read at the table, in short:*
 
-> The Darklord—the master of shadows, the beast in the labyrinth that tears at his chains.
->
-> The Six of Stars, the Evoker—the power you covet, a force untamed by mortal hands, raw and wild with burning fury.
->
-> The Artifact—the token you seek, the key to power. Divinity’s heart waits, but where?
->
-> The Innocent. I see a maid of raven hair and twilit eyes. She is one way to the token.
->
-> But there is another—the Broken One. The path of sacrifice opens another door. The wall that whispers awaits your tribute.
+* **The Darklord:** the master of shadows, a beast straining at its chains.
+* **The Six of Stars, the Evoker:** the wild, untamed power the party wants.
+* **The Artifact:** the token that is the key to power; "Divinity's heart" waits somewhere.
+* **The Innocent:** a raven-haired maid with twilit eyes is one way to the token.
+* **The Broken One:** another way, through sacrifice; the Whispering Wall awaits a tribute.
 
 ## Key Locations:
 

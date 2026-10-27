@@ -7,15 +7,13 @@ summary: A legendary staff the party sought in the Tower of Kazan.
 source: Compiled from the adventure log
 ---
 
-## Item text
+## What it does
 
-*As shared at the table on 14 April 2026:*
+*Ryan shared the staff's rules on 14 April 2026. In short:*
 
-> **Staff, weapon, legendary** (requires attunement by a sorcerer, warlock, or wizard)
-> Simple weapon, melee weapon
-> 4 lb. | 1d6 bludgeoning - versatile (1d8)
->
-> This elegant platinum staff can be wielded as a magic quarterstaff that grants a +2 bonus to weapon attack and damage rolls made with it. In addition, while wielding it, you gain the benefits of wearing a robe of the archmagi
+* **Legendary staff.** Only a sorcerer, warlock or wizard can attune to it. It weighs 4 lb.
+* **As a weapon** it is a +2 magic quarterstaff (1d6 bludgeoning, or 1d8 two-handed).
+* **While you wield it** you also get the benefits of a robe of the archmagi.
 
 <!-- from-the-log -->
 ## From the adventure log
