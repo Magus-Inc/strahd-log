@@ -107,6 +107,9 @@ RIVERS = {
 FORESTS = [
     [(150, 14), (700, 14), (700, 100), (560, 112), (420, 104), (300, 112), (150, 100)],    # the north band
     [(14, 75), (250, 75), (250, 140), (260, 300), (150, 300), (14, 300)],                 # around Krezk
+    # Old Bonegrinder's wood: the reason the road climbs north round the hairpin instead of
+    # cutting straight across to Vallaki.
+    [(428, 270), (476, 266), (492, 284), (470, 316), (432, 322), (418, 296)],
     [(250, 290), (330, 296), (440, 300), (450, 410), (360, 412), (260, 400)],             # south of Vallaki
     [(552, 420), (650, 420), (660, 560), (640, 712), (560, 712), (540, 560)],             # the ridge below the falls
     [(750, 38), (986, 38), (986, 338), (900, 370), (800, 400), (750, 300)],               # north of the village
@@ -119,6 +122,7 @@ MOUNTAINS = [  # (centre, radius, count, size)
     ((440, 688), 60, 14, 32),    # Mount Ghakis
     ((250, 480), 95, 28, 20),    # the western mountains the Tsolenka road climbs through
     ((630, 270), 110, 26, 11),   # the highlands between Old Bonegrinder and the castle
+    ((524, 286), 30, 14, 15),    # the hill the road climbs round, north of Old Bonegrinder
     ((700, 26), 60, 10, 22),     # Mount Baratok
 ]
 
@@ -281,7 +285,7 @@ def draw_base(travel: list[dict] | None = None) -> str:
     lines = list(ROADS.values()) + list(TRACKS.values()) + list(UNUSED_TRACKS.values()) + list(RIVERS.values())
 
     # Clearings around the buildings, so no tree or peak is drawn over them.
-    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 248), 20), ((120, 238), 16), ((106, 372), 16), ((330, 370), 14)]
+    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 248), 20), ((120, 238), 16), ((106, 372), 16), ((330, 370), 14), ((474, 298), 10)]
 
     def clear(point, margin=9) -> bool:
         return (not any(inside(point, lake) for lake in water)
