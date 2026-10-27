@@ -2,6 +2,7 @@
 title: Veyren
 type: character
 summary: Hare Druid
+player: Grant Haseloff
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/veyren
 ---
