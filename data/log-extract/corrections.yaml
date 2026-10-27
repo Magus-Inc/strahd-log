@@ -38,6 +38,9 @@ same:
 not_alias: [Burgomaster Mansion, Half Plate]
 
 facts:
+  # Chris: the pseudodragon is Zorya, Aera's companion (see wiki/zorya).
+  "Gained a pseudodragon companion at Argynvostholt and found hidden relics behind a painting.":
+    "Gained a pseudodragon companion, Zorya, at Argynvostholt and found hidden relics behind a painting."
   "Killed the creature in the manor basement, two ghouls, a mimic and the boneless, and cut off Walter's head.":
     "Killed two ghouls, a mimic and the boneless, and cut off Walter's head."
   "Returned to Father Donavich by Schlopkht.": "Schlopkht volunteered to return it to Father Donavich."

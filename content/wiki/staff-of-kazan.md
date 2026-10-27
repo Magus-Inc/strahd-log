@@ -4,7 +4,7 @@ type: item
 aliases:
 - Kazan’s Staff
 summary: A legendary staff the party sought in the Tower of Kazan.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with notes from the table
 ---
 
 ## What it does

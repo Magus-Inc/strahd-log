@@ -5,7 +5,7 @@ aliases:
 - Holy Symbol of Raven Kind
 - Holy Symbol of Ravenkind
 summary: A holy symbol mentioned in Eliza's tale.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with notes from the table
 ---
 
 ## What it does
