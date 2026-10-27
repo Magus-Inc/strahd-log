@@ -9,14 +9,15 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 *This session was written up twice on Obsidian Portal: as "Welcome Back To Vellanki" and as "Shadows and
 Steel—The Ravenloft Infiltration Plan" (the
 [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post
-combines both. Where they disagree, both versions are given.*
+combines both, checked against Chris's own notes from the night. Where the write-ups still disagree,
+both versions are given.*
 
 ## At a Glance:
 
 * **Shown the door:** After Aera's solo look at the Heart of Sorrow and her encounter with Strahd, Rahadin escorts the party out of Castle Ravenloft.
 * **Level 7:** On the carriage back to Vallaki everyone reaches Level 7.
 * **The heist plan:** At the Blue Water Inn, the party plans a raid on the catacombs for while Strahd is away hunting.
-* **Targets:** Argynvost's Skull, the Icon of Dawn's Grace, the Spear of the Huntress, Emil Tornescu and Gertruda.
+* **Targets:** A key, Argynvost's Skull, the Icon of Dawn's Grace, the Spear of the Huntress, Emil Tornescu and Gertruda.
 * **Crokinole:** A Canadian board game briefly takes over the table.
 
 ## Characters:
@@ -33,7 +34,7 @@ The session began with a tense recap of the party's final morning at Castle Rave
 
 During the journey back to **Vallaki** everyone reached **Level 7**. The survivors gathered beneath the flickering lamps of the **Blue Water Inn**, the memory of the Count's wine still bitter on their tongues and the terror of their "failed" dinner hardening into cold resolve. The rest of the session was a deep-dive tactical briefing and a ritual of preparation.
 
-The plan is a proactive heist. Drawing on the intelligence of the dissolved spawn **Doru** and the castle maps of **Rudolph van Richten**, the party means to strike during Strahd's 14-day hunting cycle, while he is expected to be away from the castle, infiltrate the catacombs, and secure the relics and allies they need.
+The plan is a proactive heist. Drawing on what they had learned about the castle (not from Doru) and the castle maps of **Rudolph van Richten**, the party means to strike during Strahd's 14-day hunting cycle, while he is expected to be away from the castle, infiltrate the catacombs, and secure the relics and allies they need.
 
 **Note:** Much of the evening was "meta talk" about Level 7. The players discussed the mechanical impact of **Evasion** and the ethics of **Silvery Barbs**, which the DM noted is often treated as a higher-level spell because of its potency. A lighthearted sidebar compared the Canadian game **Crokinole** to curling.
 
@@ -43,21 +44,37 @@ The plan is a proactive heist. Drawing on the intelligence of the dissolved spaw
 
 **K7/K8 (Entryways)**: The dragon and gargoyle statues are confirmed as active, sentient sentries, likely a silent alarm for the castle's denizens. Stealth is mandatory.
 
-**K14/K15 (Hall of Faith and Chapel)**: The Hall of Faith is noted as "creepy". The Chapel, a site of former sanctity now defiled, is marked for exploration. The "armored corpse" Doru reported there was "gone the next day", suggesting a powerful, wandering guardian.
+**K14/K15 (Hall of Faith and Chapel)**: The Hall of Faith is "creepy". The Chapel, a site of former sanctity now defiled, is worth looking into.
 
-**K16/K17**: Possible vertical routes, either up to the spires or down to the chapel depths.
+**K16/K17**: K16 could lead up toward the spires; the south chapel at K17 goes down.
 
-**The High Tower (K18/K57)**: The site of the **Heart of Sorrow**. Its staircase is a possible route to the crypts, though heavily guarded.
+**The High Tower (K18/K57)**: The site of the **Heart of Sorrow**. The high tower staircase at K18 goes to the crypts, though it is heavily guarded.
 
 **The Hall of Bones**: On the basement floor, the suspected resting place of **Argynvost's Skull**.
 
-**K84 (Catacombs)**: The primary objective. Its crypts include those of **King Dostran** (Crypt 34; the recap spells it Dostron) and **Saint Markovia** (Crypt 40), which house artifacts needed to break the land's curse. Anything else down there is a distraction.
+**K84 (Catacombs)**: The primary objective. Its crypts include those of **King Dostran** (Crypt 34) and **Saint Markovia** (Crypt 40), which house artifacts needed to break the land's curse. Anything else down there is a distraction.
 
 **K85/K86 (Tombs of Sergei and Strahd)**: Sergei's tomb is well lit, blocked by a portcullis, and an unnatural beacon. Strahd's is the ultimate target, expected to be empty during the new moon, though the crypts' magic may hold him if the party lingers.
 
 **K88 (Tomb of King Barov and Queen Ravenovia)**: Rahadin's sanctuary. Entering here means a confrontation with Strahd's chamberlain, turning a heist into a bloodbath.
 
 **Vallaki and the Blue Water Inn**: The party's base of operations and the site of the heist rehearsals.
+
+## What We Learned (Not from Doru):
+
+Chris's notes from the night, castle room numbers as the party had them:
+
+* **Find:** a key.
+* **K1, courtyard:** the drawbridge might not be down, so find a way to get in. The party should devise a plan to get in if the drawbridge is up.
+* **K7, entry:** the dragon statues are potentially guards.
+* **K8, great entry:** the gargoyles are almost certainly guards.
+* **K14, Hall of Faith:** creepy.
+* **K15, chapel:** worth looking into.
+* **K16:** could lead up.
+* **K17, south chapel:** goes down.
+* **K18, high tower staircase:** goes to the crypts.
+* **K84, catacombs:** King Dostran and St. Markovia, crypts 34 and 40.
+* **K85, Sergei's tomb:** a portcullis in the way, but well lit.
 
 ## Encounters:
 
@@ -81,9 +98,8 @@ No new loot was gained this session. The party took stock of what they carry and
 
 * **Strahd von Zarovich**: The Master of Ravenloft. His recent "mercy" toward Aera has left the party wary but emboldened. His 14-day hunting cycle gives them their window: strike while he hunts away from the den.
 * **Rahadin**: The Count's chamberlain, who saw the party out.
-* **Ezmerelda d'Avenir**: A famed monster hunter. The recap has her traveling with and advising the party; the notebook has her in Vallaki with Ireena as a reserve force to hold the perimeter during the dive.
-* **Ireena Kolyana**: The object of Strahd's obsession, under the party's protection in Vallaki.
-* **Doru (Deceased)**: Dissolved in the river's running water; his intelligence is the foundation of the party's map.
+* **Ezmerelda d'Avenir**: A famed monster hunter, on the party's side and traveling with them, advising them.
+* **Ireena Kolyana**: The object of Strahd's obsession, on the party's side and with them under their protection.
 * **Rudolph van Richten**: The hunter whose castle maps turn a suicide mission into a calculated heist.
 * **Emil Tornescu**: A werewolf prisoner in the South Dungeon whom the party intends to rescue.
 * **Gertruda**: Mary's daughter, confirmed to be in the King's Bedchamber.
