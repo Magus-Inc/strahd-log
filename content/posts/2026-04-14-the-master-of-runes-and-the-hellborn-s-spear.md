@@ -43,7 +43,7 @@ Continuing south, the party located Crypt 34: the tomb of King Dostran the Hellb
 
 ## Loot:
 
-* **Kazan’s Staff**: A legendary platinum staff (+2 bonus to attacks/damage, grants Robe of the Archmagi benefits, increases spell DC/attack bonus by 2). Taken by **Crusty**.
+* **Kazan’s Staff**: A legendary platinum staff (+2 bonus to attacks/damage, grants Robe of the Archmagi benefits, increases spell DC/attack bonus by 2). Taken by **Crusty**. The item text is on the [Staff of Kazan](/wiki/staff-of-kazan/) page.
 * **Spear of the Huntress**: A +1 blood spear that grants 2d6 temporary HP on a kill. Recovered by the party.
 * **Two Black Opals**: Worth 1,000 gold pieces each. Looted by **Aera**.
 * **Eight Amber Teeth**: Worth 100 gold pieces each. Looted by **Aera**.

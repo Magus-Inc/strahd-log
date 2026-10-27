@@ -57,6 +57,8 @@ The descent continued into the Drowning Cells, where the party waded through thr
 * The Heirloom Spoon: The “lonely,” oversized spoon returned to Cyrus.
 * The “Wrong” Spoon: A mundane kitchen item recovered from the bone hole; currently serves as a comedic relic of the party’s misidentification.
 
+* Holy Symbol of Ravenkind: Ryan shared the item's full rules this session (charges, Dawn's Embrace, Light of Hope, Sun's Blessing). See [Symbol of Ravenkind](/wiki/symbol-of-ravenkind/).
+
 ## The Cast of Ravenloft: Notable NPCs
 
 * Cyrus Belview: The deformed, eccentric servant whose primary concern is his misplaced heirloom. He remains a pathetic but dangerous fixture of the castle’s service halls.

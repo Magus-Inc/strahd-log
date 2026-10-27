@@ -46,7 +46,7 @@ Tactical Combat: **The Parapet Wights**: A high-efficiency engagement initiated 
 
 ## Loot:
 
-* **Clairvoyance Stone**: A palm-sized stone with 3 charges to cast the Clairvoyance spell.
+* **Clairvoyance Stone**: A palm-sized stone with 3 charges to cast the Clairvoyance spell. The item text is on the [Clairvoyance Stone](/wiki/clairvoyance-stone/) page.
 * **Silvered Crossbow and 20 Silvered Bolts**: Transferred from Malron to Shabasta to improve the party’s ranged options.
 
 ## Notable NPCs:
