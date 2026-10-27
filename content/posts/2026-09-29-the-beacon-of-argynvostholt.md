@@ -23,9 +23,11 @@ slug: the-beacon-of-argynvostholt
 
 With the Abbot of St. Markovia restored and their two old companions gone again, resting as silver flames in the Reliquary of Two Flames, the party wakes from a long rest near Krezk. They still carry the skull of Argynvost, the silver dragon whose spirit asked them to return it to his crypt at Argynvostholt.
 
+Note: The table passed the reliquary around at the start of the night, and nobody was sure who ended up holding it. Malron's journal doesn't say either.
+
 ## Summary:
 
-As the party wakes, a revenant guard named Harkus Grishenko finds them, sent to summon them to speak. He gravely passes on a message from a phantom warrior: Commander Vladimir Hornguard has ordered every knight of the Order of the Silver Dragon back to Argynvostholt by noon tomorrow. Hornguard is enraged by the party's incursion into Castle Ravenloft, sees Strahd as a necessary evil, and is expected to command his knights to destroy the party at any cost. The revenant apologizes for the harm he may be forced to do them if they meet again. Has the party spoken with Sir Godfrey Gwilym and learned of his mission? They have. Then, he urges, if they hold the skull, they must fulfill the dragon's prophecy and return it to the cemetery before Hornguard releases his full wrath.
+As the party wakes, a revenant guard named Harkus Grishenko finds them, sent to summon them to speak. He gravely passes on a message from a phantom warrior: Commander Vladimir Hornguard has ordered every knight of the Order of the Silver Dragon back to Argynvostholt by noon tomorrow. Hornguard is enraged by the party's incursion into Castle Ravenloft, sees Strahd as a necessary evil, and is expected to command his knights to destroy the party at any cost. The revenant apologizes for the harm he may be forced to do them if they meet again. Has the party spoken with Sir Godfried William and learned of his mission? They have. Then, he urges, if they hold the skull, they must fulfill the dragon's prophecy and return it to the cemetery before Hornguard releases his full wrath.
 
 The party debates sneaking in or simply arriving fast. Ryan lays out the road: from Krezk through the Raven River crossroads it is about three hours to Argynvostholt. They decide to book it.
 
@@ -53,9 +55,9 @@ Shabasta speaks: "Although your efforts to prevent us from doing this were good-
 
 Note: Someone immediately called "Dibs" on the armor.
 
-The revenants haunting Argynvostholt dissolve into mist, the spirits of the Order's knights are freed from their corpses, and from the chapel comes a clatter of chains. Sir Godfrey's spirit takes shape, restored to the noble, golden-haired knight he was before, his scarlet eyes now piercing blue. He kneels to the party: "Hail, friends. Hail, Lord Argynvost." The dragon thanks them; his knights are saved, and his long-waning hope is rekindled. He was woken weeks ago by distant dragon song from beyond Barovia, and he senses a grand alignment approaching. He asks whether any of them carries an amber shard. Aera does, and he warns her to beware how fiercely she gazes into its abyss.
+The revenants haunting Argynvostholt dissolve into mist, the spirits of the Order's knights are freed from their corpses, and from the chapel comes a clatter of chains. Sir Godfried's spirit takes shape, restored to the noble, golden-haired knight he was before, his scarlet eyes now piercing blue. He kneels to the party: "Hail, friends. Hail, Lord Argynvost." The dragon thanks them; his knights are saved, and his long-waning hope is rekindled. He was woken weeks ago by distant dragon song from beyond Barovia, and he senses a grand alignment approaching. He asks whether any of them carries an amber shard. Aera does, and he warns her to beware how fiercely she gazes into its abyss.
 
-Through Godfrey, the party learns more of the Amber Temple. Weeks ago a dusk elf named Kasimir Velikov came to Argynvostholt seeking its history, location and contents. Godfrey warned him away from the darkness within but sensed magic, intelligence and desperation in him, the kind the temple preys on. The temple lies near the peak of Mount Ghakis at the end of a trail long lost; Kasimir may have rediscovered it, and may guide them there.
+Through Sir Godfried, the party learns more of the Amber Temple. Weeks ago a dusk elf named Kasimir Velikov came to Argynvostholt seeking its history, location and contents. Godfried warned him away from the darkness within but sensed magic, intelligence and desperation in him, the kind the temple preys on. The temple lies near the peak of Mount Ghakis at the end of a trail long lost; Kasimir may have rediscovered it, and may guide them there.
 
 Note: The table weighed making a beeline over the river and up the mountain and decided they would probably die. They got lost last time even following the road.
 
@@ -105,7 +107,7 @@ Stealth and social: Shabasta's Dimension Door, Zora's distraction and Aera's cli
 
 **Argynvost**: The silver dragon, restored as a spirit by the return of his skull. He frees his knights, blesses Olfin's longsword and burns himself into a beacon. "Your watch has ended."
 
-**Sir Godfrey Gwilym**: Freed from his revenant body and restored to the knight he was. He shares what he knows of Kasimir and the Amber Temple.
+**Sir Godfried William**: Freed from his revenant body and restored to the knight he was. He shares what he knows of Kasimir and the Amber Temple.
 
 **Zora**: Aera's pseudodragon, whose distraction made it possible to mount the skull without a fight.
 
