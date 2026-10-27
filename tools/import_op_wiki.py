@@ -122,7 +122,7 @@ def import_pages(export: dict, wiki_dir: Path, posts_dir: Path) -> dict[str, str
         slug = addresses[path].strip("/").rsplit("/", 1)[1]
         target = wiki_dir / f"{slug}.md"
         existing = target.read_text(encoding="utf-8") if target.exists() else ""
-        # Keep the aliases, summary and player that tools/wiki_from_extract.py or a person added.
+        # Keep the aliases, summary, player and former flag that tools/wiki_from_extract.py or a person added.
         before = yaml.safe_load(existing.split("\n---", 1)[0].removeprefix("---\n")) if existing.startswith("---\n") else {}
         before = before if isinstance(before, dict) else {}
         aliases = entry["aliases"] + [a for a in before.get("aliases") or [] if a not in entry["aliases"]]
@@ -133,6 +133,8 @@ def import_pages(export: dict, wiki_dir: Path, posts_dir: Path) -> dict[str, str
             meta["summary"] = entry["summary"] or before["summary"]
         if before.get("player"):
             meta["player"] = before["player"]
+        if before.get("former"):
+            meta["former"] = True
         meta["source"] = "Written on Obsidian Portal"
         meta["obsidian_portal_url"] = SITE + path
         body = relink("\n\n".join(entry["parts"]))
