@@ -10,34 +10,36 @@
 
 junctions:
   ivlis-crossroads: [680, 555]      # F, River Ivlis crossroads
-  gates-of-ravenloft: [680, 382]    # J
+  falls-fork: [600, 405]            # below Tser Falls, where the trail past Tser Pool meets the road (H)
   bonegrinder-turn: [488, 308]      # where the lane to Old Bonegrinder (O) leaves the hairpin
   vallaki-east-gate: [420, 262]     # N
   vallaki-west-gate: [380, 270]     # N
-  krezk-road-bend: [285, 270]
-  west-junction: [220, 262]         # the Krezk road and the road south to the Wizard of Wines
-  vineyard-bend: [160, 330]
-  southwest-junction: [318, 345]    # the Argynvostholt road and the road to Tsolenka Pass
+  argynvostholt-fork: [263, 307]    # the Old Svalich Road and the road south to Argynvostholt (Q)
+  winery-road-fork: [195, 256]      # the Krezk road and the road south to the Wizard of Wines
+  winery-fork: [150, 340]           # the trails to the Wizard of Wines and to Yester Hill part
+  baratok-fork: [242, 225]          # the trail by Lake Baratok: up to the tower, or down to R
+  amber-temple-fork: [352, 672]     # the trail up to the Amber Temple (X) leaves the road
 
 legs:
   - {from: gates-of-barovia, to: barovia, hours: 3.5, side: -1}   # B -> E
   - {from: barovia, to: ivlis-crossroads, hours: 3.5}             # E -> F
-  - {from: ivlis-crossroads, to: tser-pool, hours: 3}             # F -> G
-  - {from: ivlis-crossroads, to: tser-crossroads, hours: 8}       # F -> H -> I, the loop past Tser Falls
+  - {from: ivlis-crossroads, to: tser-pool, hours: 3}             # F -> G, the trail by the pool
+  - {from: ivlis-crossroads, to: falls-fork, hours: 8}            # F -> H, the loop west of Tser Falls
   - {from: tser-crossroads, to: castle-ravenloft, hours: 3.5}     # I -> J -> K
   - {from: tser-crossroads, to: bonegrinder-turn, hours: 3}       # I -> O
   - {from: bonegrinder-turn, to: vallaki-east-gate, hours: 6.5}   # O -> N, round the hairpin and along the lake
-  - {from: vallaki-east-gate, to: vallaki-west-gate, hours: 1, label: false}   # through Vallaki
-  - {from: vallaki-west-gate, to: raven-river-crossroads, hours: 1.5}          # N -> the crossroads (P)
-  - {from: raven-river-crossroads, to: tower-of-kazan, hours: 3.5}             # -> V, the trail to Lake Baratok
-  - {from: raven-river-crossroads, to: krezk-road-bend, hours: 1.5}
-  - {from: krezk-road-bend, to: west-junction, hours: 1}
-  - {from: west-junction, to: krezk, hours: 2.5}                               # -> S
-  - {from: west-junction, to: vineyard-bend, hours: 2.5}
-  - {from: vineyard-bend, to: wizard-of-wines, hours: 1}                       # -> W
-  - {from: wizard-of-wines, to: yester-hill, hours: 3}                         # W -> Y, by the trail
-  - {from: raven-river-crossroads, to: southwest-junction, hours: 3}
-  - {from: southwest-junction, to: argynvostholt, hours: 2}                    # -> Q
-  - {from: raven-river-crossroads, to: berez, hours: 4.5, side: -1}           # -> U, south along the river
-  - {from: southwest-junction, to: tsolenka-pass, hours: 10}                   # -> T, over the western mountains
-  - {from: tsolenka-pass, to: amber-temple, hours: 3.5}                        # T -> X
+  - {from: vallaki-east-gate, to: vallaki-west-gate, hours: 1, label: false}   # past Vallaki
+  - {from: vallaki-west-gate, to: luna-river-crossroads, hours: 1.5}           # N -> P
+  - {from: luna-river-crossroads, to: baratok-fork, hours: 3.5}                # P -> by Lake Baratok (V)
+  - {from: luna-river-crossroads, to: argynvostholt-fork, hours: 3}            # P -> the Argynvostholt fork
+  - {from: argynvostholt-fork, to: argynvostholt, hours: 2}                    # -> Q
+  - {from: argynvostholt-fork, to: raven-river-crossroads, hours: 1.5}         # -> R
+  - {from: raven-river-crossroads, to: winery-road-fork, hours: 1}
+  - {from: winery-road-fork, to: krezk, hours: 2.5}                            # -> S
+  - {from: winery-road-fork, to: winery-fork, hours: 2.5}
+  - {from: winery-fork, to: wizard-of-wines, hours: 1}                         # -> W, by the trail
+  - {from: winery-fork, to: yester-hill, hours: 3}                             # -> Y, by the trail
+  - {from: luna-river-crossroads, to: berez, hours: 4.5, side: -1}             # P -> U, the trail along the river
+  - {from: raven-river-crossroads, to: tsolenka-pass, hours: 10}               # R -> T, over the western mountains
+  - {from: tsolenka-pass, to: amber-temple-fork, hours: 3.5}                   # T -> below X
+  - {from: amber-temple-fork, to: amber-temple, hours: 1.5}                    # -> X, the trail up

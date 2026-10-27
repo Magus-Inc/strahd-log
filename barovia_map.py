@@ -47,26 +47,40 @@ ROADS = {
     "Manor lane": [(960, 394), (964, 370), (968, 345)],
     "Gates to the village": [(930, 398), (880, 418), (830, 436), (780, 450)],
     "Village to the Ivlis crossroads": [(780, 450), (745, 480), (712, 520), (680, 555)],
-    "Tser Pool lane": [(680, 555), (676, 515), (670, 472)],
     "The loop past Tser Falls": [(680, 555), (640, 535), (600, 515), (576, 485), (582, 445), (600, 405),
                                  (610, 360)],
     "Road to the castle": [(610, 360), (645, 368), (680, 382), (700, 392), (720, 398)],
     "Old Svalich Road (the hairpin)": [(610, 360), (585, 335), (560, 315), (520, 312), (488, 308), (500, 284),
                                        (526, 262), (550, 248)],
-    "Old Svalich Road (the lake shore)": [(550, 248), (510, 252), (465, 256), (420, 262), (400, 270),
+    "Old Svalich Road (the lake shore)": [(550, 248), (510, 252), (465, 256), (420, 262), (400, 268),
                                           (380, 270), (350, 278)],
-    "Old Svalich Road (west)": [(350, 278), (285, 270), (220, 262), (170, 245), (120, 232), (60, 222), (2, 215)],
+    "Vallaki lane": [(400, 268), (400, 250)],
+    # From the Luna River crossroads (P) the Old Svalich Road bends south-west past the fork to
+    # Argynvostholt, then north-west to the Raven River crossroads (R); there is no straight road
+    # between the two crossroads.
+    "Old Svalich Road (P to R)": [(350, 278), (322, 298), (292, 309), (263, 307), (240, 290), (220, 262)],
+    "Old Svalich Road (west)": [(220, 262), (195, 256), (160, 244), (120, 232), (60, 222), (2, 215)],
     "Bonegrinder lane": [(488, 308), (474, 300)],
     "Abbey road": [(120, 232), (125, 220), (133, 208)],
-    "Berez road": [(350, 278), (366, 320), (368, 370), (352, 415), (330, 450)],
-    "Argynvostholt road": [(350, 278), (328, 310), (318, 345), (330, 375)],
-    "Road to Tsolenka Pass": [(318, 345), (270, 372), (225, 400), (190, 440), (178, 490), (198, 535), (240, 578)],
-    "Vineyard road": [(220, 262), (196, 296), (160, 330), (110, 360)],
-    "Amber Temple road": [(240, 578), (285, 615), (340, 638)],
+    "Argynvostholt road": [(263, 307), (292, 330), (318, 352), (330, 375)],
+    "Road to Tsolenka Pass": [(220, 262), (232, 300), (226, 345), (205, 395), (186, 440), (178, 490), (198, 535),
+                              (240, 578)],
+    "Vineyard road": [(195, 256), (184, 292), (165, 322), (150, 340)],
+    "Amber Temple road": [(240, 578), (288, 614), (330, 648), (352, 672), (362, 705), (366, 748)],
 }
 TRACKS = {
-    "Lake Baratok trail": [(350, 278), (310, 250), (278, 228), (258, 214), (250, 202)],
-    "Yester Hill trail": [(110, 360), (96, 420), (70, 488)],
+    "Berez trail": [(350, 278), (366, 320), (368, 370), (352, 415), (330, 450)],
+    "Lake Baratok trail": [(350, 278), (310, 250), (276, 232), (242, 225)],
+    "Tower of Kazan spur": [(242, 225), (258, 214), (250, 202)],
+    "Lake Baratok to the Raven River crossroads": [(242, 225), (231, 244), (220, 262)],
+    "Wizard of Wines trail": [(150, 340), (130, 352), (110, 360)],
+    "Yester Hill trail": [(150, 340), (130, 400), (100, 452), (70, 488)],
+    "Amber Temple trail": [(352, 672), (352, 652), (340, 638)],
+    "Tser Pool trail (to the camp)": [(680, 555), (676, 515), (670, 472)],
+}
+# Drawn like tracks but never walked by the trail: the party never took them.
+UNUSED_TRACKS = {
+    "Tser Pool trail (past the pool)": [(670, 472), (648, 450), (622, 428), (600, 405)],
 }
 
 LAKES = {
@@ -119,7 +133,8 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Ivlis River", (850, 516), 11, 0),
     ("Mount Ghakis", (440, 714), 15, 0),
     ("Old Svalich Road", (872, 440), 10, -21),
-    ("Tser Falls", (584, 420), 10, 0),
+    ("Tser Falls", (560, 420), 10, 0),
+    ("Gates of Barovia", (562, 352), 8.5, 0),
 ]
 
 
@@ -196,6 +211,14 @@ def castle(x: float, y: float) -> str:
         f'<path d="M{x - 3},{y + 2} v-7 h6 v7" fill="{INK}"/></g>')
 
 
+def gates(x: float, y: float, angle: float) -> str:
+    """A pair of gateposts across the road (the western gates of Barovia, by the castle fork)."""
+    return (f'<g transform="rotate({angle} {x} {y})" stroke="{INK}" stroke-width="0.7">'
+            f'<rect x="{x - 2}" y="{y - 11}" width="4" height="8" fill="#8a8f93"/>'
+            f'<rect x="{x - 2}" y="{y + 3}" width="4" height="8" fill="#8a8f93"/>'
+            f'<path d="M{x},{y - 3} v6" stroke-dasharray="1 1.2" fill="none"/></g>')
+
+
 def manor(x: float, y: float) -> str:
     """Durst Manor: a tall townhouse with a pointed roof, out past the gates in the mists."""
     return (f'<g stroke="{INK}" stroke-width="0.8" stroke-linejoin="round">'
@@ -255,10 +278,10 @@ def draw_base(travel: list[dict] | None = None) -> str:
     """The base map; `travel` (load_travel()) adds the hours on foot along each leg of road."""
     rng = random.Random(SEED)
     water = list(LAKES.values())
-    lines = list(ROADS.values()) + list(TRACKS.values()) + list(RIVERS.values())
+    lines = list(ROADS.values()) + list(TRACKS.values()) + list(UNUSED_TRACKS.values()) + list(RIVERS.values())
 
     # Clearings around the buildings, so no tree or peak is drawn over them.
-    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 276), 20), ((120, 238), 16), ((106, 372), 16), ((330, 370), 14)]
+    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 248), 20), ((120, 238), 16), ((106, 372), 16), ((330, 370), 14)]
 
     def clear(point, margin=9) -> bool:
         return (not any(inside(point, lake) for lake in water)
@@ -295,7 +318,7 @@ def draw_base(travel: list[dict] | None = None) -> str:
         d = smooth_path(pts)
         parts.append(f'<path d="{d}" fill="none" stroke="#6f5434" stroke-width="4" stroke-linecap="round"/>'
                      f'<path d="{d}" fill="none" stroke="#d8c39a" stroke-width="2.4" stroke-linecap="round"/>')
-    for pts in TRACKS.values():
+    for pts in list(TRACKS.values()) + list(UNUSED_TRACKS.values()):
         parts.append(f'<path d="{smooth_path(pts)}" fill="none" stroke="#6f5434" stroke-width="1.6" '
                      f'stroke-dasharray="1 5" stroke-linecap="round"/>')
 
@@ -328,7 +351,8 @@ def draw_base(travel: list[dict] | None = None) -> str:
 
     parts.append(castle(720, 398))
     parts.append(manor(968, 345))
-    for x, y in [(780, 450), (400, 270), (120, 232)]:
+    parts.append(gates(597, 347, -40))
+    for x, y in [(780, 450), (400, 238), (120, 232)]:
         parts.append(village(rng, x, y + 12, 6))
     parts.append(f'<path d="M94,366 h12 v10 h-12 Z M108,370 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
 

@@ -129,7 +129,7 @@ def test_no_map_file_means_no_map(tmp_path):
 
 def test_route_follows_roads_between_junctions():
     graph = barovia_map.road_graph()
-    vallaki, castle = (400, 270), (720, 398)
+    vallaki, castle = (400, 250), (720, 398)
     path = barovia_map.route(graph, vallaki, castle)
     assert path[0] == vallaki and path[-1] == castle
     assert (488, 308) in path and (610, 360) in path  # round the hairpin by Old Bonegrinder, then the fork
@@ -205,7 +205,8 @@ def test_each_labelled_leg_shows_its_hours_from_the_table():
     drawn = {(t.get("data-from"), t.get("data-to")): t.text for t in root.iter() if t.get("class") == "hours"}
     labelled = {(leg["from"], leg["to"]): barovia_map.hours_text(leg["hours"]) for leg in travel if leg["label"]}
     assert drawn == labelled
-    assert drawn[("gates-of-barovia", "barovia")] == "3.5 h" and drawn[("ivlis-crossroads", "tser-crossroads")] == "8 h"
+    assert drawn[("gates-of-barovia", "barovia")] == "3.5 h" and drawn[("ivlis-crossroads", "falls-fork")] == "8 h"
+    assert ("vallaki-east-gate", "vallaki-west-gate") not in drawn  # no number on the way past Vallaki
 
 
 def test_travel_legs_need_known_ends_on_the_roads(tmp_path, places):
@@ -227,8 +228,27 @@ def test_places_keep_their_places_on_the_official_layout():
     y = {slug: v[1] for slug, v in xy.items()}
     assert x["durst-manor"] > x["gates-of-barovia"] > x["barovia"] > x["castle-ravenloft"]   # east to west
     assert x["vallaki"] < x["the-windmill"] < x["tser-crossroads"] < x["castle-ravenloft"]
-    assert x["raven-river-crossroads"] < x["vallaki"] and x["krezk"] < x["tower-of-kazan"] < x["raven-river-crossroads"]
-    assert y["raven-river-crossroads"] < y["argynvostholt"] < y["berez"]                    # south of the crossroads
+    assert x["krezk"] < x["raven-river-crossroads"] < x["tower-of-kazan"] < x["luna-river-crossroads"] < x["vallaki"]
+    assert y["luna-river-crossroads"] < y["argynvostholt"] < y["berez"]                     # south of the crossroads
     assert x["wizard-of-wines"] < x["argynvostholt"] and y["krezk"] < y["wizard-of-wines"] < y["yester-hill"]
     assert y["tser-crossroads"] < y["tser-pool"] and y["castle-ravenloft"] < y["barovia"]
     assert y["amber-temple"] > y["tsolenka-pass"] > y["yester-hill"] > y["krezk"]
+
+
+def test_the_two_crossroads_are_joined_only_by_the_bend_past_the_argynvostholt_fork():
+    graph = barovia_map.road_graph()
+    luna, raven, fork = (350, 278), (220, 262), (263, 307)
+    assert raven not in graph[luna]
+    path = barovia_map.route(graph, luna, raven)
+    assert fork in path or (242, 225) in path  # by the Old Svalich Road, or the trail by Lake Baratok
+
+
+def test_the_trail_past_tser_pool_is_drawn_but_never_walked():
+    graph = barovia_map.road_graph()
+    for line in barovia_map.UNUSED_TRACKS.values():
+        inner = line[1:-1]
+        assert inner and not any(p in graph for p in inner)
+    assert "stroke-dasharray" in barovia_map.draw_base()
+    # From the Tser Pool camp to the fork below the falls, the party goes back round by the road.
+    path = barovia_map.route(graph, (670, 472), (600, 405))
+    assert (680, 555) in path

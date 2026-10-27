@@ -23,9 +23,13 @@ places:
   tser-pool: {xy: [670, 472], anchor: end}
   castle-ravenloft: {xy: [720, 398]}
   tser-crossroads: {xy: [610, 360], label: Tser Pool Crossroads, anchor: end}
-  the-windmill: {xy: [474, 300], label: Old Bonegrinder, anchor: end}
-  vallaki: {xy: [400, 270]}
-  raven-river-crossroads: {xy: [350, 278], label: Crossroads, anchor: below}
+  the-windmill: {xy: [474, 300], label: Old Bonegrinder, anchor: below}
+  # Vallaki sits just off the Old Svalich Road, up a short lane toward the lake.
+  vallaki: {xy: [400, 250]}
+  # Two crossroads: the Luna River crossroads (P) just west of Vallaki, where five roads meet, and the
+  # Raven River crossroads (R) further west, where the Krezk, Tsolenka and Lake Baratok roads meet.
+  luna-river-crossroads: {xy: [350, 278], anchor: below}
+  raven-river-crossroads: {xy: [220, 262], anchor: below}
   lake-baratok: {xy: [258, 214], anchor: start}
   tower-of-kazan: {xy: [250, 202]}
   krezk: {xy: [120, 232], anchor: end}
