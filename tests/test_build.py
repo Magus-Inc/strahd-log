@@ -175,3 +175,9 @@ def test_redirect_to_an_unknown_post_fails(tmp_path):
     (tmp_path / "data" / "redirects.yaml").write_text("posts:\n  old: 2026-02-03-missing\n", encoding="utf-8")
     with pytest.raises(ValueError, match="unknown post"):
         build.build(tmp_path / "content" / "posts", tmp_path / "public", site_url="https://x.example")
+
+
+def test_custom_domain_lands_in_the_output(content, tmp_path):
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://owlbear.dicelore.quest")
+    assert (out / "CNAME").read_text(encoding="utf-8").strip() == "owlbear.dicelore.quest"

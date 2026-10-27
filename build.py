@@ -35,9 +35,10 @@ import wiki
 ROOT = Path(__file__).resolve().parent
 SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
 SITE_SUBTITLE = "An adventure log from the mists of Barovia"
-# Netlify sets URL to the site's main address during builds.
+# The publish workflow sets URL to the site's address (Netlify also sets it, if we ever move there).
 DEFAULT_SITE_URL = "http://localhost:8000"
-# Where the site lives under its host: "/" on Netlify and locally, "/strahd-log/" on GitHub Pages.
+# Where the site lives under its host: "/" on owlbear.dicelore.quest and locally, "/strahd-log/" on
+# GitHub Pages' default address.
 DEFAULT_BASE_PATH = "/"
 
 

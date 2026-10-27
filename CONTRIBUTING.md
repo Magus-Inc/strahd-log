@@ -53,8 +53,8 @@ The site's look lives in `templates/` and `static/style.css`; the build is `buil
 site readable on a phone and free of external JavaScript, and add or update tests in `tests/`
 for code changes. See `AGENTS.md` for the conventions.
 
-## Deploys and Netlify credits
+## Deploys
 
-The site is on Netlify's free plan. Only production deploys (merges to `main`) use credits, about
-15 each; deploy previews for pull requests, branch deploys and failed deploys are not metered.
-That is why changes are batched into reviewed pull requests rather than pushed straight to `main`.
+GitHub Pages publishes the site at <https://owlbear.dicelore.quest/> about a minute after a pull
+request is merged to `main`. Every pull request gets the same tests and build first, so a broken
+post is caught before it goes live.
