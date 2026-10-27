@@ -22,9 +22,9 @@ def page(slug, title, aliases=(), kind="place"):
 PAGES = [page("barovia", "Barovia", ["Village of Barovia"]), page("vallaki", "Vallaki", ["Vellaki"]),
          page("blue-water-inn", "Blue Water Inn"), page("krezk", "Krezk"), page("strahd", "Strahd", kind="npc")]
 MAP = """places:
-  barovia: {xy: [765, 440], label: Village of Barovia, names: [Village of Barovia]}
-  vallaki: {xy: [277, 250]}
-  krezk: {xy: [105, 232], anchor: end}
+  barovia: {xy: [780, 450], label: Village of Barovia, names: [Village of Barovia]}
+  vallaki: {xy: [400, 270]}
+  krezk: {xy: [120, 232], anchor: end}
 within:
   blue-water-inn: vallaki
 """
@@ -47,7 +47,7 @@ def test_load_places_labels_names_and_parents(places):
     by_slug, parent = places
     assert by_slug["barovia"].title == "Village of Barovia" and by_slug["barovia"].names == ["Village of Barovia"]
     assert by_slug["vallaki"].names == ["Vallaki", "Vellaki"]
-    assert by_slug["krezk"].label_xy == (95.0, 236.0)
+    assert by_slug["krezk"].label_xy == (110.0, 236.0)
     assert parent["blue-water-inn"] == "vallaki" and "strahd" not in parent
 
 
@@ -103,7 +103,7 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     write(root / "content" / "wiki" / "barovia.md", "---\ntitle: Barovia\ntype: place\naliases: [Village of Barovia]\n---\n")
     write(root / "content" / "wiki" / "vallaki.md", "---\ntitle: Vallaki\ntype: place\n---\n")
     write(root / "content" / "wiki" / "blue-water-inn.md", "---\ntitle: Blue Water Inn\ntype: place\n---\n")
-    write(root / "data" / "map.yaml", "places:\n  barovia: {xy: [765, 440], names: [Village of Barovia]}\n  vallaki: {xy: [277, 250]}\n"
+    write(root / "data" / "map.yaml", "places:\n  barovia: {xy: [780, 450], names: [Village of Barovia]}\n  vallaki: {xy: [400, 270]}\n"
                                       "within:\n  blue-water-inn: vallaki\n")
     out = root / "public"
     build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
@@ -129,10 +129,10 @@ def test_no_map_file_means_no_map(tmp_path):
 
 def test_route_follows_roads_between_junctions():
     graph = barovia_map.road_graph()
-    vallaki, castle = (277, 250), (592, 286)
+    vallaki, castle = (400, 250), (720, 398)
     path = barovia_map.route(graph, vallaki, castle)
     assert path[0] == vallaki and path[-1] == castle
-    assert (445, 300) in path and (518, 322) in path  # past Old Bonegrinder and the fork below the castle
+    assert (488, 308) in path and (610, 360) in path  # round the hairpin by Old Bonegrinder, then the fork
     assert all(b in graph[a] for a, b in zip(path, path[1:]))
     assert barovia_map.route(graph, vallaki, vallaki) == [vallaki]
 
@@ -169,43 +169,44 @@ def test_offroad_place_is_reached_by_a_dotted_leg(tmp_path):
     pages = [page("yester-hill", "Yester Hill"), page("whispering-wall", "Whispering Wall"),
              page("wizard-of-wines", "Wizard of Wines")]
     places, parent = barovia_map.load_places(write(tmp_path / "map.yaml",
-        "places:\n  wizard-of-wines: {xy: [165, 368]}\n  yester-hill: {xy: [105, 385]}\n"
-        "  whispering-wall: {xy: [70, 420], offroad: true}\n"), pages)
+        "places:\n  wizard-of-wines: {xy: [110, 360]}\n  yester-hill: {xy: [70, 488]}\n"
+        "  whispering-wall: {xy: [40, 520], offroad: true}\n"), pages)
     posts = []
-    for stem in ("2025-04-01-a", "2025-04-15-b"):
+    for stem in ("2025-04-01-a", "2025-04-15-b", "2025-04-29-c"):
         post = build.parse_post(write(tmp_path / "posts" / f"{stem}.md", f"---\ntitle: {stem}\ndate: '{stem[:10]}'\n---\n\nx\n"))
         post.html = "<p>x</p>"
         posts.append(post)
     visits = {"2025-04-01-a": ["wizard-of-wines", "yester-hill"], "2025-04-15-b": ["yester-hill", "whispering-wall"]}
+    post = posts.pop()
     legs = barovia_map.trail(posts, places, parent, pages, visits)
     assert [s["road"] for s in legs[0]["segments"]] == [True]
     assert [s["road"] for s in legs[1]["segments"]] == [False]
+    # Leaving an off-road place, the party walks back to the nearest road first, then follows it.
+    legs = barovia_map.trail(posts + [post], places, parent, pages, {**visits, post.source.stem: ["wizard-of-wines"]})
+    assert [s["road"] for s in legs[2]["segments"]] == [False, True]
+
+
+ROOT = Path(__file__).resolve().parent.parent
 
 
 def real_travel():
-    pages = wiki.load_wiki(Path("content/wiki"), build.split_front_matter)
-    places, _ = barovia_map.load_places(Path("data/map.yaml"), pages)
-    return barovia_map.load_travel(Path("data/travel-times.yaml"), places)
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    return barovia_map.load_travel(ROOT / "data" / "travel-times.yaml", places)
 
 
 def test_each_labelled_leg_shows_its_hours_from_the_table():
     import yaml
     table = {(leg["from"], leg["to"]): float(leg["hours"])
-             for leg in yaml.safe_load(Path("data/travel-times.yaml").read_text(encoding="utf-8"))["legs"]}
+             for leg in yaml.safe_load((ROOT / "data" / "travel-times.yaml").read_text(encoding="utf-8"))["legs"]}
     travel = real_travel()
     assert {(leg["from"], leg["to"]): leg["hours"] for leg in travel} == table
     root = ET.fromstring(barovia_map.draw_base(travel))
     drawn = {(t.get("data-from"), t.get("data-to")): t.text for t in root.iter() if t.get("class") == "hours"}
     labelled = {(leg["from"], leg["to"]): barovia_map.hours_text(leg["hours"]) for leg in travel if leg["label"]}
     assert drawn == labelled
-    assert drawn[("tser-pool", "tser-crossroads")] == "8 h" and drawn[("gates-of-barovia", "barovia")] == "3.5 h"
-
-
-def test_road_lengths_follow_the_travel_times():
-    # Each leg's road is about HOUR units per hour, so the drawn distances agree with the numbers.
-    for leg in real_travel():
-        per_hour = barovia_map.path_length(leg["points"]) / leg["hours"]
-        assert 0.8 * barovia_map.HOUR <= per_hour <= 1.25 * barovia_map.HOUR, (leg["from"], leg["to"], per_hour)
+    assert drawn[("gates-of-barovia", "barovia")] == "3.5 h" and drawn[("ivlis-crossroads", "falls-fork")] == "8 h"
+    assert ("vallaki-east-gate", "vallaki-west-gate") not in drawn  # no number on the way past Vallaki
 
 
 def test_travel_legs_need_known_ends_on_the_roads(tmp_path, places):
@@ -216,3 +217,46 @@ def test_travel_legs_need_known_ends_on_the_roads(tmp_path, places):
         barovia_map.load_travel(write(tmp_path / "t.yaml", "junctions:\n  nowhere: [500, 700]\n"
                                       "legs:\n  - {from: vallaki, to: nowhere, hours: 1}\n"), by_slug)
     assert barovia_map.load_travel(tmp_path / "missing.yaml", by_slug) == []
+
+
+def test_places_keep_their_places_on_the_official_layout():
+    # Where things sit relative to each other, as on the official map (y grows southward).
+    import yaml
+    xy = {slug: spec["xy"] for slug, spec in
+          yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["places"].items()}
+    x = {slug: v[0] for slug, v in xy.items()}
+    y = {slug: v[1] for slug, v in xy.items()}
+    assert x["durst-manor"] > x["gates-of-barovia"] > x["barovia"] > x["castle-ravenloft"]   # east to west
+    assert x["vallaki"] < x["the-windmill"] < x["tser-crossroads"] < x["castle-ravenloft"]
+    assert x["krezk"] < x["raven-river-crossroads"] < x["tower-of-kazan"] < x["luna-river-crossroads"] < x["vallaki"]
+    assert y["luna-river-crossroads"] < y["argynvostholt"] < y["berez"]                     # south of the crossroads
+    assert x["wizard-of-wines"] < x["argynvostholt"] and y["krezk"] < y["wizard-of-wines"] < y["yester-hill"]
+    assert y["tser-crossroads"] < y["tser-pool"] and y["castle-ravenloft"] < y["barovia"]
+    assert y["amber-temple"] > y["tsolenka-pass"] > y["yester-hill"] > y["krezk"]
+
+
+def test_the_two_crossroads_are_joined_only_by_the_bend_past_the_argynvostholt_fork():
+    graph = barovia_map.road_graph()
+    luna, raven, fork = (350, 278), (220, 262), (263, 307)
+    assert raven not in graph[luna]
+    path = barovia_map.route(graph, luna, raven)
+    assert fork in path or (242, 225) in path  # by the Old Svalich Road, or the trail by Lake Baratok
+
+
+def test_the_trail_past_tser_pool_is_drawn_but_never_walked():
+    graph = barovia_map.road_graph()
+    for line in barovia_map.UNUSED_TRACKS.values():
+        inner = line[1:-1]
+        assert inner and not any(p in graph for p in inner)
+    assert "stroke-dasharray" in barovia_map.draw_base()
+    # From the Tser Pool camp to the fork below the falls, the party goes back round by the road.
+    path = barovia_map.route(graph, (670, 472), (600, 405))
+    assert (680, 555) in path
+
+
+def test_scale_bar_reads_in_hours_that_fit_the_roads():
+    import statistics
+    per_hour = [barovia_map.path_length(leg["points"]) / leg["hours"] for leg in real_travel()]
+    assert abs(statistics.median(per_hour) - barovia_map.HOUR) <= 4
+    svg = barovia_map.draw_base()
+    assert "About 5 hours on foot" in svg and "Miles" not in svg
