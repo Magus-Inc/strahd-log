@@ -156,5 +156,14 @@ Setting up the custom domain:
 `static/CNAME` records the domain in the published files too. Pages needs the repository to be
 public and Settings > Pages > Source set to "GitHub Actions".
 
+## Page views
+
+[GoatCounter](https://www.goatcounter.com) counts visits per page: free for a site like this, no
+cookies, nothing stored in the visitor's browser, and no cookie banner needed. The publish workflow
+sets `GOATCOUNTER: owlbear`, which adds a few lines of our own script to every page that report the
+page's path, title and referring site to <https://owlbear.goatcounter.com>. Local builds, `just
+serve` and pull-request checks leave `GOATCOUNTER` unset, so they never count. To use a different
+GoatCounter site, change that line; to stop counting, delete it.
+
 `netlify.toml` and the `_redirects` file the build writes are kept so the site can move to Netlify
 later without changes; nothing uses them on GitHub Pages.

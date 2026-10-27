@@ -42,5 +42,17 @@
     </div>
   </footer>
 {% block scripts %}{% endblock %}
+{% if counter %}
+  <script>
+    // Page-view count: no cookies, nothing stored in the browser; see https://www.goatcounter.com
+    (function () {
+      var path = location.pathname, base = "{{ base }}";
+      if (path.indexOf(base) === 0) path = "/" + path.slice(base.length);
+      new Image().src = "https://{{ counter }}.goatcounter.com/count?p=" + encodeURIComponent(path) +
+        "&t=" + encodeURIComponent(document.title) + "&r=" + encodeURIComponent(document.referrer) +
+        "&s=" + screen.width + "&rnd=" + Math.random().toString(36).slice(2);
+    })();
+  </script>
+{% endif %}
 </body>
 </html>

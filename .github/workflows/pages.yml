@@ -37,6 +37,8 @@ jobs:
         env:
           URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Page-view counts at https://owlbear.goatcounter.com (no cookies); remove to stop counting.
+          GOATCOUNTER: owlbear
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

@@ -181,3 +181,23 @@ def test_custom_domain_lands_in_the_output(content, tmp_path):
     out = tmp_path / "public"
     build.build(content, out, site_url="https://owlbear.dicelore.quest")
     assert (out / "CNAME").read_text(encoding="utf-8").strip() == "owlbear.dicelore.quest"
+
+
+def test_page_view_counter_only_when_configured(content, tmp_path, monkeypatch):
+    monkeypatch.delenv("GOATCOUNTER", raising=False)
+    build.build(content, tmp_path / "plain", site_url="https://log.example")
+    assert "goatcounter" not in (tmp_path / "plain" / "index.html").read_text(encoding="utf-8")
+
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    build.build(content, tmp_path / "counted", site_url="https://log.example", base_path="/strahd-log/")
+    for page in ("index.html", "posts/first/index.html", "404.html"):
+        html = (tmp_path / "counted" / page).read_text(encoding="utf-8")
+        assert "https://owlbear.goatcounter.com/count?p=" in html
+        assert 'base = "/strahd-log/"' in html
+        assert "gc.zgo.at" not in html  # the counter script is ours, not GoatCounter's
+
+
+def test_page_view_counter_rejects_a_bad_code(content, tmp_path, monkeypatch):
+    monkeypatch.setenv("GOATCOUNTER", "owlbear.goatcounter.com/x")
+    with pytest.raises(ValueError, match="GOATCOUNTER"):
+        build.build(content, tmp_path / "public")
