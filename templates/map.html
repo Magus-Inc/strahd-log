@@ -10,6 +10,7 @@
     </header>
     <div class="map-controls">
       <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
+      <label class="switch"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
       <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs | length }}" value="{{ legs | length }}"> <output id="trail-n">{{ legs | length }}</output></label>
       <p class="trail-now" id="trail-now" aria-live="polite"></p>
     </div>
@@ -58,6 +59,20 @@
         now.innerHTML = show.checked && leg ? 'Session ' + limit + ': <a href="' + base + leg.u + '">' + esc(leg.t) + "</a>" : "";
       }
       show.addEventListener("change", redraw);
+
+      // See-through numbers: session markers fade so the place names show through; the choice is
+      // remembered in this browser when it can be.
+      var faint = document.getElementById("faint-markers");
+      try {
+        var saved = localStorage.getItem("map.faintMarkers");
+        if (saved !== null) faint.checked = saved === "1";
+      } catch (e) {}
+      function applyFaint() { svg.classList.toggle("faint-markers", faint.checked); }
+      faint.addEventListener("change", function () {
+        applyFaint();
+        try { localStorage.setItem("map.faintMarkers", faint.checked ? "1" : "0"); } catch (e) {}
+      });
+      applyFaint();
       upto.addEventListener("input", redraw);
 
       svg.querySelectorAll(".js-pin").forEach(function (pin) {

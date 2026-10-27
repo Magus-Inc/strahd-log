@@ -227,6 +227,10 @@ main.wide { max-width: 80rem; }
 .map .marker:hover circle, .map .marker.latest circle, .map .marker.current circle { fill: #b3122e; }
 .map .marker:hover text, .map .marker.latest text, .map .marker.current text { fill: #fff; }
 .map .hidden, .map.no-trail .trail, .map.no-trail .markers { display: none; }
+.map .marker { transition: opacity 0.15s; }
+.map.faint-markers .marker { opacity: 0.35; }
+.map.faint-markers .marker:hover, .map.faint-markers .marker:focus, .map.faint-markers .marker.current,
+.map.faint-markers .marker.latest { opacity: 1; }
 .map-zoom { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 1; display: flex; flex-direction: column; gap: 0.35rem; }
 .map-zoom button { width: 2.2rem; height: 2.2rem; border-radius: 10px; border: 1px solid rgba(43, 29, 18, 0.25); background: rgba(255, 250, 240, 0.92); color: #2b1d12; font: 600 1.2rem/1 var(--sans); cursor: pointer; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
 .map-zoom button:hover { background: #fff; }
