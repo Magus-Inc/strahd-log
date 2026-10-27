@@ -16,6 +16,8 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 A porcupine bard with a flair for the dramatic, Shabasta combines enchanting music with prickly wit. Their spiny nature extends beyond appearance, as they excel at weaving biting satire into their performances. Shabasta’s unusual form surprises friend and foe alike, and their sharp melodies inspire courage in allies while disheartening enemies.
 
+Shabasta died fighting the gallows speaker. Long after, when Grant's next character Veyren died at Yester Hill, the table agreed Grant could bring Shabasta back.
+
 <!-- from-the-log -->
 ## From the adventure log
 
