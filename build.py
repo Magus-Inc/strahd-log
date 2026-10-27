@@ -307,34 +307,48 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     write(out_dir / "search-index.json", build_search_index(posts, pages))
     write(out_dir / "404.html", env.get_template("404.html").render())
     write(out_dir / "feed.xml", build_feed(posts, site_url + base))
-    write_redirects(out_dir, load_redirects(map_dir / "redirects.yaml"), posts, base)
+    write_redirects(out_dir, load_redirects(map_dir / "redirects.yaml"), posts, base,
+                    load_redirects(map_dir / "redirects.yaml", "wiki"), pages)
     return posts
 
 
-def load_redirects(path: Path) -> dict[str, str]:
-    """{old post file stem: post file stem it was folded into} from data/redirects.yaml."""
+def load_redirects(path: Path, section: str = "posts") -> dict[str, str]:
+    """From data/redirects.yaml: {old post file stem: post file stem it was folded into}, or with
+    section="wiki", {old wiki slug: wiki slug it was folded into}."""
     if not path.exists():
         return {}
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    return {str(k): str(v) for k, v in (data.get("posts") or {}).items()}
+    return {str(k): str(v) for k, v in (data.get(section) or {}).items()}
 
 
-def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post], base: str) -> None:
-    """Keep old post addresses working: a forwarding page at each (GitHub Pages) and a Netlify
-    _redirects rule (Netlify serves the site at /)."""
+def forwarding_page(title: str, target: str, what: str) -> str:
+    title = article.escape(title)
+    return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
+            f'<title>{title}</title><link rel="canonical" href="{target}">'
+            f'<meta http-equiv="refresh" content="0; url={target}"></head>'
+            f'<body><p>This {what} moved to <a href="{target}">{title}</a>.</p></body></html>\n')
+
+
+def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post], base: str,
+                    wiki_redirects: dict[str, str] | None = None, pages: list[wiki.WikiPage] = ()) -> None:
+    """Keep old post and wiki addresses working: a forwarding page at each (GitHub Pages) and a
+    Netlify _redirects rule (Netlify serves the site at /)."""
     by_stem = {p.source.stem: p for p in posts if p.source}
     rules = []
+    by_slug = {w.slug: w for w in pages}
+    for old, new in sorted((wiki_redirects or {}).items()):
+        if new not in by_slug:
+            raise ValueError(f"data/redirects.yaml: wiki {old} points at unknown wiki page {new}")
+        if old in by_slug:
+            raise ValueError(f"data/redirects.yaml: wiki {old} is still a page; remove it or the redirect")
+        page = by_slug[new]
+        write(out_dir / "wiki" / old / "index.html", forwarding_page(page.title, base + page.path, "page"))
+        rules += [f"/wiki/{old}/ /{page.path} 301", f"/wiki/{old} /{page.path} 301"]
     for old_stem, new_stem in sorted(redirects.items()):
         if new_stem not in by_stem:
             raise ValueError(f"data/redirects.yaml: {old_stem} points at unknown post {new_stem}")
         old, new = slug_from_filename(Path(old_stem)), by_stem[new_stem]
-        target = base + new.path
-        title = article.escape(new.title)
-        write(out_dir / "posts" / old / "index.html",
-              '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
-              f'<title>{title}</title><link rel="canonical" href="{target}">'
-              f'<meta http-equiv="refresh" content="0; url={target}"></head>'
-              f'<body><p>This session moved to <a href="{target}">{title}</a>.</p></body></html>\n')
+        write(out_dir / "posts" / old / "index.html", forwarding_page(new.title, base + new.path, "session"))
         rules += [f"/posts/{old}/ /{new.path} 301", f"/posts/{old} /{new.path} 301"]
     if rules:
         write(out_dir / "_redirects", "\n".join(rules) + "\n")
