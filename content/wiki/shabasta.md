@@ -16,7 +16,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 A porcupine bard with a flair for the dramatic, Shabasta combines enchanting music with prickly wit. Their spiny nature extends beyond appearance, as they excel at weaving biting satire into their performances. Shabasta’s unusual form surprises friend and foe alike, and their sharp melodies inspire courage in allies while disheartening enemies.
 
-Shabasta died in the battle with the spirits at the gallows ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/), February 2025). Grant went on to play Shabasta's brother Veyren, then Zorpheus. When his last character died, the table agreed he could bring Shabasta back, though Shabasta had died long before; Shabasta returned in February 2026.
+Shabasta died in the battle with the spirits at the gallows ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/), February 2025). Grant went on to play Shabasta's brother Veyren, then Zorpheus. When Zorpheus died, the table agreed Grant could bring Shabasta back, though Shabasta had died long before; Shabasta returned in February 2026.
 
 <!-- from-the-log -->
 ## From the adventure log

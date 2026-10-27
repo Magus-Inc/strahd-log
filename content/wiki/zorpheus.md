@@ -13,6 +13,8 @@ source: Compiled from the adventure log, with a description written for the site
 
 A mysterious wanderer and bard, a former thief, drawn to fate and prophecy. At the Whispering Wall he heard the prophecy confirmed and barely escaped. Minofaustus then handed him to Gumbo as a servant. He chose blood in Strahd's hourglass game and explored Argynvostholt with Aera and Malron. At Castle Ravenloft he helped Sasha clean up spilled wine, which earned a tip about the organ's sixth pedal and a plea to rescue Gertruda.
 
+Zorpheus was the last of Grant's characters to die before Shabasta's return: after his death the table let Grant bring Shabasta back, and Shabasta rejoined the party in February 2026.
+
 <!-- from-the-log -->
 ## From the adventure log
 

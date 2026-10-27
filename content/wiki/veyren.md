@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 Shabasta's hare-like brother, a druid drawn into the journey by the loss of his sibling. He joined the party carrying Shabasta's letter. At the Wizard of Wines he became a mouse to spy on a druid torturing a raven, and he read the druids' runes about Kaven the Blood Drinker. At Yester Hill he asked Strahd to his face why some people move freely in his domain. He died in Winter Splinter's explosive death.
 
-Veyren was one of several characters Grant lost in Barovia. Grant played Zorpheus next; when his last character died, the table let him bring Shabasta back.
+Veyren was one of several characters Grant lost in Barovia. Grant played Zorpheus next; when Zorpheus died, the table let him bring Shabasta back.
 
 <!-- from-the-log -->
 ## From the adventure log
