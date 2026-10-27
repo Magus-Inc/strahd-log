@@ -30,10 +30,11 @@
       </a>
 {% endfor %}
     </g>
-    {# Place names sit under the session markers, so a name never hides a number. #}
+    {# Place names sit under the session markers, so a name never hides a number. A name goes straight to
+       its wiki page; the pins already give screen readers and the keyboard the same links. #}
     <g class="labels" aria-hidden="true">
 {% for p in places %}
-      <text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}">{{ p.title }}</text>
+      <a href="{{ base }}{{ p.path }}" tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}">{{ p.title }}</text></a>
 {% endfor %}
     </g>
 {% if legs %}

@@ -270,7 +270,8 @@ main.wide { max-width: 80rem; }
   .prose a { color: #111; } h1, h2, h3, .prose strong { color: #111; }
   .callout.glance, .prose blockquote { background: none; }
 }
-.map .labels { pointer-events: none; }
+.map .labels a { cursor: pointer; }
+.map .labels a:hover text { fill: var(--accent); text-decoration: underline; }
 .session-list.numbered time { margin-left: 0; }
 .chip.former { vertical-align: middle; font-family: var(--sans); font-size: 0.7rem; color: var(--muted); background: var(--surface-2); border-color: var(--line); }
 h1 .chip.former { font-size: 0.8rem; }
