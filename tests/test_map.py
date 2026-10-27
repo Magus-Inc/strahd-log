@@ -114,6 +114,12 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
+    # Zoom: buttons, and our own pinch / wheel / double-tap handling (no library); the wheel zooms
+    # without Ctrl, so there is no hint to show.
+    assert all(f'data-zoom="{z}"' in page_html for z in ("in", "out", "reset"))
+    assert 'id="map-hint"' not in page_html and "Ctrl + scroll" not in page_html
+    assert '"wheel"' in page_html and "zoomAt" in page_html and '"dblclick"' in page_html
+    assert "<script src=" not in page_html
     # Session markers are drawn last, over the place names, so a label never hides a number.
     assert page_html.index('class="pins"') < page_html.index('class="labels"') < page_html.index('class="markers"')
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
