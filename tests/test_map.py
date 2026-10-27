@@ -113,6 +113,9 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert 'href="/strahd-log/map/barovia.svg"' in page_html and 'class="crumb' in page_html
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
+    assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
+    # Session markers are drawn last, over the place names, so a label never hides a number.
+    assert page_html.index('class="pins"') < page_html.index('class="labels"') < page_html.index('class="markers"')
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
     assert "Where we were" in second and 'class="crumb current"' in second and 'class="marker current"' in second
     inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
