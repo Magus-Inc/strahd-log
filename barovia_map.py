@@ -24,6 +24,9 @@ import yaml
 import wiki
 
 W, H = 1000, 750
+# About how much road an hour on foot covers, going by the hours the official map marks on its
+# roads (the median over data/travel-times.yaml). It sets the scale bar.
+HOUR = 37
 SEED = 1987
 
 INK = "#3b2a1a"        # outlines and lettering
@@ -372,10 +375,12 @@ def draw_base(travel: list[dict] | None = None) -> str:
     parts.append(f'<g fill="{INK}" stroke="{PAPER}" stroke-width="5" paint-order="stroke">'
                  f'<text x="60" y="72" font-size="46" letter-spacing="2">Barovia</text></g>')
     parts.append(compass(930, 662, 32))
-    scale = [f'<g stroke="{INK}" stroke-width="0.8"><path d="M60,700 h200" fill="none"/>']
+    # Scale: five hours on foot, an hour to each band.
+    scale = [f'<g stroke="{INK}" stroke-width="0.8"><path d="M60,700 h{5 * HOUR}" fill="none"/>']
     for i in range(5):
-        scale.append(f'<rect x="{60 + i * 40}" y="696" width="40" height="5" fill="{INK if i % 2 == 0 else PAPER}"/>')
-    scale.append(f'</g><text x="160" y="718" font-size="11" text-anchor="middle" fill="{INK}">Miles, more or less</text>')
+        scale.append(f'<rect x="{60 + i * HOUR}" y="696" width="{HOUR}" height="5" fill="{INK if i % 2 == 0 else PAPER}"/>')
+    scale.append(f'</g><text x="{60 + 2.5 * HOUR}" y="718" font-size="11" text-anchor="middle" fill="{INK}">'
+                 f'About 5 hours on foot, roughly</text>')
     parts.append("".join(scale))
 
     defs = (

@@ -252,3 +252,11 @@ def test_the_trail_past_tser_pool_is_drawn_but_never_walked():
     # From the Tser Pool camp to the fork below the falls, the party goes back round by the road.
     path = barovia_map.route(graph, (670, 472), (600, 405))
     assert (680, 555) in path
+
+
+def test_scale_bar_reads_in_hours_that_fit_the_roads():
+    import statistics
+    per_hour = [barovia_map.path_length(leg["points"]) / leg["hours"] for leg in real_travel()]
+    assert abs(statistics.median(per_hour) - barovia_map.HOUR) <= 4
+    svg = barovia_map.draw_base()
+    assert "About 5 hours on foot" in svg and "Miles" not in svg
