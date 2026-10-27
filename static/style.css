@@ -215,13 +215,17 @@ main.wide { max-width: 80rem; }
 .map.zoomed { cursor: grab; touch-action: none; }
 .map .pin { cursor: pointer; }
 .map .pin-dot { fill: #2b1d12; stroke: #f4ead2; stroke-width: 1.5; }
+/* Zoomed in, markers, pins and names scale by --mark (set by the map page) so they stay small. */
+.map .marker, .map .pin-dot, .map .labels text { transform: scale(var(--mark, 1)); transform-box: fill-box; transform-origin: center; }
+.map-hint { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; margin: 0; padding: 0.5rem 0.9rem; border-radius: 999px; background: rgba(20, 14, 10, 0.82); color: #fff; font: 600 0.95rem var(--sans); pointer-events: none; }
 .map .labels text { font: italic 600 13px var(--serif); fill: #2b1d12; stroke: #f1e7cd; stroke-width: 3.5px; paint-order: stroke; stroke-linejoin: round; }
 .map .pin:hover .pin-dot, .map .pin:focus .pin-dot { fill: var(--accent); }
 
-.map .crumb { fill: none; stroke: #b3122e; stroke-width: 1.7; stroke-dasharray: 1.5 4.5; stroke-linecap: round; opacity: 0.9; }
-.map .crumb.offroad { stroke-dasharray: 1 7; opacity: 0.55; }
+/* Crumb widths and dashes scale by --mark too, so the trail stays a fine line when zoomed in. */
+.map .crumb { --k: var(--mark, 1); fill: none; stroke: #b3122e; stroke-width: calc(1.7px * var(--k)); stroke-dasharray: calc(1.5px * var(--k)) calc(4.5px * var(--k)); stroke-linecap: round; opacity: 0.9; }
+.map .crumb.offroad { stroke-dasharray: calc(1px * var(--k)) calc(7px * var(--k)); opacity: 0.55; }
 .map .crumb.faded { opacity: 0.22; }
-.map .crumb.current, .map .crumb.latest { stroke-width: 3; stroke-dasharray: 5 4; opacity: 1; }
+.map .crumb.current, .map .crumb.latest { stroke-width: calc(3px * var(--k)); stroke-dasharray: calc(5px * var(--k)) calc(4px * var(--k)); opacity: 1; }
 .map .marker circle { fill: #fff8ec; stroke: #b3122e; stroke-width: 1.3; }
 .map .marker text { font: 700 6.5px var(--sans); fill: #8f1027; pointer-events: none; }
 .map .marker:hover circle, .map .marker.latest circle, .map .marker.current circle { fill: #b3122e; }
