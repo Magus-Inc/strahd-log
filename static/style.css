@@ -217,7 +217,6 @@ main.wide { max-width: 80rem; }
 .map .pin-dot { fill: #2b1d12; stroke: #f4ead2; stroke-width: 1.5; }
 /* Zoomed in, markers, pins and names scale by --mark (set by the map page) so they stay small. */
 .map .marker, .map .pin-dot, .map .labels text { transform: scale(var(--mark, 1)); transform-box: fill-box; transform-origin: center; }
-.map-hint { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; margin: 0; padding: 0.5rem 0.9rem; border-radius: 999px; background: rgba(20, 14, 10, 0.82); color: #fff; font: 600 0.95rem var(--sans); pointer-events: none; }
 .map .labels text { font: italic 600 13px var(--serif); fill: #2b1d12; stroke: #f1e7cd; stroke-width: 3.5px; paint-order: stroke; stroke-linejoin: round; }
 .map .pin:hover .pin-dot, .map .pin:focus .pin-dot { fill: var(--accent); }
 

@@ -97,14 +97,14 @@
       //  - buttons: + / - / back to the whole map;
       //  - phone: pinch with two fingers, drag with one once zoomed in (one finger scrolls the page
       //    while the whole map shows), double-tap to zoom in;
-      //  - desktop: Ctrl (or Cmd) + scroll wheel or a trackpad pinch zooms around the pointer, a plain
-      //    wheel keeps scrolling the page (with a hint), drag to pan once zoomed in, double-click to zoom in.
+      //  - desktop: the scroll wheel (or a trackpad pinch) zooms around the pointer, wheel up in and down
+      //    out; drag to pan once zoomed in, double-click to zoom in. A wheel that can't zoom any further
+      //    (down with the whole map showing, up at 6x) scrolls the page as usual, so the map never
+      //    traps the page.
       // Zoom runs from the whole map to 6x and the view never leaves the map. A drag is not a click,
       // so taps on markers and places still open them.
       var full = {x: 0, y: 0, w: 1000, h: 750}, view = Object.assign({}, full);
       var MIN_W = full.w / 6;
-      var hint = document.getElementById("map-hint");
-      if (hint && /Mac|iPhone|iPad/.test(navigator.platform)) hint.textContent = "⌘ + scroll to zoom";
       function apply() {
         view.w = Math.min(full.w, Math.max(MIN_W, view.w)); view.h = view.w * 0.75;
         view.x = Math.min(full.w - view.w, Math.max(0, view.x)); view.y = Math.min(full.h - view.h, Math.max(0, view.y));
@@ -129,16 +129,13 @@
         });
       });
 
-      var hintTimer = null;
       svg.addEventListener("wheel", function (e) {
-        if (e.ctrlKey || e.metaKey) {
-          e.preventDefault();
-          zoomAt(Math.exp(Math.max(-60, Math.min(60, e.deltaY)) * 0.01), toMap(e.clientX, e.clientY));
-        } else if (hint) {
-          hint.hidden = false;
-          clearTimeout(hintTimer);
-          hintTimer = setTimeout(function () { hint.hidden = true; }, 1600);
-        }
+        var dy = e.deltaY * (e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 600 : 1);  // lines or pages to pixels
+        if (!dy) return;
+        var pinch = e.ctrlKey || e.metaKey;  // a trackpad pinch arrives as a wheel with Ctrl held
+        if (!pinch && (dy > 0 ? view.w >= full.w - 0.5 : view.w <= MIN_W + 0.5)) return;  // let the page scroll
+        e.preventDefault();
+        zoomAt(Math.exp(Math.max(-120, Math.min(120, dy)) * (pinch ? 0.01 : 0.0025)), toMap(e.clientX, e.clientY));
       }, {passive: false});
 
       var pointers = {}, gesture = null, moved = false, lastTap = null;

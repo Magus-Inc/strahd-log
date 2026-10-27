@@ -5,7 +5,6 @@
 {% macro barovia(places, legs=[], current=None, interactive=False, label="Map of Barovia") %}
 <figure class="map-figure{% if interactive %} map-zoomable{% endif %}">
 {% if interactive %}
-  <p class="map-hint" id="map-hint" hidden>Ctrl + scroll to zoom</p>
   <div class="map-zoom" role="group" aria-label="Zoom the map">
     <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
     <button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button>
