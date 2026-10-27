@@ -1,43 +1,44 @@
 # Places on our own map of Barovia (drawn by barovia_map.py; not traced from any published map).
 # Coordinates are in the map's 1000 x 750 drawing space, x to the east, y to the south, placed
-# from where the adventure logs and the table map put things relative to each other. Each place
+# from where the adventure logs and the table map put things relative to each other, with the roads
+# laid out to match the travel times in data/travel-times.yaml. Each place
 # sits on a road vertex in barovia_map.ROADS, so the trail can follow the roads to it.
 #
 # places:   wiki page slug -> {xy: [x, y], label: text shown on the map (default: page title),
 #           names: only these names of the page count as a visit (default: all of them),
-#           anchor: label above (middle, the default), to the right (start) or left (end),
+#           anchor: label above (middle, the default), below, to the right (start) or left (end),
 #           offroad: true for a place with no road to it; the trail reaches it with a dotted line)
 # within:   wiki page slug of a room or building -> the mapped place it is in. A mention of the
 #           Blue Water Inn is a stop in Vallaki.
 
 places:
   barovia:
-    xy: [795, 440]
+    xy: [765, 440]
     label: Village of Barovia
     # "Barovia" alone usually means the whole land, so only the village's own names count.
     names: [Village of Barovia, Barovia Village, Village Barovia]
   # Durst Manor stands outside the village, east of the gates: the party walked for hours from it
   # and came to the gates before they reached the village.
-  durst-manor: {xy: [944, 326], anchor: end}
-  gates-of-barovia: {xy: [935, 392], label: Gates, anchor: end}
-  tser-pool: {xy: [652, 445], anchor: end}
-  castle-ravenloft: {xy: [707, 357]}
-  tser-crossroads: {xy: [590, 312], label: Tser Pool Crossroads, anchor: start}
-  the-windmill: {xy: [492, 316], label: Old Bonegrinder}
-  vallaki: {xy: [388, 243]}
-  raven-river-crossroads: {xy: [226, 266], label: Crossroads, anchor: start}
-  lake-baratok: {xy: [204, 205], anchor: start}
-  tower-of-kazan: {xy: [226, 182], anchor: start}
-  krezk: {xy: [102, 232], anchor: end}
-  abbey-of-saint-markovia: {xy: [122, 206], label: Abbey of St. Markovia}
-  wizard-of-wines: {xy: [92, 350]}
-  yester-hill: {xy: [52, 412], anchor: start}
+  durst-manor: {xy: [925, 350], anchor: end}
+  gates-of-barovia: {xy: [850, 410], label: Gates, anchor: end}
+  tser-pool: {xy: [602, 456], anchor: end}
+  castle-ravenloft: {xy: [592, 286]}
+  tser-crossroads: {xy: [518, 322], label: Tser Pool Crossroads, anchor: start}
+  the-windmill: {xy: [445, 300], label: Old Bonegrinder}
+  vallaki: {xy: [277, 250]}
+  raven-river-crossroads: {xy: [230, 262], label: Crossroads, anchor: below}
+  lake-baratok: {xy: [198, 206], anchor: start}
+  tower-of-kazan: {xy: [190, 182], anchor: start}
+  krezk: {xy: [105, 232], anchor: end}
+  abbey-of-saint-markovia: {xy: [118, 208], label: Abbey of St. Markovia}
+  wizard-of-wines: {xy: [165, 368]}
+  yester-hill: {xy: [105, 385], anchor: end}
   # The Whispering Wall lies just west of Yester Hill, off the roads.
-  whispering-wall: {xy: [40, 458], anchor: start, offroad: true}
-  argynvostholt: {xy: [325, 365]}
-  berez: {xy: [305, 440], label: Ruins of Berez}
-  tsolenka-pass: {xy: [230, 520]}
-  amber-temple: {xy: [352, 612]}
+  whispering-wall: {xy: [70, 420], anchor: start, offroad: true}
+  argynvostholt: {xy: [262, 375]}
+  berez: {xy: [300, 455], label: Ruins of Berez}
+  tsolenka-pass: {xy: [262, 590]}
+  amber-temple: {xy: [345, 640]}
 
 within:
   durst-mill: barovia

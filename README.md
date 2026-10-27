@@ -110,6 +110,10 @@ swapped later without touching anything else.
 - `data/map.yaml` places wiki pages on the map (each on a road vertex) and says which rooms and
   buildings are `within` which place. `data/trail.yaml` lists where the party actually went each
   session; mentions are not visits.
+- `data/travel-times.yaml` holds the hours on foot along each leg of road, as the official map
+  marks them. The map prints each number beside its road, and the roads are laid out so their
+  lengths match (about `barovia_map.HOUR` units an hour); the scale bar reads in hours. A test
+  checks every printed number against the table and every road's length against its hours.
 - On `/map/` a toggle shows or hides the trail, a slider steps through it session by session, and
   buttons zoom and pan. Each post shows "Where we were"; each place's wiki page shows where it is.
 
