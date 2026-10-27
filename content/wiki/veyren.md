@@ -2,13 +2,16 @@
 title: Veyren
 type: character
 summary: Hare Druid
+player: Grant Haseloff
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/veyren
 ---
 
 ## Description
 
-Shabasta’s hare-like brother, drawn into the journey by the loss of his sibling.
+*Written from the session logs.*
+
+Shabasta's hare-like brother, a druid drawn into the journey by the loss of his sibling. He joined the party carrying Shabasta's letter. At the Wizard of Wines he became a mouse to spy on a druid torturing a raven, and he read the druids' runes about Kaven the Blood Drinker. At Yester Hill he asked Strahd to his face why some people move freely in his domain. He died in Winter Splinter's explosive death.
 
 <!-- from-the-log -->
 ## From the adventure log

@@ -9,6 +9,14 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/aera
 ---
 
+## Description
+
+*From Chris's character notes and the session logs.*
+
+A wood-elf rogue and the party's lead scout. Aera is a deadly archer with her "turbo bow" and Uncanny Dodge, and later Evasion. She is legendary at finding and disarming traps, and she is usually first into the dark, probing murky water for hazards with her rapier. Sharp-witted and calm, she would rather outsmart an enemy than meet it head on, though she has taken a meat cleaver to vampire spawn when it suited her.
+
+Barovia has marked her. Strahd's blood game turned her fully into a werewolf. Zorya, a pseudodragon spirit she found at Argynvostholt, scouts for her, and she left the Abbey of St. Markovia with bat wings of bone. Beneath the Abbey she walked through a false door hoping to reach her lost husband and children.
+
 <!-- from-the-log -->
 ## From the adventure log
 
