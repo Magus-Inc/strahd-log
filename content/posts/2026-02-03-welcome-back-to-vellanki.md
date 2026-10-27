@@ -9,8 +9,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 *This session was written up twice on Obsidian Portal: as "Welcome Back To Vellanki" and as "Shadows and
 Steel—The Ravenloft Infiltration Plan" (the
 [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post
-combines both, checked against Chris's own notes from the night. Where the write-ups still disagree,
-both versions are given.*
+combines both, checked against Chris's own notes and the recording of the night.*
 
 ## At a Glance:
 
@@ -24,9 +23,9 @@ both versions are given.*
 
 * **Aera shan Ravanór (Liz)**: Wood-elf Rogue (Level 7) and expert infiltrator. Having mastered **Evasion**, she can emerge unscathed from dragon breath or reckless Fireballs. Her pseudodragon companion, found in Argynvostholt, is her eyes in the dark and vital for scouting.
 * **Malron Lichtstrahl (Chris)**: Reborn Cleric of Lathander and Spirit Medium. His body is the vessel for an ancient Elven spirit, the result of a failed resurrection. His connection to the Morninglord has grown stronger with the party's new power, and he remains the group's tether to the light against the encroaching rot of the Grave.
-* **Shabasta (Grant)**: Bard of Fate (Level 7), focused on the prophetic nature of the journey. His new tactical magic includes **Silvery Barbs**, to pluck away a foe's success. The notebook adds **Dimension Door** (4th level), to bypass physical impossibilities; the recap adds **Dissonant Whispers**.
+* **Shabasta (Grant)**: Bard of Fate (Level 7), focused on the prophetic nature of the journey. At Level 7 he gains 4th-level spells, with **Greater Invisibility** among the new options he weighed. His tactical magic includes **Silvery Barbs**, to pluck away a foe's success.
 * **Olfin Darning (Seth)**: Hexblood Paladin who carries the **Symbol of Ravenkind**. A primary frontline defender of legendary resilience and a prime candidate for the party's new buffs. His Aura of Devotion projects a ten-foot sanctuary, so his allies cannot be charmed by the Count's honeyed lies.
-* **Krusty – Ralph Kristofferson (Cole)**: A newly arrived Wizard with a background in academic arcana. The recap says he has just mastered 3rd-level spells: **Fireball**, **Fly** and **Haste**. The notebook calls him Level 7, commanding **Polymorph** and **Greater Invisibility**, reshaping his companions into a pack of apex predators.
+* **Krusty – Ralph Kristofferson (Cole)**: Wizard (Level 7), a newcomer with a background in academic arcana. **Fireball** stays in his arsenal, and Level 7 brings his first 4th-level spell, with **Greater Invisibility** among the options discussed.
 
 ## Summary:
 
@@ -81,7 +80,7 @@ Chris's notes from the night, castle room numbers as the party had them:
 * **Social: The Morning Eviction**: Rahadin (phonetically "Rod Dean") saw the party out of Ravenloft without delay, cold and professional.
 * **Narrative: The Carriage to Vallaki**: Travel and reflection, discussing recent discoveries and the party's new Level 7 abilities.
 * **Tactical: The Heist Briefing**: A non-combat session analysing map codes and room descriptions for hazards and entry points.
-* **Tactical: The Infiltration Strategy**: The party weighed the "Arrow and Rope" approach against Krusty's 4th-level magic, planning to use Greater Invisibility and Dimension Door to bypass the gate towers entirely.
+* **Tactical: The Infiltration Strategy**: The party weighed the "Arrow and Rope" approach against the casters' new 4th-level magic, such as Greater Invisibility, to slip past the gate towers.
 * **Logistical: The Extraction**: To smuggle the Dragon's Skull (or the Heart of Sorrow) out, the party plans to shrink it with Enlarge/Reduce to fit the 500-pound limit of the Chest of Holding.
 
 ## Loot:
