@@ -40,91 +40,86 @@ ROCK = "#8f969b"
 
 # Roads, as polylines. A vertex shared by two roads is a junction, and every place on the map
 # sits on a vertex, so the roads double as the graph the trail is routed over. Tracks are drawn
-# dotted but are routed over like roads. The layout and the relative lengths follow the travel
-# times in data/travel-times.yaml: about HOUR drawing units of road per hour on foot.
-HOUR = 26
-
+# dotted but are routed over like roads. Where the roads run and where they meet follows the
+# official map of Barovia; the hours in data/travel-times.yaml are only printed beside them.
 ROADS = {
-    "Old Svalich Road (east)": [(998, 388), (950, 394), (905, 398), (850, 410)],
-    "Manor lane": [(905, 398), (912, 372), (925, 350)],
-    "Gates to the village": [(850, 410), (808, 428), (765, 440)],
-    "Village to the Ivlis crossroads": [(765, 440), (722, 452), (678, 462)],
-    "Road south from the crossroads": [(678, 462), (688, 510), (694, 556)],
-    "Ivlis crossroads to Tser Pool": [(678, 462), (640, 462), (602, 456)],
-    "The switchback past Tser Falls": [(602, 456), (560, 452), (528, 432), (507, 398), (505, 358), (518, 322)],
-    "Road to the castle": [(518, 322), (548, 316), (562, 300), (592, 286)],
-    "Old Svalich Road (Vallaki)": [(518, 322), (480, 306), (445, 300), (405, 276), (365, 262), (325, 265),
-                                   (290, 252), (277, 250), (264, 252), (230, 262)],
-    "Old Svalich Road (west)": [(230, 262), (192, 258), (168, 248), (136, 238), (105, 232), (55, 224), (2, 218)],
-    "Abbey road": [(105, 232), (110, 220), (118, 208)],
-    "Argynvostholt road": [(230, 262), (248, 300), (258, 340), (262, 375)],
-    "Road south": [(230, 262), (214, 298), (205, 335), (215, 395), (232, 455), (240, 515), (262, 590)],
-    "Amber Temple road": [(262, 590), (300, 625), (345, 640)],
-    "Vineyard road": [(205, 335), (185, 352), (165, 368)],
-    "Yester Hill road": [(168, 248), (158, 280), (150, 310), (128, 345), (105, 385)],
+    "Old Svalich Road (east)": [(998, 390), (960, 394), (930, 398)],
+    "Manor lane": [(960, 394), (964, 370), (968, 345)],
+    "Gates to the village": [(930, 398), (880, 418), (830, 436), (780, 450)],
+    "Village to the Ivlis crossroads": [(780, 450), (745, 480), (712, 520), (680, 555)],
+    "Tser Pool lane": [(680, 555), (676, 515), (670, 472)],
+    "The loop past Tser Falls": [(680, 555), (640, 535), (600, 515), (576, 485), (582, 445), (600, 405),
+                                 (610, 360)],
+    "Road to the castle": [(610, 360), (645, 368), (680, 382), (700, 392), (720, 398)],
+    "Old Svalich Road (the hairpin)": [(610, 360), (585, 335), (560, 315), (520, 312), (488, 308), (500, 284),
+                                       (526, 262), (550, 248)],
+    "Old Svalich Road (the lake shore)": [(550, 248), (510, 252), (465, 256), (420, 262), (400, 270),
+                                          (380, 270), (350, 278)],
+    "Old Svalich Road (west)": [(350, 278), (285, 270), (220, 262), (170, 245), (120, 232), (60, 222), (2, 215)],
+    "Bonegrinder lane": [(488, 308), (474, 300)],
+    "Abbey road": [(120, 232), (125, 220), (133, 208)],
+    "Argynvostholt road": [(350, 278), (366, 320), (368, 370), (352, 415), (330, 450)],
+    "Vineyard road": [(350, 278), (328, 310), (318, 345), (330, 375)],
+    "Road to Tsolenka Pass": [(330, 375), (280, 392), (225, 402), (180, 412), (175, 470), (198, 530), (240, 578)],
+    "Amber Temple road": [(240, 578), (285, 615), (340, 638)],
 }
 TRACKS = {
-    "Lake Baratok trail": [(230, 262), (212, 232), (198, 206), (190, 182)],
-    "Den track": [(150, 310), (126, 320)],
-    "Berez track": [(262, 375), (280, 420), (300, 455)],
+    "Lake Baratok trail": [(350, 278), (310, 250), (278, 228), (258, 214), (250, 202)],
+    "Werewolf trail": [(220, 262), (180, 298), (140, 330), (110, 360), (92, 420), (70, 488)],
+    "Berez track": [(330, 450), (340, 490), (350, 525)],
 }
 
 LAKES = {
-    "Lake Zarovich": [(262, 222), (270, 196), (300, 172), (350, 158), (410, 152), (465, 156), (510, 170),
-                      (525, 195), (505, 218), (455, 232), (400, 238), (345, 240), (300, 236)],
-    "Lake Baratok": [(135, 172), (150, 160), (172, 162), (184, 176), (182, 196), (168, 208), (148, 206),
-                     (136, 194)],
-    "Luna Lake": [(165, 590), (190, 578), (222, 580), (236, 594), (225, 610), (195, 616), (170, 608)],
-    "Tser Pool": [(608, 476), (624, 470), (644, 478), (646, 494), (628, 502), (610, 494)],
+    "Lake Zarovich": [(322, 195), (335, 160), (370, 130), (420, 115), (480, 115), (530, 135), (550, 170),
+                      (540, 205), (500, 222), (450, 230), (400, 234), (355, 224)],
+    "Lake Baratok": [(212, 160), (232, 150), (250, 160), (250, 185), (240, 198), (220, 202), (210, 185)],
+    "Luna Lake": [(180, 588), (200, 576), (226, 578), (232, 596), (218, 612), (190, 612)],
+    "Tser Pool": [(676, 455), (692, 450), (702, 466), (700, 494), (690, 508), (678, 496), (674, 478)],
+    "": [(412, 420), (426, 414), (436, 426), (430, 440), (416, 440)],
 }
 
 RIVERS = {
-    "Luna River": [(262, 224), (250, 248), (246, 278), (262, 302), (272, 340), (278, 380), (292, 422),
-                   (304, 470), (290, 530), (240, 580), (228, 588)],
-    "Luna River (west)": [(165, 596), (120, 590), (70, 600), (2, 596)],
-    "Raven River": [(170, 205), (196, 230), (222, 252), (240, 272)],
-    "Ivlis River": [(646, 486), (678, 474), (722, 478), (765, 466), (810, 468), (860, 452), (910, 456),
-                    (998, 446)],
-    "Tser Falls": [(430, 355), (470, 375), (500, 398)],
-    "Below the falls": [(500, 398), (515, 440), (548, 468), (590, 482), (612, 484)],
-    "Northern streams": [(392, 154), (388, 110), (380, 70), (378, 22)],
-    "Northern streams 2": [(480, 154), (500, 110), (520, 60), (530, 22)],
+    "Raven River": [(212, 192), (190, 230), (150, 256), (100, 264), (50, 262), (2, 260)],
+    "Luna River": [(338, 224), (352, 262), (362, 300), (366, 350), (360, 400), (345, 445), (330, 500),
+                   (290, 560), (232, 588)],
+    "Luna River (west)": [(180, 596), (130, 560), (70, 530), (2, 525)],
+    "Ivlis River": [(700, 494), (740, 506), (780, 490), (840, 496), (910, 500), (998, 505)],
+    "Tser Falls": [(555, 320), (585, 370), (600, 405)],
+    "Below the falls": [(600, 405), (630, 440), (674, 470)],
+    "Northern streams": [(392, 116), (388, 80), (380, 45), (378, 14)],
+    "Northern streams 2": [(500, 116), (510, 80), (522, 45), (530, 14)],
 }
 
 FORESTS = [
-    [(236, 70), (330, 58), (420, 86), (560, 70), (650, 80), (660, 134), (580, 140), (470, 136), (330, 136),
-     (250, 126)],
-    [(330, 284), (440, 318), (470, 360), (440, 420), (360, 420), (318, 380)],
-    [(30, 280), (120, 272), (140, 300), (110, 420), (60, 440), (26, 380)],
-    [(40, 470), (150, 450), (200, 520), (160, 560), (60, 560)],
-    [(110, 630), (230, 640), (300, 690), (180, 712), (96, 680)],
-    [(640, 170), (780, 140), (900, 170), (972, 260), (960, 370), (880, 385), (800, 400), (700, 380), (620, 330)],
-    [(700, 500), (830, 510), (968, 500), (966, 660), (800, 664), (708, 614)],
-    [(530, 340), (590, 330), (640, 400), (600, 430), (540, 410)],
-    [(26, 96), (130, 104), (150, 150), (120, 160), (40, 200)],
-    [(480, 470), (600, 500), (640, 600), (560, 640), (470, 560)],
+    [(150, 14), (700, 14), (700, 100), (560, 112), (420, 104), (300, 112), (150, 100)],    # the north band
+    [(14, 75), (250, 75), (250, 140), (260, 300), (150, 300), (14, 300)],                 # around Krezk
+    [(250, 290), (330, 296), (440, 300), (450, 410), (360, 412), (260, 400)],             # south of Vallaki
+    [(552, 420), (650, 420), (660, 560), (640, 712), (560, 712), (540, 560)],             # the ridge below the falls
+    [(750, 38), (986, 38), (986, 338), (900, 370), (800, 400), (750, 300)],               # north of the village
+    [(650, 580), (986, 562), (986, 736), (650, 736)],                                     # southeast
+    [(14, 600), (180, 630), (300, 650), (300, 736), (280, 736), (280, 680), (14, 680)],   # southwest
 ]
 
 MOUNTAINS = [  # (centre, radius, count, size)
-    ((450, 650), 120, 50, 28),   # Mount Ghakis and the Balinoks
-    ((110, 120), 46, 12, 20),    # Mount Baratok
-    ((830, 52), 120, 24, 22),
-    ((420, 30), 260, 26, 16),
-    ((380, 480), 46, 10, 15),
-    ((300, 560), 40, 10, 18),    # Tsolenka Pass
+    ((520, 610), 150, 60, 26),   # the southern massif
+    ((440, 688), 60, 14, 32),    # Mount Ghakis
+    ((250, 480), 95, 28, 20),    # the western mountains the Tsolenka road climbs through
+    ((630, 270), 110, 26, 11),   # the highlands between Old Bonegrinder and the castle
+    ((700, 26), 60, 10, 22),     # Mount Baratok
 ]
 
 LABELS = [  # (text, (x, y), size, angle)
-    ("Lake Zarovich", (398, 200), 16, 0),
-    ("Svalich Woods", (560, 108), 15, -4),
-    ("Svalich Woods", (860, 262), 15, 62),
-    ("Svalich Woods", (840, 596), 15, -8),
-    ("Svalich Woods", (104, 508), 13, 40),
-    ("Luna River", (292, 352), 11, 78),
-    ("Ivlis River", (836, 484), 11, -10),
-    ("Mount Ghakis", (450, 704), 15, 0),
-    ("Old Svalich Road", (952, 414), 10, -4),
-    ("Tser Falls", (468, 414), 10, 0),
+    ("Lake Zarovich", (426, 188), 16, 0),
+    ("Svalich Woods", (560, 60), 15, -4),
+    ("Svalich Woods", (870, 200), 15, 62),
+    ("Svalich Woods", (850, 660), 15, -8),
+    ("Svalich Woods", (90, 160), 13, 0),
+    ("Luna River", (382, 380), 11, 84),
+    ("Raven River", (70, 252), 10, 0),
+    ("Ivlis River", (850, 516), 11, 0),
+    ("Mount Ghakis", (440, 714), 15, 0),
+    ("Old Svalich Road", (872, 440), 10, -21),
+    ("Tser Falls", (584, 420), 10, 0),
 ]
 
 
@@ -263,7 +258,7 @@ def draw_base(travel: list[dict] | None = None) -> str:
     lines = list(ROADS.values()) + list(TRACKS.values()) + list(RIVERS.values())
 
     # Clearings around the buildings, so no tree or peak is drawn over them.
-    clearings = [((592, 280), 26), ((925, 342), 20)]
+    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 276), 20), ((120, 238), 16), ((340, 384), 18)]
 
     def clear(point, margin=9) -> bool:
         return (not any(inside(point, lake) for lake in water)
@@ -331,11 +326,11 @@ def draw_base(travel: list[dict] | None = None) -> str:
     trees.sort(key=lambda p: p[1])
     parts.append("".join(tree(rng, x, y) for x, y in trees))
 
-    parts.append(castle(592, 286))
-    parts.append(manor(925, 350))
-    for x, y in [(765, 440), (277, 250), (105, 232)]:
+    parts.append(castle(720, 398))
+    parts.append(manor(968, 345))
+    for x, y in [(780, 450), (400, 270), (120, 232)]:
         parts.append(village(rng, x, y + 12, 6))
-    parts.append(f'<path d="M150,374 h12 v10 h-12 Z M164,378 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
+    parts.append(f'<path d="M336,382 h12 v10 h-12 Z M350,386 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
 
     parts.extend(hours_label(leg) for leg in travel or [] if leg["label"])
 
@@ -349,13 +344,10 @@ def draw_base(travel: list[dict] | None = None) -> str:
     parts.append(f'<g fill="{INK}" stroke="{PAPER}" stroke-width="5" paint-order="stroke">'
                  f'<text x="60" y="72" font-size="46" letter-spacing="2">Barovia</text></g>')
     parts.append(compass(930, 662, 32))
-    # Scale: eight hours on foot, in two-hour steps.
-    scale = [f'<g stroke="{INK}" stroke-width="0.8"><path d="M60,700 h{8 * HOUR}" fill="none"/>']
-    for i in range(4):
-        scale.append(f'<rect x="{60 + i * 2 * HOUR}" y="696" width="{2 * HOUR}" height="5" '
-                     f'fill="{INK if i % 2 == 0 else PAPER}"/>')
-    scale.append(f'</g><text x="{60 + 4 * HOUR}" y="718" font-size="11" text-anchor="middle" fill="{INK}">'
-                 f'Eight hours on foot, more or less</text>')
+    scale = [f'<g stroke="{INK}" stroke-width="0.8"><path d="M60,700 h200" fill="none"/>']
+    for i in range(5):
+        scale.append(f'<rect x="{60 + i * 40}" y="696" width="40" height="5" fill="{INK if i % 2 == 0 else PAPER}"/>')
+    scale.append(f'</g><text x="160" y="718" font-size="11" text-anchor="middle" fill="{INK}">Miles, more or less</text>')
     parts.append("".join(scale))
 
     defs = (
@@ -537,13 +529,14 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
     """Give each leg its breadcrumbs along the roads, and a numbered marker where it ended.
 
     leg["segments"] is a list of {"d", "road", "points"}: one per hop from the party's previous
-    stop, following the road graph by the shortest route; a hop with no road between the two
-    places is drawn straight and marked off-road. Repeat trips over the same road are nudged a
+    stop, following the road graph by the shortest route. An off-road place is reached by a short
+    straight hop, marked off-road, from the road vertex nearest it; a hop between places with no
+    road between them at all is drawn straight. Repeat trips over the same road are nudged a
     little to the side so a well-worn road shows several crumb lines. Markers for sessions that
     ended at the same place fan out around it.
     """
     graph = road_graph()
-    node = {slug: None if p.offroad else nearest_vertex(graph, p.x, p.y) for slug, p in places.items()}
+    node = {slug: nearest_vertex(graph, p.x, p.y, math.inf if p.offroad else 30) for slug, p in places.items()}
     worn: dict[tuple[Point, Point], int] = {}
     markers_at: dict[str, int] = {}
     previous = None
@@ -551,17 +544,25 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
         leg["segments"] = []
         for slug in leg["stops"]:
             if previous and previous != slug:
+                pa, pb = places[previous], places[slug]
                 a, b = node[previous], node[slug]
                 path = route(graph, a, b) if a and b else None
-                if path:
+                if path is None:
+                    pts = [(pa.x, pa.y), (pb.x, pb.y)]
+                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    previous = slug
+                    continue
+                if pa.offroad:
+                    pts = [(pa.x, pa.y), a]
+                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                if len(path) > 1:
                     n = max(worn.get(tuple(sorted(e)), 0) for e in zip(path, path[1:]))
                     for e in zip(path, path[1:]):
                         worn[tuple(sorted(e))] = worn.get(tuple(sorted(e)), 0) + 1
                     shift = ((n % 4) - 1.5) * 1.3
                     leg["segments"].append({"road": True, "points": path, "d": smooth_path(offset(path, shift))})
-                else:
-                    pa, pb = places[previous], places[slug]
-                    pts = [(pa.x, pa.y), (pb.x, pb.y)]
+                if pb.offroad:
+                    pts = [b, (pb.x, pb.y)]
                     leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
             previous = slug
         end = places[leg["stops"][-1]]
@@ -627,6 +628,8 @@ def hours_text(hours: float) -> str:
 def hours_label(leg: dict) -> str:
     """The leg's hours, small and upright, beside the road halfway along it."""
     points, half = leg["points"], path_length(leg["points"]) / 2
+    if len(points) < 2:
+        return ""
     for a, b in zip(points, points[1:]):
         step = math.dist(a, b)
         if half <= step:
