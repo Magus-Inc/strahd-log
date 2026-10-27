@@ -40,6 +40,9 @@ DEFAULT_SITE_URL = "http://localhost:8000"
 # Where the site lives under its host: "/" on owlbear.dicelore.quest and locally, "/strahd-log/" on
 # GitHub Pages' default address.
 DEFAULT_BASE_PATH = "/"
+# GoatCounter site code for page-view counts (https://CODE.goatcounter.com). The publish workflow sets
+# GOATCOUNTER, so local builds and previews never count visits.
+COUNTER_CODE = re.compile(r"[a-z0-9-]+")
 
 
 @dataclass
@@ -247,8 +250,11 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     env.filters["tag_slug"] = tag_slug
     env.filters["nice_date"] = nice_date
     env.filters["rebase"] = lambda html: rebase(html, base)
+    counter = os.environ.get("GOATCOUNTER", "").strip().lower()
+    if counter and not COUNTER_CODE.fullmatch(counter):
+        raise ValueError(f"GOATCOUNTER must be a GoatCounter site code like 'owlbear', not {counter!r}")
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
-                       types=wiki.TYPES, all_places=places)
+                       types=wiki.TYPES, all_places=places, counter=counter)
     tags: dict[str, list[Post]] = {}
     for post in posts:
         for tag in post.tags:
