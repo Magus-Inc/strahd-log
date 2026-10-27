@@ -15,5 +15,5 @@ source: Compiled from the adventure log
 
 * The party read about his wedding to Tatyana. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Appeared as a skeletal rider and said Strahd murdered him. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* His tomb (K85) is described as an unnatural beacon. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
-* His tomb is well lit and blocked by a portcullis. ([Welcome Back To Vellanki](/posts/welcome-back-to-vellanki/))
+* His tomb (K85) is described as an unnatural beacon. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
+* His tomb is well lit and blocked by a portcullis. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))

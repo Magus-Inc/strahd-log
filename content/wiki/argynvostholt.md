@@ -16,4 +16,4 @@ source: Compiled from the adventure log
 * Sir Godfried warned the party to avoid its fourth floor and phase spiders. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * The party explored its graveyard and second floor and found hidden relics. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * On its fourth floor, a prophecy was revealed about Argynvost's skull. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* Its "Shining Beacon" can be lit by returning Argynvost's skull. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Its "Shining Beacon" can be lit by returning Argynvost's skull. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))

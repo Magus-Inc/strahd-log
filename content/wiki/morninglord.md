@@ -18,6 +18,6 @@ source: Compiled from the adventure log
 * Malron wonders if the Morninglord is the same god. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
 * Malron is a cleric of Lathander. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))
 * A sun-engraved holy symbol disc may be linked to him. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
-* Malron's divine connection to the Morninglord has grown stronger. ([Welcome Back To Vellanki](/posts/welcome-back-to-vellanki/))
+* Malron's divine connection to the Morninglord has grown stronger. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * The Icon of Dawn's Grace holds a shard of Ethereal, an angel serving the Morning Lord. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))
 * Malron told the Abbot the Morning Lord wants second chances and rebirth. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))

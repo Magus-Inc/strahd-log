@@ -160,6 +160,13 @@ def apply(extract_files: list[Path], wiki_dir: Path, posts_dir: Path,
     players = {k.lower(): v for k, v in (fixes.get("players") or {}).items()}
     former = {n.lower() for n in fixes.get("former") or []}
     posts = load_posts(posts_dir)
+    # A fact citing a post that was folded into another (data/redirects.yaml) cites the new one.
+    redirects_file = posts_dir.parent.parent / "data" / "redirects.yaml"
+    if redirects_file.exists():
+        moved = (yaml.safe_load(redirects_file.read_text(encoding="utf-8")) or {}).get("posts") or {}
+        for e in entities:
+            for f in e.get("facts", []):
+                f["post"] = moved.get(f.get("post"), f.get("post"))
     wiki_dir.mkdir(parents=True, exist_ok=True)
 
     # Compiled pages are wholly generated: start them afresh so merged or renamed ones go away.

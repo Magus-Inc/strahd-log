@@ -420,6 +420,7 @@ class Place:
     y: float
     names: list[str]
     anchor: str = "middle"  # where the label sits: above ("middle"), to the right ("start"), left ("end")
+    offroad: bool = False   # no road leads here; the trail arrives by a dotted line
     sessions: list = field(default_factory=list)  # posts with a stop here, newest first
 
     @property
@@ -451,7 +452,7 @@ def load_places(path: Path, pages: list[wiki.WikiPage]) -> tuple[dict[str, Place
         if anchor not in ("middle", "start", "end"):
             raise ValueError(f"data/map.yaml: {slug}: anchor must be middle, start or end")
         places[slug] = Place(slug, str(spec.get("label") or page.title), float(x), float(y),
-                             [str(n) for n in spec.get("names") or page.names], anchor)
+                             [str(n) for n in spec.get("names") or page.names], anchor, bool(spec.get("offroad")))
     parent = {slug: slug for slug in places}
     for slug, target in (data.get("within") or {}).items():
         if target not in places:
@@ -530,7 +531,7 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
     ended at the same place fan out around it.
     """
     graph = road_graph()
-    node = {slug: nearest_vertex(graph, p.x, p.y) for slug, p in places.items()}
+    node = {slug: None if p.offroad else nearest_vertex(graph, p.x, p.y) for slug, p in places.items()}
     worn: dict[tuple[Point, Point], int] = {}
     markers_at: dict[str, int] = {}
     previous = None

@@ -33,7 +33,7 @@ A Hexblood Paladin, Olfin walks the line between light and shadow. Bound by an o
 * Received the Symbol of Ravenkind from Zurika for promising to rescue Emil. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * Let his weapon be cursed rather than swear fealty to Strahd. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * Took half of a tarnished silver locket from a silver box atop the ancient oak. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* Wields the Symbol of Ravenkind, and his Aura of Devotion protects allies from charm. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Wields the Symbol of Ravenkind, and his Aura of Devotion protects allies from charm. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Grabbed Cyrus's heirloom spoon from a hall of zombies, then was teleported into an Iron Maiden by a trap. ([Depths of Ravenloft](/posts/depths-of-ravenloft/))
 * Broke Gertruda's charm with Protection from Evil and Good; was killed by Anastrasia and revivified. ([The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/))
 * Took the eagle-style bone wings, whose command word is "America!", and started the fight with the Abbot. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))

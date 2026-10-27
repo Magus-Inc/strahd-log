@@ -34,7 +34,7 @@ source: Compiled from the adventure log
 * Murdered his brother Sergei and seeks Ireena, believing she is Tatiana reborn. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Hosted the party at Castle Ravenloft and recommended they visit the Amber Temple. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Granted the party resistance to necrotic damage for 36 hours, saying "The cows have teeth after all.". ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
-* Follows a 14-day hunting cycle, which the party planned to exploit. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Follows a 14-day hunting cycle, which the party planned to exploit. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Was seen leaving the castle on his nightmare, Becephalus. ([Unwelcome Guests](/posts/unwelcome-guests/))
 * Sent dire wolves, scarecrows and a duplicate of Aera's corpse to punish her for stealing. ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/))
 * Left a mocking letter in a black carriage: "Even the dead return for an encore.". ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))

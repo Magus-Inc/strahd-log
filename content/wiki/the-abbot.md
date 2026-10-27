@@ -15,7 +15,7 @@ source: Compiled from the adventure log
 * Is building a reanimated corpse needing a willing victim's heart. ([Welcome to Krezk](/posts/welcome-to-krezk/))
 * Is crafting Vasilica as a companion for Strahd. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
 * Deceived Illya. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
-* The Icon of Dawn's Grace is said to be the only cure for his madness. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* The Icon of Dawn's Grace is said to be the only cure for his madness. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Fell into madness through Strahd's manipulation and flesh-crafting a bride for him. ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/))
 * Revealed his winged celestial form, Ethereal, when Olfin attacked. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * After Aera shot him through the heart he rose as the Fallen Star: lion head, ram body, bat wings, crocodile tail. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))

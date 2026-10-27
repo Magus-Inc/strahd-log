@@ -3,7 +3,8 @@
 # other content: the quote after each entry is the evidence. An empty list means nowhere on the map.
 # Chris: the sessions before the village were at Durst Manor, east of the gates, not in the village,
 # and the party passed the east gate only once; the statue-flanked "gates of Barovia" on the way
-# to the castle are the castle approach (castle-ravenloft).
+# to the castle are the castle approach (castle-ravenloft). His answers on the uncertain sessions are
+# marked "Chris:" below; the 3 Feb 2026 notebook post was merged into welcome-back-to-vellanki.
 
 sessions:
   2023-11-07-session-zero: [durst-manor]   # "came across a four story manor" (Durst Manor) after leaving Daggerford through the mists
@@ -17,7 +18,7 @@ sessions:
   2024-04-02-we-meet-again-for-the-first-time: [tser-pool]   # "found a clearing by a lake ... Perhaps this is the Vistani encampment with Madam Eva"
   2024-04-16-tser-pool: [tser-pool]   # "We are welcomed to a Vistani camp"; "We sleep the night at the camp"
   2024-07-09-skeletal-rider: []   # follows rider "along an old hunting path", bandit fight; no named map place
-  2024-07-16-dream-pies: [tser-pool, the-windmill]   # "navigating around the Tser Pool"; "Tser Pool/Falls Bridge"; "Morgantha ... living at the windmill"
+  2024-07-16-dream-pies: [tser-pool, tser-crossroads, the-windmill]   # "navigating around the Tser Pool"; "Tser Pool/Falls Bridge"; "Morgantha ... living at the windmill"  # Chris: via the Tser Pool crossroads, ending at the windmill
   2024-07-30-welcome-to-vellaki-: [vallaki]   # "Road ends at iron gates"; refugee camp; Blue Water Inn
   2024-08-13-a-doll-for-arabelle: [vallaki]   # Blinsky's Toy Store; "sit in the waiting room" of the Baron's manor
   2024-08-20-whispers-in-the-barons-mansion: [vallaki]   # Baron's den, kitchen, library, attic
@@ -30,14 +31,14 @@ sessions:
   2024-12-10-the-fall-of-izek: [vallaki]   # "Izek heads to the eastern gate ... Zarovich gate. At the lake"
   2024-12-17-delivery-for-lady-fiona: [vallaki]   # Wachter House, Inn, Town Square
   2025-01-07-helping-victor: [vallaki]   # Burgomaster mansion; "The party ventures to the refugee camp"
-  2025-01-14-the-hunt-for-the-heart-stone: [vallaki]   # Wachter estate; druid met "while traveling" (no arrival)
+  2025-01-14-the-hunt-for-the-heart-stone: [vallaki, tser-crossroads]   # Wachter estate; druid met "while traveling" (no arrival)  # Chris: ends at the Tser Pool crossroads
   2025-01-21-the-windmill-heist: [the-windmill]   # "The party infiltrates a windmill occupied by hags"
   2025-02-11-entering-the-spirit-realm: [vallaki]   # "We ventured into the cellar with her" (Lady Fiona's), then ethereal realm
   2025-03-04-act-3-the-broken-land: [vallaki, raven-river-crossroads, wizard-of-wines]   # "waking at the Blue Water Inn"; "cross a bridge leading to a four-way intersection"; "approaches the vineyard"
   2025-03-11-wizard-of-wines-vineyard: [wizard-of-wines]   # Davien's hiding place, tunnel, "reaches the cellar"
   2025-03-25-finishing-up-at-the-vineyard: [wizard-of-wines]   # druids/staff in winery cellar; "begins their journey" to Yester Hill before dawn
   2025-04-01-stop-winter-splinter: [yester-hill]   # "Arriving at Yester Hill, the party witnesses lightning"
-  2025-04-15-the-whispering-wall: [yester-hill]   # "defeats Winter Splinter"; then Whispering Wall (not on map), "journey back to the winery"
+  2025-04-15-the-whispering-wall: [yester-hill, whispering-wall]   # "defeats Winter Splinter"; then Whispering Wall (not on map), "journey back to the winery"  # Chris: ends at the Whispering Wall, west of Yester Hill
   2025-04-22-welcome-to-krezk: [wizard-of-wines, krezk]   # "returns to the Wizard of Wines ... head to Krezk"
   2025-04-29-shadows-over-st-markovia: [krezk, abbey-of-saint-markovia]   # "ascend the treacherous mountain road ... Upon arrival" at the Abbey
   2025-05-06-echoes-of-the-black-terro: [lake-baratok]   # "concealed hollow near the entrance to the werewolf den" (den = "cave at Lake Baratok" per prior post)
@@ -46,9 +47,8 @@ sessions:
   2025-07-29-the-oath-the-spy-and-the-silver-moon: [argynvostholt, vallaki, castle-ravenloft]   # "fourth floor of Argynvostholt"; "Blue Water Inn"; "approach the gates of Barovia ... A black carriage awaits"
   2025-08-12-velvet-vintages-and-veiled-intentions: [castle-ravenloft]   # "arrives at Castle Ravenloft in a black carriage"
   2025-08-26-the-boon-the-bride-and-the-beating-heart: [castle-ravenloft]   # "continues their uneasy stay at Castle Ravenloft"
-  2026-02-03-notebook: [vallaki]   # "gathered beneath the flickering lamps of the Blue Water Inn in Vallaki" (planning session)
   2026-02-03-welcome-back-to-vellanki: [castle-ravenloft, vallaki]   # "escorted from the guest quarters by Rahadin ... departed by carriage"; "Upon arriving in ... town"
-  2026-02-10-unwelcome-guests: [vallaki, tser-pool, castle-ravenloft]   # "8.5-mile trek from Vallaki. Near the Sarepool crossroads"; "lowered the drawbridge ... servant's entrance"
+  2026-02-10-unwelcome-guests: [vallaki, tser-crossroads, castle-ravenloft]   # "8.5-mile trek from Vallaki. Near the Sarepool crossroads"; "lowered the drawbridge ... servant's entrance"  # Chris: Sarepool crossroads is the Tser Pool crossroads
   2026-02-17-retrieval-of-the-dragon-skull: [castle-ravenloft]   # servants' quarters, Heart of Sorrow, Hall of Bones
   2026-03-10-depths-of-ravenloft: [castle-ravenloft]   # "Descending forty feet into the Larders of Ill Omen"; Drowning Cells
   2026-03-31-the-fall-of-volenta-popofsky: [castle-ravenloft]   # "flooded dungeon chamber"

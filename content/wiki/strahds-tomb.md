@@ -12,5 +12,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Named as the ultimate target of the heist. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Named as the ultimate target of the heist. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * A blood-stained tomb the party found but chose not to enter. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))

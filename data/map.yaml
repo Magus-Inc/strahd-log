@@ -5,7 +5,8 @@
 #
 # places:   wiki page slug -> {xy: [x, y], label: text shown on the map (default: page title),
 #           names: only these names of the page count as a visit (default: all of them),
-#           anchor: label above (middle, the default), to the right (start) or left (end)}
+#           anchor: label above (middle, the default), to the right (start) or left (end),
+#           offroad: true for a place with no road to it; the trail reaches it with a dotted line)
 # within:   wiki page slug of a room or building -> the mapped place it is in. A mention of the
 #           Blue Water Inn is a stop in Vallaki.
 
@@ -21,6 +22,7 @@ places:
   gates-of-barovia: {xy: [935, 392], label: Gates, anchor: end}
   tser-pool: {xy: [652, 445], anchor: end}
   castle-ravenloft: {xy: [707, 357]}
+  tser-crossroads: {xy: [590, 312], label: Tser Pool Crossroads, anchor: start}
   the-windmill: {xy: [492, 316], label: Old Bonegrinder}
   vallaki: {xy: [388, 243]}
   raven-river-crossroads: {xy: [226, 266], label: Crossroads, anchor: start}
@@ -30,6 +32,8 @@ places:
   abbey-of-saint-markovia: {xy: [122, 206], label: Abbey of St. Markovia}
   wizard-of-wines: {xy: [92, 350]}
   yester-hill: {xy: [52, 412], anchor: start}
+  # The Whispering Wall lies just west of Yester Hill, off the roads.
+  whispering-wall: {xy: [40, 458], anchor: start, offroad: true}
   argynvostholt: {xy: [325, 365]}
   berez: {xy: [305, 440], label: Ruins of Berez}
   tsolenka-pass: {xy: [230, 520]}

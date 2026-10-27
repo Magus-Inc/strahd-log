@@ -25,4 +25,4 @@ source: Compiled from the adventure log
 * Gave Malron the Talisman of Echoes. ([Finding Arabelle!](/posts/finding-arabelle/))
 * Erasmus shared lore from Van Richten's guide. ([Helping Victor](/posts/helping-victor/))
 * Esmerelda's family had a hand in kidnapping his son. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
-* Provided the castle maps that turned the infiltration into a planned heist. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Provided the castle maps that turned the infiltration into a planned heist. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))

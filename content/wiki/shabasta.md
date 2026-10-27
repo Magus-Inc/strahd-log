@@ -30,7 +30,7 @@ A porcupine bard with a flair for the dramatic, Shabasta combines enchanting mus
 * Had Izek's magical arm attached to him. ([The Fall of Izek](/posts/the-fall-of-izek/))
 * Gave a speech that saved Milovaj and Heinrich from hanging. ([Helping Victor](/posts/helping-victor/))
 * Died fighting the gallows speaker and could not be brought back. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))
-* Reached Level 7 and gained Dimension Door and Silvery Barbs. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Reached Level 7 and gained Dimension Door and Silvery Barbs. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Earned the nickname "Shipnasty" and cast Vicious Mockery at the bone mounds in the Hall of Bones. ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/))
 * Was grappled and dragged up the wall by Volenta Popofsky. ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/))
 * Lied to the Belviews that Cyrus had been "perfected" and cast Heat Metal on the Abbot's gauntlets. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))

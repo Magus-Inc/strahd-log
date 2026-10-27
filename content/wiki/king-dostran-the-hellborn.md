@@ -18,5 +18,5 @@ source: Compiled from the adventure log
 
 * Rests at the Hill of Ravenloft. ([The Whispering Wall](/posts/the-whispering-wall/))
 * Strahd's oldest password is "I come in Dostron's memory.". ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
-* His crypt (34) was a target of the heist. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* His crypt (34) was a target of the heist. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * His ghostly voice warned the party off, but they took the Spear of the Huntress from his sarcophagus. ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/))
