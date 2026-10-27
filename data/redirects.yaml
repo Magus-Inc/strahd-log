@@ -1,0 +1,8 @@
+# Posts that were folded into another post. The old address keeps working: the build writes a
+# small page there that forwards to the new one (for GitHub Pages) and a Netlify _redirects rule.
+# Wiki facts that cited the old post cite the new one.
+#
+# posts: old post file stem -> post file stem it was folded into
+posts:
+  # The same session (3 Feb 2026) was written up twice; merged at Chris's request.
+  2026-02-03-notebook: 2026-02-03-welcome-back-to-vellanki

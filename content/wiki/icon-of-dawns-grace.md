@@ -13,7 +13,7 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Said to be the only cure for the Abbot's madness. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Said to be the only cure for the Abbot's madness. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Found by Malron in Saint Markovia's crypt; it speaks telepathically. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))
 * Told the party the Abbot's tragic history. ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/))
 * Took the party into the void to redeem the Abbot. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))

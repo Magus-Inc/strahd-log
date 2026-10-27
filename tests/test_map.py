@@ -142,4 +142,41 @@ def test_every_mapped_place_sits_on_a_road():
     spec = yaml.safe_load(Path("data/map.yaml").read_text(encoding="utf-8"))
     graph = barovia_map.road_graph()
     for slug, place in spec["places"].items():
-        assert tuple(place["xy"]) in graph, slug
+        if place.get("offroad"):
+            assert barovia_map.nearest_vertex(graph, *place["xy"]) is None, slug  # really off the roads
+        else:
+            assert tuple(place["xy"]) in graph, slug
+
+
+def test_trail_passes_the_east_gate_only_once():
+    # The party came through the east gate of Barovia once, from Durst Manor into the village.
+    import yaml
+    sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
+    assert [stem for stem, stops in sessions.items() if "gates-of-barovia" in (stops or [])] == ["2024-02-13-barovia-barovia"]
+
+
+def test_answered_sessions_use_the_new_places():
+    import yaml
+    sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
+    assert sessions["2024-07-16-dream-pies"] == ["tser-pool", "tser-crossroads", "the-windmill"]
+    assert sessions["2025-01-14-the-hunt-for-the-heart-stone"] == ["vallaki", "tser-crossroads"]
+    assert sessions["2025-04-15-the-whispering-wall"] == ["yester-hill", "whispering-wall"]
+    assert sessions["2026-02-10-unwelcome-guests"] == ["vallaki", "tser-crossroads", "castle-ravenloft"]
+    assert "2026-02-03-notebook" not in sessions  # merged into welcome-back-to-vellanki
+
+
+def test_offroad_place_is_reached_by_a_dotted_leg(tmp_path):
+    pages = [page("yester-hill", "Yester Hill"), page("whispering-wall", "Whispering Wall"),
+             page("wizard-of-wines", "Wizard of Wines")]
+    places, parent = barovia_map.load_places(write(tmp_path / "map.yaml",
+        "places:\n  wizard-of-wines: {xy: [92, 350]}\n  yester-hill: {xy: [52, 412]}\n"
+        "  whispering-wall: {xy: [40, 458], offroad: true}\n"), pages)
+    posts = []
+    for stem in ("2025-04-01-a", "2025-04-15-b"):
+        post = build.parse_post(write(tmp_path / "posts" / f"{stem}.md", f"---\ntitle: {stem}\ndate: '{stem[:10]}'\n---\n\nx\n"))
+        post.html = "<p>x</p>"
+        posts.append(post)
+    visits = {"2025-04-01-a": ["wizard-of-wines", "yester-hill"], "2025-04-15-b": ["yester-hill", "whispering-wall"]}
+    legs = barovia_map.trail(posts, places, parent, pages, visits)
+    assert [s["road"] for s in legs[0]["segments"]] == [True]
+    assert [s["road"] for s in legs[1]["segments"]] == [False]

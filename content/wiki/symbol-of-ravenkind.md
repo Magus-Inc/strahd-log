@@ -16,5 +16,5 @@ source: Compiled from the adventure log
 * Seemed a key element of Eliza's raven story. ([Tser Pool](/posts/tser-pool/))
 * Damien told its history. ([Welcome to Krezk](/posts/welcome-to-krezk/))
 * Olfin received it from Zurika. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
-* Held by Olfin Darning. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Held by Olfin Darning. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Olfin wielded it against Volenta. ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/))

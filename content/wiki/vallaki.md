@@ -20,5 +20,5 @@ source: Compiled from the adventure log
 * Has an eastern gate and the Zarovich gate. ([The Fall of Izek](/posts/the-fall-of-izek/))
 * Lady Fiona took control of it. ([Helping Victor](/posts/helping-victor/))
 * The party went there for supplies. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* The party rehearsed their heist there. ([Welcome Back To Vellanki](/posts/welcome-back-to-vellanki/))
+* The party rehearsed their heist there. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Lies 8.5 miles from Castle Ravenloft. ([Unwelcome Guests](/posts/unwelcome-guests/))

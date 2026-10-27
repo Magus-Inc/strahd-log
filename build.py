@@ -299,7 +299,37 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     write(out_dir / "search-index.json", build_search_index(posts, pages))
     write(out_dir / "404.html", env.get_template("404.html").render())
     write(out_dir / "feed.xml", build_feed(posts, site_url + base))
+    write_redirects(out_dir, load_redirects(map_dir / "redirects.yaml"), posts, base)
     return posts
+
+
+def load_redirects(path: Path) -> dict[str, str]:
+    """{old post file stem: post file stem it was folded into} from data/redirects.yaml."""
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {str(k): str(v) for k, v in (data.get("posts") or {}).items()}
+
+
+def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post], base: str) -> None:
+    """Keep old post addresses working: a forwarding page at each (GitHub Pages) and a Netlify
+    _redirects rule (Netlify serves the site at /)."""
+    by_stem = {p.source.stem: p for p in posts if p.source}
+    rules = []
+    for old_stem, new_stem in sorted(redirects.items()):
+        if new_stem not in by_stem:
+            raise ValueError(f"data/redirects.yaml: {old_stem} points at unknown post {new_stem}")
+        old, new = slug_from_filename(Path(old_stem)), by_stem[new_stem]
+        target = base + new.path
+        title = article.escape(new.title)
+        write(out_dir / "posts" / old / "index.html",
+              '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
+              f'<title>{title}</title><link rel="canonical" href="{target}">'
+              f'<meta http-equiv="refresh" content="0; url={target}"></head>'
+              f'<body><p>This session moved to <a href="{target}">{title}</a>.</p></body></html>\n')
+        rules += [f"/posts/{old}/ /{new.path} 301", f"/posts/{old} /{new.path} 301"]
+    if rules:
+        write(out_dir / "_redirects", "\n".join(rules) + "\n")
 
 
 def serve(out_dir: Path, port: int) -> None:

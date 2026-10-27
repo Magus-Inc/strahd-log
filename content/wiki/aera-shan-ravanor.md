@@ -31,7 +31,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 * Drank the blood in Strahd's game and fully transformed into a werewolf. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * Gained a pseudodragon companion at Argynvostholt and found hidden relics behind a painting. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * Recited the knight's oath that awakened Horngaard's prophecy and received Arrigal's secret note. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* Reached Level 7 and gained Evasion; scouted the Heart of Sorrow alone and met Strahd. ([Welcome Back To Vellanki](/posts/welcome-back-to-vellanki/))
+* Reached Level 7 and gained Evasion; scouted the Heart of Sorrow alone and met Strahd. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Flew to Ravenloft's parapets, stole the wights' alarm horns and lowered the drawbridge. ([Unwelcome Guests](/posts/unwelcome-guests/))
 * Picked the lock to the King's Bedchamber and gave amber teeth for Olfin's Revivify. ([The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/))
 * Took the bat-style bone wings and shot the Abbot through the heart with a second natural 20. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))

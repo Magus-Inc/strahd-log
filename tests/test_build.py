@@ -155,3 +155,23 @@ def test_tags_page_and_menu_link_appear_with_tags(content, tmp_path):
     out = tmp_path / "public"
     build.build(content, out, site_url="https://log.example")
     assert (out / "tags" / "index.html").is_file() and 'href="/tags/"' in (out / "index.html").read_text(encoding="utf-8")
+
+
+def test_folded_post_keeps_its_old_address(tmp_path):
+    root = tmp_path
+    write_post(root / "content" / "posts", "2026-02-03-welcome.md", "title: Welcome Back\ndate: '2026-02-03'\n")
+    (root / "data").mkdir()
+    (root / "data" / "redirects.yaml").write_text("posts:\n  2026-02-03-notebook: 2026-02-03-welcome\n", encoding="utf-8")
+    out = root / "public"
+    build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
+    stub = (out / "posts" / "notebook" / "index.html").read_text(encoding="utf-8")
+    assert "url=/strahd-log/posts/welcome/" in stub and "Welcome Back" in stub
+    assert (out / "_redirects").read_text(encoding="utf-8").splitlines()[0] == "/posts/notebook/ /posts/welcome/ 301"
+
+
+def test_redirect_to_an_unknown_post_fails(tmp_path):
+    write_post(tmp_path / "content" / "posts", "2026-02-03-a.md", "title: A\ndate: '2026-02-03'\n")
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "redirects.yaml").write_text("posts:\n  old: 2026-02-03-missing\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="unknown post"):
+        build.build(tmp_path / "content" / "posts", tmp_path / "public", site_url="https://x.example")

@@ -12,4 +12,4 @@ source: Compiled from the adventure log
 
 * Honored with the Seeker on a stone slab with a star and raven. ([Dream Pies](/posts/dream-pies/))
 * Honored with the Dreamer on an ancient monument. ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/))
-* The Spear of the Huntress is a shard of their ancient power. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* The Spear of the Huntress is a shard of their ancient power. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))

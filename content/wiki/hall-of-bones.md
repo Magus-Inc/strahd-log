@@ -12,5 +12,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Suspected to hold Argynvost's skull. ([Welcome Back To Vellanki](/posts/welcome-back-to-vellanki/))
+* Suspected to hold Argynvost's skull. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * The party took the dragon skull from above its eastern doors, triggering a skeleton trap. ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/))

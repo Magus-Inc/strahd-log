@@ -32,7 +32,7 @@ Strapped across Crusty’s back is a quiver of arrows with dark gray fletching, 
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Joined as a Level 7 wizard commanding Polymorph and Greater Invisibility. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* Joined as a Level 7 wizard commanding Polymorph and Greater Invisibility. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Cast Fly and Invisibility on Aera so she could cross the chasm to Ravenloft. ([Unwelcome Guests](/posts/unwelcome-guests/))
 * Used Reduce on Argynvost's skull to fit it into the Chest of Holding. ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/))
 * Attuned to the Staff of Kazan after solving the rune puzzle. ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/))

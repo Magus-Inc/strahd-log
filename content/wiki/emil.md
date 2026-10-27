@@ -15,7 +15,7 @@ source: Compiled from the adventure log
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Was captured by Kiril and jailed in Ravenloft's dungeons. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
-* The party planned to rescue him to break Strahd's alliance with the werewolves. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* The party planned to rescue him to break Strahd's alliance with the werewolves. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Was found in the Drowning Cells, exhausted and bound by a Silver Thorn Collar. ([Depths of Ravenloft](/posts/depths-of-ravenloft/))
 * Was freed with the key taken from Volenta. ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/))
 * Helped the party open Saint Markovia's crypt. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))

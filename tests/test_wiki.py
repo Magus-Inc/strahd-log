@@ -301,3 +301,13 @@ def test_corrections_set_player_and_former_pc(tmp_path):
     assert meta["player"] == "Grant Haseloff" and meta["former"] is True
     page = wiki.parse_wiki_page(tmp_path / "wiki" / "zorpheus.md", build.split_front_matter)
     assert page.former and page.player == "Grant Haseloff"
+
+
+def test_facts_citing_a_folded_post_cite_the_merged_one(tmp_path):
+    posts = tmp_path / "content" / "posts"
+    write(posts / "2026-02-03-welcome.md", "---\ntitle: Welcome Back\n---\n")
+    write(tmp_path / "data" / "redirects.yaml", "posts:\n  2026-02-03-notebook: 2026-02-03-welcome\n")
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Doru", "type": "npc", "facts": [{"text": "His intelligence maps the castle", "post": "2026-02-03-notebook"}]}]))
+    wiki_from_extract.apply([extract], tmp_path / "wiki", posts)
+    assert "([Welcome Back](/posts/welcome/))" in (tmp_path / "wiki" / "doru.md").read_text(encoding="utf-8")

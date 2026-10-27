@@ -19,5 +19,5 @@ source: Compiled from the adventure log
 * Erasmus's spirit wrote messages on its frosted window. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Gets its wine from the Wizard of Wines. ([Act 3: The Broken Land](/posts/act-3-the-broken-land/))
 * Aera received Arrigal's note here. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* The party planned its Ravenloft heist here. ([Shadows and Steel—The Ravenloft Infiltration Plan](/posts/notebook/))
+* The party planned its Ravenloft heist here. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Baron Dimitri Krezkov waited for the party here. ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/))
