@@ -11,17 +11,14 @@
 junctions:
   ivlis-crossroads: [680, 555]      # F, River Ivlis crossroads
   gates-of-ravenloft: [680, 382]    # J
-  bonegrinder-turn: [488, 308]      # where the lane to Old Bonegrinder leaves the hairpin
+  bonegrinder-turn: [488, 308]      # where the lane to Old Bonegrinder (O) leaves the hairpin
   vallaki-east-gate: [420, 262]     # N
   vallaki-west-gate: [380, 270]     # N
   krezk-road-bend: [285, 270]
-  krezk-fork: [220, 262]            # the Krezk road and the trail south to Yester Hill
-  den-trail: [140, 330]
-  werewolf-den: [110, 360]
+  west-junction: [220, 262]         # the Krezk road and the road south to the Wizard of Wines
+  vineyard-bend: [160, 330]
+  southwest-junction: [318, 345]    # the Argynvostholt road and the road to Tsolenka Pass
 
-# The southwestern legs are not printed yet: which letters on the map are the Wizard of Wines,
-# Argynvostholt, Berez and the werewolf den is still to be checked, so their hours may belong to
-# other roads.
 legs:
   - {from: gates-of-barovia, to: barovia, hours: 3.5, side: -1}   # B -> E
   - {from: barovia, to: ivlis-crossroads, hours: 3.5}             # E -> F
@@ -31,15 +28,16 @@ legs:
   - {from: tser-crossroads, to: bonegrinder-turn, hours: 3}       # I -> O
   - {from: bonegrinder-turn, to: vallaki-east-gate, hours: 6.5}   # O -> N, round the hairpin and along the lake
   - {from: vallaki-east-gate, to: vallaki-west-gate, hours: 1, label: false}   # through Vallaki
-  - {from: vallaki-west-gate, to: raven-river-crossroads, hours: 1.5}          # N -> P
-  - {from: raven-river-crossroads, to: tower-of-kazan, hours: 3.5}             # P -> V, the trail to Lake Baratok
+  - {from: vallaki-west-gate, to: raven-river-crossroads, hours: 1.5}          # N -> the crossroads (P)
+  - {from: raven-river-crossroads, to: tower-of-kazan, hours: 3.5}             # -> V, the trail to Lake Baratok
   - {from: raven-river-crossroads, to: krezk-road-bend, hours: 1.5}
-  - {from: krezk-road-bend, to: krezk-fork, hours: 1}
-  - {from: krezk-fork, to: krezk, hours: 2.5}                                  # -> S
-  - {from: raven-river-crossroads, to: argynvostholt, hours: 4.5, label: false}
-  - {from: raven-river-crossroads, to: wizard-of-wines, hours: 5, label: false}   # "3 then 2"
-  - {from: krezk-fork, to: den-trail, hours: 2.5, label: false}
-  - {from: den-trail, to: werewolf-den, hours: 1, label: false}
-  - {from: werewolf-den, to: yester-hill, hours: 3, label: false}
-  - {from: wizard-of-wines, to: tsolenka-pass, hours: 10, label: false}
-  - {from: tsolenka-pass, to: amber-temple, hours: 3.5, label: false}
+  - {from: krezk-road-bend, to: west-junction, hours: 1}
+  - {from: west-junction, to: krezk, hours: 2.5}                               # -> S
+  - {from: west-junction, to: vineyard-bend, hours: 2.5}
+  - {from: vineyard-bend, to: wizard-of-wines, hours: 1}                       # -> W
+  - {from: wizard-of-wines, to: yester-hill, hours: 3}                         # W -> Y, by the trail
+  - {from: raven-river-crossroads, to: southwest-junction, hours: 3}
+  - {from: southwest-junction, to: argynvostholt, hours: 2}                    # -> Q
+  - {from: raven-river-crossroads, to: berez, hours: 4.5, side: -1}           # -> U, south along the river
+  - {from: southwest-junction, to: tsolenka-pass, hours: 10}                   # -> T, over the western mountains
+  - {from: tsolenka-pass, to: amber-temple, hours: 3.5}                        # T -> X

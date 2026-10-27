@@ -58,15 +58,15 @@ ROADS = {
     "Old Svalich Road (west)": [(350, 278), (285, 270), (220, 262), (170, 245), (120, 232), (60, 222), (2, 215)],
     "Bonegrinder lane": [(488, 308), (474, 300)],
     "Abbey road": [(120, 232), (125, 220), (133, 208)],
-    "Argynvostholt road": [(350, 278), (366, 320), (368, 370), (352, 415), (330, 450)],
-    "Vineyard road": [(350, 278), (328, 310), (318, 345), (330, 375)],
-    "Road to Tsolenka Pass": [(330, 375), (280, 392), (225, 402), (180, 412), (175, 470), (198, 530), (240, 578)],
+    "Berez road": [(350, 278), (366, 320), (368, 370), (352, 415), (330, 450)],
+    "Argynvostholt road": [(350, 278), (328, 310), (318, 345), (330, 375)],
+    "Road to Tsolenka Pass": [(318, 345), (270, 372), (225, 400), (190, 440), (178, 490), (198, 535), (240, 578)],
+    "Vineyard road": [(220, 262), (196, 296), (160, 330), (110, 360)],
     "Amber Temple road": [(240, 578), (285, 615), (340, 638)],
 }
 TRACKS = {
     "Lake Baratok trail": [(350, 278), (310, 250), (278, 228), (258, 214), (250, 202)],
-    "Werewolf trail": [(220, 262), (180, 298), (140, 330), (110, 360), (92, 420), (70, 488)],
-    "Berez track": [(330, 450), (340, 490), (350, 525)],
+    "Yester Hill trail": [(110, 360), (96, 420), (70, 488)],
 }
 
 LAKES = {
@@ -75,7 +75,7 @@ LAKES = {
     "Lake Baratok": [(212, 160), (232, 150), (250, 160), (250, 185), (240, 198), (220, 202), (210, 185)],
     "Luna Lake": [(180, 588), (200, 576), (226, 578), (232, 596), (218, 612), (190, 612)],
     "Tser Pool": [(676, 455), (692, 450), (702, 466), (700, 494), (690, 508), (678, 496), (674, 478)],
-    "": [(412, 420), (426, 414), (436, 426), (430, 440), (416, 440)],
+    "": [(350, 462), (366, 456), (378, 466), (372, 480), (356, 480)],  # the marsh by Berez
 }
 
 RIVERS = {
@@ -114,7 +114,7 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Svalich Woods", (870, 200), 15, 62),
     ("Svalich Woods", (850, 660), 15, -8),
     ("Svalich Woods", (90, 160), 13, 0),
-    ("Luna River", (382, 380), 11, 84),
+    ("Luna River", (392, 330), 11, 84),
     ("Raven River", (70, 252), 10, 0),
     ("Ivlis River", (850, 516), 11, 0),
     ("Mount Ghakis", (440, 714), 15, 0),
@@ -258,7 +258,7 @@ def draw_base(travel: list[dict] | None = None) -> str:
     lines = list(ROADS.values()) + list(TRACKS.values()) + list(RIVERS.values())
 
     # Clearings around the buildings, so no tree or peak is drawn over them.
-    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 276), 20), ((120, 238), 16), ((340, 384), 18)]
+    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 276), 20), ((120, 238), 16), ((106, 372), 16), ((330, 370), 14)]
 
     def clear(point, margin=9) -> bool:
         return (not any(inside(point, lake) for lake in water)
@@ -330,7 +330,7 @@ def draw_base(travel: list[dict] | None = None) -> str:
     parts.append(manor(968, 345))
     for x, y in [(780, 450), (400, 270), (120, 232)]:
         parts.append(village(rng, x, y + 12, 6))
-    parts.append(f'<path d="M336,382 h12 v10 h-12 Z M350,386 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
+    parts.append(f'<path d="M94,366 h12 v10 h-12 Z M108,370 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
 
     parts.extend(hours_label(leg) for leg in travel or [] if leg["label"])
 

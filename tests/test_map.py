@@ -169,7 +169,7 @@ def test_offroad_place_is_reached_by_a_dotted_leg(tmp_path):
     pages = [page("yester-hill", "Yester Hill"), page("whispering-wall", "Whispering Wall"),
              page("wizard-of-wines", "Wizard of Wines")]
     places, parent = barovia_map.load_places(write(tmp_path / "map.yaml",
-        "places:\n  wizard-of-wines: {xy: [330, 375]}\n  yester-hill: {xy: [70, 488]}\n"
+        "places:\n  wizard-of-wines: {xy: [110, 360]}\n  yester-hill: {xy: [70, 488]}\n"
         "  whispering-wall: {xy: [40, 520], offroad: true}\n"), pages)
     posts = []
     for stem in ("2025-04-01-a", "2025-04-15-b", "2025-04-29-c"):
@@ -228,6 +228,7 @@ def test_places_keep_their_places_on_the_official_layout():
     assert x["durst-manor"] > x["gates-of-barovia"] > x["barovia"] > x["castle-ravenloft"]   # east to west
     assert x["vallaki"] < x["the-windmill"] < x["tser-crossroads"] < x["castle-ravenloft"]
     assert x["raven-river-crossroads"] < x["vallaki"] and x["krezk"] < x["tower-of-kazan"] < x["raven-river-crossroads"]
-    assert y["raven-river-crossroads"] < y["wizard-of-wines"] < y["argynvostholt"]          # south of the crossroads
+    assert y["raven-river-crossroads"] < y["argynvostholt"] < y["berez"]                    # south of the crossroads
+    assert x["wizard-of-wines"] < x["argynvostholt"] and y["krezk"] < y["wizard-of-wines"] < y["yester-hill"]
     assert y["tser-crossroads"] < y["tser-pool"] and y["castle-ravenloft"] < y["barovia"]
     assert y["amber-temple"] > y["tsolenka-pass"] > y["yester-hill"] > y["krezk"]

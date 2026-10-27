@@ -30,12 +30,12 @@ places:
   tower-of-kazan: {xy: [250, 202]}
   krezk: {xy: [120, 232], anchor: end}
   abbey-of-saint-markovia: {xy: [133, 208], label: Abbey of St. Markovia}
-  wizard-of-wines: {xy: [330, 375], anchor: end}
+  wizard-of-wines: {xy: [110, 360], anchor: start}
   yester-hill: {xy: [70, 488], anchor: start}
   # The Whispering Wall lies just southwest of Yester Hill, off the roads.
   whispering-wall: {xy: [40, 520], offroad: true, anchor: start}
-  argynvostholt: {xy: [330, 450], anchor: end}
-  berez: {xy: [350, 525], label: Ruins of Berez, anchor: start}
+  argynvostholt: {xy: [330, 375], anchor: start}
+  berez: {xy: [330, 450], label: Ruins of Berez, anchor: end}
   tsolenka-pass: {xy: [240, 578], anchor: start}
   amber-temple: {xy: [340, 638]}
 
