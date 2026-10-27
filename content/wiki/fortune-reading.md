@@ -14,3 +14,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/fortu
 **Mists**: A vistano wanders alone searching for a mentor. Doesn’t stay in one place for long. Seek her out in St. Markova Abbey near the mists
 
 **Marionette**: Look to Great heights, find the beating heart of the castle.
+
+## A later reading (22 April 2025)
+
+*Read at the table during [Welcome to Krezk](/posts/welcome-to-krezk/), in short:*
+
+* **The Darklord:** the master of shadows, a beast straining at its chains.
+* **The Six of Stars, the Evoker:** the wild, untamed power the party wants.
+* **The Artifact:** the token that is the key to power; "Divinity's heart" waits somewhere.
+* **The Innocent:** a raven-haired maid with twilit eyes is one way to the token.
+* **The Broken One:** another way, through sacrifice; the Whispering Wall awaits a tribute.

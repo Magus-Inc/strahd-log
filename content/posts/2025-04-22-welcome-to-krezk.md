@@ -20,6 +20,16 @@ Oogway tries to buy a cloak of invincibility from the wandering merchant, but un
 
 The party returns to the Wizard of Wines and learns about the history of the holy symbol of raven kind and its connection to Strahd. They receive an obsidian whistle from Damien and head to Krezk, encountering vampire spawn along the way.
 
+## The Reading:
+
+*The cards as read at the table, in short:*
+
+* **The Darklord:** the master of shadows, a beast straining at its chains.
+* **The Six of Stars, the Evoker:** the wild, untamed power the party wants.
+* **The Artifact:** the token that is the key to power; "Divinity's heart" waits somewhere.
+* **The Innocent:** a raven-haired maid with twilit eyes is one way to the token.
+* **The Broken One:** another way, through sacrifice; the Whispering Wall awaits a tribute.
+
 ## Key Locations:
 
 **Wizard of Wines**: Damien reveals the history of the holy symbol of raven kind and its connection to Strahd.
@@ -34,7 +44,7 @@ Combat: The party encounters three vampire spawn on the road to Krezk and defeat
 
 ## Loot:
 
-**Obsidian Whistle**: Given by Damien as thanks for recovering the gem needed to brew wine.
+**Obsidian Whistle**: Given by Damien as thanks for recovering the gem needed to brew wine. How it works is on the [Obsidian Whistle](/wiki/obsidian-whistle/) page.
 
 ## Notable NPCs:
 

@@ -25,6 +25,10 @@ The fight in the Abbey’s asylum never stopped. Aera’s arrow went through the
 
 ## Summary:
 
+![The party fights the Fallen Star, the Abbot's second form, in the Abbey's asylum](/images/the-fallen-star-1.jpg)
+
+*At the table: the party against the Fallen Star.*
+
 The fight in the Abbey’s asylum picks up where it left off. The Abbot, Ethereal, has fallen once, only to rise in his second form, the Fallen Star: a chimera-like beast with a lion’s head, a ram’s body, bat wings and a crocodile’s tail. Shabasta lies prone at 8 hit points and Olfin hovers on the eagle wings he took from Clovin. The beast’s frightful presence washes over the party: Shabasta and Crusty are frightened, and Malron shrugs it off under Protection from Evil and Good.
 
 Note: Inspiration for the last session’s damage went to Aera, whose 71 was almost half of what Ethereal’s first form took. The table also floated a snack conveyor belt and a water fountain for the game room.

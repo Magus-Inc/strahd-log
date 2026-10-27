@@ -13,6 +13,12 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Crusty, High Elf Wizard, drawn by Grant Haseloff](/images/crusty-by-grant.jpg)
+
+*Crusty, drawn by Grant Haseloff.*
+
+*In his player's own words (Cole Smarr, as Crustoferson on Discord, 16 February 2026):*
+
 Crusty, High Elf Sage Wizard
 
 Crusty stands as a beacon of intellect and quiet resolve. His youthful elven features are sharply defined: high cheekbones, a firm jawline, and a straight nose that speaks to noble lineage. His skin is fair and smooth, untouched by age or battle, and his long golden-blonde hair flows past his shoulders, neatly parted and tucked behind his elongated, pointed ears. He is clean-shaven, which enhances the clarity of his expression—serious, contemplative, and focused.
