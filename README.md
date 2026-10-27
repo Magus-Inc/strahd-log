@@ -2,7 +2,8 @@
 
 A static site for our Curse of Strahd adventure log, moved off Obsidian Portal
 (<https://curseofstrahdowlbear.obsidianportal.com/adventure-log>). Posts are Markdown files; a small
-Python build turns them into plain HTML in `public/`, ready for Netlify.
+Python build turns them into plain HTML in `public/`, published by GitHub Pages at
+<https://owlbear.dicelore.quest/>.
 
 ## Layout
 
@@ -14,7 +15,9 @@ Python build turns them into plain HTML in `public/`, ready for Netlify.
 | `static/` | `style.css` and the favicon, copied into `public/` as is |
 | `tools/import_op.py` | One-off importer from an Obsidian Portal export (Textile) |
 | `tests/` | pytest tests; they build their own fixtures |
-| `netlify.toml` | Netlify build settings |
+| `.github/workflows/pages.yml` | Builds and publishes the site to GitHub Pages on every push to `main` |
+| `static/CNAME` | The site's own address, `owlbear.dicelore.quest` |
+| `netlify.toml` | Settings for hosting on Netlify instead (not used today) |
 | `public/` | Build output (not in git) |
 
 ## Recipes
@@ -30,7 +33,7 @@ just serve                      # build, then serve at http://localhost:8000 (ju
 just import <export-folder>     # re-import an Obsidian Portal export into content/posts/
 ```
 
-`requirements.txt` holds only what the site build needs (what Netlify installs);
+`requirements.txt` holds only what the site build needs (what the publish workflow installs);
 `requirements-dev.txt` adds the importer and test packages.
 
 ## Adding a post
@@ -58,7 +61,7 @@ just import <export-folder>     # re-import an Obsidian Portal export into conte
    contain a colon.
 2. Run `just serve` and check the post at <http://localhost:8000/>.
 3. Commit the file and open a pull request (see `CONTRIBUTING.md`). GitHub runs the tests and a
-   build on every pull request; Netlify publishes the site when it is merged to `main`.
+   build on every pull request; GitHub Pages publishes the site when it is merged to `main`.
 
 ## Wiki and search
 
@@ -131,14 +134,23 @@ page, using the href from the rendered post HTML when present; `[[File:...]]` as
 Re-running overwrites the imported files with identical output, so do not hand-edit an imported post
 and then re-import.
 
-## Netlify
+## Hosting: GitHub Pages at owlbear.dicelore.quest
 
-`netlify.toml` installs `requirements.txt` and runs `python build.py`, publishing `public/`. The feed
-uses Netlify's `URL` variable for absolute links (it falls back to `http://localhost:8000` locally).
+`.github/workflows/pages.yml` builds and publishes the site on every push to `main`. It asks GitHub
+Pages for the site's address and path, so the same workflow works on the default address
+(<https://magus-inc.github.io/strahd-log/>, where links need the `/strahd-log/` prefix) and on the
+custom domain (<https://owlbear.dicelore.quest/>, at `/`). The build takes those as `URL` and
+`BASE_PATH` (or `--base-path`); `just serve` uses `/`.
 
-## GitHub Pages preview
+Setting up the custom domain:
 
-`.github/workflows/pages.yml` publishes a preview to <https://magus-inc.github.io/strahd-log/> on
-every push to `main`. A site under a sub-path needs its links prefixed, so the build takes a base
-path (`--base-path /strahd-log/` or the `BASE_PATH` variable); Netlify and `just serve` use `/`.
-Pages needs the repository to be public and Settings > Pages > Source set to "GitHub Actions".
+1. At Porkbun, `dicelore.quest` > DNS: a `CNAME` record, host `owlbear`, answer `magus-inc.github.io`.
+2. On GitHub, Magus-Inc/strahd-log > Settings > Pages > Custom domain: `owlbear.dicelore.quest`, then
+   tick "Enforce HTTPS" once the certificate is issued. (Do this after the DNS record exists, or the
+   default address starts forwarding to a name that does not resolve yet.)
+
+`static/CNAME` records the domain in the published files too. Pages needs the repository to be
+public and Settings > Pages > Source set to "GitHub Actions".
+
+`netlify.toml` and the `_redirects` file the build writes are kept so the site can move to Netlify
+later without changes; nothing uses them on GitHub Pages.

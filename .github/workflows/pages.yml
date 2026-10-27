@@ -1,6 +1,8 @@
 name: Pages preview
 
-# Publishes a preview of the site to https://magus-inc.github.io/strahd-log/ on every push to main.
+# Publishes the site on every push to main: https://owlbear.dicelore.quest/ once the custom domain is
+# set in Settings > Pages, https://magus-inc.github.io/strahd-log/ before that. configure-pages reports
+# the address and path in use, so the build's links are right either way.
 # Needs the repository to be public (free plan) and Settings > Pages > Source set to "GitHub Actions".
 on:
   push:
