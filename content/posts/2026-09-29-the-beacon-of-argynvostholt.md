@@ -95,7 +95,10 @@ Stealth and social: Shabasta's Dimension Door, Zora's distraction and Aera's cli
 
 ## Loot:
 
-* **Olfin's longsword, blessed by Argynvost**: Now a +1 magic weapon with three charges. As a bonus action, spend a charge to wreathe it in silver flame for a minute (six turns): attacks deal an extra 1d4 cold, and a creature hit by a critical must succeed on a DC 20 Constitution save or be paralyzed. As an action, spend all three charges for a blast of silver flame (a 15-foot cone for a melee weapon, a 30-foot line for a ranged one): each hostile creature in it makes a DC 20 Constitution save, taking 13d8 on a failure or half as much on a success. Once used, it can't be used again for a year.
+* **Olfin's longsword, blessed by Argynvost** (stats as Ryan posted them on Discord after the session): a +1 magic weapon with 3 charges, all regained at dawn.
+    * **1 charge, bonus action:** silver flames wreathe the blade for 1 minute. Each attack deals an extra 1d4 cold damage, and on a critical hit the target must succeed on a DC 20 Constitution save or be paralyzed until the start of the wielder's next turn.
+    * **2 charges, bonus action:** cast *beacon of hope*.
+    * **3 charges, action:** a blast of silver flame, a 15-foot cone for a melee weapon or a 30-foot line for a ranged one. Each hostile creature in it makes a DC 20 Constitution save, taking 58 (13d8) cold damage on a failure or half as much on a success. Once used, it can't be used again for one year.
 * **Beacon of Argynvost**: While the beacon shines, +1 to AC and +1 to saving throws for the party and every creature that opposes Strahd, as long as they remain in Barovia.
 * **Vladimir Hornguard's armor and greatsword**, left where he fell.
 
