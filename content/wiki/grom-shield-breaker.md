@@ -8,6 +8,12 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/grom
 ---
 
+## Description
+
+*Written from the session logs.*
+
+A hill dwarf fighter from the party's early days in Barovia. As the party tells it, Grom had always been with them. Like every member of his family, he carries a tooth. He challenged the hidden scouts on the road to Tser Pool and won the Vistani storytelling game at their camp.
+
 <!-- from-the-log -->
 ## From the adventure log
 

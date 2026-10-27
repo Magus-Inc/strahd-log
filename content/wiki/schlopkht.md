@@ -11,6 +11,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+*Written from the session logs.*
+
+A tabaxi monk from the party's early days, quick, curious and hard to keep out of trouble. In Durst Manor he moved the snarling stuffed wolf, kept a shard of the haunted mirror he broke, and raised the portcullis so the party could escape the collapsing house. In the looping fog he scouted on a rope to find the way out. In Vallaki he tried to bribe the gate guards with dream pies, then staged a fall to show Viktor the signet ring.
+
 [Character Sheet](https://www.dndbeyond.com/characters/112331650)
 
 <!-- from-the-log -->

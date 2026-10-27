@@ -4,8 +4,14 @@ type: character
 summary: A mysterious wanderer and bard, a former thief, drawn to fate and prophecy.
 player: Grant Haseloff
 former: true
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs.*
+
+A mysterious wanderer and bard, a former thief, drawn to fate and prophecy. At the Whispering Wall he heard the prophecy confirmed and barely escaped. Minofaustus then handed him to Gumbo as a servant. He chose blood in Strahd's hourglass game and explored Argynvostholt with Aera and Malron. At Castle Ravenloft he helped Sasha clean up spilled wine, which earned a tip about the organ's sixth pedal and a plea to rescue Gertruda.
 
 <!-- from-the-log -->
 ## From the adventure log
