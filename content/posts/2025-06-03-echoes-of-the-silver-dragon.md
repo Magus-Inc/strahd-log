@@ -17,7 +17,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 The party continues their exploration of Argynvostholt, uncovering lingering spirits and artifacts from the once-proud Order of the Silver Dragon. In the **graveyard**, they find abandoned armor that helps convince the ghosts to leave them undisturbed.
 
-Aera discovers **a pseudodragon**, which now follows her, seemingly drawn to her presence.
+Aera discovers **[a pseudodragon](/wiki/zorya/)**, which now follows her, seemingly drawn to her presence.
 
 Ascending to the **second floor**, the party encounters eerie chills emanating from one of the towers. A spectral voice challenges them: **“If you be servants of the devil, be gone!”**
 

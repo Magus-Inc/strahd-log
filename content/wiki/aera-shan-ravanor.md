@@ -29,7 +29,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 * Bought a Shades Ring from Minofaustus and owes him 500 more gold. ([The Whispering Wall](/posts/the-whispering-wall/))
 * Was detected while invisible, starting the fight in the werewolf cave. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
 * Drank the blood in Strahd's game and fully transformed into a werewolf. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
-* Gained a pseudodragon companion at Argynvostholt and found hidden relics behind a painting. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
+* Gained a pseudodragon companion, Zorya, at Argynvostholt and found hidden relics behind a painting. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * Recited the knight's oath that awakened Horngaard's prophecy and received Arrigal's secret note. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Reached Level 7 and gained Evasion; scouted the Heart of Sorrow alone and met Strahd. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Flew to Ravenloft's parapets, stole the wights' alarm horns and lowered the drawbridge. ([Unwelcome Guests](/posts/unwelcome-guests/))

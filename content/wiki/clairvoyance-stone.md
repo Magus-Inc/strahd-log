@@ -2,7 +2,7 @@
 title: Clairvoyance Stone
 type: item
 summary: A palm-sized stone with 3 charges of Clairvoyance.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with notes from the table
 ---
 
 ## What it does
