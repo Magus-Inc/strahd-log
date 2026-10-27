@@ -30,6 +30,12 @@
       </a>
 {% endfor %}
     </g>
+    {# Place names sit under the session markers, so a name never hides a number. #}
+    <g class="labels" aria-hidden="true">
+{% for p in places %}
+      <text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}">{{ p.title }}</text>
+{% endfor %}
+    </g>
 {% if legs %}
     <g class="markers">
 {% for leg in legs %}
@@ -43,11 +49,6 @@
 {% endfor %}
     </g>
 {% endif %}
-    <g class="labels" aria-hidden="true">
-{% for p in places %}
-      <text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}">{{ p.title }}</text>
-{% endfor %}
-    </g>
   </svg>
 </figure>
 {% endmacro %}
