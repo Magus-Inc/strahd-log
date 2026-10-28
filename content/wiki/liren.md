@@ -9,6 +9,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Liren, dragonborn barbarian, in half plate with her battleaxe](/images/liren-ai-portrait.jpg)
+
+*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+
 A Dragonborn Barbarian, Liren exudes raw strength and indomitable will. Though naturally wary and untrusting of others, Liren shares a unique bond of trust with Malron. In battle, Liren is a force to be reckoned with, unleashing their primal fury to protect the party and overcome foes. Their distrustful nature is balanced by their unwavering loyalty to those they hold dear.
 
 <!-- from-the-log -->
