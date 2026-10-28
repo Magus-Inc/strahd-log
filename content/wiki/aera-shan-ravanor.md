@@ -11,6 +11,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Aera shan Ravanór, wood-elf rogue, with Zorya on her shoulder](/images/aera-ai-portrait.jpg)
+
+*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+
 *From Chris's character notes and the session logs.*
 
 A wood-elf rogue and the party's lead scout. Aera is a deadly archer with her "turbo bow" and Uncanny Dodge, and later Evasion. She is legendary at finding and disarming traps, and she is usually first into the dark, probing murky water for hazards with her rapier. Sharp-witted and calm, she would rather outsmart an enemy than meet it head on, though she has taken a meat cleaver to vampire spawn when it suited her.
