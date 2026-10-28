@@ -1,12 +1,11 @@
 # Hours on foot along each leg of road, as the official Barovia map marks them (read off a fan copy
-# of it on r/CurseofStrahd; nothing of that image is used here). barovia_map.py prints each number
-# beside its road. The numbers are labels only: where places and roads sit comes from the map's
-# layout, not from the hours. The module's area letters are noted for each end.
+# of it on r/CurseofStrahd; nothing of that image is used here). The map doesn't print them (Chris
+# asked for the trails without hour markers); they set HOUR, the scale bar's hours to map units.
+# Where places and roads sit comes from the map's layout, not from the hours. The module's area letters are noted for each end.
 #
 # junctions: named road vertices that are not wiki places, as [x, y] in the map's drawing space.
 # legs:      {from, to, hours}; from/to are place slugs from data/map.yaml or junction names.
-#            side: -1 puts the label on the other side of the road.
-#            label: false leaves the number off the map (the leg still counts).
+#            side and label: left from when the hours were printed beside the roads.
 
 junctions:
   ivlis-crossroads: [680, 555]      # F, River Ivlis crossroads

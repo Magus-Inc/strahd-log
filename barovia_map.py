@@ -44,7 +44,7 @@ ROCK = "#8f969b"
 # Roads, as polylines. A vertex shared by two roads is a junction, and every place on the map
 # sits on a vertex, so the roads double as the graph the trail is routed over. Tracks are drawn
 # dotted but are routed over like roads. Where the roads run and where they meet follows the
-# official map of Barovia; the hours in data/travel-times.yaml are only printed beside them.
+# official map of Barovia; the hours in data/travel-times.yaml only set the scale bar.
 ROADS = {
     "Old Svalich Road (east)": [(998, 390), (960, 394), (930, 398)],
     "Manor lane": [(960, 394), (964, 370), (968, 345)],
@@ -281,8 +281,8 @@ def mists(rng: random.Random) -> str:
 
 # --- the base map --------------------------------------------------------------------------------
 
-def draw_base(travel: list[dict] | None = None) -> str:
-    """The base map; `travel` (load_travel()) adds the hours on foot along each leg of road."""
+def draw_base() -> str:
+    """The base map."""
     rng = random.Random(SEED)
     water = list(LAKES.values())
     lines = list(ROADS.values()) + list(TRACKS.values()) + list(UNUSED_TRACKS.values()) + list(RIVERS.values())
@@ -362,8 +362,6 @@ def draw_base(travel: list[dict] | None = None) -> str:
     for x, y in [(780, 450), (400, 238), (120, 232)]:
         parts.append(village(rng, x, y + 12, 6))
     parts.append(f'<path d="M94,366 h12 v10 h-12 Z M108,370 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
-
-    parts.extend(hours_label(leg) for leg in travel or [] if leg["label"])
 
     for text, (x, y), size, angle in LABELS:
         parts.append(f'<text x="{x}" y="{y}" font-size="{size}" text-anchor="middle" font-style="italic" '
@@ -652,41 +650,3 @@ def load_travel(path: Path, places: dict[str, Place]) -> list[dict]:
 
 def path_length(points: list[Point]) -> float:
     return sum(math.dist(a, b) for a, b in zip(points, points[1:]))
-
-
-def hours_text(hours: float) -> str:
-    return f"{hours:g} h"
-
-
-def hours_label(leg: dict) -> str:
-    """The leg's hours, small and upright, beside the road halfway along it."""
-    points, half = leg["points"], path_length(leg["points"]) / 2
-    if len(points) < 2:
-        return ""
-    for a, b in zip(points, points[1:]):
-        step = math.dist(a, b)
-        if half <= step:
-            break
-        half -= step
-    t = half / (step or 1)
-    x, y = a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t
-    dx, dy = (b[0] - a[0]) / (step or 1), (b[1] - a[1]) / (step or 1)
-    angle = math.degrees(math.atan2(dy, dx))
-    if angle > 90:
-        angle -= 180
-    elif angle <= -90:
-        angle += 180
-    nx, ny = -dy, dx  # perpendicular; pick the side above the road (or left of a steep one)
-    if ny > 0 or (abs(ny) < 0.35 and nx > 0):
-        nx, ny = -nx, -ny
-    side = leg.get("side", 1)
-    lx, ly = x + nx * 7 * side, y + ny * 7 * side
-    if abs(angle) > 55:  # steep road: keep the text level, beside it
-        angle, lx, ly = 0, x + nx * 9 * side, y + ny * 9 * side + 3
-        anchor = "end" if nx * side < 0 else "start"
-    else:
-        anchor = "middle"
-        ly += 3
-    return (f'<text class="hours" data-from="{leg["from"]}" data-to="{leg["to"]}" x="{lx:.1f}" y="{ly:.1f}" '
-            f'font-size="8.5" text-anchor="{anchor}" transform="rotate({angle:.0f} {lx:.1f} {ly:.1f})" '
-            f'fill="#7a1f1f" stroke="{PAPER}" stroke-width="2.5" paint-order="stroke">{hours_text(leg["hours"])}</text>')
