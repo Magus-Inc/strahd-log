@@ -6,17 +6,17 @@ slug: walter-we-are-coming-for-you
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/walter-we-are-coming-for-you
 ---
 
-After the last hard fought battle the party needed a short rest. They secured the room they were in and caught their breath. [Schlopkht](/wiki/schlopkht/) was especially grateful for the chance to look after his wounds.
+After that last hard fight we needed a short rest. We secured the room and caught our breath. [Schlopkht](/wiki/schlopkht/) was especially grateful for the chance to tend his wounds.
 
-An unexplored and dark hallway leading out of the room looked like the obvious next area to explore, but there was no telling what dangers lurked there. [Aera shan Ravanór](/wiki/aera-shan-ravanor/) picked up a rock and used the powers from [Rose Durst](/wiki/rose-durst/) to cause a bright light to emit from the rock. Aera then threw the rock down the dark hallway. Two ghouls were exposed by the light and attacked the party. [Weeble Wobleston](/wiki/weeble-wobleston/) acted as a human shield in the narrow passage way, while Aera killed both ghouls with her bow and arrows.
+A dark, unexplored hallway led out of the room. It was the obvious way on, but there was no telling what waited in it. [Aera shan Ravanór](/wiki/aera-shan-ravanor/) picked up a rock and, with [Rose Durst](/wiki/rose-durst/)'s power, made it shine bright, then threw it down the hall. The light showed two ghouls, and they attacked. [Weeble Wobleston](/wiki/weeble-wobleston/) stood as a human shield in the narrow passage while Aera killed both ghouls with her bow.
 
-The party explored further and found a room with a statue, a wolf head and a orb or eye of interest. The walls of this room had five shadows of ash spread around it. [Malron Lichtstrahl](/wiki/malron-lichtstrahl/) cast Light on the orb and in touching it heard voices saying “Return me to the place I belong”. Malron and Schlopkht discussed whether it would be a good idea to move the orb, and if so where to. Meanwhile, Weeble picks up the orb which causes five shadows to move towards him from the walls. Weeble placed the orb back where it was and the shadows retreated back into the walls. A few more iterations of this and the Malron urged Weeble to leave the orb alone and leave this room.
+Further on we found a room with a statue, a wolf's head and an orb, or perhaps an eye. Five shadows of ash were spread around its walls. I made the orb glow with light, and when I touched it I heard voices: “Return me to the place I belong.” Schlopkht and I were still debating whether to move the orb, and if so where, when Weeble picked it up, and the five shadows slid off the walls toward him. Weeble put the orb back and the shadows withdrew. After a few more rounds of this I urged Weeble to leave the orb alone and leave the room.
 
-There was one door leading out of the room, and Weeble volunteered to lead the way. Upon touching the door it transformed into a most hideous beast. It was a mimic! Aera once again saved the day by killing the beast and saved Weeble.
+There was one door out, and Weeble volunteered to lead. When he touched it, the door turned into a most hideous beast. A mimic! Aera saved the day again, killing the thing and saving Weeble.
 
-The next set of rooms contained a footlocker which Weeble opened up. There was a boneless inside which had a resemblance to [Gustav Durst](/wiki/gustav-durst/). It started wrapping itself around Weeble and everyone tried to fight it off of him. The boneless lashed out twice at Weeble, but was then felled by the blade of Aera.
+In the next rooms Weeble opened a footlocker. Inside was a boneless creature that looked like [Gustav Durst](/wiki/gustav-durst/). It began wrapping itself around Weeble, and we all tried to fight it off him. It lashed at Weeble twice before it fell to Aera's blade.
 
-Malron offered to check the rest of the footlocker in the name of Weeble, pledging that Weeble would get first rights to anything found, but that he should hold back given the recent blows from the Boneless and the bad string of luck with exploring. Inside the footlocker the party found the following items.
+I offered to search the rest of the footlocker in Weeble's name, pledging that he would have first claim to anything in it, since he had just taken a beating from the boneless and his luck at exploring had been poor. Inside we found:
 
 * Cloak of Protection
 * Small Wooden object
@@ -40,19 +40,19 @@ Level 2
 3. Invisibility
 4. Magic Weapon
 
-Schlopkht and Aera snuck down one last set of stairs and found two hallways, one with some water and a portcullis blocking the way, and another one with dry ground. They explored the murky water and heard a voice saying
+Schlopkht and Aera crept down one last set of stairs and found two hallways: one with water and a portcullis barring the way, the other dry. They explored the murky water and heard a voice:
 
 > He is the ancient.  
 > He is the land.
 
-Aera and Rose cast Mend on a broken wheel that allowed Schlopkht to raise the portcullis. He jammed the wheel in place to keep the passageway open, and the party entered the next room.
+Aera and Rose mended a broken wheel, and with it Schlopkht raised the portcullis. He jammed the wheel to hold the way open, and we went into the next room.
 
-The room had an altar of sorts in the middle, with a wrapped bundle on it. A tendril connected from the bundle to a pulsing mass in the far side of the room. It occurred to some of the party that this must be the bottom of the well they had encountered [earlier](/posts/finishing-the-manor/).
+In the middle of the room stood an altar of sorts with a wrapped bundle on it. A tendril ran from the bundle to a pulsing mass on the far side of the room. Some of us realized this must be the bottom of the well we had found [earlier](/posts/finishing-the-manor/).
 
-The mass at the far side turned out to be a flesh mound which started heading to Aera as she stood at the altar. Weeble engaged the mound with his sword, while Malron cast Protection from Evil on Weeble. Aera shot at the mound and handed off the shard to Malron to see if he could make sense of how to use it in case the mound was [Walter Durst](/wiki/walter-durst/). Malron held the shard up high and called out “Walter” in hopes it would help. It did nothing, but Malon persisted for the rest of the fight, while everyone else pounded on the Flesh Mound. It eventually opened up at the rib cage and an undead Walter was hovering inside. Aera cleaved Walters head right off and the Flesh Mound collapsed.
+The mass was a mound of flesh, and it began moving toward Aera at the altar. Weeble met it with his sword, and I laid Lathander's ward against evil on him. Aera shot at the mound and handed me the shard, to see whether I could work out how to use it in case the mound was [Walter Durst](/wiki/walter-durst/). I held the shard high and called “Walter!” It did nothing, but I kept at it for the rest of the fight while everyone else pounded on the flesh mound. At last its rib cage split open, and an undead Walter hovered inside. Aera cleaved Walter's head clean off, and the mound collapsed.
 
-The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and she vowed to kill the party for destroying her pet. The ground started shaking and as the party tried to race up the stairs they were blocked by the ghost of [Gustav Durst](/wiki/gustav-durst/). He told the party that they must stay to appease Elisabeth, but Malron convinced him to let them go as Rose and Thorn were with them and this would be his last chance to make right, be a good father, and give his children the peace they deserved. Gustav allowed the party to pass, and advised them to not stop to fight anything, just run!
+The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and vowed to kill us for destroying her pet. The ground began to shake. As we raced for the stairs, the ghost of [Gustav Durst](/wiki/gustav-durst/) blocked the way and told us we must stay to appease Elisabeth. I reasoned with him: Rose and Thorn were with us, and this was his last chance to make things right, to be a good father and give his children the peace they deserved. Gustav let us pass and told us not to stop and fight anything. Just run!
 
-On the way up some spectral beings lashed out, but the party dodged them, and falling rocks, to run up a secret ladder that took them to the room with the stuffed wolves. Schlopkht broke a window and the party climbed out of the house, which then collapsed into the ground and disappeared.
+Spectral things lashed at us on the way up, but we dodged them and the falling rocks and ran up a secret ladder into the room with the stuffed wolves. Schlopkht broke a window and we climbed out of the house. Behind us it collapsed into the ground and was gone.
 
-When the dust settled we found ourselves in the forest, by a stone tower, with Rose and Thorn
+When the dust settled we found ourselves in a forest beside a stone tower, with Rose and Thorn.
