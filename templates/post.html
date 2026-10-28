@@ -98,6 +98,7 @@
       slides.forEach(function (li, i) {
         if (Math.abs(li.offsetLeft - strip.scrollLeft) < Math.abs(slides[best].offsetLeft - strip.scrollLeft)) best = i;
       });
+      if (best !== current && deck.classList.contains("open")) wake();
       current = best;
       arrows.prev.hidden = current === 0;
       arrows.next.hidden = current === slides.length - 1;
@@ -110,13 +111,25 @@
       if (smooth && strip.scrollTo) strip.scrollTo({left: left, behavior: "smooth"});
       else strip.scrollLeft = left;
     }
+    // Full screen: the dots, close button and arrows show for a moment on opening and on each new
+    // slide, then fade so the slide has the whole screen.
+    var QUIET_AFTER = 2000, quietTimer;
+    function wake() {
+      deck.classList.remove("quiet");
+      clearTimeout(quietTimer);
+      quietTimer = setTimeout(function () { deck.classList.add("quiet"); }, QUIET_AFTER);
+    }
     function toggle(open) {
       var at = current;
       deck.classList.toggle("open", open);
       document.body.classList.toggle("deck-lock", open);
       go(at);
-      if (open) close.focus();
+      if (open) { close.focus({preventScroll: true}); wake(); }
+      else { clearTimeout(quietTimer); deck.classList.remove("quiet"); }
     }
+    // Turning the phone changes the strip's width; land on the same slide again.
+    window.addEventListener("resize", function () { go(current); });
+    deck.addEventListener("mousemove", function () { if (deck.classList.contains("open")) wake(); });
     strip.addEventListener("scroll", update, {passive: true});
     update();
     strip.addEventListener("click", function (e) { if (e.target.tagName === "IMG") toggle(!deck.classList.contains("open")); });

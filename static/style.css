@@ -329,10 +329,15 @@ h1 .chip.former { font-size: 0.8rem; }
 .deck.open { position: fixed; inset: 0; z-index: 100; margin: 0; background: #000;
   display: flex; flex-direction: column; justify-content: center; }
 .deck.open h2 { display: none; }
-.deck.open .deck-strip img { height: auto; max-height: calc(100vh - 4rem); border: 0; border-radius: 0; cursor: zoom-out; }
-.deck.open .deck-dots button::before { background: #555; }
+.deck.open .deck-strip img { height: auto; max-height: 100vh; max-height: 100dvh; border: 0; border-radius: 0; cursor: zoom-out; }
+.deck.open .deck-dots { position: absolute; left: 0; right: 0; bottom: max(0.5rem, env(safe-area-inset-bottom));
+  margin: 0; transition: opacity 0.4s; }
+.deck.open .deck-dots button::before { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.55); }
+.deck.open .deck-close, .deck.open .deck-arrow { transition: opacity 0.4s; }
+.deck.open.quiet .deck-dots, .deck.open.quiet .deck-close, .deck.open.quiet .deck-arrow { opacity: 0; pointer-events: none; }
+.deck.open .deck-dots button::before { background: rgba(255, 255, 255, 0.45); }
 .deck.open .deck-dots button[aria-current]::before { background: var(--accent-hi); }
-.deck.open .deck-close { display: block; position: absolute; top: 0.75rem; right: 0.75rem; font-size: 1.6rem;
+.deck.open .deck-close { display: block; position: absolute; top: max(0.75rem, env(safe-area-inset-top)); right: max(0.75rem, env(safe-area-inset-right)); font-size: 1.6rem;
   line-height: 1; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 1px solid var(--line);
   background: var(--surface); color: var(--text); cursor: pointer; }
 body.deck-lock { overflow: hidden; }

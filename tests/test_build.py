@@ -267,3 +267,16 @@ def test_footer_license_line_is_clean_and_names_no_one(content, tmp_path):
     # Every entity is whole ("&rsquo;", never a stray "rsquo;"), and real names stay off the site's pages.
     assert not re.search(r"(?<!&)\b(?:rsquo|copy|amp);", page)
     assert "O&rsquo;Toole" not in page and "Christopher" not in page
+
+
+def test_full_screen_slides_use_the_whole_screen_and_fade_their_controls():
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    script = (build.ROOT / "templates" / "post.html").read_text(encoding="utf-8")
+    # The slide may fill the screen: dots sit over its bottom edge instead of below it.
+    assert "max-height: 100dvh" in css
+    assert re.search(r"\.deck\.open \.deck-dots \{[^}]*position: absolute", css)
+    # Dots, close button and arrows fade out once quiet, and come back on each slide change.
+    assert re.search(r"\.deck\.open\.quiet \.deck-dots,[^{]*\.deck\.open\.quiet \.deck-close[^{]*\{[^}]*opacity: 0", css)
+    assert "QUIET_AFTER = 2000" in script and "wake()" in script
+    # A rotation re-fits the open slide.
+    assert 'addEventListener("resize"' in script
