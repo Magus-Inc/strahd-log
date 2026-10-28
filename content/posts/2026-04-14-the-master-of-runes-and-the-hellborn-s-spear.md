@@ -15,53 +15,64 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Crusty](/wiki/crusty/)
 
 ## Summary:
+We began on a balcony with two great wooden thrones and a red velvet curtain thirty feet long. Beyond the curtain was a room ruled by a stone brazier burning with a white flame that gave no heat. Above it hung a huge hourglass, its sand frozen in the upper bulb. Seven colored crystal stones are set into the rim of the brazier, and an inscription on the base of the hourglass gives a riddling guide to using them to travel from place to place.
 
-The session began with the party investigating a balcony featuring two large wooden thrones and a 30-foot long red velvet curtain. Beyond the curtain, they discovered a room dominated by a stone brazier burning with a heatless white flame. Above it hung a massive hourglass, its sand mysteriously frozen in the upper bulb. The rim of the brazier was set with seven colored crystal stones, and an inscription on the base of the hourglass provided a cryptic guide to their use as a teleportation system. Note: [The players discussed the potential locations mentioned in the verse, identifying the green stone as leading to a coffin maker in Vallaki and the yellow stone to a mountain keep near the Amber Temple. They also joked about the hourglass being a “timer” for Strahd’s travels.]
+Note: The players worked through the places named in the verse, matching the green stone to a coffin maker in Vallaki and the yellow stone to a mountain keep near the Amber Temple. They also joked that the hourglass is a "timer" for Strahd's travels.
 
-After deciding to leave the brazier for now, the party explored three nearby doors. The first led to a steep staircase where Aera spotted a humanoid silhouette that quickly ducked away. The third door revealed a spiral staircase and a discarded woman’s slipper, which Malron identified as belonging to Gertruda. Choosing the middle path, the party proceeded down a slick, foggy corridor. Note: [Before moving, the party discussed their “healing philosophy,” with Malron noting that being unconscious isn’t being dead. Crusty reminded the group he had “13 important dice” (Portent) available.]
+We left the brazier for now and tried the three doors nearby. The first opened on a steep staircase, where Aera saw a figure’s silhouette that quickly ducked away. Behind the third was a spiral stair and a woman’s slipper, which I knew for Gertruda’s. We chose the middle way and went down a slick, foggy corridor.
 
-The exploration took a sudden turn when Aera triggered a hidden marble trapdoor. She and Olfin both failed to leap clear and were sent sliding down a slimy chute, eventually dumping into three feet of water in a cell below. Malron, using his keen perception, identified the trap before he fell. He used climbing spikes from his kit to jam the trapdoor shut, securing the path for the rest of the group. Aera successfully picked the lock on the cell door, allowing the scouts to reunite with the party. Note: [The group shared several “Above the Table” stories during this exploration, including experiences at busy Easter church services.]
+Note: Before moving, the party talked over its "healing philosophy", Malron pointing out that unconscious is not dead. Crusty reminded everyone he had "13 important dice" (Portent) ready.
 
-Finally reaching the ancient catacombs of Ravenloft, the party began a systematic search for legendary relics. At Crypt 15, belonging to the archmage Kazan, Olfin used his strength to hoist a heavy portcullis. Inside, they found a skeleton with black opal eyes and amber teeth. By solving a rune puzzle based on the eight schools of magic—a sequence they had encountered before at Kazan’s Tower—they caused the legendary platinum Staff of Kazan to materialize. Crusty successfully attuned to the staff, despite the arcane lightning that surged through his veins. Note: [The party engaged in a long “Above the Table” debate about whether a hot dog is a sandwich, a calzone is a dumpling, or everything is just “soup or sandwich.”]
+Then Aera stepped on a hidden marble trapdoor. She and Olfin could not leap clear and went sliding down a slimy chute that dumped them into three feet of water in a cell below. I saw the trap before I fell, and jammed the trapdoor shut with climbing spikes from my kit to make the way safe for the rest of us. Aera picked the lock of the cell door, and our scouts rejoined us.
 
-Continuing south, the party located Crypt 34: the tomb of King Dostran the Hellborn. Ignoring a spectral voice that warned them to cease, Olfin and Malron pried open the gold-encased lead sarcophagus. Inside, they recovered the Spear of the Huntress, a powerful artifact known as a blood spear. As the session concluded, the party prepared to locate the Icon of Dawn’s Grace in the final crypts nearby. Note: [Shabasta noted they would “draw their own version” of the new staff to add lightning effects for the group’s records.]
+Note: The group swapped several "Above the Table" stories along the way, including tales of crowded Easter church services.
+
+At last we reached the ancient catacombs of Ravenloft and began a careful search for the relics. At Crypt 15, the tomb of the archmage Kazan, Olfin hoisted a heavy portcullis by main strength. Inside lay a skeleton with black opal eyes and amber teeth. We solved a puzzle of runes for the eight schools of magic, the same order we met at Kazan’s Tower, and the legendary platinum Staff of Kazan appeared. Crusty bound himself to it, though arcane lightning surged through his veins.
+
+Note: The party held a long "Above the Table" debate on whether a hot dog is a sandwich, whether a calzone is a dumpling, and whether everything is just "soup or sandwich".
+
+Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectral voice warned us to stop. We did not. Olfin and I pried open the lead sarcophagus cased in gold, and inside was the Spear of the Huntress, a blood spear of great power. Now we make ready to find the Icon of Dawn’s Grace in the last crypts nearby.
+
+Note: Shabasta said they would "draw their own version" of the new staff, with lightning effects, for the group's records.
 
 ## Key Locations:
 
-**The Brazier Room**: A square chamber with a magical hourglass and a seven-stone teleportation brazier.  
-**The Slide Trap**: A slick marble hallway that drops unsuspecting travelers into the dungeon cells below.  
-**The Catacombs**: A vast network of columns and crypts beneath the castle, filled with fog and putrid waste.  
-**Crypt 15 (Kazan’s Tomb)**: The resting place of a powerful wizard, protected by a portcullis and a rune-based logic puzzle.  
-**Crypt 34 (King Dostran’s Tomb)**: A chamber containing a gilded sarcophagus and a harmless but intimidating stuffed owlbear.
+**The Brazier Room**: A square chamber with a magical hourglass and a brazier of seven stones for traveling.  
+**The Slide Trap**: A slick marble hall that drops the unwary into the cells below.  
+**The Catacombs**: A vast warren of columns and crypts beneath the castle, full of fog and filth.  
+**Crypt 15 (Kazan’s Tomb)**: The resting place of a powerful wizard, guarded by a portcullis and a puzzle of runes.  
+**Crypt 34 (King Dostron’s Tomb)**: A chamber with a gilded sarcophagus and a harmless but fearsome stuffed owlbear.
 
 ## Encounters:
 
-**The Runes of Kazan (Puzzle)**: The party had to trace the eight schools of magic in the correct order to reveal the staff. Result: Success.  
-**The Trapdoor Chute (Hazard)**: Aera and Olfin fell into the dungeon after a failed dexterity save. Result: Reunited after lockpicking.  
-**The Sarcophagus Warning (Social/Psychological)**: A ghostly voice warned the party not to open the tomb of King Dostran. Result: Ignored; the party looted the spear.
+**The Runes of Kazan**: We traced the eight schools of magic in the right order and the staff appeared.  
+**The Trapdoor Chute**: Aera and Olfin fell into the dungeon, and came back to us after some lockpicking.  
+**The Sarcophagus Warning**: A ghostly voice warned us not to open King Dostron’s tomb. We opened it anyway and took the spear.
 
 ## Loot:
 
 * **Kazan’s Staff**: A legendary platinum staff (+2 bonus to attacks/damage, grants Robe of the Archmagi benefits, increases spell DC/attack bonus by 2). Taken by **Crusty**. The item text is on the [Staff of Kazan](/wiki/staff-of-kazan/) page.
 * **Spear of the Huntress**: A +1 blood spear that grants 2d6 temporary HP on a kill. Recovered by the party.
-* **Two Black Opals**: Worth 1,000 gold pieces each. Looted by **Aera**.
-* **Eight Amber Teeth**: Worth 100 gold pieces each. Looted by **Aera**.
+* **Two Black Opals**: Worth 1,000 gold pieces each. Taken by **Aera**.
+* **Eight Amber Teeth**: Worth 100 gold pieces each. Taken by **Aera**.
 
 ## Notable NPCs:
 
-**King Dostran the Hellborn**: An ancient ruler whose ghostly voice warned the party against prying into his sarcophagus.  
-**Kazan (Deceased)**: An archmage whose legacy of magic remains in his trapped and puzzled tomb.  
-**Gertruda (Mentioned)**: Her slipper was found on the spiral stairs, suggesting she was taken further up into the castle.
+**King Dostron the Hellborn**: An ancient ruler whose ghostly voice warned us off his sarcophagus.  
+**Kazan (Deceased)**: An archmage whose magic lives on in his trapped and puzzling tomb.  
+**Gertruda (Mentioned)**: Her slipper on the spiral stair says she was taken higher into the castle.
 
 ## Plot Points:
 
-* **Strahd’s Transport**: The brazier room confirms how Strahd and his brides move instantly across Barovia.
-* **The Spear Restored**: The party learned the Spear of the Huntress can be fully restored by communing with the Spirit of the Huntress or reconsecrating the Forest Fand later.
-* **The Empty Crypt**: Crypt 18, intended for Ireena Kolyana, was found empty and swept clean, awaiting its “resident.”
+* **Strahd’s Roads**: The brazier room shows how Strahd and his brides cross Barovia in an instant.
+* **The Spear Restored**: The Spear of the Huntress can be made whole again by communing with the Spirit of the Huntress, or by consecrating the Forest Fane anew.
+* **The Empty Crypt**: Crypt 18, meant for Ireena Kolyana, stands empty and swept clean, waiting for its “resident.”
 
 ## Session Highlights:
 
-* **Crusty**: “I feel like Thor right now.” (Upon attuning to the lightning-filled Staff of Kazan).
-* **Malron**: “I’ll go third to heal them when they fall in.” (Predicting the traps in the hallway).
-* **Shabasta**: “He saved a swap for me.” (On finding a crypt with their own name on it).
-* **Aera**: “Rob them blind, Ryan.” (To the DM, while looting Kazan’s expensive eye-gems).
+* **Crusty**, on taking up the lightning-filled Staff of Kazan.
+* **Malron**: “I’ll go third to heal them when they fall in.” I guessed the traps in that hall.
+* **Shabasta**, on finding a crypt with his own name on it.
+* **Aera**, looting Kazan’s costly eye-gems.
+
+Note: Crusty: "I feel like Thor right now." Shabasta: "He saved a swap for me." Aera, to the DM: "Rob them blind."

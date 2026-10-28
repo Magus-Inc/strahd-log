@@ -15,56 +15,57 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Shabasta](/wiki/shabasta/)
 
 ## Summary:
+With our business in Castle Ravenloft finished, we gathered in the Brazier Room to decide where to go. After a short talk about the traveling stones we chose to take Gertruda home. We cast an indigo stone into the white flames, and the fire turned the color of the castle’s shade. One by one we stepped through, feeling as though we were pulled through our own navels, and came out in the cemetery of the Village of Barovia.
 
-Having concluded their business within the walls of Castle Ravenloft, the party gathered in the Brazier Room to determine their next move. After a brief discussion regarding the teleportation stones, they decided to return Gertruda to her home. They cast an indigo stone into the magical white flames, which turned the fire the color of the castle’s shade. One by one, the adventurers stepped through the flames, feeling a sensation like being pulled through their own belly buttons, and materialized in the cemetery of the Village of Barovia.  
-Note: [The players engaged in an extensive “Above the Table” discussion about eating bugs for money and peer-pressuring a friend named Skyler into eating one. The DM also shared his new hobby of collecting hi-fi equipment, specifically a 1960s amplifier.]
+Note: [The players had a long "Above the Table" talk about eating bugs for money and peer-pressuring a friend into eating one. The DM also shared his new hobby of collecting hi-fi equipment, specifically a 1960s amplifier.]
 
-In Barovia, they were greeted by Ismark the Lesser, who offered them rest in the Burgomaster’s mansion. He expressed great relief and pride at seeing the growth in his sister, Ireena. During their rest, a grim message arrived: a snow-white feather from the Abbey of Saint Markovia landed in Krezk, signaling that the Abbot intended to collect the heart of Anna Krezkova at dusk the following day.  
-Note: [There was a meta-discussion regarding leveling up. The DM clarified that while they had “leveled up in heart,” they would remain at their current levels until certain tasks, like delivering goods, were completed.]
+In Barovia, Ismark the Lesser greeted us and offered us rest in the Burgomaster’s mansion. He was greatly relieved, and proud, to see how his sister Ireena has grown. While we rested, grim news came: a snow-white feather from the Abbey of Saint Markovia had landed in Krezk, the sign that the Abbot means to collect Anna Krezkova’s heart at dusk the next day.
 
-As the party departed Barovia, they were joined by a murder of ravens—or more accurately, an “unkindness“—who stood watch over them as an honor guard, having heard of their heroics from the Keepers of the Feather. Their journey toward Vallaki was interrupted an hour from the town gates when Aera discovered three corpses on the road. Two were local Barovians, but the third was a perfect, gearless duplicate of Aera herself. As they investigated, the “corpse” disintegrated, and the party was ambushed by six dire wolves and two scarecrows sent by Strahd to punish Aera for her “sneaking and stealing” in his castle.
+Note: [There was a meta-discussion about leveling up. The DM explained that while they had "leveled up in heart", they would stay at their current levels until certain tasks, like delivering goods, were done.]
 
-The ensuing combat was chaotic. Aera was immediately paralyzed by the scarecrows’ terrifying gaze, and Malron was knocked prone by a wolf’s bite. However, the party quickly turned the tide. Crusty unleashed a devastating Lightning Bolt through the ranks of the wolves, and Malron invoked the Radiance of the Dawn, searing the enemies with holy light. Shabasta used a bouncing orb of fire to incinerate the vulnerable scarecrows. Though Aera was briefly knocked unconscious, Olfin stabilized her with a “wake-up” touch of Lay on Hands.
+As we left Barovia a flock of ravens joined us, an “unkindness”, I am told, rather than a murder, and stood watch over us as an honor guard. They had heard of our deeds from the Keepers of the Feather. An hour short of Vallaki’s gates, Aera found three corpses on the road. Two were Barovians. The third was a perfect copy of Aera herself, without her gear. As we looked closer the false corpse crumbled away, and six dire wolves and two scarecrows fell on us, sent by Strahd to punish Aera for her “sneaking and stealing” in his castle.
 
-Upon reaching Vallaki, they found Baron Dimitri Krezkov waiting at the Blue Water Inn. Desperate and untouched by the inn’s revelry, Dimitri begged the party to intercede and save his wife, Anna, from the Abbot’s gruesome demand. The party agreed and set out for Krezk, pausing for a short rest near the Raven River crossroads, where a Revenant warned them of the “dark tidings” and the rage of Vladimir Hornguard following their assault on Ravenloft.
+It was a wild fight. The scarecrows’ dreadful gaze froze Aera at once, and a wolf’s bite knocked me off my feet. But we soon turned it. Crusty sent a bolt of lightning through the wolves, and I called down the radiance of the dawn and seared them with holy light. Shabasta burned the scarecrows, who fear fire, with a bouncing orb of flame. Aera fell senseless for a moment, but Olfin woke her with a healing touch.
 
-Arriving at the gates of Krezk, they were met by a grateful but terrified Anna Krezkova. As they prepared to ascend to the Abbey, the Icon of Ravenloft (the Shard of Divinity) spoke to them telepathically. It revealed the tragic history of the Abbot: a celestial being sent to restore the Abbey who had fallen into madness. Corrupted by Strahd’s manipulations and his own obsessive “flesh crafting” experiments to create a bride for the vampire lord, the Abbot now viewed the mutilation of others as a necessary sacrifice for a “holy” mission. The party steeled themselves, warned by the Shard to ready their steel for the confrontation ahead.
+In Vallaki, Baron Dimitri Krezkov was waiting for us at the Blue Water Inn. Desperate, and untouched by the inn’s merriment, he begged us to save his wife, Anna, from the Abbot’s gruesome demand. We agreed and set out for Krezk. We rested a short while near the Raven River crossroads, where a revenant warned us of “dark tidings” and of Vladimir Hornguard’s rage at our raid on Ravenloft.
+
+At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made ready to climb to the Abbey, the Icon of Ravenloft, the Shard of Divinity, spoke to us mind to mind. It told us the sad history of the Abbot: a celestial sent to restore the Abbey, who fell into madness. Corrupted by Strahd’s scheming and by his own obsessive work crafting flesh to make a bride for the vampire lord, the Abbot now sees the maiming of others as a needed sacrifice for a “holy” mission. The Shard told us to ready our steel, and we steeled ourselves for what is coming.
 
 ## Key Locations:
 
-**Brazier Room (Castle Ravenloft)**: A teleportation hub featuring seven colored stones.  
-**Village of Barovia**: The party’s first destination, where they rested at the Burgomaster’s mansion.  
-**Raven River Crossroads**: Site of an encounter with a watchful Revenant who offered a solemn blessing.  
-**Village of Krezk**: The destination of their urgent mission to save Anna Krezkova from the Abbot.  
-**Blue Water Inn (Vallaki)**: Where the party met with an anxious Baron Dimitri Krezkov.
+**Brazier Room (Castle Ravenloft)**: A place for traveling, with seven colored stones.  
+**Village of Barovia**: Our first stop, where we rested at the Burgomaster’s mansion.  
+**Raven River Crossroads**: Where a watchful revenant gave us a solemn blessing.  
+**Village of Krezk**: Where we hurry to save Anna Krezkova from the Abbot.  
+**Blue Water Inn (Vallaki)**: Where we met an anxious Baron Dimitri Krezkov.
 
 ## Encounters:
 
-**The Roadside Ambush** (Combat): The party was waylaid by six dire wolves and two scarecrows near a duplicate corpse of Aera. Outcomes: All enemies defeated; Aera knocked unconscious but revived; the party identified as a “nuisance” to Strahd.  
-**Baron Dimitri Krezkov** (Social): A desperate plea for help to save his wife from a celestial executioner.  
-**The Revenant at the Bridge** (Social): A warning that the phantom warriors of Vladimir Hornguard are watching the party’s movements.
+**The Roadside Ambush**: Six dire wolves and two scarecrows, waiting by a false corpse of Aera. All were destroyed; Aera fell but was revived; Strahd, it seems, counts us a “nuisance”.  
+**Baron Dimitri Krezkov**: A desperate plea to save his wife from a celestial executioner.  
+**The Revenant at the Bridge**: A warning that Vladimir Hornguard’s phantom warriors are watching where we go.
 
 ## Loot:
 
-None this session. (The party discussed gems previously stolen from Ravenloft and their use as components for revival spells).
+None this time. (We talked over the gems taken from Ravenloft and their use as offerings for spells that call back the dead.)
 
 ## Notable NPCs:
 
-**Ismark the Lesser**: Burgomaster of Barovia; relieved to see Ireena’s newfound strength.  
-**Gertruda**: Returned safely to the Village of Barovia.  
-**Emil**: The werewolf rescued from the castle who remains with the party as they head toward the werewolf den.  
-**Baron Dimitri Krezkov**: A noble driven to desperation by the Abbot’s threats.  
-**The Abbot**: A fallen angel residing in the Abbey of Saint Markovia, now a “flesh crafter” obsessed with creating a bride for Strahd.
+**Ismark the Lesser**: Burgomaster of Barovia; relieved to see Ireena’s new strength.  
+**Gertruda**: Brought home safely to the Village of Barovia.  
+**Emil**: The werewolf we rescued from the castle, still with us as we head toward the werewolf den.  
+**Baron Dimitri Krezkov**: A noble driven to despair by the Abbot’s threats.  
+**The Abbot**: A fallen angel in the Abbey of Saint Markovia, now a “flesh crafter” obsessed with making a bride for Strahd.
 
 ## Plot Points:
 
-* **The Abbot’s Demand**: The party has until dusk the following day to prevent the Abbot from taking Anna Krezkova’s heart.
-* **Strahd’s Vengeance**: The ambush confirmed that Strahd is actively targeting party members who “annoyed” him the most in the castle.
-* **Vladimir Hornguard’s Rage**: The Revenants of Argynvostholt are aware of the party’s actions and may be planning a response.
+* **The Abbot’s Demand**: We have until dusk tomorrow to stop the Abbot taking Anna Krezkova’s heart.
+* **Strahd’s Vengeance**: The ambush shows Strahd is going after those of us who “annoyed” him most in the castle.
+* **Vladimir Hornguard’s Rage**: The revenants of Argynvostholt know what we have done and may be planning an answer.
 
 ## Session Highlights:
 
 * **The Honor Guard**: “You’ve got a whole murder of them… actually, it’s called an unkindness. That’s awesome.”
-* **Malron’s Efficiency**: Malron’s Radiance of the Dawn and Spiritual Weapon combo decimated the ambushers, earning him “MVP” status for the encounter.
-* **The Shard’s Wisdom**: The Shard of Divinity providing a detailed history of the Abbot’s descent from a holy healer to a grotesque experimenter.
-* **Olfin’s “Wake-ups”**: Olfin managing his Lay on Hands pool as “35 wake ups” for maximum healing efficiency.
+* **The Shard’s Wisdom**: The Shard of Divinity telling the whole history of the Abbot’s fall from holy healer to grotesque experimenter.
+
+Note: Malron's Radiance of the Dawn and Spiritual Weapon combo earned him "MVP" for the ambush. Crusty's bolt was Lightning Bolt, and Olfin's touch was Lay on Hands, which Olfin runs as "35 wake ups" for maximum healing efficiency.

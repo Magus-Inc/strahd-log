@@ -14,53 +14,63 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Crusty](/wiki/crusty/)
 
 ## Summary:
+We came out of a brutal fight in the catacombs with Rahadin. We had wounded the chamberlain and driven him off, but we were in a bad way. I was nearly dead, and Olfin had barely escaped a final end. We drew back into the safety of a small magic hut and took a short rest to bind our wounds and ready ourselves for our last task in Castle Ravenloft: rescuing the innocent Gertruda.
 
-The session began in the aftermath of a brutal confrontation in the catacombs with Rahadin. While the party had successfully wounded the chamberlain and forced him to retreat, they were left battered; Malron was nearly dead, and Olfin had barely escaped a permanent end. Retreating into the safety of a **Tiny Hut**, the heroes took a much-needed short rest to bind their wounds and prepare for their final objective within Castle Ravenloft: the rescue of the innocent Gertruda. Note: [The group discussed sourdough discard snacks and classic literature like “The Outsiders” while the DM tracked hit dice and short rest mechanics.]
+Note: [The group talked about sourdough discard snacks and classic books like "The Outsiders" while the DM tracked hit dice and short rest mechanics.]
 
-Following the discovery of a discarded slipper on the stairs, the party ascended into the “Rooms of Weeping”. In the King’s Bedchamber, Aera’s keen eyes and lockpicking skills granted them entry into a room of preserved luxury. Above a blazing hearth hung a striking portrait of Tatyana, whose uncanny resemblance to Ireena Kolyana gave the party pause. The portrait depicted her wearing a silver bracelet of the moon and stars—the very same heirloom Olfin had previously recovered for the Vistani girl, Arabelle. Note: [Players debated the significance of the bracelet and the lore of Strahd’s brother, Sergei.]
+Following the slipper we had found on the stairs, we climbed into the Rooms of Weeping. Aera’s sharp eyes and picks got us into the King’s Bedchamber, a room of preserved luxury. Above a blazing hearth hung a striking portrait of Tatyana, so like Ireena Kolyana that we all stopped short. In the painting she wears a silver bracelet of the moon and stars, the very heirloom Olfin once recovered and that went to the Vistani girl, Arabelle.
 
-Pushing further into the bedchamber, they found Gertruda sleeping fitfully beneath silk curtains. Though initially fearful and under the fog of a vampire’s charm, she was snapped back to reality when Olfin cast **Protection from Evil and Good** upon her. Gertruda revealed she had been a “guest” since her disappearance from Barovia village, kept in isolation and tormented by the threats of Strahd’s brides. Note: [The DM and players verified the specific mechanics of the “Charm” effect and the DC 17 Wisdom save required to break it.]
+Note: [Players debated what the bracelet means, and the lore of Strahd's brother, Sergei.]
 
-The rescue was interrupted by the dramatic entrance of Anastrasia, one of Strahd’s brides. Flanked by two wights, she telekinetically slammed the doors shut, demanding the party surrender Gertruda. The parley was short-lived, and a chaotic battle erupted within the bedchamber. Olfin acted as the frontline tank, while Crusty and Aera rained fire and arrows from the wings. The combat took a gruesome turn when Anastrasia sloughed off her skin to reveal her “vampiric abomination” form—a giant, bloated bat-creature. In a moment of desperation, Anastrasia crit Olfin with a savage bite, draining his life force and killing the Paladin instantly. Note: [The table discussed the “Two-Part” nature of the session and the lethality of the “Phase 2” transformation.]
+Deeper in the bedchamber we found Gertruda, sleeping fitfully beneath silk curtains. At first she was fearful and clouded by a vampire’s charm, but when Olfin laid a ward against evil upon her, she came back to herself. She told us she has been a “guest” since she vanished from Barovia village, kept alone and tormented by the threats of Strahd’s brides.
 
-Driven by vengeance and the need to survive, Malron unleashed a flurry of **Scorching Rays**, piercing the monstrosity and burning it from the inside out until it collapsed into ash. With the immediate threat extinguished, Malron immediately utilized a scroll of **Revivify**, fueled by amber teeth provided by Aera, to pull Olfin’s soul back from the brink. Battered but triumphant, the party now prepares to use a teleportation stone to escape the castle with their rescued companion and their gathered artifacts.
+Note: [The DM and players checked how the "Charm" effect works and the DC 17 Wisdom save to break it. The ward was Protection from Evil and Good.]
+
+The rescue was cut short by Anastrasia, one of Strahd’s brides, who swept in with two wights, slammed the doors shut with her mind and demanded we hand over Gertruda. The parley did not last, and the bedchamber erupted into chaos. Olfin held the front while Crusty and Aera rained fire and arrows from the sides. Then it turned gruesome: Anastrasia shed her skin and became a vampiric abomination, a giant bloated bat. In one savage bite she drained Olfin’s life and killed him where he stood.
+
+Note: [The table talked about the "two-part" nature of the fight and how deadly the "Phase 2" transformation was. Anastrasia's bite was a crit.]
+
+For vengeance and for our lives I loosed ray after ray of fire into the monster, burning it from the inside out until it fell to ash. The moment it was over I read a scroll to call Olfin back, with amber teeth from Aera as the offering, and pulled his soul back from the brink. Battered but victorious, we now make ready to use a traveling stone to escape the castle with Gertruda and the relics we have gathered.
+
+Note: Malron's rays were Scorching Ray; the scroll was Revivify.
 
 ## Key Locations:
 
-**The Catacombs (K21/K83)**: The site of the previous battle with Rahadin. The party successfully avoided thirty skeletons by choosing not to explore every tomb.
+**The Catacombs (K21/K83)**: Where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
 
-**The Rooms of Weeping (Map 5)**: A desolate and atmospheric section of the castle containing the King’s Bedchamber.
+**The Rooms of Weeping (Map 5)**: A desolate, brooding part of the castle that holds the King’s Bedchamber.
 
-**King’s Bedchamber (K56)**: A lavishly furnished room with a blazing fireplace, an extensive library of military strategy, and the portrait of Tatyana.
+**King’s Bedchamber (K56)**: A lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
 
 ## Encounters:
 
-**The Rescue of Gertruda (Social/Investigation)**: Aera picked the lock to the bedchamber, and the party successfully convinced Gertruda of their intent to save her. Olfin utilized divine magic to break Strahd’s charm.
+**The Rescue of Gertruda**: Aera picked the lock to the bedchamber, and we convinced Gertruda we meant to save her. Olfin’s prayer broke Strahd’s charm.
 
-**Ambush at the Bedchamber (Combat)**: The party faced Anastrasia (Vampire Bride) and two wights.
+**Ambush at the Bedchamber**: Anastrasia, a vampire bride, and two wights.
 
-* **Outcome**: Both wights were destroyed. Anastrasia was slain after transforming into a bat-abomination. Olfin Darning was killed in combat but subsequently revivified.
+* **Outcome**: Both wights were destroyed. Anastrasia was slain after becoming a bat-abomination. Olfin Darning was killed in the fight, and I brought him back.
 
 ## Loot:
 
-None this session. (The party spent amber teeth worth 300gp as components for the **Revivify** spell).
+None this time. (We spent amber teeth worth 300gp as components for the **Revivify** spell.)
 
 ## Notable NPCs:
 
-**Gertruda**: The daughter of Mary from Barovia village. She was naive but courageous, having been lured to the castle by Strahd under the guise of reparations for her village.
+**Gertruda**: The daughter of Mary of Barovia village. Naive but brave; Strahd lured her to the castle with talk of making amends to her village.
 
-**Anastrasia**: A vampire bride of Strahd. She was sophisticated and mocking until driven to her monstrous bat form. She was killed by Malron’s **Scorching Ray**.
+**Anastrasia**: A vampire bride of Strahd. Elegant and mocking until she was driven to her monstrous bat form. I burned her to ash.
 
-**Rahadin**: (Mentioned) Strahd’s chamberlain who fled the previous encounter.
+**Rahadin**: (Mentioned) Strahd’s chamberlain, who fled our last fight.
 
 ## Plot Points:
 
-* **The Face of Tatyana**: The party confirmed the extreme likeness between Ireena and the historical Tatyana, explaining Strahd’s obsession.
-* **The Silver Bracelet**: The confirmation that Tatyana’s bracelet in the portrait is the same one recovered in the village.
-* **The Brides’ Fate**: Two of the three brides (including Volenta and now Anastrasia) have been dealt with.
+* **The Face of Tatyana**: Ireena is the very likeness of Tatyana, which explains Strahd’s obsession.
+* **The Silver Bracelet**: The bracelet in Tatyana’s portrait is the same one recovered in the village.
+* **The Brides’ Fate**: Two of the three brides, Volenta and now Anastrasia, are done with.
 
 ## Session Highlights:
 
-* **The Chair Master**: “She’s better with the chairs than she was with the sword,” remarked the party after Anastrasia telekinetically battered Olfin with a piece of furniture.
-* **Divine Intervention**: Malron’s quick use of the **Revivify** scroll saved the party from a permanent loss.
-* **The “Riz” Factor**: “He’s got Riz,” the players joked about the Paladin’s high persuasion roll to convince Gertruda to follow them.
+* **The Chair Master**: “She’s better with the chairs than she was with the sword,” someone said after Anastrasia battered Olfin with a piece of furniture flung by her mind.
+* **Called Back**: My quick reading of the scroll that spared us a permanent loss.
+
+Note: The "Riz" factor: "He's got Riz," the players joked about the Paladin's high persuasion roll to convince Gertruda to follow them.
