@@ -5,8 +5,16 @@ aliases:
 - Test Pool
 - Tser pool
 summary: A lake west of Barovia village where Madam Eva's Vistani camp sits.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+Madam Eva came to each of us in a dream and asked us to find her at Tser Pool ([Rest for the Wicked](/posts/rest-for-the-wicked/)). Ismark said it was two hours west of the village ([Leaving Village Barovia](/posts/leaving-village-barovia/)). On the way we found the ancient oak, met Strahd and his wolves on the road, and fought a strix; then we found five tents, wagons and a great tent by a lake ([Leaving Village Barovia](/posts/leaving-village-barovia/), [We meet again for the first time...](/posts/we-meet-again-for-the-first-time/)).
+
+Stanimir welcomed us. Madam Eva read our fortunes in five Tarokka cards, which have guided us ever since. Around the fire we traded tales, met Eliza and Arturi Vedonavich, and heard van Richten's study of werewolves read aloud. In the morning Madam Eva sent Aera to buy a toy for her grandchild Arabelle ([Tser Pool](/posts/tser-pool/)). We passed the pool again on the road north ([Dream Pies](/posts/dream-pies/)).
 
 <!-- from-the-log -->
 ## From the adventure log
