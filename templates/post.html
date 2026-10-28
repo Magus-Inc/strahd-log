@@ -64,10 +64,10 @@
 {% if post.slides %}
   <script>
   (function () {
-    // Slide deck: show which slide is in view, tap a slide to fill the screen, Esc or tap again to close.
+    // Slide deck: arrows step through it, tap a slide to fill the screen, Esc or tap again to close.
     var deck = document.querySelector(".deck");
     if (!deck) return;
-    var strip = deck.querySelector(".deck-strip"), count = deck.querySelector(".deck-count");
+    var strip = deck.querySelector(".deck-strip");
     var slides = strip.querySelectorAll("li"), current = 0;
     var close = document.createElement("button");
     close.className = "deck-close"; close.type = "button"; close.setAttribute("aria-label", "Close slides");
@@ -83,14 +83,18 @@
       strip.parentNode.appendChild(b);
       arrows[a[0]] = b;
     });
+    // Where each slide starts in the strip, measured rather than assumed from the strip's width.
+    function at(i) { return slides[i].offsetLeft - slides[0].offsetLeft; }
     function update() {
-      current = Math.round(strip.scrollLeft / strip.clientWidth);
-      count.textContent = (current + 1) + " / " + slides.length;
+      var best = 0;
+      for (var i = 1; i < slides.length; i++)
+        if (Math.abs(at(i) - strip.scrollLeft) < Math.abs(at(best) - strip.scrollLeft)) best = i;
+      current = best;
       arrows.prev.hidden = current === 0;
       arrows.next.hidden = current === slides.length - 1;
     }
     function go(i, smooth) {
-      var left = Math.max(0, Math.min(slides.length - 1, i)) * strip.clientWidth;
+      var left = at(Math.max(0, Math.min(slides.length - 1, i)));
       if (smooth && strip.scrollTo) strip.scrollTo({left: left, behavior: "smooth"});
       else strip.scrollLeft = left;
     }
@@ -101,9 +105,6 @@
       go(at);
       if (open) close.focus();
     }
-    var hint = deck.querySelector(".deck-hint");
-    if (hint && window.matchMedia("(hover: hover) and (pointer: fine)").matches)
-      hint.textContent = " \u00b7 use the arrows, or click a slide to enlarge";
     strip.addEventListener("scroll", update, {passive: true});
     update();
     strip.addEventListener("click", function (e) { if (e.target.tagName === "IMG") toggle(!deck.classList.contains("open")); });
