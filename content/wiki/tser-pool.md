@@ -10,6 +10,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Tser Pool at dusk: a dark lake with a Vistani camp and a glowing tent on the shore](/images/tser-pool-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Madam Eva came to each of us in a dream and asked us to find her at Tser Pool ([Rest for the Wicked](/posts/rest-for-the-wicked/)). Ismark said it was two hours west of the village ([Leaving Village Barovia](/posts/leaving-village-barovia/)). On the way we found the ancient oak, met Strahd and his wolves on the road, and fought a strix; then we found five tents, wagons and a great tent by a lake ([Leaving Village Barovia](/posts/leaving-village-barovia/), [We meet again for the first time...](/posts/we-meet-again-for-the-first-time/)).

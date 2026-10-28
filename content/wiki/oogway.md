@@ -8,6 +8,12 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Oogway, a turtle wizard bladesinger, with his sword raised on a misty lakeshore](/images/oogway-ai.jpg)
+
+![Oogway, a turtle wizard bladesinger, with his sword raised on a misty lakeshore](/images/oogway-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 A Wizard Bladesinger, Oogway is a turtle who emerged mysteriously from a serene lake. Known for their serene wisdom and formidable combat magic, Oogway wields their blade with grace and precision. Despite their slow movements on land, Oogway’s mind is lightning-fast, and they have a penchant for philosophizing at the most unexpected moments.
 
 <!-- from-the-log -->

@@ -11,6 +11,12 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/madam
 
 ## Description
 
+![Madam Eva, an old Vistani seer, laying out cards in her candlelit tent](/images/madam-eva-ai.jpg)
+
+![Madam Eva, an old Vistani seer, laying out cards in her candlelit tent](/images/madam-eva-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 An old Vistani seer. She came to each of us in a dream and called us to Tser Pool ([Rest for the Wicked](/posts/rest-for-the-wicked/)). There she read our fortunes in five Tarokka cards, which have guided us ever since, and told us Strahd leaves her alone because he fears her sight of the future. She sent Aera to buy a toy for her granddaughter Arabelle ([Tser Pool](/posts/tser-pool/)). Strahd later told us Madam Eva gives him information, and Muriel said he had a reading from her before we did ([Stop Winter Splinter](/posts/stop-winter-splinter/), [Welcome to Krezk](/posts/welcome-to-krezk/)). Katarina's letter at the ancient oak, and the Seer card Varushka left us, tell of her past and a love she lost ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/), [Varushka's Key](/posts/varushkas-key/)).

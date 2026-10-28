@@ -10,6 +10,12 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 The guards at Vallaki's gate pointed us here, with its sign of a blue waterfall and its meat pie. Irwin keeps the bar and is married to Danica, who runs the inn; we met the showman Rictavio and the boys Brom and Bray on our first night ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/)). Rictavio turned out to be Rudolph van Richten, and we found him in his room upstairs ([Finding Arabelle!](/posts/finding-arabelle/)).

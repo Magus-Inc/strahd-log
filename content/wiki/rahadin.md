@@ -10,6 +10,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Strahd's chamberlain, a dusk elf. Kasimir told us Rahadin betrayed his own people to King Barov, shattered Erevan's blade and killed his family ([A doll for Arabelle](/posts/a-doll-for-arabelle/)). He rode into Vallaki on a phantom steed with Strahd's dinner invitation, and judged Milivoj and Heinrich in the square, leaving their fates to chance after Shabasta's plea ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/), [Helping Victor](/posts/helping-victor/)).

@@ -11,6 +11,12 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Vallaki, a walled town on a misty lakeshore with refugee tents outside the gate](/images/vallaki-ai.jpg)
+
+![Vallaki, a walled town on a misty lakeshore with refugee tents outside the gate](/images/vallaki-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Vallaki is a walled town a long day's walk west of the village of Barovia, and when the village was besieged some of its people fled there ([Barovia, Barovia](/posts/barovia-barovia/)). The road ends at iron gates hung with wolves' heads. Refugees who were never let in camp outside the walls, many of them lost to dream pastries ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/)).

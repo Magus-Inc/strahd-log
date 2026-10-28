@@ -14,6 +14,12 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Strahd on a misty forest road at night with two dire wolves](/images/strahd-von-zarovich-ai.jpg)
+
+![Strahd on a misty forest road at night with two dire wolves](/images/strahd-von-zarovich-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 The lord of Barovia, a vampire, and our host, tormentor and quarry. His letter in Durst Manor was the first we knew of him ([Finishing the Manor?](/posts/finishing-the-manor/)). He first met us on the road to Tser Pool with seven dire wolves, called out to Ireena where she hid, and let her stay with us a while longer. He said he found us curious and would study us ([We meet again for the first time...](/posts/we-meet-again-for-the-first-time/)).

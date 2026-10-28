@@ -10,6 +10,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![The Wizard of Wines winery among misty vineyards, blights lurking at the edge](/images/wizard-of-wines-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 We found its wine in Durst Manor before we knew the place ([Entering Durst Manor](/posts/entering-durst-manor/)). The Martikovs make it, and the Blue Water Inn drinks it. When a shipment came sixteen days late, Irwin sent us with Muriel Winshaw to find his father, Davien ([Act 3: The Broken Land](/posts/act-3-the-broken-land/)).
