@@ -22,7 +22,7 @@ A tabaxi monk from the party's early days, quick, curious and hard to keep out o
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Moved the snarling stuffed wolf and found Lady Lovina Wachter's invitation in a coat closet. ([Entering Durst Manor](/posts/entering-durst-manor/))
+* Moved the snarling stuffed wolf and found Lady Fiona Wachter's invitation in a coat closet. ([Entering Durst Manor](/posts/entering-durst-manor/))
 * Broke a mirror after seeing Elisabeth Durst's apparition and kept a shard; was knocked out by the creature in the basement. ([Finishing the Manor?](/posts/finishing-the-manor/))
 * Raised the portcullis and broke a window so the party could escape the collapsing manor. ([Walter, we are coming for you!](/posts/walter-we-are-coming-for-you/))
 * Scouted through the looping fog on a rope to find the fourth marked tree. ([Barovia, Barovia](/posts/barovia-barovia/))

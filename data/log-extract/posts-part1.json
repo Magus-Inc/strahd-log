@@ -36,7 +36,7 @@
     "aliases": ["Scholpkht", "Schloptk"],
     "summary": "A sneaky party member who often scouts ahead and tries clever ruses.",
     "facts": [
-      {"text": "Moved the snarling stuffed wolf and found Lady Lovina Wachter's invitation in a coat closet.", "post": "2023-11-28-entering-durst-manor"},
+      {"text": "Moved the snarling stuffed wolf and found Lady Fiona Wachter's invitation in a coat closet.", "post": "2023-11-28-entering-durst-manor"},
       {"text": "Broke a mirror after seeing Elisabeth Durst's apparition and kept a shard; was knocked out by the creature in the basement.", "post": "2024-01-09-finishing-the-manor"},
       {"text": "Raised the portcullis and broke a window so the party could escape the collapsing manor.", "post": "2024-01-30-walter-we-are-coming-for-you"},
       {"text": "Scouted through the looping fog on a rope to find the fourth marked tree.", "post": "2024-02-13-barovia-barovia"},
@@ -197,12 +197,12 @@
     ]
   },
   {
-    "name": "Lady Lovina Wachter",
+    "name": "Lady Fiona Wachter",
     "type": "npc",
     "aliases": [],
-    "summary": "A guest invited to the Durst Mill anniversary celebration.",
+    "summary": "",
     "facts": [
-      {"text": "An invitation addressed to her fell from a coat in Durst Manor.", "post": "2023-11-28-entering-durst-manor"}
+      {"text": "An invitation to the Durst Mill anniversary, addressed to her, fell from a coat in Durst Manor.", "post": "2023-11-28-entering-durst-manor"}
     ]
   },
   {
