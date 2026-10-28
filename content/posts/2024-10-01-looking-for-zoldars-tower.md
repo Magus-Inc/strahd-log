@@ -7,25 +7,24 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ---
 
 **Seeking Zoldar**  
-Our journey began with a mission: find Zoldar to guide us to the tower holding the legendary Staff of Kazan. Along the way, we stumbled upon a decrepit shack and an old stone slab.
+We set out to find Zoldar, who could guide us to the tower that holds the legendary Staff of Kazan. Along the way we came upon a decrepit shack and an old stone slab.
 
 **Zoldar and Yvgeny**  
-In the shack, we encountered Zoldar and his brother, Yvgeny. Amidst our introductions, Aera purchased a wolf pelt for 50 gold pieces, only to discover it was glamour weave—a rare and magical material.
+In the shack we met Zoldar and his brother, Yvgeny. Aera bought a wolf pelt from them for fifty gold pieces and found it was glamour weave, a rare and magical cloth.
 
 **The Ancient Monument**  
-Before departing, we inspected the stone slab, an ancient monument dedicated to the Dreamer and the Ladies Three. We were warned of a werewolf pack prowling the area, led by a new, reckless alpha.
+Before we left, we looked over the stone slab, an ancient monument to the Dreamer and the Ladies Three. The brothers warned us that a werewolf pack prowls the area, led by a new and reckless alpha.
 
-**River Discovery**  
-By a river, we found a piece of cloth with the initials RVR. We speculated it might belong to Rudolf Van Richten, a name of interest.
+**By the River**  
+By a river we found a scrap of cloth with the initials RVR. Rudolf van Richten, perhaps, a name that keeps following us.
 
-**Crossroads Encounter**  
-Arriving at a crossroads, we faced two ominous scarecrows and a broken signpost. Zoldar shared tales of the scarecrows roaming the countryside. Taking no chances, Aera peppered the scarecrows with arrows, triggering an ambush by twig blights. After a fierce battle, we emerged victorious.
+**The Crossroads**  
+At a crossroads stood two ominous scarecrows and a broken signpost. Zoldar told us tales of scarecrows that roam the countryside. Aera took no chances and peppered them with arrows, which sprang an ambush of twig blights. It was a fierce fight, but we won it.
 
-**The Tower of Kazan and Its Mysteries**  
-Our path led us to a tower nestled in the woods by a lake. A vibrant Vistani wagon, adorned in purple and gold paint, sat at the tower’s base. The sign warned us: “Keep out, home and property of Esmeralda dasramir. Trespassers will be incinerated.” Shabasta discovered wolf tracks near the wagon, along with a second set of tracks leading into the woods, ending in a hollow filled with white and yellow paint
+**The Tower of Kazan**  
+Our path led to a tower in the woods beside a lake. A bright Vistani wagon, painted purple and gold, sat at its base, with a sign: “Keep out, home and property of Esmeralda dasramir. Trespassers will be incinerated.” Shabasta found wolf tracks near the wagon, and a second set of tracks leading into the woods and ending in a hollow full of white and yellow paint.
 
 **Unlocking the Tower**  
-The tower door, marked with a red seal and the name Kazan, had no handles. Olfin deciphered the pattern on the signet ring, successfully tracing the lines and pressing the buttons on the seal, unlocking the door.
+The tower door had no handles, only a red seal bearing the name Kazan. Olfin worked out the pattern on the signet ring, traced its lines on the seal and pressed the right places, and the door opened.
 
-With the tower’s entrance open, our adventure continues…
-
+The way into the tower stands open.

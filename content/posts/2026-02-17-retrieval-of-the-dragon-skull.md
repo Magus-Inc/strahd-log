@@ -5,75 +5,68 @@ slug: retrieval-of-the-dragon-skull
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/retrieval-of-the-dragon-skull
 ---
 
-# Adventure Log: Retrieval of the Dragon Skull
+# Retrieval of the Dragon Skull
 
-The strategic viability of this fellowship within the oppressive hegemony of Castle Ravenloft rests upon their ability to leverage radiant purification against the castle’s regenerative horrors. In an environment defined by high-lethality traps and vertical hazards, the party’s composition—a Cleric, Bard, Rogue, and Wizard/Fighter hybrid—provides the essential tools for survival. The necessity of Radiant damage and Holy Water to halt the rapid mending of undead flesh cannot be overstated; without Malron’s divine focus or the group’s tactical coordination, the attrition of the castle would have long ago claimed their lives.
+## Characters:
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Shabasta](/wiki/shabasta/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
-* **Aera shan Ravanór**: Elf / Rogue / Stealth & Front-line DPS / Present
-* **Shabasta**: Unknown Race / Bard / Social Control & Support / Present
-* **Malron Lichtstrahl**: Unknown Race / Cleric / Radiant Specialist & Healer / Present
-* **Krusty**: Unknown Race / Wizard-Fighter Hybrid / Arcane Utility & AoE / Present
+In this castle the dead mend themselves as fast as we can cut them, and only radiance and holy water stop the mending. Without Lathander’s light, and without the four of us working as one, Ravenloft would have worn us down long ago.
 
-Having recently emerged from the lower servant tiers, the heroes began this session by weighing the risks of the blood-stained path ahead against the secrets hidden within the upper domestic quarters.
+We had just come up out of the lower servants’ halls, and we began by weighing the bloodstained path ahead against whatever the upper household rooms might hide.
 
-## Narrative Summary: The Crawl Through the Servants’ Quarters
+## Summary: The Crawl Through the Servants’ Quarters
 
-The infiltration moved into the “above stairs” servant areas, a sector of domestic decay that offered a momentary, if claustrophobic, respite from the grander horrors of the keep. The party navigated these halls with a heavy focus on investigative thoroughness, seeking the “back doors” used by the castle’s living staff to bypass the Master’s more treacherous defenses.
+We went into the servants’ rooms “above stairs”, a place of household decay that gave us a moment’s cramped rest from the keep’s grander horrors. We searched them thoroughly, hunting for the back ways the living staff use to get around their master’s worse defenses.
 
-**Phase 1: The Secret Path.** Upon entering K-24, the party encountered a chamber strewn with the splintered remains of furniture. A towering wardrobe, coffin-like in its silhouette and painted with mocking fey creatures, stood as a centerpiece. Aera’s investigation of a full-length mirror revealed that the glass had been frequently “lifted and moved around a little bit,” betraying a hidden passage. Inside the wardrobe, a yellowed dress animated in a brief, macabre dance before collapsing into a heap upon Sibasa’s touch. Behind the mirror, the party discovered a secret closet and a wooden ladder ascending twenty feet to a concealed landing.  
-Note: [Meta details: The players discussed the use of physical NFC cards—originally repurposed from a Nintendo Switch game—to serve as spellbook cards for the Arcane Trickster, simplifying the management of the “thief that tricks.”]
+**The Secret Path.** In K-24 the room was strewn with splintered furniture. In the middle stood a towering wardrobe, shaped like a coffin and painted with mocking fey creatures. Aera looked over a full-length mirror and saw it had often been lifted and moved a little, which gave away a hidden passage. Inside the wardrobe a yellowed dress rose and danced a brief, ghastly dance, then fell into a heap when Shabasta touched it. Behind the mirror was a secret closet and a wooden ladder climbing twenty feet to a hidden landing.
 
-**Phase 2: The Tower & The Heart.** The ladder led to K-20, a landing that offered a dizzying perspective of the Heart of Sorrow. A massive, pulsating red crystal heart hung suspended within a hollow tower, 65 feet wide at its base. A spiral staircase with no railings ascended the tower walls, shivering under the environmental hazard of the storm’s rumbling thunder, which threatened to knock the precarious explorers into the abyss. Recognizing the Heart as a potential “Achilles Heel” for the castle but fearing the vertical risk, the party performed a tactical retreat, resetting the secret door and following the blood trail toward the kitchens.
+Note: Meta details: the players talked about using physical NFC cards, repurposed from a Nintendo Switch game, as spellbook cards for the Arcane Trickster, to make the "thief that tricks" easier to run.
 
-**Phase 3: The Ambush.** In the larder level (K-62), the party encountered the misshapen Cyrus Belview, a servant related to the abominations of the Saint Marcovia Abbey. Cyrus greeted the party with a weary, eerie familiarity, requesting the retrieval of his “favorite cooking spoon” from the nearby ossuary. However, as the party moved, a crystal dinner bell rang out near the elevator shaft—the signal for “dinner” to be served. Two Vampire Spawns dropped from the ten-foot ceiling in a violent ambush. The ensuing conflict forced Malron and Aera onto the elevator’s moving counterweights, requiring a series of desperate leaps to maintain their positioning.  
-Note: [Meta details: Rule clarifications arose regarding the 2024 vs. 2014 casting rules for Misty Step as a bonus action, as well as the mechanics of maintaining a grapple while being dragged into an elevator shaft.]
+**The Tower and the Heart.** The ladder brought us to K-20, a landing with a dizzying view of the Heart of Sorrow: a huge, pulsing red crystal heart hanging in a hollow tower sixty-five feet across at the base. A spiral stair with no railing climbs the tower walls, and it shivered with the storm’s thunder as though it meant to shake us off into the pit. The Heart may be the castle’s one weak point, but the climb was too great a risk. We withdrew, closed the secret door behind us, and followed the blood trail toward the kitchens.
 
-**Phase 4: The Hall of Bones.** After purging the spawns, the party entered K-67, the Hall of Bones. The ossuary’s macabre architecture utilized human remains as both decoration and furniture. Mounted above the eastern doors was the Dragon Skull of Argynvost. While Aera secured the spoon from the hand of a bone chair, Krusty utilized **Reduce** to manage the skull’s 250lb weight. Through a synchronized exertion of four **Mage Hands**, the party lowered the artifact into their Chest of Holding. The heist triggered a room-sealing trap, and mounds of bones in the corners began to knit together into skeletal sentinels.
+**The Ambush.** On the larder level (K-62) we met the misshapen Cyrus Belview, kin to the poor souls at the Abbey of Saint Markovia. He greeted us with a weary, eerie familiarity and asked us to fetch his favorite cooking spoon from the ossuary nearby. But as we moved, a crystal dinner bell rang by the elevator shaft, the signal that dinner was served, and two vampire spawn dropped from the ten-foot ceiling on us. In the fight Aera and I were forced onto the elevator’s moving counterweights and had to leap again and again to keep our footing.
 
-## Strategic Analysis of Key Locations
+Note: Meta details: rules questions came up about Misty Step as a bonus action under the 2024 and 2014 rules, and about keeping a grapple while being dragged into an elevator shaft.
 
-The environmental hazards of this sector serve as both a physical and psychological gauntlet, emphasizing the morbid obsession of the castle’s architect.
+**The Hall of Bones.** With the spawn destroyed, we went into K-67, the Hall of Bones, where human remains serve as both ornament and furniture. Over the eastern doors hung the skull of Argynvost. Aera took the spoon from the hand of a bone chair, and Krusty shrank the skull, which weighs some two hundred and fifty pounds. Four conjured hands together lowered it into our Chest of Holding. Taking it sprang a trap that sealed the room, and the mounds of bones in the corners began to knit themselves into skeletal sentries.
 
-* **K-24 Servants’ Quarters:** Beyond its filth-smeared windows lies a vital tactical “back door.” The discovery of the secret door behind the mirror allows the party to bypass the heavily patrolled main hallways of the count’s residence.
-* **The Heart of Sorrow Tower:** A focal point of the castle’s power. It is clearly the “Achilles Heel” of Ravenloft’s defenses, though the lack of railings and the thunderous vibrations of the storm make it a high-risk combat zone where gravity is as much a foe as any undead.
-* **The Kitchens/Larder (K-62/63):** A rare social transition zone. The presence of Cyrus Belview provides a tenuous foothold in the castle’s internal hierarchy, though his loyalties remain as warped as his frame.
-* **K-67 The Hall of Bones (Ossuary):** This vaulted chamber represents a profound psychological blow; seeing the remains of the noble Argynvost used as common furniture highlights the depth of the Count’s desecration. Strategically, the room is a “kill-box” designed to seal intruders inside once the artifacts are disturbed.
+## Key Locations:
 
-## Encounter Debrief: The Undead Resistance
+* **K-24 Servants’ Quarters:** Beyond its filthy windows lies a valuable back door. The secret door behind the mirror lets us avoid the well-patrolled main halls of the Count’s home.
+* **The Heart of Sorrow Tower:** The heart of the castle’s power, and surely its weak point, though with no railing and the storm shaking the stair, a fall there is as deadly as any undead.
+* **The Kitchens and Larder (K-62/63):** A rare place to talk rather than fight. Cyrus Belview gives us a small foothold among the castle’s household, though his loyalties are as twisted as his body.
+* **K-67 The Hall of Bones (Ossuary):** It was a blow to the heart to see the noble Argynvost’s remains used as common furnishing, so deep is the Count’s desecration. And the room is a trap, built to seal in anyone who disturbs what it holds.
 
-The party successfully navigated two distinct tiers of undead threats, balancing high-burst single-target damage with crowd control.
+## Encounters:
 
-**Vampire Spawn Ambush (Social/Combat):** Triggered by the ringing of the crystal dinner bell, this encounter tested the party’s situational awareness. The spawns attempted to grapple and isolate party members within the elevator shaft. The threat was neutralized by the use of Radiant damage and Aera’s Holy Water, which effectively halted the spawns’ regeneration. Aera’s lethal efficiency with a kitchen meat cleaver provided the final, gruesome end to the hunters.
+**The Vampire Spawn Ambush:** The crystal dinner bell brought them down on us. They tried to seize us and drag us apart into the elevator shaft. Radiance and Aera’s holy water stopped their mending, and Aera finished them with a kitchen meat cleaver.
 
-**The Skeleton Siege (Combat/Puzzle):** This was a triggered response to the removal of the Dragon Skull. While the party successfully bypassed weight triggers through **Mage Hand** and **Enlarge/Reduce**, the room’s internal sensors sealed the exit. The party achieved a tactical breakthrough when they discovered that fire damage (Fireball and Firebolt) applied to the bone mounds in the corners halted the reanimation process entirely, preventing a limitless horde from overwhelming them.
+**The Skeleton Siege:** The room answered the taking of the skull. We had slipped past its weight triggers with conjured hands and shrinking magic, but still it sealed the doors. Then we found that fire laid on the bone mounds in the corners stopped them raising more skeletons, and so we were not buried under an endless horde.
 
-## Itemized Loot and Artifact Recovery
+## Loot:
 
-The recovery of these items marks a significant shift in the party’s quest to restore the Silver Order.
+* **The Dragon Skull (Argynvost’s Skull):** An artifact of great spiritual and physical weight (250 lbs). Shrunk by magic and stored in the Chest of Holding. Returning it to Argynvostholt is one of our chief goals.
+* **Cyrus’s Favorite Cooking Spoon:** A small household thing, taken from the “hand” of a bone chair. Its worth is in keeping Cyrus Belview friendly.
+* **Inspiration Coin:** Awarded to Aera for flawless stealth that kept the castle guards from sounding an early alarm.
 
-* **The Dragon Skull (Argynvost’s Skull):** An artifact of immense spiritual and physical weight (250 lbs). Shrunk via arcane means and stored in the Chest of Holding, its eventual return to Argynvostholt remains a primary campaign goal.
-* **Cyrus’s Favorite Cooking Spoon:** A minor domestic item recovered from the “hand” of a bone chair. Its value is social, serving as the “currency” required to maintain Cyrus Belview’s cooperation.
-* **Inspiration Coin:** Awarded to Aera for her flawless execution of stealth maneuvers that prevented the castle guards from sounding an early alarm.
+## Notable NPCs:
 
-## Notable NPCs and Revelations
+**Cyrus Belview**  
+A hunchbacked, misshapen man with a wary familiarity, one of the Belview family we saw at the Abbey. He is the castle’s cook and cares more for his dinner guests than for his master’s grand designs. When we dissolved vampire spawn in his cauldron he cried, “You’ve ruined my dinner!” His world is twisted, but small kindnesses may sway him.
 
-The strategic landscape has shifted with the introduction of a new, albeit unstable, informant within the castle walls.
+**What we learned:**
 
-**NPC Profile: Cyrus Belview**  
-A hunchbacked abomination with a “wary familiarity,” Cyrus is a member of the Belview family seen at the Abbey. As the castle’s cook, he is more concerned with his “dinner guests” than the Master’s grand designs. His reaction to the party dissolving vampire spawn in his cauldron —“You’ve ruined my dinner!“—suggests a twisted worldview that can be manipulated through domestic favors.
+* **The Heart is exposed:** The Heart of Sorrow is a central and vulnerable source of power, though it hangs somewhere dangerous to reach.
+* **The Silver Order desecrated:** Seeing Argynvost’s remains used to decorate a room has hardened our resolve to cleanse this castle.
 
-**Key Revelations:**
+## Session Highlights:
 
-* **The Heart’s Precariousness:** The party has identified the Heart of Sorrow as a central, vulnerable power source, noting its dangerous vertical mounting.
-* **Desecration of the Silver Order:** The confirmation that Argynvost’s remains were being used for morbid interior decoration has served to galvanize the party’s resolve to purge the castle.
+* **Aera’s Meat Cleaver:** The weapon she chose for the last blows on the vampire spawn in the kitchen.
+* **The Four Hands:** Four spectral hands working together to lift the skull from its mounting as neatly as any thief.
 
-## Session Highlights and Epilogue
+Note: Shabasta's nickname went from "Shipnasty" to "Shouldnasty", in honor of the bard's decisions. The four-way Mage Hand was a "Mission Impossible" lift of the 250 lb skull. And Shabasta threw Vicious Mockery at mounds of bone that have no ears.
 
-The session was characterized by a distinct Ravenloft tone—alternating between the dread of the Heart of Sorrow and the absurd “meta” humor of the fellowship.
-
-* **“Shipnasty” vs. Shouldnasty** The evolution of Shabasta’s nickname, reflecting the chaotic energy of the Bard’s tactical decisions.
-* **The Four-Way Mage Hand:** A masterpiece of coordination, where four spectral hands worked in unison to “Mission Impossible” the 250lb skull from its mounting.
-* **Aera’s Meat Cleaver:** The Rogue’s thematic choice of weaponry to deliver the final blows to the Vampire Spawns in the kitchen area.
-* **Vicious Mockery of the Mounds:** Shabasta’s verbal barbs against the earless mounds of bone, proving that even in a crypt, a good insult has its place.
-
-As the fires in the corners died down and the last of the skeletons crumbled, the party stood triumphant in the Hall of Bones. However, with the steel-banded doors still sealed and the Master’s attention surely drawn, the path to escape the ossuary remains as perilous as the climb to the Heart above.
+As the fires in the corners died and the last skeletons crumbled, we stood victorious in the Hall of Bones. But the steel-banded doors are still sealed, the master’s attention is surely on us now, and the way out of the ossuary is as perilous as the climb to the Heart above.

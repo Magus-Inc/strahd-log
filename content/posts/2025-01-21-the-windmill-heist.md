@@ -15,41 +15,40 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
-
-The party infiltrates a windmill occupied by hags to rescue kidnapped children and retrieve a powerful contract. They successfully free the children, obtain the contract, and engage in a fierce battle with the hags.
+We stole into the windmill where the hags live to rescue the children they took and to seize their contract. We freed the children, took the contract, and fought the hags hard.
 
 ## Key Locations:
 
-**The Windmill**: A decrepit windmill where the hags reside. The party encounters various traps and obstacles while navigating the windmill.
+**The Windmill**: A decrepit windmill, the hags’ home, full of traps and obstacles.
 
 ## Encounters:
 
-**Social**: Shabasta and Olfin negotiate with the hags to gain entry into the windmill under the guise of starting a business together.
+**The bargain at the door**: Shabasta and Olfin talked our way inside, posing as would-be business partners of the hags.
 
-**Combat**: The party engages in a battle with the hags after rejecting their offer to borrow a heartstone. The hags attempt to bargain for their lives, but the party continues to attack until they are defeated.
+**The fight**: The hags offered to lend us a heartstone. We refused and fell on them. They begged and bargained for their lives, but we kept on until they were beaten.
 
 ## Loot:
 
-**Six pieces of cheap jewelry**: Each worth 25 gold pieces, obtained by Gumbo.
+**Six pieces of cheap jewelry**: Each worth 25 gold pieces, found by Gumbo.
 
-**Charm of Mass Heroism**: Grants the benefit of a potion of heroism to any number of creatures within 30 feet, obtained by Gumbo.
+**Charm of Mass Heroism**: Grants the benefit of a potion of heroism to any number of creatures within 30 feet, found by Gumbo.
 
 ## Notable NPCs:
 
-**Lady Fiona**: Assists the party by translating the contract written in Abyssal and starting the binding circle to trap the hags.
+**Lady Fiona**: Translated the contract, written in Abyssal, and began the binding circle to trap the hags.
 
-**Victor**: Provides counter spells to maintain the binding circle.
+**Victor**: Worked counter spells to hold the binding circle.
 
 ## Plot Points:
 
-The party discovers the true names of the hags: Morgantha Stormreaver, Belladonna Sunbane, and Offalia Wormwiggle. They use this information to bind and defeat the hags.
+We learned the hags’ true names, Morgantha Stormreaver, Belladonna Sunbane and Offalia Wormwiggle, and used them to bind and defeat them.
 
 ## Session Highlights:
 
-* Shabasta and Olfin’s successful negotiation to gain entry into the windmill.
+* Shabasta and Olfin talking our way into the windmill.
 
-* The rogues’ clever use of mage hand to secure a rope and climb the tower.
+* Our rogues securing a rope with a conjured hand and climbing the tower.
 
-* Gumbo’s discovery of the hags’ contract and the charm of mass heroism.
+* Gumbo finding the hags’ contract and the charm of mass heroism.
 
-* The intense battle with the hags and the party’s refusal to accept their bargains.
+* The fierce fight with the hags, and our refusal of every bargain.

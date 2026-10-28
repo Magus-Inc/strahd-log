@@ -5,27 +5,27 @@ slug: deeper-into-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/deeper-into-the-manor
 ---
 
-Heading up to the third floor the party arrived in a dusty room with a suit of black plate armor. Oil lamps and woodland beasts and leaves decorate the wall. Suddenly the suit of armor starts moving towards [Olfin Darning](/wiki/olfin-darning/) attempting to shove him over the rail. Olfin was able to ward off the first attack.
+We climbed to the third floor and came into a dusty room with a suit of black plate armor. Oil lamps, woodland beasts and leaves decorate the walls. Suddenly the armor lurched toward [Olfin Darning](/wiki/olfin-darning/) and tried to shove him over the rail. Olfin held off that first attack.
 
-After a tough fight the armor was destroyed, but Olfin and [Weeble Wobleston](/wiki/weeble-wobleston/) took a beating. The party moved west to a bedroom with a yellow book and a wardrobe with full length mirror. Next door was a nursery with a crib that has a strange substance on the floor. It seemed as if something was breathing under the bed as the sheets moved up and down rhythmically.
+It was a hard fight, and by the time the armor was destroyed Olfin and [Weeble Wobleston](/wiki/weeble-wobleston/) had taken a beating. We moved west into a bedroom with a yellow book and a wardrobe with a full-length mirror. Next door was a nursery with a crib and a strange substance on the floor. Something seemed to be breathing under the bed; the sheets rose and fell in a steady rhythm.
 
-The yellow book is titled “Blue blooded lips” and is a romance story of an affair with a wealthy duke.
+The yellow book is titled “Blue blooded lips”, a romance about an affair with a wealthy duke.
 
-[Aera shan Ravanór](/wiki/aera-shan-ravanor/) investigated the mirror and saw what looked to be an apparition of [Klara](/wiki/klara/), except it was severely disfigured as if tortured and hacked to pieces.
+[Aera shan Ravanór](/wiki/aera-shan-ravanor/) looked into the mirror and saw what seemed to be an apparition of [Klara](/wiki/klara/), horribly disfigured, as if she had been tortured and hacked to pieces.
 
-Weeble pulled the sheet from the bed and found nothing beneath it other than a blood stained mattress and crude hand and foot restraints.
+Weeble pulled the sheet off the bed and found nothing beneath it but a bloodstained mattress and crude restraints for hands and feet.
 
-The party asked the aparition they believed to be Klara some questions and discovered that the gift for the beast should be on the third floor. They also uncovered some stairs behind the mirror leading up.
+We put some questions to the apparition we took for Klara and learned that the gift for the beast should be on the third floor. We also found stairs behind the mirror leading up.
 
-In the crib there was a finger with teeth marks and the name Walter carved into the headrest of the crib.
+In the crib lay a finger with teeth marks, and the name Walter was carved into the headboard.
 
-There is also a balcony which revealed that the town of [Daggerford](/wiki/daggerford/) is nowhere near and there is only an endless vast mist beyond the property.
+From the balcony we could see that [Daggerford](/wiki/daggerford/) is nowhere near. There is only endless mist beyond the grounds.
 
-In a norther room dusty shelves and a broom can be found. When Olfin tried to pick up the broom it started moving and tried to attack. It knocked Olfin out, but Weeble was able to destroy the broom. [Malron Lichtstrahl](/wiki/malron-lichtstrahl/) cast healing word on Olfin.
+A room to the north held dusty shelves and a broom. When Olfin tried to pick up the broom, it came to life and attacked him. It knocked Olfin out, but Weeble destroyed it, and I spoke a quick word of healing over Olfin.
 
-The final room was a master bedroom, and a silhouette behind closed doors which was chilling to the party. It looked towards the party and had an amber glow, then it vanished.
+The last room was the master bedroom. A silhouette behind its closed doors chilled us all. It turned toward us with an amber glow, then vanished.
 
-The master bedroom had another full lenght mirror and a button next to the dumb waiter. A portrait in the room of the Dursts. A table containing items, and a silver jewelry box with a soft amber glow. A large blood stained kitchen knife has been driven into one of the pillows on the bed. Aera investigated the box and found some grain and an amber shard along with a note.
+The master bedroom held another full-length mirror and a button beside the dumbwaiter, a portrait of the Dursts, a table of belongings, and a silver jewelry box with a soft amber glow. A large bloodstained kitchen knife had been driven into one of the pillows. Aera opened the box and found some grain, an amber shard and a note.
 
 > Drasha,  
 > -  
@@ -37,4 +37,4 @@ The master bedroom had another full lenght mirror and a button next to the dumb 
 > -  
 > Elisabeth
 
-The party thought that the beast might be the baby Walter.
+We began to suspect that the beast might be the baby, Walter.

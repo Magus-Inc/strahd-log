@@ -5,12 +5,12 @@ slug: session-zero
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/session-zero
 ---
 
-On a dark and gloomy evening a ragtag group of strangers, with their own reason for being in [Daggerford](/wiki/daggerford/), were seeking shelter for the night. The only place available was the straw covered loft of a barn. The adventurers showed up in a staggered manner, each picking a place to hunker down for the night. They exchanged introductions and some backstory over the artificial/magical light emanating from one of the beams in the loft.
+On a dark and gloomy evening, a ragtag group of strangers, each with our own reason for being in [Daggerford](/wiki/daggerford/), went looking for shelter for the night. The only place left was the straw-covered loft of a barn. We arrived one by one, each picking a corner to hunker down in, and traded introductions and a little of our stories by the magical light glowing from one of the loft's beams.
 
-After some time a thick fog settled and enveloped the town. Shortly after a tooth necklace worn by [Aera](/wiki/aera-shan-ravanor/) started levitating and pulling towards a wall of the barn; at the same time a pendant worn by [Weeble](/wiki/weeble-wobleston/) started glowing and hovering towards the same wall.
+After a time a thick fog settled over the town. Soon after, the tooth necklace [Aera](/wiki/aera-shan-ravanor/) wears began to float and pull toward a wall of the barn, and at the same moment the pendant [Weeble](/wiki/weeble-wobleston/) wears began to glow and drift toward the same wall.
 
-The group was unsure what to do next but felt compelled to follow these relics as they led them through the thick mists. The mists were so heavy that those without relics needed to stay very close to not fall behind and be lost.
+We did not know what to do, but we felt compelled to follow those relics as they led us through the mists. The fog was so thick that those of us without a relic had to stay close or fall behind and be lost.
 
-After an unknown amount of time walking in the mists the group came across a [four story manor](/wiki/durst-manor/) with a balcony on the third floor. A boy and a girl were standing near the front of the manor, perhaps ready to greet the group. The mists retreated, and from looking around there wasn’t a clear path behind the group to indicate how they could get back to Daggerford if they wanted to.
+After we could not say how long in the mists, we came upon a [four-story manor](/wiki/durst-manor/) with a balcony on the third floor. A boy and a girl stood near the front, as if waiting to greet us. The mists drew back, and when I looked behind us there was no path to show how we might return to Daggerford, had we wanted to.
 
 ![IMG_1002.jpeg](/images/session-zero-1.jpeg)

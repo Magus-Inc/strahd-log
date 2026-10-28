@@ -215,3 +215,10 @@ def test_page_view_counter_rejects_a_bad_code(content, tmp_path, monkeypatch):
     monkeypatch.setenv("GOATCOUNTER", "owlbear.goatcounter.com/x")
     with pytest.raises(ValueError, match="GOATCOUNTER"):
         build.build(content, tmp_path / "public")
+
+
+def test_note_paragraphs_become_table_notes_in_the_margin():
+    import article
+    html = article.margin_notes("<p>We ran.</p><p>Note: [Meta details] The table laughed.</p><p>Not a Note: here</p>")
+    assert html == ('<p>We ran.</p><aside class="margin-note" aria-label="From the table"><p>The table laughed.</p></aside>'
+                    "<p>Not a Note: here</p>")

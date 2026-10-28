@@ -5,8 +5,6 @@ slug: echoes-of-the-black-terro
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-black-terro
 ---
 
-# Echoes of the Black Terror
-
 ## Characters:
 * [Gumbo](/wiki/gumbo/)
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
@@ -16,46 +14,48 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-As the group prepares for the mission, Esmerelda leads them to a concealed hollow near the entrance to the werewolf den. Using a wondrous flint and steel, she lights a smokeless fire, ensuring their presence remains undetected. She grants Malron Darkvision for the night, aiding the party’s reconnaissance.
+As we made ready, Esmerelda led us to a hidden hollow near the mouth of the werewolf den. With a wondrous flint and steel she lit a fire that gave no smoke, so no one would see us. She gave me the gift of seeing in the dark for the night, to help us scout.
 
-While waiting for nightfall, Esmerelda shares stories from her past—the traumatic loss of her leg to the Black Terror and the shocking revelation that her own family had a hand in Van Richten’s son’s kidnapping.
+While we waited for nightfall she told us of her past: how she lost her leg to the Black Terror, and the shocking truth that her own family had a hand in taking van Richten’s son.
 
-Attempting stealth, Aera turns invisible but is detected by the keen senses of the guards, triggering battle. The fight escalates as the entire cave is alerted, summoning five werewolves and a pack of wolves. Malron and Oogway unleash fireballs, eliminating the wolves and weakening the werewolves.
+Aera tried to slip in unseen, invisible, but the guards’ keen senses found her, and the fight began. Soon the whole cave was roused: five werewolves and a pack of wolves. Oogway and I each loosed a burst of fire that killed the wolves and burned the werewolves badly.
 
-The final foe meets an unusual fate—Oogway strikes with Booming Blade, while Zorpheus cleverly casts Suggestion, compelling the last werewolf to lead them to the prisoners. As the werewolf takes a step, the delayed thunder effect of Booming Blade activates, ending the battle with a dramatic final blow.
+The last of them met a strange end. Oogway struck it with a blade wrapped in thunder, and Zorpheus bent its will with a spoken suggestion, ordering it to lead us to the prisoners. The moment it took a step, the thunder burst and finished it.
+
+Note: Booming Blade plus Suggestion. The werewolf walked into its own death.
 
 ## Key Locations:
 
-**Hidden Hollow Near the Den**: A safe, concealed location where Esmerelda prepares the group for their infiltration.
+**Hidden Hollow Near the Den**: A safe, hidden place where Esmerelda readied us for the raid.
 
-**Werewolf Cave**: Guarded by a deadly pack, filled with prisoners and mysteries yet to be uncovered.
+**Werewolf Cave**: Guarded by a deadly pack, full of prisoners and mysteries still to uncover.
 
 ## Encounters:
 
-* **Social Encounter – Esmerelda’s Story**: She shares personal tragedies and crucial insights, strengthening the party’s understanding of their adversaries.
-* **Combat – Ambushed by Werewolves**: Aera is detected, triggering a battle against five werewolves and their wolf companions.
-* **Tactical Spellcasting – Fireball Barrage**: Malron and Oogway clear out multiple enemies with well-timed magical destruction.
-* **Strategic Magic – The Last Werewolf**: Oogway’s Booming Blade and Zorpheus’ Suggestion end the fight in an unexpected but dramatic manner.
+* **Esmerelda’s Story**: Her sorrows, and what she knows of our enemies.
+* **The Ambush**: Aera was found out, and five werewolves and their wolves fell on us.
+* **Fire**: Oogway and I cleared out many foes with well-timed flames.
+* **The Last Werewolf**: Oogway’s thunder and Zorpheus’ suggestion ended the fight in a way none of us expected.
 
 ## Loot:
 
-* **Wondrous Flint and Steel**: Produces smokeless fire, preventing detection while providing warmth and light.
-* **Esmerelda’s Knowledge**: Not a physical item, but invaluable intelligence about Strahd’s influence and werewolf hierarchy.
+* **Wondrous Flint and Steel**: Makes a smokeless fire, giving warmth and light without giving us away.
+* **Esmerelda’s Knowledge**: No thing to carry, but priceless word of Strahd’s reach and the werewolves’ order.
 
 ## Notable NPCs:
 
-* **Esmerelda**: A skilled monster hunter with deep scars from her past battles against Strahd’s minions.
-* **The Black Terror (Kiril Vonstrranovich)**: The savage werewolf leader responsible for Esmerelda’s grievous injury.
+* **Esmerelda**: A skilled monster hunter, deeply scarred by her fights with Strahd’s servants.
+* **The Black Terror (Kiril Vonstrranovich)**: The savage werewolf leader who maimed Esmerelda.
 
 ## Plot Points:
 
-* Esmerelda reveals painful truths about her family’s involvement in Van Richten’s son’s disappearance.
-* The werewolf den’s structure and defenses prove formidable, reinforcing the need for careful planning.
-* Magic plays a critical role in turning the tide of battle, showcasing both firepower and strategy.
+* Esmerelda told us painful truths about her family’s part in the disappearance of van Richten’s son.
+* The den is well built and well defended; we must plan carefully.
+* Magic turned the battle, by both force and cunning.
 
 ## Session Highlights:
 
-* Esmerelda’s smokeless fire—a simple but invaluable tool for stealth operations.
-* “I never expected fire to be our greatest ally tonight!“—Malron after the fireball devastation.
-* Zorpheus’ brilliant use of Suggestion, turning the enemy’s instincts against them.
-* The final moment—the werewolf unknowingly sealing its own fate with Booming Blade’s delayed strike.
+* Esmerelda’s smokeless fire, a simple thing and a great help in staying hidden.
+* “I never expected fire to be our greatest ally tonight!” I said, after the flames had done their work.
+* Zorpheus’ clever suggestion, turning the beast’s own steps against it.
+* The last werewolf sealing its own fate with a single step.

@@ -5,8 +5,6 @@ slug: the-oath-the-spy-and-the-silver-moon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-oath-the-spy-and-the-silver-moon
 ---
 
-# The Oath, the Spy, and the Silver Moon
-
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
 * [Zorpheus](/wiki/zorpheus/)
@@ -18,19 +16,19 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-The party infiltrates the fourth floor of Argynvostholt, where **Horngaard** guards a gargoyle statue. Aera recites the knight’s oath, awakening the statue, which proclaims:
+We crept up to the fourth floor of Argynvostholt, where **Horngaard** guards a gargoyle statue. Aera recited the knight’s oath, and the statue woke and proclaimed:
 
 > **“When the dragon dreams its dream within its rightful tomb, the light of Argynvost will beam and rid this land of gloom.”**
 
-This prophecy suggests that **retrieving Argynvost’s skull from Castle Ravenloft** could help weaken Strahd’s hold on Barovia. The party avoids combat and retreats peacefully, resting before heading to **Vallaki** for supplies.
+If I read it rightly, **bringing Argynvost’s skull out of Castle Ravenloft** could weaken Strahd’s hold on Barovia. We drew no steel and withdrew in peace, then rested before heading to **Vallaki** for supplies.
 
-At the **Blue Water Inn**, Aera receives a secret note from **Arrigal**:
+At the **Blue Water Inn**, Aera was slipped a secret note from **Arrigal**:
 
 > **“Spy in castle. Seek a meeting to discuss an opportunity. Find the victim amidst the court. Burn this — A”**
 
-The party interprets this as a lead to a **spy within Castle Ravenloft**.
+We take it as a lead to a **spy inside Castle Ravenloft**.
 
-On the road east, they encounter a **skeletal rider**, believed to be **Sergei Von Zarovich**. They ask three questions:
+On the road east we met a **skeletal rider**, whom we believe to be **Sergei von Zarovich**. We asked him three questions:
 
 > **Q: Are you working for Strahd?**  
 > **A: No**  
@@ -39,9 +37,9 @@ On the road east, they encounter a **skeletal rider**, believed to be **Sergei V
 > **Q: Are you a component of breaking the curse?**  
 > **A: No**
 
-Sergei shares that **Strahd murdered him**, and **Tatiana took her own life**, triggering Strahd’s curse. Strahd now seeks **Irena**, believing she is Tatiana reincarnated.
+Sergei told us that **Strahd murdered him**, and that **Tatiana took her own life**, which set Strahd’s curse in motion. Now Strahd seeks **Irena**, believing she is Tatiana reborn.
 
-The party finds a **massive oak tree** with “K & V” carved into the trunk. A scroll nearby reads:
+We found a **massive oak tree** with “K & V” carved into the trunk. A scroll nearby reads:
 
 > **“Dearest Varushka,**  
 > **I hope this letter finds you well, though I fear it may not. My heart aches as I pen these words, knowing they may be the last I ever write you…”**  
@@ -50,13 +48,13 @@ The party finds a **massive oak tree** with “K & V” carved into the trunk. A
 > **Sincerely and forever yours,**  
 > **Katarina”**
 
-Atop the tree is a **silver box** containing half of a tarnished locket, taken by Olfin.
+At the top of the tree was a **silver box** holding half of a tarnished locket, which Olfin took.
 
-Fog rolls in as they approach the **gates of Barovia**, flanked by headless statues. A **black carriage** awaits. Inside is a scroll:
+Fog rolled in as we neared the **gates of Barovia**, flanked by headless statues. A **black carriage** waited for us. Inside was a scroll:
 
 > **“It is customary for a lord to provide safe escort and a gift to guests for his home. Please accept both with my sincerest compliments.”**
 
-A **magical chest** with conjuration aura presents a puzzle of animal tiles and a poetic riddle:
+A **magical chest**, humming with summoning magic, held a puzzle of animal tiles and a riddle in verse:
 
 > **“My lips I nightly lift toward the silver moon,**  
 > **With trembling strings I weave upon my tiny loom,**  
@@ -70,13 +68,13 @@ A **magical chest** with conjuration aura presents a puzzle of animal tiles and 
 > **I have no truths to hide,**  
 > **My crown yet sits upon my head for all to see with pride.”**
 
-The party solves the puzzle:
+We solved it:
 
 Wolf, Spider, Raven  
 Rat, Butterfly, Bat  
 Bear, Blank, Elk
 
-The chest opens, revealing a **container with the properties of a Bag of Holding**, usable only when the puzzle is solved.
+The chest opened, and inside it holds far more than it should, like a bag of holding, though it only opens when the puzzle is solved.
 
 ## Key Locations:
 
@@ -115,7 +113,7 @@ The chest opens, revealing a **container with the properties of a Bag of Holding
 
 ## Session Highlights:
 
-* Aera’s oath awakens prophecy without bloodshed.
-* Sergei’s tragic tale and careful questioning.
-* Solving Strahd’s poetic puzzle.
+* Aera’s oath waking a prophecy without bloodshed.
+* Sergei’s tragic tale, and our careful questions.
+* Solving Strahd’s riddle in verse.
 * Katarina’s haunting farewell at the ancient oak.

@@ -5,9 +5,9 @@ slug: entering-durst-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-durst-manor
 ---
 
-The party spoke with the two children outside the [Manor](/wiki/durst-manor/) and learned that they were [Rose](/wiki/rose-durst/) and [Thorn](/wiki/thorn-durst/) Durst and that they lived in this Manor with their parents. They haven’t seen their nurse maid in a while and they are afraid to enter the Manor. When asked about their parents they indicated they are in the manor and reside on the third floor. The children don’t want to leave the Manor grounds as they are tied to it in some way, and they are afraid of the monster(s) they believe to be present in the Manor so they don’t want to enter. The boy, named Thorn, thinks he hears noises coming from below, though the children don’t think there is a basement or cellar. When asked, Rose mentioned that her parents names are Gustav and Elisabeth.
+We spoke with the two children outside the [Manor](/wiki/durst-manor/). They are [Rose](/wiki/rose-durst/) and [Thorn](/wiki/thorn-durst/) Durst, and they live in the manor with their parents. They have not seen their nursemaid in a while, and they are afraid to go inside. Their parents, they said, are in the manor, on the third floor. The children will not leave the grounds, as if they are tied to the place somehow, and they will not enter either, for fear of the monster or monsters they believe live there. Thorn thinks he hears noises from below, though neither child believes there is a basement or cellar. Rose told us her parents' names are Gustav and Elisabeth.
 
-The party braved entering the [Durst Manor](/wiki/durst-manor/), and shortly after everyone had entered, the main doors slammed shut and all the lights went out and six loud chimes were heard. Once torches were lit it was discovered that blood had appeared on a wall of the first floor. There wasn’t just blood on the wall, but a message written out in blood:
+We braved [Durst Manor](/wiki/durst-manor/). As soon as the last of us was inside, the main doors slammed shut, every light went out, and six loud chimes rang. When we lit torches, there was blood on a wall of the first floor, and not just blood: a message written in it:
 
 > Beneath this dwelling lurks a beast  
 > Who hungers for a bloody feast.  
@@ -18,19 +18,19 @@ The party braved entering the [Durst Manor](/wiki/durst-manor/), and shortly aft
 > A gift to soothe his savage mood  
 > But mind the servants of his brood.
 
-Based on the chimes heard earlier the party assumed it was 6 pm and they may only have six hours until midnight, at which point something terrible might happen. If you believe in such things.
+From the chimes we took it to be six in the evening, which might leave us six hours until midnight, when something terrible might happen. If you believe in such things.
 
 ![durst_floor1__Small_.jpg](/images/entering-durst-manor-1.jpg)
 
-The party tried to open the entrance door but found them locked shut and then went to explore the south west room, which they at first believed to contain a live wolf; upon further inspection discovered that there were three stuffed wolves contained within, one dark or gray, and two brown, one brown wolf snarling at another in some way. Two smaller wolves, like toys built by children, were also found on the floor, one with Rose and one with Thorn stitched on them.
+The entrance doors were locked fast, so we explored the southwest room. At first we thought it held a live wolf; looking closer, we found three stuffed wolves, one dark gray and two brown, one of the brown ones snarling at another. On the floor lay two smaller wolves like toys made by children, one stitched with Rose's name and one with Thorn's.
 
-The party explored the room further and found searched a cabinet. The cabinet also contained a mounted piece of child’s needlework that depicts a boy and girl holding the hands of a young woman, alongside clumsily stitched words that read “FOR MISS KLARA”. The young woman’s face has been slashed and cut out. Someone in the party pointed out that the wolves had moved around while the party was distracted by the cabinet, and that the one snarling had changed, as before it was a brown wolf, and now it was the dark gray one. No one claimed to have moved any of the wolves. The party wondered if the wolves could represent Gustav, Elisabeth, and Klara.
+We searched a cabinet in the room. It held a framed piece of a child's needlework: a boy and a girl holding the hands of a young woman, with the clumsily stitched words “FOR MISS KLARA”. The young woman's face had been slashed and cut out. One of us noticed that the wolves had moved while we were busy with the cabinet. The snarling wolf had been a brown one; now it was the dark gray. None of us had touched them. We wondered whether the wolves stood for Gustav, Elisabeth and Klara.
 
 [Schlopkht](/wiki/schlopkht/) decided to move the snarling gray wolf out of the room and into a hallway near the entrance.
 
-[Aera shan Ravanór](/wiki/aera-shan-ravanor/) investigated the kitchen which had a dumbwaiter, and a pantry. [Olfin Darning](/wiki/olfin-darning/) found a teapot in the pantry which contained a bottle of wine from the “Wizard of Wines Winery”, along with some lace with the initial “K” sewn into a corner, and a powder which Olfin identified as being a contraceptive. Lastly, a parchment scroll was found which read “For the light of my life. —G.”
+[Aera shan Ravanór](/wiki/aera-shan-ravanor/) looked over the kitchen, with its dumbwaiter and pantry. In the pantry [Olfin Darning](/wiki/olfin-darning/) found a teapot holding a bottle of wine from the “Wizard of Wines Winery”, some lace with the initial “K” sewn into a corner, and a powder Olfin knew to be a contraceptive. Last of all there was a parchment scroll that read “For the light of my life. —G.”
 
-[Schlopkht](/wiki/schlopkht/) investigated a coat closet containing three adult coats and three kids coats. As he moved the coats around an invitation fell out of one of them. The invitation was for Lady Lovina Wachter
+[Schlopkht](/wiki/schlopkht/) went through a coat closet holding three adults' coats and three children's. As he moved them about, an invitation fell out of one. It was addressed to Lady Lovina Wachter.
 
 > You are cordially invited to join  
 > -  
@@ -46,17 +46,17 @@ The party explored the room further and found searched a cabinet. The cabinet al
 > -  
 > Dinner and refreshments to be served.
 
-The last room of the first floor to be explored was a banquet hall which had eight meals freshly set out. The food smelled delicious, but only a few dared taste it.
+The last room on the first floor was a banquet hall with eight meals freshly laid out. The food smelled delicious, but only a few of us dared taste it.
 
-The party then carefully proceeded up to the second floor.
+Then we went carefully up to the second floor.
 
 ![durst_floor2__Small_.jpg](/images/entering-durst-manor-2.jpg)
 
-They found four suits of armor and a long sword with a windmill on it.
+There we found four suits of armor and a longsword with a windmill on it.
 
-The first room to be checked turned out to be servants’ quarters with a dumbwaiter and a laundry basket of what appeared to be Mr. Dursts clothes and a ladies slip.
+The first room we checked was the servants' quarters, with a dumbwaiter and a laundry basket holding what looked like Mr. Durst's clothes and a lady's slip.
 
-An office with bookshelves was explored next. A note was discovered on the Desk
+Next was an office lined with bookshelves. On the desk lay a note:
 
 > Dear Mr. and Mrs. Durst,  
 > -  
@@ -70,8 +70,8 @@ An office with bookshelves was explored next. A note was discovered on the Desk
 > -  
 > Klara
 
-The bookshelf contained a rock collection and many books. [Malron Lichtstrahl](/wiki/malron-lichtstrahl/) found a book titled “Tale of Malron” which had the story of his life as best as he can remember it, so he skipped to the end and saw a passage about him picking up the book while being watched by an evil presence. Malron lost his composure and cast Light on the book and held it around like it was a holy symbol to ward off the evil presence. Nothing came of it, other than some snide marks from members of the party about how courageous the Cleric was.
+The shelves held a rock collection and many books. Among them I found a book titled “Tale of Malron”, telling the story of my own life as best I remember it. I skipped to the end and found a passage about me picking up this very book while an evil presence watched. I confess I lost my composure. I set the book alight with Lathander's glow and held it up like a holy symbol to ward the evil off. Nothing came of it, except some snide remarks from my companions about how courageous their cleric is.
 
-[Aera shan Ravanór](/wiki/aera-shan-ravanor/) inspected the bookshelf further and found a Red book, which acted as a lever to reveal a hidden door behind the bookshelf. The door was locked by some magical mechanism which required a gem or key in a geometric shape. [Schlopkht](/wiki/schlopkht/) made an impression of the gem slot to help the party identify a match during their travels.
+[Aera shan Ravanór](/wiki/aera-shan-ravanor/) searched the shelves further and found a red book that worked as a lever, revealing a hidden door behind the bookshelf. It was sealed by some magical lock that needed a gem or key of a particular geometric shape. [Schlopkht](/wiki/schlopkht/) took an impression of the slot so we could find a match on our travels.
 
-The last room to be investigated was a ballroom and upon entering it the party realized a Harp and Harpsicord were present and had been playing some music, which stopped shortly after everyone had entered. Investigating the Harpsicord revealed a key was stuck in the down position. Opening the harpsichord showed that the cause was a parchment hidden within. It turned out to be sheet music titled “Waltz for Kara”. A member of the party played the waltz, and the ballroom was suddenly filled with apparitions of gentlemen and ladies dancing. A pair of dancers looked to be [Gustav Durst](/wiki/gustav-durst/) and [Klara](/wiki/klara/). In the distance what must have been [Elisabeth Durst](/wiki/elisabeth-durst/) was staring at the dancing couple. Her fury was so strong that an amber shard around her neck started glowing and flashed, then every apparition disappeared. At that moment the party heard what sounded like some scraping wood coming from the office or beyond.
+The last room was a ballroom. As we entered, we realized the harp and harpsichord there had been playing on their own, and the music stopped soon after we were all inside. One of the harpsichord's keys was stuck down. Inside it we found the cause: a hidden parchment, sheet music titled “Waltz for Kara”. One of us played the waltz, and suddenly the ballroom filled with the ghosts of gentlemen and ladies dancing. One pair looked to be [Gustav Durst](/wiki/gustav-durst/) and [Klara](/wiki/klara/). Off to one side, surely [Elisabeth Durst](/wiki/elisabeth-durst/), a woman stared at the dancing couple. Her fury was so strong that an amber shard at her neck glowed and flashed, and every apparition vanished. At that moment we heard what sounded like wood scraping, from the office or beyond it.

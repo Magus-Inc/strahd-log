@@ -6,18 +6,14 @@ slug: welcome-back-to-vellanki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-back-to-vellanki
 ---
 
-*This session was written up twice on Obsidian Portal: as "Welcome Back To Vellanki" and as "Shadows and
-Steel—The Ravenloft Infiltration Plan" (the
-[notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post
-combines both, checked against the session notes and the recording of the night.*
+Note: This session was written up twice on Obsidian Portal: as "Welcome Back To Vellanki" and as "Shadows and Steel—The Ravenloft Infiltration Plan" (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both, checked against the session notes and the recording of the night.
 
 ## At a Glance:
 
-* **Shown the door:** After Aera's solo look at the Heart of Sorrow and her encounter with Strahd, Rahadin escorts the party out of Castle Ravenloft.
-* **Level 7:** On the carriage back to Vallaki everyone reaches Level 7.
-* **The heist plan:** At the Blue Water Inn, the party plans a raid on the catacombs for while Strahd is away hunting.
-* **Targets:** A key, Argynvost's Skull, the Icon of Dawn's Grace, the Spear of the Huntress, Emil Tornescu and Gertruda.
-* **Crokinole:** A Canadian board game briefly takes over the table.
+* **Shown the door:** After Aera’s lone look at the Heart of Sorrow and her meeting with Strahd, Rahadin escorts us out of Castle Ravenloft.
+* **Stronger:** On the carriage ride back to Vallaki, we all feel our power grow.
+* **The heist plan:** At the Blue Water Inn we plan a raid on the catacombs for while Strahd is away hunting.
+* **Targets:** A key, Argynvost’s Skull, the Icon of Dawn’s Grace, the Spear of the Huntress, Emil Tornescu and Gertruda.
 
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
@@ -28,93 +24,96 @@ combines both, checked against the session notes and the recording of the night.
 
 ## Summary:
 
-The session began with a tense recap of the party's final morning at Castle Ravenloft. After Aera's solo reconnaissance of the **Heart of Sorrow** and her chilling encounter with Count Strahd, the group was promptly escorted from the guest quarters by Rahadin. Under the watchful eyes of the castle's gargoyles, the party, joined by their allies **Ezmerelda d'Avenir** and **Ireena Kolyana**, departed by carriage.
+We began by going back over our last morning at Castle Ravenloft. After Aera’s lone scouting of the **Heart of Sorrow** and her chilling meeting with Count Strahd, Rahadin promptly showed us out of the guest quarters. Under the eyes of the castle’s gargoyles we left by carriage, with our allies **Ezmerelda d’Avenir** and **Ireena Kolyana**.
 
-During the journey back to **Vallaki** everyone reached **Level 7**. The survivors gathered beneath the flickering lamps of the **Blue Water Inn**, the memory of the Count's wine still bitter on their tongues and the terror of their "failed" dinner hardening into cold resolve. The rest of the session was a deep-dive tactical briefing and a ritual of preparation.
+On the road back to **Vallaki** each of us felt our strength grow. We gathered under the flickering lamps of the **Blue Water Inn**, the Count’s wine still bitter on our tongues, and the terror of that failed dinner hardened into cold resolve. The rest of the night went to planning and preparation.
 
-The plan is a proactive heist. Drawing on what they had learned about the castle (not from Doru) and the castle maps of **Rudolph van Richten**, the party means to strike during Strahd's 14-day hunting cycle, while he is expected to be away from the castle, infiltrate the catacombs, and secure the relics and allies they need.
+We will not wait for him. Using what we learned of the castle (not from Doru) and the castle maps of **Rudolph van Richten**, we mean to strike during Strahd’s fourteen-day hunting cycle, while he should be away from the castle, slip into the catacombs, and take the relics and free the allies we need.
 
-**Note:** Much of the evening was "meta talk" about Level 7. The players discussed the mechanical impact of **Evasion** and the ethics of **Silvery Barbs**, which the DM noted is often treated as a higher-level spell because of its potency. A lighthearted sidebar compared the Canadian game **Crokinole** to curling.
+Note: Much of the evening was "meta talk" about Level 7. The players discussed the mechanical impact of **Evasion** and the ethics of **Silvery Barbs**, which the DM noted is often treated as a higher-level spell because of its potency. A lighthearted sidebar compared the Canadian game **Crokinole** to curling.
 
 ## Key Locations:
 
-**K1 (Front Courtyard)**: The 35-foot chasm is the primary gatekeeper. Without a mechanical solution or magical flight, the party is bottlenecked at the entrance. Access may also be restricted; they need another way in if the drawbridge is up.
+The numbers are those on van Richten’s maps.
 
-**K7/K8 (Entryways)**: The dragon and gargoyle statues are confirmed as active, sentient sentries, likely a silent alarm for the castle's denizens. Stealth is mandatory.
+**K1 (Front Courtyard)**: The thirty-five-foot chasm is the first gatekeeper. Without some device or flight we are stuck at the entrance, and if the drawbridge is up we need another way in.
 
-**K14/K15 (Hall of Faith and Chapel)**: The Hall of Faith is "creepy". The Chapel, a site of former sanctity now defiled, is worth looking into.
+**K7/K8 (Entryways)**: The dragon and gargoyle statues are surely living sentries, likely a silent alarm for the castle’s dwellers. We must go unseen.
 
-**K16/K17**: K16 could lead up toward the spires; the south chapel at K17 goes down.
+**K14/K15 (Hall of Faith and Chapel)**: The Hall of Faith is creepy. The chapel, once holy and now defiled, is worth looking into.
 
-**The High Tower (K18/K57)**: The site of the **Heart of Sorrow**. The high tower staircase at K18 goes to the crypts, though it is heavily guarded.
+**K16/K17**: K16 may lead up toward the spires; the south chapel at K17 goes down.
 
-**The Hall of Bones**: On the basement floor, the suspected resting place of **Argynvost's Skull**.
+**The High Tower (K18/K57)**: Where the **Heart of Sorrow** hangs. The high tower staircase at K18 goes down to the crypts, though it is heavily guarded.
 
-**K84 (Catacombs)**: The primary objective. Its crypts include those of **King Dostran** (Crypt 34) and **Saint Markovia** (Crypt 40), which house artifacts needed to break the land's curse. Anything else down there is a distraction.
+**The Hall of Bones**: In the basement, where we believe **Argynvost’s Skull** rests.
 
-**K85/K86 (Tombs of Sergei and Strahd)**: Sergei's tomb is well lit, blocked by a portcullis, and an unnatural beacon. Strahd's is the ultimate target, expected to be empty during the new moon, though the crypts' magic may hold him if the party lingers.
+**K84 (Catacombs)**: Our main goal. Among its crypts are those of **King Dostron** (Crypt 34) and **Saint Markovia** (Crypt 40), which hold things we need to break the land’s curse. Anything else down there is a distraction.
 
-**K88 (Tomb of King Barov and Queen Ravenovia)**: Rahadin's sanctuary. Entering here means a confrontation with Strahd's chamberlain, turning a heist into a bloodbath.
+**K85/K86 (Tombs of Sergei and Strahd)**: Sergei’s tomb is well lit, barred by a portcullis, and glows like an unnatural beacon. Strahd’s is the final target, and should be empty at the new moon, though the crypts’ magic may hold him if we linger.
 
-**Vallaki and the Blue Water Inn**: The party's base of operations and the site of the heist rehearsals.
+**K88 (Tomb of King Barov and Queen Ravenovia)**: Rahadin’s sanctuary. Going in there means facing Strahd’s chamberlain and turning a quiet theft into a bloodbath.
+
+**Vallaki and the Blue Water Inn**: Our base, where we rehearsed the plan.
 
 ## What We Learned (Not from Doru):
 
-The session notes from the night, castle room numbers as the party had them:
+My notes from the night, by the numbers on the map:
 
 * **Find:** a key.
-* **K1, courtyard:** the drawbridge might not be down, so find a way to get in. The party should devise a plan to get in if the drawbridge is up.
-* **K7, entry:** the dragon statues are potentially guards.
+* **K1, courtyard:** the drawbridge might not be down, so we need a way in if it is up.
+* **K7, entry:** the dragon statues may be guards.
 * **K8, great entry:** the gargoyles are almost certainly guards.
 * **K14, Hall of Faith:** creepy.
 * **K15, chapel:** worth looking into.
 * **K16:** could lead up.
 * **K17, south chapel:** goes down.
 * **K18, high tower staircase:** goes to the crypts.
-* **K84, catacombs:** King Dostran and St. Markovia, crypts 34 and 40.
-* **K85, Sergei's tomb:** a portcullis in the way, but well lit.
+* **K84, catacombs:** King Dostron and St. Markovia, crypts 34 and 40.
+* **K85, Sergei’s tomb:** a portcullis in the way, but well lit.
 
 ## Encounters:
 
-* **Social: The Morning Eviction**: Rahadin (phonetically "Rod Dean") saw the party out of Ravenloft without delay, cold and professional.
-* **Narrative: The Carriage to Vallaki**: Travel and reflection, discussing recent discoveries and the party's new Level 7 abilities.
-* **Tactical: The Heist Briefing**: A non-combat session analysing map codes and room descriptions for hazards and entry points.
-* **Tactical: The Infiltration Strategy**: The party weighed the "Arrow and Rope" approach against the casters' new 4th-level magic, such as Greater Invisibility, to slip past the gate towers.
-* **Logistical: The Extraction**: To smuggle the Dragon's Skull (or the Heart of Sorrow) out, the party plans to shrink it with Enlarge/Reduce to fit the 500-pound limit of the Chest of Holding.
+* **The Morning Eviction**: Rahadin saw us out of Ravenloft without delay, cold and correct.
+* **The Carriage to Vallaki**: Travel and talk of what we had found, and of our new strength.
+* **The Briefing**: No fighting, only maps and room by room talk of dangers and ways in.
+* **The Way In**: We weighed arrows and rope against the stronger magic our casters now have, such as making one of us wholly invisible, to slip past the gate towers.
+* **The Way Out**: To carry the Dragon’s Skull (or the Heart of Sorrow) out, we mean to shrink it by magic so it fits within what the Chest of Holding can bear.
+
+Note: Rahadin, phonetically "Rod Dean". The way-in plan was Greater Invisibility; the way-out plan was Enlarge/Reduce to get under the Chest of Holding's 500-pound limit.
 
 ## Loot:
 
-No new loot was gained this session. The party took stock of what they carry and what they mean to take:
+No new loot this time. We took stock of what we carry and what we mean to take:
 
 * **Symbol of Ravenkind** (Olfin): A legendary relic, essential to his Aura of Devotion and to fighting vampires.
-* **Chest of Holding**: A dimensional vessel with a 500-pound capacity, the key to smuggling large relics out of the castle.
-* **Van Richten's Maps**: The hunter's maps strip Ravenloft of its greatest defense, its power to swallow the lost in its corridors.
-* **Strahd's Gemstones**: Stones acquired earlier, to be used for **Locate Object** during the heist.
-* **Heist objectives**: **Argynvost's Skull** (Hall of Bones), the **Icon of Dawn's Grace** (believed to be in the crypts) and the **Spear of the Huntress** (in the south crypts).
+* **Chest of Holding**: A dimensional vessel with a 500-pound capacity, our way to carry large relics out of the castle.
+* **Van Richten’s Maps**: They strip Ravenloft of its greatest defense, its power to swallow the lost in its corridors.
+* **Strahd’s Gemstones**: Stones from earlier, to cast **Locate Object** during the heist.
+* **Heist objectives**: **Argynvost’s Skull** (Hall of Bones), the **Icon of Dawn’s Grace** (believed to be in the crypts) and the **Spear of the Huntress** (in the south crypts).
 
 ## Notable NPCs:
 
-* **Strahd von Zarovich**: The Master of Ravenloft. His recent "mercy" toward Aera has left the party wary but emboldened. His 14-day hunting cycle gives them their window: strike while he hunts away from the den.
-* **Rahadin**: The Count's chamberlain, who saw the party out.
-* **Ezmerelda d'Avenir**: A famed monster hunter, on the party's side and traveling with them, advising them.
-* **Ireena Kolyana**: The object of Strahd's obsession, on the party's side and with them under their protection.
-* **Rudolph van Richten**: The hunter whose castle maps turn a suicide mission into a calculated heist.
-* **Emil Tornescu**: A werewolf prisoner in the South Dungeon whom the party intends to rescue.
-* **Gertruda**: Mary's daughter, confirmed to be in the King's Bedchamber.
+* **Strahd von Zarovich**: The Master of Ravenloft. His recent "mercy" toward Aera has left us wary but bolder. His fourteen-day hunting cycle is our window: strike while he hunts far from his den.
+* **Rahadin**: The Count’s chamberlain, who saw us out.
+* **Ezmerelda d’Avenir**: A famed monster hunter, on our side and traveling with us as an adviser.
+* **Ireena Kolyana**: The object of Strahd’s obsession, with us and under our protection.
+* **Rudolph van Richten**: The hunter whose maps turn a suicide mission into a reckoned theft.
+* **Emil Tornescu**: A werewolf prisoner in the South Dungeon whom we mean to rescue.
+* **Gertruda**: Mary’s daughter, surely in the King’s Bedchamber.
 
 ## Plot Points:
 
-* **Argynvost's Skull (priority one)**: Returning it to the "Shining Beacon" at Argynvostholt will light a beacon through the Barovian gloom and grant a permanent boon to the resistance.
-* **The Icon of Dawn's Grace**: A silver statuette, the only cure for the Abbot's madness; without it, Krezk stays under a celestial's broken rule.
-* **The Spear of the Huntress**: A shard of the ancient power of the "Ladies Three", needed before facing the Count.
-* **Emil Tornescu and Gertruda**: Freeing the werewolf leader could break Strahd's alliance with the wolves; saving Gertruda from the King's Bedchamber is a moral imperative.
-* **The Heart's Pulse**: The Heart of Sorrow is the session's biggest revelation, but the party will finish the heist's recovery goals before trying to destroy it.
+* **Argynvost’s Skull (first of all)**: Returning it to the "Shining Beacon" at Argynvostholt will light a beacon through the Barovian gloom and grant a lasting boon to the resistance.
+* **The Icon of Dawn’s Grace**: A silver statuette, the only cure for the Abbot’s madness. Without it, Krezk stays under a fallen celestial’s rule.
+* **The Spear of the Huntress**: A shard of the ancient power of the Ladies Three, needed before we face the Count.
+* **Emil Tornescu and Gertruda**: Freeing the werewolf leader could break Strahd’s alliance with the wolves. Saving Gertruda from the King’s Bedchamber is simply right.
+* **The Heart’s Pulse**: The Heart of Sorrow is the greatest thing we have learned, but we will finish the heist before we try to destroy it.
 
 ## Session Highlights:
 
-* **"Straying from the Path"**: Aera's recap of Strahd's warning set a somber tone.
-* **Level 7 upgrades**: Aera's Evasion and Krusty bringing Fireball to the table.
-* **The Vampiric Axolotl**: A vivid image for the Heart of Sorrow, a 10-foot red crystal heart with a sliver of darkness swirling inside.
-* **The Fingernail Gambit**: A half-meta plan to "tag" Strahd and track his movements during the heist.
-* **Canadian Politeness**: The Crokinole tangent, and the suggestion that the party be "polite" while flicking enemies into the castle chasm.
-* **"Ghost In, Fire Out"**: The consensus: stealth and magic to secure the objectives, but ready for a "guns blazing" exit if the undead wake.
+* **"Straying from the Path"**: Aera’s telling of Strahd’s warning set a somber tone.
+* **The Vampiric Axolotl**: Our name for the Heart of Sorrow, a ten-foot red crystal heart with a sliver of darkness swirling inside.
+* **"Ghost In, Fire Out"**: We agreed on stealth and magic to reach the objectives, but we are ready to leave with fire blazing if the undead wake.
+
+Note: Level 7 upgrades: Aera's Evasion and Krusty bringing Fireball to the table. The Fingernail Gambit was a half-meta plan to "tag" Strahd and track him during the heist. And the Crokinole tangent ended with the suggestion that the party be "polite" while flicking enemies into the castle chasm.

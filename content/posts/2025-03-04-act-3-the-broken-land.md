@@ -5,8 +5,6 @@ slug: act-3-the-broken-land
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/act-3-the-broken-land
 ---
 
-# DnD Adventure Log Act 3: The Broken Land
-
 ## Characters:
 * [Oogway](/wiki/oogway/)
 * [Olfin Darning](/wiki/olfin-darning/)
@@ -18,59 +16,59 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-The adventure begins with the party waking at the Blue Water Inn. Irwin, the innkeeper, privately calls each member to the bar and requests help with a troubling matter.
+We woke at the Blue Water Inn, and Irwin, the innkeeper, called each of us to the bar in turn to ask for help with a troubling matter.
 
-Irwin introduces Veyren, a hare-like character and Shabasta’s brother. The party presents Veyren with a letter found on Shabasta’s body, detailing his journey with them.
+First he introduced Veyren, a hare of a fellow and Shabasta’s brother. We gave Veyren the letter we found on Shabasta’s body, telling of his journey with us.
 
-Irwin reveals concerns about the Wizard of Wines vineyard, which supplies wine to the Blue Water Inn. The latest shipment is 16 days overdue, and he fears something has happened to Davien Warningkoff, Irwin’s father. He arranges for the party to meet Muriel Winshaw, an employee of the vineyard, to guide them.
+Then Irwin told us his worry. The Wizard of Wines vineyard supplies the inn’s wine, and the latest shipment is sixteen days overdue. He fears something has happened to Davien Martikov, his father. He arranged for us to meet Muriel Winshaw, who works at the vineyard, to guide us.
 
-Before leaving the inn, Irena appears, expressing her desire to join the group. She wishes to become a warrior for her people and feels the Abbey cannot protect her from Strahd. She offers her skills as a trained healer and capable swordsman.
+Before we left, Irena came to us and asked to join. She wants to become a warrior for her people and feels the Abbey cannot protect her from Strahd. She offered her skill as a trained healer and a capable swordswoman.
 
-The group, now nine strong, travels southwest. Along the way, they cross a bridge leading to a four-way intersection. They pass a valley with a partially collapsed mansion called Aargenvolstholt, rumored to be connected to Revenants. Muriel mentions Strix activity in the area.
+Nine strong now, we traveled southwest. We crossed a bridge to a four-way crossroads and passed a valley holding a half-collapsed mansion, Argynvostholt, said to be tied to revenants. Muriel warned of strix in the area.
 
-Further south, they encounter a mountain woman wielding a stone axe, who warns them to avoid the forest folk at Yester Hill.
+Further south we met a mountain woman with a stone axe, who warned us to keep clear of the forest folk at Yester Hill.
 
-Reaching another intersection, the party finds a Revenant guarding a bridge to the west. The Revenant suggests they visit Aargenvolstholt and warns of blights at the vineyard, which cannot be blinded or deafened.
+At another crossroads a revenant guarded a bridge to the west. He urged us to visit Argynvostholt and warned of blights at the vineyard, which can be neither blinded nor deafened.
 
-As the group approaches the vineyard, Muriel falls into a trap. They discover an ancient monument to the Huntress—a slab adorned with a pristine three-pointed star.
+As we neared the vineyard, Muriel stumbled into a trap. We found an ancient monument to the Huntress, a slab bearing a pristine three-pointed star.
 
-A dark-cloaked figure appears and beckons the group. Muriel recognizes him as Damien, though he quickly disappears into a trapdoor after warning them of danger. The party hears Strix calls echoing from multiple directions before descending into the trapdoor after Damien.
+A dark-cloaked figure appeared and beckoned. Muriel knew him: Davien. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
 
 ## Key Locations:
 
-**Blue Water Inn**: The starting point of the act and Irwin’s tavern.  
-**Aargenvolstholt**: A valley mansion linked to Revenants and Strix activity.  
-**Wizard of Wines Vineyard**: The destination, shrouded in mystery and danger.
+**Blue Water Inn**: Where this act began; Irwin’s tavern.  
+**Argynvostholt**: A mansion in the valley, linked to revenants and strix.  
+**Wizard of Wines Vineyard**: Our destination, full of mystery and danger.
 
 ## Encounters:
 
-Social: Meeting Veyren and delivering Shabasta’s letter.  
-Social/Combat: Interactions with the Revenant at the bridge.  
-Trap: Muriel falling into a snare near the vineyard.
+Meeting Veyren and giving him Shabasta’s letter.  
+The revenant at the bridge.  
+Muriel caught in a snare near the vineyard.
 
 ## Loot:
 
-(None yet discovered in this session.)
+(None found yet.)
 
 ## Notable NPCs:
 
-**Irwin**: Blue Water Inn’s owner, seeking help with the vineyard.  
-**Veyren**: Shabasta’s brother, joining the party.  
-**Irena**: A trained healer and swordsman determined to aid the group.  
-**Muriel Winshaw**: Vineyard employee and possible Raven in disguise.  
-**Damien**: Mysterious cloaked figure connected to ravens.
+**Irwin**: Owner of the Blue Water Inn, asking help for the vineyard.  
+**Veyren**: Shabasta’s brother, now with us.  
+**Irena**: A trained healer and swordswoman, set on helping us.  
+**Muriel Winshaw**: Works at the vineyard; perhaps a raven in disguise.  
+**Davien**: The mysterious cloaked figure tied to the ravens.
 
 ## Plot Points:
 
 - The Wizard of Wines shipment is mysteriously overdue.  
-- The Revenant’s cryptic warning about Aargenvolstholt and blights.  
-- The mountain folk and forest folk worship ancient goddesses and dark powers, respectively.  
-- Strix and raven activity near the vineyard and Damien’s trapdoor.
+- The revenant’s cryptic warning about Argynvostholt and the blights.  
+- The mountain folk worship ancient goddesses; the forest folk worship dark powers.  
+- Strix and ravens around the vineyard, and Davien’s trapdoor.
 
 ## Session Highlights:
 
-- The poignant moment of giving Veyren Shabasta’s letter.  
-- Irena’s heartfelt plea to join the adventuring party.  
-- The eerie appearance of Damien and the ravens.  
-- The ominous cries of Strix surrounding the group.  
-- The leap into danger down the trapdoor beneath the vineyard.
+- Giving Veyren his brother’s letter.  
+- Irena’s heartfelt plea to join us.  
+- Davien and the ravens appearing out of nowhere.  
+- The strix crying all around us.  
+- The leap down the trapdoor beneath the vineyard.

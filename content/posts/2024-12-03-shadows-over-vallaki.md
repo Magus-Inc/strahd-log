@@ -14,47 +14,46 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Shabasta:** Porcupine Bard
 
 **Summary:**  
-A young woman in a nightgown with a hollow stare appears in the hallway, resembling the same woman seen in the mirror at the Baron’s attic. Nicolai, who cursed the Baron in the past, is the older brother of this girl, Stella. Nicolai takes her on a walk around the grounds, and Lady Fiona apologizes for the disturbance. Carl, the younger brother, mentions their father Nicolai died of a wasting sickness.
+At Wachter Haus a young woman in a nightgown appeared in the hallway with a hollow stare. She looked like the woman we saw in the mirror in the Baron’s attic. Her name is Stella, and Nicolai, who once cursed the Baron, is her older brother. Nicolai took her for a walk around the grounds, and Lady Fiona apologized for the disturbance. Carl, the younger brother, told us their father, Nikolai, died of a wasting sickness.
 
-Lady Fiona reveals she follows Ezra, the goddess of the mists, who teaches endurance. She also mentions her older brother Frederick was supposed to be the heir until Lysa rescued Lady Fiona from the woods when she was younger. She prays and hears from Ezra, who may be an imposter.
+Lady Fiona told us she follows Ezra, goddess of the mists, who teaches endurance. Her older brother Frederick was meant to be the heir, until Lysa rescued Lady Fiona from the woods when she was young. She prays and hears Ezra answer, though I suspect the voice may be an imposter.
 
-The shoemaker Lukavich was captured and possibly executed by the Baron. Izek lost his arm to a wolf attack as a child when his sister went missing, raising questions about whether his sister could be Ireena.
+The Baron took Lukavich the shoemaker, and may have executed him. Izek lost his arm to a wolf as a child, when his sister went missing. Could his sister be Ireena?
 
-To weaken Izek, the plan is to follow him and find a time when he is less guarded and easier to take down. An associate will be sent to advise on his schedule and provide a bottle of poison wine.
+To weaken the Baron we will follow Izek and find a moment when he is less guarded and easier to take down. Lady Fiona will send an associate to tell us his habits and give us a bottle of poisoned wine.
 
-Stella has been sick for six months since she started visiting Viktor, the Baron’s son. Upon her return, she was in a terrible state, and Viktor refuses to speak with Lady Fiona. Berez, a fishing village south of Vallaki, was swept away by the river when Strahd was challenged. Lady Fiona heard of a glowing sword, possibly the Sun Sword, but doubts its existence.
+Stella has been sick for six months, since she began visiting Viktor, the Baron’s son. She came home in a terrible state, and Viktor will not speak to Lady Fiona. Berez, a fishing village south of Vallaki, was swept away by the river when someone challenged Strahd. Lady Fiona has heard of a glowing sword, perhaps the Sun Sword, but doubts it exists.
 
-The party returns to the Inn to rest. Overnight, Strahd appears to Aera, asking to be let inside to discuss their activities. Aera closes the window, and when they go outside, Strahd has disappeared.
+We went back to the inn to rest. In the night Strahd came to Aera’s window and asked to be let in to discuss what we have been doing. Aera shut the window, and when we went outside he was gone.
 
-In the morning, an agent from Fiona helps the party understand Izek’s drinking habits and provides a bottle of poison wine (Red Dragon Kresh) and a sack for his head. The plan is to swap his second bottle of wine with the poisoned wine during his lunch hour to ambush him at the lake later on.
+In the morning Fiona’s agent told us about Izek’s drinking and gave us a bottle of poisoned wine, Red Dragon Kresh, and a sack for his head. The plan: swap the second bottle of his lunch for the poisoned one, then ambush him at the lake later.
 
-Aera successfully steals Izek’s old bottle of wine, but when the orc attempts to swap in the new bottle, Izek catches him. Luckily, Izek believes he was trying to steal the bottle and grabs it, stuffing it back into his basket.
+Aera stole his old bottle cleanly, but when Gumbo tried to slip in the new one, Izek caught him. Luckily Izek thought he was trying to steal it, snatched the bottle back and stuffed it into his basket.
 
 **Key Locations:**  
-1. **Baron’s Mansion:** Encounter with the young woman resembling the one from the mirror.  
-2. **Wachter Haus:** Interaction with Lady Fiona and her revelations.  
-3. **Inn:** Resting place and encounter with Strahd.
+1. **Wachter Haus:** Where we met Stella and heard Lady Fiona’s story.  
+2. **Inn:** Where we rested and Strahd came calling.
 
 **Encounters:**  
-- **Social/Investigation:** Interaction with Lady Fiona, Nicolai, and Carl.  
-- **Combat/Intimidation:** Planning to weaken Izek and the interaction with Strahd.
+- **Lady Fiona, Nicolai and Carl:** Family secrets and a plot.  
+- **Planning against Izek, and Strahd at the window.**
 
 **Loot:**  
-- **Poison Wine (Red Dragon Kresh):** Provided by Fiona’s associate for use against Izek.
+- **Poisoned Wine (Red Dragon Kresh):** From Fiona’s associate, for Izek.
 
 **Notable NPCs:**  
-- **Lady Fiona:** Provides insight into her past and spiritual beliefs.  
-- **Nicolai:** Brother of Stella, involved in cursing the Baron.  
-- **Izek Strahsne:** Enforcer for the Baron with a flaming demon arm.  
-- **Stella:** Young woman in a disturbed state after visiting Viktor.  
-- **Agent from Fiona:** Provides poison wine and information on Izek’s habits.
+- **Lady Fiona:** Shared her past and her faith.  
+- **Nicolai:** Stella’s brother, who cursed the Baron.  
+- **Izek Strazni:** The Baron’s enforcer, with a flaming demon arm.  
+- **Stella:** In a disturbed state since visiting Viktor.  
+- **Fiona’s agent:** Brought the wine and word of Izek’s habits.
 
 **Plot Points:**  
-1. Encounter with Stella and Nicolai’s background.  
-2. Plans to weaken Izek and use poison wine.  
+1. We met Stella and learned Nicolai’s story.  
+2. A plan to weaken Izek with poisoned wine.  
 3. Lady Fiona’s revelations about Ezra and her past.
 
 **Session Highlights:**  
-- Aera’s encounter with Strahd and quick thinking to close the window.  
-- Successful theft of Izek’s old wine bottle by Aera.  
-- Narrow escape by Gumbo when swapping the wine bottles.
+- Aera shutting the window on Strahd.  
+- Aera’s clean theft of Izek’s old bottle.  
+- Gumbo’s narrow escape swapping the bottles.

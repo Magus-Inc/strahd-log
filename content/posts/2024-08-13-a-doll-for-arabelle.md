@@ -6,37 +6,31 @@ slug: a-doll-for-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/a-doll-for-arabelle
 ---
 
-## Session Recap
+## Vallaki
 
-In the shadow-haunted realm of Barovia, our intrepid band of adventurers embarked on a quest that would unravel mysteries both ancient and treacherous. Here’s a recounting of their recent exploits:
-
-## The Town of Vallaki
-
-1. **The Stockades**: A curious sight indeed—a row of stocks where each person is adorned with crude donkey heads. Vallaki’s eccentricities never fail to surprise.  
-2. **Proclamations and Festivals**: The town buzzed with anticipation. First, the Wolf’s Head Jamboree, and now, the Festival of the Blazing Sun—both events promising intrigue and danger.
+A row of stocks stands in the square, and every soul in them wears a crude donkey head. Vallaki’s eccentricities never fail to surprise me. The town buzzed with talk of festivals: first the Wolf’s Head Jamboree, and now the Festival of the Blazing Sun. Both promise intrigue and danger.
 
 ## Blinsky’s Toy Store
 
-1. **The Enigmatic Doll**: Within the cluttered shelves of Blinsky’s shop, our eyes fell upon a doll eerily reminiscent of Irena. A connection to her fate, perhaps?  
-2. **The Clockwork Man**: Blinsky whispered of a clockwork creation within Castle Ravenloft—an enigma that piqued our curiosity.
+Among the cluttered shelves of Blinsky’s shop we found a doll that looked eerily like Irena. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
 
 ## The Vistani Encampment
 
-1. **Shivasta the Great**: A porcupine-like bard, Shivasta regaled us with tales and secrets. His lute carried melodies of forgotten lore.  
-2. **Commotion and Desperation**: Broken pottery, whips cracking—the encampment seethed with tension. Alexi’s plea for his missing daughter, Arabelle, echoed through the canvas walls.  
-3. **Yann’s Fate**: Accusations flew. Yann, drugged Alexi and was accused of kidnapping Arabelle, met a grisly end. His severed head lay toward the Luna River.  
-4. **The Mysterious Signet Ring**: Kasimir clutched a sigil-bearing ring—a key to unraveling deeper truths. Necromancy and evocation intertwined in its design.  
-5. **Riches**: Alexi offered us 500 gold pieces if we succeed in recovering Arabelle alive.
+At the encampment we met Shivasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
+
+But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Yann, who had drugged Alexi and stood accused of taking Arabelle, had met a grisly end, his severed head lying toward the Luna River.
+
+Kasimir clutched a ring bearing a sigil, its design woven from necromancy and evocation. It may be the key to deeper truths.
+
+Alexi offered us five hundred gold pieces if we bring Arabelle back alive.
 
 ## The Dusk Elves
 
-1. **Centuries of Solitude**: Kasimir revealed the Dusk Elves’ ancient presence—five centuries of silent vigilance.  
-2. **Rahadin’s Betrayal**: The traitor Rahadin had compromised their safety. The Vistani shielded the Dusk Elves from Strahd’s wrath.  
-3. **Frostbitten Secrets**: An elf bore frostbite scars, a testament to perilous journeys. What secrets did their blistered skin hide?
+Kasimir told us the dusk elves have kept a silent vigil here for five centuries. The traitor Rahadin betrayed them, and the Vistani have sheltered them from Strahd’s wrath ever since. One elf bore the scars of frostbite, the mark of some perilous journey. What secrets does that blistered skin hide?
 
 ![](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/Kasimir%20Velikov%201.png)
 
-A story from Kasimir:
+Kasimir told us his story:
 
 *Even now, nearly five centuries past, the memories are sharp and clear in my mind, like shards of broken glass. I was a mere century old when my people lost their freedom—when the tyranny of the von Zarovich clan rose like a shadow across the land.*
 
@@ -49,12 +43,8 @@ A story from Kasimir:
 
 ## The Footprints
 
-1. **A Deadly Encounter**: Footprints told a grim tale. Yann fought, fell, and died. The second fled, while the third waded into the river, burdened by something heavy.  
-2. **The Ring’s Clues**: Was Yann the first victim? The signet ring’s cryptic symbols held answers we sought.
+The footprints told a grim tale. Yann fought, fell and died. A second figure fled, and a third waded into the river, burdened by something heavy. Was Yann the first victim? The symbols on the signet ring may hold the answer.
 
 ## The Baron’s Library
 
-1. **Deception and Intrigue**: We infiltrated the manor in hopes of finding the library, claiming an appointment. Our true purpose? Unraveling the ring’s mystery.
-
-And so, dear reader, our adventurers sit in the waiting room, surrounded by dusty tomes and whispered secrets. The path ahead winds through darkness, but courage and curiosity light their way.
-
+To learn the ring’s secret we went to the Baron’s manor, claiming an appointment, in hopes of reaching his library. As I write, we sit in the waiting room among dusty tomes and whispered secrets. The path ahead is dark, but we go on.

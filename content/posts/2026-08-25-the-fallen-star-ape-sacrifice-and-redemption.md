@@ -7,11 +7,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## At a Glance:
 
-* **The Fallen Star:** The Abbot’s second form frightens Shabasta and Crusty and goes after Olfin.
-* **Down and up:** Olfin and Aera fall repeatedly; Malron’s Aid and Cure Wounds keep pulling them back.
-* **The ape:** Crusty polymorphs Shabasta into a 157-hit-point giant ape that soaks about 124 damage.
-* **Sacrifice:** Olfin dies, lands a heroic 47-point smite that kills the beast, and Malron Revivifies him with his saved slot.
-* **Redemption:** In a misty void, St. Markovia and Malron’s words restore the Abbot. Ethereal Restored; the party reaches level 8.
+* **The Fallen Star:** The Abbot’s second form fills Shabasta and Crusty with dread and goes after Olfin.
+* **Down and up:** Olfin and Aera fall again and again; my prayers keep pulling them back.
+* **The ape:** Crusty turns Shabasta into a giant ape, who takes blow after blow meant for the rest of us.
+* **Sacrifice:** Olfin dies, rises for one last blow that kills the beast, and I call him back with the prayer I had saved.
+* **Redemption:** In a misty void, St. Markovia and the Morning Lord's promise of a new dawn restore the Abbot.
 
 ## Characters:
 * [Shabasta](/wiki/shabasta/)
@@ -26,70 +26,70 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 *At the table: the party against the Fallen Star.*
 
-The fight in the Abbey’s asylum picks up where it left off. The Abbot, Ethereal, has fallen once, only to rise in his second form, the Fallen Star: a chimera-like beast with a lion’s head, a ram’s body, bat wings and a crocodile’s tail. Shabasta lies prone at 8 hit points and Olfin hovers on the eagle wings he took from Clovin. The beast’s frightful presence washes over the party: Shabasta and Crusty are frightened, and Malron shrugs it off under Protection from Evil and Good.
+The fight in the Abbey’s asylum picked up where it left off. The Abbot, Ethereal, had fallen once, only to rise in his second form, the Fallen Star: a chimera of a beast with a lion’s head, a ram’s body, bat wings and a crocodile’s tail. Shabasta lay on the floor, badly hurt, and Olfin hovered on the eagle wings he took from Clovin. Dread poured off the beast. Shabasta and Crusty shook with it; Lathander's ward held it off me.
 
 Note: Inspiration for the last session’s damage went to Aera, whose 71 was almost half of what Ethereal’s first form took. The table also floated a snack conveyor belt and a water fountain for the game room.
 
-Ethereal claws at Crusty, who throws up Shield (23 AC), and flicks a radiant dart from his tail into Olfin. Shabasta casts Enhance Ability (Bear’s Endurance) on Aera for 7 temporary hit points and sends Bardic Inspiration to Olfin. Malron, down to 5 hit points, heals himself to 25 with Cure Wounds. Crusty Misty Steps into a far corner to stay clear of the cone attack he expects and fires a Ray of Frost, his owl offsetting his fear.
+Ethereal clawed at Crusty, whose shield of force turned the blow, and flicked a radiant dart from his tail into Olfin. Shabasta's song gave Aera a bear's toughness and lifted Olfin's courage. I was nearly spent, and I healed my own wounds. Crusty stepped through the mist into a far corner, out of reach of the breath he expected, and fired a ray of frost, his owl steadying him against his fear.
 
-Olfin dives in with a 2nd-level Divine Smite for 27, only to learn Ethereal is a celestial who shrugs off most of the radiant damage. The tail thrashes back for 11. Aera’s arrow misses because she moved and lost Steady Aim. Ethereal bites Olfin and grabs him in his jaws, dropping him even after Aera’s Silvery Barbs forces a reroll, then shoots a radiant dart at Aera, which her Uncanny Dodge halves.
+Olfin dove in with his blade blazing with holy light, only to learn that Ethereal is a celestial and shrugs most of it off. The tail thrashed back at him. Aera had moved and could not steady her aim, and her arrow missed. Ethereal bit Olfin and caught him in his jaws, and Olfin fell, even after Aera's magic made the beast try again. A radiant dart came for Aera, and she slipped half of it.
 
-Shabasta drops Enhance Ability and spends his inspiration on a cold Chromatic Orb for 29. Malron casts Aid on three allies, which brings Olfin back from unconsciousness, and Crusty spends his last 3rd-level slot on a Lightning Bolt for 25. Stung, Ethereal beats his wings toward Crusty, dropping Olfin on the way. Olfin wakes in the arms of an angel, hits with a Wrathful Smite for 18, and is promptly knocked out again by the tail.
+Shabasta hurled a cold orb that struck hard. I called on Lathander to strengthen three of us, and the prayer brought Olfin back to his senses. Crusty spent the last of his strongest magic on a bolt of lightning. Stung, Ethereal beat his wings toward Crusty and dropped Olfin on the way. Olfin woke in the arms of an angel, struck him with a wrathful smite, and was knocked senseless again by the tail.
 
-Aera plants her feet for a Steady Aim shot that deals 27. Ethereal slams his tail into the ground, raising fountains of earth and stone that knock Aera around, then bites and claws her for 34 and she goes down. With Olfin and Aera both unconscious and the beast only “halfway there,” Shabasta’s Chromatic Orb misses and he inspires Malron instead: “You’re the MVP, bro.” Malron upcasts Aid for another 10 hit points each.
+Aera planted her feet and put an arrow deep into the beast. Ethereal slammed his tail into the ground, raising fountains of earth and stone that threw Aera about, then bit and clawed her until she went down. With Olfin and Aera both fallen and the beast only half beaten, Shabasta's orb went wide and he turned his song on me instead: “You’re the MVP, bro.” I prayed again, and Lathander's strength settled over all of us.
 
-Note: Ryan dubbed it “the famous Malron phrase”: it’s actually better if you die first, since Malron can bring you back. Shabasta's player pointed out that Shabasta is a reborn too at this point.
+Note: The DM dubbed it “the famous Malron phrase”: it’s actually better if you die first, since Malron can bring you back. Shabasta's player pointed out that Shabasta is a reborn too at this point.
 
-Then Crusty changes the fight. He polymorphs Shabasta into a giant ape with 157 hit points. Ethereal’s tail knocks the ape prone, Olfin wakes and stabs for 12 before going down again, and Aera stands to shoot but rolls a 1 (and a 100 on the fumble table, so nothing worse happens). Ethereal turns on the prone ape: a critical bite for 55 and a claw for 13, then a breath of brilliant radiance and shadowy murk that drops Aera again and burns Shabasta and Malron.
+Then Crusty changed the fight. He turned Shabasta into a giant ape. Ethereal's tail knocked the ape flat, Olfin woke and stabbed before going down again, and Aera stood to shoot and nearly dropped her bow. Ethereal turned on the fallen ape, a savage bite and a claw, then a breath of brilliant radiance and shadowy murk that dropped Aera again and burned Shabasta and me.
 
-“It’s time to monkey around.” The ape heaves itself up and punches the Fallen Star for 18 before another wing gust knocks him prone. Malron’s 4th-level Scorching Ray misses with all five rays. Crusty uses Catapult to launch one of the golem’s thrown candlesticks for 14. The ape takes another 34, soaking about 124 damage in all that would otherwise have landed on the party. Malron heals Aera back up with Cure Wounds and Crusty adds a Magic Missile for 12, still cowering in his corner.
+“It’s time to monkey around.” The ape heaved himself up and punched the Fallen Star before another gust of wind threw him down. My five rays of fire all went wide. Crusty flung one of the golem's thrown candlesticks back at the beast. The ape took blow after blow that would otherwise have fallen on the rest of us. I healed Aera back to her feet, and Crusty, still cowering in his corner, added a volley of magic missiles.
 
-Then Olfin fails his last death save and dies. Under the table’s heroic-moment rule, a dying character gets one last act with full slots and an automatic critical hit. Olfin climbs the beast’s tail and drives his sword, glowing white-hot, into its back: a 2nd-level Divine Smite for 47 radiant. With his last breath the Fallen Star roars, writhes and falls still. Malron had sworn never to spend his last 3rd-level slot until someone died, so he reaches Olfin within the minute and casts Revivify. Olfin lives.
+Then Olfin's breath stopped. In that moment he rose one last time with all his strength, climbed the beast's tail and drove his sword, glowing white-hot, into its back. With his last breath the Fallen Star roared, writhed and fell still. I had sworn never to spend my last great prayer until someone died, so I reached Olfin within the minute and called him back. Olfin lives.
 
-Note: The table named Malron’s rule “the Shabasta clause.”
+Note: The table named Malron’s rule “the Shabasta clause.” Under the table’s heroic-moment rule, a dying character gets one last act with full slots and an automatic critical hit: Olfin’s smite did 47.
 
-The Icon of Dawn’s Grace stirs. Motes of golden light gather over the fallen beast into an orb of golden flame above the Abbot’s chest, and the shard of divinity asks each of them to touch the icon to it, ape hand included. They find themselves in a dark, endless void of rolling mist, drawn toward the sound of sobbing. There sits the Abbot as a gaunt young man in threadbare robes, a blindfold of mist over his eyes and his frayed wings shackled to the ground, muttering “I’ve failed you.” Malron tells him he hasn’t failed: this is his chance to be reborn. A Taroka card drifts down, the Four of Glyphs, the Shepherd, drawn as an older woman under a rising sun: a message from St. Markovia. Shabasta’s Persuasion falls short, so Malron calls on her by name.
+The Icon of Dawn’s Grace stirred. Motes of golden light gathered over the fallen beast into an orb of golden flame above the Abbot’s chest, and the shard of divinity asked each of us to touch the icon to it, ape hand included. We found ourselves in a dark, endless void of rolling mist, drawn toward the sound of sobbing. There sat the Abbot as a gaunt young man in threadbare robes, a blindfold of mist over his eyes and his frayed wings shackled to the ground, muttering “I’ve failed you.” I told him he hasn’t failed: this is his chance to be reborn. A Tarokka card drifted down, the Four of Glyphs, the Shepherd, drawn as an older woman under a rising sun: a message from St. Markovia. Shabasta's words could not reach him, so I called on her by name.
 
-St. Markovia appears in a simple white robe, her eyes kind and strong. She knows the Abbot by his name, Ethereal, and asks to approach him. The Abbot confesses that he threatened her friends, separated parents from children and abused the faith of those who trusted him, and asks how she could forgive him. Malron answers: “Because that’s what the Morning Lord would want. Second chances, rebirth, a new dawn. This could be your new dawn.” The mist burns from the Abbot’s eyes, the void vanishes in white light, and in the beast’s place a white-winged youth in plain white robes lies sleeping on the abbey floor. Ethereal is restored, and the party reaches level 8. Malron asks the golem to look after him.
+St. Markovia appeared in a simple white robe, her eyes kind and strong. She knew the Abbot by his name, Ethereal, and asked to approach him. The Abbot confessed that he threatened her friends, separated parents from children and abused the faith of those who trusted him, and asked how she could forgive him. I answered: “Because that’s what the Morning Lord would want. Second chances, rebirth, a new dawn. This could be your new dawn.” The mist burned from the Abbot's eyes, the void vanished in white light, and in the beast's place a white-winged youth in plain white robes lay sleeping on the abbey floor. Ethereal is restored. I asked the golem to look after him.
 
-Note: Crusty took zero damage the entire fight. Inspiration for the session went to Olfin for the sacrifice. Level 8 sent everyone to their character sheets.
+Note: Crusty took zero damage the entire fight. Inspiration for the session went to Olfin for the sacrifice. The party reached level 8, which sent everyone to their character sheets.
 
 ## Key Locations:
 
-**The Asylum (S15), Abbey of St. Markovia**: The battleground for Ethereal’s second form, littered with candlesticks and broken furniture from the golem’s throws.
+**The Asylum (S15), Abbey of St. Markovia**: Where we fought Ethereal’s second form, littered with candlesticks and broken furniture from the golem’s throws.
 
 **The Void**: A dark, endless, mist-floored space reached through the Icon of Dawn’s Grace, where the Abbot’s soul sat weeping in shackles.
 
 ## Encounters:
 
-Combat: Ethereal, the Fallen Star (second form). Frightful presence, claws, bite-and-grapple, tail thrash and radiant darts, a tail slam that throws up earth and stone, wing gusts and a radiant-and-shadow breath. Olfin, Aera and Shabasta-as-ape all go down at least once. Olfin dies and lands the killing blow with a heroic auto-crit smite for 47.
+Ethereal, the Fallen Star, his second form: dread, claws, a crushing bite, tail lashes and radiant darts, a tail slam that throws up earth and stone, wing gusts and a breath of radiance and shadow. Olfin, Aera and Shabasta-as-ape all went down at least once. Olfin died and struck the killing blow.
 
-Social: Redeeming the Abbot in the void. Shabasta’s Persuasion (16) fails; invoking St. Markovia with the Shepherd card succeeds, and Malron’s words about a new dawn restore him.
+Redeeming the Abbot in the void. Shabasta's words failed; calling on St. Markovia with the Shepherd card succeeded, and the promise of a new dawn restored him.
 
 ## Loot:
 
-* **Milestone: Ethereal Restored.** The party reaches level 8.
-* No items recorded this session.
+* **Ethereal Restored.** The party reaches level 8.
+* Nothing else taken this time.
 
 ## Notable NPCs:
 
 **The Abbot / Ethereal**: Fought in his second form, the Fallen Star. Defeated, then redeemed through the Icon of Dawn’s Grace and St. Markovia; restored as a sleeping white-winged youth.
 
-**St. Markovia**: Appears in the void, summoned by her name and the Shepherd card. Calls the Abbot by his name, Ethereal, forgives him and asks to approach him.
+**St. Markovia**: Appeared in the void, summoned by her name and the Shepherd card. Called the Abbot by his name, Ethereal, forgave him and asked to approach him.
 
-**The Flesh Golem**: Still on the party’s side, though its throws mostly miss this time. Malron asks it to care for the sleeping Abbot.
+**The Flesh Golem**: Still on our side, though its throws mostly missed this time. I asked it to care for the sleeping Abbot.
 
 ## Plot Points:
 
 * The Abbot’s corruption is cleansed and he is restored to his angelic, youthful form, asleep for now.
 * The Shepherd card (Four of Glyphs) carried St. Markovia’s message; her spirit still answers in Barovia.
-* The Abbot admits separating parents from their children and abusing the faith of those who trusted him.
-* Malron’s “last 3rd-level slot is for Revivify” rule saved Olfin’s life.
+* The Abbot admitted separating parents from their children and abusing the faith of those who trusted him.
+* My rule of keeping one last great prayer to call back the dead saved Olfin’s life.
 
 ## Session Highlights:
 
-* Shabasta as a 157-hit-point giant ape, absorbing about 124 damage.
-* Olfin’s heroic death and auto-crit smite for 47, then Malron’s Revivify within the minute.
-* Malron’s five-for-five missed Scorching Ray.
-* Crusty finishing the fight without taking a single point of damage.
-* “Saint Markovia compels you.” (Malron)
+* Shabasta as a giant ape, standing between the beast and the rest of us.
+* Olfin’s heroic death and final blow, then his return within the minute.
+* My five rays of fire, all five wide.
+* Crusty finishing the fight without a scratch.
+* “Saint Markovia compels you.”

@@ -13,21 +13,21 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Shabasta:** Porcupine Bard
 
 **Summary:**  
-The rogues of the party trail Izek with stealth and overhear him talking to his spy about someone selling pies that let people dream while awake. Aera encounters a mastiff that growls at her, so she kills it in one blow.
+Our rogues trailed Izek unseen and overheard him talking with his spy about someone selling pies that let people dream while awake. A mastiff growled at Aera, and she killed it with one blow.
 
-Izek heads to the eastern gate, where refugees suffering from dream pastry addiction are trying to enter. He orders a dream pastry for himself from the guards for the next morning, dismisses the two guards, and heads to the Zarovich gate. At the lake, he gets a doll of Irena and drinks the poisoned bottle of wine.
+Izek went to the eastern gate, where refugees sick with longing for dream pastries were trying to get in. He ordered a dream pastry for himself from the guards for the next morning, dismissed the two guards and went on to the Zarovich gate. At the lake he took out a doll of Irena and drank the poisoned wine.
 
-A long and epic fight erupts, and the party is eventually victorious.
+A long and epic fight followed, and in the end we won it.
 
-The party finds an amber shard of Seriach, 35 gold, and a hell hound whisperer. Shabasta takes Izek’s arm and asks if it can be attached to him. Liren severs Izek’s right arm with her axe, and Marlon expertly attaches the magical arm to Shabasta.
+On him we found an amber shard of Seriach, thirty-five gold and a hell hound whisperer. Shabasta wanted Izek’s arm and asked whether it could be attached to him. Liren cut off Izek’s right arm with her axe, and with Lathander’s help I joined the magical arm to Shabasta.
 
-The party levels up.
+Note: The party leveled up.
 
 **Key Locations:**  
-1. **Eastern Gate:** Interaction with refugees and Izek ordering a dream pastry.  
-2. **Zarovich Gate:** Izek’s path and encounter at the lake.
+1. **Eastern Gate:** The refugees, and Izek ordering a dream pastry.  
+2. **Zarovich Gate:** Izek’s path to the lake, where we fought him.
 
 **Encounters:**  
-- **Social/Stealth:** Overhearing Izek’s conversation with his spy.  
-- **Combat:** Aera’s encounter with the mastiff.  
-- **Trap/Poison:** Izek drinking the poisoned wine.
+- **Trailing Izek:** We overheard him with his spy.  
+- **The mastiff:** One blow from Aera.  
+- **The poisoned wine:** Izek drank it before the fight.
