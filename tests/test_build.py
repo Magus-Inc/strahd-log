@@ -256,3 +256,14 @@ def test_bot_corpus_lists_posts_oldest_first_without_player_names(content, tmp_p
     assert "We met wolves." in last["text"]
     assert corpus["wiki"][0]["summary"] == "A cleric."
     assert "Chris" not in json.dumps(corpus)
+
+
+def test_footer_license_line_is_clean_and_names_no_one(content, tmp_path):
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example")
+    page = (out / "index.html").read_text(encoding="utf-8")
+    legal = re.findall(r'<p class="legal">(.*?)</p>', page, re.S)[-1]
+    assert legal.endswith("The site&rsquo;s code is all rights reserved.")
+    # Every entity is whole ("&rsquo;", never a stray "rsquo;"), and real names stay off the site's pages.
+    assert not re.search(r"(?<!&)\b(?:rsquo|copy|amp);", page)
+    assert "O&rsquo;Toole" not in page and "Christopher" not in page
