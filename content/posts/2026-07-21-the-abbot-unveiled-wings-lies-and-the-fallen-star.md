@@ -14,14 +14,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * **To be continued:** Shot through the heart, the Abbot rises again as the Fallen Star.
 
 ## Characters:
-
-* **Shabasta**: Porcupine Bard (Grant Haseloff). A performer with a flair for the dramatic who mixes enchanting music with prickly wit; his sharp melodies inspire allies and dishearten enemies. Tonight his Deception does the heavy lifting.
-* **Aera shan Ravanór**: Wood-elf Rogue (Liz Mathews). The party’s lead scout and a deadly archer, legendary at finding and disarming traps and always first into the dark. Leaves the Abbey with bat wings of bone.
-* **Olfin Darning**: Hexblood Paladin (Seth Booth). Bound by an oath to the light, with a hexblood heritage that hints at old bargains; both protector and enigma to his companions. Leaves the Abbey with eagle wings of bone.
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander (Christopher O’Toole). Raised by a resurrection gone wrong that let an ancient elven spirit share his body, he now speaks with spirits and understands Elvish and Sylvan.
-* **Crusty**: High Elf Sage Wizard (Cole Smarr). A spectacled scholar with a crystal-crowned staff, a well-worn tome and a tawny owl familiar on his shoulder.
-
-Two months after the last session, the party climbs the winding road out of Krezk toward the Abbey of St. Markovia, still sore from a run-in with scarecrows and dire wolves. Baron Dmitri Krezkov has begged them to stop the Abbot from taking his wife Anna’s heart, and the icon they carry has warned them to tread carefully and ready their steel.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

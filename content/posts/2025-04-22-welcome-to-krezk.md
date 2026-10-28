@@ -6,13 +6,12 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ---
 
 ## Characters:
-
-* **Oogway**: A serene and wise turtle Wizard Bladesinger who wields magic and blade with precision.
-* **Liren**: A fierce Dragonborn Barbarian loyal to their companions and protective in battle.
-* **Gumbo**: A pragmatic Half-Orc Rogue with a knack for stealth and unexpected solutions.
-* **Aera shan Ravanór**: A cunning Wood-elf Rogue adept at stealth and navigating complex situations.
-* **Malron Lichtstrahl**: A Reborn Cleric of Lathander with a connection to spirits and the undead.
-* **Zorpheus**: Mysterious wanderer and bard drawn to fate and prophecy.
+* [Oogway](/wiki/oogway/)
+* [Liren](/wiki/liren/)
+* [Gumbo](/wiki/gumbo/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Zorpheus](/wiki/zorpheus/)
 
 ## Summary:
 

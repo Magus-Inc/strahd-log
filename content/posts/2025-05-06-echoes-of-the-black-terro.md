@@ -8,12 +8,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # Echoes of the Black Terror
 
 ## Characters:
-
-* **Gumbo**: A pragmatic Half-Orc Rogue with a knack for stealth and unexpected solutions.
-* **Aera shan Ravanór**: A cunning Wood-elf Rogue adept at stealth and navigating complex situations.
-* **Zorpheus**: Mysterious wanderer and bard drawn to fate and prophecy.
-* **Malron Lichtstrahl**: A Reborn Cleric of Lathander with a connection to spirits and the undead.
-* **Oogway**: A serene and wise turtle Wizard Bladesinger who wields magic and blade with precision.
+* [Gumbo](/wiki/gumbo/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Zorpheus](/wiki/zorpheus/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Oogway](/wiki/oogway/)
 
 ## Summary:
 

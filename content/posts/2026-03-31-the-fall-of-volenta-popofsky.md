@@ -8,12 +8,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Fall of Volenta Popofsky
 
 ## Characters:
-
-* **Shabasta**: Porcupine Bard; a dramatic performer who uses “biting satire” and prickly wit.
-* **Aera shan Ravanór**: Wood-elf Rogue; a deadly archer who utilizes “Uncanny Dodge” and a “turbo bow”.
-* **Olfin Darning**: Hexblood Paladin; a steadfast protector wielding the Holy Symbol of Ravenkind.
-* **Malron Lichtstrahl**: Reborn Cleric; a spirit medium for Lathander who channels “Radiance of the Dawn”.
-* **Crusty**: High Elf Sage Wizard; a scholarly intellect focused on arcane mastery and strategic casting.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

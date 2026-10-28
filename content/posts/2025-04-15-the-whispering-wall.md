@@ -9,12 +9,11 @@ DnD Adventure Log
 The Whispering Wall
 
 ## Characters:
-
-* **Liren**: Fierce Dragonborn barbarian with unmatched combat prowess.
-* **Aera**: Cunning Wood-elf rogue, always seeking the next great challenge.
-* **Gumbo**: Clever Half-Orc rogue, balancing strategic thought and quick action.
-* **Malron**: Reborn cleric with ties to an ancient elven lineage.
-* **Zorpheus**: Mysterious wanderer drawn to fate and prophecy.
+* [Liren](/wiki/liren/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Gumbo](/wiki/gumbo/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Zorpheus](/wiki/zorpheus/)
 
 ## Summary:
 

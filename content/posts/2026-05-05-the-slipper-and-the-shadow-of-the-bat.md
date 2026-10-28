@@ -8,11 +8,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Slipper and the Shadow of the Bat
 
 ## Characters:
-
-* **Aera shan Ravanór**: Wood-elf Rogue. A deadly archer and the party’s lead scout, expert in trap detection and lockpicking.
-* **Olfin Darning**: Hexblood Paladin. A resilient protector who walks the line between light and shadow, wielding divine power.
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander. A spirit medium who does not need to breathe or eat, serving as the party’s spiritual anchor.
-* **Crusty**: High Elf Sage Wizard. An intellectual scholar accompanied by a tawny owl familiar, wielding potent arcane evocations.
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

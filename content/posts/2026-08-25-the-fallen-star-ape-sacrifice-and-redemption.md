@@ -14,14 +14,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * **Redemption:** In a misty void, St. Markovia and Malron’s words restore the Abbot. Ethereal Restored; the party reaches level 8.
 
 ## Characters:
-
-* **Shabasta**: Porcupine Bard (Grant Haseloff). A performer with a flair for the dramatic who mixes enchanting music with prickly wit; his sharp melodies inspire allies and dishearten enemies.
-* **Aera shan Ravanór**: Wood-elf Rogue (Liz Mathews). The party’s lead scout and a deadly archer, legendary at finding and disarming traps and always first into the dark. Carries the session’s inspiration for her 71 damage against the Abbot’s first form.
-* **Olfin Darning**: Hexblood Paladin (Seth Booth). Bound by an oath to the light, with a hexblood heritage that hints at old bargains; both protector and enigma to his companions. Flies on the eagle wings taken from the Abbey.
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander (Christopher O’Toole). Raised by a resurrection gone wrong that let an ancient elven spirit share his body, he now speaks with spirits and understands Elvish and Sylvan.
-* **Crusty**: High Elf Sage Wizard (Cole Smarr). A spectacled scholar with a crystal-crowned staff, a well-worn tome and a tawny owl familiar on his shoulder.
-
-The fight in the Abbey’s asylum never stopped. Aera’s arrow went through the Abbot’s heart, but his body twisted into something new: the Fallen Star, a chimera of lion, ram, bat and crocodile, at full strength. Shabasta lies prone at 8 hit points, Olfin hovers on borrowed wings, and the flesh golem still fights at the party’s side.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 
@@ -41,7 +38,7 @@ Shabasta drops Enhance Ability and spends his inspiration on a cold Chromatic Or
 
 Aera plants her feet for a Steady Aim shot that deals 27. Ethereal slams his tail into the ground, raising fountains of earth and stone that knock Aera around, then bites and claws her for 34 and she goes down. With Olfin and Aera both unconscious and the beast only “halfway there,” Shabasta’s Chromatic Orb misses and he inspires Malron instead: “You’re the MVP, bro.” Malron upcasts Aid for another 10 hit points each.
 
-Note: Ryan dubbed it “the famous Chris O’Toole phrase”: it’s actually better if you die first, since Malron can bring you back. Grant pointed out that Shabasta is a reborn too at this point.
+Note: Ryan dubbed it “the famous Malron phrase”: it’s actually better if you die first, since Malron can bring you back. Shabasta's player pointed out that Shabasta is a reborn too at this point.
 
 Then Crusty changes the fight. He polymorphs Shabasta into a giant ape with 157 hit points. Ethereal’s tail knocks the ape prone, Olfin wakes and stabs for 12 before going down again, and Aera stands to shoot but rolls a 1 (and a 100 on the fumble table, so nothing worse happens). Ethereal turns on the prone ape: a critical bite for 55 and a claw for 13, then a breath of brilliant radiance and shadowy murk that drops Aera again and burns Shabasta and Malron.
 

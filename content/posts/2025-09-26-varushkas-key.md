@@ -6,14 +6,13 @@ slug: varushkas-key
 
 # Varushka's Key
 
-*Written from Chris's notes for this session; there is no recording.*
+*Written from the session notes; there is no recording.*
 
 ## Characters:
-
-* **Aera shan Ravanór**: A cunning Wood-elf Rogue adept at stealth and navigating complex situations.
-* **Malron Lichtstrahl**: A Reborn Cleric of Lathander with a connection to spirits and the undead.
-* **Zorpheus**: Mysterious wanderer and bard drawn to fate and prophecy.
-* **Olfin Darning**: A Hexblood Paladin navigating the balance of light and shadow through their oath.
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Zorpheus](/wiki/zorpheus/)
+* [Olfin Darning](/wiki/olfin-darning/)
 
 ## Summary:
 

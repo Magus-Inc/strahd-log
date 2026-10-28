@@ -9,7 +9,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 *This session was written up twice on Obsidian Portal: as "Welcome Back To Vellanki" and as "Shadows and
 Steel—The Ravenloft Infiltration Plan" (the
 [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post
-combines both, checked against Chris's own notes and the recording of the night.*
+combines both, checked against the session notes and the recording of the night.*
 
 ## At a Glance:
 
@@ -20,12 +20,11 @@ combines both, checked against Chris's own notes and the recording of the night.
 * **Crokinole:** A Canadian board game briefly takes over the table.
 
 ## Characters:
-
-* **Aera shan Ravanór (Liz)**: Wood-elf Rogue (Level 7) and expert infiltrator. Having mastered **Evasion**, she can emerge unscathed from dragon breath or reckless Fireballs. Her pseudodragon companion, found in Argynvostholt, is her eyes in the dark and vital for scouting.
-* **Malron Lichtstrahl (Chris)**: Reborn Cleric of Lathander and Spirit Medium. His body is the vessel for an ancient Elven spirit, the result of a failed resurrection. His connection to the Morninglord has grown stronger with the party's new power, and he remains the group's tether to the light against the encroaching rot of the Grave.
-* **Shabasta (Grant)**: Bard of Fate (Level 7), focused on the prophetic nature of the journey. At Level 7 he gains 4th-level spells, with **Greater Invisibility** among the new options he weighed. His tactical magic includes **Silvery Barbs**, to pluck away a foe's success.
-* **Olfin Darning (Seth)**: Hexblood Paladin who carries the **Symbol of Ravenkind**. A primary frontline defender of legendary resilience and a prime candidate for the party's new buffs. His Aura of Devotion projects a ten-foot sanctuary, so his allies cannot be charmed by the Count's honeyed lies.
-* **Krusty – Ralph Kristofferson (Cole)**: Wizard (Level 7), a newcomer with a background in academic arcana. **Fireball** stays in his arsenal, and Level 7 brings his first 4th-level spell, with **Greater Invisibility** among the options discussed.
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Shabasta](/wiki/shabasta/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 
@@ -61,7 +60,7 @@ The plan is a proactive heist. Drawing on what they had learned about the castle
 
 ## What We Learned (Not from Doru):
 
-Chris's notes from the night, castle room numbers as the party had them:
+The session notes from the night, castle room numbers as the party had them:
 
 * **Find:** a key.
 * **K1, courtyard:** the drawbridge might not be down, so find a way to get in. The party should devise a plan to get in if the drawbridge is up.

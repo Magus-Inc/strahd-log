@@ -14,22 +14,19 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * **Farewell:** Liren and Gumbo fade into a silver reliquary for Aera, and Strahd leaves a mocking letter in a black carriage.
 
 ## Characters:
-
-* **Shabasta**: Porcupine Bard (Grant Haseloff). A performer with a flair for the dramatic who mixes enchanting music with prickly wit; his sharp melodies inspire allies and dishearten enemies. Freshly reincarnated after a stint as a druid’s sheep.
-* **Aera shan Ravanór**: Wood-elf Rogue (Liz Mathews). The party’s lead scout and a deadly archer, legendary at finding and disarming traps and always first into the dark.
-* **Olfin Darning**: Hexblood Paladin (Seth Booth). Bound by an oath to the light, with a hexblood heritage that hints at old bargains; both protector and enigma to his companions.
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander (Christopher O’Toole). Raised by a resurrection gone wrong that let an ancient elven spirit share his body, he now speaks with spirits and understands Elvish and Sylvan.
-* **Crusty**: High Elf Sage Wizard (Cole Smarr). A spectacled scholar with a crystal-crowned staff, a well-worn tome and a tawny owl familiar on his shoulder. Tonight he reveals he is a Divination wizard.
-* **Liren**: Dragonborn Barbarian (Kane Child, visiting). Wary and slow to trust anyone except Malron, and a force of raw fury in battle.
-* **Gumbo**: Half-orc Rogue (Michael Child, visiting). Resourceful and pragmatic, with a knack for unexpected solutions and a sly sense of humor.
-
-The Abbot has been redeemed and sleeps as a white-winged youth, watched over by the flesh golem. The party, newly level 8, beds down in the Abbey of St. Markovia for the night, with no idea that two old friends are about to climb out of the courtyard well.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
+* [Liren](/wiki/liren/)
+* [Gumbo](/wiki/gumbo/)
 
 ## Summary:
 
 With the Abbot restored, the party sleeps in the Abbey of St. Markovia. In the night the abbey bell wakes them. Fog pours upward out of the courtyard well, and beside it stand two still figures the party first takes for more of the Abbot’s creations, until one looks up. It is Liren and Gumbo, companions long thought lost. For the party it has been months; for the two of them, only hours.
 
-Note: Michael and Kane surprised the table after waiting outside for an hour and a half. Ryan ran it as an in-theme one-shot so everyone could play together, and caught them up: the party had broken into Castle Ravenloft, stolen from Strahd, nearly been caught, and killed two of his three brides. Grant explained that Shabasta had been a druid’s sheep in the meantime, died, and is now Shabasta again, reincarnated.
+Note: Liren's and Gumbo's players surprised the table after waiting outside for an hour and a half. Ryan ran it as an in-theme one-shot so everyone could play together, and caught them up: the party had broken into Castle Ravenloft, stolen from Strahd, nearly been caught, and killed two of his three brides. Shabasta's player explained that Shabasta had been a druid’s sheep in the meantime, died, and is now Shabasta again, reincarnated.
 
 A pounding begins beneath the abbey, in time with the bell, and a mongrelfolk in the courtyard whispers that the Abbot said never to open the red door. A red door no one noticed before now stands in the back corner, over stairs leading down. Crusty’s Detect Magic finds nothing magical on it. Aera and Gumbo work the lock and it finally opens onto fifteen feet of stairs into pitch darkness. Olfin leads the way, checking for traps, and Crusty casts Light on his shield.
 
@@ -41,7 +38,7 @@ Beyond, a hallway ends in a spiked gate that lifts on its own. Olfin checks that
 
 Malron tries to consult the icon of St. Markovia, but it has not answered since the fight with the Abbot. One by one the heroes refuse: Shabasta has grown to love the party (and his sweet arm), Olfin stays, Liren likes to fight, Crusty has mysteries to uncover, and Gumbo is too in love with his own lifestyle to give it up. Malron warns Aera that it feels like a trap: “From everything you’ve told me about your family, this wouldn’t be your family.” Aera, whose husband and children were lost, walks through the door anyway.
 
-Note: Aera’s choice was a long, real debate at the table. Liz chose it knowing it might mean a new character; Ryan let her play it out.
+Note: Aera’s choice was a long, real debate at the table. Her player chose it knowing it might mean a new character; Ryan let her play it out.
 
 The meadow fades back into stone. From behind another door comes Aera’s muffled scream: the door was a lie, and she was teleported into the next room and took 9 psychic damage. Olfin opens the door to find her collapsed in a corner, clutching her head. Above her waits the Abbot’s first attempt at a perfect vessel, made before Vasilka: a body meant to hold a pure soul that failed, so he chained it beneath the abbey and forgot it. With the Abbot changed, hundreds of trapped soul fragments have flooded into it and woken it. It stands nine feet tall, with six mismatched arms, fragments of angelic wings, dozens of closed eyes stitched across its body and a golden halo nailed into its skull. It speaks in the voices of the dead, including Shabasta’s brother Doru.
 
@@ -93,7 +90,7 @@ Combat: The Abbot’s first vessel, full of trapped souls and speaking with the 
 
 ## Session Highlights:
 
-* The surprise return of Liren and Gumbo (and of Michael and Kane).
+* The surprise return of Liren and Gumbo (and of their players).
 * Shabasta’s vicious mockery: “You’re not even a real shadow.”
 * Shabasta’s special spear rolling a 1 and stabbing Olfin.
 * Aera choosing the door to her lost family.

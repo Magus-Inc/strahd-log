@@ -8,12 +8,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Echoing Choirs of Ravenloft
 
 ## Characters:
-
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander. A spirit medium who shares his body with an ancient elven soul.
-* **Shabasta**: Porcupine Bard. A dramatic performer whose prickly exterior matches his biting wit.
-* **Aera shan Ravanór**: Wood-elf Rogue. A deadly archer and expert scout wielding a “turbo bow.”
-* **Crusty**: High Elf Sage Wizard. A brilliant scholar and archer who relies on his owl familiar and arcane intellect.
-* **Emil**: Werewolf NPC. A powerful but cautious ally who assists the party with physical challenges.
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

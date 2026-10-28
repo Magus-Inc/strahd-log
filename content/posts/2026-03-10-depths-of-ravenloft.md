@@ -14,13 +14,10 @@ Shadows of the Larder: The Drowning Cells of Ravenloft
 The atmospheric weight of Castle Ravenloft has undergone a profound metamorphosis. The party has transitioned from the soaring, wind-swept heights of the spires—where they witnessed the crystalline malice of the Heart of Sorrow—into the claustrophobic and lightless viscera of the castle’s foundations. Descending forty feet into the Larders of Ill Omen, the party now navigates a landscape defined by decay and stagnant, ice-cold water. This descent marks a shift into a more punishing, resource-intensive phase of their journey, as the grand architecture of the upper floors gives way to the submerged, black-mirrored halls of the Drowning Cells.
 
 ## Characters:
-
-* Shabasta: A porcupine bard with a spiny exterior that mirrors his prickly wit. He specializes in weaving biting satire into his dramatic musical performances, using sharp melodies to bolster his allies while disheartening the horrors they face. During recent explorations, his mastery of Invisibility and Enhance Ability proved vital to the group’s tactical survival.
-* Aera shan Ravanór: A wood-elf Rogue and the party’s lead scout. Her expertise in trap detection and disarming is legendary, though the magical architecture of the castle often tests her limits. She is the group’s eyes in the dark, frequently leading the way with rapier in hand to probe the murky waters for hazards.
-* Olfin Darning: A Hexblood Paladin who serves as the party’s resilient anchor. Bound by a divine oath but touched by fey or dark influences, he walks the line between light and shadow. His physical prowess and spiritual protection are the group’s primary shield, though he was recently separated from his companions by a localized teleportation hazard.
-* Malron Lichtstrahl: A Reborn Cleric of Lathander, often referred to as “Krusty.” Malron’s existence is a “Frankenstein” tragedy; he was poisoned and unconscious in a burning web when his mentor performed a botched resurrection on him before he had actually died. This spiritual fracture allowed an ancient Elven spirit to cohabitate his body. As a spirit medium, Malron requires neither breath nor sustenance, an elven nature that allowed him to remain effective while submerged in the castle’s flooded depths.
-
-Having traded the dizzying spires for the lightless cellar, the heroes now face a subterranean labyrinth where every step is a gamble against the rising tide.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
 

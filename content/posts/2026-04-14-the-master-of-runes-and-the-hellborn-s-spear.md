@@ -8,12 +8,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Master of Runes and the Hellborn’s Spear
 
 ## Characters:
-
-* **Shabasta**: Porcupine Bard. A prickly performer with a flair for satirical melodies and dramatic wit.
-* **Aera shan Ravanór**: Wood-elf Rogue. The party’s lead scout and a deadly archer, expert in trap detection.
-* **Olfin Darning**: Hexblood Paladin. A resilient protector walking the line between divine light and fey shadow.
-* **Malron Lichtstrahl**: Reborn Cleric. A servant of Lathander who cohabitates his body with an ancient elven spirit.
-* **Crusty**: High Elf Sage Wizard. A scholarly beacon of intellect wielding arcane power and a gnarled crystal staff.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

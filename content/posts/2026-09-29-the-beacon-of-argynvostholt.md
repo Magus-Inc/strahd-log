@@ -14,16 +14,11 @@ slug: the-beacon-of-argynvostholt
 * **The beacon:** The party swears the Order's oath, Olfin's longsword is blessed, and Argynvost burns as a silver beacon over Barovia.
 
 ## Characters:
-
-* **Shabasta**: Porcupine Bard (Grant Haseloff). A performer with a flair for the dramatic and a prickly wit; tonight his Dimension Door carries the skull to its resting place and his words help lay a commander to rest.
-* **Aera shan Ravanór**: Wood-elf Rogue (Liz Mathews). The party's lead scout and a deadly archer, with Zora the pseudodragon at her side and an amber shard in her pack.
-* **Olfin Darning**: Hexblood Paladin (Seth Booth). Bound by an oath to the light, he holds the line with the Sentinel feat and leaves Argynvostholt carrying a dragon-blessed longsword.
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander (Christopher O'Toole). A spirit medium who shares his body with an ancient elven soul; he gives last rites to the dead on the road.
-* **Crusty**: High Elf Sage Wizard (Cole Smarr). A spectacled scholar with a crystal-crowned staff and a tawny owl familiar, who speaks Draconic when a pseudodragon needs a translator.
-
-With the Abbot of St. Markovia restored and their two old companions gone again, resting as silver flames in the Reliquary of Two Flames, the party wakes from a long rest near Krezk. They still carry the skull of Argynvost, the silver dragon whose spirit asked them to return it to his crypt at Argynvostholt.
-
-Note: The table passed the reliquary around at the start of the night, and nobody was sure who ended up holding it. Malron's journal doesn't say either.
+* [Shabasta](/wiki/shabasta/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

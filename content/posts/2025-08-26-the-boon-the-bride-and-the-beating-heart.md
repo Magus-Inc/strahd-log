@@ -8,12 +8,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Boon, the Bride, and the Beating Heart
 
 ## Characters:
-
-* **Aera shan Ravanór**: A cunning Wood-elf Rogue adept at stealth and navigating complex situations.
-* **Gumbo**: A pragmatic Half-Orc Rogue with a knack for stealth and unexpected solutions.
-* **Malron Lichtstrahl**: A Reborn Cleric of Lathander with a connection to spirits and the undead.
-* **Zorpheus**: Mysterious wanderer and bard drawn to fate and prophecy.
-* **Olfin Darning**: A Hexblood Paladin navigating the balance of light and shadow through their oath.
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Gumbo](/wiki/gumbo/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Zorpheus](/wiki/zorpheus/)
+* [Olfin Darning](/wiki/olfin-darning/)
 
 ## Summary:
 

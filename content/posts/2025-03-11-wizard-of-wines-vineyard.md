@@ -8,14 +8,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # DnD Adventure Log Wizard of Wines vineyard
 
 ## Characters:
-
-* **Oogway**: A serene and wise turtle Wizard Bladesinger who wields magic and blade with precision.
-* **Olfin Darning**: A Hexblood Paladin navigating the balance of light and shadow through their oath.
-* **Liren**: A fierce Dragonborn Barbarian loyal to their companions and protective in battle.
-* **Gumbo**: A pragmatic Half-Orc Rogue with a knack for stealth and unexpected solutions.
-* **Aera shan Ravanór**: A cunning Wood-elf Rogue adept at stealth and navigating complex situations.
-* **Veyren**: Shabasta’s hare-like brother, drawn into the journey by the loss of his sibling.
-* **Malron Lichtstrahl**: A Reborn Cleric of Lathander with a connection to spirits and the undead.
+* [Oogway](/wiki/oogway/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Liren](/wiki/liren/)
+* [Gumbo](/wiki/gumbo/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Veyren](/wiki/veyren/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
 
