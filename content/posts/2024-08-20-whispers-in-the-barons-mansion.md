@@ -6,34 +6,26 @@ slug: whispers-in-the-barons-mansion
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/whispers-in-the-barons-mansion
 ---
 
-## After-Action Adventure Report: “Whispers in the Baron’s Mansion”
-
 ## The Baron’s Den
 
-- **Padded Chairs and Pretense**: The Den welcomed our party with plush chairs, but Malron’s audacious ruse allowed him to ascend the stairs unnoticed. Meanwhile, Schlopkht attempted to jam a door, buying precious moments for clandestine exploration.  
-- **The Haunting Spirit**: The Baron revealed that a malevolent spirit plagued the mansion, driving away staff. The cook had witnessed its eerie presence. But why did the Baron wish to keep the women ignorant?  
-- **Failed Persuasion**: Our party’s attempt to peruse the Baron’s books met resistance. However, the Baron agreed to lead them to the kitchen.
+The den welcomed us with padded chairs, but I managed a bold ruse and slipped up the stairs unnoticed, while Schlopkht tried to jam a door to buy us time to look around.
+
+The Baron told us a malevolent spirit plagues the mansion and has driven off the staff. The cook has seen it. Why, I wonder, did he want the women kept ignorant of it? We asked to look through his books and were refused, but he agreed to show us the kitchen.
 
 ## The Kitchen and Gallery
 
-- **Silhouettes and Suspicion**: In the kitchen, a distorted silhouette hinted at the spirit’s presence. Viktor, the Baron’s son, vanished to the attic for hours. Strange illnesses and noises added to the mansion’s enigma.  
-- **Familiar Names**: A dusty book revealed Ireena Strazni’s tragic fate—presumed devoured by wolves. Grygori and Fatima Strazni’s suicides cast shadows over the family history.
+In the kitchen a distorted silhouette hinted at the spirit. Viktor, the Baron’s son, disappears into the attic for hours at a time, and strange illnesses and noises fill the house.
 
 ## The Library and Viktor
 
-Malron found a book about births and deaths of Vellaki families. I see a familiar name. Ireena Strazni, the younger sister of Izek Strazni and the daughter of Grygori and Fatima Strazni. According to the records, however, Ireena Strazni died more than eighteen years ago at the age of four, with Grygori and Fatima dying shortly thereafter. Grygori and Fatima’s deaths are marked as Suicide by hanging, while Ireena’s cause of death is marked as Unknown (presumed devoured by wolves).
+I found a book of the births and deaths of Vallaki’s families and saw a familiar name: Ireena Strazni, younger sister of Izek Strazni and daughter of Grygori and Fatima Strazni. By the records, Ireena Strazni died more than eighteen years ago at the age of four, and Grygori and Fatima soon after. Their deaths are marked as suicide by hanging. Ireena’s cause of death is marked unknown, presumed devoured by wolves.
 
-- **Invisible Revelations**: Viktor, the invisible man, materialized in the library. His spellbook bore the ring’s symbol—a connection to Khazan, the original mage.  
-- **Forbidden Magic**: Viktor studied necromancy and other arcane arts using the ring. His curiosity centered on Khazan’s tower—a place barred to outsiders.  
-- **Lies and Mirrors**: Viktor’s nervous glances at mirrors betrayed his secrets. His spectral cat and the painted dolls hinted at deeper mysteries.
+Viktor turned out to be an invisible man, and he appeared before us in the library. His spellbook bears the ring’s symbol, which ties it to Khazan, the original mage. Viktor has been studying necromancy and other arts by means of the ring, and his curiosity centers on Khazan’s tower, a place barred to outsiders. He kept glancing nervously at the mirrors. His spectral cat and the painted dolls hint at more.
 
 ![](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/images/Victor%20Vallakovich.png)
 
 ## The Attic
 
-- **Glyphs and Warnings**: “All is not well” adorned the attic door. Glyphs of warding guarded it. What lay beyond?  
-- **Schlopkht’s Ruse**: A staged fall revealed the ring before Viktor. The truth remained elusive.  
-- **Teleportation Circle**: Beneath a rug, etched sigils formed a teleportation circle. Viktor tested it, with gruesome results.
+“All is not well” is written on the attic door, and glyphs of warding guard it. Schlopkht staged a fall to show Viktor the ring, but the truth stayed out of reach. Beneath a rug, sigils etched into the floor form a teleportation circle. Viktor has tested it, with gruesome results.
 
-And so, dear reader, our adventurers stand at the precipice—the Baron’s mansion concealing more than mere specters. The path forward winds through deception, magic, and the unknown. 🌌🔍✨
-
+The Baron’s mansion hides more than ghosts. Our way forward runs through deception, magic and the unknown.
