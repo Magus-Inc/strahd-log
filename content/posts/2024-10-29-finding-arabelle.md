@@ -26,7 +26,7 @@ Rictavio has enchanted his wagon to seem less inviting, and he confirmed he is p
 
 Rictavio handed me the Talisman of Echoes, which lets one ask questions of the dead a few times. We used it on Yann’s head, which van Richten had kept. From it we judged that Arrigal had no part in taking Arabelle. Arrigal and van Richten disagree on how best to keep her safe, so we suggested she stay in the enchanted wagon at the Vistani camp.
 
-Note: The Talisman of Echoes has four charges.
+Note: The Talisman of Echoes has four charges: one casts gentle repose, two cast speak with dead. It regains 1d4 each dawn, and spending the last one risks it crumbling to ash.
 
 **The Prophecy**  
 Aera asked Arabelle whether she had anything to tell us, and she spoke a prophecy.
