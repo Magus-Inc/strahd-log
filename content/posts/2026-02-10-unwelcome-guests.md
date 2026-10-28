@@ -17,51 +17,51 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-As the sun surrendered to the jagged peaks of the Balinoks, the party stood at a critical crossroads. The transition from the relative sanctuary of the Bluewater Inn to the vertical reaches of the Count’s domain represented a fundamental strategic pivot. This mission was predicated on a rare “strategic window“—the departure of the Master of the House—demanding a shift from open-world investigation to proactive, surgical sabotage.
+As the sun sank behind the jagged peaks of the Balinoks, we stood at a turning point. We were leaving the safety of the Bluewater Inn for the heights of the Count’s domain. Everything hung on a rare chance, the master of the house away from home, and so we would no longer wander and ask questions. We would strike.
 
-The party still had 12 hours left of the necrotic resistance Strahd had granted them. The journey commenced with an 8.5-mile trek from Vallaki. Near the Sarepool crossroads, the party encountered a Vistani caravan; the elder Stanimere, Radu and Elizabella were in it, telling stories. The exchange was one of cautious neutrality. Recognizing the party’s historical merit—specifically their role in laying Verushka’s spirit to rest—Stanimere gave Aera a Clairvoyance Stone to aid their infiltration.
+We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Sarepool crossroads we met a Vistani caravan, with the elder Stanimere, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimere knew what we had done, laying Verushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
 
-**Note: [The party briefly debated a “Trojan Bunny” strategy or theft of the Vistani crest before opting for diplomatic neutrality.]**
+Note: The party briefly debated a "Trojan Bunny" strategy, or stealing the Vistani crest, before settling on diplomatic neutrality.
 
-Upon reaching the precipice, the party observed Strahd von Zarovich departing the castle atop his nightmare, Becephalus. With the Master away, Aera cast Invisibility on herself and Krusty cast Fly on her. She soared across the chasm and came up behind the wights on the ramparts. With Mage Hand she picked the alarm horn from the first wight’s pocket, then stole the second wight’s horn as well. The infiltration nearly turned catastrophic when Aera attempted a “Running Somersault Dropkick” to push one off the edge; she stumbled (rolling a 1) and bounced off the guard, and the kick ended her invisibility. Combat erupted, and the party defeated the wights. Aera poured oil on the drawbridge chains to silence them, and the party lowered the drawbridge and reached the servant’s entrance.
+At the edge of the precipice we watched Strahd von Zarovich ride out of the castle on his nightmare, Becephalus. With the master gone, Aera made herself invisible and Krusty gave her the power to fly. She soared across the chasm and came up behind the wights on the ramparts. With a conjured hand she picked the alarm horn from the first wight’s pocket, then took the second wight’s horn as well. It nearly went very wrong when she tried a running somersault dropkick to send one of them off the edge. She stumbled and bounced off the guard, and the kick undid her invisibility. The fight broke out, and we destroyed the wights. Aera poured oil on the drawbridge chains to quiet them, and we lowered the drawbridge and reached the servants’ entrance.
 
-**Note: [The DM returned a Luck Point to Aera following the failed somersault, noting the sentries were “low-level annoyances” compared to the threats deeper within.]**
+Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point afterward, saying the sentries were "low-level annoyances" next to what waits deeper in.
 
 ## Key Locations:
 
-**The Bluewater Inn**: The party’s primary base of operations and the last bastion of relative safety in Vallaki.
+**The Bluewater Inn**: Our base, and the last place of any safety in Vallaki.
 
-**Sarepool**: The Vistani encampment and site of the crossroads encounter.
+**Sarepool**: The Vistani camp, where we met the caravan at the crossroads.
 
-**The Chasm and Drawbridge**: A 1,000-foot plummet and 50-foot gap that serves as Ravenloft’s primary geographical defense.
+**The Chasm and Drawbridge**: A thousand-foot drop and a fifty-foot gap, Ravenloft’s first defense.
 
-**The Servant’s Entrance (K1-K2)**: A discrete entry point accessed via the password “Ikame Dastra’s memory.” Contains a registration book for “next of kin” and a withered corpse.
+**The Servants’ Entrance (K1-K2)**: A quiet way in, opened with the password “Ikame Dastra’s memory.” Inside are a register for “next of kin” and a withered corpse.
 
 ## Encounters:
 
-Social: **Stanimere, Radu and Elizabella**: Vistani storytellers; a neutral exchange that ended with Aera receiving the Clairvoyance Stone.
+**Stanimere, Radu and Elizabella**: Vistani storytellers; a civil meeting that ended with a Clairvoyance Stone for Aera.
 
-Tactical Combat: **The Parapet Wights**: A high-efficiency engagement initiated by Aera’s failed acrobatic strike. The strategy of pickpocketing the horns first prevented a castle-wide alarm.
+**The Parapet Wights**: A quick fight, begun by Aera’s failed somersault. Picking the horns from their pockets first kept the whole castle from being roused.
 
 ## Loot:
 
 * **Clairvoyance Stone**: A palm-sized stone with 3 charges to cast the Clairvoyance spell. The item text is on the [Clairvoyance Stone](/wiki/clairvoyance-stone/) page.
-* **Silvered Crossbow and 20 Silvered Bolts**: Transferred from Malron to Shabasta to improve the party’s ranged options.
+* **Silvered Crossbow and 20 Silvered Bolts**: I passed them to Shabasta to give us more reach.
 
 ## Notable NPCs:
 
-**Stanimere**: A Vistani Elder and messenger of Madam Eva. He remains friendly due to the party’s past deeds.
+**Stanimere**: A Vistani elder and messenger of Madam Eva, still friendly for what we have done.
 
-**Strahd von Zarovich**: Briefly sighted departing the castle; his absence is the linchpin of this session’s tactical window.
+**Strahd von Zarovich**: Seen riding out of the castle. His absence was the whole of our chance.
 
 ## Plot Points:
 
-* **The Three-Pointed Star**: A crest intended for Lady Fiona Wachter. Its design suggests a connection to the ancient Fanes of Barovia.
-* **The Servant’s Register**: A grim ledger in K1 where staff “register for next of kin.” The withered corpse beside it suggests the “registration” is a literal death warrant.
+* **The Three-Pointed Star**: A crest meant for Lady Fiona Wachter. Its design hints at a tie to the ancient fanes of Barovia.
+* **The Servants’ Register**: A grim ledger in K1 where the staff “register for next of kin.” The withered corpse beside it says the registering is a death warrant.
 
 ## Session Highlights:
 
-* “Fly, you fools!” — Krusty, channeling ancient wizardly wisdom while granting his allies the power of flight.
-* **The “Trojan Bunny” Strategy**: A discarded plan involving sneaking into the castle within a gift or carriage.
-* “The cows have teeth” — A cryptic, chilling observation regarding the predatory nature of Barovia’s inhabitants.
-* **The Acrobatics Somersault Fail**: Aera’s attempt to drop-kick an undead sentry that resulted in a mid-air fumble.
+* “Fly, you fools!” — Krusty, sending us aloft.
+* **The “Trojan Bunny”**: A plan, set aside, to sneak into the castle inside a gift or a carriage.
+* “The cows have teeth” — A chilling remark on the hungry nature of Barovia’s creatures.
+* **The Somersault**: Aera’s flying dropkick at an undead sentry, fumbled in midair.

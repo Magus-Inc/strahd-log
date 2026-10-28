@@ -15,41 +15,47 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Crusty](/wiki/crusty/)
 
 ## Summary:
+We were in a flooded chamber of the dungeon, wading through three feet of cold water. Volenta Popofsky, one of Strahd’s vampire brides, faced us from a balcony, dropped a great jar of oil into the water and came down to fight. Olfin began the fight shut inside an iron maiden, but Aera picked its lock and he burst free, his holy aura blazing.
 
-The party found themselves in a perilous situation within a flooded dungeon chamber, wading through three feet of cold water. Volenta Popofsky, one of the vampire brides of Strahd, confronted the group from a balcony before dropping an amphora of oil into the water and descending to fight. Olfin Darning began the encounter trapped inside an Iron Maiden, but Aera shan Ravanór successfully picked the lock, allowing the Paladin to burst free and activate his holy aura. Note: [The session opened with a recap of the previous “YOLO run” involving a yellow spoon and a presentation of a “slide deck” summary created by Malron to help everyone remember the plan.]
+Note: The session opened with a recap of the previous "YOLO run" with the yellow spoon, and a "slide deck" summary Malron made to help everyone remember the plan.
 
-The battle was a grueling display of magic and steel. Volenta attacked with poisoned daggers and alchemical shards that exploded into ice, briefly trapping Crusty in place. Malron Lichtstrahl’s divine radiance burned the vampire and her zombie minions, while Shabasta and Aera provided consistent pressure with spells and silvered arrows. Despite Volenta shifting into a monstrous, winged form and igniting the oil on the water’s surface, the party’s coordination held firm. Note: [Meta-discussions during the fight ranged from the mechanics of Uncanny Dodge and Haste to a lengthy humorous tangent regarding the “Ant-Man vs. Thanos” theory and the benefits of hiring a good CPA for tax season.]
+It was a grueling battle of magic and steel. Volenta fought with poisoned daggers and alchemical shards that burst into ice, and for a moment Crusty was frozen in place. Lathander’s radiance poured from me and burned the vampire and her zombies, while Shabasta and Aera kept at her with spells and silvered arrows. Volenta took a monstrous winged form and set the oil on the water alight, but we held together.
 
-In the climax of the struggle, Volenta grappled Shabasta and dragged him ten feet up the dungeon wall, threatening to drain his life. However, the party delivered a series of devastating blows that finally pinned the bride to the wall, effectively “crucifying” her and ending her reign of terror. With the threat neutralized, the party recovered a key to free the werewolf Emil Terescu and stripped the bride of her valuable treasures. Note: [Following the combat, the players discussed the strategy of using Revivify as a “free heal,” noting that it is often mechanically better to let a character die and bring them back at zero rather than healing them from negative health.]
+Note: Meta talk during the fight ranged from how Uncanny Dodge and Haste work to a long, funny tangent on the "Ant-Man vs. Thanos" theory and the benefits of hiring a good CPA for tax season.
+
+At the height of it Volenta seized Shabasta and dragged him ten feet up the dungeon wall to drain his life. But we struck her again and again until she was pinned to the wall, crucified there, and her reign of terror was over. Then we took the key to free the werewolf Emil Terescu, and stripped the bride of her treasures.
+
+Note: After the fight the players talked about Revivify as a "free heal": it is often mechanically better to let a character die and bring them back than to heal them up from below zero.
 
 ## Key Locations:
 
-**The Flooded Dungeon**: A dark chamber filled with three feet of water. It features a ten-foot-high balcony and a velvet curtain leading deeper into the castle.
+**The Flooded Dungeon**: A dark chamber with three feet of water, a balcony ten feet up and a velvet curtain leading deeper into the castle.
 
 ## Encounters:
 
-Combat – Volenta Popofsky: A high-stakes battle against a vampire bride and several zombies. Key actions included Aera’s lock-picking, Malron’s radiant divinity, and the eventual pinning of Volenta to the wall.
+Volenta Popofsky: A fierce fight against a vampire bride and several zombies. Aera’s lockpicking, Lathander’s radiance, and at last Volenta pinned to the wall.
 
 ## Loot:
 
 * **Iron Key**: Found on Volenta’s body; used to unlock the restraints on the werewolf Emil Terescu.
 * **Platinum Skull Mask**: A valuable decorative mask worth 750 gold pieces.
-* **Platinum Rings**: Multiple rings set with expensive gemstones.
-* **Fine Clothing**: High-quality garments recovered from the bride.
-* **Total Treasure Value**: Approximately 3,000 gold pieces in assorted valuables.
+* **Platinum Rings**: Several rings set with costly gems.
+* **Fine Clothing**: Fine garments taken from the bride.
+* **Total Treasure Value**: About 3,000 gold pieces in assorted valuables.
 
 ## Notable NPCs:
 
-**Volenta Popofsky**: One of Strahd’s wives and a “mini-boss” who fought with daggers, ice shards, and a monstrous transformation.  
-**Emil Terescu**: A werewolf prisoner who was being held by Volenta; he was freed by the party after her death.
+**Volenta Popofsky**: One of Strahd’s wives, who fought with daggers, ice shards and a monstrous change of shape.  
+**Emil Terescu**: A werewolf prisoner Volenta held; we freed him after her death.
 
 ## Plot Points:
 
-* The party has eliminated one of the primary wives of Strahd, reducing his immediate support.
-* The group is now faced with the choice of proceeding through the velvet curtain on the balcony or backtracking to explore other areas.
+* One of Strahd’s chief wives is destroyed, and he has one fewer at his side.
+* Now we must choose: go on through the velvet curtain on the balcony, or turn back and explore elsewhere.
 
 ## Session Highlights:
 
-* “Your dress is ugly!” — Aera’s taunt to the vampire bride while launching an attack.
-* The “Ant-Man Thanos theory” as explained by the party during a lull in combat.
-* The group’s relief upon realizing that Malron’s Radiance of the Dawn spell only harms undead, sparing the party in the cramped corridor.
+* “Your dress is ugly!” — Aera’s taunt to the vampire bride as she attacked.
+* Our relief on learning that the radiance of the dawn I call down harms only the undead, and spared my friends in that cramped place.
+
+Note: The "Ant-Man Thanos theory", as explained by the party during a lull in combat. And the radiant spell was Radiance of the Dawn.
