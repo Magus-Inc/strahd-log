@@ -64,10 +64,10 @@
 {% if post.slides %}
   <script>
   (function () {
-    // Slide deck: arrows step through it, tap a slide to fill the screen, Esc or tap again to close.
+    // Slide deck: arrows for a mouse, dots to show where you are, tap a slide to fill the screen.
     var deck = document.querySelector(".deck");
     if (!deck) return;
-    var strip = deck.querySelector(".deck-strip");
+    var frame = deck.querySelector(".deck-frame"), strip = deck.querySelector(".deck-strip");
     var slides = strip.querySelectorAll("li"), current = 0;
     var close = document.createElement("button");
     close.className = "deck-close"; close.type = "button"; close.setAttribute("aria-label", "Close slides");
@@ -80,21 +80,33 @@
       b.className = "deck-arrow deck-" + a[0]; b.type = "button"; b.setAttribute("aria-label", a[1]);
       b.innerHTML = a[2];
       b.addEventListener("click", function () { go(current + a[3], true); });
-      strip.parentNode.appendChild(b);
+      frame.appendChild(b);
       arrows[a[0]] = b;
     });
-    // Where each slide starts in the strip, measured rather than assumed from the strip's width.
-    function at(i) { return slides[i].offsetLeft - slides[0].offsetLeft; }
+    var dots = document.createElement("div");
+    dots.className = "deck-dots";
+    slides.forEach(function (li, i) {
+      var d = document.createElement("button");
+      d.type = "button"; d.setAttribute("aria-label", "Slide " + (i + 1) + " of " + slides.length);
+      d.addEventListener("click", function () { go(i, true); });
+      dots.appendChild(d);
+    });
+    frame.insertAdjacentElement("afterend", dots);
     function update() {
+      // The slide whose left edge is nearest the strip's scroll position.
       var best = 0;
-      for (var i = 1; i < slides.length; i++)
-        if (Math.abs(at(i) - strip.scrollLeft) < Math.abs(at(best) - strip.scrollLeft)) best = i;
+      slides.forEach(function (li, i) {
+        if (Math.abs(li.offsetLeft - strip.scrollLeft) < Math.abs(slides[best].offsetLeft - strip.scrollLeft)) best = i;
+      });
       current = best;
       arrows.prev.hidden = current === 0;
       arrows.next.hidden = current === slides.length - 1;
+      dots.querySelectorAll("button").forEach(function (d, i) {
+        if (i === current) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
+      });
     }
     function go(i, smooth) {
-      var left = at(Math.max(0, Math.min(slides.length - 1, i)));
+      var left = slides[Math.max(0, Math.min(slides.length - 1, i))].offsetLeft;
       if (smooth && strip.scrollTo) strip.scrollTo({left: left, behavior: "smooth"});
       else strip.scrollLeft = left;
     }
