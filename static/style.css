@@ -215,8 +215,10 @@ main.wide { max-width: 80rem; }
 .map.zoomed { cursor: grab; touch-action: none; }
 .map .pin { cursor: pointer; }
 .map .pin-dot { fill: #2b1d12; stroke: #f4ead2; stroke-width: 1.5; }
-/* Zoomed in, markers, pins and names scale by --mark (set by the map page) so they stay small. */
-.map .marker, .map .pin-dot, .map .labels text { transform: scale(var(--mark, 1)); transform-box: fill-box; transform-origin: center; }
+/* Zoomed in, markers, pins and names scale by --mark (set by the map page) so they stay small. Each
+   scales about its own point, given inline in map units: Safari on iPhone placed names wrongly with
+   a fill-box transform box, so they drifted away from their places as the map zoomed. */
+.map .marker, .map .pin-dot, .map .labels text { transform: scale(var(--mark, 1)); transform-box: view-box; }
 .map .labels text { font: italic 600 13px var(--serif); fill: #2b1d12; stroke: #f1e7cd; stroke-width: 3.5px; paint-order: stroke; stroke-linejoin: round; }
 .map .pin:hover .pin-dot, .map .pin:focus .pin-dot { fill: var(--accent); }
 

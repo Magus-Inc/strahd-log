@@ -122,6 +122,10 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert "<script src=" not in page_html
     # Session markers are drawn last, over the place names, so a label never hides a number.
     assert page_html.index('class="pins"') < page_html.index('class="labels"') < page_html.index('class="markers"')
+    # Names, pins and markers shrink about their own point in map units; fill-box put names in the
+    # wrong place on iPhone Safari when zoomed.
+    assert 'class="pin-dot" style="transform-origin: ' in page_html and '" style="transform-origin: ' in page_html
+    assert "transform-box: fill-box;" not in (ROOT / "static" / "style.css").read_text(encoding="utf-8")
     # Place names link to their wiki pages (every place on the map has one).
     assert 'wiki/vallaki/" tabindex="-1"><text' in page_html
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
