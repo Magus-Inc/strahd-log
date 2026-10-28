@@ -30,7 +30,7 @@ We searched a cabinet in the room. It held a framed piece of a child's needlewor
 
 [Aera shan Ravanór](/wiki/aera-shan-ravanor/) looked over the kitchen, with its dumbwaiter and pantry. In the pantry [Olfin Darning](/wiki/olfin-darning/) found a teapot holding a bottle of wine from the “Wizard of Wines Winery”, some lace with the initial “K” sewn into a corner, and a powder Olfin knew to be a contraceptive. Last of all there was a parchment scroll that read “For the light of my life. —G.”
 
-[Schlopkht](/wiki/schlopkht/) went through a coat closet holding three adults' coats and three children's. As he moved them about, an invitation fell out of one. It was addressed to Lady Lovina Wachter.
+[Schlopkht](/wiki/schlopkht/) went through a coat closet holding three adults' coats and three children's. As he moved them about, an invitation fell out of one. It was addressed to Lady Fiona Wachter.
 
 > You are cordially invited to join  
 > -  
