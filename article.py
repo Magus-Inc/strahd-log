@@ -85,7 +85,7 @@ def add_deck(html: str, slides: list[str], pdf: str = "") -> str:
                     for i, src in enumerate(slides, 1))
     link = f' &middot; <a href="/{escape(pdf)}" download>Download PDF</a>' if pdf else ""
     deck = ('<section class="deck" aria-label="Session slides">\n<h2>The Slides</h2>\n'
-            f'<ol class="deck-strip">{items}</ol>\n'
+            f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n'
             f'<p class="deck-meta"><span class="deck-count">1 / {n}</span>'
             f'<span class="deck-hint"> &middot; swipe, or tap a slide to enlarge</span>{link}</p>\n</section>\n')
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
