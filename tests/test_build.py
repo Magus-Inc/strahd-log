@@ -280,5 +280,7 @@ def test_full_screen_slides_use_the_whole_screen_and_fade_their_controls():
     assert "QUIET_AFTER = 2000" in script and "wake()" in script
     # Where the browser allows it, its own bars are hidden too, and leaving that closes the view.
     assert "requestFullscreen" in script and "fullscreenchange" in script
+    # Closing full screen brings the page back to the slides, even after the phone was turned.
+    assert 'frame.scrollIntoView({block: "center"' in script
     # A rotation re-fits the open slide.
     assert 'addEventListener("resize"' in script

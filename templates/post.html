@@ -133,14 +133,18 @@
         if (enter && !fullElement()) { var r = enter.call(deck); if (r && r.catch) r.catch(function () {}); }
       } else {
         clearTimeout(quietTimer); deck.classList.remove("quiet");
+        // Back on the page, show the slides again: turning the phone while in full screen reflows the
+        // page, so the old scroll position can land far below them.
+        frame.scrollIntoView({block: "center", behavior: "instant"});
         if (fullElement()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
       }
     }
     // Leaving the browser's full screen (Esc, a back swipe) closes the slide view too.
     ["fullscreenchange", "webkitfullscreenchange"].forEach(function (name) {
       document.addEventListener(name, function () {
-        if (!fullElement() && deck.classList.contains("open")) toggle(false);
-        else go(current);
+        if (fullElement()) go(current);
+        else if (deck.classList.contains("open")) toggle(false);
+        else frame.scrollIntoView({block: "center", behavior: "instant"});  // the browser may restore its own scroll
       });
     });
     // Turning the phone changes the strip's width; land on the same slide again.
