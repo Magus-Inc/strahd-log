@@ -83,11 +83,11 @@ def add_deck(html: str, slides: list[str], pdf: str = "") -> str:
     n = len(slides)
     items = "".join(f'<li><img src="/{escape(src)}" alt="Slide {i} of {n}" loading="lazy" decoding="async"></li>'
                     for i, src in enumerate(slides, 1))
-    link = f' &middot; <a href="/{escape(pdf)}" download>Download PDF</a>' if pdf else ""
+    # No slide count or hint under the strip (Chris: not needed); only the PDF link, when there is one.
+    meta = f'<p class="deck-meta"><a href="/{escape(pdf)}" download>Download PDF</a></p>\n' if pdf else ""
     deck = ('<section class="deck" aria-label="Session slides">\n<h2>The Slides</h2>\n'
             f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n'
-            f'<p class="deck-meta"><span class="deck-count">1 / {n}</span>'
-            f'<span class="deck-hint"> &middot; swipe, or tap a slide to enlarge</span>{link}</p>\n</section>\n')
+            f'{meta}</section>\n')
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
     if m:
         at = m.end()
