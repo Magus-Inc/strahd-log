@@ -1,3 +1,4 @@
+import json
 import re
 from datetime import datetime
 from pathlib import Path
@@ -235,3 +236,23 @@ def test_find_slides_matches_the_post_file_name(content, tmp_path):
     assert third.slides == ["slides/2026-09-01-third/01.webp", "slides/2026-09-01-third/02.webp"]
     assert third.slides_pdf == "slides/2026-09-01-third/deck.pdf"
     assert all(not p.slides for p in posts if p is not third)
+
+
+def test_bot_corpus_lists_posts_oldest_first_without_player_names(content, tmp_path):
+    wiki_dir = tmp_path / "wiki"
+    wiki_dir.mkdir()
+    (wiki_dir / "malron.md").write_text("---\ntitle: Malron\ntype: character\nplayer: Chris\n"
+                                         "summary: A cleric.\n---\n\nPriest of Lathander.\n", encoding="utf-8")
+    write_post(content, "2026-09-08-fourth.md", "title: Fourth\ndate: '2026-09-08T17:00:00-05:00'\n",
+               "## At a Glance:\n\n* **Wolves:** Malron *wins*.\n\nWe met wolves.\n")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://example.org", wiki_dir=wiki_dir)
+    corpus = json.loads((out / "bot" / "corpus.json").read_text(encoding="utf-8"))
+    assert [p["date"] for p in corpus["posts"]] == ["2024-01-09", "2024-02-13", "2026-09-01", "2026-09-08"]
+    last = corpus["posts"][-1]
+    assert last["url"] == "https://example.org/posts/fourth/"
+    assert last["glance"] == ["Wolves: Malron wins."]
+    assert last["wiki"] == ["malron"]
+    assert "We met wolves." in last["text"]
+    assert corpus["wiki"][0]["summary"] == "A cleric."
+    assert "Chris" not in json.dumps(corpus)
