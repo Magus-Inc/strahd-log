@@ -303,6 +303,18 @@ h1 .chip.former { font-size: 0.8rem; }
 .deck-strip img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block; background: #000;
   border-radius: 8px; border: 1px solid var(--line); cursor: zoom-in; }
 .deck-meta { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 0; text-align: center; }
+.deck-frame { position: relative; }
+.deck-arrow { display: none; position: absolute; top: 50%; transform: translateY(-50%); width: 2.75rem; height: 2.75rem;
+  border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(18, 16, 20, 0.75); color: #fff;
+  font-size: 1.9rem; line-height: 1; padding: 0 0 0.2rem; cursor: pointer; opacity: 0; transition: opacity 0.15s; }
+.deck-prev { left: 0.75rem; }
+.deck-next { right: 0.75rem; }
+.deck-arrow:hover { background: var(--accent); border-color: var(--accent); }
+@media (hover: hover) and (pointer: fine) {
+  .deck-arrow { display: block; }
+  .deck-arrow[hidden] { display: none; }
+  .deck-frame:hover .deck-arrow, .deck-arrow:focus-visible, .deck.open .deck-arrow { opacity: 1; }
+}
 .deck-close { display: none; }
 .deck.open { position: fixed; inset: 0; z-index: 100; margin: 0; background: #000;
   display: flex; flex-direction: column; justify-content: center; }
