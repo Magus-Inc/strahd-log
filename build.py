@@ -127,8 +127,10 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     """Link wiki names in posts and wiki pages, and record which posts mention each page."""
     linker = wiki.Linker(pages)
     by_slug = {w.slug: w for w in pages}
+    narrators = {w.slug for w in pages if w.narrator}
     for post in posts:  # newest first, so mentioned_in comes out newest first too
         post.html, post.mentions = linker.link(post.html)
+        post.mentions |= narrators
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:

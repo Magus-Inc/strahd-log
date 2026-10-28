@@ -6,6 +6,7 @@ aliases:
 - Malon
 - Marlon
 summary: Reborn Cleric
+narrator: true
 player: Christopher O’Toole
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/mal
