@@ -206,18 +206,15 @@ def real_travel():
     return barovia_map.load_travel(ROOT / "data" / "travel-times.yaml", places)
 
 
-def test_each_labelled_leg_shows_its_hours_from_the_table():
+def test_travel_legs_match_the_table_and_the_map_prints_no_hours():
     import yaml
     table = {(leg["from"], leg["to"]): float(leg["hours"])
              for leg in yaml.safe_load((ROOT / "data" / "travel-times.yaml").read_text(encoding="utf-8"))["legs"]}
     travel = real_travel()
     assert {(leg["from"], leg["to"]): leg["hours"] for leg in travel} == table
-    root = ET.fromstring(barovia_map.draw_base(travel))
-    drawn = {(t.get("data-from"), t.get("data-to")): t.text for t in root.iter() if t.get("class") == "hours"}
-    labelled = {(leg["from"], leg["to"]): barovia_map.hours_text(leg["hours"]) for leg in travel if leg["label"]}
-    assert drawn == labelled
-    assert drawn[("gates-of-barovia", "barovia")] == "3.5 h" and drawn[("ivlis-crossroads", "falls-fork")] == "8 h"
-    assert ("vallaki-east-gate", "vallaki-west-gate") not in drawn  # no number on the way past Vallaki
+    root = ET.fromstring(barovia_map.draw_base())
+    assert not [t for t in root.iter() if t.get("class") == "hours"]  # Chris: no hour markers on the trails
+    assert any("hours on foot" in "".join(t.itertext()) for t in root.iter())  # the scale bar stays
 
 
 def test_travel_legs_need_known_ends_on_the_roads(tmp_path, places):

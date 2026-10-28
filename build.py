@@ -295,7 +295,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     write(out_dir / "search" / "index.html", env.get_template("search.html").render())
     if places:
         write(out_dir / "map" / "barovia.svg",
-              barovia_map.draw_base(barovia_map.load_travel(map_dir / "travel-times.yaml", places)))
+              barovia_map.draw_base())
         map_data = {
             "legs": [{"t": leg["post"].title, "u": leg["post"].path} for leg in legs],
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
