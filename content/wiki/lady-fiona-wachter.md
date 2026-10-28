@@ -17,9 +17,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
 
-![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai-2.jpg)
-
-*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
