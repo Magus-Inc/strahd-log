@@ -1,0 +1,31 @@
+Curse of Strahd: The Owlbear Chronicles
+Copyright (c) 2024-2026 Christopher O'Toole
+
+This repository holds two kinds of work under different terms.
+
+1. Software: all rights reserved
+
+   The site's code and design are not open source: the build scripts (build.py, article.py,
+   wiki.py, barovia_map.py, tools/), templates/, static/style.css, the JavaScript in the
+   templates, the hand-drawn map code, and the tests. You may read the code here and view the
+   published site, but you may not copy, modify, distribute or use it in another product
+   without written permission from Christopher O'Toole.
+
+2. The chronicle: Creative Commons Attribution-NonCommercial 4.0
+
+   The session posts (content/posts/), the wiki pages (content/wiki/), the map data (data/),
+   and the AI-generated images and slide decks are licensed under the Creative Commons
+   Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0):
+   https://creativecommons.org/licenses/by-nc/4.0/
+   Credit "The Owlbear Chronicles, owlbear.dicelore.quest".
+
+Exceptions to both:
+
+- Drawings, photos and other art made by the players or the Dungeon Master belong to the people
+  who made them and are shown here with their permission. They are not covered by either
+  license above.
+- Curse of Strahd, Dungeons & Dragons, Barovia, Strahd von Zarovich and the module's other names,
+  places and items are property of Wizards of the Coast. This site is unofficial Fan Content
+  permitted under the Wizards of the Coast Fan Content Policy
+  (https://company.wizards.com/en/legal/fancontentpolicy). Not approved/endorsed by Wizards.
+- Fonts in static/fonts/ keep their own licenses.

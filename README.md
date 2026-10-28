@@ -118,7 +118,13 @@ swapped later without touching anything else.
 - On `/map/` a toggle shows or hides the trail, a slider steps through it session by session, and
   buttons zoom and pan. Each post shows "Where we were"; each place's wiki page shows where it is.
 
-The footer carries the disclaimer the Wizards of the Coast Fan Content Policy asks for.
+The footer carries the disclaimer the Wizards of the Coast Fan Content Policy asks for, and the
+site's license line.
+
+## License
+
+See `LICENSE`. The code is all rights reserved (Christopher O'Toole); the posts, wiki, map data and
+AI art are CC BY-NC 4.0; drawings and photos by the players and the DM stay their artists' own.
 
 ## Design
 
