@@ -4,8 +4,14 @@ type: faction
 aliases:
 - Order of the Feather
 summary: A secret society against Strahd.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+A secret society set against Strahd that guides and shelters rather than fighting openly, and works through ravens. Rictavio claimed to be one of their agents ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/)). Davien Martikov leads them and his son Irwin is one too ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/), [Welcome to Krezk](/posts/welcome-to-krezk/)). The ravens that guarded us on the road out of Barovia had heard of our deeds from them ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).
 
 <!-- from-the-log -->
 ## From the adventure log

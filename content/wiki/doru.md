@@ -6,6 +6,12 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/doru
 ---
 
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+The son of Father Donavich. He led villagers against the castle, and an elf came back to say he had woken Strahd ([Barovia, Barovia](/posts/barovia-barovia/)). Van Richten told us the rest: Doru blackmailed him into leading the revolt, and Escher, Doru's lieutenant, slipped away in the catacombs before Strahd fell on them ([Finding Arabelle!](/posts/finding-arabelle/)). Doru came home a vampire and his father trapped him beneath the church. We fought him there and staked him, then laid him in a stream, where he dissolved ([Rest for the Wicked](/posts/rest-for-the-wicked/), [Leaving Village Barovia](/posts/leaving-village-barovia/)).
+
 Son of Father Donavich who led a rebellion to the castle on the hill. Came back to his father as a vampire and was locked in a cellar.
 
 <!-- from-the-log -->

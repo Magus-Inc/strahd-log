@@ -2,8 +2,14 @@
 title: Anastrasia
 type: npc
 summary: A vampire bride of Strahd.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+One of Strahd's brides, sharp-tongued, who greeted us at the castle and keeps Sasha under her thumb ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/)). She came for Gertruda in the King's Bedchamber with two wights. When the fight turned, she shed her skin for a great bloated bat and killed Olfin with one bite. I burned her to ash and called Olfin back ([The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)).
 
 <!-- from-the-log -->
 ## From the adventure log
