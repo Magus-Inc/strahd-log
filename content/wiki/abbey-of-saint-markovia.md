@@ -11,6 +11,12 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![The Abbey of Saint Markovia on a mountain ledge above Krezk](/images/abbey-of-saint-markovia-ai.jpg)
+
+![The Abbey of Saint Markovia on a mountain ledge above Krezk](/images/abbey-of-saint-markovia-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Madam Eva's cards sent us here first: a Vistana searching for a mentor, to be found at Saint Markovia's Abbey near the mists ([Tser Pool](/posts/tser-pool/)). Ismark had hoped it could shelter Ireena ([Leaving Village Barovia](/posts/leaving-village-barovia/)).

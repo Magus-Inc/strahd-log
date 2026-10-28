@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Argynvostholt in ruins, its beacon tower glowing silver over a knights' graveyard](/images/argynvostholt-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Argynvostholt is a half-collapsed mansion in a valley, home of the Order of the Silver Dragon and its revenants ([Act 3: The Broken Land](/posts/act-3-the-broken-land/)). We had already met one of its knights, Sir Godfried William, guarding a bridge after his commander banished him ([Dream Pies](/posts/dream-pies/)).

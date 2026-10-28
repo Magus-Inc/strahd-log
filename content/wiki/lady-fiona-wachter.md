@@ -15,6 +15,12 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
+
+![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai-2.jpg)
+
+*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 The lady of Wachter Haus in Vallaki. She invited Aera to dinner, told us of her faith in Ezra, and gave us poisoned wine and a plan to kill Izek ([Consequences in Vallaki](/posts/consequences-in-vallaki/), [Shadows Over Vallaki](/posts/shadows-over-vallaki/)). We brought her his head, and she paid us from her armory and read us her family's account of Sergei and Tatyana's wedding ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)). After that she held the town ([Helping Victor](/posts/helping-victor/)).
