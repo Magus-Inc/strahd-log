@@ -6,8 +6,14 @@ aliases:
 - Kazan’s Tower
 - Khazan's tower
 summary: A tower by Lake Baratok tied to the mage Khazan.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+Zoldar led us to a tower in the woods beside a lake, with a purple and gold Vistani wagon at its foot warning trespassers off in Ezmerelda's name. The door had no handle, only a red seal with Kazan's name; Olfin traced the pattern of the signet ring on it and it opened ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/)). The wagon was trapped. Inside the tower a platform lifted us between floors, and on the fourth someone had been living: a bed, a desk, a journal page in van Richten's hand and a sketch of Rictavio's carnival ([The Staff is a lie](/posts/the-staff-is-a-lie/)). Van Richten later told us he had hidden there with Arabelle, and that the tower blocks magic, Strahd's scrying included ([Finding Arabelle!](/posts/finding-arabelle/)). The runes we learned there opened Kazan's own tomb under the castle ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/)).
 
 <!-- from-the-log -->
 ## From the adventure log
