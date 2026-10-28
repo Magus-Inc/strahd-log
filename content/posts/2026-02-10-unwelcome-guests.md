@@ -10,11 +10,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ## Shadow Over the Precipice: The Infiltration of Castle Ravenloft
 
 ## Characters:
-
-* **Aera shan Ravanór**: Wood-elf Rogue (Level 7). A ghost amidst the flame and shadow, she utilizes her mastery of Evasion and a specialized meat cleaver to neutralize threats. Her pseudodragon companion, Zora, serves as her eyes in the dark.
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander and Spirit Medium. Clad in heavy plate, he serves as the party’s anchor to the light, bridging the gap between the living and the restless elven spirits of the valley.
-* **Shabasta**: Bard of Fate (Level 7). A weaver of destiny who manipulates time with Silvery Barbs and bypasses physical barriers via Dimension Door.
-* **Krusty (Ralph Kristofferson)**: Wizard (Level 7). The party’s arcane architect, commanding transformative utility through Fly, Invisibility, and Polymorph.
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Shabasta](/wiki/shabasta/)
+* [Crusty](/wiki/crusty/)
 
 ## Summary:
 

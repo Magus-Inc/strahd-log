@@ -6,20 +6,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ---
 
 ## Characters:
-
-* Oogway: A wise and experienced monk.
-
-* Olfin: A brave and cunning paladin.
-
-* Liren: A skilled and resourceful barbarian.
-
-* Gumbo: A clever and agile rogue.
-
-* Aera: A talented and stealthy rogue.
-
-* Shabasta: A charismatic and persuasive bard.
-
-* Malron: A powerful and knowledgeable wizard.
+* [Oogway](/wiki/oogway/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Liren](/wiki/liren/)
+* [Gumbo](/wiki/gumbo/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Shabasta](/wiki/shabasta/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
 

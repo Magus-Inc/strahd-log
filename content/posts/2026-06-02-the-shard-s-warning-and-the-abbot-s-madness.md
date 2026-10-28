@@ -8,12 +8,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Shard’s Warning and the Abbot’s Madness
 
 ## Characters:
-
-* **Malron Lichtstrahl**: Reborn Cleric of Lathander. A spirit medium who retains control over a cohabitating elven soul.
-* **Olfin Darning**: Hexblood Paladin. A steadfast protector walking the line between light and shadow.
-* **Crusty**: High Elf Sage Wizard. A brilliant scholar accompanied by an owl familiar, wielding a crystal-crowned staff.
-* **Aera shan Ravanór**: Wood-elf Rogue. The party’s lead scout and a deadly archer with legendary trap-detection skills.
-* **Shabasta**: Porcupine Bard. A dramatic performer whose music and prickly wit inspire allies and dishearten foes.
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Crusty](/wiki/crusty/)
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Shabasta](/wiki/shabasta/)
 
 ## Summary:
 

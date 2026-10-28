@@ -1,3 +1,4 @@
+import re
 import json
 from pathlib import Path
 
@@ -313,3 +314,14 @@ def test_facts_citing_a_folded_post_cite_the_merged_one(tmp_path):
         {"name": "Doru", "type": "npc", "facts": [{"text": "His intelligence maps the castle", "post": "2026-02-03-notebook"}]}]))
     wiki_from_extract.apply([extract], tmp_path / "wiki", posts)
     assert "([Welcome Back](/posts/welcome/))" in (tmp_path / "wiki" / "doru.md").read_text(encoding="utf-8")
+
+
+def test_players_real_names_stay_on_their_pc_pages():
+    # Chris: real player names appear only on the PC wiki pages, never in a session post.
+    root = Path(__file__).resolve().parent.parent
+    pages = wiki.load_wiki(root / "content" / "wiki", build.split_front_matter)
+    names = {part for p in pages if p.player for part in [p.player, *p.player.split()] if len(part) > 3}
+    for post in (root / "content" / "posts").glob("*.md"):
+        text = post.read_text(encoding="utf-8")
+        found = sorted(n for n in names if re.search(rf"(?<!\w){re.escape(n)}(?!\w)", text))
+        assert not found, f"{post.name} names players: {found}"

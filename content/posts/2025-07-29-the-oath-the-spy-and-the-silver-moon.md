@@ -8,14 +8,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # The Oath, the Spy, and the Silver Moon
 
 ## Characters:
-
-* **Aera shan Ravanór** – Wood-elf Rogue
-* **Zorpheus** – Bard
-* **Malron Lichtstrahl** – Reborn Cleric of Lathander
-* **Gumbo** – Half-Orc Rogue
-* **Oogway** – Turtle Wizard Bladesinger
-* **Olfin Darning** – Hexblood Paladin
-* **Liren** – Dragonborn Barbarian
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Zorpheus](/wiki/zorpheus/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+* [Gumbo](/wiki/gumbo/)
+* [Oogway](/wiki/oogway/)
+* [Olfin Darning](/wiki/olfin-darning/)
+* [Liren](/wiki/liren/)
 
 ## Summary:
 

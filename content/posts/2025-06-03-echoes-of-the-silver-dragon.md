@@ -8,10 +8,9 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 # Echoes of the Silver Dragon
 
 ## Characters:
-
-* **Aera shan Ravanór**: A cunning Wood-elf Rogue adept at stealth and navigating complex situations.
-* **Zorpheus**: Mysterious wanderer and bard drawn to fate and prophecy.
-* **Malron Lichtstrahl**: A Reborn Cleric of Lathander with a connection to spirits and the undead.
+* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
+* [Zorpheus](/wiki/zorpheus/)
+* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
 
