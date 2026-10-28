@@ -119,14 +119,30 @@
       clearTimeout(quietTimer);
       quietTimer = setTimeout(function () { deck.classList.add("quiet"); }, QUIET_AFTER);
     }
+    // Where the browser allows it (computers, Android, iPad) full screen also hides the browser's own bars.
+    // Safari on iPhone only lets video go full screen, so there the bars stay.
+    var enter = deck.requestFullscreen || deck.webkitRequestFullscreen;
+    function fullElement() { return document.fullscreenElement || document.webkitFullscreenElement; }
     function toggle(open) {
       var at = current;
       deck.classList.toggle("open", open);
       document.body.classList.toggle("deck-lock", open);
       go(at);
-      if (open) { close.focus({preventScroll: true}); wake(); }
-      else { clearTimeout(quietTimer); deck.classList.remove("quiet"); }
+      if (open) {
+        close.focus({preventScroll: true}); wake();
+        if (enter && !fullElement()) { var r = enter.call(deck); if (r && r.catch) r.catch(function () {}); }
+      } else {
+        clearTimeout(quietTimer); deck.classList.remove("quiet");
+        if (fullElement()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      }
     }
+    // Leaving the browser's full screen (Esc, a back swipe) closes the slide view too.
+    ["fullscreenchange", "webkitfullscreenchange"].forEach(function (name) {
+      document.addEventListener(name, function () {
+        if (!fullElement() && deck.classList.contains("open")) toggle(false);
+        else go(current);
+      });
+    });
     // Turning the phone changes the strip's width; land on the same slide again.
     window.addEventListener("resize", function () { go(current); });
     deck.addEventListener("mousemove", function () { if (deck.classList.contains("open")) wake(); });
