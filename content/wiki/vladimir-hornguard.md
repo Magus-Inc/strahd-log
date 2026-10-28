@@ -6,8 +6,14 @@ aliases:
 - Hornguard
 - Horngaard
 summary: Slain commander of the Order of the Silver Dragon, now a vengeful presence at Argynvostholt.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+Commander of the Order of the Silver Dragon, who banished Sir Godfried and holds that Barovia's suffering is penance ([Dream Pies](/posts/dream-pies/), [The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). Sir Godfried told us Rahadin killed him ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). Enraged that we broke into Castle Ravenloft, he called his knights home to destroy us and waited for us in the cemetery. Argynvost rose before he could, and Hornguard took the dragon's hand and turned to ash ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log

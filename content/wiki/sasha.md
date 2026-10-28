@@ -2,8 +2,14 @@
 title: Sasha
 type: npc
 summary: A trembling, widowed servant at Castle Ravenloft who secretly helps the party.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+A servant at Castle Ravenloft, a widow who longs to see Strahd fall and the morning return. She whispered to Zorpheus about the organ's sixth pedal, begged us to rescue Gertruda, and gave us the servants' entrance and Strahd's oldest password ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/), [The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/)). When Argynvost's beacon flared, it found her alone on the castle rooftops with sudden hope in her face ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log

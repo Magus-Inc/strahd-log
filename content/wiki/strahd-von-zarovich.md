@@ -9,8 +9,18 @@ aliases:
 - Lord Von Zarovich
 - Count Strahd
 summary: The vampire lord of Barovia.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+The lord of Barovia, a vampire, and our host, tormentor and quarry. His letter in Durst Manor was the first we knew of him ([Finishing the Manor?](/posts/finishing-the-manor/)). He first met us on the road to Tser Pool with seven dire wolves, called out to Ireena where she hid, and let her stay with us a while longer. He said he found us curious and would study us ([We meet again for the first time...](/posts/we-meet-again-for-the-first-time/)).
+
+He likes games. He came to Aera's window in Vallaki asking to be let in ([Shadows Over Vallaki](/posts/shadows-over-vallaki/)). He wagered with us over Winter Splinter and paid up at the Whispering Wall ([Stop Winter Splinter](/posts/stop-winter-splinter/), [The Whispering Wall](/posts/the-whispering-wall/)). After we raided the werewolf den he made each of us choose a sacrifice by an hourglass of blood ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). He sent his carriage for us, hosted us at Castle Ravenloft, toured us through it and caught Aera when she nearly fell from its stairs ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/), [The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/), [Varushka's Key](/posts/varushkas-key/)).
+
+The skeletal rider we believe is his brother Sergei told us Strahd murdered him, and that Strahd now seeks Ireena as Tatyana reborn ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). We broke into his castle while he rode out on Becephalus, robbed his catacombs and destroyed two of his brides ([Unwelcome Guests](/posts/unwelcome-guests/), [The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)). His answers so far: wolves and scarecrows on the road for Aera, and a mocking letter in an empty carriage ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/), [The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
 <!-- from-the-log -->
 ## From the adventure log

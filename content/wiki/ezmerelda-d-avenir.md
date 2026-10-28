@@ -9,8 +9,14 @@ aliases:
 - Ezmerelda
 - Esmeralda d’Avenir
 summary: Van Richten's former apprentice, whose wagon sits at the Tower of Kazan.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+A monster hunter, van Richten's former apprentice. Her trapped wagon stood at the Tower of Kazan ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/), [The Staff is a lie](/posts/the-staff-is-a-lie/)). We found her near the Abbey, where her séance told us of a statuette in the castle that could cure the Abbot ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). She led us to the werewolf den, lit us a fire that gave no smoke, and told us how she lost her leg to the Black Terror, and that her own family had a hand in taking van Richten's son ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/)). She left the castle with us and travels with us as an adviser ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/)). She told us the Abbot could only be cleansed by defeating him and using the Icon of Dawn's Grace ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
 
 <!-- from-the-log -->
 ## From the adventure log

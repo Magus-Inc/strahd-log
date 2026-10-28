@@ -5,8 +5,14 @@ aliases:
 - St. Markovia
 - Markovia
 summary: A saint whose spirit still answers in Barovia.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+Her name is on the Abbey in Krezk, her tomb lies in the catacombs of Castle Ravenloft, and there I found the Icon of Dawn's Grace in her robes ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)). When we called on her by name in the void of the Abbot's soul, she came in a simple white robe, called him Ethereal and forgave him ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/)). Beneath the abbey an image of her offered us a way out of Barovia. It was a trap ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
 <!-- from-the-log -->
 ## From the adventure log

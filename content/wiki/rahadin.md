@@ -5,8 +5,16 @@ aliases:
 - Rajadin
 - Rod Dean
 summary: Kasimir's cousin who betrayed the elves to King Barov.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+Strahd's chamberlain, a dusk elf. Kasimir told us Rahadin betrayed his own people to King Barov, shattered Erevan's blade and killed his family ([A doll for Arabelle](/posts/a-doll-for-arabelle/)). He rode into Vallaki on a phantom steed with Strahd's dinner invitation, and judged Milivoj and Heinrich in the square, leaving their fates to chance after Shabasta's plea ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/), [Helping Victor](/posts/helping-victor/)).
+
+At the castle he greeted us, brought a chained prisoner for our judgment, warned us that dark fiends roam the halls at night, and locked us in the guest tower ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/), [The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/)). Aera stole a key from his office while Strahd fed there, and in the morning he showed us out ([Varushka's Key](/posts/varushkas-key/), [Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/)). When we came back as thieves he found us in the catacombs, wrapped in a choir of screaming voices, and nearly killed us before we drove him off wounded ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/), [The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)).
 
 <!-- from-the-log -->
 ## From the adventure log

@@ -6,8 +6,14 @@ aliases:
 - Emile Torenescu
 - Emil Terescu
 summary: The missing leader of the werewolves, held in Ravenloft.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+The werewolves' missing leader. Strahd and Baba Lasaga helped Kiril take him and lock him in Castle Ravenloft, and we swore to Zurika to free him ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We found him in the Drowning Cells, broken and in a silver thorn collar whose key Volenta held ([Depths of Ravenloft](/posts/depths-of-ravenloft/)). We took it from her body and freed him, and he traveled with us after ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/), [The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).
 
 <!-- from-the-log -->
 ## From the adventure log

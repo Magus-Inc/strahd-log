@@ -4,8 +4,14 @@ type: faction
 aliases:
 - Silver Order
 summary: A knightly order.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+Argynvost's knights, who stayed on as revenants at Argynvostholt under Vladimir Hornguard ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We found their vow carved on a table and their relics behind a painting ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). When Argynvost's skull came home, the knights were freed, and we swore their oath and took up their legacy ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log

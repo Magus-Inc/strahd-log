@@ -5,8 +5,14 @@ aliases:
 - Izek
 - Izek Strazni
 summary: A Vallaki guard who serves the Baron.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+The Baron of Vallaki's enforcer, whose arm burns with demonic fire. He drove the refugees from the gate with it ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/)). The town records name him brother to an Ireena Strazni who vanished as a child; he lost his arm to a wolf when his sister went missing ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/), [Shadows Over Vallaki](/posts/shadows-over-vallaki/)). He ransacked the Blue Water Inn and burned Blinsky's shop looking for Ireena ([Consequences in Vallaki](/posts/consequences-in-vallaki/)). We followed him to the lake, where he sat with a doll of Ireena and drank Lady Fiona's poisoned wine, and killed him. His arm went to Shabasta ([The Fall of Izek](/posts/the-fall-of-izek/)). Through the Talisman of Echoes his head told us of the Order of the Feather ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)).
 
 <!-- from-the-log -->
 ## From the adventure log
