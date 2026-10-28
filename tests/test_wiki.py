@@ -248,12 +248,14 @@ def test_import_keeps_aliases_added_later_and_post_text_near_skipped_links(tmp_p
     export = {"/wikis/doru": {"title": "Doru", "final": "/wikis/doru", "md": "## Doru\n\nA vampire." + FOOTER.format(t="Doru")},
               "/wikis/notes-july-9": {"title": "Notes", "final": "/wikis/notes-july-9", "md": "x"}}
     wiki_dir = tmp_path / "wiki"
-    write(wiki_dir / "doru.md", "---\ntitle: Doru\ntype: npc\naliases: [Dorru]\nsummary: Son of the priest\n---\n\nold\n")
+    write(wiki_dir / "doru.md", "---\ntitle: Doru\ntype: npc\naliases: [Dorru]\nsummary: Son of the priest\n"
+                                "player: Grant\nformer: true\n---\n\nold\n")
     post = write(tmp_path / "posts" / "2024-01-01-a.md",
                  f"---\ntitle: A\n---\n\nThe party agreed on this:\n\n[Notes]({site}/wikis/notes-july-9) are where Crusty kept the map.\n")
     import_op_wiki.import_pages(export, wiki_dir, tmp_path / "posts")
     meta = build.split_front_matter((wiki_dir / "doru.md").read_text(encoding="utf-8"))[0]
     assert meta["aliases"] == ["Dorru"] and meta["summary"] == "Son of the priest"
+    assert meta["player"] == "Grant" and meta["former"] is True
     assert "The party agreed on this:\n\nNotes are where Crusty kept the map." in post.read_text(encoding="utf-8")
 
 
