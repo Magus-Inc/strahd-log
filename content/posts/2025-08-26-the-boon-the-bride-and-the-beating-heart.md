@@ -23,7 +23,7 @@ The party continues their uneasy stay at Castle Ravenloft. After suspecting that
 
 He then grants the party a boon: **resistance to necrotic damage for 36 hours** (two long rests). Moments later, he reveals that none of them were marked—he was merely toying with them.
 
-Strahd begins a **grand tour of the castle**, during which Malron notices \*\*pulleys and a mannequin dressed like Strahd\*\*—a theatrical scare tactic designed to intimidate intruders.
+Strahd begins a **grand tour of the castle**, during which Malron spots **pulleys running up and down a second-floor hallway and a mannequin dressed like Strahd** that seems to be attached to them—perhaps a cheap trick to scare visitors.
 
 Meanwhile, **Sasha pulls Zorpheus aside**, asking:
 
@@ -34,6 +34,8 @@ She pleads for the party to **rescue Gertruda**, who is being held in the Keep. 
 Sasha shares her tragic past—her husband died, and she longs to see Strahd fall and the morning light return. She informs the party of a **rear servants’ entrance** they can use when Strahd is away, though she cannot unlock it herself.
 
 > **“I come in Dostron’s memory.”** — Sasha reveals this as Strahd’s oldest password, known only to Rahadin.
+
+She is sure the party will have to face Rahadin if they sneak in while Strahd is out.
 
 Later, **Escher escorts Zorpheus upstairs**, rejoining the rest of the party. **Rahadin enters with a chained prisoner**, his head covered by a sack.
 
@@ -57,13 +59,13 @@ The party is offered **guest quarters**, with assurances that no servant will la
 
 Inside, **Gumbo searches a clock** and finds a **map indicating that the beating heart of the castle lies in the north tower**.
 
-The party attempts to stay awake, but all are mysteriously forced into unconsciousness. When they awaken, \*\*something has changed\*\*…
+The party attempts to stay awake, but all are mysteriously forced into unconsciousness. When they awaken, **something has changed**…
 
 ## Key Locations:
 
 **Castle Ravenloft – Guest Tower Room**: The party is confined here overnight, guarded by Escher.  
 **Castle Ravenloft – Grand Entry**: Tea is served while Strahd investigates the lightning damage.  
-**Castle Ravenloft – Second Floor**: Malron spots pulleys and a mannequin used for fear tactics.  
+**Castle Ravenloft – Second Floor**: Malron spots pulleys and a Strahd mannequin, perhaps a cheap scare.  
 **Rear Servants’ Entrance**: Sasha reveals its location for future infiltration.  
 **North Tower**: Rumored location of the castle’s beating heart.
 
