@@ -17,6 +17,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 *Crusty, drawn by Grant Haseloff.*
 
+![Crusty, high elf sage wizard, with his crystal staff and tome](/images/crusty-ai-portrait.jpg)
+
+*AI-generated portrait (Google Gemini, October 2026), drawn from Cole's description below. Not player art.*
+
 *In his player's own words (Cole Smarr, as Crustoferson on Discord, 16 February 2026):*
 
 Crusty, High Elf Sage Wizard
