@@ -9,6 +9,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Gumbo, half-orc rogue, in a dark cobbled alley](/images/gumbo-ai-portrait.jpg)
+
+*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+
 A Half-Orc Rogue, Gumbo is a resourceful and pragmatic adventurer with a knack for finding the unexpected solution. Whether it’s picking a lock or silently dispatching a foe, Gumbo’s skills are invaluable to the group. Despite his tough exterior, Gumbo occasionally reveals a sly sense of humor that keeps morale high in tense situations.
 
 <!-- from-the-log -->
