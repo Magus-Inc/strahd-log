@@ -123,6 +123,10 @@
     // Safari on iPhone only lets video go full screen, so there the bars stay.
     var enter = deck.requestFullscreen || deck.webkitRequestFullscreen;
     function fullElement() { return document.fullscreenElement || document.webkitFullscreenElement; }
+    // Closing the full-screen view brings the page back to the slide strip. While open, the deck is out of
+    // the page's flow and the phone may have turned, so the old scroll position no longer points at it.
+    var returnUntil = 0;
+    function backToDeck() { frame.scrollIntoView({block: "center"}); }
     function toggle(open) {
       var at = current;
       deck.classList.toggle("open", open);
@@ -134,6 +138,9 @@
       } else {
         clearTimeout(quietTimer); deck.classList.remove("quiet");
         if (fullElement()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+        // Again once the layout settles, and on any resize in the next moment (leaving full screen, rotating).
+        returnUntil = Date.now() + 1500;
+        requestAnimationFrame(function () { requestAnimationFrame(backToDeck); });
       }
     }
     // Leaving the browser's full screen (Esc, a back swipe) closes the slide view too.
@@ -144,7 +151,7 @@
       });
     });
     // Turning the phone changes the strip's width; land on the same slide again.
-    window.addEventListener("resize", function () { go(current); });
+    window.addEventListener("resize", function () { go(current); if (Date.now() < returnUntil) backToDeck(); });
     deck.addEventListener("mousemove", function () { if (deck.classList.contains("open")) wake(); });
     strip.addEventListener("scroll", update, {passive: true});
     update();

@@ -282,3 +282,9 @@ def test_full_screen_slides_use_the_whole_screen_and_fade_their_controls():
     assert "requestFullscreen" in script and "fullscreenchange" in script
     # A rotation re-fits the open slide.
     assert 'addEventListener("resize"' in script
+
+
+def test_closing_full_screen_slides_returns_to_the_strip():
+    # Chris: after leaving a full-screen slide he was often further down the page.
+    template = (build.ROOT / "templates" / "post.html").read_text(encoding="utf-8")
+    assert 'frame.scrollIntoView({block: "center"})' in template and "returnUntil" in template
