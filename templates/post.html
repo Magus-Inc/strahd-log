@@ -61,6 +61,42 @@
     </nav>
 {% endblock %}
 {% block scripts %}
+{% if post.slides %}
+  <script>
+  (function () {
+    // Slide deck: show which slide is in view, tap a slide to fill the screen, Esc or tap again to close.
+    var deck = document.querySelector(".deck");
+    if (!deck) return;
+    var strip = deck.querySelector(".deck-strip"), count = deck.querySelector(".deck-count");
+    var slides = strip.querySelectorAll("li"), current = 0;
+    var close = document.createElement("button");
+    close.className = "deck-close"; close.type = "button"; close.setAttribute("aria-label", "Close slides");
+    close.innerHTML = "&times;";
+    deck.appendChild(close);
+    function update() {
+      current = Math.round(strip.scrollLeft / strip.clientWidth);
+      count.textContent = (current + 1) + " / " + slides.length;
+    }
+    function go(i) { strip.scrollLeft = Math.max(0, Math.min(slides.length - 1, i)) * strip.clientWidth; }
+    function toggle(open) {
+      var at = current;
+      deck.classList.toggle("open", open);
+      document.body.classList.toggle("deck-lock", open);
+      go(at);
+      if (open) close.focus();
+    }
+    strip.addEventListener("scroll", update, {passive: true});
+    strip.addEventListener("click", function (e) { if (e.target.tagName === "IMG") toggle(!deck.classList.contains("open")); });
+    close.addEventListener("click", function () { toggle(false); });
+    document.addEventListener("keydown", function (e) {
+      if (!deck.classList.contains("open")) return;
+      if (e.key === "Escape") toggle(false);
+      else if (e.key === "ArrowRight") go(current + 1);
+      else if (e.key === "ArrowLeft") go(current - 1);
+    });
+  })();
+  </script>
+{% endif %}
 {% if post.toc | length >= 3 %}
   <script>
   (function () {

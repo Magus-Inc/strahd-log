@@ -16,6 +16,7 @@ Python build turns them into plain HTML in `public/`, published by GitHub Pages 
 | `tools/import_op.py` | One-off importer from an Obsidian Portal export (Textile) |
 | `tests/` | pytest tests; they build their own fixtures |
 | `.github/workflows/pages.yml` | Builds and publishes the site to GitHub Pages on every push to `main` |
+| `static/slides/<post file name>/` | A session's slide deck: `01.webp`, `02.webp`, ... (1600 px wide) and optionally a `.pdf`; shown as a swipeable strip after At a Glance |
 | `static/CNAME` | The site's own address, `owlbear.dicelore.quest` |
 | `netlify.toml` | Settings for hosting on Netlify instead (not used today) |
 | `public/` | Build output (not in git) |

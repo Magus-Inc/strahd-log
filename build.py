@@ -62,6 +62,8 @@ class Post:
     glance: list[str] = field(default_factory=list)
     teaser: str = ""
     cast: list = field(default_factory=list)
+    slides: list[str] = field(default_factory=list)  # static/slides/<file stem>/*.webp, in page order
+    slides_pdf: str = ""
 
     @property
     def path(self) -> str:
@@ -137,14 +139,28 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         page.html, _ = linker.link(render_markdown(page.body_md), self_slug=page.slug)
 
 
+def find_slides(posts: list[Post], static_dir: Path) -> None:
+    """A post's slide deck is static/slides/<post file name>/ (e.g. 2026-09-29-the-beacon-of-argynvostholt/):
+    one image per slide (01.webp, 02.webp, ...) and, optionally, the deck as a PDF."""
+    for post in posts:
+        name = post.source.stem if post.source else post.slug
+        folder = static_dir / "slides" / name
+        if not folder.is_dir():
+            continue
+        post.slides = [f"slides/{name}/{f.name}" for f in sorted(folder.glob("*.webp"))]
+        pdfs = sorted(folder.glob("*.pdf"))
+        post.slides_pdf = f"slides/{name}/{pdfs[0].name}" if pdfs else ""
+
+
 def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
-    """Reading time, table of contents, glance callout, card teaser and cast for every post."""
+    """Reading time, table of contents, glance callout, slides, card teaser and cast for every post."""
     for post in posts:
         post.minutes = article.reading_minutes(post.html)
         post.glance = article.glance_items(post.html)
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(post.mentions, pages)
-        post.html, post.toc = article.add_heading_ids(article.margin_notes(article.wrap_glance(post.html)))
+        post.html, post.toc = article.add_heading_ids(article.margin_notes(
+            article.add_deck(article.wrap_glance(post.html), post.slides, post.slides_pdf)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:
@@ -241,6 +257,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
     link_wiki(posts, pages)
+    find_slides(posts, ROOT / "static")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent

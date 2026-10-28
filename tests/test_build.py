@@ -222,3 +222,16 @@ def test_note_paragraphs_become_table_notes_in_the_margin():
     html = article.margin_notes("<p>We ran.</p><p>Note: [Meta details] The table laughed.</p><p>Not a Note: here</p>")
     assert html == ('<p>We ran.</p><aside class="margin-note" aria-label="From the table"><p>The table laughed.</p></aside>'
                     "<p>Not a Note: here</p>")
+
+
+def test_find_slides_matches_the_post_file_name(content, tmp_path):
+    posts = build.load_posts(content)
+    folder = tmp_path / "static" / "slides" / "2026-09-01-third"
+    folder.mkdir(parents=True)
+    for name in ("02.webp", "01.webp", "deck.pdf", "notes.txt"):
+        (folder / name).write_bytes(b"")
+    build.find_slides(posts, tmp_path / "static")
+    third = next(p for p in posts if p.slug == "third")
+    assert third.slides == ["slides/2026-09-01-third/01.webp", "slides/2026-09-01-third/02.webp"]
+    assert third.slides_pdf == "slides/2026-09-01-third/deck.pdf"
+    assert all(not p.slides for p in posts if p is not third)

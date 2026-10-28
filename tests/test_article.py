@@ -52,3 +52,18 @@ def test_cast_lists_mentioned_player_characters():
     pages = [wiki.WikiPage("liren", "Liren", type="character"), wiki.WikiPage("ireena", "Ireena", type="npc"),
              wiki.WikiPage("aera", "Aera", type="character")]
     assert [p.title for p in article.cast({"liren", "ireena", "aera"}, pages)] == ["Aera", "Liren"]
+
+
+def test_deck_goes_after_the_glance_callout():
+    html = article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp", "slides/x/02.webp"])
+    assert html.index('class="callout glance"') < html.index('class="deck"') < html.index("<h2>Characters")
+    assert 'src="/slides/x/02.webp" alt="Slide 2 of 2"' in html
+    assert "1 / 2" in html and "Download PDF" not in html
+
+
+def test_deck_without_glance_goes_before_first_section_and_links_pdf():
+    plain = build.render_markdown("# Title\n\nIntro.\n\n## Characters:\n\n* Shabasta\n")
+    html = article.add_deck(plain, ["slides/x/01.webp"], "slides/x/deck.pdf")
+    assert html.index("Intro.") < html.index('class="deck"') < html.index("<h2>Characters")
+    assert '<a href="/slides/x/deck.pdf" download>Download PDF</a>' in html
+    assert article.add_deck(plain, []) == plain

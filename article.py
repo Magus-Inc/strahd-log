@@ -74,6 +74,29 @@ def margin_notes(html: str) -> str:
     return NOTE.sub(note, html)
 
 
+def add_deck(html: str, slides: list[str], pdf: str = "") -> str:
+    """Put the session's slide deck (root-relative image paths, in order) right after the "At a
+    Glance" callout, or before the first section heading when there is none: a strip that swipes on a phone, with a link
+    to the PDF when there is one."""
+    if not slides:
+        return html
+    n = len(slides)
+    items = "".join(f'<li><img src="/{escape(src)}" alt="Slide {i} of {n}" loading="lazy" decoding="async"></li>'
+                    for i, src in enumerate(slides, 1))
+    link = f' &middot; <a href="/{escape(pdf)}" download>Download PDF</a>' if pdf else ""
+    deck = ('<section class="deck" aria-label="Session slides">\n<h2>The Slides</h2>\n'
+            f'<ol class="deck-strip">{items}</ol>\n'
+            f'<p class="deck-meta"><span class="deck-count">1 / {n}</span>'
+            f'<span class="deck-hint"> &middot; swipe, or tap a slide to enlarge</span>{link}</p>\n</section>\n')
+    m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
+    if m:
+        at = m.end()
+    else:
+        h2 = re.search(r"<h2[ >]", html)
+        at = h2.start() if h2 else 0
+    return html[:at] + deck + html[at:]
+
+
 def teaser(html: str, limit: int = 150) -> str:
     """One or two plain-text lines for a session card: the first glance bullet, else the first paragraph."""
     items = glance_items(html)
