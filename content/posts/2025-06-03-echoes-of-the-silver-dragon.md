@@ -5,8 +5,6 @@ slug: echoes-of-the-silver-dragon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-silver-dragon
 ---
 
-# Echoes of the Silver Dragon
-
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
 * [Zorpheus](/wiki/zorpheus/)
@@ -14,69 +12,63 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-The party continues their exploration of Argynvostholt, uncovering lingering spirits and artifacts from the once-proud Order of the Silver Dragon. In the **graveyard**, they find abandoned armor that helps convince the ghosts to leave them undisturbed.
+We went on exploring Argynvostholt, finding lingering spirits and relics of the once-proud Order of the Silver Dragon. In the **graveyard** we found abandoned armor that helped persuade the ghosts to leave us be.
 
-Aera discovers **[a pseudodragon](/wiki/zorya/)**, which now follows her, seemingly drawn to her presence.
+Aera found **[a pseudodragon](/wiki/zorya/)**, which now follows her, drawn to her somehow.
 
-Ascending to the **second floor**, the party encounters eerie chills emanating from one of the towers. A spectral voice challenges them: **“If you be servants of the devil, be gone!”**
+On the **second floor** a chill poured from one of the towers, and a spectral voice challenged us: **“If you be servants of the devil, be gone!”**
 
-Here, they meet **Minodora**, a restless spirit who pleads for them not to aid Strahd. She shares cryptic guidance: **“Brother Merik upstairs east galley—find his book in the west bedchambers. Read aloud the prayer.”** Brother Merik was once the Order’s chaplain.
+There we met **Minodora**, a restless spirit, who begged us not to help Strahd. She gave us cryptic guidance: **“Brother Merik upstairs east galley—find his book in the west bedchambers. Read aloud the prayer.”** Brother Merik was once the Order’s chaplain.
 
-The party uncovers a table inscribed with the **knightly vow** of the Silver Dragon:
+We found a table inscribed with the **knightly vow** of the Silver Dragon:
 
 **“I solemnly vow to uphold the virtues of the Order of the Silver Dragon, with honor as my shield and truth as my guide… In the shadow of evil, I shall be the light; in the face of despair, the beacon of hope…”**
 
-A journal page reveals the grim final thoughts of **Lord Argynvost** before his death in battle. In his last stand, he vowed to unleash his true draconic form and defend the valley with his life. He left his belongings beneath the tower’s watchful gaze, hopeful that others would continue his legacy.
+A journal page held the last thoughts of **Lord Argynvost** before he died in battle. In his last stand he vowed to take his true dragon form and defend the valley with his life. He left his belongings beneath the tower’s watchful gaze, hoping others would carry on his legacy.
 
-Among the hidden remnants, Aera finds **a concealed stone shelf behind a painting**, revealing several treasures:
+Behind a painting Aera found **a hidden stone shelf** holding several treasures: a rapier that glows faintly in the dark, an amulet that opens the way through Tsolenka Pass, a bracelet of warding, a silver tablet and banner from the Order’s history, and a parchment scroll.
 
-* **Moontouched Rapier** (+1 weapon, glowing faintly in darkness).
-* **Amulet of Knight’s Passage** (key to suppress the magical curtain at Tsolenka Pass, preventing petrified vrock guardians from animating).
-* **Bracelet of Warding** (capable of casting **Sanctuary** and **Warding Bond**, with charges that regenerate at dawn).
-* **Silver Tablet and Banner** (historical artifacts tied to the Silver Dragon).
-* **Parchment Scroll** (a letter imploring Argynvost to end hostilities and make peace with Lord Von Zarovich).
-
-This scroll, signed by **Andral**, warns that further conflict will doom the land, presenting Strahd’s rule as a stabilizing force despite his flaws.
+The scroll was a letter, signed by **Andral**, begging Argynvost to end the fighting and make peace with Lord von Zarovich. It warns that more war will doom the land and paints Strahd’s rule, for all his flaws, as what holds the valley steady.
 
 ## Key Locations:
 
-**Graveyard of Argynvostholt**: Home to lingering spirits, convinced to leave after discovering old armor.
+**Graveyard of Argynvostholt**: Home to lingering spirits, persuaded to leave once we found the old armor.
 
 **Tower of Chilling Voices**: A spectral guardian warns intruders against serving Strahd.
 
-**Hidden Stone Shelf**: A secret compartment behind a painting, containing lost relics of the Silver Dragon.
+**Hidden Stone Shelf**: A secret space behind a painting, holding lost relics of the Silver Dragon.
 
 ## Encounters:
 
-* **Social Encounter – Minodora’s Plea**: A ghost implores the party to resist aiding Strahd and guides them toward Brother Merik’s book.
-* **Historical Discovery – Lord Argynvost’s Journal**: A glimpse into the last days of Argynvost and his unwavering commitment to the valley.
-* **Treasure Recovery – Hidden Relics**: Aera uncovers long-lost artifacts tied to the Silver Dragon’s legacy.
+* **Minodora’s Plea**: A ghost begged us not to help Strahd and sent us after Brother Merik’s book.
+* **Lord Argynvost’s Journal**: A glimpse of Argynvost’s last days and his devotion to the valley.
+* **Hidden Relics**: Aera found long-lost treasures of the Silver Dragon.
 
 ## Loot:
 
-* **Moontouched Rapier**: A +1 weapon glowing faintly, retrieved by Aera.
-* **Amulet of Knight’s Passage**: A carved white stone allowing passage through Tsolenka Pass.
-* **Bracelet of Warding**: Grants protective magic (**Sanctuary**, **Warding Bond**).
+* **Moontouched Rapier**: A +1 weapon glowing faintly in darkness, taken by Aera.
+* **Amulet of Knight’s Passage**: A carved white stone; the key that suppresses the magical curtain at Tsolenka Pass and keeps the petrified vrock guardians from animating.
+* **Bracelet of Warding**: Casts **Sanctuary** and **Warding Bond**, with charges that regenerate at dawn.
 * **Silver Tablet and Banner**: Symbols of the Order’s history.
 * **Andral’s Scroll**: A plea for peace, questioning the war against Strahd.
 
 ## Notable NPCs:
 
-* **Minodora**: A spirit urging the party to stand against Strahd.
-* **Brother Merik**: Former chaplain of the Order, mentioned as having a crucial book in the west bedchamber.
-* **Lord Argynvost**: The Silver Dragon himself, whose words remain carved into history.
-* **Andral**: Writer of a letter urging Argynvost to abandon the fight.
+* **Minodora**: A spirit urging us to stand against Strahd.
+* **Brother Merik**: Once chaplain of the Order; his book lies in the west bedchamber.
+* **Lord Argynvost**: The Silver Dragon himself, whose words are carved into history.
+* **Andral**: Wrote the letter urging Argynvost to give up the fight.
 
 ## Plot Points:
 
-* **Brother Merik’s Book**: The party must retrieve and read his prayer, though its significance remains uncertain.
-* **Argynvost’s Final Stand**: His spirit lingers, tied to the fate of the Silver Dragon’s Order.
-* **The Passage to Tsolenka Pass**: The recovered Amulet may allow safe passage through the dangerous gatehouse.
-* **Strahd’s Rule—Stability or Oppression?**: Andral’s letter paints a nuanced picture of Strahd’s leadership, forcing the party to question their assumptions.
+* **Brother Merik’s Book**: We must find it and read his prayer, though what it does is still unclear.
+* **Argynvost’s Final Stand**: His spirit lingers, bound to the fate of his Order.
+* **Tsolenka Pass**: The amulet may let us through the dangerous gatehouse safely.
+* **Strahd’s Rule, Stability or Oppression?**: Andral’s letter paints a more tangled picture of Strahd’s rule and makes us question what we thought we knew.
 
 ## Session Highlights:
 
 * **“A pseudodragon companion? I think I have a new favorite party member!”** —Aera.
-* The chilling words of the tower spirit—foreshadowing trouble ahead.
-* Discovering Argynvost’s journal—a glimpse into the mind of the legendary Silver Dragon before his fall.
-* The reveal of the hidden stone shelf—lost artifacts, waiting to be uncovered.
+* The tower spirit’s chilling words, a warning of trouble ahead.
+* Argynvost’s journal, a glimpse into the mind of the Silver Dragon before his fall.
+* The hidden stone shelf and its lost treasures.

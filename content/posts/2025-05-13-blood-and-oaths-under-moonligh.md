@@ -5,8 +5,6 @@ slug: blood-and-oaths-under-moonligh
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/blood-and-oaths-under-moonligh
 ---
 
-# Blood and Oaths Under Moonlight
-
 ## Characters:
 * [Gumbo](/wiki/gumbo/)
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
@@ -18,67 +16,67 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-The party ventures to Argynvostholt, preparing for a side quest before confronting Castle Ravenloft. Their mission is soon interrupted by dark revelations within the werewolf den.
+We are bound for Argynvostholt, a side errand before we face Castle Ravenloft. But first the werewolf den gave up some dark secrets.
 
-Within the cave, they discover the **Shrine of Mother Night**, where they unearth a ruby medallion, gems, and gold—though the treasure bears a terrible curse. They also find **Illya and Zurika**, prisoners adorned with silver-thorn collars crafted by Baba Lasaga—powerful artifacts preventing their transformation into werewolves.
+In the cave we found the **Shrine of Mother Night**, with a ruby medallion, gems and gold, all of it under a terrible curse. We also found **Illya and Zurika**, prisoners in collars of silver thorn made by Baba Lasaga, powerful things that keep them from turning into wolves.
 
-Illya’s story reveals a conspiracy: **The Abbot deceived him**, Strahd and Baba Lasaga aided Kiril in capturing **Emil**, their missing leader, and imprisoning him in Ravenloft’s dungeons. **Zurika swears to free Emil** and requests aid from the party.
+Illya’s story laid bare a conspiracy. **The Abbot deceived him**, and Strahd and Baba Lasaga helped Kiril capture **Emil**, their missing leader, and lock him in Ravenloft’s dungeons. **Zurika swore to free Emil** and asked for our help.
 
-The party accepts the oath, and **Olfin retrieves the Symbol of Ravenkind**, granted by Zurika in return for their promise to rescue Emil.
+We took the oath, and in return Zurika gave **Olfin the Symbol of Ravenkind**.
 
-Escaping the cave, the party camps in the forest, only for **Strahd himself to appear.** His mood is unsettlingly playful—angered by their incursion into his ally Kiril’s den, he conjures a **blood-filled hourglass**, forcing the adventurers into a cruel game of sacrifices.
+We escaped the cave and made camp in the forest, and **Strahd himself appeared.** His mood was unsettlingly playful. Angry that we had raided the den of his ally Kiril, he conjured an **hourglass full of blood** and forced us into a cruel game of sacrifices.
 
-* **Zorpheus and Liren choose blood.**
-* **Aera drinks the blood, triggering her full werewolf transformation.** Oogway swears he cast **Remove Curse** beforehand, meaning something even stronger was at work.
-* **Oogway gives up his name.**
-* **Malron silences himself for a day rather than abandon his faith.**
-* **Olfin allows his weapon to be cursed rather than swear fealty to Strahd.**
+* **Zorpheus and Liren chose blood.**
+* **Aera drank the blood and turned fully into a werewolf.** Oogway swears he had lifted her curse beforehand, so something stronger was at work.
+* **Oogway gave up his name.**
+* **I chose a day of silence rather than abandon my faith.**
+* **Olfin let his weapon be cursed rather than swear fealty to Strahd.**
 
-With Strahd’s twisted game concluded, the adventurers press forward to **Argynvostholt**, the ruined mansion of the **Order of the Silver Dragon**. There, they meet **Sir Godfried Gwilym**, who reveals the tragedy of their once-great order.
+When Strahd’s game was done we pressed on to **Argynvostholt**, the ruined mansion of the **Order of the Silver Dragon**. There we met **Sir Godfried Gwilym**, who told us the tragedy of his once-great order.
 
-Strahd **stole the skull of Argynvost**, desecrating their memory, and **Rahadin slew their commander, Hornguard.** Sir Godfried warns them to stay clear of Hornguard’s chamber, **avoid the fourth floor**, and **be wary of phase spiders** dwelling within the ruins.
+Strahd **stole the skull of Argynvost**, desecrating their memory, and **Rahadin slew their commander, Hornguard.** Sir Godfried warned us to keep out of Hornguard’s chamber, **to avoid the fourth floor**, and **to beware the phase spiders** in the ruins.
 
-A cryptic prophecy lingers in their minds:
+A cryptic prophecy stays with me:
 
 **“Seek out the younger of the twin dragons above. Reignite the silver flame it once wielded, and remind it of the oath it once served. Do this, and the memory of the Silver Dragon may return to fill it once more.”**
 
 ## Key Locations:
 
-**Shrine of Mother Night**: A cursed altar within the werewolf den, holding sacred but dangerous artifacts.
+**Shrine of Mother Night**: A cursed altar in the werewolf den, holding sacred and dangerous things.
 
-**Forest Campsite**: Strahd’s presence turns a moment of respite into a chilling trial.
+**Forest Campsite**: Where Strahd turned our rest into a chilling trial.
 
-**Argynvostholt**: The ruined fortress of the Order of the Silver Dragon, holding lingering secrets.
+**Argynvostholt**: The ruined fortress of the Order of the Silver Dragon, still full of secrets.
 
 ## Encounters:
 
-* **Social Encounter – Illya and Zurika**: The prisoners reveal vital details of Emil’s capture and a cursed treasure.
-* **Game of Blood – Strahd’s Test**: Each hero faces a personal sacrifice in a twisted game devised by Strahd himself.
-* **Spiritual Encounter – Sir Godfried Gwilym**: The knight’s spirit urges the party to seek Argynvost’s legacy and avoid Hornguard’s wrath.
+* **Illya and Zurika**: The prisoners told us how Emil was taken, and of the cursed treasure.
+* **Strahd’s Test**: A twisted game in which each of us chose a sacrifice.
+* **Sir Godfried Gwilym**: The knight’s spirit urged us to seek Argynvost’s legacy and avoid Hornguard’s wrath.
 
 ## Loot:
 
-* **Symbol of Ravenkind**: Retrieved by Olfin as part of their oath to rescue Emil.
+* **Symbol of Ravenkind**: Given to Olfin for our oath to rescue Emil.
 * **Silver-thorn Collars**: Worn by Illya and Zurika, preventing lycanthropic transformation.
-* **Ruby Medallion & Cursed Treasure**: Valuable, but best left untouched due to its dark nature.
+* **Ruby Medallion & Cursed Treasure**: Valuable, but best left untouched for its dark nature.
 
 ## Notable NPCs:
 
-* **Illya & Zurika**: Werewolf prisoners seeking the party’s aid in rescuing Emil.
-* **Strahd von Zarovich**: The lord of Barovia, weaving cruelty and games into his interactions.
-* **Sir Godfried Gwilym**: A spectral knight of the Silver Dragon, guiding the party toward hidden truths.
-* **Hornguard**: A powerful, vengeful presence within Argynvostholt, best left undisturbed.
+* **Illya & Zurika**: Werewolf prisoners asking our help to rescue Emil.
+* **Strahd von Zarovich**: The lord of Barovia, all cruelty and games.
+* **Sir Godfried Gwilym**: A spectral knight of the Silver Dragon, guiding us toward hidden truths.
+* **Hornguard**: A powerful, vengeful presence in Argynvostholt, best left alone.
 
 ## Plot Points:
 
-* **Rescue Emil**: The group takes an oath to retrieve him from the dungeons of Ravenloft.
+* **Rescue Emil**: We have sworn to bring him out of the dungeons of Ravenloft.
 * **The Skull of Argynvost**: Strahd’s desecration of the Silver Dragon’s remains is a terrible offense.
-* **The Sunsword**: Rumored to be Strahd’s father’s weapon, possibly hidden within the Amber Temple.
-* **Aera’s Curse**: Her werewolf transformation, accelerated by Strahd’s blood magic, may have deeper implications.
+* **The Sunsword**: Said to be Strahd’s father’s weapon, perhaps hidden in the Amber Temple.
+* **Aera’s Curse**: Her change, hastened by Strahd’s blood magic, may mean more than we know.
 
 ## Session Highlights:
 
 * **“Strahd doesn’t force pain—he makes you choose it.”**
-* Aera’s shocking transformation—curse or fate?
-* Oogway’s sacrifice—the loss of a name in exchange for survival.
-* The ghostly prophecy—twin dragons, a silver flame, and a memory that must be reignited.
+* Aera’s shocking change: curse or fate?
+* Oogway’s sacrifice, a name given up to survive.
+* The ghostly prophecy: twin dragons, a silver flame, and a memory to rekindle.
