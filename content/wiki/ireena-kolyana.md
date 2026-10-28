@@ -13,6 +13,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/ireen
 
 ## Description
 
+![Ireena, red-haired, in a breastplate and long dark skirt, with a sword in each hand](/images/ireena-by-ryan.webp)
+
+*Ireena, in art Ryan shared with the table.*
+
 *Written from the session logs, in Malron's words.*
 
 Ismark's sister. Their family found her in the forest as a little girl, and Strahd has bitten her and controlled her before ([Barovia, Barovia](/posts/barovia-barovia/), [Leaving Village Barovia](/posts/leaving-village-barovia/)). From a box she had buried in the village she gave Olfin a silver bracelet inscribed to Tatyana ([Leaving Village Barovia](/posts/leaving-village-barovia/)). She walked with us to Tser Pool in full armor, and to Vallaki, where the refugees blamed her family for their misfortune ([Tser Pool](/posts/tser-pool/), [Welcome to Vellaki*](/posts/welcome-to-vellaki-/)). Father Lucien sheltered her in the Church of Saint Andral, Izek hunted her, and Rahadin's invitation to the castle asked for her by name ([Finding Arabelle!](/posts/finding-arabelle/), [Consequences in Vallaki](/posts/consequences-in-vallaki/), [Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)).
