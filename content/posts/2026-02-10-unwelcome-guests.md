@@ -20,11 +20,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 As the sun surrendered to the jagged peaks of the Balinoks, the party stood at a critical crossroads. The transition from the relative sanctuary of the Bluewater Inn to the vertical reaches of the Count’s domain represented a fundamental strategic pivot. This mission was predicated on a rare “strategic window“—the departure of the Master of the House—demanding a shift from open-world investigation to proactive, surgical sabotage.
 
-The journey commenced with an 8.5-mile trek from Vallaki. Near the Sarepool crossroads, the party encountered a Vistani wagon helmed by the elder Stanimere. The exchange was one of cautious neutrality. Recognizing the party’s historical merit—specifically their role in laying Verushka’s spirit to rest—Stanimere bestowed a Clairvoyance Stone to aid their infiltration.
+The party still had 12 hours left of the necrotic resistance Strahd had granted them. The journey commenced with an 8.5-mile trek from Vallaki. Near the Sarepool crossroads, the party encountered a Vistani caravan; the elder Stanimere, Radu and Elizabella were in it, telling stories. The exchange was one of cautious neutrality. Recognizing the party’s historical merit—specifically their role in laying Verushka’s spirit to rest—Stanimere gave Aera a Clairvoyance Stone to aid their infiltration.
 
 **Note: [The party briefly debated a “Trojan Bunny” strategy or theft of the Vistani crest before opting for diplomatic neutrality.]**
 
-Upon reaching the precipice, the party observed Strahd von Zarovich departing the castle atop his nightmare, Becephalus. With the Master away, Krusty cast Fly and Invisibility on Aera, who soared across the 1,000-foot drop to the parapets. Aera used oil flasks to lubricate the ancient mechanisms and successfully pickpocketed the alarm horns from two patrolling wights. However, the infiltration nearly turned catastrophic when Aera attempted a “Running Somersault Dropkick”; she stumbled (rolling a 1), losing her invisibility as she collided with the guard. Combat erupted, but the party’s coordinated fire prevented the sentries from retaliating. Aera successfully lowered the drawbridge, allowing the party to reach the servant’s entrance.
+Upon reaching the precipice, the party observed Strahd von Zarovich departing the castle atop his nightmare, Becephalus. With the Master away, Aera turned invisible with her ring and Krusty cast Fly on her. She soared across the chasm and came up behind the wights on the ramparts. With Mage Hand she picked the alarm horn from the first wight’s pocket, then stole the second wight’s horn as well. The infiltration nearly turned catastrophic when Aera attempted a “Running Somersault Dropkick” to push one off the edge; she stumbled (rolling a 1) and bounced off the guard. Because she was still invisible, the wight could only swing at empty air. Combat erupted, and the party defeated the wights. Aera poured oil on the drawbridge chains to silence them, and the party lowered the drawbridge and reached the servant’s entrance.
 
 **Note: [The DM returned a Luck Point to Aera following the failed somersault, noting the sentries were “low-level annoyances” compared to the threats deeper within.]**
 
@@ -36,11 +36,11 @@ Upon reaching the precipice, the party observed Strahd von Zarovich departing th
 
 **The Chasm and Drawbridge**: A 1,000-foot plummet and 50-foot gap that serves as Ravenloft’s primary geographical defense.
 
-**The Servant’s Entrance (K1-K2)**: A discrete entry point accessed via the password “Ikame Dastra’s memory.” Contains a registration book for “next of kin.”
+**The Servant’s Entrance (K1-K2)**: A discrete entry point accessed via the password “Ikame Dastra’s memory.” Contains a registration book for “next of kin” and a withered corpse.
 
 ## Encounters:
 
-Social: **Stanimere**: A neutral negotiation resulting in the acquisition of the Clairvoyance Stone.
+Social: **Stanimere, Radu and Elizabella**: Vistani storytellers; a neutral exchange that ended with Aera receiving the Clairvoyance Stone.
 
 Tactical Combat: **The Parapet Wights**: A high-efficiency engagement initiated by Aera’s failed acrobatic strike. The strategy of pickpocketing the horns first prevented a castle-wide alarm.
 
@@ -58,7 +58,7 @@ Tactical Combat: **The Parapet Wights**: A high-efficiency engagement initiated 
 ## Plot Points:
 
 * **The Three-Pointed Star**: A crest intended for Lady Fiona Wachter. Its design suggests a connection to the ancient Fanes of Barovia.
-* **The Servant’s Register**: A grim ledger in K1 where staff “register for next of kin.” The presence of a fresh corpse suggests the “registration” is a literal death warrant.
+* **The Servant’s Register**: A grim ledger in K1 where staff “register for next of kin.” The withered corpse beside it suggests the “registration” is a literal death warrant.
 
 ## Session Highlights:
 
