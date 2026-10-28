@@ -5,8 +5,6 @@ slug: wizard-of-wines-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/wizard-of-wines-vineyard
 ---
 
-# DnD Adventure Log Wizard of Wines vineyard
-
 ## Characters:
 * [Oogway](/wiki/oogway/)
 * [Olfin Darning](/wiki/olfin-darning/)
@@ -18,52 +16,52 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-It is evening as the party enters the hiding place of the cloaked figure, discovering Davien Martikov, the father of Irwin Martikov. Davien reveals that forest folk (druids) and their blights, along with the entity Babalasaga (referred to as Lisa), have driven his family out of the Wizard of Wines vineyard.
+It was evening when we entered the cloaked figure’s hiding place and found Davien Martikov, father of Irwin Martikov. Davien told us the forest folk, druids, and their blights, along with Baba Lasaga, whom some call Lysa, have driven his family from the Wizard of Wines vineyard.
 
-Davien shares the dangers ahead: four druids, eight needle blights, three greater Strix, and eight vine blights. The druid leader possesses a magical staff controlling these creatures, which must be destroyed or stolen. He advises going underground into the cellar to find and deal with the staff.
+He laid out what waits ahead: four druids, eight needle blights, three greater strix and eight vine blights. The druids’ leader carries a magical staff that commands these creatures, and it must be destroyed or stolen. He advised us to go underground into the cellar to find it.
 
-The party learns that the tunnel leading to the cellar passes through a cavern filled with brown mold, immune to fire but weak against cold damage. Staying centered on the dirt path is crucial to avoid harm.
+The tunnel to the cellar runs through a cavern full of brown mold. Fire only feeds it, but cold kills it, and we must keep to the middle of the dirt path to come through unharmed.
 
-Davien recounts a family tragedy tied to Elrich, who died three months ago during a march on Castle Ravenloft. His death and the loss of a prized gemstone stolen from the winery shattered the family.
+Davien told us of his family’s grief. His son Elrich died three months ago on a march against Castle Ravenloft, and a prized gemstone was stolen from the winery. Between them, the two losses broke the family.
 
-Muriel stays behind to guard the exit while the party ventures through the tunnel. They discover a box adorned with a snowflake hanging from a rusted iron hook. Inside are three winter wolf teeth enchanted by mountain folk, which can release freezing blasts or grant immunity to cold damage.
+Muriel stayed behind to guard our way out while we went through the tunnel. We found a box marked with a snowflake, hanging from a rusted iron hook. Inside were three winter wolf teeth, enchanted by the mountain folk, that can loose a freezing blast or shield the bearer from cold.
 
-Using one of the enchanted teeth, the party blasts past the mold blocking their path and reaches the cellar. Rogues scout ahead, spotting eight twig blights and a druid.
+With one of the teeth we blasted our way past the mold and reached the cellar. Our rogues scouted ahead and spotted eight twig blights and a druid.
 
-Veyren turns into a mouse and overhears a druid torturing a raven for information about a lost item. The druid becomes aware of Veyren and calls out to the mouse, demanding a conversation.
+Veyren became a mouse and overheard a druid torturing a raven for word of something lost. The druid sensed him, called out to the mouse and demanded to talk.
 
 ## Key Locations:
 
-**Cavern**: A treacherous area filled with brown mold immune to fire and weak against cold.  
-**Cellar**: A wooden structure where the party must confront druids and blights.
+**Cavern**: A treacherous passage full of brown mold that fire feeds and cold kills.  
+**Cellar**: A wooden structure where we must face the druids and blights.
 
 ## Encounters:
 
-Trap: Navigating the mold-filled cavern using enchanted winter wolf teeth.  
-Social/Combat: Rogues spotting twig blights and a druid in the cellar.  
-Social/Stealth: Veyren transforming into a mouse to eavesdrop on a druid and raven interaction.
+Crossing the mold-filled cavern with the winter wolf teeth.  
+Our rogues spotting twig blights and a druid in the cellar.  
+Veyren as a mouse, listening to the druid and the raven.
 
 ## Loot:
 
-**Winter Wolf Teeth**: Three enchanted teeth capable of releasing freezing blasts or granting cold immunity.
+**Winter Wolf Teeth**: Three enchanted teeth that loose freezing blasts or grant immunity to cold.
 
 ## Notable NPCs:
 
-**Davien Martikov**: The cloaked father of Irwin, sharing vital details about the vineyard’s peril.  
-**Muriel Winshaw**: Staying behind to protect the party’s exit.  
-**Druids**: Forest folk intent on guarding the magical staff controlling the blights.
+**Davien Martikov**: The cloaked figure, Irwin’s father, who told us of the vineyard’s peril.  
+**Muriel Winshaw**: Stayed behind to guard our way out.  
+**Druids**: Forest folk guarding the staff that commands the blights.
 
 ## Plot Points:
 
-- Babalasaga, referred to as Lisa, was the mentor of Lady Fiona Vachtner.  
-- The druid leader possesses a magical staff controlling the blights, which must be destroyed or stolen.  
-- Elrich’s death during a march on Castle Ravenloft shattered the Martikov family.  
-- The enchanted winter wolf teeth reveal mountain folk craftsmanship and magic.  
-- The druid torturing the raven hints at deeper mysteries surrounding the lost item.
+- Baba Lasaga, called Lysa, was the mentor of Lady Fiona Wachter.  
+- The druids’ leader holds a staff that commands the blights; it must be destroyed or stolen.  
+- Elrich’s death on the march against Castle Ravenloft broke the Martikov family.  
+- The winter wolf teeth show the craft and magic of the mountain folk.  
+- The druid torturing the raven hints at deeper mysteries around the lost thing.
 
 ## Session Highlights:
 
-- Discovering Davien Martikov’s tragic backstory and the dangers ahead.  
-- Strategically using enchanted winter wolf teeth to bypass brown mold.  
-- Veyren’s daring transformation into a mouse to gather information from the druid.  
-- The ominous tension as the druid addresses Veyren’s hidden presence.
+- Davien Martikov’s sad story and the dangers ahead.  
+- Blasting past the brown mold with a winter wolf tooth.  
+- Veyren’s daring turn as a mouse to spy on the druid.  
+- The druid calling out to the mouse it should not have seen.

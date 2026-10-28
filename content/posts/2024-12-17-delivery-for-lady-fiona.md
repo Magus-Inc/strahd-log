@@ -16,48 +16,49 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Malron**
 
 **Summary:**  
-Malron uses the Talisman of Echoes to communicate with Izek’s head. Oogway interrogates Izek and learns about the powers of his arm: Flame Hurl and Flame Volley. Additionally, Izek reveals that the “Order of the Feather” opposes Strahd.
+I used the Talisman of Echoes to speak with Izek’s head. Oogway did the questioning and learned the powers of his arm, a hurled flame and a volley of fire. Izek also told us that the “Order of the Feather” opposes Strahd.
 
-The party encounters cultist-like individuals outside the Wachter house and is welcomed inside by Lady Fiona. They deliver Izek’s head to her and are led to the armory as a reward.
+Outside Wachter House we passed some cultish-looking folk, and Lady Fiona welcomed us in. We gave her Izek’s head, and she led us to her armory for our reward. She read to us from her family history about the wedding of Prince Sergei and Tatyana.
+
+At the inn, words appeared on a frosted window, “Help Viktor” and “Erasmus”, and the spirit of Erasmus reached out to us. We agreed to help at the Vallakovich manor. Then Rahadin, the elf, arrived on a phantom steed with an invitation to dinner at Castle Ravenloft, and asked that Irena come. In the town square, Father Lucien argued with the guards as Milivoj and Heinrich were condemned to hang.
 
 **Key Locations:**  
-- **Wachter House:** The party meets Lady Fiona and receives their reward.  
-- **Inn:** The party rests and encounters the spirit of Erasmus.  
-- **Town Square:** The party witnesses the condemnation of Milovaj and Heinrich.
+- **Wachter House:** Lady Fiona and our reward.  
+- **Inn:** Where we rested and met the spirit of Erasmus.  
+- **Town Square:** Where Milivoj and Heinrich were condemned.
 
 **Encounters:**  
-- **Social:** Interrogating Izek’s head using the Talisman of Echoes. Key actions: Oogway’s questions reveal information about Izek’s arm and the “Order of the Feather.“  
-- **Social:** Meeting with Lady Fiona and delivering Izek’s head. Key actions: The party follows Fiona to the armory for their reward.  
-- **Social/Exploration:** Discovering a message on the frosted window and encountering Erasmus’ spirit.
+- **Izek’s head:** Oogway’s questions, by the Talisman of Echoes, told us of the arm and the “Order of the Feather.”  
+- **Lady Fiona:** We delivered Izek’s head and followed her to the armory.  
+- **The frosted window:** A message, and Erasmus’ spirit.
 
 **Loot:**  
-- **30 Silver Crossbow Bolts:** Obtained from Lady Fiona’s armory.  
-- **Silver Arrows:** Obtained from Lady Fiona’s armory.  
-- **Four Silver Spears:** Obtained from Lady Fiona’s armory.  
-- **Two Sets of Armor (100 gold):** Obtained from Lady Fiona’s armory.  
-- **Set of Armor (400 gold):** Obtained from Lady Fiona’s armory.  
-- **Materials to Silver Additional Weapons:** Obtained from Lady Fiona’s armory.  
-- **Locket of the Last Laugh:** Found by Liren; emits childlike laughter.
+- **30 Silver Crossbow Bolts:** From Lady Fiona’s armory.  
+- **Silver Arrows:** From Lady Fiona’s armory.  
+- **Four Silver Spears:** From Lady Fiona’s armory.  
+- **Two Sets of Armor (100 gold):** From Lady Fiona’s armory.  
+- **Set of Armor (400 gold):** From Lady Fiona’s armory.  
+- **Materials to Silver More Weapons:** From Lady Fiona’s armory.  
+- **Locket of the Last Laugh:** Found by Liren; it gives off a child’s laughter.
 
 **Notable NPCs:**  
-- **Lady Fiona Wachter:** Welcomes the party, provides rewards, and shares family history.  
-- **Izek:** Provides information about his arm and the “Order of the Feather.“  
-- **Erasmus’ Spirit:** Communicates with the party through a frosted window.  
-- **Rahadin:** Delivers an invitation to dinner at Castle Ravenloft and requests the presence of Irena.  
-- **Father Lucien:** Argues with guards at the town square.  
-- **Milovaj and Heinrich:** Condemned to death by hanging.
+- **Lady Fiona Wachter:** Welcomed us, rewarded us and shared her family history.  
+- **Izek:** Told us of his arm and the “Order of the Feather.”  
+- **Erasmus’ Spirit:** Spoke to us through a frosted window.  
+- **Rahadin:** Brought an invitation to dinner at Castle Ravenloft and asked for Irena.  
+- **Father Lucien:** Argued with the guards in the town square.  
+- **Milivoj and Heinrich:** Condemned to death by hanging.
 
 **Plot Points:**  
-- Malron’s use of the Talisman of Echoes to communicate with Izek.  
-- Discovery of the powers of Izek’s arm and the opposition of the “Order of the Feather” to Strahd.  
-- Meeting Lady Fiona and receiving rewards.  
-- Reading from the family history book about the wedding of Prince Sergei and Tatyana.  
-- Encountering Erasmus’ spirit and agreeing to help at Valokovitch Manor.  
-- Receiving an invitation to dinner at Castle Ravenloft and witnessing the condemnation of Milovaj and Heinrich.
+- I spoke with Izek through the Talisman of Echoes.  
+- We learned the powers of Izek’s arm, and that the “Order of the Feather” opposes Strahd.  
+- Lady Fiona rewarded us.  
+- She read to us of the wedding of Prince Sergei and Tatyana.  
+- Erasmus’ spirit came to us, and we agreed to help at the Vallakovich manor.  
+- An invitation to dine at Castle Ravenloft, and the condemnation of Milivoj and Heinrich.
 
 **Session Highlights:**  
-- Liren finds the eerie “Locket of the Last Laugh.“  
-- The party’s encounter with Erasmus’ spirit and the messages “Help Viktor” and “Erasmus” on the frosted window.  
-- The elf Rahadin’s arrival on a phantom steed, delivering an invitation to dinner at Castle Ravenloft.  
-- The dramatic scene in the town square with the condemnation of Milovaj and Heinrich.
-
+- Liren finding the eerie “Locket of the Last Laugh.”  
+- Erasmus’ spirit, and “Help Viktor” and “Erasmus” written on the frosted window.  
+- Rahadin arriving on a phantom steed with the invitation to Castle Ravenloft.  
+- The town square, and Milivoj and Heinrich condemned.

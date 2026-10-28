@@ -5,8 +5,6 @@ slug: finishing-up-at-the-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finishing-up-at-the-vineyard
 ---
 
-# DnD Adventure Log Finishing up at the vineyard
-
 ## Characters:
 * [Oogway](/wiki/oogway/)
 * [Olfin Darning](/wiki/olfin-darning/)
@@ -17,62 +15,61 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
+The druids worship Lorgoth and are hunting for a missing stone that matters to their rites. They warned us that Winter Splinter, a ruinous thing, is coming to tear down everything in its path. In the room grew a tree like the one on Yester Hill, where the druids are making ready for a ritual.
 
-The druids worship Lorgoth and are seeking a missing stone believed to hold significance for their rituals. They warn that Winter Splinter—a devastating entity—is coming to demolish everything in its path. The party encounters a tree in the room that resembles the one growing on Yester Hill, where the druids are preparing for a ritual.
+The druids had caught ravens, believing them spies for the shadow lord. One druid boasted that he held the shadow lord’s staff. We cut him down and destroyed the staff.
 
-The druids have captured ravens, suspecting them of being spies for the shadow lord. One druid declares their possession of the shadow lord’s staff, but the party defeats the druid and successfully destroys the staff.
+Then the forest folk attacked, and their hatred for Davien showed. He belongs to the Keepers of the Feather, who oppose Strahd. The Keepers guide and shelter rather than fight openly, and the ravens are part of how they work. Irwin Martikov is one of them too.
 
-Forest folk launch an attack, revealing their animosity toward Damien, who belongs to the Keepers of the Feather, an organization opposing Strahd. The Keepers aim to guide and shelter rather than engage in direct conflict, using ravens as part of their methods. Irwin Martikov is revealed to be another member of this group.
+Davien told us of his younger son, Elvier, who defied his father’s warning and joined Doru’s doomed assault on Castle Ravenloft.
 
-Damien recounts a tragic incident involving his younger son, Elvier, who defied his father’s warning and joined an ill-fated assault on Castle Ravenloft led by Doru.
+The winery depends on three green gemstones whose magic makes the vines grow. One was lost or stolen ten years ago. Baba Lasaga stole the second three weeks ago, and the druids took the third, so the wine has stopped altogether. Davien believes we can win back the druids’ gem on Yester Hill, but warned that we are not strong enough to face Baba Lasaga.
 
-The party learns about the winery’s reliance on three green gemstones with plant-growing magic for producing wine. Ten years ago, one gem was lost or stolen, while Baba Lasagna stole the second gem three weeks ago, and the druids took the third gem, halting production entirely. Damien believes the party can reclaim the gem stolen by the druids on Yester Hill but warns they are not strong enough to face Baba Lasagna.
+He suspects the druids mean to summon Winter Splinter, and urged us to reach Yester Hill before dawn to recover the gem.
 
-Damien suspects the druids are preparing a ritual to summon Winter Splinter and advises the party to reach Yester Hill before dawn to recover the gem.
+After a long rest we were woken two hours before dawn and set out. Maren has secretly arranged to meet a contact named Kaven, whose reputation Davien does not like. Swarms of ravens flew with us, and Olfin tied a token to one of them.
 
-After a long rest, the party is woken up two hours before dawn and begins their journey. Maren secretly plans to meet a contact named Kaven, whose reputation Damien disapproves of. Swarms of ravens accompany the party, and Olfin attaches a token to one of them.
+Veyren read druidic runes telling of Kaven the Blood Drinker, and Mira, who heals herself of any wound, called Kaven up by dripping her blood. Kaven appeared, holding a long wooden spear.
 
-Veyren reads druidic runes about Kaven the Blood Drinker, while Mira uses her regenerative abilities to summon Kaven by dripping her blood. Kaven appears wielding a long wooden spear.
+We felt something watching us from the forest, a powerful and ancient presence with a crimson light. When we looked, there was a shape in the shadows, studying us.
 
-The party senses something watching them from the forest—a powerful and ancient presence with a crimson light. They investigate and discover a shape in the shadows that seems to observe them intently.
+We suspect a gemstone is hidden in a statue’s chest, perhaps tied to summoning Winter Splinter. Radiant magic slows and burns the tree on Yester Hill, which will help us.
 
-The party suspects a gemstone might be hidden within a statue’s chest, potentially tied to summoning Winter Splinter. Radiance magic slows and burns the tree on Yester Hill, aiding the party’s efforts.
-
-Sverog offers a wand to Kaven in exchange for a powerful weapon. Amid the chaos, Strahd appears riding his fiery steed, greeting the party ominously.
+Sverog offered Kaven a wand in exchange for a powerful weapon. In the middle of it all, Strahd rode up on his fiery steed and greeted us ominously.
 
 ## Key Locations:
 
-**Yester Hill**: The druids’ ritual site and home to the tree resembling Winter Splinter’s form.  
-**Forest**: A foreboding location filled with crimson-lit mysteries.
+**Yester Hill**: The druids’ ritual site, where the tree grows in Winter Splinter’s shape.  
+**Forest**: Dark woods full of crimson-lit mysteries.
 
 ## Encounters:
 
-Combat: Defeating the druid and destroying the shadow lord’s staff.  
-Social/Combat: Mira summoning Kaven, leading to an intense interaction.  
-Social/Investigation: Unveiling the presence watching the party in the forest.
+Cutting down the druid and destroying the shadow lord’s staff.  
+Mira calling up Kaven, and a tense parley with him.  
+The presence that watched us from the forest.
 
 ## Loot:
 
-**Radiance Magic**: Used to slow and burn the tree on Yester Hill.
+**Radiance Magic**: Slows and burns the tree on Yester Hill.
 
 ## Notable NPCs:
 
-**Damien Martikov**: A member of the Keepers of the Feather, guiding the party.  
-**Irwin Martikov**: Revealed as a fellow Keeper of the Feather.  
-**Kaven the Blood Drinker**: Summoned by Mira and offering a deal involving powerful items.  
-**Strahd**: Appears dramatically riding a fiery horse.
+**Davien Martikov**: A Keeper of the Feather, guiding us.  
+**Irwin Martikov**: Another Keeper of the Feather.  
+**Kaven the Blood Drinker**: Called up by Mira, offering a trade in powerful items.  
+**Strahd**: Arrived in style on a fiery horse.
 
 ## Plot Points:
 
 - The druids worship Lorgoth and are preparing to summon Winter Splinter.  
-- The gems vital to the winery’s production are intertwined with Baba Lasagna’s and the druids’ actions.  
-- The Keepers of the Feather seek to oppose Strahd using indirect methods.  
-- Kaven’s motives and connection to Mira hint at further intrigue.  
-- Strahd’s appearance signals an impending confrontation.
+- The winery’s three gems are bound up with Baba Lasaga and the druids.  
+- The Keepers of the Feather oppose Strahd by quieter means.  
+- Kaven’s motives and his tie to Mira hint at more intrigue.  
+- Strahd’s arrival means a reckoning is near.
 
 ## Session Highlights:
 
-- Destroying the shadow lord’s staff and defeating the druid.  
-- Veyren decoding druidic runes and Mira’s intense summoning of Kaven.  
-- The foreboding encounter with the crimson light in the forest.  
-- Strahd’s fiery entrance, heightening the stakes for the party.
+- Destroying the shadow lord’s staff and beating the druid.  
+- Veyren reading druidic runes, and Mira’s blood summoning of Kaven.  
+- The crimson light watching from the forest.  
+- Strahd’s fiery entrance.

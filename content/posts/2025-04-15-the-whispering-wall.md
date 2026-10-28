@@ -5,9 +5,6 @@ slug: the-whispering-wall
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-whispering-wall
 ---
 
-DnD Adventure Log  
-The Whispering Wall
-
 ## Characters:
 * [Liren](/wiki/liren/)
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
@@ -17,58 +14,54 @@ The Whispering Wall
 
 ## Summary:
 
-The party successfully defeats Winter Splinter, retrieving the coveted gemheart—but at a heavy cost, as its explosive demise claims Veyren’s life.
+We destroyed Winter Splinter and took the gemheart, but at a heavy cost: its bursting death took Veyren’s life.
 
-Seeking their reward, they travel to the Whispering Wall, where Strahd congratulates them on their victory against the forest folk and their handling of Ludmila, though he warns she will not forget the encounter. The wall, an ancient tomb steeped in divine mystery, offers visions of deepest desires. Strahd challenges them to enter, but warns that many souls never return.
+We went to the Whispering Wall to claim our reward, and Strahd congratulated us on beating the forest folk and on how we handled Ludmila, though he warned that she will not forget. The wall is an ancient tomb steeped in divine mystery, and it shows those who enter their deepest desires. Strahd dared us to go in, but warned that many souls never come back.
 
-Three accept the challenge:  
-- Zorpheus hears the prophecy confirmed.  
-- Malron discovers his reborn nature ties him to an ancient line of elven kings.  
-- Gumbo experiences the thrill of victory, cheered on by an unseen crowd.
+Three of us took the dare:  
+- Zorpheus heard the prophecy confirmed.  
+- I learned that my reborn nature ties me to an ancient line of elven kings.  
+- Gumbo felt the thrill of victory, cheered on by an unseen crowd.
 
-Each hears a whisper behind them: **“The way back comes but once.”**  
-At the last possible moment, Zorpheus barely escapes before the gate dissolves.
+Each of us heard a whisper from behind: **“The way back comes but once.”**  
+Zorpheus got out at the last possible moment, just before the gate dissolved.
 
-Irena enters as well, emerging with tear-streaked cheeks, unwilling to share her vision while Strahd remains nearby.
+Irena went in too and came out with tears on her cheeks. She would not tell her vision while Strahd was near.
 
-Strahd grants the party mystical gemstones:  
-- **Gray Stones**: Cast **Locate Object**, leading to objects of desire.  
-- **Silver Stones**: Cast **Misty Step**, enabling swift movement.
+Strahd gave us gemstones of two kinds: gray stones that lead to what we desire, and silver stones that carry us a few steps in a breath of mist. Each of us chose one. Then he brought out a moth-shaped artifact, the **Twilight Crest**, full of powerful magic.
 
-Each chooses their stone. Strahd then produces a moth-shaped artifact—the **Twilight Crest**, imbued with powerful magic.
+On the way back to the winery we met a traveling merchant, Minofaustus, whose wagon is a magical market full of rare treasures. He warned us not to haggle too hard, and not to steal. His strangest offer was a discount if we would take Zorpheus off his hands; it seems our rogue was once a thief.
 
-On the journey back to the winery, the party encounters a traveling merchant, Minofaustus, owner of a magical market filled with rare treasures. He warns them against bargaining too aggressively—or stealing. His most curious offer: a discount if they take Zorpheus off his hands, revealing that the rogue is a former thief.
-
-Deals are struck:  
-- Gumbo exchanges gold and accepts Zorpheus as his servant in return for a **Cloak of Elvenkind**.  
-- Liren and Malron obtain **Gleaming Half Plate** armor.  
-- Aera trades for a **Shades Ring**, but must repay Minofaustus with ten percent interest—owing another 500 gold.
+Deals were struck:  
+- Gumbo paid gold and took Zorpheus as his servant, along with a **Cloak of Elvenkind**.  
+- Liren and I got **Gleaming Half Plate** armor.  
+- Aera traded for a **Shades Ring**, but must repay Minofaustus with ten percent interest, another 500 gold owed.
 
 ## Key Locations:
 
-**Whispering Wall**: A mysterious tomb producing Barovia’s mist. Visions reveal desires, but many souls are lost to its allure.
+**Whispering Wall**: A mysterious tomb that makes Barovia’s mist. It shows visions of desire, and many souls are lost to it.
 
-**Kavan’s Cairn**: Site of ancient worship, where Kavan reveals the legends of the Seeker, Weaver, and Huntress.
+**Kavan’s Cairn**: An old place of worship, where Kavan told us the legends of the Seeker, the Weaver and the Huntress.
 
-**Hill of Ravenloft**: The resting place of King Doestron, where a legendary spear awaits.
+**Hill of Ravenloft**: The resting place of King Doestron, where a legendary spear waits.
 
-**Minofaustus’ Magical Market**: A traveling merchant’s wagon brimming with enchanted items—for a price.
+**Minofaustus’ Magical Market**: A traveling merchant’s wagon brimming with enchanted things, for a price.
 
 ## Encounters:
 
-**Strahd’s Challenge (Social)**: Strahd presents an eerie invitation for the group to enter the wall and receive enlightenment or risk being lost to it forever.
+**Strahd’s Challenge**: An eerie invitation to enter the wall and be enlightened, or be lost to it forever.
 
-**The Wall’s Test (Mystical Vision)**:
-– Zorpheus hears confirmation that the prophecy is real.
-– Malron discovers his reborn nature ties him to a lineage of elven kings.
-– Gumbo is cheered on by an unseen crowd.
-– Each participant hears a woman’s whisper: **“The way back comes but once.”**
-– Zorpheus nearly remains trapped, but regains clarity and escapes just in time.
+**The Wall’s Test**:
+– Zorpheus heard that the prophecy is real.
+– I learned that my reborn nature ties me to a line of elven kings.
+– Gumbo was cheered on by an unseen crowd.
+– Each of us heard a woman whisper: **“The way back comes but once.”**
+– Zorpheus nearly stayed trapped, but came to himself and escaped just in time.
 
-**Minofaustus’ Market (Social)**:
-– Gumbo bargains away his gold for a servant (Zorpheus) and a **Cloak of Elvenkind**.
-– Aera agrees to a debt for a **Shades Ring** with repayment terms.
-– Liren and Malron purchase **Half Plate** armor.
+**Minofaustus’ Market**:
+– Gumbo bargained away his gold for a servant (Zorpheus) and a **Cloak of Elvenkind**.
+– Aera took on a debt for a **Shades Ring**.
+– Liren and I bought **Half Plate** armor.
 
 ## Loot:
 
@@ -93,24 +86,24 @@ Selections:
 
 ## Notable NPCs:
 
-**Strahd von Zarovich**: Grants the party mystical gems as part of their reward, guiding them through the Wall’s challenge.
+**Strahd von Zarovich**: Gave us the gems as our reward and led us through the Wall’s challenge.
 
-**Kavan**: Shares ancient legends of his people’s split and the need to retrieve the Spear of the Ladies.
+**Kavan**: Told the old legends of his people’s split and of the need to recover the Spear of the Ladies.
 
-**Minofaustus (Merchant)**: A traveling trader with a magical market, offering deals—with interest.
+**Minofaustus (Merchant)**: A traveling trader with a magical market, whose deals come with interest.
 
 ## Plot Points:
 
-- The Whispering Wall is the tomb of a god that produced Barovia’s mist.  
-- The gemstones bestowed by Strahd hold power tied to the wielder’s desires.  
-- Kavan reveals ancient allegiances that split the first folk into mountain and forest clans.  
-- To reach Zoldoph, the party must secure mountain folk assistance and a token of the Ladies.  
-- Minofaustus introduces an unexpected trade opportunity, exchanging magical goods at calculated prices.
+- The Whispering Wall is the tomb of a god, and it makes Barovia’s mist.  
+- The gemstones Strahd gave us answer to the bearer’s desires.  
+- Kavan told of old allegiances that split the first folk into mountain and forest clans.  
+- To reach Zoldoph we need the mountain folk’s help and a token of the Ladies.  
+- Minofaustus offered an unexpected trade, magic for carefully counted coin.
 
 ## Session Highlights:
 
-- Zorpheus’s near-entrapment within the Wall’s vision.  
-- Irena’s tearful return from the Wall, withholding her revelations until Strahd departs.  
-- The mysterious moth-shaped artifact Strahd holds—its significance remains unknown.  
-- Gumbo’s bold trade with Minofaustus, acquiring Zorpheus as his servant in exchange for a **Cloak of Elvenkind**.  
-- Aera’s Shades Ring purchase, binding her to a steep repayment deal.
+- Zorpheus nearly trapped in the Wall’s vision.  
+- Irena’s tearful return from the Wall, keeping her vision to herself until Strahd left.  
+- The moth-shaped artifact Strahd held, its meaning still unknown.  
+- Gumbo’s bold trade with Minofaustus: Zorpheus as his servant, and a **Cloak of Elvenkind**.  
+- Aera’s Shades Ring, and the steep debt that came with it.

@@ -14,53 +14,52 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Zorpheus](/wiki/zorpheus/)
 
 ## Summary:
+Oogway tried to buy a cloak of invincibility from the wandering merchant, but could not, and settled for some healing potions.
 
-Oogway tries to buy a cloak of invincibility from the wandering merchant, but unable to do so, settles for some potions of healing.
-
-The party returns to the Wizard of Wines and learns about the history of the holy symbol of raven kind and its connection to Strahd. They receive an obsidian whistle from Damien and head to Krezk, encountering vampire spawn along the way.
+Back at the Wizard of Wines we learned the history of the holy symbol of Ravenkind and its tie to Strahd. Davien gave us an obsidian whistle, and we set out for Krezk, meeting vampire spawn on the way.
 
 ## The Reading:
 
-*The cards as read at the table, in short:*
+*The cards, in short:*
 
 * **The Darklord:** the master of shadows, a beast straining at its chains.
-* **The Six of Stars, the Evoker:** the wild, untamed power the party wants.
+* **The Six of Stars, the Evoker:** the wild, untamed power we seek.
 * **The Artifact:** the token that is the key to power; "Divinity's heart" waits somewhere.
 * **The Innocent:** a raven-haired maid with twilit eyes is one way to the token.
 * **The Broken One:** another way, through sacrifice; the Whispering Wall awaits a tribute.
 
 ## Key Locations:
 
-**Wizard of Wines**: Damien reveals the history of the holy symbol of raven kind and its connection to Strahd.
+**Wizard of Wines**: Davien told us the history of the holy symbol of Ravenkind and its tie to Strahd.
 
-**Krezk**: The party meets the Krezkovs and learns about the werewolf curse affecting Dimitry Krezkov and his family. Dimitry’s wife harvests wolfsbane to limit the effects of the curse, making him less violent. The curse is passed down through generations, and the party is unsure which of Dimitry’s children, if any, are affected similarly.
+**Krezk**: We met the Krezkovs and learned of the werewolf curse on Dimitri Krezkov and his family. His wife gathers wolfsbane to hold the curse back and keep him calmer. The curse passes down the generations, and we do not know which of Dimitri’s children, if any, carry it.
 
-**Abbey**: Someone has taken over the abbey and is building a reanimated corpse (flesh golem/Frankenstein) that requires the heart of a willing victim. The abbot has been spying on the Krezkovs in the shape of Dimitry’s aunt and convinces him to avoid the wolfsbane potion, not knowing it would actually help him. Dimitry follows the advice, turns into a werewolf, and kills his sister that night. The abbot promises to revive the sister if the mother, Anna, gives up her heart in a month’s time. Their son has run off into the woods.
+**Abbey**: Someone has taken over the abbey and is building a flesh golem out of corpses, and it needs the heart of a willing victim. The abbot has been spying on the Krezkovs in the shape of Dimitri’s aunt. He talked Dimitri out of the wolfsbane potion, and Dimitri did not know it was helping him. He stopped taking it, turned into a werewolf and killed his sister that night. The abbot has promised to bring the sister back if the mother, Anna, gives up her heart a month from now. Their son has run off into the woods.
 
 ## Encounters:
 
-Combat: The party encounters three vampire spawn on the road to Krezk and defeats them.
+Three vampire spawn on the road to Krezk, all destroyed.
 
 ## Loot:
 
-**Obsidian Whistle**: Given by Damien as thanks for recovering the gem needed to brew wine. How it works is on the [Obsidian Whistle](/wiki/obsidian-whistle/) page.
+**Obsidian Whistle**: Given by Davien as thanks for recovering the gem the winery needs to make wine. How it works is on the [Obsidian Whistle](/wiki/obsidian-whistle/) page.
 
 ## Notable NPCs:
 
-**Damien**: Leader of the keeper of feathers, wary of dark magic, provided an obsidian whistle shaped like a raven.
+**Davien**: Leader of the Keepers of the Feather, wary of dark magic; gave us an obsidian whistle shaped like a raven.
 
-**Muriel**: Reveals that Strahd had gone to Madam Eva for a reading before the party.
+**Muriel**: Told us Strahd went to Madam Eva for a reading before we did.
 
-**Dimitry Krezkov**: A werewolf whose curse is passed down through generations, his wife harvests wolfsbane to limit the effects.
+**Dimitri Krezkov**: A werewolf by a curse passed down the generations; his wife gathers wolfsbane to hold it back.
 
-**Anna Krezkov**: Dimitry’s wife, who harvests wolfsbane to help limit the effects of the werewolf curse.
+**Anna Krezkov**: Dimitri’s wife, who gathers wolfsbane to hold back the curse.
 
-**Abbot**: The mysterious figure who has taken over the abbey and is building a reanimated corpse, requiring the heart of a willing victim.
+**Abbot**: The mysterious figure who has taken over the abbey and is building a flesh golem that needs the heart of a willing victim.
 
 ## Plot Points:
 
-The party learns about the history of the holy symbol of raven kind and its connection to Strahd. They receive an obsidian whistle from Damien and head to Krezk, encountering vampire spawn along the way. In Krezk, they learn about the werewolf curse affecting Dimitry Krezkov and his family. The abbot’s sinister plans at the abbey are revealed, including the creation of a flesh golem and the manipulation of Dimitry.
+We learned the history of the holy symbol of Ravenkind and its tie to Strahd. Davien gave us an obsidian whistle, and we set out for Krezk, meeting vampire spawn on the way. In Krezk we learned of the werewolf curse on Dimitri Krezkov’s family, and the abbot’s dark work at the abbey: the flesh golem, and his manipulation of Dimitri.
 
 ## Session Highlights:
 
-The party’s encounter with vampire spawn on the road to Krezk and their victory. The revelation of Strahd’s reading by Madam Eva and the history of the holy symbol of raven kind. The tragic events involving Dimitry Krezkov and the abbot’s manipulation.
+Beating the vampire spawn on the road to Krezk. Learning that Strahd had his own reading from Madam Eva, and the history of the holy symbol of Ravenkind. The sad story of Dimitri Krezkov and the abbot’s manipulation.

@@ -5,8 +5,6 @@ slug: entering-the-spirit-realm
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-the-spirit-realm
 ---
 
-# DnD Adventure Log
-
 ## Characters:
 * [Oogway](/wiki/oogway/)
 * [Olfin Darning](/wiki/olfin-darning/)
@@ -18,17 +16,19 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-Lady Fiona needed to drop the guards to allow us entry into the ethereal realm. We ventured into the cellar with her, where we encountered peculiar sights: four skeletons lying in beds, a pentagram on the floor, and a curved dagger inscribed with the phrase “in death.” Scratches reading “traitor” were visible, remnants of a previous dweller. Fiona deemed the cellar a secure location despite her inability to remove the markings.
+Lady Fiona had to drop her wards to allow us entry into the ethereal realm. We ventured into the cellar with her, where we encountered peculiar sights: four skeletons lying in beds, a pentagram on the floor, and a curved dagger inscribed with the phrase “in death.” Scratches reading “traitor” were visible, remnants of a previous dweller. Fiona deemed the cellar a secure location despite her inability to remove the markings.
 
-Victor utilized the hag’s heart stone to transport us to the ethereal realm. A teenage voice exclaimed “Victor!” behind us, revealing a fading figure with legs disappearing below the knees into the mist.
+Victor used the hag’s heart stone to transport us to the ethereal realm. A teenage voice exclaimed “Victor!” behind us, revealing a fading figure with legs disappearing below the knees into the mist.
 
 Victor began drawing a teleportation circle to save her, requiring ten minutes to complete. Boyish laughter emerged from the mist, revealing the spectral silhouette of Erasmus, a 14-year-old spirit assisting Stella in hiding. Erasmus warned us of the spirits aware of our presence and described the gallows speaker waiting outside for the ward to be dropped.
 
-Oogway queried Erasmus about the gallows speaker’s vulnerabilities, learning it had no weaknesses and resisted spells, necrotic damage, poison, grapple, stun, and prone effects.
+Oogway asked Erasmus about the gallows speaker’s weaknesses. It has none, and spells, poisons and the touch of death all slide off it. It cannot be held, stunned or knocked down.
 
-Victor’s spell acted as a beacon, attracting spirits intent on stealing Stella’s body. Erasmus instructed us to attack any spirits within 15 feet of Stella.
+Note: Its resistances, per Erasmus: spells, necrotic damage, poison, grapple, stun and prone.
 
-A giant fight started which we were able to win, but at a large cost. Shabasta died during the battle and no one was able to bring him back. Stella was rescued for which Lady Fiona was grateful.
+Victor’s spell acted as a beacon, attracting spirits intent on stealing Stella’s body. Erasmus told us to strike any spirit that came near Stella.
+
+A great fight followed, and we won it, at a heavy cost. Shabasta died in the battle, and none of us could bring him back. Stella was rescued for which Lady Fiona was grateful.
 
 ## Key Locations:
 
@@ -38,7 +38,7 @@ A giant fight started which we were able to win, but at a large cost. Shabasta d
 
 ## Encounters:
 
-Combat: Spirits entered the area, attempting to claim Stella’s body. The gallows speaker appeared, bearing us no ill will but demanding to take Stella and Lady Fiona. After a long hard battle we defeated the gallows speaker, but in the process Shabasta died and no one had a resurrection spell available.
+The spirits: Spirits entered the area, attempting to claim Stella’s body. The gallows speaker appeared, bearing us no ill will but demanding to take Stella and Lady Fiona. After a long hard battle we defeated the gallows speaker, but Shabasta died, and none of us had the prayer to raise him.
 
 ## Loot:
 
@@ -60,8 +60,8 @@ Combat: Spirits entered the area, attempting to claim Stella’s body. The gallo
 
 ## Session Highlights:
 
-- Oogway’s inquiry revealed critical information about the gallows speaker’s resistances.  
-- Victor’s tense efforts to complete the teleportation circle added urgency.  
-- Stella’s misty partial disappearance and Erasmus’s warnings set the tone for eerie danger.  
-- Retrieval of the Tome of Strahd and Spirit Mirror opened new possibilities for exploration.  
-- Memorable dialogue from Leo Dilisnya and Lady Fiona enriched the unfolding narrative.
+- Oogway’s questions, which told us what the gallows speaker shrugs off.  
+- Victor’s tense efforts to complete the teleportation circle as the spirits closed in.  
+- Stella’s misty partial disappearance and Erasmus’s warnings in the mist.  
+- Retrieval of the Tome of Strahd and Spirit Mirror and what they may show us.  
+- Leo Dilisnya’s words, and Lady Fiona’s.

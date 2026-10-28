@@ -5,8 +5,6 @@ slug: stop-winter-splinter
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/stop-winter-splinter
 ---
 
-# DnD Adventure Log Act 3: Stop Winter Splinter
-
 ## Characters:
 * [Oogway](/wiki/oogway/)
 * [Liren](/wiki/liren/)
@@ -16,54 +14,53 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
+As we went through the forest, Strahd came out of the shadows on his fiery steed, in splendid armor. He took an interest in Muriel’s hairline, as though curious where she came from. He was openly excited about Winter Splinter and offered to escort us to Yester Hill, with a wager: if we succeed, we should meet him at the western foot of the wall for a gift and a secret.
 
-As the party journeys through the forest, Strahd emerges from the shadows atop his fiery steed, adorned in impressive armor. He takes an interest in Muriel’s hairline, hinting at some deeper curiosity about her origins. Strahd expresses excitement about Winter Splinter and offers to escort the party to Yester Hill, presenting a wager—if the party succeeds, they should meet him at the western base of the wall for a gift and a secret.
+Strahd told us Winter Splinter is a giant twig blight. When Veyren asked why some can move freely in his domain, he said Madam Eva gives him information, and so certain people pass unchallenged. He also spoke of Rahadin, his servant.
 
-Strahd reveals that Winter Splinter is a giant twig blight. When Veyren asks why some individuals can move freely within his domain, Strahd explains that Madam Eva provides him with information, allowing certain people to pass unchallenged. He also mentions Rajadin, a servant of his.
+At Yester Hill lightning struck the boulder-ringed summit. On top stood a fifty-foot statue of a cloaked man with fangs, inside two rings of stones, with thirteen druids chanting in a circle. Thorny vines bound the druids, and mist swirled above them. Further out stood four figures with axes, and one we took for Ludmila, a bride of Strahd.
 
-Arriving at Yester Hill, the party witnesses lightning striking the boulder-ringed summit. At the hill’s peak stands a 50-foot statue of a cloaked man with fangs, surrounded by two rings of stones and a chanting circle of thirteen druids. Thorny vines encase the druids, with mist swirling above. Four axe-wielding figures stand further out, along with a figure the party suspects to be Ludmila—a bride of Strahd.
+Strahd hovered above the ground watching the ritual, turning a small thing in his hands. Ludmila saw us and in a blink was close by. Strahd idly toyed with a pawn from a chess set. Ludmila went cold at the sight of it, displeased that he was playing a game with her. Then he vanished into the ethereal plane.
 
-Hovering ten feet above the ground, Strahd observes the ritual, holding a small object in his hands. Ludmila notices the party and teleports within range. Strahd, intrigued, casually toys with a pawn chess piece. Ludmila reacts coldly upon seeing it, displeased that Strahd is playing a game with her. He then vanishes into the ethereal plane.
+Ludmila made no secret of her contempt for Volenta and warned that she would not be nearly so easy to kill. She told us that a raven among those who attacked Castle Ravenloft was a wereraven, able to heal any wound save from silver or the touch of death. She had meant to cut it open while it lived.
 
-Ludmila openly expresses disdain for Volenta and warns the party that she will not be nearly as easy to defeat. She reveals that a raven among the party who had attacked Castle Ravenloft was a were-raven capable of regenerating all damage except silver and necrotic. Ludmila had planned to vivisect the creature.
+Muriel trembled at this. She fears the wereraven was one of Davien’s sons, her lover. Ludmila also told us that Baba Lasaga helped her take the winery, and that Baba Lasaga lives in Berez.
 
-Muriel trembles at this revelation, suspecting one of Damien’s sons—her lover—may have been that were-raven. Ludmila further explains that Baba Lasaga aided her in taking control of the winery. The party learns that Baba Lasaga resides in Berez.
-
-Faced with the decision of whether to engage Ludmila or bypass her to disrupt the ritual, the party opts for the latter, unwilling to further provoke Strahd. Their focus remains on stopping the druids and preventing Winter Splinter’s summoning.
+We could fight Ludmila or slip past her to break the ritual. We chose the second, unwilling to anger Strahd further. Our aim stays the same: stop the druids and keep Winter Splinter from being summoned.
 
 ## Key Locations:
 
-**Yester Hill**: The ritual site where druids attempt to summon Winter Splinter.  
-**Forest**: Where Strahd first appears and converses with the party.
+**Yester Hill**: Where the druids are trying to summon Winter Splinter.  
+**Forest**: Where Strahd found us and talked with us.
 
 ## Encounters:
 
-Social: Negotiating Strahd’s wager and learning about Winter Splinter.  
-Social/Combat: The confrontation with Ludmila and revelations about the were-raven.  
-Strategic: Deciding to bypass Ludmila and focus on disrupting the druids’ ritual.
+Strahd’s wager, and what he told us of Winter Splinter.  
+Ludmila’s threats, and her news of the wereraven.  
+Our choice to slip past Ludmila and go for the ritual.
 
 ## Loot:
 
-(None yet discovered in this session.)
+(None found yet.)
 
 ## Notable NPCs:
 
-**Strahd**: Oversees the events at Yester Hill and vanishes into the ethereal plane.  
-**Ludmila**: A bride of Strahd who threatens the party and seeks to vivisect the were-raven.  
-**Muriel**: Shaken by the revelation regarding Damien’s son.  
-**Baba Lasaga**: Mentioned as an ally of Ludmila in taking over the winery.
+**Strahd**: Watched over Yester Hill, then vanished into the ethereal plane.  
+**Ludmila**: A bride of Strahd who threatened us; she meant to cut open the wereraven.  
+**Muriel**: Shaken by what Ludmila said of Davien’s son.  
+**Baba Lasaga**: Helped Ludmila take the winery.
 
 ## Plot Points:
 
-- Winter Splinter is a giant twig blight prepared for summoning.  
-- Strahd’s wager offers a reward and a secret if the party succeeds.  
-- Ludmila hints at tensions within Strahd’s circle, specifically regarding Volenta.  
-- The were-raven that fought at Castle Ravenloft regenerates except against silver or necrotic attacks.  
-- The party chooses to avoid conflict with Ludmila and directly disrupt the ritual.
+- Winter Splinter is a giant twig blight, ready to be summoned.  
+- Strahd promises a gift and a secret if we succeed.  
+- Ludmila let slip the rivalry among Strahd’s brides, with Volenta.  
+- The wereraven who fought at Castle Ravenloft heals from anything but silver or necrotic harm.  
+- We chose to avoid Ludmila and go straight for the ritual.
 
 ## Session Highlights:
 
-- Strahd’s cryptic conversation and his ominous departure.  
-- Ludmila’s unsettling threats and hidden motivations.  
-- Muriel’s personal connection to the were-raven revelation.  
-- The party’s strategic decision to bypass Ludmila and focus on stopping the druids.
+- Strahd’s cryptic talk and his ominous exit.  
+- Ludmila’s unsettling threats and hidden motives.  
+- Muriel’s grief at the wereraven news.  
+- Slipping past Ludmila to stop the druids.

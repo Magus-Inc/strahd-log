@@ -14,40 +14,40 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Shabasta** Porcupine Bard
 
 **Summary:**  
-Father Lucien assists the party in locating the home of Milivoj, a leaning decrepit structure with a door that stands askew. Father Lucien suspects Milivoj is innocent of the bone theft. Upon knocking, a woman answers with three children behind her. The bard entertains the children with music, but the older boy claims Milivoj is too ill to see anyone. Convinced by the sister, Milivoj arrives, carrying more children on his shoulders.
+Father Lucien helped us find the home of Milivoj, a leaning, decrepit house with a door hanging askew. The father believes Milivoj is innocent of the theft. A woman answered our knock with three children behind her. Shabasta played music for the children, but the older boy said Milivoj was too ill to see anyone. His sister talked him round, and Milivoj came out with more children on his shoulders.
 
-The barbarian deduces Milivoj’s guilt and intimidates him into confessing. Milivoj reveals his parents’ addiction to dream pastries and his need to support his siblings. He sold the bones to Heinrich the previous day.
+Liren saw through him and frightened him into confessing. His parents are lost to dream pastries, and he must keep his brothers and sisters fed. He sold the bones to Heinrich the day before.
 
-On their way to Heinrich, the Shabasta the bard, disguised as Father Lucien, convinces guards to arrest Milivoj for theft. At Heinrich’s door, the bard persuades four guards to break in and arrest Heinrich, who refuses to disclose the bones’ location. The party searches the shop, finding a room with thirteen coffins and then moving to the second floor where they encounter a kitchen and a bedroom.
+On the way to Heinrich’s, Shabasta, disguised as Father Lucien, persuaded the guards to arrest Milivoj for theft. At Heinrich’s door he talked four guards into breaking in and arresting Heinrich, who would not say where the bones were. We searched the shop and found a room with thirteen coffins, then went up to the second floor, where there was a kitchen and a bedroom.
 
-Malron triggers a poison dart trap in the wardrobe, paralyzing him for ten minutes and attracting enemies. Despite the danger, they spot a bag likely holding the bones. After an intense battle with two vampires, and many fires, Volenta, a bride of Strahd, escapes, leaving behind mists and a glowing pentagram. Aera hands the bones to Malron and steps into the final room of the building.
+I opened the wardrobe and a poisoned dart struck me. I could not move for ten minutes, and a noisemaker brought our enemies down on us. Even so, we spotted a bag that likely held the bones. We fought two vampires amid a great many fires, and Volenta, a bride of Strahd, escaped, leaving behind mist and a glowing pentagram. Aera handed me the bones and stepped into the last room of the building.
 
 **Key Locations:**  
-1. **Milivoj’s Home:** Decrepit structure, significant for the confession.  
-2. **Heinrich’s Shop:** Scene of confrontation and search.
+1. **Milivoj’s Home:** A decrepit house, where he confessed.  
+2. **Heinrich’s Shop:** Where we confronted the thief’s buyer and searched for the bones.
 
 **Encounters:**  
-- **Social/Investigation:** Interaction with Milivoj and his family.  
-- **Intimidation:** Barbarian’s confrontation with Milivoj.  
-- **Deception:** Bard’s disguise and manipulation of guards.  
-- **Trap:** Malron triggers a poison dart and noise maker.  
-- **Combat** The party fights Volenta and two vampires with the aid of Father Lucien
+- **Milivoj and his family:** Questions, music and a confession.  
+- **Liren’s threats:** Enough to break Milivoj.  
+- **Shabasta’s disguise:** The guards obeyed “Father Lucien”.  
+- **The wardrobe:** A poisoned dart for me, and a noisemaker to wake the house.  
+- **The fight:** Volenta and two vampires, with Father Lucien at our side.
 
 **Loot:**  
-- **Bones of St. Andral:** Located in a bag in the wardrobe.
+- **Bones of St. Andral:** In a bag in the wardrobe.
 
 **Notable NPCs:**  
-- **Father Lucien:** Aids the party in their quest.  
-- **Milivoj:** Initially suspected thief, later revealed to be struggling to support his family.  
-- **Heinrich:** Unwilling to cooperate, arrested by guards.  
-- **Volenta:** Bride of Strahd, escapes leaving behind clues.
+- **Father Lucien:** Helped us in the search.  
+- **Milivoj:** The thief, stealing to feed his family.  
+- **Heinrich:** Would not help us, and was arrested by the guards.  
+- **Volenta:** A bride of Strahd, who escaped and left clues behind.
 
 **Plot Points:**  
-1. The party uncovers Milivoj’s motivation behind the theft.  
-2. Heinrich’s arrest and the subsequent search for the bones.  
-3. Encounter with Volenta and her escape, introducing potential future conflicts.
+1. We learned why Milivoj stole the bones.  
+2. Heinrich was arrested and we searched his shop for the bones.  
+3. Volenta escaped us, and we will surely meet her again.
 
 **Session Highlights:**  
-- Bard’s clever use of disguise to influence guards.  
-- Barbarian’s successful intimidation leading to confession.  
-- Excitement and danger of Malron triggering the trap.
+- Shabasta’s clever disguise to sway the guards.  
+- Liren’s threats bringing out the confession.  
+- The excitement and danger of my run-in with the wardrobe.
