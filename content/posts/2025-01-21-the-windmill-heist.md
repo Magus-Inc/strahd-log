@@ -15,6 +15,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 
 ## Summary:
+
+![The battle map at the hags' windmill, with minis on the path between the cart and the well](/images/the-windmill-heist-1.jpg)
+
+*At the table: the battle at the windmill.*
+
 We stole into the windmill where the hags live to rescue the children they took and to seize their contract. We freed the children, took the contract, and fought the hags hard.
 
 ## Key Locations:
