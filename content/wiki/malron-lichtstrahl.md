@@ -13,9 +13,15 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Malron Lichtstrahl, Reborn cleric of Lathander, with the Icon of Dawn's Grace and the elf spirit who shares his body](/images/malron-ai-portrait.jpg)
+
+*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+
 [Character Sheet](https://www.dndbeyond.com/characters/110929059)
 
 ## Bio
+
+Human by birth, Malron is now Reborn: a resurrection gone wrong brought him back with an ancient elf spirit sharing his body.
 
 Malron has been a cleric of Lathander for most of their adventuring life. He served in an order of clerics, under the tutelage of a Dwarven priest of Latander. In the early years of their service to the order, Malron was tasked with clearing out a crypt on behalf of a wealthy benefactor. Malron went into the crypt with a team of other followers of Lathander, but became separated at one point and was snared in the web of a Giant Spider where he became poisoned and knocked unconscious. Malron’s party only discovered the spider many hours later, and his body only after it fell out of the burning webs it had been snared in. Luckily Malron’s mentor was present and was able to cast Resurection on Marlon’s’ body, unfortunately Malron wasn’t actually dead, just poisoned and unconscious with some burns, and even more unfornuately an ancient spirit in the crypt took advantage and entered Malron’s body. A struggle for control ensued, but Malron’s will was strong enough to endure and retain control.
 

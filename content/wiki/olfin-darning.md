@@ -11,6 +11,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Olfin Darning, Hexblood paladin, with the Symbol of Ravenkind and his silver-flame longsword](/images/olfin-ai-portrait.jpg)
+
+*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+
 A Hexblood Paladin, Olfin walks the line between light and shadow. Bound by an oath, Olfin channels divine power to vanquish evil, but their Hexblood heritage hints at a past intertwined with dark bargains or fey influences. Resilient and steadfast, they are both a protector and an enigma to their companions.
 
 [Character Sheet](https://www.dndbeyond.com/characters/110872710)
