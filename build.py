@@ -252,8 +252,9 @@ def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
 def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -> str:
     """JSON the Discord bot answers from: every post (oldest first) and wiki page, as written.
 
-    Oldest first, so a new post only adds to the end and the bot's prompt cache keeps the rest.
-    Leaves out players' real names, which belong only on each PC's own wiki page.
+    Oldest first, so posts read in story order and a new post only adds to the end.
+    Leaves out the `player` field. A PC's own wiki page can still name its player in the text, as
+    it does on the public site.
     """
     return json.dumps({
         "site": root,
