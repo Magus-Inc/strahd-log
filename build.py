@@ -142,7 +142,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.glance = article.glance_items(post.html)
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(post.mentions, pages)
-        post.html, post.toc = article.add_heading_ids(article.wrap_glance(post.html))
+        post.html, post.toc = article.add_heading_ids(article.margin_notes(article.wrap_glance(post.html)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:

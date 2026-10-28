@@ -58,6 +58,22 @@ def wrap_glance(html: str) -> str:
                   r'<aside class="callout glance">\1</aside>', html, count=1, flags=re.I | re.S)
 
 
+NOTE = re.compile(r"<p>(?:<strong>)?Note:\s*(?:</strong>)?\s*(.*?)(?:</strong>)?</p>", re.S)
+
+
+def margin_notes(html: str) -> str:
+    """Turn each "Note:" paragraph into a table note, written in a second hand beside Malron's
+    journal: what was said at the table, curated by Chris, as against what happened in Barovia."""
+    def note(m: re.Match) -> str:
+        text = m.group(1).strip()
+        text = re.sub(r"^\[Meta details\]\s*", "", text)
+        if text.startswith("[") and text.endswith("]"):
+            text = text[1:-1].strip()
+        text = re.sub(r"^Meta details:\s*", "", text)
+        return f'<aside class="margin-note" aria-label="From the table"><p>{text}</p></aside>'
+    return NOTE.sub(note, html)
+
+
 def teaser(html: str, limit: int = 150) -> str:
     """One or two plain-text lines for a session card: the first glance bullet, else the first paragraph."""
     items = glance_items(html)
