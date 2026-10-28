@@ -26,7 +26,7 @@
 {% for p in places %}
       <a class="pin{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
         <title>{{ p.title }}{% if p.sessions %}: {{ p.sessions | length }} session{{ "s" if p.sessions | length != 1 }}{% endif %}</title>
-        <circle cx="{{ p.x }}" cy="{{ p.y }}" r="4.5" class="pin-dot"/>
+        <circle cx="{{ p.x }}" cy="{{ p.y }}" r="4.5" class="pin-dot" style="transform-origin: {{ p.x }}px {{ p.y }}px"/>
       </a>
 {% endfor %}
     </g>
@@ -34,14 +34,14 @@
        its wiki page; the pins already give screen readers and the keyboard the same links. #}
     <g class="labels" aria-hidden="true">
 {% for p in places %}
-      <a href="{{ base }}{{ p.path }}" tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}">{{ p.title }}</text></a>
+      <a href="{{ base }}{{ p.path }}" tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}" style="transform-origin: {{ p.label_xy[0] }}px {{ p.label_xy[1] }}px">{{ p.title }}</text></a>
 {% endfor %}
     </g>
 {% if legs %}
     <g class="markers">
 {% for leg in legs %}
 {% if not current or leg.post.slug == current %}
-      <a class="marker{% if current %} current{% endif %}" href="{{ base }}{{ leg.post.path }}" data-i="{{ leg.n }}">
+      <a class="marker{% if current %} current{% endif %}" href="{{ base }}{{ leg.post.path }}" data-i="{{ leg.n }}" style="transform-origin: {{ leg.marker[0] }}px {{ leg.marker[1] }}px">
         <title>Session {{ leg.n }}, {{ leg.post.date | nice_date }}: {{ leg.post.title }}</title>
         <circle cx="{{ leg.marker[0] }}" cy="{{ leg.marker[1] }}" r="5.2"/>
         <text x="{{ leg.marker[0] }}" y="{{ leg.marker[1] + 2.3 }}" text-anchor="middle">{{ leg.n }}</text>
