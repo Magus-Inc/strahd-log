@@ -47,6 +47,11 @@ section below it ("From the adventure log") is generated from the posts and is r
 wiki is rebuilt, so fix a wrong fact there by fixing the post or by noting the correction above the
 line. Add `aliases:` for other names a page goes by and posts will link to it automatically.
 
+Many pages also have a **Description**, the story of that person or place in Malron's words, built
+from the posts with a link to each one it draws on. When a new post adds to that story, extend the
+description; `.claude/skills/update-wiki/SKILL.md` has the rules (facts only from the posts, no
+dice or player names).
+
 ## Other changes
 
 The site's look lives in `templates/` and `static/style.css`; the build is `build.py`. Keep the
