@@ -29,7 +29,7 @@ Note: [Meta details] The "Spoon Comedy" was a moment of levity at the table. The
 
 The right spoon lay at the far end of a corridor packed with forty motionless zombies. Olfin made a desperate dash for it. Disguised as one of the plague-spreading dead, he wrapped himself in Lathander’s sanctuary and a ward against evil and charged into the horde. It worked beautifully: as Olfin snatched the “lonely” spoon, I took hold of him with an invisible conjured hand and the power of my mind and yanked him back through the doorway, and we slammed the steel-banded door just as the zombies began to stir.
 
-Note: [Meta details] The DM was genuinely shocked that this worked, given the massive risk. That led to a table-wide talk about OSR (Old School Essentials) rules for future games to cut down on "crunch", and the DM's new "Heroic Moment" homebrew. To underline the night's themes of betrayal and high stakes, the DM shared a real-world story about his boss discovering a million-dollar theft by a suicidal friend.
+Note: [Meta details] The DM was genuinely shocked that this worked, given the massive risk. That led to a table-wide talk about OSR (Old School Essentials) rules for future games to cut down on "crunch", and the DM's new "Heroic Moment" homebrew.
 
 Note: Olfin's spells were Sanctuary and Protection from Evil and Good; Malron's pull was Mage Hand plus Telekinetic.
 
