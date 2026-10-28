@@ -325,3 +325,14 @@ def test_players_real_names_stay_on_their_pc_pages():
         text = post.read_text(encoding="utf-8")
         found = sorted(n for n in names if re.search(rf"(?<!\w){re.escape(n)}(?!\w)", text))
         assert not found, f"{post.name} names players: {found}"
+
+
+def test_narrator_appears_in_every_session():
+    """Malron writes the journal, so he was at every session even when a post never names him."""
+    posts = build.load_posts(build.ROOT / "content" / "posts")
+    pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
+    build.link_wiki(posts, pages)
+    malron = next(p for p in pages if p.slug == "malron-lichtstrahl")
+    assert malron.narrator
+    assert len(malron.mentioned_in) == len(posts)
+    assert all("malron-lichtstrahl" in p.mentions for p in posts)

@@ -1,6 +1,6 @@
 """The campaign wiki: characters, NPCs, places, items and factions, one Markdown file each.
 
-content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, source,
+content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, narrator, source,
 obsidian_portal_url) and a Markdown body. The build links the first mention of any page's title or
 alias in each post and wiki page, and lists on every wiki page the posts that mention it.
 """
@@ -46,6 +46,7 @@ class WikiPage:
     summary: str = ""
     player: str = ""
     former: bool = False  # a player character no longer played
+    narrator: bool = False  # writes the log, so is at every session even when no post names him
     source: str = ""
     obsidian_portal_url: str = ""
     body_md: str = ""
@@ -79,6 +80,7 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         summary=str(meta.get("summary") or ""),
         player=str(meta.get("player") or ""),
         former=bool(meta.get("former")),
+        narrator=bool(meta.get("narrator")),
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         body_md=body,
