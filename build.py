@@ -249,6 +249,22 @@ def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
     return json.dumps(entries, ensure_ascii=False, separators=(",", ":"))
 
 
+def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -> str:
+    """JSON the Discord bot answers from: every post (oldest first) and wiki page, as written.
+
+    Oldest first, so a new post only adds to the end and the bot's prompt cache keeps the rest.
+    Leaves out players' real names, which belong only on each PC's own wiki page.
+    """
+    return json.dumps({
+        "site": root,
+        "posts": [{"title": p.title, "date": p.date.date().isoformat(), "url": root + p.path,
+                   "glance": [wiki.plain_text(g) for g in p.glance], "wiki": sorted(p.mentions),
+                   "text": p.body_md.strip()} for p in reversed(posts)],
+        "wiki": [{"slug": w.slug, "title": w.title, "type": w.type, "aliases": w.aliases, "summary": w.summary,
+                  "url": root + w.path, "text": w.body_md.strip()} for w in pages],
+    }, ensure_ascii=False, separators=(",", ":"))
+
+
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
           site_url: str | None = None, base_path: str | None = None,
           wiki_dir: Path | None = None, map_file: Path | None = None) -> list[Post]:
@@ -324,6 +340,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         write(out_dir / "map" / "index.html",
               env.get_template("map.html").render(places=list(places.values()), legs=legs, map_data=map_data))
     write(out_dir / "search-index.json", build_search_index(posts, pages))
+    write(out_dir / "bot" / "corpus.json", build_bot_corpus(posts, pages, site_url + base))
     write(out_dir / "404.html", env.get_template("404.html").render())
     write(out_dir / "feed.xml", build_feed(posts, site_url + base))
     write_redirects(out_dir, load_redirects(map_dir / "redirects.yaml"), posts, base,
