@@ -294,3 +294,24 @@ h1 .chip.former { font-size: 0.8rem; }
     border: 0; font-size: 1.2rem; transform: rotate(-2deg); }
 }
 @media print { .prose .margin-note { color: #345; } }
+
+/* The session's slide deck: a strip that swipes one slide at a time, and fills the screen on tap. */
+.deck { margin: 1.75rem 0; }
+.deck-strip { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.75rem; overflow-x: auto;
+  scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.deck-strip li { flex: 0 0 100%; scroll-snap-align: center; margin: 0; }
+.deck-strip img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block; background: #000;
+  border-radius: 8px; border: 1px solid var(--line); cursor: zoom-in; }
+.deck-meta { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 0; text-align: center; }
+.deck-close { display: none; }
+.deck.open { position: fixed; inset: 0; z-index: 100; margin: 0; background: #000;
+  display: flex; flex-direction: column; justify-content: center; }
+.deck.open h2 { display: none; }
+.deck.open .deck-strip { gap: 0; }
+.deck.open .deck-strip img { height: auto; max-height: calc(100vh - 4rem); border: 0; border-radius: 0; cursor: zoom-out; }
+.deck.open .deck-hint { display: none; }
+.deck.open .deck-close { display: block; position: absolute; top: 0.75rem; right: 0.75rem; font-size: 1.6rem;
+  line-height: 1; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--surface); color: var(--text); cursor: pointer; }
+body.deck-lock { overflow: hidden; }
+@media print { .deck-strip { display: block; } .deck-strip li { margin-bottom: 1rem; break-inside: avoid; } }
