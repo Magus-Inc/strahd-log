@@ -297,12 +297,22 @@ h1 .chip.former { font-size: 0.8rem; }
 
 /* The session's slide deck: a strip that swipes one slide at a time, and fills the screen on tap. */
 .deck { margin: 1.75rem 0; }
-.deck-strip { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.75rem; overflow-x: auto;
-  scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; }
-.deck-strip li { flex: 0 0 100%; scroll-snap-align: center; margin: 0; }
+.deck-strip { list-style: none; margin: 0; padding: 0; display: flex; overflow-x: auto; scrollbar-width: none;
+  scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+.deck-strip::-webkit-scrollbar { display: none; }
+/* Undo the article's list and image spacing, so each slide is exactly one strip wide. */
+.prose .deck-strip { padding: 0; }
+.prose .deck-strip li { max-width: none; margin: 0; }
+.prose .deck-strip img { margin: 0; }
+.deck-strip li { flex: 0 0 100%; scroll-snap-align: start; margin: 0; }
 .deck-strip img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block; background: #000;
   border-radius: 8px; border: 1px solid var(--line); cursor: zoom-in; }
 .deck-meta { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 0; text-align: center; }
+.deck-dots { display: flex; justify-content: center; gap: 0.15rem; margin-top: 0.4rem; }
+.deck-dots button { width: 1.5rem; height: 1.5rem; padding: 0; border: 0; background: none; cursor: pointer; }
+.deck-dots button::before { content: ""; display: block; width: 0.5rem; height: 0.5rem; margin: auto; border-radius: 50%;
+  background: var(--line); transition: background 0.15s, transform 0.15s; }
+.deck-dots button[aria-current]::before { background: var(--accent-hi); transform: scale(1.3); }
 .deck-frame { position: relative; }
 .deck-arrow { display: none; position: absolute; top: 50%; transform: translateY(-50%); width: 2.75rem; height: 2.75rem;
   border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(18, 16, 20, 0.75); color: #fff;
@@ -319,9 +329,9 @@ h1 .chip.former { font-size: 0.8rem; }
 .deck.open { position: fixed; inset: 0; z-index: 100; margin: 0; background: #000;
   display: flex; flex-direction: column; justify-content: center; }
 .deck.open h2 { display: none; }
-.deck.open .deck-strip { gap: 0; }
 .deck.open .deck-strip img { height: auto; max-height: calc(100vh - 4rem); border: 0; border-radius: 0; cursor: zoom-out; }
-.deck.open .deck-hint { display: none; }
+.deck.open .deck-dots button::before { background: #555; }
+.deck.open .deck-dots button[aria-current]::before { background: var(--accent-hi); }
 .deck.open .deck-close { display: block; position: absolute; top: 0.75rem; right: 0.75rem; font-size: 1.6rem;
   line-height: 1; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 1px solid var(--line);
   background: var(--surface); color: var(--text); cursor: pointer; }

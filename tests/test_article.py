@@ -58,7 +58,7 @@ def test_deck_goes_after_the_glance_callout():
     html = article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp", "slides/x/02.webp"])
     assert html.index('class="callout glance"') < html.index('class="deck"') < html.index("<h2>Characters")
     assert 'src="/slides/x/02.webp" alt="Slide 2 of 2"' in html
-    assert "1 / 2" in html and "Download PDF" not in html
+    assert "Download PDF" not in html
 
 
 def test_deck_without_glance_goes_before_first_section_and_links_pdf():

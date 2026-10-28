@@ -77,17 +77,15 @@ def margin_notes(html: str) -> str:
 def add_deck(html: str, slides: list[str], pdf: str = "") -> str:
     """Put the session's slide deck (root-relative image paths, in order) right after the "At a
     Glance" callout, or before the first section heading when there is none: a strip that swipes on a phone, with a link
-    to the PDF when there is one."""
+    to the PDF when there is one. The page script adds the arrows and the dots under the slides."""
     if not slides:
         return html
     n = len(slides)
     items = "".join(f'<li><img src="/{escape(src)}" alt="Slide {i} of {n}" loading="lazy" decoding="async"></li>'
                     for i, src in enumerate(slides, 1))
-    link = f' &middot; <a href="/{escape(pdf)}" download>Download PDF</a>' if pdf else ""
+    link = f'<p class="deck-meta"><a href="/{escape(pdf)}" download>Download PDF</a></p>\n' if pdf else ""
     deck = ('<section class="deck" aria-label="Session slides">\n<h2>The Slides</h2>\n'
-            f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n'
-            f'<p class="deck-meta"><span class="deck-count">1 / {n}</span>'
-            f'<span class="deck-hint"> &middot; swipe, or tap a slide to enlarge</span>{link}</p>\n</section>\n')
+            f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n{link}</section>\n')
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
     if m:
         at = m.end()
