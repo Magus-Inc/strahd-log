@@ -360,3 +360,17 @@ def test_notable_npcs_link_every_name_even_after_an_earlier_mention():
     # Other sections keep first-mention-only linking.
     assert html.count('href="/wiki/argynvost/"') == 2
     assert {"kasimir", "argynvost", "sasha", "fiona"} <= mentioned
+
+
+def test_notable_npcs_written_as_a_bold_line_link_too():
+    # Five older posts start the section with a bold "Notable NPCs:" line instead of a heading.
+    linker = wiki.Linker([page("urwin", "Urwin"), page("lucien", "Father Lucien")])
+    html = build.render_markdown(
+        "Urwin pours. Father Lucien prays.\n\n**Notable NPCs:**  \n- **Father Lucien:** Preparing the blessing.  \n"
+        "- **Urwin:** Innkeeper.\n\n**Plot Points:**  \n- **Urwin:** Pours again.\n")
+    html, _ = linker.link(html)
+    html = wiki.link_npc_names(html, linker)
+    section = html[html.index("Notable NPCs"):html.index("Plot Points")]
+    assert 'href="/wiki/lucien/"' in section and 'href="/wiki/urwin/"' in section
+    # The section ends at the next bold "Something:" line.
+    assert "<strong>Urwin:</strong> Pours again." in html

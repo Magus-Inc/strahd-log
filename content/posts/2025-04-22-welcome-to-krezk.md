@@ -54,7 +54,7 @@ Three vampire spawn on the road to Krezk, all destroyed.
 
 **Anna Krezkov**: Dimitri’s wife, who gathers wolfsbane to hold back the curse.
 
-**Abbot**: The mysterious figure who has taken over the abbey and is building a flesh golem that needs the heart of a willing victim.
+**The Abbot**: The mysterious figure who has taken over the abbey and is building a flesh golem that needs the heart of a willing victim.
 
 ## Plot Points:
 

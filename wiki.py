@@ -175,7 +175,10 @@ class Linker:
         return f'<a class="wiki-link" href="/wiki/{page.slug}/" title="{title}">{match.group(0)}</a>'
 
 
-NPC_SECTION = re.compile(r"(<h([23])[^>]*>[^<]*Notable NPCs[^<]*</h\2>)(.*?)(?=<h[23][ >]|$)", re.S | re.I)
+# The section starts at a "Notable NPCs" heading, or in older posts at a bold "Notable NPCs:" line, and
+# runs to the next heading or bold "Something:" line that starts a paragraph.
+NPC_SECTION = re.compile(r"(<h([23])[^>]*>[^<]*Notable NPCs[^<]*</h\2>|<p><strong>Notable NPCs:?</strong>)"
+                         r"(.*?)(?=<h[23][ >]|<p><strong>[^<]*:</strong>|$)", re.S | re.I)
 
 
 def link_npc_names(html: str, linker: Linker) -> str:
