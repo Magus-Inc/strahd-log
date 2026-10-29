@@ -39,3 +39,4 @@ Her mentor was Lysa, a woods-witch who worshipped Mother Night, now known to us 
 * Has a pet imp familiar; the gallows speaker killed her parents. ([The Hunt for the Heart Stone](/posts/the-hunt-for-the-heart-stone/))
 * Translated the hags' Abyssal contract and started the binding circle. ([The Windmill Heist](/posts/the-windmill-heist/))
 * A three-pointed star crest was intended for her. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* Was seen in tears on the doorstep of her manor when Argynvost's beacon flared. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

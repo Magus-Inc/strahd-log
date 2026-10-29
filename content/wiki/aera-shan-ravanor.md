@@ -49,3 +49,6 @@ Barovia has marked her. Strahd's blood game turned her fully into a werewolf. Zo
 * Took the bat-style bone wings and shot the Abbot through the heart with a second natural 20. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * Walked through St. Markovia's false door hoping to reach her lost husband and children; it was a trap. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
 * Received the Reliquary of Two Flames holding the echoes of Liren and Gumbo. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* Was frozen rigid by the wire-bound revenant's glare in the foyer of Argynvostholt. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Climbed the mausoleum wall and set Argynvost's skull on its mount in one clean climb. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Argynvost warned her to beware how fiercely she gazes into the amber shard she carries. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

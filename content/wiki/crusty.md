@@ -50,3 +50,4 @@ Strapped across Crusty’s back is a quiver of arrows with dark gray fletching, 
 * Counterspelled the Abbot's healing touch. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * Polymorphed Shabasta into a giant ape and took no damage in the fight. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))
 * Revealed he is a Divination wizard. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* Took the wire-bound revenant's head off with a bolt of fire in the foyer of Argynvostholt. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
