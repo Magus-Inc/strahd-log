@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import html as htmllib
 import re
+from dataclasses import dataclass
 
 import wiki
 
@@ -74,27 +75,75 @@ def margin_notes(html: str) -> str:
     return NOTE.sub(note, html)
 
 
+@dataclass
+class Deck:
+    """One slide deck for a session: its label (empty when it is the only one), a short key for votes,
+    root-relative image paths in order, and the PDF if there is one."""
+    label: str
+    key: str
+    slides: list[str]
+    pdf: str = ""
+
+
 def add_deck(html: str, slides: list[str], pdf: str = "") -> str:
     """Put the session's slide deck (root-relative image paths, in order) right after the "At a
     Glance" callout, or before the first section heading when there is none: a strip that swipes on a phone, with a link
     to the PDF when there is one."""
-    if not slides:
-        return html
-    n = len(slides)
-    items = "".join(f'<li><img src="/{escape(src)}" alt="Slide {i} of {n}" loading="lazy" decoding="async"></li>'
-                    for i, src in enumerate(slides, 1))
+    return add_decks(html, [Deck("", "main", slides, pdf)] if slides else [])
+
+
+def deck_body(deck: Deck, labelled: bool) -> str:
+    n = len(deck.slides)
+    name = f"{deck.label} slide" if labelled else "Slide"
+    items = "".join(f'<li><img src="/{escape(src)}" alt="{escape(name)} {i} of {n}" loading="lazy" decoding="async"></li>'
+                    for i, src in enumerate(deck.slides, 1))
     # No slide count or hint under the strip (Chris: not needed); only the PDF link, when there is one.
-    meta = f'<p class="deck-meta"><a href="/{escape(pdf)}" download>Download PDF</a></p>\n' if pdf else ""
-    deck = ('<section class="deck" aria-label="Session slides">\n<h2>The Slides</h2>\n'
-            f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n'
-            f'{meta}</section>\n')
+    meta = f'<p class="deck-meta"><a href="/{escape(deck.pdf)}" download>Download PDF</a></p>\n' if deck.pdf else ""
+    return f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n{meta}'
+
+
+def add_decks(html: str, decks: list[Deck]) -> str:
+    """Put the session's slides after the glance callout (see add_deck). With more than one deck they
+    follow one another, each with its label and a button to vote for it as the favorite."""
+    decks = [d for d in decks if d.slides]
+    if not decks:
+        return html
+    if len(decks) == 1:
+        block = ('<section class="deck" aria-label="Session slides">\n<h2>The Slides</h2>\n'
+                 f'{deck_body(decks[0], False)}</section>\n')
+    else:
+        parts = "".join(
+            f'<div class="deck" aria-label="{escape(d.label)} slides">\n<p class="deck-label">{escape(d.label)}</p>\n'
+            f'{deck_body(d, True)}<p class="deck-vote"><button type="button" data-vote="{escape(d.key)}" '
+            f'data-label="{escape(d.label)}">Vote for {escape(d.label)}</button></p>\n</div>\n' for d in decks)
+        block = ('<section class="decks vote-group" aria-label="Session slides">\n<h2>The Slides</h2>\n'
+                 f'<p class="deck-intro">This session has {len(decks)} slide decks. Look through them and vote for your '
+                 f'favorite.</p>\n{parts}<p class="vote-status" role="status" hidden></p>\n</section>\n')
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
     if m:
         at = m.end()
     else:
         h2 = re.search(r"<h2[ >]", html)
         at = h2.start() if h2 else 0
-    return html[:at] + deck + html[at:]
+    return html[:at] + block + html[at:]
+
+
+AI_PICTURE = r'<p><img [^>]*src="[^"]*-ai(?:-\d+)?\.(?:jpe?g|png|webp)"[^>]*></p>'
+AI_PICTURES = re.compile(rf"(?:{AI_PICTURE}\s*){{2,}}")
+
+
+def add_image_votes(html: str) -> str:
+    """Two or more AI pictures in a row (name-ai.jpg, name-ai-2.jpg, ...) are takes on the same subject:
+    give each a button so readers can vote for their favorite."""
+    def group(match: re.Match) -> str:
+        pictures = re.findall(AI_PICTURE, match.group(0))
+        figures = "".join(
+            f'<figure>{re.sub(r"^<p>|</p>$", "", pic)}<figcaption><button type="button" data-vote="image-{i}" '
+            f'data-label="picture {i}">Vote for this one</button></figcaption></figure>\n'
+            for i, pic in enumerate(pictures, 1))
+        return ('<div class="vote-group image-vote">\n<p class="vote-intro">Which picture fits best? Vote for your '
+                f'favorite.</p>\n{figures}<p class="vote-status" role="status" hidden></p>\n</div>\n')
+    return AI_PICTURES.sub(group, html)
 
 
 def teaser(html: str, limit: int = 150) -> str:

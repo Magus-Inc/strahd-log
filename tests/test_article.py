@@ -69,6 +69,44 @@ def test_deck_without_glance_goes_before_first_section_and_links_pdf():
     assert article.add_deck(plain, []) == plain
 
 
+def test_two_decks_sit_one_after_the_other_with_a_vote_each():
+    decks = [article.Deck("NotebookLM", "notebooklm", ["slides/x/01.webp", "slides/x/02.webp"]),
+             article.Deck("Gemini", "gemini", ["slides/x/gemini/01.webp"], "slides/x/gemini/deck.pdf")]
+    html = article.add_decks(article.wrap_glance(POST), decks)
+    assert html.count("<h2>The Slides</h2>") == 1
+    assert html.count('class="deck"') == 2
+    label = '<p class="deck-label">{}</p>'
+    assert html.index(label.format("NotebookLM")) < html.index(label.format("Gemini")) < html.index("<h2>Characters")
+    assert html.index('data-vote="notebooklm"') < html.index('data-vote="gemini"')
+    assert 'src="/slides/x/gemini/01.webp" alt="Gemini slide 1 of 1"' in html
+    assert '<a href="/slides/x/gemini/deck.pdf" download>Download PDF</a>' in html
+    assert "vote for your favorite" in html.lower()
+    assert 'class="decks vote-group"' in html
+
+
+def test_one_deck_has_no_vote():
+    html = article.add_decks(article.wrap_glance(POST), [article.Deck("", "main", ["slides/x/01.webp"])])
+    assert html == article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp"])
+    assert "data-vote" not in html and "deck-label" not in html
+
+
+def test_two_ai_pictures_in_a_row_each_get_a_vote():
+    html = build.render_markdown("Intro.\n\n![Ismark in a tavern](/images/ismark-ai.jpg)\n\n"
+                                 "![Ismark in a tavern](/images/ismark-ai-2.jpg)\n\n*AI-generated images.*\n")
+    voted = article.add_image_votes(html)
+    assert voted.count('class="vote-group image-vote"') == 1
+    assert voted.index('src="/images/ismark-ai.jpg"') < voted.index('data-vote="image-1"') \
+        < voted.index('src="/images/ismark-ai-2.jpg"') < voted.index('data-vote="image-2"')
+    assert "vote for your favorite" in voted.lower()
+
+
+def test_a_lone_or_non_ai_picture_gets_no_vote():
+    lone = build.render_markdown("![Izek](/images/izek-ai.jpg)\n\nText.\n\n![Map](/images/map.jpg)\n")
+    art = build.render_markdown("![Ireena](/images/ireena-by-ryan.webp)\n\n![Ireena](/images/ireena-2.webp)\n")
+    assert article.add_image_votes(lone) == lone
+    assert article.add_image_votes(art) == art
+
+
 def test_deck_has_no_count_or_hint_text():
     html = article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp", "slides/x/02.webp"])
     assert "deck-count" not in html and "deck-hint" not in html and "1 / 2" not in html

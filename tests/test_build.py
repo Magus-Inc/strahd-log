@@ -276,6 +276,55 @@ def test_find_slides_matches_the_post_file_name(content, tmp_path):
     assert all(not p.slides for p in posts if p is not third)
 
 
+def test_a_second_deck_lives_in_a_subfolder_with_its_own_label(content, tmp_path):
+    posts = build.load_posts(content)
+    folder = tmp_path / "static" / "slides" / "2026-09-01-third"
+    (folder / "gemini").mkdir(parents=True)
+    for name in ("01.webp", "02.webp", "gemini/01.webp", "gemini/deck.pdf"):
+        (folder / name).write_bytes(b"")
+    (folder / "label.txt").write_text("NotebookLM\n", encoding="utf-8")
+    (folder / "gemini" / "label.txt").write_text("Gemini\n", encoding="utf-8")
+    build.find_slides(posts, tmp_path / "static")
+    third = next(p for p in posts if p.slug == "third")
+    assert [(d.label, d.key) for d in third.decks] == [("NotebookLM", "notebooklm"), ("Gemini", "gemini")]
+    assert third.decks[1].slides == ["slides/2026-09-01-third/gemini/01.webp"]
+    assert third.decks[1].pdf == "slides/2026-09-01-third/gemini/deck.pdf"
+
+
+def test_vote_buttons_count_through_goatcounter_without_cookies(content, tmp_path, monkeypatch):
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    static = tmp_path / "static"
+    folder = static / "slides" / "2026-09-01-third"
+    (folder / "gemini").mkdir(parents=True)
+    for name in ("01.webp", "gemini/01.webp"):
+        (folder / name).write_bytes(b"")
+    (folder / "gemini" / "label.txt").write_text("Gemini", encoding="utf-8")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example", slides_static=static)
+    html = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    assert html.count('data-vote="') == 2
+    assert "goatcounter.com/count" in html and "e=true" in html and '"/vote" + path' in html
+    assert "document.cookie" not in html
+    single = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    assert 'data-vote="' not in single
+
+
+def test_wiki_page_with_two_ai_pictures_gets_a_vote(content, tmp_path, monkeypatch):
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    wiki_dir = tmp_path / "wiki"
+    wiki_dir.mkdir()
+    (wiki_dir / "ismark.md").write_text(
+        "---\ntitle: Ismark\ntype: npc\n---\n\n![Ismark in a tavern](/images/ismark-ai.jpg)\n\n"
+        "![Ismark in a tavern](/images/ismark-ai-2.jpg)\n\n*AI-generated images.*\n", encoding="utf-8")
+    (wiki_dir / "izek.md").write_text(
+        "---\ntitle: Izek\ntype: npc\n---\n\n![Izek](/images/izek-ai.jpg)\n", encoding="utf-8")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example", wiki_dir=wiki_dir)
+    ismark = (out / "wiki" / "ismark" / "index.html").read_text(encoding="utf-8")
+    assert ismark.count('data-vote="') == 2 and "goatcounter.com/count" in ismark
+    assert 'data-vote="' not in (out / "wiki" / "izek" / "index.html").read_text(encoding="utf-8")
+
+
 def test_bot_corpus_lists_posts_oldest_first_without_player_names(content, tmp_path):
     wiki_dir = tmp_path / "wiki"
     wiki_dir.mkdir()

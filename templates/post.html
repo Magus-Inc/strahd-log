@@ -63,10 +63,8 @@
 {% block scripts %}
 {% if post.slides %}
   <script>
-  (function () {
+  document.querySelectorAll(".deck").forEach(function (deck) {
     // Slide deck: arrows for a mouse, dots to show where you are, tap a slide to fill the screen.
-    var deck = document.querySelector(".deck");
-    if (!deck) return;
     var frame = deck.querySelector(".deck-frame"), strip = deck.querySelector(".deck-strip");
     var slides = strip.querySelectorAll("li"), current = 0;
     var close = document.createElement("button");
@@ -166,7 +164,7 @@
       else if (e.key === "ArrowRight") go(current + 1, true);
       else if (e.key === "ArrowLeft") go(current - 1, true);
     });
-  })();
+  });
   </script>
 {% endif %}
 {% if post.toc | length >= 3 %}

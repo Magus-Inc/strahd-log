@@ -64,6 +64,7 @@ class Post:
     cast: list = field(default_factory=list)
     slides: list[str] = field(default_factory=list)  # static/slides/<file stem>/*.webp, in page order
     slides_pdf: str = ""
+    decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
 
     @property
     def path(self) -> str:
@@ -137,20 +138,32 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(render_markdown(page.body_md), self_slug=page.slug)
+        page.html, _ = linker.link(article.add_image_votes(render_markdown(page.body_md)), self_slug=page.slug)
 
 
 def find_slides(posts: list[Post], static_dir: Path) -> None:
     """A post's slide deck is static/slides/<post file name>/ (e.g. 2026-09-29-the-beacon-of-argynvostholt/):
-    one image per slide (01.webp, 02.webp, ...) and, optionally, the deck as a PDF."""
+    one image per slide (01.webp, 02.webp, ...) and, optionally, the deck as a PDF. Another deck for the
+    same session goes in a subfolder (e.g. gemini/) laid out the same way; readers vote between them.
+    A label.txt in a deck's folder names it (e.g. "NotebookLM")."""
     for post in posts:
         name = post.source.stem if post.source else post.slug
         folder = static_dir / "slides" / name
         if not folder.is_dir():
             continue
-        post.slides = [f"slides/{name}/{f.name}" for f in sorted(folder.glob("*.webp"))]
-        pdfs = sorted(folder.glob("*.pdf"))
-        post.slides_pdf = f"slides/{name}/{pdfs[0].name}" if pdfs else ""
+        post.decks = [deck for deck in (read_deck(d, static_dir) for d in [folder, *sorted(folder.iterdir())]
+                                        if d.is_dir()) if deck.slides]
+        if post.decks:
+            post.slides, post.slides_pdf = post.decks[0].slides, post.decks[0].pdf
+
+
+def read_deck(folder: Path, static_dir: Path) -> article.Deck:
+    rel = folder.relative_to(static_dir).as_posix()
+    label_file = folder / "label.txt"
+    label = label_file.read_text(encoding="utf-8").strip() if label_file.exists() else ""
+    pdfs = sorted(folder.glob("*.pdf"))
+    return article.Deck(label, tag_slug(label) or folder.name, [f"{rel}/{f.name}" for f in sorted(folder.glob("*.webp"))],
+                        f"{rel}/{pdfs[0].name}" if pdfs else "")
 
 
 def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
@@ -161,7 +174,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(post.mentions, pages)
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_deck(article.wrap_glance(post.html), post.slides, post.slides_pdf)))
+            article.add_decks(article.wrap_glance(post.html), post.decks)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:
@@ -269,13 +282,14 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
 
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
           site_url: str | None = None, base_path: str | None = None,
-          wiki_dir: Path | None = None, map_file: Path | None = None) -> list[Post]:
+          wiki_dir: Path | None = None, map_file: Path | None = None,
+          slides_static: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
     link_wiki(posts, pages)
-    find_slides(posts, ROOT / "static")
+    find_slides(posts, slides_static or ROOT / "static")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
