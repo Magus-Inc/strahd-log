@@ -24,8 +24,6 @@ We continued on our journey and after a while we heard a bird flying towards us,
 
 Next thing we knew there was a giant artificial bird creature flying towards us. It was a Strix followed by three swarms. As we fought them off Schlopkht found himself separated from the party and encountered a Dire Wolf, which only watched from a distance. Perhaps Strahd is testing us.
 
-![](https://cdn.discordapp.com/attachments/946888425800368353/1224913410429423647/why-dont-the-martikovs-just-fly-away-from-he-winery-what-v0-n86ldppxrhib1.jpg.webp?ex=66cb4442&is=66c9f2c2&hm=ab5766c8607c8847b6d30c0035564eae023fd7434d444db1a61cf1a60ce49de9&)
-
 After the battle Olfin attempted to place a lock of hair on the bird but it escaped him. Weeble put it to sleep again, and Olfin tied his lock of hair around the birds leg. It must be some kind of Hexblood sign of life debt. I must be sure to avoid finding myself in such a predicament with Olfin. I’m not sure a Hexblood is much better than a vampire, paladin or not.
 
 We continued along the wagon path until we found a clearing by a lake. There were five tents there with wagons and horses, along with a large tent. Perhaps this is the Vistani encampment with [Madam Eva](/wiki/madam-eva/)

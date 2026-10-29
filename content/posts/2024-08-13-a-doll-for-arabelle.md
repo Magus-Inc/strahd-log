@@ -28,7 +28,7 @@ Alexi offered us five hundred gold pieces if we bring Arabelle back alive.
 
 Kasimir told us the dusk elves have kept a silent vigil here for five centuries. The traitor Rahadin betrayed them, and the Vistani have sheltered them from Strahd’s wrath ever since. One elf bore the scars of frostbite, the mark of some perilous journey. What secrets does that blistered skin hide?
 
-![](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/Kasimir%20Velikov%201.png)
+![Portrait of Kasimir Velikov](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/Kasimir%20Velikov%201.png)
 
 Kasimir told us his story:
 

@@ -31,7 +31,9 @@ We ended up at the “Blood of the Vine Tavern”, which seemed to have been rec
 
 The tavern had villagers, a fire in the hearth, a barkeep behind the counter, three Vistani, and a gray haired man alone in a corner. We came to learn the gray haired man is Ismark, the grandson of the man who’s statue we saw outside. The town had recently been besieged by forces of Strahd the undead, a vampire. The village we are in is called Barovia, and it lies in the land of Barovia. Some of the villagers had fled west to Vallaki.
 
-![](https://cdn.discordapp.com/attachments/946888425800368353/1207185111519596564/Ismark.png?ex=66cb5eff&is=66ca0d7f&hm=7cad02def1739ae2ceb687b447e7a4e791b2d82b6dac2b78756e3a33b8870af3&)
+![Ismark, a tired young man in a cloak with a longsword, in a dim tavern](/images/ismark-kolyanovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 Ismark warned us of spies for Vlahd in the form of bats, wolves, humans, and even Vistani. He then asked us for help on a mission; to help his sister hide at a church in Vallaki. It would be a full days journey, and we are welcome to spend the night at his fathers place.
 

@@ -36,6 +36,4 @@ The barkeep passed a parcel from under the bar to Rictavio, who tucked it under 
 
 A procession silenced the whole town, led by the Baron and Izek. We think Izek pushed an old woman into the mud. Her son Udo has been imprisoned, and she too was taken to the stocks. The Festival of the Sun, we now hear, is in four days.
 
-![](https://cdn.discordapp.com/attachments/946888425800368353/1268043474498879488/Rictavio.png?ex=66cb49c3&is=66c9f843&hm=2da792c20ae4554cddbb3ce99308bca2ecba2204afe16fe7ad077c6f7c7fc449&)
-
 Note: LEVEL 4!!!

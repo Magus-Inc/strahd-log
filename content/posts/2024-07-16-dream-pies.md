@@ -18,7 +18,7 @@ We came upon a ruined watch tower, three stories tall and covered in moss and iv
 
 A revenant guarded the bridge and asked whether we served *him*. He named himself [Sir Godfried William](/wiki/sir-godfried-william/), a knight of the Order of the Silver Dragon, banished by his commander, Vladimir Horngaard.
 
-![](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/images/Bridge%20Revenant.png)
+![Portrait of a bridge revenant](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/images/Bridge%20Revenant.png)
 
 ### The Fork in the Road
 
