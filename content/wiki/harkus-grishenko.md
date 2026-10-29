@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 A revenant, a guard of the Order of the Silver Dragon, who found us as we woke. He came at the summons of a phantom warrior with word that Commander Vladimir Hornguard had called every knight of the Order back to Argynvostholt by noon the next day, and would likely command them to destroy us at any cost for breaking into Castle Ravenloft. He asked whether we had spoken with Sir Godfried William and learned of his mission, and when we had, he urged us to bring Argynvost's skull back to the cemetery before Hornguard's wrath fell. He apologized for the harm he might be made to do us if we met again ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
-When the skull was back on its mount and Hornguard had found his rest, the revenants of Argynvostholt dissolved into mist and the spirits of the Order's knights were freed ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)). We have not seen Harkus since.
+When the skull was back on its mount and Hornguard had found his rest, the revenants of Argynvostholt dissolved into mist and the spirits of the Order's knights were freed ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log

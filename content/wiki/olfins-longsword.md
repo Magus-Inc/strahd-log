@@ -32,4 +32,4 @@ Blessed in [The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/).
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Blessed by Argynvost: a magic blade with three charges of silver flame, regained at dawn. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Blessed by Argynvost: a +1 magic weapon with 3 charges, all regained at dawn. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
