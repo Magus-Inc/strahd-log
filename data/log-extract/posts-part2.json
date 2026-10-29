@@ -107,7 +107,7 @@
 {"text":"Sold a noise toy to Heinrich.","post":"2024-11-26-consequences-in-vallaki"}]},
 {"name":"Blinksys","type":"place","aliases":[],"summary":"Blinksy's store in Vallaki.","facts":[
 {"text":"Was set on fire by Izek.","post":"2024-11-26-consequences-in-vallaki"}]},
-{"name":"Valakovich","type":"npc","aliases":["Baron of Vallaki"],"summary":"The Baron of Vallaki, father of Viktor.","facts":[
+{"name":"Valakovich","type":"npc","aliases":["Baron of Vallaki","Vallakovich"],"summary":"The Baron of Vallaki, father of Viktor.","facts":[
 {"text":"Had his guards shoot at Shabasta and reasserted his title.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Was cursed by Nicolai in the past.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"May have executed the shoemaker Lukavich.","post":"2024-12-03-shadows-over-vallaki"},
@@ -257,7 +257,7 @@
 {"text":"Esmerelda's family had a hand in kidnapping his son.","post":"2025-05-06-echoes-of-the-black-terro"}]},
 {"name":"Mordakainen","type":"npc","aliases":[],"summary":"A wizard whose book Victor uses.","facts":[
 {"text":"His book can transport up to nine creatures on a full moon with a heart stone.","post":"2025-01-07-helping-victor"}]},
-{"name":"Forest Folk","type":"faction","aliases":["forest folk"],"summary":"Druids and hermits of the Svalich Woods who worship Strahd.","facts":[
+{"name":"Forest Folk","type":"faction","aliases":["forest folk","Druids"],"summary":"Druids and hermits of the Svalich Woods who worship Strahd.","facts":[
 {"text":"Treat Yester Hill as sacred and worship Strahd as a deity.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
 {"text":"Drove the Martikovs from the vineyard with their blights.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Worship Lorgoth and were preparing to summon Winter Splinter.","post":"2025-03-25-finishing-up-at-the-vineyard"},

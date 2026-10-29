@@ -260,6 +260,15 @@ def test_import_keeps_aliases_added_later_and_post_text_near_skipped_links(tmp_p
     assert "The party agreed on this:\n\nNotes are where Crusty kept the map." in post.read_text(encoding="utf-8")
 
 
+def test_notable_npcs_that_lacked_pages_now_have_them():
+    """Chris wants every name in a post's Notable NPCs to lead to a wiki page."""
+    pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
+    linker = wiki.Linker(pages)
+    for name, slug in [("Pidlwick", "pidlwick"), ("Masked Servant", "masked-servant"), ("Druids", "forest-folk"),
+                       ("Vallakovich", "baron-of-vallaki")]:
+        assert linker.by_name[wiki.fold(name)].slug == slug
+
+
 def test_corrections_merge_fix_move_and_retype(tmp_path):
     posts = tmp_path / "posts"
     write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")

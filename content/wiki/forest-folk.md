@@ -1,6 +1,8 @@
 ---
 title: Forest Folk
 type: faction
+aliases:
+- Druids
 summary: Druids and hermits of the Svalich Woods who worship Strahd.
 source: Compiled from the adventure log
 ---

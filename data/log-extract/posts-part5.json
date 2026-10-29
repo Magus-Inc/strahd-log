@@ -1,0 +1,34 @@
+[
+ {
+  "name": "Pidlwick",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A little man with a face painted like a jack-o'-lantern, hiding in Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Hid under a guest-room bed with a ticking, beating sound, and shrugged off Malron's attempt to frighten him.",
+    "post": "2025-09-26-varushkas-key"
+   },
+   {
+    "text": "Tried to throw Malron down a hundred-foot drop, then vanished.",
+    "post": "2025-09-26-varushkas-key"
+   }
+  ]
+ },
+ {
+  "name": "Masked Servant",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A maimed, terrified servant at the reception in Castle Ravenloft.",
+  "facts": [
+   {
+    "text": "Served the party a purple drink while the vampires drank red wine; his fingers were cut off at the first knuckle.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   },
+   {
+    "text": "Spilled red wine on Volenta's white dress and set off a stir.",
+    "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
+   }
+  ]
+ }
+]
