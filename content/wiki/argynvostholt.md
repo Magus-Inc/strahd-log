@@ -35,3 +35,6 @@ We came back with the skull at a run, fought a revenant bound in black wire in t
 * The party explored its graveyard and second floor and found hidden relics. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * On its fourth floor, a prophecy was revealed about Argynvost's skull. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Its "Shining Beacon" can be lit by returning Argynvost's skull. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
+* About three hours from Krezk by way of the Raven River crossroads. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Its revenants dissolved into mist once Argynvost's skull rested in the cemetery mausoleum. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Its tallest tower now holds the silver beacon of Argynvost's spirit. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

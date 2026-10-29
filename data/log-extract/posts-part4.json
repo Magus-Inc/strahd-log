@@ -1,0 +1,290 @@
+[
+  {
+    "name": "Harkus Grishenko",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A revenant guard of the Order of the Silver Dragon who warned the party of Hornguard's order.",
+    "facts": [
+      {
+        "text": "A revenant guard of the Order who found the party as they woke and warned that Commander Hornguard would order his knights to destroy them.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Urged the party to return Argynvost's skull to the cemetery before Hornguard's wrath fell, and apologized for the harm he might be made to do them.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Vladimir Hornguard",
+    "type": "npc",
+    "aliases": [],
+    "summary": "Commander of the Order of the Silver Dragon at Argynvostholt.",
+    "facts": [
+      {
+        "text": "Called every knight of the Order back to Argynvostholt by noon, enraged that the party broke into Castle Ravenloft.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Waited in the cemetery mausoleum, but Zora's distraction let Aera mount the skull before any fight.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Took Argynvost's hand after Shabasta's words and crumbled to ash when the dragon told him his watch had ended.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Argynvost",
+    "type": "npc",
+    "aliases": [],
+    "summary": "The silver dragon who led the Order of the Silver Dragon.",
+    "facts": [
+      {
+        "text": "Rose as a ghostly silver dragon when his skull was set on its mount in the mausoleum.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Freed his knights, blessed Olfin's longsword and asked the party to bear the Order's legacy.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Burned his spirit into a silver beacon in Argynvostholt's tallest tower, lasting perhaps about seven days.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Argynvostholt",
+    "type": "place",
+    "aliases": [],
+    "summary": "The ruined manor of the Order of the Silver Dragon.",
+    "facts": [
+      {
+        "text": "About three hours from Krezk by way of the Raven River crossroads.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Its revenants dissolved into mist once Argynvost's skull rested in the cemetery mausoleum.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Its tallest tower now holds the silver beacon of Argynvost's spirit.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Sir Godfried William",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A knight of the Order of the Silver Dragon.",
+    "facts": [
+      {
+        "text": "Freed from his revenant body and restored to the golden-haired knight he was, with blue eyes.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Told the party of Kasimir Velikov's visit and of the Amber Temple near the peak of Mount Ghakis.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Order of the Silver Dragon",
+    "type": "faction",
+    "aliases": [],
+    "summary": "The knightly order of Argynvost.",
+    "facts": [
+      {
+        "text": "Its knights were freed when Vladimir Hornguard accepted his rest.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "The party swore the Order's oath and now carry its legacy.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Zora",
+    "type": "creature",
+    "aliases": [],
+    "summary": "Aera's pseudodragon companion.",
+    "facts": [
+      {
+        "text": "Flew into the mausoleum and harried Vladimir Hornguard's face so Aera could mount the skull without a fight.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Aera shan Ravanór",
+    "type": "character",
+    "aliases": [
+      "Aera"
+    ],
+    "summary": "A party member and skilled archer.",
+    "facts": [
+      {
+        "text": "Was frozen rigid by the wire-bound revenant's glare in the foyer of Argynvostholt.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Climbed the mausoleum wall and set Argynvost's skull on its mount in one clean climb.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Argynvost warned her to beware how fiercely she gazes into the amber shard she carries.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Shabasta",
+    "type": "character",
+    "aliases": [],
+    "summary": "A party member.",
+    "facts": [
+      {
+        "text": "Opened a door through the air to carry himself and Aera into the cemetery mausoleum.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "His words persuaded Vladimir Hornguard to take Argynvost's hand and accept his rest.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Crusty",
+    "type": "character",
+    "aliases": [],
+    "summary": "A party member.",
+    "facts": [
+      {
+        "text": "Took the wire-bound revenant's head off with a bolt of fire in the foyer of Argynvostholt.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Olfin Darning",
+    "type": "character",
+    "aliases": [
+      "Olfin"
+    ],
+    "summary": "A party member.",
+    "facts": [
+      {
+        "text": "Held the wire-bound revenant in place in the foyer of Argynvostholt.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      },
+      {
+        "text": "Argynvost blessed his longsword with silver flame.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Malron Lichtstrahl",
+    "type": "character",
+    "aliases": [
+      "Malron"
+    ],
+    "summary": "A party member and cleric of Lathander.",
+    "facts": [
+      {
+        "text": "Gave last rites to a vampire's victim on the road from Krezk to Argynvostholt.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Olfin's Longsword",
+    "type": "item",
+    "aliases": [],
+    "summary": "Olfin's longsword.",
+    "facts": [
+      {
+        "text": "Blessed by Argynvost: a magic blade with three charges of silver flame, regained at dawn.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Kasimir",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A dusk elf.",
+    "facts": [
+      {
+        "text": "Kasimir Velikov, a dusk elf, came to Argynvostholt weeks earlier seeking the Amber Temple's history, location and contents, and may be able to guide the party there.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Amber Temple",
+    "type": "place",
+    "aliases": [],
+    "summary": "A temple where the Sunsword may be hidden.",
+    "facts": [
+      {
+        "text": "Lies near the peak of Mount Ghakis, at the end of a long-lost trail, according to Sir Godfried.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Sasha",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A figure at Castle Ravenloft.",
+    "facts": [
+      {
+        "text": "Was seen alone on the rooftops of Castle Ravenloft, her face lit with hope, when Argynvost's beacon flared.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Kaven the Blood Drinker",
+    "type": "npc",
+    "aliases": [
+      "Kavan"
+    ],
+    "summary": "A figure of the first folk.",
+    "facts": [
+      {
+        "text": "His spirit lifted its head at his lonely cairn when Argynvost's beacon flared.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Lady Fiona Wachter",
+    "type": "npc",
+    "aliases": [],
+    "summary": "A noble of Vallaki.",
+    "facts": [
+      {
+        "text": "Was seen in tears on the doorstep of her manor when Argynvost's beacon flared.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  },
+  {
+    "name": "Argynvost’s Skull",
+    "type": "item",
+    "aliases": [],
+    "summary": "The silver dragon's skull.",
+    "facts": [
+      {
+        "text": "Set on its mount in the Argynvostholt cemetery mausoleum by Aera, restoring Argynvost's spirit.",
+        "post": "2026-09-29-the-beacon-of-argynvostholt"
+      }
+    ]
+  }
+]

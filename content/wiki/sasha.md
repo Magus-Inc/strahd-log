@@ -19,3 +19,4 @@ A servant at Castle Ravenloft, a widow who longs to see Strahd fall and the morn
 * Told Zorpheus, "Sixth pedal from the left on the organ.". ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Begged the party to rescue Gertruda and revealed a rear servants' entrance. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Shared Strahd's oldest password: "I come in Dostron's memory.". ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
+* Was seen alone on the rooftops of Castle Ravenloft, her face lit with hope, when Argynvost's beacon flared. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

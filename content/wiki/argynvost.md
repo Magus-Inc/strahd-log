@@ -22,3 +22,6 @@ The silver dragon who founded the Order of the Silver Dragon. His last journal p
 * His journal records his vow to fight in his true dragon form and defend the valley. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * A prophecy says his light will return when his skull rests in its rightful tomb. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * His skull was used as decoration in the Hall of Bones. ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/))
+* Rose as a ghostly silver dragon when his skull was set on its mount in the mausoleum. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Freed his knights, blessed Olfin's longsword and asked the party to bear the Order's legacy. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Burned his spirit into a silver beacon in Argynvostholt's tallest tower, lasting perhaps about seven days. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

@@ -55,3 +55,4 @@ At times Malron hears the voice of the long dead Elf, and benefits from the know
 * Killed Anastrasia with Scorching Ray and revived Olfin with a scroll of Revivify. ([The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/))
 * Revived Olfin with his saved 3rd-level slot and helped redeem the Abbot by calling on St. Markovia. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))
 * Warned Aera that the false meadow was a trap and read Strahd's mocking letter aloud. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* Gave last rites to a vampire's victim on the road from Krezk to Argynvostholt. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

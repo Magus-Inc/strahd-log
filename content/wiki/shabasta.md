@@ -43,3 +43,5 @@ Shabasta died in the battle with the spirits at the gallows ([Entering the Spiri
 * Was polymorphed into a giant ape that soaked about 124 damage from the Fallen Star. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))
 * Was a druid's sheep for a time, died, and was reincarnated as Shabasta again. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
 * Is the brother of Doru, whose voice spoke from the Abbot's first vessel. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* Opened a door through the air to carry himself and Aera into the cemetery mausoleum. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* His words persuaded Vladimir Hornguard to take Argynvost's hand and accept his rest. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

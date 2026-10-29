@@ -22,3 +22,5 @@ Argynvost's knights, who stayed on as revenants at Argynvostholt under Vladimir 
 * Its commander Hornguard was slain by Rahadin. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * Its knightly vow was found inscribed on a table at Argynvostholt. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * Recovering Argynvost's skull is part of the party's quest to restore it. ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/))
+* Its knights were freed when Vladimir Hornguard accepted his rest. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* The party swore the Order's oath and now carry its legacy. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

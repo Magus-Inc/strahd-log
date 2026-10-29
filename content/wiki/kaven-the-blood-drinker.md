@@ -2,8 +2,8 @@
 title: Kaven the Blood Drinker
 type: npc
 aliases:
-- Kaven
 - Kavan
+- Kaven
 summary: A figure of the first folk who wields a long wooden spear.
 source: Compiled from the adventure log
 ---
@@ -15,3 +15,4 @@ source: Compiled from the adventure log
 
 * Was summoned by Mira and offered a deal for powerful items. ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/))
 * Told of the split between mountain and forest folk and the Spear of the Ladies. ([The Whispering Wall](/posts/the-whispering-wall/))
+* His spirit lifted its head at his lonely cairn when Argynvost's beacon flared. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

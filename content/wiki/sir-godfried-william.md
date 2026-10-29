@@ -23,3 +23,5 @@ Sir Godfried William is an honorable undead Revenant.
 
 * Claims to be a Knight of the Order of the Silver Dragon banished by Vladimir Horngaard. ([Dream Pies](/posts/dream-pies/))
 * Told the party the order's history and warned them of dangers. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Freed from his revenant body and restored to the golden-haired knight he was, with blue eyes. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Told the party of Kasimir Velikov's visit and of the Amber Temple near the peak of Mount Ghakis. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

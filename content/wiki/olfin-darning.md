@@ -43,3 +43,5 @@ A Hexblood Paladin, Olfin walks the line between light and shadow. Bound by an o
 * Took the eagle-style bone wings, whose command word is "America!", and started the fight with the Abbot. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * Died and, in a heroic moment, landed a 47-point smite that killed the Fallen Star; Malron revived him. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))
 * Has the Sentinel feat and led the way down past the red door. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* Held the wire-bound revenant in place in the foyer of Argynvostholt. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Argynvost blessed his longsword with silver flame. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

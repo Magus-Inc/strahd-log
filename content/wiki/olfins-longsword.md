@@ -26,3 +26,10 @@ all regained at dawn.
   for one year.
 
 Blessed in [The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/).
+
+<!-- from-the-log -->
+## From the adventure log
+
+*Compiled from the session posts. Each line links to the session it comes from.*
+
+* Blessed by Argynvost: a magic blade with three charges of silver flame, regained at dawn. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
