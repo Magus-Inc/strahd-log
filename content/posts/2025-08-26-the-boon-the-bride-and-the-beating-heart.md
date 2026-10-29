@@ -5,8 +5,6 @@ slug: the-boon-the-bride-and-the-beating-heart
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-boon-the-bride-and-the-beating-heart
 ---
 
-# The Boon, the Bride, and the Beating Heart
-
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
 * [Gumbo](/wiki/gumbo/)

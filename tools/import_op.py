@@ -223,6 +223,10 @@ def render_post(post: Post, manifest_row: dict | None = None) -> tuple[str, str]
     meta["slug"] = post.slug
     meta["obsidian_portal_url"] = (manifest_row or {}).get("url") or f"{SITE}/adventure-log/{post.slug}"
     md = textile_to_markdown(post.body, resolve_links(post))
+    # The post page shows the title itself, so drop a leading "# <title>" from the body.
+    first, _, rest = md.partition("\n")
+    if first.strip() == f"# {meta['title']}".strip():
+        md = rest.lstrip("\n")
     return f"{when:%Y-%m-%d}-{post.slug}.md", front_matter(meta) + md
 
 

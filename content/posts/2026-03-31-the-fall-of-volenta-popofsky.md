@@ -5,8 +5,6 @@ slug: the-fall-of-volenta-popofsky
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fall-of-volenta-popofsky
 ---
 
-# The Fall of Volenta Popofsky
-
 ## Characters:
 * [Shabasta](/wiki/shabasta/)
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)

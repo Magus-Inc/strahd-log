@@ -6,8 +6,6 @@ slug: depths-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/depths-of-ravenloft
 ---
 
-# Depths of Ravenloft
-
 **Chronicle of the Larder’s Ransom: The Sanctuary Sprint and the Torture Chamber’s Threshold**  
 Shadows of the Larder: The Drowning Cells of Ravenloft
 

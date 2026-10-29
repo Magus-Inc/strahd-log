@@ -5,8 +5,6 @@ slug: unwelcome-guests
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/unwelcome-guests
 ---
 
-# Unwelcome Guests
-
 ## Shadow Over the Precipice: The Infiltration of Castle Ravenloft
 
 ## Characters:
