@@ -116,9 +116,9 @@ def add_decks(html: str, decks: list[Deck]) -> str:
             f'<div class="deck" aria-label="{escape(d.label)} slides">\n<p class="deck-label">{escape(d.label)}</p>\n'
             f'{deck_body(d, True)}<p class="deck-vote"><button type="button" data-vote="{escape(d.key)}" '
             f'data-label="{escape(d.label)}">Vote for {escape(d.label)}</button></p>\n</div>\n' for d in decks)
-        block = ('<section class="decks" aria-label="Session slides">\n<h2>The Slides</h2>\n'
+        block = ('<section class="decks vote-group" aria-label="Session slides">\n<h2>The Slides</h2>\n'
                  f'<p class="deck-intro">This session has {len(decks)} slide decks. Look through them and vote for your '
-                 f'favorite.</p>\n{parts}<p class="deck-voted" role="status" hidden></p>\n</section>\n')
+                 f'favorite.</p>\n{parts}<p class="vote-status" role="status" hidden></p>\n</section>\n')
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
     if m:
         at = m.end()
@@ -126,6 +126,24 @@ def add_decks(html: str, decks: list[Deck]) -> str:
         h2 = re.search(r"<h2[ >]", html)
         at = h2.start() if h2 else 0
     return html[:at] + block + html[at:]
+
+
+AI_PICTURE = r'<p><img [^>]*src="[^"]*-ai(?:-\d+)?\.(?:jpe?g|png|webp)"[^>]*></p>'
+AI_PICTURES = re.compile(rf"(?:{AI_PICTURE}\s*){{2,}}")
+
+
+def add_image_votes(html: str) -> str:
+    """Two or more AI pictures in a row (name-ai.jpg, name-ai-2.jpg, ...) are takes on the same subject:
+    give each a button so readers can vote for their favorite."""
+    def group(match: re.Match) -> str:
+        pictures = re.findall(AI_PICTURE, match.group(0))
+        figures = "".join(
+            f'<figure>{re.sub(r"^<p>|</p>$", "", pic)}<figcaption><button type="button" data-vote="image-{i}" '
+            f'data-label="picture {i}">Vote for this one</button></figcaption></figure>\n'
+            for i, pic in enumerate(pictures, 1))
+        return ('<div class="vote-group image-vote">\n<p class="vote-intro">Which picture fits best? Vote for your '
+                f'favorite.</p>\n{figures}<p class="vote-status" role="status" hidden></p>\n</div>\n')
+    return AI_PICTURES.sub(group, html)
 
 
 def teaser(html: str, limit: int = 150) -> str:

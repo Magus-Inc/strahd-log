@@ -81,12 +81,30 @@ def test_two_decks_sit_one_after_the_other_with_a_vote_each():
     assert 'src="/slides/x/gemini/01.webp" alt="Gemini slide 1 of 1"' in html
     assert '<a href="/slides/x/gemini/deck.pdf" download>Download PDF</a>' in html
     assert "vote for your favorite" in html.lower()
+    assert 'class="decks vote-group"' in html
 
 
 def test_one_deck_has_no_vote():
     html = article.add_decks(article.wrap_glance(POST), [article.Deck("", "main", ["slides/x/01.webp"])])
     assert html == article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp"])
     assert "data-vote" not in html and "deck-label" not in html
+
+
+def test_two_ai_pictures_in_a_row_each_get_a_vote():
+    html = build.render_markdown("Intro.\n\n![Ismark in a tavern](/images/ismark-ai.jpg)\n\n"
+                                 "![Ismark in a tavern](/images/ismark-ai-2.jpg)\n\n*AI-generated images.*\n")
+    voted = article.add_image_votes(html)
+    assert voted.count('class="vote-group image-vote"') == 1
+    assert voted.index('src="/images/ismark-ai.jpg"') < voted.index('data-vote="image-1"') \
+        < voted.index('src="/images/ismark-ai-2.jpg"') < voted.index('data-vote="image-2"')
+    assert "vote for your favorite" in voted.lower()
+
+
+def test_a_lone_or_non_ai_picture_gets_no_vote():
+    lone = build.render_markdown("![Izek](/images/izek-ai.jpg)\n\nText.\n\n![Map](/images/map.jpg)\n")
+    art = build.render_markdown("![Ireena](/images/ireena-by-ryan.webp)\n\n![Ireena](/images/ireena-2.webp)\n")
+    assert article.add_image_votes(lone) == lone
+    assert article.add_image_votes(art) == art
 
 
 def test_deck_has_no_count_or_hint_text():

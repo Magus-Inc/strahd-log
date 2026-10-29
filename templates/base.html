@@ -43,6 +43,36 @@
     </div>
   </footer>
 {% block scripts %}{% endblock %}
+  <script>
+    // Votes: slide decks and pairs of AI pictures. Each vote is a GoatCounter event (no cookies, no login),
+    // counted under /vote/<page>/<choice> on the dashboard. The browser remembers its own vote so the
+    // buttons stay thanked on a return visit.
+    document.querySelectorAll(".vote-group").forEach(function (group, n) {
+      var status = group.querySelector(".vote-status"), buttons = group.querySelectorAll("[data-vote]");
+      var path = location.pathname, base = "{{ base }}";
+      if (path.indexOf(base) === 0) path = "/" + path.slice(base.length);
+      var key = "vote:" + path + n;
+      function thank(label) {
+        status.textContent = "Thanks! Your vote for " + label + " is in.";
+        status.hidden = false;
+        buttons.forEach(function (b) { b.disabled = true; if (b.dataset.label === label) b.setAttribute("aria-pressed", "true"); });
+      }
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (saved) thank(saved);
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function () {
+{% if counter %}
+          new Image().src = "https://{{ counter }}.goatcounter.com/count?e=true&p=" +
+            encodeURIComponent("/vote" + path + b.dataset.vote) + "&t=" + encodeURIComponent("Vote: " + b.dataset.label) +
+            "&rnd=" + Math.random().toString(36).slice(2);
+{% endif %}
+          try { localStorage.setItem(key, b.dataset.label); } catch (e) {}
+          thank(b.dataset.label);
+        });
+      });
+    });
+  </script>
 {% if counter %}
   <script>
     // Page-view count: no cookies, nothing stored in the browser; see https://www.goatcounter.com

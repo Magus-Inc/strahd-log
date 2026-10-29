@@ -138,7 +138,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(render_markdown(page.body_md), self_slug=page.slug)
+        page.html, _ = linker.link(article.add_image_votes(render_markdown(page.body_md)), self_slug=page.slug)
 
 
 def find_slides(posts: list[Post], static_dir: Path) -> None:
