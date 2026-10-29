@@ -169,6 +169,29 @@ class Linker:
         return "".join(out), mentioned
 
 
+    def anchor(self, match: re.Match) -> str:
+        page = self.by_name[fold(match.group(1))]
+        title = htmllib.escape(page.summary or page.title, quote=True)
+        return f'<a class="wiki-link" href="/wiki/{page.slug}/" title="{title}">{match.group(0)}</a>'
+
+
+NPC_SECTION = re.compile(r"(<h([23])[^>]*>[^<]*Notable NPCs[^<]*</h\2>)(.*?)(?=<h[23][ >]|$)", re.S | re.I)
+
+
+def link_npc_names(html: str, linker: Linker) -> str:
+    """In a post's Notable NPCs section, link every bold name to its wiki page, even when the post
+    already linked an earlier mention: the section is where readers look someone up."""
+    if linker.pattern is None:
+        return html
+
+    def strong(m: re.Match) -> str:
+        inner = m.group(1)
+        if "<" in inner:  # already linked, or other markup: leave it
+            return m.group(0)
+        return "<strong>" + linker.pattern.sub(linker.anchor, inner) + "</strong>"
+
+    return NPC_SECTION.sub(lambda m: m.group(1) + re.sub(r"<strong>(.*?)</strong>", strong, m.group(3), flags=re.S), html)
+
 def plain_text(html: str) -> str:
     """Rendered HTML -> plain text for the search index."""
     text = re.sub(r"</?(?:p|li|ul|ol|h[1-6]|br|div|tr|td|th|blockquote|aside|table)[^>]*>", " ", html)

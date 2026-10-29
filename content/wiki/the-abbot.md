@@ -3,6 +3,7 @@ title: The Abbot
 type: npc
 aliases:
 - Fallen Star
+- Abbot
 summary: An angelic being tainted by Strahd who runs St. Markovia Abbey.
 source: Compiled from the adventure log, with a description written for the site
 ---

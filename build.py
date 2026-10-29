@@ -132,6 +132,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     narrators = {w.slug for w in pages if w.narrator}
     for post in posts:  # newest first, so mentioned_in comes out newest first too
         post.html, post.mentions = linker.link(post.html)
+        post.html = wiki.link_npc_names(post.html, linker)
         post.mentions |= narrators
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
