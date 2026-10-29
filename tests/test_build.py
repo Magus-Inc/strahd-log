@@ -84,6 +84,44 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
     assert feed.find(f"{ATOM}updated").text == "2026-09-01T17:00:00-05:00"
 
 
+@pytest.fixture(scope="module")
+def real_site(tmp_path_factory):
+    """The whole blog, built from the repo's own posts, wiki and map."""
+    out = tmp_path_factory.mktemp("site") / "public"
+    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
+    return out
+
+
+def test_every_link_and_image_on_the_real_site_resolves(real_site):
+    missing = set()
+    for page in real_site.rglob("*.html"):
+        html = re.sub(r"<script.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
+        for url in re.findall(r'\b(?:href|src)="(/[^"#?]*)', html):
+            target = real_site / url.lstrip("/")
+            if url.endswith("/") or target.is_dir():
+                target = target / "index.html"
+            if not target.exists():
+                missing.add(f"{page.relative_to(real_site).as_posix()} -> {url}")
+    assert not missing, sorted(missing)[:20]
+
+
+def test_no_images_on_links_that_expire(real_site):
+    # Discord attachment links carry an expiry (ex=...) and stop working, so their images go in static/.
+    expiring = {page.relative_to(real_site).as_posix()
+                for page in real_site.rglob("*.html")
+                if re.search(r'src="https://cdn\.discordapp\.com/attachments/[^"]*\bex=', page.read_text(encoding="utf-8"))}
+    assert not expiring, sorted(expiring)
+
+
+def test_every_image_in_posts_and_wiki_has_alt_text(real_site):
+    bare = set()
+    for page in [*real_site.glob("posts/*/index.html"), *real_site.glob("wiki/*/index.html")]:
+        for img in re.findall(r"<img\b[^>]*>", page.read_text(encoding="utf-8")):
+            if not re.search(r'\balt="[^"]', img) and "aria-hidden" not in img and "deck" not in img:
+                bare.add(f"{page.relative_to(real_site).as_posix()}: {img[:120]}")
+    assert not bare, sorted(bare)
+
+
 def test_duplicate_slugs_fail(tmp_path):
     write_post(tmp_path, "2024-01-01-a.md", "title: A\ndate: '2024-01-01'\nslug: same\n")
     write_post(tmp_path, "2024-01-02-b.md", "title: B\ndate: '2024-01-02'\nslug: same\n")
@@ -282,41 +320,3 @@ def test_full_screen_slides_use_the_whole_screen_and_fade_their_controls():
     assert "requestFullscreen" in script and "fullscreenchange" in script
     # A rotation re-fits the open slide.
     assert 'addEventListener("resize"' in script
-
-
-@pytest.fixture(scope="module")
-def real_site(tmp_path_factory):
-    """The whole blog, built from the repo's own posts, wiki and map."""
-    out = tmp_path_factory.mktemp("site") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
-
-
-def test_every_link_and_image_on_the_real_site_resolves(real_site):
-    missing = set()
-    for page in real_site.rglob("*.html"):
-        html = re.sub(r"<script.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
-        for url in re.findall(r'\b(?:href|src)="(/[^"#?]*)', html):
-            target = real_site / url.lstrip("/")
-            if url.endswith("/") or target.is_dir():
-                target = target / "index.html"
-            if not target.exists():
-                missing.add(f"{page.relative_to(real_site).as_posix()} -> {url}")
-    assert not missing, sorted(missing)[:20]
-
-
-def test_no_images_on_links_that_expire(real_site):
-    # Discord attachment links carry an expiry (ex=...) and stop working, so their images go in static/.
-    expiring = {page.relative_to(real_site).as_posix()
-                for page in real_site.rglob("*.html")
-                if re.search(r'src="https://cdn\.discordapp\.com/attachments/[^"]*\bex=', page.read_text(encoding="utf-8"))}
-    assert not expiring, sorted(expiring)
-
-
-def test_every_image_in_posts_and_wiki_has_alt_text(real_site):
-    bare = set()
-    for page in [*real_site.glob("posts/*/index.html"), *real_site.glob("wiki/*/index.html")]:
-        for img in re.findall(r"<img\b[^>]*>", page.read_text(encoding="utf-8")):
-            if not re.search(r'\balt="[^"]', img) and "aria-hidden" not in img and "deck" not in img:
-                bare.add(f"{page.relative_to(real_site).as_posix()}: {img[:120]}")
-    assert not bare, sorted(bare)
