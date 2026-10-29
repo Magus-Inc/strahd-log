@@ -63,10 +63,8 @@
 {% block scripts %}
 {% if post.slides %}
   <script>
-  (function () {
+  document.querySelectorAll(".deck").forEach(function (deck) {
     // Slide deck: arrows for a mouse, dots to show where you are, tap a slide to fill the screen.
-    var deck = document.querySelector(".deck");
-    if (!deck) return;
     var frame = deck.querySelector(".deck-frame"), strip = deck.querySelector(".deck-strip");
     var slides = strip.querySelectorAll("li"), current = 0;
     var close = document.createElement("button");
@@ -165,6 +163,36 @@
       if (e.key === "Escape") toggle(false);
       else if (e.key === "ArrowRight") go(current + 1, true);
       else if (e.key === "ArrowLeft") go(current - 1, true);
+    });
+  });
+  </script>
+{% endif %}
+{% if post.decks | length >= 2 %}
+  <script>
+  (function () {
+    // Vote for the favorite deck. Each vote is a GoatCounter event (no cookies, no login), counted under
+    // /vote/<post>/<deck> on the site's GoatCounter dashboard. The browser remembers its own vote so the
+    // buttons stay thanked on a return visit.
+    var box = document.querySelector(".decks"), status = box.querySelector(".deck-voted");
+    var buttons = box.querySelectorAll("[data-vote]"), key = "deck-vote:{{ post.slug }}";
+    function thank(label) {
+      status.textContent = "Thanks! Your vote for " + label + " is in.";
+      status.hidden = false;
+      buttons.forEach(function (b) { b.disabled = true; if (b.dataset.label === label) b.setAttribute("aria-pressed", "true"); });
+    }
+    var saved = null;
+    try { saved = localStorage.getItem(key); } catch (e) {}
+    if (saved) thank(saved);
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+{% if counter %}
+        new Image().src = "https://{{ counter }}.goatcounter.com/count?e=true&p=" +
+          encodeURIComponent("/vote/{{ post.slug }}/" + b.dataset.vote) + "&t=" + encodeURIComponent("Vote: " + b.dataset.label) +
+          "&rnd=" + Math.random().toString(36).slice(2);
+{% endif %}
+        try { localStorage.setItem(key, b.dataset.label); } catch (e) {}
+        thank(b.dataset.label);
+      });
     });
   })();
   </script>

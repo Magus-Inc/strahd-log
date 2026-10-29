@@ -328,7 +328,17 @@ h1 .chip.former { font-size: 0.8rem; }
 .deck-close { display: none; }
 .deck.open { position: fixed; inset: 0; z-index: 100; margin: 0; background: #000;
   display: flex; flex-direction: column; justify-content: center; }
-.deck.open h2 { display: none; }
+.deck.open h2, .deck.open .deck-label, .deck.open .deck-vote { display: none; }
+.deck-intro { color: var(--muted); }
+.decks .deck { margin: 1.25rem 0 2rem; }
+.deck-label { font-weight: 700; margin: 0 0 0.4rem; }
+.deck-vote { text-align: center; margin: 0.6rem 0 0; }
+.deck-vote button { font: inherit; padding: 0.5rem 1.1rem; border-radius: 999px; border: 1px solid var(--accent);
+  background: none; color: inherit; cursor: pointer; }
+.deck-vote button:hover:not(:disabled) { background: var(--accent); }
+.deck-vote button:disabled { opacity: 0.55; cursor: default; }
+.deck-vote button[aria-pressed="true"] { opacity: 1; background: var(--accent); }
+.deck-voted { text-align: center; font-weight: 600; }
 .deck.open .deck-strip img { height: auto; max-height: 100vh; max-height: 100dvh; border: 0; border-radius: 0; cursor: zoom-out; }
 .deck.open .deck-dots { position: absolute; left: 0; right: 0; bottom: max(0.5rem, env(safe-area-inset-bottom));
   margin: 0; transition: opacity 0.4s; }
