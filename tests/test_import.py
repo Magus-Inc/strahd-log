@@ -127,3 +127,14 @@ def test_import_writes_front_matter_and_is_idempotent(tmp_path):
     src.write_text(src.read_text(encoding="utf-8").replace("2026-09-01", "2026-09-02"), encoding="utf-8")
     import_op.import_export(export, out)
     assert [p.name for p in out.iterdir()] == ["2026-09-02-the-red-door.md"]
+
+
+def test_import_drops_a_heading_that_repeats_the_title(tmp_path):
+    # The adventure-log prompt starts the body with "h1. <title>"; the page already shows the title.
+    export = make_export(
+        tmp_path / "export", "the-red-door",
+        "title: The Red Door\ndate: 2026-09-01 5:00 PM\n\nh1. The Red Door\n\nh2. Summary:\n\nBody text.\n",
+    )
+    (written,) = import_op.import_export(export, tmp_path / "content")
+    _, body = split_front_matter(written.read_text(encoding="utf-8"))
+    assert body.strip() == "## Summary:\n\nBody text."

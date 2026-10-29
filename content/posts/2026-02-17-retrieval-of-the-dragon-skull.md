@@ -5,8 +5,6 @@ slug: retrieval-of-the-dragon-skull
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/retrieval-of-the-dragon-skull
 ---
 
-# Retrieval of the Dragon Skull
-
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
 * [Shabasta](/wiki/shabasta/)

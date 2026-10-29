@@ -5,8 +5,6 @@ slug: the-shard-s-warning-and-the-abbot-s-madness
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-shard-s-warning-and-the-abbot-s-madness
 ---
 
-# The Shard’s Warning and the Abbot’s Madness
-
 ## Characters:
 * [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 * [Olfin Darning](/wiki/olfin-darning/)

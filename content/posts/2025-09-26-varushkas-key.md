@@ -4,8 +4,6 @@ date: '2025-09-26T22:00:00-05:00'
 slug: varushkas-key
 ---
 
-# Varushka's Key
-
 Note: Written from the session notes; there is no recording.
 
 ## Characters:

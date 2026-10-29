@@ -5,8 +5,6 @@ slug: the-slipper-and-the-shadow-of-the-bat
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-slipper-and-the-shadow-of-the-bat
 ---
 
-# The Slipper and the Shadow of the Bat
-
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
 * [Olfin Darning](/wiki/olfin-darning/)

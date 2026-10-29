@@ -5,8 +5,6 @@ slug: the-echoing-choirs-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-echoing-choirs-of-ravenloft
 ---
 
-# The Echoing Choirs of Ravenloft
-
 ## Characters:
 * [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
 * [Shabasta](/wiki/shabasta/)

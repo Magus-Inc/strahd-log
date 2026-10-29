@@ -5,8 +5,6 @@ slug: the-master-of-runes-and-the-hellborn-s-spear
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-master-of-runes-and-the-hellborn-s-spear
 ---
 
-# The Master of Runes and the Hellborn’s Spear
-
 ## Characters:
 * [Shabasta](/wiki/shabasta/)
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
