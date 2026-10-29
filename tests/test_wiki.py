@@ -336,3 +336,11 @@ def test_narrator_appears_in_every_session():
     assert malron.narrator
     assert len(malron.mentioned_in) == len(posts)
     assert all("malron-lichtstrahl" in p.mentions for p in posts)
+
+
+def test_notable_npcs_that_lacked_pages_now_have_them():
+    """Chris wants every name in a post's Notable NPCs to lead to a wiki page."""
+    pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
+    linker = wiki.Linker(pages)
+    for name, slug in [("Pidlwick", "pidlwick"), ("Masked Servant", "masked-servant"), ("Druids", "forest-folk")]:
+        assert linker.by_name[wiki.fold(name)].slug == slug
