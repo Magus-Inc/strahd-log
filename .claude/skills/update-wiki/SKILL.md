@@ -28,6 +28,11 @@ both cite the posts they come from.
      `Compiled from the adventure log, with a description written for the site` so it is kept.
    - Pages written on Obsidian Portal keep their original text. Put the description above it and
      never reword theirs.
+   - Player character pages (`type: character`) open with the player's own notes; never reword
+     them. Every 5 or so sessions with that character (dnd-scribe's `just wiki-plan` lists them
+     under "grow"), add one paragraph in Malron's words under a `## Since then` heading below the
+     notes, on how they have changed, and set `grown_through: <post stem>` in the front matter
+     (Chris, 2026-10-29: "evolving description would be a nicer way to ... show character growth").
    - A new page needs `title`, `type` (character, npc, creature, place, item, faction, deity,
      other), `summary` (one line) and `aliases` for other spellings the posts use. An alias must not
      be an ordinary word, because aliases link automatically everywhere.
@@ -40,6 +45,9 @@ both cite the posts they come from.
 - **Malron's voice.** First person ("we", "I"), past tense, in-world, as in the posts. No dice, DCs,
   levels, spell or feature names, rules talk, DM name or player names. Real player names appear
   only on each PC's own wiki page.
+- **Keep older facts.** A fact list line whose post was later rewritten and no longer says it
+  stays, and can go in the description with that post's link (Chris, 2026-10-29: "if I had that
+  once it was a fact of interest").
 - **Say what you don't know.** When the posts leave something open, the description leaves it open
   too ("we have yet to learn what it opens"). Never fill a gap from the module.
 - **Speaker slips happen.** If a post credits a line or a deed to a character and another post or
