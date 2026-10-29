@@ -336,3 +336,41 @@ def test_narrator_appears_in_every_session():
     assert malron.narrator
     assert len(malron.mentioned_in) == len(posts)
     assert all("malron-lichtstrahl" in p.mentions for p in posts)
+
+
+def test_notable_npcs_link_every_name_even_after_an_earlier_mention():
+    linker = wiki.Linker([page("kasimir", "Kasimir Velikov", ["Kasimir"]), page("argynvost", "Argynvost"),
+                          page("sasha", "Sasha Ivliskova", ["Sasha"]), page("fiona", "Lady Fiona Wachter")])
+    html = build.render_markdown(
+        "## Summary:\n\nArgynvost rises. Kasimir is named.\n\n### Notable NPCs:\n\n"
+        "**Argynvost**: The silver dragon. He blesses a sword.\n\n"
+        "**Sir Godfried**: He tells us of Kasimir.\n\n"
+        "**Kasimir Velikov** (mentioned): A dusk elf.\n\n"
+        "**Sasha, Kavan and Lady Fiona Wachter** (glimpsed): Touched by the light.\n\n"
+        "### Plot Points:\n\nArgynvost again.\n")
+    html, mentioned = linker.link(html)
+    html = wiki.link_npc_names(html, linker)
+    section = html[html.index("Notable NPCs"):html.index("Plot Points")]
+    # Each bold name in the section links to its page, though the summary linked it first.
+    assert '<strong><a class="wiki-link" href="/wiki/argynvost/"' in section
+    assert '<a class="wiki-link" href="/wiki/kasimir/" title="Kasimir Velikov">Kasimir Velikov</a>' in section
+    assert 'href="/wiki/sasha/"' in section and 'href="/wiki/fiona/"' in section
+    # Names without a page stay plain, and descriptions are not linked a second time.
+    assert "<strong>Sir Godfried</strong>" in section and "of Kasimir." in section
+    # Other sections keep first-mention-only linking.
+    assert html.count('href="/wiki/argynvost/"') == 2
+    assert {"kasimir", "argynvost", "sasha", "fiona"} <= mentioned
+
+
+def test_notable_npcs_written_as_a_bold_line_link_too():
+    # Five older posts start the section with a bold "Notable NPCs:" line instead of a heading.
+    linker = wiki.Linker([page("urwin", "Urwin"), page("lucien", "Father Lucien")])
+    html = build.render_markdown(
+        "Urwin pours. Father Lucien prays.\n\n**Notable NPCs:**  \n- **Father Lucien:** Preparing the blessing.  \n"
+        "- **Urwin:** Innkeeper.\n\n**Plot Points:**  \n- **Urwin:** Pours again.\n")
+    html, _ = linker.link(html)
+    html = wiki.link_npc_names(html, linker)
+    section = html[html.index("Notable NPCs"):html.index("Plot Points")]
+    assert 'href="/wiki/lucien/"' in section and 'href="/wiki/urwin/"' in section
+    # The section ends at the next bold "Something:" line.
+    assert "<strong>Urwin:</strong> Pours again." in html
