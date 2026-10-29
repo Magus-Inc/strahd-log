@@ -342,5 +342,6 @@ def test_notable_npcs_that_lacked_pages_now_have_them():
     """Chris wants every name in a post's Notable NPCs to lead to a wiki page."""
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
     linker = wiki.Linker(pages)
-    for name, slug in [("Pidlwick", "pidlwick"), ("Masked Servant", "masked-servant"), ("Druids", "forest-folk")]:
+    for name, slug in [("Pidlwick", "pidlwick"), ("Masked Servant", "masked-servant"), ("Druids", "forest-folk"),
+                       ("Vallakovich", "baron-of-vallaki")]:
         assert linker.by_name[wiki.fold(name)].slug == slug

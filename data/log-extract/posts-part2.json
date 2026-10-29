@@ -107,7 +107,7 @@
 {"text":"Sold a noise toy to Heinrich.","post":"2024-11-26-consequences-in-vallaki"}]},
 {"name":"Blinksys","type":"place","aliases":[],"summary":"Blinksy's store in Vallaki.","facts":[
 {"text":"Was set on fire by Izek.","post":"2024-11-26-consequences-in-vallaki"}]},
-{"name":"Valakovich","type":"npc","aliases":["Baron of Vallaki"],"summary":"The Baron of Vallaki, father of Viktor.","facts":[
+{"name":"Valakovich","type":"npc","aliases":["Baron of Vallaki","Vallakovich"],"summary":"The Baron of Vallaki, father of Viktor.","facts":[
 {"text":"Had his guards shoot at Shabasta and reasserted his title.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Was cursed by Nicolai in the past.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"May have executed the shoemaker Lukavich.","post":"2024-12-03-shadows-over-vallaki"},

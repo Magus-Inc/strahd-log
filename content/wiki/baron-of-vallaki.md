@@ -3,6 +3,7 @@ title: Baron of Vallaki
 type: npc
 aliases:
 - Valakovich
+- Vallakovich
 summary: The harsh ruler of Vallaki.
 source: Compiled from the adventure log
 ---

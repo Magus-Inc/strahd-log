@@ -1,7 +1,7 @@
 ---
 title: Masked Servant
 type: npc
-summary: A maimed, terrified servant at Strahd's dinner in Castle Ravenloft.
+summary: A maimed, terrified servant at the reception in Castle Ravenloft.
 source: Compiled from the adventure log
 ---
 
