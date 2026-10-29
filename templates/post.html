@@ -148,6 +148,9 @@
       document.addEventListener(name, function () {
         if (!fullElement() && deck.classList.contains("open")) toggle(false);
         else go(current);
+        // The browser leaves full screen after toggle(false) asked it to, so the first return ran
+        // while the deck still filled the screen; return again now that the page is back.
+        if (!fullElement() && Date.now() < returnUntil) backToDeck();
       });
     });
     // Turning the phone changes the strip's width; land on the same slide again.
