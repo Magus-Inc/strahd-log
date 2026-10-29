@@ -25,7 +25,7 @@ Aera's pseudodragon companion. Aera found her when the party first explored Argy
 
 *Written from the session logs, in Malron's words.*
 
-When we first explored Argynvostholt, a pseudodragon found Aera and began to follow her, drawn to her somehow ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). Zora has been with her ever since. In the chaos of the fight with Rahadin in Castle Ravenloft, Aera sent her to scout for Gertruda ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).
+When we first explored Argynvostholt, a pseudodragon found Aera and began to follow her, drawn to her somehow ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). Zora has been with her ever since, and she serves as Aera's eyes in the dark ([Unwelcome Guests](/posts/unwelcome-guests/)). In the chaos of the fight with Rahadin in Castle Ravenloft, Aera sent her to scout for Gertruda ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).
 
 Back at Argynvostholt with the dragon's skull, she flew to Aera and tried to shape a skull with her claws, but none of us could follow her gestures and squeaks, not even Crusty, who speaks Draconic. Then, while Hornguard held forth at us in the cemetery mausoleum, she flew in and harried his face, and Aera climbed the wall and set the skull on its mount. Because of her, we never had to fight him at all ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
