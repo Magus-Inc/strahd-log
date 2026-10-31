@@ -105,12 +105,11 @@ def test_every_link_and_image_on_the_real_site_resolves(real_site):
     assert not missing, sorted(missing)[:20]
 
 
-def test_schlopkht_page_lets_readers_vote_among_six_pictures(real_site):
+def test_schlopkht_page_features_the_picture_readers_voted_for(real_site):
+    # 2026-10-31 the reader vote among six pictures picked picture 6; it is now his only picture.
     html = (real_site / "wiki" / "schlopkht" / "index.html").read_text(encoding="utf-8")
-    grid = re.search(r'<div class="vote-group image-vote image-grid">.*?</div>', html, re.S).group(0)
-    pictures = re.findall(r'src="(/images/schlopkht-ai(?:-\d)?\.jpg)"', grid)
-    assert pictures == ["/images/schlopkht-ai.jpg"] + [f"/images/schlopkht-ai-{i}.jpg" for i in range(2, 7)]
-    assert grid.count('data-vote="image-') == 6
+    assert re.findall(r'src="(/images/schlopkht-ai(?:-\d)?\.jpg)"', html) == ["/images/schlopkht-ai-6.jpg"]
+    assert "data-vote=" not in html
     assert "AI-generated" in html
 
 
