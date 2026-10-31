@@ -341,6 +341,14 @@ h1 .chip.former { font-size: 0.8rem; }
 .deck-vote button[aria-pressed="true"], .image-vote button[aria-pressed="true"] { opacity: 1; background: var(--accent); }
 .vote-status { text-align: center; font-weight: 600; }
 .image-vote figure { margin: 0 0 1.5rem; }
+.image-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; align-items: start; }
+.image-grid .vote-intro, .image-grid .vote-status { grid-column: 1 / -1; margin: 0; }
+.image-grid figure { margin: 0; }
+.image-grid img { display: block; width: 100%; height: auto; }
+.image-grid button { padding: 0.4rem 0.8rem; font-size: 0.9rem; }
+@media (min-width: 700px) {
+  .image-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 .deck.open .deck-strip img { height: auto; max-height: 100vh; max-height: 100dvh; border: 0; border-radius: 0; cursor: zoom-out; }
 .deck.open .deck-dots { position: absolute; left: 0; right: 0; bottom: max(0.5rem, env(safe-area-inset-bottom));
   margin: 0; transition: opacity 0.4s; }

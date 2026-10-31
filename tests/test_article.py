@@ -1,6 +1,11 @@
+import re
+from pathlib import Path
+
 import article
 import build
 import wiki
+
+ROOT = Path(__file__).resolve().parent.parent
 
 POST = build.render_markdown("""## At a Glance:
 
@@ -107,6 +112,23 @@ def test_two_ai_pictures_in_a_row_each_get_a_vote():
     assert voted.index('src="/images/ismark-ai.jpg"') < voted.index('data-vote="image-1"') \
         < voted.index('src="/images/ismark-ai-2.jpg"') < voted.index('data-vote="image-2"')
     assert "vote for your favorite" in voted.lower()
+
+
+def test_three_or_more_ai_pictures_vote_in_a_grid_that_opens_each_full_size():
+    md = "".join(f"![Schlopkht take {i}](/images/schlopkht-ai{'' if i == 1 else f'-{i}'}.jpg)\n\n" for i in range(1, 7))
+    voted = article.add_image_votes(build.render_markdown(md))
+    assert voted.count('class="vote-group image-vote image-grid"') == 1
+    assert [f"image-{i}" for i in range(1, 7)] == re.findall(r'data-vote="(image-\d+)"', voted)
+    assert '<a href="/images/schlopkht-ai-4.jpg"' in voted  # tap a small picture to see it large
+    pair = article.add_image_votes(build.render_markdown(
+        "![Ismark](/images/ismark-ai.jpg)\n\n![Ismark](/images/ismark-ai-2.jpg)\n"))
+    assert "image-grid" not in pair and "<a href" not in pair  # a pair stays full width, as before
+
+
+def test_vote_grid_is_two_across_on_a_phone_and_three_on_a_wide_screen():
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert re.search(r"\.image-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,", css)
+    assert re.search(r"@media \(min-width: \d+px\)\s*\{[^@]*\.image-grid\s*\{[^}]*repeat\(3,", css)
 
 
 def test_a_lone_or_non_ai_picture_gets_no_vote():

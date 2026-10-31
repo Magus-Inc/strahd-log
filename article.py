@@ -131,20 +131,27 @@ def add_decks(html: str, decks: list[Deck]) -> str:
 
 
 AI_PICTURE = r'<p><img [^>]*src="[^"]*-ai(?:-\d+)?\.(?:jpe?g|png|webp)"[^>]*></p>'
+SRC = r'src="([^"]+)"'
 AI_PICTURES = re.compile(rf"(?:{AI_PICTURE}\s*){{2,}}")
 
 
 def add_image_votes(html: str) -> str:
     """Two or more AI pictures in a row (name-ai.jpg, name-ai-2.jpg, ...) are takes on the same subject:
-    give each a button so readers can vote for their favorite."""
+    give each a button so readers can vote for their favorite. Three or more sit in a grid."""
     def group(match: re.Match) -> str:
-        pictures = re.findall(AI_PICTURE, match.group(0))
+        pictures = [re.sub(r"^<p>|</p>$", "", pic) for pic in re.findall(AI_PICTURE, match.group(0))]
+        grid = len(pictures) > 2  # three or more go in a grid; tap one to see it full size
+        if grid:
+            pictures = [f'<a href="{re.search(SRC, pic).group(1)}">{pic}</a>' for pic in pictures]
         figures = "".join(
-            f'<figure>{re.sub(r"^<p>|</p>$", "", pic)}<figcaption><button type="button" data-vote="image-{i}" '
+            f'<figure>{pic}<figcaption><button type="button" data-vote="image-{i}" '
             f'data-label="picture {i}">Vote for this one</button></figcaption></figure>\n'
             for i, pic in enumerate(pictures, 1))
-        return ('<div class="vote-group image-vote">\n<p class="vote-intro">Which picture fits best? Vote for your '
-                f'favorite.</p>\n{figures}<p class="vote-status" role="status" hidden></p>\n</div>\n')
+        cls = "vote-group image-vote image-grid" if grid else "vote-group image-vote"
+        intro = "Which picture fits best? Tap one to see it larger, and vote for your favorite." if grid \
+            else "Which picture fits best? Vote for your favorite."
+        return (f'<div class="{cls}">\n<p class="vote-intro">{intro}</p>\n'
+                f'{figures}<p class="vote-status" role="status" hidden></p>\n</div>\n')
     return AI_PICTURES.sub(group, html)
 
 
