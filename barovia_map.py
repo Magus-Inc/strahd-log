@@ -508,6 +508,7 @@ class Sprite:
     y: float
     width: float
     height: float   # from the image's own shape
+    place: str | None = None  # the place it shows (a place slug): the picture links there
 
     @property
     def box(self) -> tuple[float, float, float, float]:
@@ -530,7 +531,9 @@ def load_sprites(path: Path, sprite_dir: Path) -> list[Sprite]:
             iw, ih = im.size
         x, y = spec["xy"]
         width = float(spec["width"])
-        out.append(Sprite(str(name), str(spec["image"]), float(x), float(y), width, round(width * ih / iw, 1)))
+        place = spec.get("place", name)   # by default the sprite's name is its place; `place: null` for none
+        out.append(Sprite(str(name), str(spec["image"]), float(x), float(y), width, round(width * ih / iw, 1),
+                          str(place) if place else None))
     return out
 
 

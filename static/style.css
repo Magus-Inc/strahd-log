@@ -216,13 +216,17 @@ main.wide { max-width: 80rem; }
 .map { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 .map.zoomed { cursor: grab; touch-action: none; }
 .map .pin { cursor: pointer; }
-.map .pin-dot { fill: #2b1d12; stroke: #f4ead2; stroke-width: 1.5; }
+/* A place's picture is a link too: it glows gold under the mouse or keyboard focus. */
+.map .sprite { cursor: pointer; --gold: #e8b64a; }
+.map .sprite:hover image, .map .sprite:focus image { filter: drop-shadow(0 0 1.5px var(--gold)) drop-shadow(0 0 3px var(--gold)); }
+/* No dots: the sprites mark the places. The pin is an invisible tap target, ringed on hover/focus. */
+.map .pin-dot { fill: transparent; stroke: none; stroke-width: 1.5; }
 /* Zoomed in, markers, pins and names scale by --mark (set by the map page) so they stay small. Each
    scales about its own point, given inline in map units: Safari on iPhone placed names wrongly with
    a fill-box transform box, so they drifted away from their places as the map zoomed. */
 .map .marker, .map .pin-dot, .map .labels text { transform: scale(var(--mark, 1)); transform-box: view-box; }
 .map .labels text { font: italic 600 13px var(--serif); fill: #2b1d12; stroke: #f1e7cd; stroke-width: 3.5px; paint-order: stroke; stroke-linejoin: round; }
-.map .pin:hover .pin-dot, .map .pin:focus .pin-dot { fill: var(--accent); }
+.map .pin:hover .pin-dot, .map .pin:focus .pin-dot { stroke: var(--accent); }
 
 /* Crumb widths and dashes scale by --mark too, so the trail stays a fine line when zoomed in. */
 .map .crumb { --k: var(--mark, 1); fill: none; stroke: #b3122e; stroke-width: calc(1.7px * var(--k)); stroke-dasharray: calc(1.5px * var(--k)) calc(4.5px * var(--k)); stroke-linecap: round; opacity: 0.9; }

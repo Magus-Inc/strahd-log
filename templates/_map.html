@@ -14,9 +14,19 @@
   <svg class="map" viewBox="0 0 1000 750" role="img" aria-label="{{ label }}">
     <image href="{{ base }}images/map/parchment.jpg" width="1000" height="750" preserveAspectRatio="none"/>
     <image href="{{ base }}map/barovia.svg" width="1000" height="750"/>
-    <g class="sprites" aria-hidden="true">
+    {# A place's picture links to the place, like its pin (the map page opens the place panel). #}
+    <g class="sprites">
+{% set by_slug = {} %}{% for p in places %}{% set _ = by_slug.update({p.slug: p}) %}{% endfor %}
 {% for s in map_sprites %}
-      <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
+{% set p = by_slug.get(s.place) or all_places.get(s.place) %}
+{% if p %}
+      <a class="sprite{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
+        <title>{{ p.title }}</title>
+        <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
+      </a>
+{% else %}
+      <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}" aria-hidden="true"/>
+{% endif %}
 {% endfor %}
     </g>
 {# On a session's page the trail stops at that session: later sessions haven't happened yet. #}
@@ -35,15 +45,17 @@
 {% for p in places %}
       <a class="pin{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
         <title>{{ p.title }}{% if p.sessions %}: {{ p.sessions | length }} session{{ "s" if p.sessions | length != 1 }}{% endif %}</title>
-        <circle cx="{{ p.x }}" cy="{{ p.y }}" r="4.5" class="pin-dot" style="transform-origin: {{ p.x }}px {{ p.y }}px"/>
+        <circle cx="{{ p.x }}" cy="{{ p.y }}" r="11" class="pin-dot" style="transform-origin: {{ p.x }}px {{ p.y }}px"/>
       </a>
 {% endfor %}
     </g>
-    {# Place names sit under the session markers, so a name never hides a number. A name goes straight to
-       its wiki page; the pins already give screen readers and the keyboard the same links. #}
+    {# Place names sit under the session markers, so a name never hides a number. On the map page a name,
+       a picture and a pin all open the same place card (its title links to the wiki page); on the small
+       maps in posts and wiki pages they link straight to the wiki page. The pins already give screen
+       readers and the keyboard the same links. #}
     <g class="labels" aria-hidden="true">
 {% for p in places %}
-      <a href="{{ base }}{{ p.path }}" tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}" style="transform-origin: {{ p.label_xy[0] }}px {{ p.label_xy[1] }}px">{{ p.title }}</text></a>
+      <a href="{{ base }}{{ p.path }}"{% if interactive %} class="js-pin" data-place="{{ p.slug }}"{% endif %} tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}" style="transform-origin: {{ p.label_xy[0] }}px {{ p.label_xy[1] }}px">{{ p.title }}</text></a>
 {% endfor %}
     </g>
 {% if legs %}

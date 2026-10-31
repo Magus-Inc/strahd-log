@@ -72,7 +72,8 @@ within:
 
 # Hand-drawn pictures laid on the map (static/images/map/sprites/<image>.webp, cut by tools/make_sprites.py).
 # name: {image: file stem, xy: [x, y] centre of the picture, width: in map units; the height
-# follows the picture's shape}. Move them with `just map-edit` (drag, or scroll to resize).
+# follows the picture's shape, place: the place it shows and links to (default: the name; null for
+# none)}. Move them with `just map-edit` (drag, or scroll to resize).
 sprites:
   castle-ravenloft: {image: castle-ravenloft, xy: [720, 385], width: 80}
   barovia: {image: barovia, xy: [780, 440], width: 64}
@@ -81,20 +82,20 @@ sprites:
   abbey-of-saint-markovia: {image: abbey-of-saint-markovia, xy: [138, 198], width: 40}
   the-windmill: {image: the-windmill, xy: [474, 290], width: 44}
   tower-of-khazan: {image: tower-of-khazan, xy: [258, 192], width: 30}
-  werewolf-den: {image: werewolf-den, xy: [190, 164], width: 36}
+  werewolf-den: {image: werewolf-den, xy: [190, 164], width: 36, place: lake-baratok-cave}
   argynvostholt: {image: argynvostholt, xy: [330, 366], width: 50}
   wizard-of-wines: {image: wizard-of-wines, xy: [104, 352], width: 44}
   yester-hill: {image: yester-hill, xy: [70, 480], width: 44}
   durst-manor: {image: durst-manor, xy: [968, 334], width: 32}
   tser-pool: {image: tser-pool, xy: [692, 526], width: 42}
-  gates-west: {image: gates, xy: [597, 340], width: 30}
-  gates-east: {image: gates, xy: [930, 388], width: 30}
+  gates-west: {image: gates, xy: [597, 340], width: 30, place: gates-of-barovia}
+  gates-east: {image: gates, xy: [930, 388], width: 30, place: gates-of-barovia}
   berez: {image: berez, xy: [322, 444], width: 40}
   amber-temple: {image: amber-temple, xy: [384, 630], width: 40}
   whispering-wall: {image: whispering-wall, xy: [44, 514], width: 34}
   # A bridge wherever a road crosses water (see test_roads_cross_water_only_where_the_official_map_does).
-  bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22}
-  bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22}
-  bridge-tser-falls: {image: bridge, xy: [600, 405], width: 22}
-  bridge-ivlis: {image: bridge, xy: [726.8, 502], width: 22}
-  bridge-luna-lake: {image: bridge, xy: [245, 581.7], width: 22}
+  bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22, place: null}
+  bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22, place: null}
+  bridge-tser-falls: {image: bridge, xy: [600, 405], width: 22, place: null}
+  bridge-ivlis: {image: bridge, xy: [726.8, 502], width: 22, place: null}
+  bridge-luna-lake: {image: bridge, xy: [245, 581.7], width: 22, place: null}

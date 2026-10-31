@@ -349,6 +349,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
             tags.setdefault(tag, []).append(post)
     env.globals["has_tags"] = bool(tags)
     env.globals["map_sprites"] = sprites
+    env.globals["all_places"] = places
 
     if out_dir.exists():
         shutil.rmtree(out_dir)

@@ -114,9 +114,14 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     page_html = (out / "map" / "index.html").read_text(encoding="utf-8")
     assert 'href="/strahd-log/map/barovia.svg"' in page_html and 'class="crumb' in page_html
     # The parchment lies under the drawing, and the sprites over it, under the trail and the pins.
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
     assert page_html.index("images/map/parchment.jpg") < page_html.index("map/barovia.svg") \
         < page_html.index('href="/strahd-log/images/map/sprites/vallaki.webp" x="370.0"') < page_html.index('class="trail"')
     assert (out / "images" / "map" / "sprites" / "vallaki.webp").is_file()
+    # A place's picture is its link: it opens the place like its pin, and glows gold on hover.
+    assert re.search(r'<a class="sprite js-pin" href="/strahd-log/wiki/vallaki/" data-place="vallaki">\s*<title>Vallaki</title>\s*'
+                     r'<image href="/strahd-log/images/map/sprites/vallaki.webp"', page_html)
+    assert re.search(r"\.map \.sprite:hover image[^{]*\{[^}]*drop-shadow\([^)]*var\(--gold", css)
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
@@ -133,14 +138,20 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert 'class="pin-dot" style="transform-origin: ' in page_html and '" style="transform-origin: ' in page_html
     assert "transform-box: fill-box;" not in (ROOT / "static" / "style.css").read_text(encoding="utf-8")
     # Place names link to their wiki pages (every place on the map has one).
-    assert 'wiki/vallaki/" tabindex="-1"><text' in page_html
+    # On the map page a name opens the same place card as its picture and pin (Chris: one predictable
+    # action); on a post's small map it links straight to the wiki page.
+    assert 'wiki/vallaki/" class="js-pin" data-place="vallaki" tabindex="-1"><text' in page_html
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
     # A session's map stops at that session: no crumbs from later sessions.
     first = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
-    assert 'data-i="1"' in first and 'data-i="2"' not in first and 'current" data-i="2"' in second
-    # Dragging the map never selects (highlights) place names.
     css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert 'data-i="1"' in first and 'data-i="2"' not in first and 'current" data-i="2"' in second
+    # No black dots: the sprites show where places are. Each pin stays as an invisible, bigger tap
+    # target that only shows a ring on hover or keyboard focus.
+    assert re.search(r"\.map \.pin-dot \{[^}]*fill: transparent", css) and 'r="11" class="pin-dot"' in page_html
+    # Dragging the map never selects (highlights) place names.
     assert re.search(r"\.map \{[^}]*user-select: none", css) and re.search(r"\.map \{[^}]*-webkit-user-select: none", css)
+    assert 'wiki/vallaki/" tabindex="-1"><text' in second and 'class="sprite js-pin"' not in second
     assert "Where we were" in second and 'class="crumb current"' in second and 'class="marker current"' in second
     inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
     assert "On the map" in inn and 'data-place="vallaki"' in inn
@@ -354,7 +365,10 @@ def test_sprites_load_with_their_sizes_and_clear_the_woods(tmp_path):
     Image.new("RGBA", (200, 100)).save(sprite_dir / "keep.webp")
     path = write(tmp_path / "map.yaml", "sprites:\n  # the castle\n  castle: {image: keep, xy: [720, 400], width: 80}\n")
     sprites = barovia_map.load_sprites(path, sprite_dir)
-    assert [(s.name, s.image, s.x, s.y, s.width, s.height) for s in sprites] == [("castle", "keep", 720, 400, 80, 40)]
+    assert [(s.name, s.image, s.x, s.y, s.width, s.height, s.place) for s in sprites] == [("castle", "keep", 720, 400, 80, 40, "castle")]
+    tower = barovia_map.load_sprites(write(tmp_path / "t.yaml", "sprites:\n  w: {image: keep, xy: [1, 2], width: 9, place: tower}\n"
+                                           "  b: {image: keep, xy: [1, 2], width: 9, place: null}\n"), sprite_dir)
+    assert [s.place for s in tower] == ["tower", None]
     with pytest.raises(ValueError, match="no sprite image"):
         barovia_map.load_sprites(write(tmp_path / "bad.yaml", "sprites:\n  x: {image: nope, xy: [1, 2], width: 9}\n"),
                                  sprite_dir)
@@ -454,3 +468,11 @@ def test_a_place_can_put_its_label_at_a_given_spot(tmp_path):
     path = write(tmp_path / "map.yaml", "places:\n  vallaki: {xy: [400, 270], label_at: [410, 240]}\n")
     places, _ = barovia_map.load_places(path, PAGES)
     assert places["vallaki"].label_xy == (410, 240) and places["vallaki"].text_anchor == "middle"
+
+
+def test_every_real_sprite_links_to_a_real_place_or_none():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    assert all(s.place in places for s in sprites if s.place)
+    assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"}
