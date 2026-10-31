@@ -15,7 +15,7 @@ Python build turns them into plain HTML in `public/`, published by GitHub Pages 
 | `static/` | `style.css` and the favicon, copied into `public/` as is |
 | `tools/import_op.py` | One-off importer from an Obsidian Portal export (Textile) |
 | `tests/` | pytest tests; they build their own fixtures |
-| `.github/workflows/pages.yml` | Builds and publishes the site to GitHub Pages on every push to `main` |
+| `.github/workflows/pages.yml` | Builds and publishes the site to GitHub Pages on every push to `main`, with a preview of each open pull request |
 | `static/slides/<post file name>/` | A session's slide deck: `01.webp`, `02.webp`, ... (1600 px wide) and optionally a `.pdf`; shown as a swipeable strip after At a Glance |
 | `static/CNAME` | The site's own address, `owlbear.dicelore.quest` |
 | `netlify.toml` | Settings for hosting on Netlify instead (not used today) |
@@ -162,6 +162,19 @@ Setting up the custom domain:
 
 `static/CNAME` records the domain in the published files too. Pages needs the repository to be
 public and Settings > Pages > Source set to "GitHub Actions".
+
+### Pull request previews
+
+Every open pull request from a branch of this repository is built into `/pr-preview/pr-N/` (for
+example <https://owlbear.dicelore.quest/pr-preview/pr-62/>) and published along with `main`, and
+the pull request gets one comment with the link, updated on each push. When the pull request closes,
+the next publish leaves it out, so the preview goes away. Pull requests from forks get no preview,
+since their code would run with the repository's token.
+
+`tools/pr_previews.py` does the work. Previews carry a red "Preview of pull request #N" banner and a
+`noindex` tag, `robots.txt` blocks `/pr-preview/`, and they are built without `GOATCOUNTER`, so
+search engines and page-view counts skip them. The workflow uses `pull_request_target`, which runs
+the copy of `pages.yml` on `main`; changes to the workflow itself only take effect once merged.
 
 ## Page views
 
