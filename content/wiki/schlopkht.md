@@ -11,19 +11,9 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
-![Schlopkht, a spotted golden tabaxi monk, holding a haunted mirror shard in Durst Manor](/images/schlopkht-ai.jpg)
-
-![Schlopkht, a grey tabby tabaxi monk, roped at the waist on a branch in the fog](/images/schlopkht-ai-2.jpg)
-
-![Schlopkht, a russet tabaxi monk, offering a dream pie at the Vallaki gate](/images/schlopkht-ai-3.jpg)
-
-![Schlopkht, a spotted golden tabaxi monk in a cloak, a sun bolt glowing in his paw in Durst Manor](/images/schlopkht-ai-4.jpg)
-
-![Schlopkht, a grey tabby tabaxi monk with a whip and grappling hook, crouched on a branch in the fog](/images/schlopkht-ai-5.jpg)
-
 ![Schlopkht, a russet tabaxi monk carrying the bronze sunburst to the village church](/images/schlopkht-ai-6.jpg)
 
-*AI-generated images (Google Gemini, October 2026), drawn from this page, the session logs and his character sheet. Not player art.*
+*AI-generated image (Google Gemini, October 2026), drawn from this page, the session logs and his character sheet, and picked by reader vote. Not player art.*
 
 *Written from the session logs.*
 
