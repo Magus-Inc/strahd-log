@@ -291,6 +291,20 @@ def test_a_second_deck_lives_in_a_subfolder_with_its_own_label(content, tmp_path
     assert third.decks[1].pdf == "slides/2026-09-01-third/gemini/deck.pdf"
 
 
+def test_second_line_of_label_txt_is_the_decks_subheading(content, tmp_path):
+    posts = build.load_posts(content)
+    folder = tmp_path / "static" / "slides" / "2026-09-01-third"
+    (folder / "b").mkdir(parents=True)
+    for name in ("01.webp", "b/01.webp"):
+        (folder / name).write_bytes(b"")
+    (folder / "label.txt").write_text("The Chronicle\nThe straight story of the fight\n", encoding="utf-8")
+    (folder / "b" / "label.txt").write_text("Drowning Shadows\n", encoding="utf-8")
+    build.find_slides(posts, tmp_path / "static")
+    third = next(p for p in posts if p.slug == "third")
+    assert [(d.label, d.key, d.note) for d in third.decks] == [
+        ("The Chronicle", "the-chronicle", "The straight story of the fight"), ("Drowning Shadows", "drowning-shadows", "")]
+
+
 def test_vote_buttons_count_through_goatcounter_without_cookies(content, tmp_path, monkeypatch):
     monkeypatch.setenv("GOATCOUNTER", "owlbear")
     static = tmp_path / "static"

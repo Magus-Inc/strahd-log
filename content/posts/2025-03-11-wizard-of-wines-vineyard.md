@@ -16,13 +16,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-It was evening when we entered the cloaked figure’s hiding place and found Davien Martikov, father of Irwin Martikov. Davien told us the forest folk, druids, and their blights, along with Baba Lasaga, whom some call Lysa, have driven his family from the Wizard of Wines vineyard.
+It was evening when we entered the cloaked figure’s hiding place and found Davian Martikov, father of Urwin Martikov. Davian told us the forest folk, druids, and their blights, along with Baba Lysaga, whom some call Lysa, have driven his family from the Wizard of Wines vineyard.
 
 He laid out what waits ahead: four druids, eight needle blights, three greater strix and eight vine blights. The druids’ leader carries a magical staff that commands these creatures, and it must be destroyed or stolen. He advised us to go underground into the cellar to find it.
 
 The tunnel to the cellar runs through a cavern full of brown mold. Fire only feeds it, but cold kills it, and we must keep to the middle of the dirt path to come through unharmed.
 
-Davien told us of his family’s grief. His son Elrich died three months ago on a march against Castle Ravenloft, and a prized gemstone was stolen from the winery. Between them, the two losses broke the family.
+Davian told us of his family’s grief. His son Elvir died three months ago on a march against Castle Ravenloft, and a prized gemstone was stolen from the winery. Between them, the two losses broke the family.
 
 Muriel stayed behind to guard our way out while we went through the tunnel. We found a box marked with a snowflake, hanging from a rusted iron hook. Inside were three winter wolf teeth, enchanted by the mountain folk, that can loose a freezing blast or shield the bearer from cold.
 
@@ -47,21 +47,21 @@ Veyren as a mouse, listening to the druid and the raven.
 
 ## Notable NPCs:
 
-**Davien Martikov**: The cloaked figure, Irwin’s father, who told us of the vineyard’s peril.  
-**Muriel Winshaw**: Stayed behind to guard our way out.  
+**Davian Martikov**: The cloaked figure, Urwin’s father, who told us of the vineyard’s peril.  
+**Muriel Vinshaw**: Stayed behind to guard our way out.  
 **Druids**: Forest folk guarding the staff that commands the blights.
 
 ## Plot Points:
 
-- Baba Lasaga, called Lysa, was the mentor of Lady Fiona Wachter.  
+- Baba Lysaga, called Lysa, was the mentor of Lady Fiona Wachter.  
 - The druids’ leader holds a staff that commands the blights; it must be destroyed or stolen.  
-- Elrich’s death on the march against Castle Ravenloft broke the Martikov family.  
+- Elvir’s death on the march against Castle Ravenloft broke the Martikov family.  
 - The winter wolf teeth show the craft and magic of the mountain folk.  
 - The druid torturing the raven hints at deeper mysteries around the lost thing.
 
 ## Session Highlights:
 
-- Davien Martikov’s sad story and the dangers ahead.  
+- Davian Martikov’s sad story and the dangers ahead.  
 - Blasting past the brown mold with a winter wolf tooth.  
 - Veyren’s daring turn as a mouse to spy on the druid.  
 - The druid calling out to the mouse it should not have seen.

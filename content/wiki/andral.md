@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Signed a scroll asking Argynvost to end the war with Lord Von Zarovich. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
+* Signed a scroll asking Argynvost to end the war with Lord von Zarovich. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))

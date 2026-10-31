@@ -12,5 +12,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Claimed to know Rudolf Von Richten. ([Tser Pool](/posts/tser-pool/))
+* Claimed to know Rudolph van Richten. ([Tser Pool](/posts/tser-pool/))
 * Left the camp at night and was found in a tree surrounded by 12 zombies. ([Tser Pool](/posts/tser-pool/))

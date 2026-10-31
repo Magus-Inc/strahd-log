@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* The party met Stanimere near here. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* The party met Stanimir near here. ([Unwelcome Guests](/posts/unwelcome-guests/))

@@ -10,6 +10,6 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Wrote 'Help Viktor' on a frosted window at the inn. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
+* Wrote 'Help Victor' on a frosted window at the inn. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Told the party about the gallows speaker. ([Helping Victor](/posts/helping-victor/))
 * Warned the party to attack spirits near Stella. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))

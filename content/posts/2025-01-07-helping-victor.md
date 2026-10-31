@@ -1,7 +1,7 @@
 ---
 title: Helping Victor
 date: '2025-01-07T21:00:00-06:00'
-tagline: Oh, and also saving Milovaj and Heinrich
+tagline: Oh, and also saving Milivoj and Henrik
 slug: helping-victor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/helping-victor
 ---
@@ -15,9 +15,9 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Malron**
 
 **Summary:**  
-Rahadin sentenced Milivoj and Heinrich to death. Shabasta gave an impassioned speech that made him reconsider, and he left their fates to chance: Milivoj went free, and Heinrich was branded with the symbol of Castle Ravenloft.
+Rahadin sentenced Milivoj and Henrik to death. Shabasta gave an impassioned speech that made him reconsider, and he left their fates to chance: Milivoj went free, and Henrik was branded with the symbol of Castle Ravenloft.
 
-Note: The DM rolled two dice for them: a 20 for Milivoj and a 14 for Heinrich.
+Note: The DM rolled two dice for them: a 20 for Milivoj and a 14 for Henrik.
 
 Lady Fiona now holds the town, but Victor and his father still occupy the Burgomaster’s mansion. Stella and Erasmus doubt Victor’s competence, and he showed us Stella’s spirit in a mirror. Victor has been working from a spellbook to make a teleportation circle and escape the valley. It worked with rabbits. With Stella it went wrong and trapped her in the spirit realm.
 
@@ -34,7 +34,7 @@ As we left the camp, Liren heard Victor’s voice asking her to come back to him
 - **Refugee Camp:** Franz’s sad story and the harm of Morgantha’s dream pastries.
 
 **Encounters:**  
-- **Rahadin’s judgment:** Shabasta’s speech won lighter fates for Milivoj and Heinrich.  
+- **Rahadin’s judgment:** Shabasta’s speech won lighter fates for Milivoj and Henrik.  
 - **Victor:** We learned of Stella’s plight and the gallows speaker.  
 - **The refugee camp:** Franz’s story and Morgantha’s hold on him.
 
@@ -42,7 +42,7 @@ As we left the camp, Liren heard Victor’s voice asking her to come back to him
 - Some loot was shared from the hidden winter wonder session
 
 **Notable NPCs:**  
-- **Rahadin:** Sentenced Milivoj and Heinrich, then softened at Shabasta’s words.  
+- **Rahadin:** Sentenced Milivoj and Henrik, then softened at Shabasta’s words.  
 - **Lady Fiona Wachter:** Now holds the town.  
 - **Victor:** Experimenting with teleportation, trying to save Stella.  
 - **Stella:** Trapped in the spirit realm.  
@@ -52,7 +52,7 @@ As we left the camp, Liren heard Victor’s voice asking her to come back to him
 - **Bianca:** Franz’s sister, caring for him.
 
 **Plot Points:**  
-- Shabasta’s plea saved Milivoj and Heinrich.  
+- Shabasta’s plea saved Milivoj and Henrik.  
 - Victor’s teleportation experiments, and how they trapped Stella.  
 - Erasmus’ insight into the gallows speaker.  
 - Franz’s story at the refugee camp.

@@ -2,7 +2,7 @@
 title: Baron's Mansion
 type: place
 aliases:
-- Valokovitch Manor
+- Vallakovich Manor
 summary: The Baron of Vallaki's home, haunted by a spirit.
 source: Compiled from the adventure log
 ---

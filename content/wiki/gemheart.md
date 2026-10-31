@@ -10,5 +10,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* One gem was lost ten years ago, one stolen by Baba Lasaga, one taken by the druids. ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/))
+* One gem was lost ten years ago, one stolen by Baba Lysaga, one taken by the druids. ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/))
 * Was recovered by defeating Winter Splinter. ([The Whispering Wall](/posts/the-whispering-wall/))

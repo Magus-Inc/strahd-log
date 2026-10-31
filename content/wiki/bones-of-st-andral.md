@@ -10,5 +10,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Were found in a bag in Heinrich's wardrobe. ([The Quest for the Missing Bones](/posts/the-quest-for-the-missing-bones/))
-* Were given to Father Lucien to renew the ward. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))
+* Were found in a bag in Henrik's wardrobe. ([The Quest for the Missing Bones](/posts/the-quest-for-the-missing-bones/))
+* Were given to Father Lucian to renew the ward. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))

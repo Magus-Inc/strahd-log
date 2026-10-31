@@ -2,7 +2,6 @@
 title: Clovin Belview
 type: npc
 aliases:
-- Cloven
 - Clovin
 summary: A mutated member of the Belview family.
 source: Compiled from the adventure log

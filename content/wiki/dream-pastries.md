@@ -13,4 +13,4 @@ source: Compiled from the adventure log
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * A cat slept five hours after eating one; one put a wolf out of a fight. ([Dream Pies](/posts/dream-pies/))
-* A quarter of the refugees are addicted to them. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* A quarter of the refugees are addicted to them. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))

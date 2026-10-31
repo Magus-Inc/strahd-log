@@ -240,7 +240,7 @@ def test_places_keep_their_places_on_the_official_layout():
     y = {slug: v[1] for slug, v in xy.items()}
     assert x["durst-manor"] > x["gates-of-barovia"] > x["barovia"] > x["castle-ravenloft"]   # east to west
     assert x["vallaki"] < x["the-windmill"] < x["tser-crossroads"] < x["castle-ravenloft"]
-    assert x["krezk"] < x["raven-river-crossroads"] < x["tower-of-kazan"] < x["luna-river-crossroads"] < x["vallaki"]
+    assert x["krezk"] < x["raven-river-crossroads"] < x["tower-of-khazan"] < x["luna-river-crossroads"] < x["vallaki"]
     assert y["luna-river-crossroads"] < y["argynvostholt"] < y["berez"]                     # south of the crossroads
     assert x["wizard-of-wines"] < x["argynvostholt"] and y["krezk"] < y["wizard-of-wines"] < y["yester-hill"]
     assert y["tser-crossroads"] < y["tser-pool"] and y["castle-ravenloft"] < y["barovia"]

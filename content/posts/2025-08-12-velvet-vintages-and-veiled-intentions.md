@@ -15,11 +15,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ## Summary:
 We came to Castle Ravenloft in the black carriage, having solved the puzzle chest and claimed what it held: **velvet-trimmed gloves**, **wolf-trimmed cloaks** and a **chest of holding**.
 
-**Rahadin** and **Anastrasia** greeted us and ushered us into the castle’s grand halls. The air was tense and theatrical, a strange mix of elegance and dread.
+**Rahadin** and **Anastrasya** greeted us and ushered us into the castle’s grand halls. The air was tense and theatrical, a strange mix of elegance and dread.
 
 We met **Escher**, a blond man with a doubtful past, once a friend of **Doru** and now thought to have betrayed him. Aera noticed that several women dressed as brides looked plainly uncomfortable, a sign of deeper unrest.
 
-**Volenta** and **Ludmila** were there too, rounding out the eerie company. Anastrasia introduced **Sasha** and Escher with a biting remark. Sasha trembled at her words, and I sensed she might be willing to inform for us, perhaps even to spy.
+**Volenta** and **Ludmilla** were there too, rounding out the eerie company. Anastrasya introduced **Sasha** and Escher with a biting remark. Sasha trembled at her words, and I sensed she might be willing to inform for us, perhaps even to spy.
 
 A masked servant came in, shaking, his fingers cut off at the first knuckle. He offered us a **purple drink** while the vampires drank **red wine**. Then he spilled red wine on Volenta’s white dress, and there was a stir.
 
@@ -54,11 +54,11 @@ Later **Strahd** himself offered us a tour, and recommended we visit the **Amber
 ## Notable NPCs:
 
 * **Rahadin**: Strahd’s chamberlain, cold and formal.
-* **Anastrasia**: A sharp-tongued vampire who holds Sasha under her thumb.
+* **Anastrasya**: A sharp-tongued vampire who holds Sasha under her thumb.
 * **Escher**: A blond vampire, suspected of betraying Doru.
 * **Sasha**: A trembling servant, perhaps a spy, who told Zorpheus a secret.
 * **Masked Servant**: Maimed and terrified; his spilled wine set off a stir.
-* **Volenta & Ludmila**: Vampire brides, present at the reception.
+* **Volenta & Ludmilla**: Vampire brides, present at the reception.
 * **Strahd von Zarovich**: Our host, who offered a tour and cryptic advice.
 
 ## Plot Points:

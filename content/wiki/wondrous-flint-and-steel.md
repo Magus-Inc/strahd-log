@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Esmerelda used it to hide the party's camp. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
+* Ezmerelda used it to hide the party's camp. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))

@@ -25,7 +25,7 @@ As we left Barovia a flock of ravens joined us, an “unkindness”, I am told, 
 
 It was a wild fight. The scarecrows’ dreadful gaze froze Aera at once, and a wolf’s bite knocked me off my feet. But we soon turned it. Crusty sent a bolt of lightning through the wolves, and I called down the radiance of the dawn and seared them with holy light. Shabasta burned the scarecrows, who fear fire, with a bouncing orb of flame. Aera fell senseless for a moment, but Olfin woke her with a healing touch.
 
-In Vallaki, Baron Dimitri Krezkov was waiting for us at the Blue Water Inn. Desperate, and untouched by the inn’s merriment, he begged us to save his wife, Anna, from the Abbot’s gruesome demand. We agreed and set out for Krezk. We rested a short while near the Raven River crossroads, where a revenant warned us of “dark tidings” and of Vladimir Hornguard’s rage at our raid on Ravenloft.
+In Vallaki, Baron Dmitri Krezkov was waiting for us at the Blue Water Inn. Desperate, and untouched by the inn’s merriment, he begged us to save his wife, Anna, from the Abbot’s gruesome demand. We agreed and set out for Krezk. We rested a short while near the Raven River crossroads, where a revenant warned us of “dark tidings” and of Vladimir Horngaard’s rage at our raid on Ravenloft.
 
 At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made ready to climb to the Abbey, the Icon of Ravenloft, the Shard of Divinity, spoke to us mind to mind. It told us the sad history of the Abbot: a celestial sent to restore the Abbey, who fell into madness. Corrupted by Strahd’s scheming and by his own obsessive work crafting flesh to make a bride for the vampire lord, the Abbot now sees the maiming of others as a needed sacrifice for a “holy” mission. The Shard told us to ready our steel, and we steeled ourselves for what is coming.
 
@@ -35,13 +35,13 @@ At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made 
 **Village of Barovia**: Our first stop, where we rested at the Burgomaster’s mansion.  
 **Raven River Crossroads**: Where a watchful revenant gave us a solemn blessing.  
 **Village of Krezk**: Where we hurry to save Anna Krezkova from the Abbot.  
-**Blue Water Inn (Vallaki)**: Where we met an anxious Baron Dimitri Krezkov.
+**Blue Water Inn (Vallaki)**: Where we met an anxious Baron Dmitri Krezkov.
 
 ## Encounters:
 
 **The Roadside Ambush**: Six dire wolves and two scarecrows, waiting by a false corpse of Aera. All were destroyed; Aera fell but was revived; Strahd, it seems, counts us a “nuisance”.  
-**Baron Dimitri Krezkov**: A desperate plea to save his wife from a celestial executioner.  
-**The Revenant at the Bridge**: A warning that Vladimir Hornguard’s phantom warriors are watching where we go.
+**Baron Dmitri Krezkov**: A desperate plea to save his wife from a celestial executioner.  
+**The Revenant at the Bridge**: A warning that Vladimir Horngaard’s phantom warriors are watching where we go.
 
 ## Loot:
 
@@ -52,14 +52,14 @@ None this time. (We talked over the gems taken from Ravenloft and their use as o
 **Ismark the Lesser**: Burgomaster of Barovia; relieved to see Ireena’s new strength.  
 **Gertruda**: Brought home safely to the Village of Barovia.  
 **Emil**: The werewolf we rescued from the castle, still with us as we head toward the werewolf den.  
-**Baron Dimitri Krezkov**: A noble driven to despair by the Abbot’s threats.  
+**Baron Dmitri Krezkov**: A noble driven to despair by the Abbot’s threats.  
 **The Abbot**: A fallen angel in the Abbey of Saint Markovia, now a “flesh crafter” obsessed with making a bride for Strahd.
 
 ## Plot Points:
 
 * **The Abbot’s Demand**: We have until dusk tomorrow to stop the Abbot taking Anna Krezkova’s heart.
 * **Strahd’s Vengeance**: The ambush shows Strahd is going after those of us who “annoyed” him most in the castle.
-* **Vladimir Hornguard’s Rage**: The revenants of Argynvostholt know what we have done and may be planning an answer.
+* **Vladimir Horngaard’s Rage**: The revenants of Argynvostholt know what we have done and may be planning an answer.
 
 ## Session Highlights:
 

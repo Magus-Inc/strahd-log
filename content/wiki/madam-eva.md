@@ -36,4 +36,4 @@ Vistani woman that showed up in our dreams
 * Gives Strahd information, which lets certain people pass unchallenged through his domain. ([Stop Winter Splinter](/posts/stop-winter-splinter/))
 * Gave Strahd a reading before the party. ([Welcome to Krezk](/posts/welcome-to-krezk/))
 * As Katarina, wrote a farewell letter to Varushka left by the ancient oak. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
-* Stanimere is her messenger. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* Stanimir is her messenger. ([Unwelcome Guests](/posts/unwelcome-guests/))

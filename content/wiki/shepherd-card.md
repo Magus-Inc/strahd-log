@@ -3,7 +3,7 @@ title: Shepherd Card
 type: item
 aliases:
 - Four of Glyphs
-summary: A Taroka card carrying a message from St. Markovia.
+summary: A Tarokka card carrying a message from St. Markovia.
 source: Compiled from the adventure log
 ---
 

@@ -33,7 +33,7 @@ Barovia has marked her. Strahd's blood game turned her fully into a werewolf. Zo
 * Found a guide to killing vampires in the burgomaster's mansion. ([Barovia, Barovia](/posts/barovia-barovia/))
 * Pilfered two healing potions from an overpriced shop in Barovia village. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
 * Madam Eva asked her to deliver 10 gold to Blinsky's toy shop to buy something for her grandchild Arabelle. ([Tser Pool](/posts/tser-pool/))
-* Bought a wolf pelt at Zoldar's shack that turned out to be glamour weave. ([Looking for Kazan's Tower](/posts/looking-for-zoldars-tower/))
+* Bought a wolf pelt at Szoldar's shack that turned out to be glamour weave. ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/))
 * Took the Bones of St. Andral from the bag and handed them to Malron. ([The Quest for the Missing Bones](/posts/the-quest-for-the-missing-bones/))
 * Was invited to dinner by Fiona Wachter. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))
 * Refused when Strahd appeared at her window asking to be let in. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))

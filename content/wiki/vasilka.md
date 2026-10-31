@@ -1,8 +1,6 @@
 ---
 title: Vasilka
 type: npc
-aliases:
-- Vasilica
 summary: The flesh-built "perfect bride" the Abbot made for Strahd.
 source: Compiled from the adventure log
 ---

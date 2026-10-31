@@ -1,5 +1,5 @@
 ---
-title: Sergei Von Zarovich
+title: Sergei von Zarovich
 type: npc
 aliases:
 - Prince Sergei

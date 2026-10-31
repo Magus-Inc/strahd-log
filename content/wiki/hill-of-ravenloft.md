@@ -1,7 +1,7 @@
 ---
 title: Hill of Ravenloft
 type: place
-summary: Resting place of King Doestron.
+summary: Resting place of King Dostron.
 source: Compiled from the adventure log
 ---
 

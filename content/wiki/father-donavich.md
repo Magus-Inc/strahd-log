@@ -2,9 +2,7 @@
 title: Father Donavich
 type: npc
 aliases:
-- Father Donavan
-- Donavitch
-- Faher Donavich
+- Donavich
 summary: The priest of the Morninglord at Barovia village's church, father of Doru.
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/father-donavich

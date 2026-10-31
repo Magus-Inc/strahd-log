@@ -31,7 +31,7 @@ places:
   luna-river-crossroads: {xy: [350, 278], anchor: below}
   raven-river-crossroads: {xy: [220, 262], anchor: below}
   lake-baratok: {xy: [258, 214], anchor: start}
-  tower-of-kazan: {xy: [250, 202]}
+  tower-of-khazan: {xy: [250, 202]}
   krezk: {xy: [120, 232], anchor: end}
   abbey-of-saint-markovia: {xy: [133, 208], label: Abbey of St. Markovia}
   wizard-of-wines: {xy: [110, 360], anchor: start}
@@ -46,7 +46,7 @@ places:
 within:
   durst-mill: barovia
   blue-water-inn: vallaki
-  wachter-haus: vallaki
+  wachterhaus: vallaki
   blinsky-s-toy-store: vallaki
   baron-s-mansion: vallaki
   church-of-saint-andral: vallaki

@@ -1,7 +1,7 @@
 ---
 title: Revenants of Argynvostholt
 type: faction
-summary: Vladimir Hornguard's undead warriors.
+summary: Vladimir Horngaard's undead warriors.
 source: Compiled from the adventure log
 ---
 

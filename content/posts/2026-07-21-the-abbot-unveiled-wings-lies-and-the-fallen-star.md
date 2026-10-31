@@ -32,7 +32,7 @@ Note: Olfin's roll was a 23. Command word brainstorming followed. "I'm Batman" w
 
 We found the Abbot in the asylum (S15), a lightless corridor of cells whose prisoners cackle and curse behind locked doors. A handsome young man in monk’s robes stood halfway down the hall with a prayer book under his arm, scolding Vasilka, the “perfect bride” he is building for Strahd, for tending the blighted mongrelfolk on the very day of her “operation.” Behind them loomed the flesh golem we once gave a crown of flowers. The Abbot soothed Vasilka with talk of the Morning Lord’s grace and of everyone’s proper place, then turned to us: “Visitors, welcome back to the Abbey of St. Markovia. What’s your reason for being here?”
 
-Our reason was grim. In Vallaki, at the Blue Water Inn, Baron Dmitri Krezkov of Krezk had begged us to stop the Abbot, who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka. I remembered what Esmerelda told us: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed and his mind restored. We talked of luring the Abbot away from the golem, but the corridor was tight and the cells might hold allies for either side. Aera took rope from her pack, dressed it up by illusion as a new crown of flowers, and walked up and gave it to the golem.
+Our reason was grim. In Vallaki, at the Blue Water Inn, Baron Dmitri Krezkov of Krezk had begged us to stop the Abbot, who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka. I remembered what Ezmerelda told us: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed and his mind restored. We talked of luring the Abbot away from the golem, but the corridor was tight and the cells might hold allies for either side. Aera took rope from her pack, dressed it up by illusion as a new crown of flowers, and walked up and gave it to the golem.
 
 Note: Long above-the-table debate about distractions, illusions and whether a construct counts as a creature. Crusty rolled a 17 on History and learned that flesh golems understand their creator's language but cannot speak. Aera's illusion was Silent Image.
 
@@ -96,12 +96,12 @@ The Abbot, become Ethereal. He seized us, flew and dropped us, loosed rays of li
 
 **Baron Dmitri Krezkov and Anna Krezkova** (mentioned): The noble couple who lead Krezk. Dmitri found us at the Blue Water Inn in Vallaki and begged us to stop the Abbot from killing Anna and taking her heart.
 
-**Esmerelda** (mentioned): Told us the Abbot can only be cleansed by defeating him and unlocking his soul with the Icon of Dawn’s Grace.
+**Ezmerelda** (mentioned): Told us the Abbot can only be cleansed by defeating him and unlocking his soul with the Icon of Dawn’s Grace.
 
 ## Plot Points:
 
 * The Abbot means to kill Anna Krezkova tonight and give her heart to Vasilka, Strahd’s intended bride.
-* As Esmerelda said, defeating the Abbot and using the Icon of Dawn’s Grace on him may cleanse his corruption and restore his mind.
+* As Ezmerelda said, defeating the Abbot and using the Icon of Dawn’s Grace on him may cleanse his corruption and restore his mind.
 * The icon’s warning came true: the Morning Lord’s rays flared brighter in the face of darkness.
 * The flesh golem is our ally now. We already talk of taking it with us across Barovia.
 * The freed mongrelfolk may not trust us; I doubt they believed the lie about Cyrus.
