@@ -437,11 +437,13 @@ def badge_site(tmp_path):
     (wiki_dir / "aera.md").write_text("---\ntitle: Aera\ntype: character\nsummary: Wood-elf Rogue\n---\n\n"
                                       "![Aera](/images/aera.jpg)\n\n![Aera again](/images/aera-2.jpg)\n", encoding="utf-8")
     (wiki_dir / "grom.md").write_text("---\ntitle: Grom\ntype: character\n---\n\nNo art yet.\n", encoding="utf-8")
+    (wiki_dir / "solo.md").write_text("---\ntitle: Solo\ntype: npc\n---\n\n![Solo](/images/solo.jpg)\n", encoding="utf-8")
     (wiki_dir / "lost.md").write_text("---\ntitle: Lost\ntype: npc\n---\n\n![Gone](/images/gone.jpg)\n", encoding="utf-8")
     static = root / "static"
     (static / "images").mkdir(parents=True)
     Image.new("RGB", (800, 1000), "red").save(static / "images" / "aera.jpg")
     Image.new("RGB", (800, 1000), "blue").save(static / "images" / "aera-2.jpg")
+    Image.new("RGB", (600, 400), "green").save(static / "images" / "solo.jpg")
     for name, count in (("2026-01-01-old", 2), ("2026-03-01-new", 3)):
         (static / "slides" / name).mkdir(parents=True)
         for i in range(count):
@@ -519,7 +521,7 @@ def test_search_and_map_pages_draw_the_badges():
 
 def test_badges_are_styled_for_phone_and_desktop():
     css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
-    for selector in (".slides-tag", ".pic-thumb", ".pic-count", ".wiki-card.has-pic"):
+    for selector in (".slides-tag", ".pic-badge", ".pic-thumb", ".pic-count", ".wiki-card.has-pic"):
         assert selector in css
 
 
@@ -543,5 +545,20 @@ def test_badge_icons_stay_small_even_without_the_stylesheet():
 def test_tapping_a_thumbnail_opens_the_page():
     """The thumbnail sits over the card's whole-card link, so it must let taps through to it."""
     css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
-    rule = re.search(r"\n\.pic-thumb \{([^}]*)\}", css).group(1)
+    rule = re.search(r"\n\.pic-badge \{([^}]*)\}", css).group(1)
     assert "pointer-events: none" in rule
+
+
+def test_picture_count_shows_under_the_thumbnail_only_for_two_or_more(badge_site):
+    index = read(badge_site / "wiki" / "index.html")
+    aera = card_for(index, "Aera")
+    thumb_box = re.search(r'<span class="pic-thumb">(.*?)</span>', aera, re.S).group(1)
+    assert "pic-count" not in thumb_box  # not over the picture
+    assert re.search(r"<span class=\"pic-thumb\">.*?</span><span class=\"pic-count\">.*?2 pictures</span>", aera, re.S)
+    solo = card_for(index, "Solo")
+    assert 'class="pic-thumb"' in solo and "pic-count" not in solo
+
+
+def test_search_shows_the_picture_count_only_for_two_or_more():
+    search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
+    assert "h.e.n > 1" in search
