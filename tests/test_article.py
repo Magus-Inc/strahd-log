@@ -84,6 +84,15 @@ def test_two_decks_sit_one_after_the_other_with_a_vote_each():
     assert 'class="decks vote-group"' in html
 
 
+def test_each_deck_can_carry_a_short_subheading_on_its_style():
+    decks = [article.Deck("The Larders of Ill Omen", "larders", ["slides/x/01.webp"], note="The quick recap"),
+             article.Deck("Drowning Shadows", "drowning", ["slides/x/b/01.webp"])]
+    html = article.add_decks(article.wrap_glance(POST), decks)
+    assert html.index('<p class="deck-label">The Larders of Ill Omen</p>') \
+        < html.index('<p class="deck-note">The quick recap</p>') < html.index('data-vote="larders"')
+    assert html.count('class="deck-note"') == 1
+
+
 def test_one_deck_has_no_vote():
     html = article.add_decks(article.wrap_glance(POST), [article.Deck("", "main", ["slides/x/01.webp"])])
     assert html == article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp"])
