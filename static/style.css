@@ -217,16 +217,23 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 /* Map: our drawing underneath, places and the red breadcrumb trail on top. */
 main.wide { max-width: 80rem; }
 .map-figure { position: relative; margin: 1rem 0 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #e6dcc0; box-shadow: var(--shadow); }
-.map { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.map { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 .map.zoomed { cursor: grab; touch-action: none; }
 .map .pin { cursor: pointer; }
-.map .pin-dot { fill: #2b1d12; stroke: #f4ead2; stroke-width: 1.5; }
+/* A place's picture is a link too: under the mouse, keyboard focus, or while its card is open it gets a
+   solid red edge and a wide red halo (Chris: gold was lost on the parchment). No focus outline box. */
+.map .sprite { cursor: pointer; --glow: #c8213f; outline: none; }
+.map .sprite:hover image, .map .sprite:focus-visible image, .map .sprite.chosen image {
+  filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+/* No dots: the sprites mark the places. The pin is an invisible tap target with no ring (Chris). */
+.map .pin-dot { fill: transparent; stroke: none; }
+.map .pin, .map .js-pin { outline: none; }
+.map .pin.under-sprite { pointer-events: none; }
 /* Zoomed in, markers, pins and names scale by --mark (set by the map page) so they stay small. Each
    scales about its own point, given inline in map units: Safari on iPhone placed names wrongly with
    a fill-box transform box, so they drifted away from their places as the map zoomed. */
 .map .marker, .map .pin-dot, .map .labels text { transform: scale(var(--mark, 1)); transform-box: view-box; }
 .map .labels text { font: italic 600 13px var(--serif); fill: #2b1d12; stroke: #f1e7cd; stroke-width: 3.5px; paint-order: stroke; stroke-linejoin: round; }
-.map .pin:hover .pin-dot, .map .pin:focus .pin-dot { fill: var(--accent); }
 
 /* Crumb widths and dashes scale by --mark too, so the trail stays a fine line when zoomed in. */
 .map .crumb { --k: var(--mark, 1); fill: none; stroke: #b3122e; stroke-width: calc(1.7px * var(--k)); stroke-dasharray: calc(1.5px * var(--k)) calc(4.5px * var(--k)); stroke-linecap: round; opacity: 0.9; }
@@ -250,7 +257,15 @@ main.wide { max-width: 80rem; }
 .trail-range input { vertical-align: middle; width: 11rem; }
 .trail-range output { color: var(--text); font-weight: 600; }
 .trail-now { margin: 0; flex-basis: 100%; min-height: 1.6em; color: var(--text); }
-.place-panel { margin-top: 1rem; max-width: 40rem; }
+/* The place card floats over the map so it is seen without scrolling: a sheet up from the bottom on
+   phones, a card in the corner on wider screens. The map and its zoom stay as they were. */
+.place-panel { position: fixed; z-index: 50; left: 0; right: 0; bottom: 0; margin: 0; max-height: 55vh; overflow-y: auto;
+  border-radius: 14px 14px 0 0; border: 1.5px solid rgba(224, 74, 99, 0.75);
+  /* Chris: it needs to stand out from the page: a light red edge, a soft red glow and a dark shadow. */
+  box-shadow: 0 0 0 1px rgba(224, 74, 99, 0.25), 0 0 22px rgba(224, 74, 99, 0.45), 0 10px 32px rgba(0, 0, 0, 0.6); padding-bottom: calc(1rem + env(safe-area-inset-bottom)); }
+@media (min-width: 760px) {
+  .place-panel { left: auto; right: 1.2rem; bottom: 1.2rem; width: 24rem; max-height: 70vh; border-radius: 12px; }
+}
 .place-panel h2 { margin: 0.2rem 0 0.3rem; font-size: 1.35rem; }
 .place-close { position: absolute; top: 0.5rem; right: 0.7rem; background: none; border: 0; color: var(--muted); font-size: 1.6rem; cursor: pointer; }
 .trail-list { margin-top: 3rem; max-width: 50rem; }

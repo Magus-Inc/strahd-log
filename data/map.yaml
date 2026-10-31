@@ -20,7 +20,10 @@ places:
   # and came to the gates before they reached the village.
   durst-manor: {xy: [968, 345], anchor: end}
   gates-of-barovia: {xy: [930, 398], label: Gates, anchor: end}
-  tser-pool: {xy: [670, 472], anchor: end}
+  # Chris: a different place from the gates above, on the road toward Castle Ravenloft.
+  west-gates-of-barovia: {xy: [585, 335], label: West Gates, anchor: end}
+  # The Vistani camp is on dry land just south of the pool.
+  tser-pool: {xy: [690, 530], anchor: end}
   castle-ravenloft: {xy: [720, 398]}
   tser-crossroads: {xy: [610, 360], label: Tser Pool Crossroads, anchor: end}
   the-windmill: {xy: [474, 300], label: Old Bonegrinder, anchor: below}
@@ -30,8 +33,11 @@ places:
   # Raven River crossroads (R) further west, where the Krezk, Tsolenka and Lake Baratok roads meet.
   luna-river-crossroads: {xy: [350, 278], anchor: below}
   raven-river-crossroads: {xy: [220, 262], anchor: below}
-  lake-baratok: {xy: [258, 214], anchor: start}
+  # The name sits on the water; the pin stays where the trail forks by the lake.
+  lake-baratok: {xy: [258, 214], label_at: [227, 176]}
   tower-of-khazan: {xy: [250, 202]}
+  # The werewolf den: a cave in the hills on the west side of Lake Baratok (Z on the official map).
+  lake-baratok-cave: {xy: [192, 172], label: Werewolf Den, anchor: end}
   krezk: {xy: [120, 232], anchor: end}
   abbey-of-saint-markovia: {xy: [133, 208], label: Abbey of St. Markovia}
   wizard-of-wines: {xy: [110, 360], anchor: start}
@@ -41,7 +47,7 @@ places:
   argynvostholt: {xy: [330, 375], anchor: start}
   berez: {xy: [330, 450], label: Ruins of Berez, anchor: end}
   tsolenka-pass: {xy: [240, 578], anchor: start}
-  amber-temple: {xy: [340, 638]}
+  amber-temple: {xy: [380, 640]}
 
 within:
   durst-mill: barovia
@@ -65,4 +71,37 @@ within:
   drowning-cells: castle-ravenloft
   hall-of-niches: abbey-of-saint-markovia
   false-meadow: abbey-of-saint-markovia
-  lake-baratok-cave: lake-baratok
+
+# Hand-drawn pictures laid on the map (static/images/map/sprites/<image>.webp, cut by tools/make_sprites.py).
+# name: {image: file stem, xy: [x, y] centre of the picture, width: in map units; the height
+# follows the picture's shape, place: the place it shows and links to (default: the name; null for
+# none)}. Move them with `just map-edit` (drag, or scroll to resize).
+sprites:
+  castle-ravenloft: {image: castle-ravenloft, xy: [720, 385], width: 80}
+  barovia: {image: barovia, xy: [780, 440], width: 64}
+  vallaki: {image: vallaki, xy: [400, 246], width: 70}
+  krezk: {image: krezk, xy: [112, 228], width: 54}
+  abbey-of-saint-markovia: {image: abbey-of-saint-markovia, xy: [138, 198], width: 40}
+  the-windmill: {image: the-windmill, xy: [474, 290], width: 44}
+  tower-of-khazan: {image: tower-of-khazan, xy: [258, 192], width: 30}
+  werewolf-den: {image: werewolf-den, xy: [190, 164], width: 36, place: lake-baratok-cave}
+  argynvostholt: {image: argynvostholt, xy: [330, 366], width: 50}
+  wizard-of-wines: {image: wizard-of-wines, xy: [104, 352], width: 44}
+  yester-hill: {image: yester-hill, xy: [70, 480], width: 44}
+  durst-manor: {image: durst-manor, xy: [968, 334], width: 32}
+  tser-pool: {image: tser-pool, xy: [692, 526], width: 42}
+  gates-west: {image: gates, xy: [597, 340], width: 30, place: west-gates-of-barovia}
+  gates-east: {image: gates, xy: [930, 388], width: 30, place: gates-of-barovia}
+  berez: {image: berez, xy: [322, 444], width: 40}
+  amber-temple: {image: amber-temple, xy: [384, 630], width: 40}
+  whispering-wall: {image: whispering-wall, xy: [44, 514], width: 34}
+  # A signpost at each crossroads with a wiki page.
+  signpost-luna-river: {image: signpost, xy: [342, 262], width: 24, place: luna-river-crossroads}
+  signpost-raven-river: {image: signpost, xy: [228, 246], width: 24, place: raven-river-crossroads}
+  signpost-tser-pool: {image: signpost, xy: [624, 346], width: 24, place: tser-crossroads}
+  # A bridge wherever a road crosses water (see test_roads_cross_water_only_where_the_official_map_does).
+  bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22, place: null}
+  bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22, place: null}
+  bridge-tser-falls: {image: bridge, xy: [600, 405], width: 22, place: null}
+  bridge-ivlis: {image: bridge, xy: [726.8, 502], width: 22, place: null}
+  bridge-luna-lake: {image: bridge, xy: [245, 581.7], width: 22, place: null}

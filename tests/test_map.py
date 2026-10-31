@@ -1,3 +1,4 @@
+import math
 import re
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -104,13 +105,23 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     write(root / "content" / "wiki" / "vallaki.md", "---\ntitle: Vallaki\ntype: place\n---\n")
     write(root / "content" / "wiki" / "blue-water-inn.md", "---\ntitle: Blue Water Inn\ntype: place\n---\n")
     write(root / "data" / "map.yaml", "places:\n  barovia: {xy: [780, 450], names: [Village of Barovia]}\n  vallaki: {xy: [400, 270]}\n"
-                                      "within:\n  blue-water-inn: vallaki\n")
+                                      "within:\n  blue-water-inn: vallaki\n"
+                                      "sprites:\n  vallaki: {image: vallaki, xy: [400, 260], width: 60}\n")
     out = root / "public"
     build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
 
     assert (out / "map" / "barovia.svg").is_file()
     page_html = (out / "map" / "index.html").read_text(encoding="utf-8")
     assert 'href="/strahd-log/map/barovia.svg"' in page_html and 'class="crumb' in page_html
+    # The parchment lies under the drawing, and the sprites over it, under the trail and the pins.
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert page_html.index("images/map/parchment.jpg") < page_html.index("map/barovia.svg") \
+        < page_html.index('href="/strahd-log/images/map/sprites/vallaki.webp" x="370.0"') < page_html.index('class="trail"')
+    assert (out / "images" / "map" / "sprites" / "vallaki.webp").is_file()
+    # A place's picture is its link: it opens the place like its pin, and glows red on hover.
+    assert re.search(r'<a class="sprite js-pin" href="/strahd-log/wiki/vallaki/" data-place="vallaki">\s*<title>Vallaki</title>\s*'
+                     r'<image href="/strahd-log/images/map/sprites/vallaki.webp"', page_html)
+    assert re.search(r"\.map \.sprite:hover image[^{]*\{[^}]*drop-shadow\([^)]*var\(--glow", css)
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
@@ -127,8 +138,31 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert 'class="pin-dot" style="transform-origin: ' in page_html and '" style="transform-origin: ' in page_html
     assert "transform-box: fill-box;" not in (ROOT / "static" / "style.css").read_text(encoding="utf-8")
     # Place names link to their wiki pages (every place on the map has one).
-    assert 'wiki/vallaki/" tabindex="-1"><text' in page_html
+    # On the map page a name opens the same place card as its picture and pin (Chris: one predictable
+    # action); on a post's small map it links straight to the wiki page.
+    assert 'wiki/vallaki/" class="js-pin" data-place="vallaki" tabindex="-1"><text' in page_html
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    # A session's map stops at that session: no crumbs from later sessions.
+    first = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert 'data-i="1"' in first and 'data-i="2"' not in first and 'current" data-i="2"' in second
+    # No black dots: the sprites show where places are. Each pin stays as an invisible, bigger tap
+    # target with no ring.
+    assert re.search(r"\.map \.pin-dot \{[^}]*fill: transparent", css) and 'r="11" class="pin-dot"' in page_html
+    # The place card floats over the map (a bottom sheet on phones), so it is seen without scrolling.
+    assert re.search(r"\.place-panel \{[^}]*position: fixed[^}]*bottom: 0", css) and "scrollIntoView" not in page_html
+    assert '"Escape"' in page_html
+    # The card stands out from the page: a light red edge and a red glow.
+    assert re.search(r"\.place-panel \{[^}]*border: 1\.5px solid rgba\(224, 74, 99[^}]*box-shadow:[^;]*0 0 22px rgba\(224, 74, 99", css)
+    # Chris: no red ring when a place is clicked, and a red glow (gold was lost on the parchment) strong enough to see: a solid red
+    # edge (zero-blur shadows) plus a wide halo, also kept on the place whose card is open.
+    assert ".pin:focus .pin-dot" not in css and "stroke: var(--accent)" not in css.split(".map .pin-dot")[1].split("/* Crumb")[0]
+    assert re.search(r"\.map \.sprite\.chosen image[^{]*\{[^}]*drop-shadow\(1px 0 0 var\(--glow\)\)[^}]*drop-shadow\(0 0 6px", css)
+    assert re.search(r"\.map \.pin\.under-sprite \{ pointer-events: none", css)
+    assert "classList.add(\"chosen\")" in page_html and "--glow: #c8213f" in css
+    # Dragging the map never selects (highlights) place names.
+    assert re.search(r"\.map \{[^}]*user-select: none", css) and re.search(r"\.map \{[^}]*-webkit-user-select: none", css)
+    assert 'wiki/vallaki/" tabindex="-1"><text' in second and 'class="sprite js-pin"' not in second
     assert "Where we were" in second and 'class="crumb current"' in second and 'class="marker current"' in second
     inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
     assert "On the map" in inn and 'data-place="vallaki"' in inn
@@ -168,6 +202,8 @@ def test_trail_passes_the_east_gate_only_once():
     import yaml
     sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
     assert [stem for stem, stops in sessions.items() if "gates-of-barovia" in (stops or [])] == ["2024-02-13-barovia-barovia"]
+    # The black carriage waited at the west gates, on the way to the castle.
+    assert "west-gates-of-barovia" in sessions["2025-07-29-the-oath-the-spy-and-the-silver-moon"]
 
 
 def test_answered_sessions_use_the_new_places():
@@ -262,7 +298,7 @@ def test_the_trail_past_tser_pool_is_drawn_but_never_walked():
         assert inner and not any(p in graph for p in inner)
     assert "stroke-dasharray" in barovia_map.draw_base()
     # From the Tser Pool camp to the fork below the falls, the party goes back round by the road.
-    path = barovia_map.route(graph, (670, 472), (600, 405))
+    path = barovia_map.route(graph, (690, 530), (600, 405))
     assert (680, 555) in path
 
 
@@ -272,3 +308,211 @@ def test_scale_bar_reads_in_hours_that_fit_the_roads():
     assert abs(statistics.median(per_hour) - barovia_map.HOUR) <= 4
     svg = barovia_map.draw_base()
     assert "About 5 hours on foot" in svg and "Miles" not in svg
+
+
+# --- the hand-drawn look: one water network, roads that only cross it, sprites -------------------
+
+def touches(point, line, within=3.0):
+    return barovia_map.near_line(point, line, within)
+
+
+def test_water_is_one_network_like_the_official_and_old_maps():
+    lakes, rivers = barovia_map.LAKES, barovia_map.RIVERS
+
+    def ends_somewhere(name, end):
+        x, y = end
+        return (x <= 2 or x >= barovia_map.W - 2 or y <= 14
+                or any(touches(end, shore + shore[:1], 14) or barovia_map.inside(end, shore) for shore in lakes.values())
+                or any(touches(end, line) for other, line in rivers.items() if other != name))
+
+    for name, line in rivers.items():
+        assert ends_somewhere(name, line[0]) and ends_somewhere(name, line[-1]), name
+
+    # Both sources: Tser Falls is fed by a branch of the Luna River, not a spring, and Tser Pool
+    # drains east as the River Ivlis.
+    branch = rivers["Tser Falls"]
+    assert touches(branch[0], rivers["Luna River"])
+    assert touches(branch[-1], rivers["Below the falls"]) or branch[-1] == rivers["Below the falls"][0]
+    assert barovia_map.inside(rivers["Below the falls"][-1], lakes["Tser Pool"]) or \
+        touches(rivers["Below the falls"][-1], lakes["Tser Pool"] + lakes["Tser Pool"][:1], 14)
+    assert touches(rivers["Ivlis River"][0], lakes["Tser Pool"] + lakes["Tser Pool"][:1], 14)
+    # Two ponds sit in the hills along the branch, as on both maps.
+    assert len([n for n in lakes if n.startswith("Hill pond")]) == 2
+
+
+def test_roads_and_trails_only_cross_water_never_run_along_it():
+    roads = {**barovia_map.ROADS, **barovia_map.TRACKS, **barovia_map.UNUSED_TRACKS}
+    for road, line in roads.items():
+        for river, water in barovia_map.RIVERS.items():
+            close = 0.0
+            for a, b in zip(line, line[1:]):
+                steps = max(int(math.dist(a, b)), 1)
+                for k in range(steps):
+                    p = (a[0] + (b[0] - a[0]) * k / steps, a[1] + (b[1] - a[1]) * k / steps)
+                    close += barovia_map.near_line(p, water, 7)
+            assert close < 16, f"{road} runs along {river} for about {close:.0f} units"
+        for lake, shore in barovia_map.LAKES.items():
+            assert not any(barovia_map.inside(p, shore) for p in line), f"{road} goes into {lake or 'a pond'}"
+
+
+def test_tser_pool_camp_sits_south_of_the_pool_on_dry_land():
+    import yaml
+    xy = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["places"]["tser-pool"]["xy"]
+    pool = barovia_map.LAKES["Tser Pool"]
+    assert not barovia_map.inside(tuple(xy), pool)
+    assert xy[1] > max(y for _, y in pool)
+
+
+def test_amber_temple_trail_climbs_into_the_mountains_for_about_an_hour_and_a_half():
+    line = barovia_map.TRACKS["Amber Temple trail"]
+    hours = barovia_map.path_length(line) / barovia_map.HOUR
+    assert 1.2 <= hours <= 2.0
+    top = line[-1]
+    assert any(math.dist(top, centre) <= radius for centre, radius, _, _ in barovia_map.MOUNTAINS)
+
+
+def test_sprites_load_with_their_sizes_and_clear_the_woods(tmp_path):
+    from PIL import Image
+    sprite_dir = tmp_path / "sprites"
+    sprite_dir.mkdir()
+    Image.new("RGBA", (200, 100)).save(sprite_dir / "keep.webp")
+    path = write(tmp_path / "map.yaml", "sprites:\n  # the castle\n  castle: {image: keep, xy: [720, 400], width: 80}\n")
+    sprites = barovia_map.load_sprites(path, sprite_dir)
+    assert [(s.name, s.image, s.x, s.y, s.width, s.height, s.place) for s in sprites] == [("castle", "keep", 720, 400, 80, 40, "castle")]
+    tower = barovia_map.load_sprites(write(tmp_path / "t.yaml", "sprites:\n  w: {image: keep, xy: [1, 2], width: 9, place: tower}\n"
+                                           "  b: {image: keep, xy: [1, 2], width: 9, place: null}\n"), sprite_dir)
+    assert [s.place for s in tower] == ["tower", None]
+    with pytest.raises(ValueError, match="no sprite image"):
+        barovia_map.load_sprites(write(tmp_path / "bad.yaml", "sprites:\n  x: {image: nope, xy: [1, 2], width: 9}\n"),
+                                 sprite_dir)
+    svg = barovia_map.draw_base(sprites)
+    assert svg == barovia_map.draw_base(sprites)
+    trees = [tuple(map(float, m)) for m in re.findall(r'class="tree" data-xy="([\d.]+),([\d.]+)"', svg)]
+    assert trees and not any(math.dist(t, (720, 400)) < 30 for t in trees)
+
+
+def test_every_real_sprite_has_its_image():
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    names = {s.name for s in sprites}
+    assert {"castle-ravenloft", "vallaki", "gates-west", "gates-east", "tser-pool", "amber-temple"} <= names
+
+
+def test_sprite_editor_rewrites_one_line_and_keeps_comments():
+    import map_editor
+    text = ("places:\n  vallaki: {xy: [400, 250]}\n\nsprites:\n  # Vallaki, walls and all\n"
+            "  vallaki: {image: vallaki, xy: [400, 240], width: 60}\n  castle: {image: c, xy: [1, 2], width: 9}\n")
+    out = map_editor.move_sprite(text, "vallaki", (412.46, 236.2), 72.04)
+    assert out == text.replace("xy: [400, 240], width: 60", "xy: [412.5, 236.2], width: 72")
+    with pytest.raises(KeyError):
+        map_editor.move_sprite(text, "nowhere", (1, 2), 3)
+
+
+def crossings(line, water):
+    found = []
+    for p1, p2 in zip(line, line[1:]):
+        for p3, p4 in zip(water, water[1:]):
+            d = (p2[0] - p1[0]) * (p4[1] - p3[1]) - (p2[1] - p1[1]) * (p4[0] - p3[0])
+            if not d:
+                continue
+            t = ((p3[0] - p1[0]) * (p4[1] - p3[1]) - (p3[1] - p1[1]) * (p4[0] - p3[0])) / d
+            u = ((p3[0] - p1[0]) * (p2[1] - p1[1]) - (p3[1] - p1[1]) * (p2[0] - p1[0])) / d
+            if 0 <= t <= 1 and 0 <= u <= 1:
+                found.append((p1[0] + t * (p2[0] - p1[0]), p1[1] + t * (p2[1] - p1[1])))
+    return found
+
+
+def test_roads_cross_water_only_where_the_official_map_does():
+    # Read off the official map and the old Obsidian Portal map (both agree): the Old Svalich Road
+    # bridges the Luna at the Luna River crossroads and the Raven River between the Raven River
+    # crossroads and Krezk; the loop road crosses the Tser Falls water at the falls; the road from the
+    # village to the River Ivlis crossroads bridges the Ivlis; the road past Tsolenka Pass crosses the
+    # Luna where it runs into Luna Lake. The trail past Tser Pool meets the road on the falls bridge.
+    rivers = {name: ("Tser Falls" if name == "Below the falls" else name) for name in barovia_map.RIVERS}
+    roads = {**barovia_map.ROADS, **barovia_map.TRACKS, **barovia_map.UNUSED_TRACKS}
+    found = {}
+    for road, line in roads.items():
+        for river, water in barovia_map.RIVERS.items():
+            for point in crossings(line, water):
+                found.setdefault((road, rivers[river]), []).append(point)
+    assert set(found) == {
+        ("Old Svalich Road (the lake shore)", "Luna River"),
+        ("Old Svalich Road (west)", "Raven River"),
+        ("The loop past Tser Falls", "Tser Falls"),
+        ("Village to the Ivlis crossroads", "Ivlis River"),
+        ("Amber Temple road", "Luna River"),
+        ("Tser Pool trail (past the pool)", "Tser Falls"),
+    }
+    # The Luna crossing is at the Luna River crossroads, and every crossing has its bridge.
+    luna = found[("Old Svalich Road (the lake shore)", "Luna River")][0]
+    assert math.dist(luna, (350, 278)) < 10
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    bridges = [(s.x, s.y) for s in sprites if s.image == "bridge"]
+    for (road, river), points in found.items():
+        for point in points:
+            assert any(math.dist(point, b) < 10 for b in bridges), f"no bridge where {road} crosses {river}"
+
+
+def test_sprite_cutting_keeps_the_drawing_solid_and_fades_the_edge():
+    from PIL import Image, ImageDraw
+    import make_sprites
+    cell = Image.new("RGB", (120, 120), "white")
+    ImageDraw.Draw(cell).rectangle((30, 30, 90, 90), fill=(90, 70, 50))
+    sprite = make_sprites.cut(cell)
+    alpha = sprite.getchannel("A")
+    w, h = sprite.size
+    assert alpha.getpixel((0, 0)) == 0 and alpha.getpixel((w // 2, h // 2)) == 255
+    edge = [alpha.getpixel((x, h // 2)) for x in range(w // 2)]
+    assert any(0 < a < 255 for a in edge) or edge.count(0) > 1   # a dithered edge, not a hard cut
+    assert set(make_sprites.SHEETS) == {p.name for p in (ROOT / "tools" / "sprite_sheets").iterdir()}
+
+
+def test_werewolf_den_sits_west_of_lake_baratok_and_the_lake_is_named_on_the_water():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, parent = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    den, lake = places["lake-baratok-cave"], barovia_map.LAKES["Lake Baratok"]
+    assert den.title == "Werewolf Den" and den.x < min(x for x, _ in lake) and parent["lake-baratok-cave"] == "lake-baratok-cave"
+    assert barovia_map.inside(places["lake-baratok"].label_xy, lake)
+    # The den's sessions stop at the den, not at the lake.
+    visits = barovia_map.load_visits(ROOT / "data" / "trail.yaml", places)
+    assert visits["2025-05-06-echoes-of-the-black-terro"] == ["lake-baratok-cave"]
+
+
+def test_a_place_can_put_its_label_at_a_given_spot(tmp_path):
+    path = write(tmp_path / "map.yaml", "places:\n  vallaki: {xy: [400, 270], label_at: [410, 240]}\n")
+    places, _ = barovia_map.load_places(path, PAGES)
+    assert places["vallaki"].label_xy == (410, 240) and places["vallaki"].text_anchor == "middle"
+
+
+def test_every_real_sprite_links_to_a_real_place_or_none():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    assert all(s.place in places for s in sprites if s.place)
+    assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"}
+
+
+def test_every_crossroads_with_a_wiki_page_has_a_signpost():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    crossroads = {slug for slug in places if "crossroads" in slug}
+    assert crossroads == {s.place for s in sprites if s.image == "signpost"}
+    for s in sprites:
+        if s.image == "signpost":
+            assert math.dist((s.x, s.y), (places[s.place].x, places[s.place].y)) < 25
+
+
+def test_west_and_east_gates_are_separate_places():
+    # Chris: the gates near Castle Ravenloft and the gates the party walked through after Durst Manor
+    # are different places, each with its own wiki page, pin and picture.
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    sprites = {s.name: s for s in barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")}
+    assert sprites["gates-east"].place == "gates-of-barovia" and sprites["gates-west"].place == "west-gates-of-barovia"
+    assert places["west-gates-of-barovia"].x < places["castle-ravenloft"].x < places["gates-of-barovia"].x
+    east = (ROOT / "content" / "wiki" / "gates-of-barovia.md").read_text(encoding="utf-8")
+    west = (ROOT / "content" / "wiki" / "west-gates-of-barovia.md").read_text(encoding="utf-8")
+    assert "black carriage" in west and "black carriage" not in east
+    assert "barovia-barovia" in east
+    # The map no longer paints a bare "Gates of Barovia" name by the west gates; the pin's label names them.
+    assert "Gates of Barovia" not in [name for name, *_ in barovia_map.LABELS]

@@ -39,3 +39,11 @@ build:
 # Build, then serve public/ at http://localhost:8000 (Ctrl+C to stop)
 serve port="8000":
     {{python}} build.py --serve --port {{port}}
+
+# Drag the map's sprites into place in your browser; each drop saves to data/map.yaml
+map-edit port="8001":
+    {{python}} tools/map_editor.py {{port}}
+
+# Re-cut the map sprites from tools/sprite_sheets/ into static/images/map/sprites/
+map-sprites:
+    {{python}} tools/make_sprites.py
