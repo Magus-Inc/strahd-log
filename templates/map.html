@@ -6,7 +6,7 @@
     <header class="page-head">
       <p class="eyebrow">The land of mists</p>
       <h1>Map of Barovia</h1>
-      <p class="lede">The red breadcrumbs follow the roads the party took, session by session. Tap a place for its wiki page and every session there; tap a numbered crumb to read that session.</p>
+      <p class="lede">The red breadcrumbs follow the roads the party took, session by session. Tap a place to see every session there (its name in the card opens its wiki page); tap a numbered crumb to read that session.</p>
     </header>
     <div class="map-controls">
       <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
@@ -91,10 +91,17 @@
               (s.n ? ' <span class="slides-tag">' + SLIDES_ICON + s.n + (s.n === 1 ? " slide" : " slides") + "</span>" : "") + "</li>"; }).join("")
             : '<li class="muted">No session has stopped here yet.</li>';
           panel.hidden = false;
-          panel.scrollIntoView({block: "nearest"});
+          choose(pin.getAttribute("data-place"));
         });
       });
-      panel.querySelector(".place-close").addEventListener("click", function () { panel.hidden = true; });
+      // The place whose card is open keeps its glow until the card closes.
+      function choose(slug) {
+        svg.querySelectorAll(".sprite.chosen").forEach(function (s) { s.classList.remove("chosen"); });
+        if (slug) svg.querySelectorAll('.sprite[data-place="' + slug + '"]').forEach(function (s) { s.classList.add("chosen"); });
+      }
+      function closePanel() { panel.hidden = true; choose(null); }
+      panel.querySelector(".place-close").addEventListener("click", closePanel);
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
 
       // Zooming and panning, all with our own few lines (no library):
       //  - buttons: + / - / back to the whole map;

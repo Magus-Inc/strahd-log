@@ -93,6 +93,10 @@ sprites:
   berez: {image: berez, xy: [322, 444], width: 40}
   amber-temple: {image: amber-temple, xy: [384, 630], width: 40}
   whispering-wall: {image: whispering-wall, xy: [44, 514], width: 34}
+  # A signpost at each crossroads with a wiki page.
+  signpost-luna-river: {image: signpost, xy: [342, 262], width: 24, place: luna-river-crossroads}
+  signpost-raven-river: {image: signpost, xy: [228, 246], width: 24, place: raven-river-crossroads}
+  signpost-tser-pool: {image: signpost, xy: [624, 346], width: 24, place: tser-crossroads}
   # A bridge wherever a road crosses water (see test_roads_cross_water_only_where_the_official_map_does).
   bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22, place: null}
   bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22, place: null}

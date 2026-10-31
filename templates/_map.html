@@ -41,9 +41,11 @@
 {% endfor %}
     </g>
 {% endif %}
+    {# A pin under a place's picture lets clicks through, so the picture itself takes the hover and glows. #}
     <g class="pins">
+{% set drawn = map_sprites | map(attribute="place") | list %}
 {% for p in places %}
-      <a class="pin{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
+      <a class="pin{% if p.slug in drawn %} under-sprite{% endif %}{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
         <title>{{ p.title }}{% if p.sessions %}: {{ p.sessions | length }} session{{ "s" if p.sessions | length != 1 }}{% endif %}</title>
         <circle cx="{{ p.x }}" cy="{{ p.y }}" r="11" class="pin-dot" style="transform-origin: {{ p.x }}px {{ p.y }}px"/>
       </a>

@@ -118,10 +118,10 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert page_html.index("images/map/parchment.jpg") < page_html.index("map/barovia.svg") \
         < page_html.index('href="/strahd-log/images/map/sprites/vallaki.webp" x="370.0"') < page_html.index('class="trail"')
     assert (out / "images" / "map" / "sprites" / "vallaki.webp").is_file()
-    # A place's picture is its link: it opens the place like its pin, and glows gold on hover.
+    # A place's picture is its link: it opens the place like its pin, and glows red on hover.
     assert re.search(r'<a class="sprite js-pin" href="/strahd-log/wiki/vallaki/" data-place="vallaki">\s*<title>Vallaki</title>\s*'
                      r'<image href="/strahd-log/images/map/sprites/vallaki.webp"', page_html)
-    assert re.search(r"\.map \.sprite:hover image[^{]*\{[^}]*drop-shadow\([^)]*var\(--gold", css)
+    assert re.search(r"\.map \.sprite:hover image[^{]*\{[^}]*drop-shadow\([^)]*var\(--glow", css)
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
@@ -147,8 +147,17 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
     assert 'data-i="1"' in first and 'data-i="2"' not in first and 'current" data-i="2"' in second
     # No black dots: the sprites show where places are. Each pin stays as an invisible, bigger tap
-    # target that only shows a ring on hover or keyboard focus.
+    # target with no ring.
     assert re.search(r"\.map \.pin-dot \{[^}]*fill: transparent", css) and 'r="11" class="pin-dot"' in page_html
+    # The place card floats over the map (a bottom sheet on phones), so it is seen without scrolling.
+    assert re.search(r"\.place-panel \{[^}]*position: fixed[^}]*bottom: 0", css) and "scrollIntoView" not in page_html
+    assert '"Escape"' in page_html
+    # Chris: no red ring when a place is clicked, and a red glow (gold was lost on the parchment) strong enough to see: a solid red
+    # edge (zero-blur shadows) plus a wide halo, also kept on the place whose card is open.
+    assert ".pin:focus .pin-dot" not in css and "stroke: var(--accent)" not in css.split(".map .pin-dot")[1].split("/* Crumb")[0]
+    assert re.search(r"\.map \.sprite\.chosen image[^{]*\{[^}]*drop-shadow\(1px 0 0 var\(--glow\)\)[^}]*drop-shadow\(0 0 6px", css)
+    assert re.search(r"\.map \.pin\.under-sprite \{ pointer-events: none", css)
+    assert "classList.add(\"chosen\")" in page_html and "--glow: #c8213f" in css
     # Dragging the map never selects (highlights) place names.
     assert re.search(r"\.map \{[^}]*user-select: none", css) and re.search(r"\.map \{[^}]*-webkit-user-select: none", css)
     assert 'wiki/vallaki/" tabindex="-1"><text' in second and 'class="sprite js-pin"' not in second
@@ -476,3 +485,14 @@ def test_every_real_sprite_links_to_a_real_place_or_none():
     sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
     assert all(s.place in places for s in sprites if s.place)
     assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"}
+
+
+def test_every_crossroads_with_a_wiki_page_has_a_signpost():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    crossroads = {slug for slug in places if "crossroads" in slug}
+    assert crossroads == {s.place for s in sprites if s.image == "signpost"}
+    for s in sprites:
+        if s.image == "signpost":
+            assert math.dist((s.x, s.y), (places[s.place].x, places[s.place].y)) < 25
