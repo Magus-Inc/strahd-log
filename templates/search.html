@@ -61,9 +61,9 @@
           var text = '<span class="chip">' + esc(h.e.l) + '</span><h2><a class="stretched" href="' + base + h.e.u + '">' + esc(h.e.t) +
             '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>" +
             (h.e.s ? '<p class="meta"><span class="slides-tag">' + SLIDES_ICON + h.e.s + (h.e.s === 1 ? " slide" : " slides") + "</span></p>" : "");
-          li.innerHTML = h.e.p ? '<div class="wiki-card-text">' + text + '</div><span class="pic-thumb"><img src="' + base + h.e.p +
-            '" alt="" loading="lazy" decoding="async"><span class="pic-count" role="img" aria-label="' + h.e.n + (h.e.n === 1 ? " picture" : " pictures") +
-            '">' + PICTURE_ICON + h.e.n + "</span></span>" : text;
+          li.innerHTML = h.e.p ? '<div class="wiki-card-text">' + text + '</div><span class="pic-badge"><span class="pic-thumb"><img src="' + base + h.e.p +
+            '" alt="" loading="lazy" decoding="async"></span>' +
+            (h.e.n > 1 ? '<span class="pic-count">' + PICTURE_ICON + h.e.n + " pictures</span>" : "") + "</span>" : text;
           list.appendChild(li);
         });
       }
