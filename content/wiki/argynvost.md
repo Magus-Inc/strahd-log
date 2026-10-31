@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Argynvost, a vast ghostly silver dragon, over Argynvostholt with kneeling knights below](/images/argynvost-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 The silver dragon who founded the Order of the Silver Dragon. His last journal page at Argynvostholt vowed to defend the valley with his life ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). Strahd stole his skull, and we took it down from over the doors of the Hall of Bones ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/), [Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/)). When Aera set it back in the mausoleum, he rose as a vast ghostly dragon, gave Vladimir Horngaard his rest, freed his knights, blessed Olfin's longsword and became a silver beacon over the valley ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).

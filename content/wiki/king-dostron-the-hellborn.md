@@ -8,6 +8,12 @@ summary: An ancient king buried at the Hill of Ravenloft.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![King Dostron's ghost rising red over his sarcophagus and the Spear of the Huntress](/images/king-dostron-the-hellborn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

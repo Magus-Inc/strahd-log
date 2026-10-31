@@ -18,6 +18,10 @@ Note: [Before the session began, the players had a long talk about Stephen King'
 
 The Icon is alive, and it spoke to me mind to mind. It named itself a shard of the divinity of Ethereal, an angelic servant of the Morning Lord. It told me of its history with Saint Markovia and of its purpose now: it must go back to the Abbey of Saint Markovia in Krezk to cleanse the Abbot of his corruption and madness. It is a powerful weapon, and the key to curing the rot we saw in Krezk.
 
+![The Icon of Dawn's Grace, a silver winged statuette glowing in Saint Markovia's crypt](/images/icon-of-dawns-grace-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Note: [The DM gave a long lore dump on the Icon's history, spanning 400 years, and its tie to the Abbot's fall into madness. The players briefly debated the merits of Fortnite, and the value of eating a dead gecko for $20 (a story Crusty shared from his past).]
 
 We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. With the wizard’s own brass-knobbed staff we worked a hidden mechanism, and the marble slab lifted on a leather case of potent spell scrolls: **Fireball**, **Lightning Bolt** and **Cone of Cold**. Nearby, in Crypt 31, I got past a pit hidden under a tarp and took a scroll of **Magic Circle**. Battered and low on magic, we decided to rest the night. Crusty conjured a small magic hut in a dark corner of the catacombs, and I called down Lathander’s aid to strengthen us all before we slept.

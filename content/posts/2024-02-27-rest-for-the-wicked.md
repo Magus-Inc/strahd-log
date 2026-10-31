@@ -15,6 +15,10 @@ Father Donavich was inside the church, but he looked out of sorts and depressed.
 
 Father Donavich said that his son Doru came back, as a vampire, and that Doru took the holy symbol, but that Father Donavich was able to trap him beneath the church.
 
+![Doru as a vampire spawn, crouched in the dark beneath the church](/images/doru-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We offered to venture down and retrieve the symbol from Doru. Perhaps we could reason with him, but we would need to be prepared to fight. Ismark and Ireena made it clear that they would stay with their father above.
 
 We used the key Father Donavich gave us to unlock the latch keeping a trap door shut in one of the rooms of the church. The cat snuck down the trap door first, followed by the wizard. Next the wood elf looked down the hole and quickly worked a spell that left something below helpless with laughter. I climbed halfway down and used the light of my shield to see what the ruckus was. A vampire was grabbing the wizard. I tried some spells on it but with little luck. It gets a bit hazy, but I think both the cat and the wizard almost died! The wood elf used a potion to bring one of them back and they were able to fell the vampire. I put a stake in it for good measure, but it may only keep it immobilized for now.

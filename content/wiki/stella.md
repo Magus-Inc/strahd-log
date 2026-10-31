@@ -5,6 +5,12 @@ summary: Lady Fiona's daughter, trapped in the spirit realm by Victor's failed s
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Stella Wachter, a hollow-eyed young woman in a nightgown, in a dark hallway](/images/stella-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

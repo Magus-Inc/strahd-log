@@ -22,6 +22,10 @@ Aera found a hook in the clock, and with it we went through the trap door again.
 
 On the bed above lay a woman in a white dress and apron, with two crimson punctures on her neck and half of a moon-shaped necklace. She looked like the woman who had been hanging in the closet. She is **Varushka**, a servant of the castle.
 
+![Varushka's ghost floating in a tower bedroom, a half pendant glowing in her hands](/images/varushka-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Varushka told us her story. Ten days ago, the day the sky turned red and the mists rose, she saw a great darkness speaking with the king in his chambers, heard a thousand whispering voices, and glimpsed a flash of amber in the air. Since then the lord of the castle has come to her room and fed on her again and again. She was too frightened to say his name, though she confirmed it is Strahd. When she tried to flee she was caught and locked in the guest suite. The key is in the desk of **Rahadin**, the chamberlain, in his office far below near the kitchens and the servants’ hall, past the Hall of Bones and the Kingsmen Hall. She has given up hope of escape, but she is determined that Strahd will never make her a monster like him. Her half-locket was a gift from **Katarina**, someone she once hoped to share a future with and now believes she will never see again.
 
 Through the trap door once more, we landed in the servants’ quarters, deeper in the castle. Down the stairs we found three more corpses, and someone called out that **Valysnia is a traitor**. In the **Hall of Bones** a dragon’s head hangs on the wall.

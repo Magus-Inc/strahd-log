@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Kasimir Velikov, a grey-skinned dusk elf, clutching a glowing signet ring in the Vistani camp](/images/kasimir-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 We met Kasimir Velikov in the Vistani camp, where he clutched a signet ring whose sigil was woven from necromancy and evocation. He told us the dusk elves have kept a silent vigil in the valley for five centuries. He was a mage and scribe in the court of his uncle Erevan, and he watched his cousin Rahadin betray their people to King Barov; when Strahd came to power and the elves rose, Strahd crushed them and left the survivors to the Vistani's mercy ([A doll for Arabelle](/posts/a-doll-for-arabelle/)).

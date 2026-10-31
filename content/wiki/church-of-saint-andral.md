@@ -7,6 +7,12 @@ summary: A church in Vallaki and possible sanctuary for Ireena.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Church of Saint Andral at night, its crypt door open on an empty ossuary](/images/church-of-saint-andral-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

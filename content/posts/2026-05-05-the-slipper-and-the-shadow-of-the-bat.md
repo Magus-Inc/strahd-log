@@ -22,6 +22,10 @@ Note: [Players debated what the bracelet means, and the lore of Strahd's brother
 
 Deeper in the bedchamber we found Gertruda, sleeping fitfully beneath silk curtains. At first she was fearful and clouded by a vampire’s charm, but when Olfin laid a ward against evil upon her, she came back to herself. She told us she has been a “guest” since she vanished from Barovia village, kept alone and tormented by the threats of Strahd’s brides.
 
+![Gertruda waking in the King's Bedchamber, Tatyana's portrait above the hearth](/images/gertruda-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Note: [The DM and players checked how the "Charm" effect works and the DC 17 Wisdom save to break it. The ward was Protection from Evil and Good.]
 
 The rescue was cut short by Anastrasya, one of Strahd’s brides, who swept in with two wights, slammed the doors shut with her mind and demanded we hand over Gertruda. The parley did not last, and the bedchamber erupted into chaos. Olfin held the front while Crusty and Aera rained fire and arrows from the sides. Then it turned gruesome: Anastrasya shed her skin and became a vampiric abomination, a giant bloated bat. In one savage bite she drained Olfin’s life and killed him where he stood.

@@ -5,6 +5,12 @@ summary: Toymaker who runs Blinsky's Toy Store in Vallaki.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Blinsky the toymaker grinning in his shop full of creepy toys](/images/blinsky-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

@@ -18,6 +18,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 We woke at the Blue Water Inn, and Urwin, the innkeeper, called each of us to the bar in turn to ask for help with a troubling matter.
 
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 First he introduced Veyren, a hare of a fellow and Shabasta’s brother. We gave Veyren the letter we found on Shabasta’s body, telling of his journey with us.
 
 Then Urwin told us his worry. The Wizard of Wines vineyard supplies the inn’s wine, and the latest shipment is sixteen days overdue. He fears something has happened to Davian Martikov, his father. He arranged for us to meet Muriel Vinshaw, who works at the vineyard, to guide us.

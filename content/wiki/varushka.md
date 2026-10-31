@@ -5,6 +5,12 @@ summary: The recipient of Katarina's farewell letter, whose spirit the party lai
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Varushka's ghost floating in a tower bedroom, a half pendant glowing in her hands](/images/varushka-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

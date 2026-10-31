@@ -29,6 +29,10 @@ He suspects the druids mean to summon Winter Splinter, and urged us to reach Yes
 
 After a long rest we were woken two hours before dawn and set out. Maren has secretly arranged to meet a contact named Kavan, whose reputation Davian does not like. Swarms of ravens flew with us, and Olfin tied a token to one of them.
 
+![Kavan the Blood Drinker's spirit rising from his cairn, holding a long wooden spear](/images/kavan-the-blood-drinker-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Veyren read druidic runes telling of Kavan the Blood Drinker, and Mira, who heals herself of any wound, called Kavan up by dripping her blood. Kavan appeared, holding a long wooden spear.
 
 We felt something watching us from the forest, a powerful and ancient presence with a crimson light. When we looked, there was a shape in the shadows, studying us.

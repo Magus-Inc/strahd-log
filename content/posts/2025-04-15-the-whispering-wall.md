@@ -18,6 +18,10 @@ We destroyed Winter Splinter and took the gemheart, but at a heavy cost: its bur
 
 We went to the Whispering Wall to claim our reward, and Strahd congratulated us on beating the forest folk and on how we handled Ludmilla, though he warned that she will not forget. The wall is an ancient tomb steeped in divine mystery, and it shows those who enter their deepest desires. Strahd dared us to go in, but warned that many souls never come back.
 
+![The Whispering Wall across misty mountains, Strahd waiting at its western door](/images/whispering-wall-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Three of us took the dare:  
 - Zorpheus heard the prophecy confirmed.  
 - I learned that my reborn nature ties me to an ancient line of elven kings.  

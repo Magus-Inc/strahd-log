@@ -30,6 +30,10 @@ We take it as a lead to a **spy inside Castle Ravenloft**.
 
 On the road east we met a **skeletal rider**, whom we believe to be **Sergei von Zarovich**. We asked him three questions:
 
+![Sergei's ghost as the skeletal rider, holding a lantern on a misty road](/images/sergei-von-zarovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 > **Q: Are you working for Strahd?**  
 > **A: No**  
 > **Q: Do you know about the spy?**  

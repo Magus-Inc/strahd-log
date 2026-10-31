@@ -7,6 +7,12 @@ summary: A figure of the first folk who wields a long wooden spear.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Kavan the Blood Drinker's spirit rising from his cairn, holding a long wooden spear](/images/kavan-the-blood-drinker-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

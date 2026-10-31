@@ -13,6 +13,10 @@ The yellow book is titled “Blue blooded lips”, a romance about an affair wit
 
 [Aera shan Ravanór](/wiki/aera-shan-ravanor/) looked into the mirror and saw what seemed to be an apparition of [Klara](/wiki/klara/), horribly disfigured, as if she had been tortured and hacked to pieces.
 
+![Klara's ghost, a sorrowful young nanny, looking out of a bedroom mirror](/images/klara-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Weeble pulled the sheet off the bed and found nothing beneath it but a bloodstained mattress and crude restraints for hands and feet.
 
 We put some questions to the apparition we took for Klara and learned that the gift for the beast should be on the third floor. We also found stairs behind the mirror leading up.

@@ -24,6 +24,10 @@ To weaken the Baron we will follow Izek and find a moment when he is less guarde
 
 Stella has been sick for six months, since she began visiting Victor, the Baron’s son. She came home in a terrible state, and Victor will not speak to Lady Fiona. Berez, a fishing village south of Vallaki, was swept away by the river when someone challenged Strahd. Lady Fiona has heard of a glowing sword, perhaps the Sun Sword, but doubts it exists.
 
+![Stella Wachter, a hollow-eyed young woman in a nightgown, in a dark hallway](/images/stella-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We went back to the inn to rest. In the night Strahd came to Aera’s window and asked to be let in to discuss what we have been doing. Aera shut the window, and when we went outside he was gone.
 
 In the morning Fiona’s agent told us about Izek’s drinking and gave us a bottle of poisoned wine, Red Dragon Kresh, and a sack for his head. The plan: swap the second bottle of his lunch for the poisoned one, then ambush him at the lake later.

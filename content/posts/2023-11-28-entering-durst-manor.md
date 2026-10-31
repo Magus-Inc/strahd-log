@@ -7,6 +7,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 We spoke with the two children outside the [Manor](/wiki/durst-manor/). They are [Rose](/wiki/rose-durst/) and [Thorn](/wiki/thorn-durst/) Durst, and they live in the manor with their parents. They have not seen their nursemaid in a while, and they are afraid to go inside. Their parents, they said, are in the manor, on the third floor. The children will not leave the grounds, as if they are tied to the place somehow, and they will not enter either, for fear of the monster or monsters they believe live there. Thorn thinks he hears noises from below, though neither child believes there is a basement or cellar. Rose told us her parents' names are Gustav and Elisabeth.
 
+![Rose and Thorn Durst, two ghost children hand in hand at the manor gate](/images/rose-and-thorn-durst-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We braved [Durst Manor](/wiki/durst-manor/). As soon as the last of us was inside, the main doors slammed shut, every light went out, and six loud chimes rang. When we lit torches, there was blood on a wall of the first floor, and not just blood: a message written in it:
 
 > Beneath this dwelling lurks a beast  

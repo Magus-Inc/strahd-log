@@ -11,6 +11,10 @@ Shadows of the Larder: The Drowning Cells of Ravenloft
 
 The air of Castle Ravenloft has changed utterly. We have come down from the wind-swept heights of the spires, where we saw the crystal malice of the Heart of Sorrow, into the cramped and lightless bowels of the castle’s foundations. Forty feet down, in the Larders of Ill Omen, we walk through rot and stagnant, ice-cold water. This is a harder road, one that will cost us dearly, as the grand halls above give way to the flooded, black-mirrored passages of the Drowning Cells.
 
+![The flooded Larders of Ill Omen, a servant with a lantern leading the way](/images/larders-of-ill-omen-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Characters:
 * [Shabasta](/wiki/shabasta/)
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)

@@ -32,6 +32,10 @@ Two boys crouched on the balcony in front of a door, dangling a stuffed bat over
 
 We rented rooms at one gold each. Vallaki demands care, with its harsh laws and its politics.
 
+![Vallaki, a walled town on a misty lakeshore with refugee tents outside the gate](/images/vallaki-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 The barkeep passed a parcel from under the bar to Rictavio, who tucked it under his cloak and walked out. When we asked about Blinsky’s toys, Rictavio told us he is a secret agent of the Keepers of the Feather, a secret society set against Strahd. Then we lost him in the crowd.
 
 A procession silenced the whole town, led by the Baron and Izek. We think Izek pushed an old woman into the mud. Her son Udo has been imprisoned, and she too was taken to the stocks. The Festival of the Sun, we now hear, is in four days.

@@ -20,6 +20,10 @@ We are bound for Argynvostholt, a side errand before we face Castle Ravenloft. B
 
 In the cave we found the **Shrine of Mother Night**, with a ruby medallion, gems and gold, all of it under a terrible curse. We also found **Ilya and Zuleika**, prisoners in collars of silver thorn made by Baba Lysaga, powerful things that keep them from turning into wolves.
 
+![Zuleika and Ilya in silver thorn collars, Zuleika offering the Symbol of Ravenkind by the fire](/images/zuleika-and-ilya-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Ilya’s story laid bare a conspiracy. **The Abbot deceived him**, and Strahd and Baba Lysaga helped Kiril capture **Emil**, their missing leader, and lock him in Ravenloft’s dungeons. **Zuleika swore to free Emil** and asked for our help.
 
 We took the oath, and in return Zuleika gave **Olfin the Symbol of Ravenkind**.

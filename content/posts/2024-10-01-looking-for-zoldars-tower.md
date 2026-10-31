@@ -28,3 +28,8 @@ Our path led to a tower in the woods beside a lake. A bright Vistani wagon, pain
 The tower door had no handles, only a red seal bearing the name Khazan. Olfin worked out the pattern on the signet ring, traced its lines on the seal and pressed the right places, and the door opened.
 
 The way into the tower stands open.
+
+
+![A stone tower by a misty lake, a purple and gold Vistani wagon at its foot](/images/tower-of-khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*

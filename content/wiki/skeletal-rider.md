@@ -5,6 +5,12 @@ summary: A skeletal rider on a war horse that emerges from the mists.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![A skeletal rider in chain mail on a misty road, holding a lantern that gives no light](/images/skeletal-rider-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

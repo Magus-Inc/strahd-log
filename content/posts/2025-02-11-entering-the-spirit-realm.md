@@ -40,6 +40,10 @@ A great fight followed, and we won it, at a heavy cost. Shabasta died in the bat
 
 The spirits: Spirits entered the area, attempting to claim Stella’s body. The gallows speaker appeared, bearing us no ill will but demanding to take Stella and Lady Fiona. After a long hard battle we defeated the gallows speaker, but Shabasta died, and none of us had the prayer to raise him.
 
+![The gallows speaker, a shrouded spectre trailing nooses in the ethereal mist](/images/gallows-speaker-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Loot:
 
 **Tome of Strahd**: Retrieved during the adventure.  

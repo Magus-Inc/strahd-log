@@ -5,6 +5,12 @@ summary: A cold, damp area in Castle Ravenloft's foundations.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The flooded Larders of Ill Omen, a servant with a lantern leading the way](/images/larders-of-ill-omen-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

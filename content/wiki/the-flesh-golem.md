@@ -5,6 +5,12 @@ summary: The Abbot's hulking servant that turned on him.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Abbot's flesh golem in a rope crown dressed up as flowers, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

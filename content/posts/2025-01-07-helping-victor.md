@@ -21,6 +21,10 @@ Note: The DM rolled two dice for them: a 20 for Milivoj and a 14 for Henrik.
 
 Lady Fiona now holds the town, but Victor and his father still occupy the Burgomaster’s mansion. Stella and Erasmus doubt Victor’s competence, and he showed us Stella’s spirit in a mirror. Victor has been working from a spellbook to make a teleportation circle and escape the valley. It worked with rabbits. With Stella it went wrong and trapped her in the spirit realm.
 
+![Victor drawing a glowing teleportation circle on his attic floor](/images/victor-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Erasmus believes a gallows speaker haunts Stella in the Ethereal Plane near Vallaki, and he told us what van Richten’s guide says of the creature. Victor trusts neither his father nor Lady Fiona. He needs to reach the Ethereal Plane to cast a spell that will help Fiona escape, and he has a book from Mordenkainen that can carry up to nine creatures there on a night of the full moon, with a hag’s heart stone. Stella says she has seen a night hag near the refugee camp, perhaps the same one who sold the dream pies.
 
 From van Richten’s writings on night hags I took these notes. They are pure wickedness, delighting in turning virtue to villainy. Once fey, they were exiled to Hades long ago and became fiends. They look like withered crones with ram’s horns, warty blue-gray skin and claws, but nothing about them is mortal. They change their shapes and lay curses, they shrug off much magic and mortal steel, but silver wounds them. They keep every bargain, and every bargain is a trap. Their real prize is a corrupted soul: with an onyx heartstone a night hag slips into the Ethereal Plane, haunts her victim’s dreams night after night until the victim dies in sleep, and takes the soul in her bag. Hags breed by stealing and devouring infants. Some raise their daughters into covens, which share great powers, but a wound to one is a wound to all, and the coven is bound by a contract signed in each hag’s true name and hidden at the heart of their lair.

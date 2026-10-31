@@ -51,6 +51,10 @@ In the middle of the room stood an altar of sorts with a wrapped bundle on it. A
 
 The mass was a mound of flesh, and it began moving toward Aera at the altar. Weeble met it with his sword, and I laid Lathander's ward against evil on him. Aera shot at the mound and handed me the shard, to see whether I could work out how to use it in case the mound was [Walter Durst](/wiki/walter-durst/). I held the shard high and called “Walter!” It did nothing, but I kept at it for the rest of the fight while everyone else pounded on the flesh mound. At last its rib cage split open, and an undead Walter hovered inside. Aera cleaved Walter's head clean off, and the mound collapsed.
 
+![A mound of rotting flesh and roots in the cult's cellar, a ghostly child glowing inside](/images/walter-durst-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and vowed to kill us for destroying her pet. The ground began to shake. As we raced for the stairs, the ghost of [Gustav Durst](/wiki/gustav-durst/) blocked the way and told us we must stay to appease Elisabeth. I reasoned with him: Rose and Thorn were with us, and this was his last chance to make things right, to be a good father and give his children the peace they deserved. Gustav let us pass and told us not to stop and fight anything. Just run!
 
 Spectral things lashed at us on the way up, but we dodged them and the falling rocks and ran up a secret ladder into the room with the stuffed wolves. Schlopkht broke a window and we climbed out of the house. Behind us it collapsed into the ground and was gone.

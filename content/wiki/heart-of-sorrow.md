@@ -5,6 +5,12 @@ summary: A huge pulsing red crystal heart in a tower of Castle Ravenloft.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Heart of Sorrow, a giant red crystal heart hanging in a tower above a spiral stair](/images/heart-of-sorrow-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

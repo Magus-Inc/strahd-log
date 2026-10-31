@@ -5,6 +5,12 @@ summary: Strahd's nightmare steed.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Strahd riding Beucephalus, a fiery black nightmare, out of the castle gate](/images/beucephalus-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

@@ -8,6 +8,12 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/klara
 ---
 
+## Description
+
+![Klara's ghost, a sorrowful young nanny, looking out of a bedroom mirror](/images/klara-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

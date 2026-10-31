@@ -17,6 +17,10 @@ Our rogues trailed Izek unseen and overheard him talking with his spy about some
 
 Izek went to the eastern gate, where refugees sick with longing for dream pastries were trying to get in. He ordered a dream pastry for himself from the guards for the next morning, dismissed the two guards and went on to the Zarovich gate. At the lake he took out a doll of Ireena and drank the poisoned wine.
 
+![Izek, a scarred guard captain with a burning demonic right arm, at a town gate](/images/izek-strahsne-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 A long and epic fight followed, and in the end we won it.
 
 On him we found an amber shard of Seriach, thirty-five gold and a hell hound whisperer. Shabasta wanted Izek’s arm and asked whether it could be attached to him. Liren cut off Izek’s right arm with her axe, and with Lathander’s help I joined the magical arm to Shabasta.

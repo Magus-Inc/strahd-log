@@ -26,6 +26,10 @@ Note: This session was written up twice on Obsidian Portal: as "Welcome Back To 
 
 We began by going back over our last morning at Castle Ravenloft. After Aera’s lone scouting of the **Heart of Sorrow** and her chilling meeting with Count Strahd, Rahadin promptly showed us out of the guest quarters. Under the eyes of the castle’s gargoyles we left by carriage, with our allies **Ezmerelda d’Avenir** and **Ireena Kolyana**.
 
+![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 On the road back to **Vallaki** each of us felt our strength grow. We gathered under the flickering lamps of the **Blue Water Inn**, the Count’s wine still bitter on our tongues, and the terror of that failed dinner hardened into cold resolve. The rest of the night went to planning and preparation.
 
 We will not wait for him. Using what we learned of the castle (not from Doru) and the castle maps of **Rudolph van Richten**, we mean to strike during Strahd’s fourteen-day hunting cycle, while he should be away from the castle, slip into the catacombs, and take the relics and free the allies we need.
