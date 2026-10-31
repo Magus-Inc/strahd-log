@@ -45,9 +45,9 @@ We went on down into the Drowning Cells, wading through three to five feet of mu
 * Cyrus Belview: We traded him the right, “lonely” spoon for a map of the Serpent’s Wing. Despite his lazy-eyed suspicion, and our earlier ruining of his stew, he stayed a willing source of information.
 * The Hall of Forty Zombies: A terrible gamble. Olfin’s disguise and my unseen pull got us past a fight that would likely have killed us all, so many were they, plague-spreaders among them.
 * The Teleporting Step: Aera had found every trap so far, but this one took Olfin by his weight. It reset itself, and we went on through the flooded hall one short.
-* Emile Torenescu: We found the werewolf prisoner. He is broken in body, worn to the edge of collapse and bound by a silver thorn collar. The key is held by Volinta, and forcing the lock would drive the thorns through him.
+* Emil Toranescu: We found the werewolf prisoner. He is broken in body, worn to the edge of collapse and bound by a silver thorn collar. The key is held by Volenta, and forcing the lock would drive the thorns through him.
 
-Note: Aera's Sleight of Hand had rolled a 26 earlier. Emile has three levels of exhaustion, and forcing the collar deals lethal piercing damage.
+Note: Aera's Sleight of Hand had rolled a 26 earlier. Emil has three levels of exhaustion, and forcing the collar deals lethal piercing damage.
 
 ## Loot:
 
@@ -61,13 +61,13 @@ Note: Aera's Sleight of Hand had rolled a 26 earlier. Emile has three levels of 
 ## Notable NPCs:
 
 * Cyrus Belview: The deformed, eccentric servant who cares most for his missing heirloom. A pitiful but dangerous fixture of the castle’s service halls.
-* Emile Torenescu: A werewolf prisoner of Strahd, kept for weeks in the flooded cells. He could be an ally, if we survive the fight for his key.
-* Volinta (The Bride): A cruel dweller in the castle, who appeared on the balcony of the torture chamber. She mocked us for coming uninvited, and stands beside a twenty-gallon jar of oil, threatening to set the water alight and turn the chamber into a fiery trap.
+* Emil Toranescu: A werewolf prisoner of Strahd, kept for weeks in the flooded cells. He could be an ally, if we survive the fight for his key.
+* Volenta (The Bride): A cruel dweller in the castle, who appeared on the balcony of the torture chamber. She mocked us for coming uninvited, and stands beside a twenty-gallon jar of oil, threatening to set the water alight and turn the chamber into a fiery trap.
 
 ## Plot Points:
 
 * A new chapter begins, and our eyes turn to the Amber Temple.
-* The silver thorn collar sets a clock running: we must beat Volinta and free Emile before exhaustion or the coming fight claims him.
+* The silver thorn collar sets a clock running: we must beat Volenta and free Emil before exhaustion or the coming fight claims him.
 * The South Tower Stair gives us a clear, if dangerous, way up to the castle’s royal heights and the witches’ coven.
 
 ## Session Highlights:
@@ -75,4 +75,4 @@ Note: Aera's Sleight of Hand had rolled a 26 earlier. Emile has three levels of 
 * The Unseen Rescue: My mind’s pull hauling Olfin out of a hall of forty zombies, a moment the DM called a “statistical miracle.”
 * The Lonely Spoon: The wrong spoon, and the hunt for one described as “lonely.”
 * The Vanishing: The rope going slack in the dark water as Olfin was carried off to the torture chamber.
-* The Bride’s Welcome: Volinta appearing on the balcony, the start of a “meaty fight” with burning oil and drowned zombies.
+* The Bride’s Welcome: Volenta appearing on the balcony, the start of a “meaty fight” with burning oil and drowned zombies.

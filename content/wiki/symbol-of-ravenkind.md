@@ -16,7 +16,7 @@ source: Compiled from the adventure log, with notes from the table
 
 *Written from the session logs, in Malron's words.*
 
-A sunburst amulet of pale silver with a red crystal at its heart. Eliza's song of the ravens first pointed us toward it ([Tser Pool](/posts/tser-pool/)), and Davien told us its history and its tie to Strahd ([Welcome to Krezk](/posts/welcome-to-krezk/)). Zurika gave it to Olfin when we swore to free Emil ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). Olfin carried it into Castle Ravenloft, where it is one of our best weapons against vampires, and he turned its light on Volenta ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/), [The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/)).
+A sunburst amulet of pale silver with a red crystal at its heart. Eliza's song of the ravens first pointed us toward it ([Tser Pool](/posts/tser-pool/)), and Davian told us its history and its tie to Strahd ([Welcome to Krezk](/posts/welcome-to-krezk/)). Zuleika gave it to Olfin when we swore to free Emil ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). Olfin carried it into Castle Ravenloft, where it is one of our best weapons against vampires, and he turned its light on Volenta ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/), [The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/)).
 
 ## What it does
 
@@ -35,7 +35,7 @@ A sunburst amulet of pale silver with a red crystal at its heart. Eliza's song o
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Seemed a key element of Eliza's raven story. ([Tser Pool](/posts/tser-pool/))
-* Damien told its history. ([Welcome to Krezk](/posts/welcome-to-krezk/))
-* Olfin received it from Zurika. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Davian told its history. ([Welcome to Krezk](/posts/welcome-to-krezk/))
+* Olfin received it from Zuleika. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * Held by Olfin Darning. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Olfin wielded it against Volenta. ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/))

@@ -11,7 +11,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/fortu
 
 **Bishop**: What you seek lies in a pile of treasure, beyond a set of amber doors.
 
-**Mists**: A vistano wanders alone searching for a mentor. Doesn’t stay in one place for long. Seek her out in St. Markova Abbey near the mists
+**Mists**: A vistano wanders alone searching for a mentor. Doesn’t stay in one place for long. Seek her out in St. Markovia Abbey near the mists
 
 **Marionette**: Look to Great heights, find the beating heart of the castle.
 

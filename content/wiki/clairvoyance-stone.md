@@ -18,4 +18,4 @@ source: Compiled from the adventure log, with notes from the table
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Given to the party by Stanimere. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* Given to the party by Stanimir. ([Unwelcome Guests](/posts/unwelcome-guests/))

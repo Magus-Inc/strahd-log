@@ -1,0 +1,14 @@
+---
+title: Danika
+type: npc
+summary: Runs the Blue Water Inn.
+source: Compiled from the adventure log
+---
+
+<!-- from-the-log -->
+## From the adventure log
+
+*Compiled from the session posts. Each line links to the session it comes from.*
+
+* Runs the inn and is married to Urwin. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))
+* Told the party Rictavio was at his yellow wagon. ([Finding Arabelle!](/posts/finding-arabelle/))

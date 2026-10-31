@@ -1,10 +1,6 @@
 ---
 title: Arabelle
 type: npc
-aliases:
-- Aerabelle
-- Aerabel
-- Aerabell
 summary: Madam Eva's young Vistani grandchild, kidnapped and then hidden by Van Richten.
 source: Compiled from the adventure log
 ---

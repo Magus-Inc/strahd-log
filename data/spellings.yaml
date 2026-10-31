@@ -1,0 +1,122 @@
+# Names spelled as the Curse of Strahd book spells them. dnd-scribe keeps a copy in
+# campaign/spellings.yaml (its tests compare them). `just spellings` fixes the posts, wiki
+# pages and log extracts; tests/test_spellings.py fails while a wrong spelling is left.
+#
+# The book fixes SPELLINGS only. What happened at the table comes from the posts and Chris, and
+# names Ryan made up (Malron's table, the Belview children, Arturi, Eliza, Kreza...) stay as written.
+# Matching is whole words and case-sensitive. A right spelling must never also be a wrong one.
+#
+# Checked 2026-10-31 against the book's character index (Ravenloft wiki "Curse of Strahd" page).
+# Marked "(asked)" are the ones Chris was asked about on the review page.
+
+fix:
+  # Emil Toranescu and his mate
+  Tornescu: Toranescu
+  Torenescu: Toranescu
+  Terescu: Toranescu
+  Emile: Emil
+  Zurika: Zuleika                 # (asked)
+  # Strahd's brides
+  Anastrasia: Anastrasya
+  Ludmila: Ludmilla
+  Volinta: Volenta
+  # The werewolves
+  Kiril Vonstrranovich: Kiril Stoyanovich
+  Vonstrranovich: Stoyanovich
+  Illya: Ilya                     # (asked)
+  Ilia: Ilya                      # (asked)
+  # Baba Lysaga ("Lysa" is the table's short name for her; kept)
+  Baba Lasagna: Baba Lysaga
+  Babalasaga: Baba Lysaga
+  Lasaga: Lysaga
+  Lisa: Lysa
+  # The Martikovs and the Blue Water Inn
+  Davien Warningkoff: Davian Martikov
+  Davien: Davian
+  Damien: Davian
+  Irwin: Urwin
+  Danica: Danika
+  Elrich: Elvir                   # (asked)
+  Elvier: Elvir                   # (asked)
+  Muriel Winshaw: Muriel Vinshaw
+  Winshaw: Vinshaw
+  # Vallaki
+  Father Donavan: Father Donavich
+  Faher Donavich: Father Donavich
+  Donavitch: Donavich
+  Father Lucien: Father Lucian
+  Lucien: Lucian
+  Viktor: Victor
+  Valakovich: Vallakovich
+  Heinrich: Henrik
+  Billdrath: Bildrath
+  Lukavich: Lukovich
+  Blinksys: Blinsky's
+  Blinksy: Blinsky
+  Blilnksly: Blinsky
+  Milovaj: Milivoj
+  Milvoj: Milivoj
+  Imsark: Ismark
+  Ismak: Ismark
+  Irena: Ireena
+  Irina: Ireena
+  Izek Strahsne: Izek Strazni
+  Strahsne: Strazni
+  Gertrude: Gertruda
+  # The Wachters
+  Fiona Vochter: Fiona Wachter
+  Vachtner: Wachter
+  Vachter: Wachter
+  Nicolai: Nikolai
+  Carl: Karl
+  # The Belviews
+  Bellview: Belview
+  Syrus: Cyrus
+  Cloven: Clovin
+  # Krezk
+  Dimitri: Dmitri
+  Dimitry: Dmitri
+  # The hunters by the Luna River
+  Zoldar: Szoldar
+  Yvgeny: Yevgeni
+  # Argynvostholt and the Order of the Silver Dragon
+  Sir Godfried William: Sir Godfrey Gwilym
+  Godfried William: Godfrey Gwilym
+  Godfried: Godfrey
+  Hornguard: Horngaard
+  # Vistani and the people of the woods
+  Esmeralda dasramir: Ezmerelda d'Avenir
+  Esmerelda: Ezmerelda
+  Esmeralda: Ezmerelda
+  Stanimere: Stanimir
+  Verushka: Varushka
+  Aeragul: Arrigal
+  Aerabelle: Arabelle
+  Aerabell: Arabelle
+  Aerabel: Arabelle
+  Morantha: Morgantha
+  Offailia: Offalia
+  Vasilica: Vasilka
+  Tatiana: Tatyana
+  # The castle and old Barovia
+  Rajadin: Rahadin
+  Becephalus: Beucephalus
+  Doestron: Dostron
+  Dostran: Dostron
+  Kaven: Kavan
+  Kazan: Khazan
+  Mordakainen: Mordenkainen
+  Von Zarovich: von Zarovich
+  Rudolf: Rudolph
+  Von Richten: van Richten
+  Taroka: Tarokka
+  # Places (Chris, 2026-10-31: fix all the wiki pages and blog entries)
+  Vellaki: Vallaki
+  Vellanki: Vallaki
+  Wachter Haus: Wachterhaus
+  Wachter House: Wachterhaus
+  Valokovitch: Vallakovich
+  St. Markova: St. Markovia
+  Aargenvolstholt: Argynvostholt
+  # Not from the book: Aera's pseudodragon is Zorya, by Ryan's stat block (Chris, 2026-10-28).
+  Zora: Zorya

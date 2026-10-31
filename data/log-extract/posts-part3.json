@@ -68,7 +68,7 @@
     "post": "2026-04-21-the-echoing-choirs-of-ravenloft"
    },
    {
-    "text": "Killed Anastrasia with Scorching Ray and revived Olfin with a scroll of Revivify.",
+    "text": "Killed Anastrasya with Scorching Ray and revived Olfin with a scroll of Revivify.",
     "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
    },
    {
@@ -163,7 +163,7 @@
     "post": "2026-03-10-depths-of-ravenloft"
    },
    {
-    "text": "Broke Gertruda's charm with Protection from Evil and Good; was killed by Anastrasia and revivified.",
+    "text": "Broke Gertruda's charm with Protection from Evil and Good; was killed by Anastrasya and revivified.",
     "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
    },
    {
@@ -204,7 +204,7 @@
     "post": "2026-02-17-retrieval-of-the-dragon-skull"
    },
    {
-    "text": "Attuned to the Staff of Kazan after solving the rune puzzle.",
+    "text": "Attuned to the Staff of Khazan after solving the rune puzzle.",
     "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
    },
    {
@@ -296,14 +296,14 @@
   "type": "npc",
   "aliases": [
    "Strahd",
-   "Strahd Von Zarovich",
-   "Lord Von Zarovich",
+   "Strahd von Zarovich",
+   "Lord von Zarovich",
    "Count Strahd"
   ],
   "summary": "The vampire lord and master of Castle Ravenloft.",
   "facts": [
    {
-    "text": "Murdered his brother Sergei and seeks Ireena, believing she is Tatiana reborn.",
+    "text": "Murdered his brother Sergei and seeks Ireena, believing she is Tatyana reborn.",
     "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
    },
    {
@@ -319,7 +319,7 @@
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "Was seen leaving the castle on his nightmare, Becephalus.",
+    "text": "Was seen leaving the castle on his nightmare, Beucephalus.",
     "post": "2026-02-10-unwelcome-guests"
    },
    {
@@ -367,7 +367,7 @@
   ]
  },
  {
-  "name": "Anastrasia",
+  "name": "Anastrasya",
   "type": "npc",
   "aliases": [],
   "summary": "A vampire bride of Strahd.",
@@ -395,7 +395,7 @@
   "type": "npc",
   "aliases": [
    "Volenta",
-   "Volinta"
+   "Volenta"
   ],
   "summary": "A vampire bride of Strahd.",
   "facts": [
@@ -418,7 +418,7 @@
   ]
  },
  {
-  "name": "Ludmila",
+  "name": "Ludmilla",
   "type": "npc",
   "aliases": [],
   "summary": "A vampire bride present at Strahd's reception.",
@@ -436,7 +436,7 @@
   "summary": "A blonde vampire at Castle Ravenloft, once a friend of Doru.",
   "facts": [
    {
-    "text": "Was introduced by Anastrasia and is suspected of betraying Doru.",
+    "text": "Was introduced by Anastrasya and is suspected of betraying Doru.",
     "post": "2025-08-12-velvet-vintages-and-veiled-intentions"
    },
    {
@@ -568,13 +568,13 @@
   "type": "npc",
   "aliases": [
    "Ireena",
-   "Irena",
-   "Irina"
+   "Ireena",
+   "Ireena"
   ],
   "summary": "The woman Strahd is obsessed with, under the party's protection.",
   "facts": [
    {
-    "text": "Strahd seeks her, believing she is Tatiana reincarnated.",
+    "text": "Strahd seeks her, believing she is Tatyana reincarnated.",
     "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
    },
    {
@@ -599,7 +599,7 @@
   "name": "Tatyana",
   "type": "npc",
   "aliases": [
-   "Tatiana"
+   "Tatyana"
   ],
   "summary": "The woman whose death triggered Strahd's curse.",
   "facts": [
@@ -614,7 +614,7 @@
   ]
  },
  {
-  "name": "Sergei Von Zarovich",
+  "name": "Sergei von Zarovich",
   "type": "npc",
   "aliases": [
    "Sergei"
@@ -640,8 +640,8 @@
   "type": "npc",
   "aliases": [
    "Ezmerelda",
-   "Esmeralda d’Avenir",
-   "Esmerelda"
+   "Ezmerelda d’Avenir",
+   "Ezmerelda"
   ],
   "summary": "A famed monster hunter travelling with and advising the party.",
   "facts": [
@@ -674,12 +674,12 @@
   ]
  },
  {
-  "name": "Emil Tornescu",
+  "name": "Emil Toranescu",
   "type": "npc",
   "aliases": [
    "Emil",
-   "Emile Torenescu",
-   "Emil Terescu"
+   "Emil Toranescu",
+   "Emil Toranescu"
   ],
   "summary": "A werewolf leader held prisoner in Castle Ravenloft, later freed.",
   "facts": [
@@ -790,7 +790,7 @@
     "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
    },
    {
-    "text": "Stanimere is her messenger.",
+    "text": "Stanimir is her messenger.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -799,7 +799,7 @@
   "name": "Varushka",
   "type": "npc",
   "aliases": [
-   "Verushka"
+   "Varushka"
   ],
   "summary": "The recipient of Katarina's farewell letter, whose spirit the party laid to rest.",
   "facts": [
@@ -808,13 +808,13 @@
     "post": "2025-07-29-the-oath-the-spy-and-the-silver-moon"
    },
    {
-    "text": "The party had laid her spirit to rest, which earned Stanimere's goodwill.",
+    "text": "The party had laid her spirit to rest, which earned Stanimir's goodwill.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
  },
  {
-  "name": "Stanimere",
+  "name": "Stanimir",
   "type": "npc",
   "aliases": [],
   "summary": "A Vistani elder and messenger of Madam Eva.",
@@ -890,13 +890,13 @@
   "summary": "The writer of a letter urging Argynvost to make peace with Strahd.",
   "facts": [
    {
-    "text": "Signed a scroll asking Argynvost to end the war with Lord Von Zarovich.",
+    "text": "Signed a scroll asking Argynvost to end the war with Lord von Zarovich.",
     "post": "2025-06-03-echoes-of-the-silver-dragon"
    }
   ]
  },
  {
-  "name": "Vladimir Hornguard",
+  "name": "Vladimir Horngaard",
   "type": "npc",
   "aliases": [
    "Horngaard"
@@ -928,13 +928,13 @@
   ]
  },
  {
-  "name": "King Dostran the Hellborn",
+  "name": "King Dostron the Hellborn",
   "type": "npc",
   "aliases": [
-   "King Dostran",
+   "King Dostron",
    "King Dostron",
    "Dostron",
-   "Dostran"
+   "Dostron"
   ],
   "summary": "An ancient king entombed in Crypt 34 of Ravenloft's catacombs.",
   "facts": [
@@ -977,13 +977,13 @@
   ]
  },
  {
-  "name": "Kazan",
+  "name": "Khazan",
   "type": "npc",
   "aliases": [],
   "summary": "A dead archmage entombed in Crypt 15.",
   "facts": [
    {
-    "text": "His tomb held a rune puzzle that revealed the Staff of Kazan.",
+    "text": "His tomb held a rune puzzle that revealed the Staff of Khazan.",
     "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
    }
   ]
@@ -1042,10 +1042,10 @@
   ]
  },
  {
-  "name": "Dimitri Krezkov",
+  "name": "Dmitri Krezkov",
   "type": "npc",
   "aliases": [
-   "Baron Dimitri Krezkov",
+   "Baron Dmitri Krezkov",
    "Baron Dmitri Krezkov",
    "Dmitri"
   ],
@@ -1067,7 +1067,7 @@
   "aliases": [
    "Anna"
   ],
-  "summary": "Baroness of Krezk and wife of Dimitri Krezkov.",
+  "summary": "Baroness of Krezk and wife of Dmitri Krezkov.",
   "facts": [
    {
     "text": "The Abbot sent word he would take her heart at dusk the next day.",
@@ -1137,7 +1137,7 @@
   ]
  },
  {
-  "name": "Zora",
+  "name": "Zorya",
   "type": "creature",
   "aliases": [],
   "summary": "Aera's pseudodragon companion.",
@@ -1157,7 +1157,7 @@
   ]
  },
  {
-  "name": "Becephalus",
+  "name": "Beucephalus",
   "type": "creature",
   "aliases": [],
   "summary": "Strahd's nightmare steed.",
@@ -1253,7 +1253,7 @@
   "summary": "A travelling people of Barovia.",
   "facts": [
    {
-    "text": "A Vistani wagon led by Stanimere met the party near Sarepool.",
+    "text": "A Vistani wagon led by Stanimir met the party near Sarepool.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -1276,7 +1276,7 @@
   "aliases": [
    "phantom warriors"
   ],
-  "summary": "Vladimir Hornguard's undead warriors.",
+  "summary": "Vladimir Horngaard's undead warriors.",
   "facts": [
    {
     "text": "A Revenant at the Raven River crossroads warned the party that they are watching.",
@@ -1291,7 +1291,7 @@
   "summary": "Strahd's three vampire brides.",
   "facts": [
    {
-    "text": "Two of the three, Volenta and Anastrasia, have been killed.",
+    "text": "Two of the three, Volenta and Anastrasya, have been killed.",
     "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
    },
    {
@@ -1404,7 +1404,7 @@
     "post": "2026-02-17-retrieval-of-the-dragon-skull"
    },
    {
-    "text": "Its catacombs held the Staff of Kazan and the Spear of the Huntress.",
+    "text": "Its catacombs held the Staff of Khazan and the Spear of the Huntress.",
     "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
    },
    {
@@ -1465,11 +1465,11 @@
   "summary": "The crypts beneath Castle Ravenloft.",
   "facts": [
    {
-    "text": "Holds the crypts of King Dostran (34) and St. Markovia (40).",
+    "text": "Holds the crypts of King Dostron (34) and St. Markovia (40).",
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "Crypts 15 (Kazan) and 34 (King Dostran) gave up the staff and spear; Crypt 18 waits empty for Ireena.",
+    "text": "Crypts 15 (Khazan) and 34 (King Dostron) gave up the staff and spear; Crypt 18 waits empty for Ireena.",
     "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
    },
    {
@@ -1509,7 +1509,7 @@
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "Holds a portrait of Tatyana; the party fought Anastrasia here.",
+    "text": "Holds a portrait of Tatyana; the party fought Anastrasya here.",
     "post": "2026-05-05-the-slipper-and-the-shadow-of-the-bat"
    }
   ]
@@ -1602,7 +1602,7 @@
   "name": "Vallaki",
   "type": "place",
   "aliases": [
-   "Vellanki"
+   "Vallaki"
   ],
   "summary": "A town that serves as the party's base.",
   "facts": [
@@ -1637,7 +1637,7 @@
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "Baron Dimitri Krezkov waited for the party here.",
+    "text": "Baron Dmitri Krezkov waited for the party here.",
     "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
    }
   ]
@@ -1649,7 +1649,7 @@
   "summary": "A Vistani camp at a crossroads.",
   "facts": [
    {
-    "text": "The party met Stanimere near here.",
+    "text": "The party met Stanimir near here.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -1700,7 +1700,7 @@
   "name": "Krezk",
   "type": "place",
   "aliases": [],
-  "summary": "A walled village ruled by Baron Dimitri Krezkov.",
+  "summary": "A walled village ruled by Baron Dmitri Krezkov.",
   "facts": [
    {
     "text": "Remains under the rule of the Abbot's madness.",
@@ -1766,16 +1766,16 @@
   "summary": "A crossroads where a Revenant met the party.",
   "facts": [
    {
-    "text": "A Revenant warned the party of Vladimir Hornguard's rage here.",
+    "text": "A Revenant warned the party of Vladimir Horngaard's rage here.",
     "post": "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness"
    }
   ]
  },
  {
-  "name": "Kazan’s Tower",
+  "name": "Khazan’s Tower",
   "type": "place",
   "aliases": [],
-  "summary": "A tower where the party first saw Kazan's rune sequence.",
+  "summary": "A tower where the party first saw Khazan's rune sequence.",
   "facts": [
    {
     "text": "The party had met the eight-schools rune sequence there before.",
@@ -2089,7 +2089,7 @@
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "Taken from King Dostran's sarcophagus in Crypt 34.",
+    "text": "Taken from King Dostron's sarcophagus in Crypt 34.",
     "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
    }
   ]
@@ -2125,7 +2125,7 @@
   "summary": "A palm-sized stone with 3 charges of Clairvoyance.",
   "facts": [
    {
-    "text": "Given to the party by Stanimere.",
+    "text": "Given to the party by Stanimir.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -2171,7 +2171,7 @@
     "post": "2026-03-10-depths-of-ravenloft"
    },
    {
-    "text": "Unlocked with the iron key from Volenta's body.",
+    "text": "Unlocked with the key from Volenta's body.",
     "post": "2026-03-31-the-fall-of-volenta-popofsky"
    }
   ]
@@ -2189,15 +2189,15 @@
   ]
  },
  {
-  "name": "Staff of Kazan",
+  "name": "Staff of Khazan",
   "type": "item",
   "aliases": [
-   "Kazan’s Staff"
+   "Khazan’s Staff"
   ],
   "summary": "A legendary platinum staff.",
   "facts": [
    {
-    "text": "Appeared after the rune puzzle in Kazan's tomb; Crusty attuned to it.",
+    "text": "Appeared after the rune puzzle in Khazan's tomb; Crusty attuned to it.",
     "post": "2026-04-14-the-master-of-runes-and-the-hellborn-s-spear"
    }
   ]
@@ -2248,7 +2248,7 @@
   "aliases": [
    "Four of Glyphs"
   ],
-  "summary": "A Taroka card carrying a message from St. Markovia.",
+  "summary": "A Tarokka card carrying a message from St. Markovia.",
   "facts": [
    {
     "text": "Drifted down in the void and helped summon St. Markovia.",

@@ -16,7 +16,7 @@ We came upon a ruined watch tower, three stories tall and covered in moss and iv
 
 ### Tser Falls Bridge
 
-A revenant guarded the bridge and asked whether we served *him*. He named himself [Sir Godfried William](/wiki/sir-godfried-william/), a knight of the Order of the Silver Dragon, banished by his commander, Vladimir Horngaard.
+A revenant guarded the bridge and asked whether we served *him*. He named himself [Sir Godfrey Gwilym](/wiki/sir-godfrey-gwilym/), a knight of the Order of the Silver Dragon, banished by his commander, Vladimir Horngaard.
 
 ![Portrait of a bridge revenant](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/images/Bridge%20Revenant.png)
 
@@ -30,7 +30,7 @@ We found a six-foot stone slab carved with a three-pointed star and a raven, an 
 
 ### The Windmill
 
-At the windmill we met [Morgantha](/wiki/morgantha/), a fiend who sells Dream Pastries and lives there with her daughters, Bella and Offailia. The cat ate one of her pies and fell asleep for five hours, so [Aera](/wiki/aera-shan-ravanor/) bought Morgantha’s cart for five gold to carry him. Morgantha warned that the Vallaki guards confiscate silver, so we hid our silver things in the cart.
+At the windmill we met [Morgantha](/wiki/morgantha/), a fiend who sells Dream Pastries and lives there with her daughters, Bella and Offalia. The cat ate one of her pies and fell asleep for five hours, so [Aera](/wiki/aera-shan-ravanor/) bought Morgantha’s cart for five gold to carry him. Morgantha warned that the Vallaki guards confiscate silver, so we hid our silver things in the cart.
 
 ### Ravens
 

@@ -15,7 +15,7 @@ source: Compiled from the adventure log, with notes from the table
 
 *Written from the session logs, in Malron's words.*
 
-A whistle of black obsidian shaped like a raven. Davien of the Keepers of the Feather gave it to us at the Wizard of Wines, as thanks for recovering the gem the winery needs to make its wine ([Welcome to Krezk](/posts/welcome-to-krezk/)). One note calls a wereraven of the Keepers to our side.
+A whistle of black obsidian shaped like a raven. Davian of the Keepers of the Feather gave it to us at the Wizard of Wines, as thanks for recovering the gem the winery needs to make its wine ([Welcome to Krezk](/posts/welcome-to-krezk/)). One note calls a wereraven of the Keepers to our side.
 
 ## What it does
 
@@ -35,4 +35,4 @@ A whistle of black obsidian shaped like a raven. Davien of the Keepers of the Fe
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Damien gave it for recovering the gem. ([Welcome to Krezk](/posts/welcome-to-krezk/))
+* Davian gave it for recovering the gem. ([Welcome to Krezk](/posts/welcome-to-krezk/))

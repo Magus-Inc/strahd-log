@@ -2,9 +2,7 @@
 title: Blinsky's Toy Store
 type: place
 aliases:
-- Blinksys
 - Blinsky toys
-- Blilnksly toys
 summary: A toy shop in Vallaki.
 source: Compiled from the adventure log
 ---

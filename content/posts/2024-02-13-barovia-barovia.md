@@ -37,13 +37,13 @@ The tavern had villagers, a fire in the hearth, a barkeep behind the counter, th
 
 Ismark warned us of spies for Vlahd in the form of bats, wolves, humans, and even Vistani. He then asked us for help on a mission; to help his sister hide at a church in Vallaki. It would be a full days journey, and we are welcome to spend the night at his fathers place.
 
-“Fools errand” boomed a voice in the tavern. “Do not follow Ismark the lesser” said a man we came to know as Billdrath. Ismark explained that he had lost friends because Ismark had been too proud to run away when the village was threatened. He explained that Doru, the son of Father Donavitch, had recruited a party to explore the castle near the village and clear it of any threats. They were never heard from again, but shortly after an Elf entered the village and proclaimed that Doru had woken Strahd and that he would exact some vengeance for having his slumber interrupted.
+“Fools errand” boomed a voice in the tavern. “Do not follow Ismark the lesser” said a man we came to know as Bildrath. Ismark explained that he had lost friends because Ismark had been too proud to run away when the village was threatened. He explained that Doru, the son of Father Donavich, had recruited a party to explore the castle near the village and clear it of any threats. They were never heard from again, but shortly after an Elf entered the village and proclaimed that Doru had woken Strahd and that he would exact some vengeance for having his slumber interrupted.
 
-Then a woman entered the Tavern, a face full of fright and dismay. Pale faced, she cried to Ismark speaking of a girl named Gertrude who had gone alone in the night to Vallaki. Ismark promised to send someone to look for her in the morning.
+Then a woman entered the Tavern, a face full of fright and dismay. Pale faced, she cried to Ismark speaking of a girl named Gertruda who had gone alone in the night to Vallaki. Ismark promised to send someone to look for her in the morning.
 
-We walked to the mayors mansion at the south end of the village, and when Ismark knocked on the door, a young woman peeked out and then we heard three locks unlocking before the door swung open. It turns she is Ismak’s sister, Irena. She was adopted and we learned that Ismark’s family found Irena in the forest when she was a little girl.
+We walked to the mayors mansion at the south end of the village, and when Ismark knocked on the door, a young woman peeked out and then we heard three locks unlocking before the door swung open. It turns she is Ismark’s sister, Ireena. She was adopted and we learned that Ismark’s family found Ireena in the forest when she was a little girl.
 
-Irena asks us to help the villagers that retreated to Vallaki. First they must bury their father, who died in the attack.
+Ireena asks us to help the villagers that retreated to Vallaki. First they must bury their father, who died in the attack.
 
 [Aera shan Ravanór](/wiki/aera-shan-ravanor/) found a guide to killing vampires which read as follows:
 

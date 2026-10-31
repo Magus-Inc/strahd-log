@@ -16,7 +16,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 We destroyed Winter Splinter and took the gemheart, but at a heavy cost: its bursting death took Veyren’s life.
 
-We went to the Whispering Wall to claim our reward, and Strahd congratulated us on beating the forest folk and on how we handled Ludmila, though he warned that she will not forget. The wall is an ancient tomb steeped in divine mystery, and it shows those who enter their deepest desires. Strahd dared us to go in, but warned that many souls never come back.
+We went to the Whispering Wall to claim our reward, and Strahd congratulated us on beating the forest folk and on how we handled Ludmilla, though he warned that she will not forget. The wall is an ancient tomb steeped in divine mystery, and it shows those who enter their deepest desires. Strahd dared us to go in, but warned that many souls never come back.
 
 Three of us took the dare:  
 - Zorpheus heard the prophecy confirmed.  
@@ -26,7 +26,7 @@ Three of us took the dare:
 Each of us heard a whisper from behind: **“The way back comes but once.”**  
 Zorpheus got out at the last possible moment, just before the gate dissolved.
 
-Irena went in too and came out with tears on her cheeks. She would not tell her vision while Strahd was near.
+Ireena went in too and came out with tears on her cheeks. She would not tell her vision while Strahd was near.
 
 Strahd gave us gemstones of two kinds: gray stones that lead to what we desire, and silver stones that carry us a few steps in a breath of mist. Each of us chose one. Then he brought out a moth-shaped artifact, the **Twilight Crest**, full of powerful magic.
 
@@ -43,7 +43,7 @@ Deals were struck:
 
 **Kavan’s Cairn**: An old place of worship, where Kavan told us the legends of the Seeker, the Weaver and the Huntress.
 
-**Hill of Ravenloft**: The resting place of King Doestron, where a legendary spear waits.
+**Hill of Ravenloft**: The resting place of King Dostron, where a legendary spear waits.
 
 **Minofaustus’ Magical Market**: A traveling merchant’s wagon brimming with enchanted things, for a price.
 
@@ -103,7 +103,7 @@ Selections:
 ## Session Highlights:
 
 - Zorpheus nearly trapped in the Wall’s vision.  
-- Irena’s tearful return from the Wall, keeping her vision to herself until Strahd left.  
+- Ireena’s tearful return from the Wall, keeping her vision to herself until Strahd left.  
 - The moth-shaped artifact Strahd held, its meaning still unknown.  
 - Gumbo’s bold trade with Minofaustus: Zorpheus as his servant, and a **Cloak of Elvenkind**.  
 - Aera’s Shades Ring, and the steep debt that came with it.

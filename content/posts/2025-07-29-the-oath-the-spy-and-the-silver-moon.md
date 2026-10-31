@@ -37,7 +37,7 @@ On the road east we met a **skeletal rider**, whom we believe to be **Sergei von
 > **Q: Are you a component of breaking the curse?**  
 > **A: No**
 
-Sergei told us that **Strahd murdered him**, and that **Tatiana took her own life**, which set Strahd’s curse in motion. Now Strahd seeks **Irena**, believing she is Tatiana reborn.
+Sergei told us that **Strahd murdered him**, and that **Tatyana took her own life**, which set Strahd’s curse in motion. Now Strahd seeks **Ireena**, believing she is Tatyana reborn.
 
 We found a **massive oak tree** with “K & V” carved into the trunk. A scroll nearby reads:
 
@@ -86,7 +86,7 @@ The chest opened, and inside it holds far more than it should, like a bag of hol
 ## Encounters:
 
 * **Horngaard** – Awakened by the knight’s oath, reveals prophecy.
-* **Sergei Von Zarovich** – Skeletal rider shares tragic history.
+* **Sergei von Zarovich** – Skeletal rider shares tragic history.
 * **Katarina’s Letter** – Reveals Madam Eva’s past and a lost love.
 * **Strahd’s Puzzle Chest** – Solved to reveal magical storage.
 
@@ -101,14 +101,14 @@ The chest opened, and inside it holds far more than it should, like a bag of hol
 
 * **Horngaard** – Believes Barovia’s suffering is penance.
 * **Arrigal** – Delivers note about spy.
-* **Sergei Von Zarovich** – Strahd’s murdered brother.
+* **Sergei von Zarovich** – Strahd’s murdered brother.
 * **Katarina (Madam Eva)** – Survivor of Strahd’s wrath.
 
 ## Plot Points:
 
 * **Prophecy of Argynvost** – Skull may weaken Strahd.
 * **Spy in Castle Ravenloft** – Secret contact awaits.
-* **Strahd’s Curse** – Tied to Tatiana and Irena.
+* **Strahd’s Curse** – Tied to Tatyana and Ireena.
 * **Madam Eva’s Past** – Revealed through Katarina’s letter.
 
 ## Session Highlights:

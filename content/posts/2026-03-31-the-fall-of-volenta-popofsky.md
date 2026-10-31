@@ -21,7 +21,7 @@ It was a grueling battle of magic and steel. Volenta fought with poisoned dagger
 
 Note: Meta talk during the fight ranged from how Uncanny Dodge and Haste work to a long, funny tangent on the "Ant-Man vs. Thanos" theory and the benefits of hiring a good CPA for tax season.
 
-At the height of it Volenta seized Shabasta and dragged him ten feet up the dungeon wall to drain his life. But we struck her again and again until she was pinned to the wall, crucified there, and her reign of terror was over. Then we took the key to free the werewolf Emil Terescu, and stripped the bride of her treasures.
+At the height of it Volenta seized Shabasta and dragged him ten feet up the dungeon wall to drain his life. But we struck her again and again until she was pinned to the wall, crucified there, and her reign of terror was over. Then we took the key to free the werewolf Emil Toranescu, and stripped the bride of her treasures.
 
 Note: After the fight the players talked about Revivify as a "free heal": it is often mechanically better to let a character die and bring them back than to heal them up from below zero.
 
@@ -35,7 +35,7 @@ Volenta Popofsky: A fierce fight against a vampire bride and several zombies. Ae
 
 ## Loot:
 
-* **Iron Key**: Found on Volenta’s body; used to unlock the restraints on the werewolf Emil Terescu.
+* **Key**: Found on Volenta’s body; used to unlock the neck restraint on the werewolf Emil Toranescu.
 * **Platinum Skull Mask**: A valuable decorative mask worth 750 gold pieces.
 * **Platinum Rings**: Several rings set with costly gems.
 * **Fine Clothing**: Fine garments taken from the bride.
@@ -44,7 +44,7 @@ Volenta Popofsky: A fierce fight against a vampire bride and several zombies. Ae
 ## Notable NPCs:
 
 **Volenta Popofsky**: One of Strahd’s wives, who fought with daggers, ice shards and a monstrous change of shape.  
-**Emil Terescu**: A werewolf prisoner Volenta held; we freed him after her death.
+**Emil Toranescu**: A werewolf prisoner Volenta held; we freed him after her death.
 
 ## Plot Points:
 

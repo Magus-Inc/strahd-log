@@ -65,6 +65,6 @@ The battle was brutal. Rahadin’s very presence is agony to the mind, and his s
 ## Session Highlights:
 
 * **The Icon’s Plea**: “The vampire must be destroyed. Use me as your weapon.”
-* **The Dragon’s Return**: Aera sending her spirit dragon, Zora, to scout for Gertruda in the chaos.
+* **The Dragon’s Return**: Aera sending her spirit dragon, Zorya, to scout for Gertruda in the chaos.
 
 Note: The Gecko Incident: Crusty once ate a dead gecko for 20 gold pieces. And the "Chicago" heal: Malron's muddled attempt to name his healing spells, to the whole party's confusion.

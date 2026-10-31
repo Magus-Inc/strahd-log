@@ -3,7 +3,6 @@ title: Abbey of Saint Markovia
 type: place
 aliases:
 - St. Markovia Abbey
-- St. Markova Abbey
 - Abbey of St. Markovia
 summary: An abbey in Krezk near the mists.
 source: Compiled from the adventure log, with a description written for the site
@@ -23,7 +22,7 @@ Madam Eva's cards sent us here first: a Vistana searching for a mentor, to be fo
 
 ### The Abbot's house
 
-The road up is steep and cold. We found the Belview family, Otto, Zygfrek and Clovin, warped by the Abbot's attempts to cure them, and his flesh golem, which we gave a crown of flowers. Esmerelda's wagon was hidden nearby, and her séance told us of a silver statuette in Castle Ravenloft that could cure the Abbot. The Abbot was making Vasilka, a bride for Strahd ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). We came back with the Icon of Dawn's Grace and found him in the asylum, a lightless hall of cells, scolding Vasilka. Clovin gave Olfin and Aera bone wings from the tower for a kind lie about Cyrus ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
+The road up is steep and cold. We found the Belview family, Otto, Zygfrek and Clovin, warped by the Abbot's attempts to cure them, and his flesh golem, which we gave a crown of flowers. Ezmerelda's wagon was hidden nearby, and her séance told us of a silver statuette in Castle Ravenloft that could cure the Abbot. The Abbot was making Vasilka, a bride for Strahd ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). We came back with the Icon of Dawn's Grace and found him in the asylum, a lightless hall of cells, scolding Vasilka. Clovin gave Olfin and Aera bone wings from the tower for a kind lie about Cyrus ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
 
 ### The Abbot redeemed
 
@@ -39,7 +38,7 @@ That night fog rose from the courtyard well, and Liren and Gumbo came back to us
 * Ismark asked the party to escort Ireena here. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
 * Madam Eva's Mists card points to a Vistana found here. ([Tser Pool](/posts/tser-pool/))
 * The Abbot has taken it over. ([Welcome to Krezk](/posts/welcome-to-krezk/))
-* The party held a séance there with Esmerelda. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
+* The party held a séance there with Ezmerelda. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
 * The Icon of Dawn's Grace must be returned here to cure the Abbot. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))
 * The party fought the Abbot in its asylum (S15) and received bone wings in its tower (S17). ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * Liren and Gumbo rose from its courtyard well; a red door led to a hall of lost keepsakes below. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))

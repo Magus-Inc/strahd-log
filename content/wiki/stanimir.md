@@ -1,8 +1,6 @@
 ---
 title: Stanimir
 type: npc
-aliases:
-- Stanimere
 summary: A Vistani man at the Tser Pool camp.
 source: Compiled from the adventure log
 ---

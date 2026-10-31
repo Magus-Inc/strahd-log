@@ -21,7 +21,7 @@
 {"text":"Was detected while invisible, starting the fight in the werewolf cave.","post":"2025-05-06-echoes-of-the-black-terro"},
 {"text":"Drank the blood in Strahd's game and fully transformed into a werewolf.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Malron Lichtstrahl","type":"character","aliases":["Malron","Marlon"],"summary":"A Reborn Cleric of Lathander who shares his body with an ancient Elf spirit.","facts":[
-{"text":"Triggered a poison dart trap in Heinrich's wardrobe and was paralyzed.","post":"2024-11-19-the-quest-for-the-missing-bones"},
+{"text":"Triggered a poison dart trap in Henrik's wardrobe and was paralyzed.","post":"2024-11-19-the-quest-for-the-missing-bones"},
 {"text":"Attached Izek's magical arm to Shabasta.","post":"2024-12-10-the-fall-of-izek"},
 {"text":"Used the Talisman of Echoes to speak with Izek's head.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Was once poisoned by a Giant Spider; a resurrection let an Elf spirit into his body.","post":"2025-02-11-entering-the-spirit-realm"},
@@ -29,16 +29,16 @@
 {"text":"Promised to deliver Marzena's flower necklace.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Silenced himself for a day in Strahd's game rather than abandon his faith.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Shabasta","type":"character","aliases":[],"summary":"A porcupine bard in the party with a flair for disguise and dramatic speeches.","facts":[
-{"text":"Disguised himself as Father Lucien to get guards to arrest Milivoj.","post":"2024-11-19-the-quest-for-the-missing-bones"},
-{"text":"Disguised himself as Blinksy and was shot at by the Baron's guards.","post":"2024-11-26-consequences-in-vallaki"},
+{"text":"Disguised himself as Father Lucian to get guards to arrest Milivoj.","post":"2024-11-19-the-quest-for-the-missing-bones"},
+{"text":"Disguised himself as Blinsky and was shot at by the Baron's guards.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Had Izek's magical arm attached to him.","post":"2024-12-10-the-fall-of-izek"},
-{"text":"Gave a speech that saved Milovaj and Heinrich from hanging.","post":"2025-01-07-helping-victor"},
+{"text":"Gave a speech that saved Milivoj and Henrik from hanging.","post":"2025-01-07-helping-victor"},
 {"text":"Died fighting the gallows speaker and could not be brought back.","post":"2025-02-11-entering-the-spirit-realm"}]},
 {"name":"Olfin Darning","type":"character","aliases":["Olfin"],"summary":"A Hexblood Paladin in the party.","facts":[
 {"text":"Sent some of his hair to Ireena to warn her about Izek.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Earned Lady Fiona's trust so she lowered the binding circle.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
 {"text":"Negotiated entry into the hags' windmill with Shabasta.","post":"2025-01-21-the-windmill-heist"},
-{"text":"Received the Symbol of Ravenkind from Zurika for promising to rescue Emil.","post":"2025-05-13-blood-and-oaths-under-moonligh"},
+{"text":"Received the Symbol of Ravenkind from Zuleika for promising to rescue Emil.","post":"2025-05-13-blood-and-oaths-under-moonligh"},
 {"text":"Let his weapon be cursed rather than swear fealty to Strahd.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Oogway","type":"character","aliases":[],"summary":"A turtle Wizard Bladesinger who emerged mysteriously from a lake.","facts":[
 {"text":"Interrogated Izek's head about his arm and the Order of the Feather.","post":"2024-12-17-delivery-for-lady-fiona"},
@@ -49,7 +49,7 @@
 {"name":"Veyren","type":"character","aliases":[],"summary":"Shabasta's hare-like brother, a druid who joined the party.","facts":[
 {"text":"Joined the party and received Shabasta's letter.","post":"2025-03-04-act-3-the-broken-land"},
 {"text":"Turned into a mouse to spy on a druid torturing a raven.","post":"2025-03-11-wizard-of-wines-vineyard"},
-{"text":"Read druidic runes about Kaven the Blood Drinker.","post":"2025-03-25-finishing-up-at-the-vineyard"},
+{"text":"Read druidic runes about Kavan the Blood Drinker.","post":"2025-03-25-finishing-up-at-the-vineyard"},
 {"text":"Asked Strahd why some people move freely in his domain.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Was killed by Winter Splinter's explosive death.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"Zorpheus","type":"character","aliases":[],"summary":"A mysterious wanderer and bard, a former thief, drawn to fate and prophecy.","facts":[
@@ -57,36 +57,36 @@
 {"text":"Was given to Gumbo as a servant by Minofaustus.","post":"2025-04-15-the-whispering-wall"},
 {"text":"Cast Suggestion to make the last werewolf lead them to the prisoners.","post":"2025-05-06-echoes-of-the-black-terro"},
 {"text":"Chose blood in Strahd's hourglass game.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Father Lucien","type":"npc","aliases":["Lucien"],"summary":"A priest in Vallaki who helps the party recover the Bones of St. Andral.","facts":[
+{"name":"Father Lucian","type":"npc","aliases":["Lucian"],"summary":"A priest in Vallaki who helps the party recover the Bones of St. Andral.","facts":[
 {"text":"Led the party to Milivoj's home and fought Volenta with them.","post":"2024-11-19-the-quest-for-the-missing-bones"},
 {"text":"Received the bones to bless them and renew the church's ward.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Argued with guards at the town square.","post":"2024-12-17-delivery-for-lady-fiona"}]},
-{"name":"Milivoj","type":"npc","aliases":["Milovaj"],"summary":"A poor young man in Vallaki who stole the Bones of St. Andral to support his siblings.","facts":[
-{"text":"Confessed to selling the bones to Heinrich; his parents are addicted to dream pastries.","post":"2024-11-19-the-quest-for-the-missing-bones"},
+{"name":"Milivoj","type":"npc","aliases":["Milivoj"],"summary":"A poor young man in Vallaki who stole the Bones of St. Andral to support his siblings.","facts":[
+{"text":"Confessed to selling the bones to Henrik; his parents are addicted to dream pastries.","post":"2024-11-19-the-quest-for-the-missing-bones"},
 {"text":"Was condemned to death by hanging.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Was set free after Rahadin rolled a 20.","post":"2025-01-07-helping-victor"}]},
-{"name":"Heinrich","type":"npc","aliases":[],"summary":"A Vallaki shop owner who bought the stolen Bones of St. Andral.","facts":[
+{"name":"Henrik","type":"npc","aliases":[],"summary":"A Vallaki shop owner who bought the stolen Bones of St. Andral.","facts":[
 {"text":"Bought the bones from Milivoj and was arrested by guards.","post":"2024-11-19-the-quest-for-the-missing-bones"},
-{"text":"Bought a noise toy from Blinksy.","post":"2024-11-26-consequences-in-vallaki"},
+{"text":"Bought a noise toy from Blinsky.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Was condemned to death by hanging.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Was branded with the symbol of Castle Ravenloft instead of hanged.","post":"2025-01-07-helping-victor"}]},
 {"name":"Volenta","type":"npc","aliases":[],"summary":"A bride of Strahd.","facts":[
-{"text":"Escaped the fight at Heinrich's shop, leaving mists and a glowing pentagram.","post":"2024-11-19-the-quest-for-the-missing-bones"},
-{"text":"Ludmila openly scorns her.","post":"2025-04-01-stop-winter-splinter"}]},
-{"name":"Ireena","type":"npc","aliases":["Irena"],"summary":"A young woman Strahd seeks, who later joins the party as a healer and swordsman.","facts":[
+{"text":"Escaped the fight at Henrik's shop, leaving mists and a glowing pentagram.","post":"2024-11-19-the-quest-for-the-missing-bones"},
+{"text":"Ludmilla openly scorns her.","post":"2025-04-01-stop-winter-splinter"}]},
+{"name":"Ireena","type":"npc","aliases":["Ireena"],"summary":"A young woman Strahd seeks, who later joins the party as a healer and swordsman.","facts":[
 {"text":"Was to stay at the church under the renewed ward.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Izek ransacked the Blue Water Inn looking for her.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Izek's lost sister may be her.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Rahadin requested her presence at dinner at Castle Ravenloft.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Joined the party, saying the Abbey cannot protect her from Strahd.","post":"2025-03-04-act-3-the-broken-land"},
 {"text":"Came out of the Whispering Wall in tears and would not share her vision near Strahd.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"Irwin Martikov","type":"npc","aliases":["Irwin","Urwin"],"summary":"Innkeeper of the Blue Water Inn and a member of the Keepers of the Feather.","facts":[
+{"name":"Urwin Martikov","type":"npc","aliases":["Urwin","Urwin"],"summary":"Innkeeper of the Blue Water Inn and a member of the Keepers of the Feather.","facts":[
 {"text":"Was found sweeping glass after Izek ransacked his inn.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Asked the party to check on the overdue Wizard of Wines shipment and his father.","post":"2025-03-04-act-3-the-broken-land"},
-{"text":"Is the son of Davien Martikov.","post":"2025-03-11-wizard-of-wines-vineyard"},
+{"text":"Is the son of Davian Martikov.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Was revealed as a Keeper of the Feather.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
-{"name":"Izek Strahsne","type":"npc","aliases":["Izek"],"summary":"The Baron of Vallaki's enforcer, with a flaming demon arm.","facts":[
-{"text":"Ransacked the Blue Water Inn looking for Ireena and set Blinksy's store on fire.","post":"2024-11-26-consequences-in-vallaki"},
+{"name":"Izek Strazni","type":"npc","aliases":["Izek"],"summary":"The Baron of Vallaki's enforcer, with a flaming demon arm.","facts":[
+{"text":"Ransacked the Blue Water Inn looking for Ireena and set Blinsky's store on fire.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Lost his arm to a wolf as a child when his sister went missing.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Drank the poisoned wine at the lake and was killed by the party.","post":"2024-12-10-the-fall-of-izek"},
 {"text":"His head, questioned through the Talisman of Echoes, revealed the Order of the Feather.","post":"2024-12-17-delivery-for-lady-fiona"},
@@ -94,49 +94,49 @@
 {"name":"Izek's Arm","type":"item","aliases":[],"summary":"Izek's magical demon arm, later attached to Shabasta.","facts":[
 {"text":"Was cut off by Liren and attached to Shabasta by Malron.","post":"2024-12-10-the-fall-of-izek"},
 {"text":"Has the powers Flame Hurl and Flame Volley.","post":"2024-12-17-delivery-for-lady-fiona"}]},
-{"name":"Fiona Wachter","type":"npc","aliases":["Lady Fiona","Fiona","Lady Fiona Wachter","Fiona Vochter","Lady Fiona Vachter","Lady Wachter","Vachtner"],"summary":"A noblewoman of Vallaki who opposes the Baron and later takes control of the town.","facts":[
-{"text":"Invited Aera to dinner at Wachter Haus.","post":"2024-11-26-consequences-in-vallaki"},
+{"name":"Fiona Wachter","type":"npc","aliases":["Lady Fiona","Fiona","Lady Fiona Wachter","Fiona Wachter","Lady Fiona Wachter","Lady Wachter","Wachter"],"summary":"A noblewoman of Vallaki who opposes the Baron and later takes control of the town.","facts":[
+{"text":"Invited Aera to dinner at Wachterhaus.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Follows Ezra and was rescued from the woods as a girl by Lysa.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Gave the party poison wine to use against Izek.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Rewarded the party with her armory for Izek's head.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Took control of Vallaki.","post":"2025-01-07-helping-victor"},
 {"text":"Has a pet imp familiar; the gallows speaker killed her parents.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
 {"text":"Translated the hags' Abyssal contract and started the binding circle.","post":"2025-01-21-the-windmill-heist"}]},
-{"name":"Blinksy","type":"npc","aliases":[],"summary":"A toymaker in Vallaki whose store Izek set on fire.","facts":[
+{"name":"Blinsky","type":"npc","aliases":[],"summary":"A toymaker in Vallaki whose store Izek set on fire.","facts":[
 {"text":"Was found unconscious in his burning store after a doll went missing.","post":"2024-11-26-consequences-in-vallaki"},
-{"text":"Sold a noise toy to Heinrich.","post":"2024-11-26-consequences-in-vallaki"}]},
-{"name":"Blinksys","type":"place","aliases":[],"summary":"Blinksy's store in Vallaki.","facts":[
+{"text":"Sold a noise toy to Henrik.","post":"2024-11-26-consequences-in-vallaki"}]},
+{"name":"Blinsky's Toy Store","type":"place","aliases":[],"summary":"Blinsky's store in Vallaki.","facts":[
 {"text":"Was set on fire by Izek.","post":"2024-11-26-consequences-in-vallaki"}]},
-{"name":"Valakovich","type":"npc","aliases":["Baron of Vallaki","Vallakovich"],"summary":"The Baron of Vallaki, father of Viktor.","facts":[
+{"name":"Vallakovich","type":"npc","aliases":["Baron of Vallaki","Vallakovich"],"summary":"The Baron of Vallaki, father of Victor.","facts":[
 {"text":"Had his guards shoot at Shabasta and reasserted his title.","post":"2024-11-26-consequences-in-vallaki"},
-{"text":"Was cursed by Nicolai in the past.","post":"2024-12-03-shadows-over-vallaki"},
-{"text":"May have executed the shoemaker Lukavich.","post":"2024-12-03-shadows-over-vallaki"},
+{"text":"Was cursed by Nikolai in the past.","post":"2024-12-03-shadows-over-vallaki"},
+{"text":"May have executed the shoemaker Lukovich.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Still occupies the Burgomaster Mansion with Victor.","post":"2025-01-07-helping-victor"}]},
-{"name":"Viktor","type":"npc","aliases":["Victor"],"summary":"The Baron's son, a young wizard experimenting with teleportation.","facts":[
+{"name":"Victor","type":"npc","aliases":["Victor"],"summary":"The Baron's son, a young wizard experimenting with teleportation.","facts":[
 {"text":"Stella fell sick after visiting him.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"His failed teleport trapped Stella in the spirit realm.","post":"2025-01-07-helping-victor"},
 {"text":"Needs a hag's heart stone to reach the Ethereal Plane.","post":"2025-01-07-helping-victor"},
 {"text":"Provided counter spells to hold the binding circle at the windmill.","post":"2025-01-21-the-windmill-heist"},
 {"text":"Used the heart stone to take the party into the ethereal realm.","post":"2025-02-11-entering-the-spirit-realm"}]},
 {"name":"Stella","type":"npc","aliases":[],"summary":"Lady Fiona's daughter, trapped in the spirit realm by Victor's failed spell.","facts":[
-{"text":"Appeared as a hollow-eyed girl in a nightgown at Wachter Haus.","post":"2024-12-03-shadows-over-vallaki"},
+{"text":"Appeared as a hollow-eyed girl in a nightgown at Wachterhaus.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Her spirit appeared in a mirror; she saw a night hag near the refugee camp.","post":"2025-01-07-helping-victor"},
 {"text":"Was rescued from the spirit realm.","post":"2025-02-11-entering-the-spirit-realm"}]},
-{"name":"Nicolai","type":"npc","aliases":[],"summary":"Stella's older brother, who once cursed the Baron.","facts":[
+{"name":"Nikolai","type":"npc","aliases":[],"summary":"Stella's older brother, who once cursed the Baron.","facts":[
 {"text":"Took Stella for a walk around the grounds.","post":"2024-12-03-shadows-over-vallaki"},
-{"text":"Carl says a Nicolai, their father, died of a wasting sickness.","post":"2024-12-03-shadows-over-vallaki"}]},
-{"name":"Carl","type":"npc","aliases":[],"summary":"Stella's younger brother.","facts":[
+{"text":"Karl says a Nikolai, their father, died of a wasting sickness.","post":"2024-12-03-shadows-over-vallaki"}]},
+{"name":"Karl","type":"npc","aliases":[],"summary":"Stella's younger brother.","facts":[
 {"text":"Said their father died of a wasting sickness.","post":"2024-12-03-shadows-over-vallaki"}]},
 {"name":"Frederick","type":"npc","aliases":[],"summary":"Lady Fiona's older brother.","facts":[
 {"text":"Was supposed to be the heir until Lysa rescued Fiona.","post":"2024-12-03-shadows-over-vallaki"}]},
-{"name":"Lysa","type":"npc","aliases":["Lisa"],"summary":"A woods-witch of Berez who was Lady Fiona's mentor.","facts":[
+{"name":"Lysa","type":"npc","aliases":["Lysa"],"summary":"A woods-witch of Berez who was Lady Fiona's mentor.","facts":[
 {"text":"Rescued Lady Fiona from the woods when she was young.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Lived in the swamps of Berez and worshipped Mother Night.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
-{"text":"Babalasaga is referred to as Lisa, Fiona's mentor.","post":"2025-03-11-wizard-of-wines-vineyard"}]},
-{"name":"Baba Lasaga","type":"npc","aliases":["Babalasaga","Baba Lasagna"],"summary":"A powerful witch living in Berez who helped Strahd's allies.","facts":[
-{"text":"Drove the Martikov family from the vineyard with the druids; called Lisa, Fiona's mentor.","post":"2025-03-11-wizard-of-wines-vineyard"},
+{"text":"Baba Lysaga is referred to as Lysa, Fiona's mentor.","post":"2025-03-11-wizard-of-wines-vineyard"}]},
+{"name":"Baba Lysaga","type":"npc","aliases":["Baba Lysaga","Baba Lysaga"],"summary":"A powerful witch living in Berez who helped Strahd's allies.","facts":[
+{"text":"Drove the Martikov family from the vineyard with the druids; called Lysa, Fiona's mentor.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Stole one of the winery's gems three weeks ago.","post":"2025-03-25-finishing-up-at-the-vineyard"},
-{"text":"Helped Ludmila take control of the winery and lives in Berez.","post":"2025-04-01-stop-winter-splinter"},
+{"text":"Helped Ludmilla take control of the winery and lives in Berez.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Empowers Kiril, the Black Terror.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Made the silver-thorn collars and helped capture Emil.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Ezra","type":"deity","aliases":[],"summary":"Goddess of the mists who teaches endurance, followed by Lady Fiona.","facts":[
@@ -148,12 +148,12 @@
 {"name":"Lathander","type":"deity","aliases":["Morninglord","Morning Lord"],"summary":"The Morninglord, god served by Malron.","facts":[
 {"text":"Malron is a cleric of Lathander.","post":"2025-02-11-entering-the-spirit-realm"},
 {"text":"A sun-engraved holy symbol disc may be linked to him.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Lukavich","type":"npc","aliases":[],"summary":"A Vallaki shoemaker.","facts":[
+{"name":"Lukovich","type":"npc","aliases":[],"summary":"A Vallaki shoemaker.","facts":[
 {"text":"Was captured and possibly executed by the Baron.","post":"2024-12-03-shadows-over-vallaki"}]},
 {"name":"Berez","type":"place","aliases":[],"summary":"A swampy fishing village south of Vallaki.","facts":[
 {"text":"Was swept away by the river when Strahd was challenged.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Lysa lived in its swamps.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
-{"text":"Baba Lasaga lives there.","post":"2025-04-01-stop-winter-splinter"}]},
+{"text":"Baba Lysaga lives there.","post":"2025-04-01-stop-winter-splinter"}]},
 {"name":"Sun Sword","type":"item","aliases":["Sunsword"],"summary":"A rumored glowing sword.","facts":[
 {"text":"Lady Fiona heard of it but doubts it exists.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Rumored to be Strahd's father's weapon, possibly in the Amber Temple.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
@@ -173,47 +173,47 @@
 {"name":"Hell Hound Whisperer","type":"item","aliases":[],"summary":"An item looted from Izek.","facts":[
 {"text":"Found after the fight with Izek.","post":"2024-12-10-the-fall-of-izek"}]},
 {"name":"Bones of St. Andral","type":"item","aliases":[],"summary":"Holy relics that power the ward of Vallaki's church.","facts":[
-{"text":"Were found in a bag in Heinrich's wardrobe.","post":"2024-11-19-the-quest-for-the-missing-bones"},
-{"text":"Were given to Father Lucien to renew the ward.","post":"2024-11-26-consequences-in-vallaki"}]},
+{"text":"Were found in a bag in Henrik's wardrobe.","post":"2024-11-19-the-quest-for-the-missing-bones"},
+{"text":"Were given to Father Lucian to renew the ward.","post":"2024-11-26-consequences-in-vallaki"}]},
 {"name":"Talisman of Echoes","type":"item","aliases":[],"summary":"A talisman Malron uses to speak with the dead.","facts":[
 {"text":"Malron used it to question Izek's head.","post":"2024-12-17-delivery-for-lady-fiona"}]},
 {"name":"Locket of the Last Laugh","type":"item","aliases":[],"summary":"An eerie locket that emits childlike laughter.","facts":[
 {"text":"Was found by Liren.","post":"2024-12-17-delivery-for-lady-fiona"}]},
 {"name":"Keepers of the Feather","type":"faction","aliases":["Order of the Feather","keeper of feathers"],"summary":"A secret group that opposes Strahd by guiding and sheltering, using ravens.","facts":[
 {"text":"Izek's head revealed the Order of the Feather opposes Strahd.","post":"2024-12-17-delivery-for-lady-fiona"},
-{"text":"Damien and Irwin Martikov are members.","post":"2025-03-25-finishing-up-at-the-vineyard"},
-{"text":"Damien leads it.","post":"2025-04-22-welcome-to-krezk"}]},
+{"text":"Davian and Urwin Martikov are members.","post":"2025-03-25-finishing-up-at-the-vineyard"},
+{"text":"Davian leads it.","post":"2025-04-22-welcome-to-krezk"}]},
 {"name":"Erasmus","type":"npc","aliases":[],"summary":"The spirit of a 14-year-old boy who helps Stella hide in the spirit realm.","facts":[
-{"text":"Wrote 'Help Viktor' on a frosted window at the inn.","post":"2024-12-17-delivery-for-lady-fiona"},
+{"text":"Wrote 'Help Victor' on a frosted window at the inn.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Told the party about the gallows speaker.","post":"2025-01-07-helping-victor"},
 {"text":"Warned the party to attack spirits near Stella.","post":"2025-02-11-entering-the-spirit-realm"}]},
-{"name":"Rahadin","type":"npc","aliases":["Rajadin"],"summary":"An elf servant of Strahd.","facts":[
+{"name":"Rahadin","type":"npc","aliases":["Rahadin"],"summary":"An elf servant of Strahd.","facts":[
 {"text":"Arrived on a phantom steed with an invitation to dinner at Castle Ravenloft.","post":"2024-12-17-delivery-for-lady-fiona"},
-{"text":"Rolled dice to decide Milovaj's and Heinrich's fates.","post":"2025-01-07-helping-victor"},
+{"text":"Rolled dice to decide Milivoj's and Henrik's fates.","post":"2025-01-07-helping-victor"},
 {"text":"Strahd calls him a servant.","post":"2025-04-01-stop-winter-splinter"},
-{"text":"Killed Hornguard, commander of the Order of the Silver Dragon.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"text":"Killed Horngaard, commander of the Order of the Silver Dragon.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Castle Ravenloft","type":"place","aliases":["Ravenloft"],"summary":"Strahd's castle.","facts":[
 {"text":"Rahadin invited the party to dinner there.","post":"2024-12-17-delivery-for-lady-fiona"},
-{"text":"Elrich died in a march on it.","post":"2025-03-11-wizard-of-wines-vineyard"},
+{"text":"Elvir died in a march on it.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"A silver statuette there could cure the Abbot.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Emil is imprisoned in its dungeons.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Prince Sergei","type":"npc","aliases":[],"summary":"A prince whose wedding to Tatyana is recorded in the Wachter family history.","facts":[
 {"text":"The party read about his wedding to Tatyana.","post":"2024-12-17-delivery-for-lady-fiona"}]},
 {"name":"Tatyana","type":"npc","aliases":[],"summary":"Bride of Prince Sergei.","facts":[
 {"text":"The party read about her wedding to Prince Sergei.","post":"2024-12-17-delivery-for-lady-fiona"}]},
-{"name":"Vallaki","type":"place","aliases":["Vellaki"],"summary":"A walled town where much of the party's early adventure takes place.","facts":[
+{"name":"Vallaki","type":"place","aliases":["Vallaki"],"summary":"A walled town where much of the party's early adventure takes place.","facts":[
 {"text":"Has an eastern gate and the Zarovich gate.","post":"2024-12-10-the-fall-of-izek"},
 {"text":"Lady Fiona took control of it.","post":"2025-01-07-helping-victor"}]},
-{"name":"Blue Water Inn","type":"place","aliases":[],"summary":"Irwin's inn in Vallaki where the party stays.","facts":[
+{"name":"Blue Water Inn","type":"place","aliases":[],"summary":"Urwin's inn in Vallaki where the party stays.","facts":[
 {"text":"Was ransacked by Izek.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Erasmus's spirit wrote messages on its frosted window.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Gets its wine from the Wizard of Wines.","post":"2025-03-04-act-3-the-broken-land"}]},
-{"name":"Wachter Haus","type":"place","aliases":["Wachter House","Vachter Estate"],"summary":"Lady Fiona's manor in Vallaki, protected by a binding circle.","facts":[
+{"name":"Wachterhaus","type":"place","aliases":["Wachterhaus","Wachter Estate"],"summary":"Lady Fiona's manor in Vallaki, protected by a binding circle.","facts":[
 {"text":"The party dined there at Fiona's invitation.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Has an armory the party was rewarded from.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Is ringed by a binding circle against evil spirits.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
 {"text":"Its cellar holds four skeletons in beds and a pentagram.","post":"2025-02-11-entering-the-spirit-realm"}]},
-{"name":"Burgomaster Mansion","type":"place","aliases":["Baron's Mansion","Valokovitch Manor"],"summary":"The Baron's mansion in Vallaki.","facts":[
+{"name":"Burgomaster Mansion","type":"place","aliases":["Baron's Mansion","Vallakovich Manor"],"summary":"The Baron's mansion in Vallaki.","facts":[
 {"text":"A woman resembling Stella was seen in a mirror in its attic.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Victor runs teleportation experiments there.","post":"2025-01-07-helping-victor"}]},
 {"name":"Eastern Gate","type":"place","aliases":[],"summary":"Vallaki's eastern gate.","facts":[
@@ -254,8 +254,8 @@
 {"text":"Wanted to claim Stella and Lady Fiona and shared his history with Strahd.","post":"2025-02-11-entering-the-spirit-realm"}]},
 {"name":"Van Richten","type":"npc","aliases":[],"summary":"Author of a guide on monsters whose son was kidnapped.","facts":[
 {"text":"Erasmus shared lore from Van Richten's guide.","post":"2025-01-07-helping-victor"},
-{"text":"Esmerelda's family had a hand in kidnapping his son.","post":"2025-05-06-echoes-of-the-black-terro"}]},
-{"name":"Mordakainen","type":"npc","aliases":[],"summary":"A wizard whose book Victor uses.","facts":[
+{"text":"Ezmerelda's family had a hand in kidnapping his son.","post":"2025-05-06-echoes-of-the-black-terro"}]},
+{"name":"Mordenkainen","type":"npc","aliases":[],"summary":"A wizard whose book Victor uses.","facts":[
 {"text":"His book can transport up to nine creatures on a full moon with a heart stone.","post":"2025-01-07-helping-victor"}]},
 {"name":"Forest Folk","type":"faction","aliases":["forest folk","Druids"],"summary":"Druids and hermits of the Svalich Woods who worship Strahd.","facts":[
 {"text":"Treat Yester Hill as sacred and worship Strahd as a deity.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
@@ -287,24 +287,24 @@
 {"text":"Its shipment to the Blue Water Inn was 16 days overdue.","post":"2025-03-04-act-3-the-broken-land"},
 {"text":"The druids and their blights took it over.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Makes wine with three magic green gemstones.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
-{"name":"Davien Martikov","type":"npc","aliases":["Damien","Damien Martikov","Davien Warningkoff","Davien"],"summary":"Head of the Martikov family and leader of the Keepers of the Feather.","facts":[
+{"name":"Davian Martikov","type":"npc","aliases":["Davian","Davian Martikov","Davian Martikov","Davian"],"summary":"Head of the Martikov family and leader of the Keepers of the Feather.","facts":[
 {"text":"Appeared cloaked near the vineyard and led the party into a trapdoor.","post":"2025-03-04-act-3-the-broken-land"},
-{"text":"Is Irwin's father and warned of the druids' staff.","post":"2025-03-11-wizard-of-wines-vineyard"},
+{"text":"Is Urwin's father and warned of the druids' staff.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Lost a son in an assault on Castle Ravenloft.","post":"2025-03-25-finishing-up-at-the-vineyard"},
 {"text":"Gave the party an obsidian whistle for recovering the gem.","post":"2025-04-22-welcome-to-krezk"}]},
-{"name":"Muriel Winshaw","type":"npc","aliases":["Muriel"],"summary":"A vineyard employee who guided the party.","facts":[
+{"name":"Muriel Vinshaw","type":"npc","aliases":["Muriel"],"summary":"A vineyard employee who guided the party.","facts":[
 {"text":"Guided the party to the vineyard and fell into a trap.","post":"2025-03-04-act-3-the-broken-land"},
 {"text":"Stayed behind to guard the tunnel exit.","post":"2025-03-11-wizard-of-wines-vineyard"},
-{"text":"Her lover, one of Damien's sons, may be the were-raven Ludmila spoke of.","post":"2025-04-01-stop-winter-splinter"},
+{"text":"Her lover, one of Davian's sons, may be the were-raven Ludmilla spoke of.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Said Strahd got a reading from Madam Eva before the party.","post":"2025-04-22-welcome-to-krezk"}]},
-{"name":"Elrich","type":"npc","aliases":["Elvier"],"summary":"Damien Martikov's son who died attacking Castle Ravenloft.","facts":[
+{"name":"Elvir","type":"npc","aliases":["Elvir"],"summary":"Davian Martikov's son who died attacking Castle Ravenloft.","facts":[
 {"text":"Died three months ago during a march on Castle Ravenloft.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Defied his father and joined Doru's assault.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
 {"name":"Doru","type":"npc","aliases":[],"summary":"Leader of a failed assault on Castle Ravenloft.","facts":[
-{"text":"Led the attack that Damien's son joined.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
-{"name":"Argynvostholt","type":"place","aliases":["Aargenvolstholt"],"summary":"The ruined mansion of the Order of the Silver Dragon.","facts":[
+{"text":"Led the attack that Davian's son joined.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
+{"name":"Argynvostholt","type":"place","aliases":["Argynvostholt"],"summary":"The ruined mansion of the Order of the Silver Dragon.","facts":[
 {"text":"Rumored to be connected to Revenants.","post":"2025-03-04-act-3-the-broken-land"},
-{"text":"Sir Godfried warned the party to avoid its fourth floor and phase spiders.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"text":"Sir Godfrey warned the party to avoid its fourth floor and phase spiders.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Huntress","type":"deity","aliases":[],"summary":"An ancient goddess marked by a three-pointed star.","facts":[
 {"text":"The party found a monument to her near the vineyard.","post":"2025-03-04-act-3-the-broken-land"},
 {"text":"Kavan told her legend with the Seeker and Weaver.","post":"2025-04-15-the-whispering-wall"}]},
@@ -319,25 +319,25 @@
 {"text":"Strahd said it is a giant twig blight.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Was defeated; its explosion killed Veyren.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"Shadow Lord's Staff","type":"item","aliases":[],"summary":"The druid leader's staff that controlled the blights.","facts":[
-{"text":"Davien said it must be destroyed or stolen.","post":"2025-03-11-wizard-of-wines-vineyard"},
+{"text":"Davian said it must be destroyed or stolen.","post":"2025-03-11-wizard-of-wines-vineyard"},
 {"text":"Was destroyed by the party.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
 {"name":"Winter Wolf Teeth","type":"item","aliases":[],"summary":"Three teeth enchanted by mountain folk that blast cold or grant cold immunity.","facts":[
 {"text":"Found in a box; one was used to blast through brown mold.","post":"2025-03-11-wizard-of-wines-vineyard"}]},
 {"name":"Gemheart","type":"item","aliases":[],"summary":"One of the winery's green gemstones with plant-growing magic.","facts":[
-{"text":"One gem was lost ten years ago, one stolen by Baba Lasaga, one taken by the druids.","post":"2025-03-25-finishing-up-at-the-vineyard"},
+{"text":"One gem was lost ten years ago, one stolen by Baba Lysaga, one taken by the druids.","post":"2025-03-25-finishing-up-at-the-vineyard"},
 {"text":"Was recovered by defeating Winter Splinter.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"Mira","type":"npc","aliases":["Maren"],"summary":"A companion with regenerative abilities who summoned Kaven.","facts":[
-{"text":"Secretly planned to meet Kaven, whom Damien disapproves of.","post":"2025-03-25-finishing-up-at-the-vineyard"},
-{"text":"Summoned Kaven by dripping her blood.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
-{"name":"Kaven the Blood Drinker","type":"npc","aliases":["Kaven","Kavan"],"summary":"A figure of the first folk who wields a long wooden spear.","facts":[
+{"name":"Mira","type":"npc","aliases":["Maren"],"summary":"A companion with regenerative abilities who summoned Kavan.","facts":[
+{"text":"Secretly planned to meet Kavan, whom Davian disapproves of.","post":"2025-03-25-finishing-up-at-the-vineyard"},
+{"text":"Summoned Kavan by dripping her blood.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
+{"name":"Kavan the Blood Drinker","type":"npc","aliases":["Kavan","Kavan"],"summary":"A figure of the first folk who wields a long wooden spear.","facts":[
 {"text":"Was summoned by Mira and offered a deal for powerful items.","post":"2025-03-25-finishing-up-at-the-vineyard"},
 {"text":"Told of the split between mountain and forest folk and the Spear of the Ladies.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"Sverog","type":"npc","aliases":[],"summary":"A figure who bargained with Kaven.","facts":[
-{"text":"Offered Kaven a wand for a powerful weapon.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
+{"name":"Sverog","type":"npc","aliases":[],"summary":"A figure who bargained with Kavan.","facts":[
+{"text":"Offered Kavan a wand for a powerful weapon.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
 {"name":"Madam Eva","type":"npc","aliases":[],"summary":"A fortune teller who gives Strahd information.","facts":[
 {"text":"Lets certain people pass unchallenged through Strahd's domain.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Gave Strahd a reading before the party.","post":"2025-04-22-welcome-to-krezk"}]},
-{"name":"Ludmila","type":"npc","aliases":[],"summary":"A bride of Strahd.","facts":[
+{"name":"Ludmilla","type":"npc","aliases":[],"summary":"A bride of Strahd.","facts":[
 {"text":"Was at the Winter Splinter ritual and scorned Volenta.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Planned to vivisect a were-raven that attacked Castle Ravenloft.","post":"2025-04-01-stop-winter-splinter"},
 {"text":"Strahd warned she will not forget the party.","post":"2025-04-15-the-whispering-wall"}]},
@@ -361,9 +361,9 @@
 {"text":"Aera got it from Minofaustus on credit.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"Kavan's Cairn","type":"place","aliases":[],"summary":"A site of ancient worship.","facts":[
 {"text":"Kavan told legends there.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"Hill of Ravenloft","type":"place","aliases":[],"summary":"Resting place of King Doestron.","facts":[
+{"name":"Hill of Ravenloft","type":"place","aliases":[],"summary":"Resting place of King Dostron.","facts":[
 {"text":"A legendary spear waits there.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"King Doestron","type":"npc","aliases":[],"summary":"An ancient king buried at the Hill of Ravenloft.","facts":[
+{"name":"King Dostron","type":"npc","aliases":[],"summary":"An ancient king buried at the Hill of Ravenloft.","facts":[
 {"text":"Rests at the Hill of Ravenloft.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"Spear of the Ladies","type":"item","aliases":[],"summary":"A legendary spear.","facts":[
 {"text":"Kavan says it must be retrieved.","post":"2025-04-15-the-whispering-wall"}]},
@@ -372,71 +372,71 @@
 {"name":"Krezk","type":"place","aliases":[],"summary":"A village home to the Krezkov family.","facts":[
 {"text":"The party traveled there and met the Krezkovs.","post":"2025-04-22-welcome-to-krezk"}]},
 {"name":"Symbol of Ravenkind","type":"item","aliases":["holy symbol of raven kind"],"summary":"A holy symbol connected to Strahd.","facts":[
-{"text":"Damien told its history.","post":"2025-04-22-welcome-to-krezk"},
-{"text":"Olfin received it from Zurika.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"text":"Davian told its history.","post":"2025-04-22-welcome-to-krezk"},
+{"text":"Olfin received it from Zuleika.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Obsidian Whistle","type":"item","aliases":[],"summary":"A raven-shaped whistle.","facts":[
-{"text":"Damien gave it for recovering the gem.","post":"2025-04-22-welcome-to-krezk"}]},
-{"name":"Dimitry Krezkov","type":"npc","aliases":["Dimitry"],"summary":"A man of Krezk with a hereditary werewolf curse.","facts":[
+{"text":"Davian gave it for recovering the gem.","post":"2025-04-22-welcome-to-krezk"}]},
+{"name":"Dmitri Krezkov","type":"npc","aliases":["Dmitri"],"summary":"A man of Krezk with a hereditary werewolf curse.","facts":[
 {"text":"Was tricked by the Abbot into skipping wolfsbane and killed his sister as a werewolf.","post":"2025-04-22-welcome-to-krezk"}]},
-{"name":"Anna Krezkov","type":"npc","aliases":["Anna"],"summary":"Dimitry's wife.","facts":[
-{"text":"Harvests wolfsbane to ease Dimitry's curse.","post":"2025-04-22-welcome-to-krezk"},
+{"name":"Anna Krezkov","type":"npc","aliases":["Anna"],"summary":"Dmitri's wife.","facts":[
+{"text":"Harvests wolfsbane to ease Dmitri's curse.","post":"2025-04-22-welcome-to-krezk"},
 {"text":"The Abbot wants her heart in a month to revive the dead sister.","post":"2025-04-22-welcome-to-krezk"}]},
 {"name":"The Abbot","type":"npc","aliases":["Abbot"],"summary":"An angelic being tainted by Strahd who runs St. Markovia Abbey.","facts":[
 {"text":"Is building a reanimated corpse needing a willing victim's heart.","post":"2025-04-22-welcome-to-krezk"},
-{"text":"Is crafting Vasilica as a companion for Strahd.","post":"2025-04-29-shadows-over-st-markovia"},
-{"text":"Deceived Illya.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"text":"Is crafting Vasilka as a companion for Strahd.","post":"2025-04-29-shadows-over-st-markovia"},
+{"text":"Deceived Ilya.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"St. Markovia Abbey","type":"place","aliases":["Abbey"],"summary":"A mountain abbey twisted by the Abbot's experiments.","facts":[
 {"text":"The Abbot has taken it over.","post":"2025-04-22-welcome-to-krezk"},
-{"text":"The party held a séance there with Esmerelda.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Vasilica","type":"npc","aliases":[],"summary":"A flesh golem the Abbot is building for Strahd.","facts":[
+{"text":"The party held a séance there with Ezmerelda.","post":"2025-04-29-shadows-over-st-markovia"}]},
+{"name":"Vasilka","type":"npc","aliases":[],"summary":"A flesh golem the Abbot is building for Strahd.","facts":[
 {"text":"The Abbot believes she can break the land's curse.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Esmerelda","type":"npc","aliases":[],"summary":"A monster hunter who lost her leg to the Black Terror.","facts":[
+{"name":"Ezmerelda","type":"npc","aliases":[],"summary":"A monster hunter who lost her leg to the Black Terror.","facts":[
 {"text":"Held a séance with the party at the abbey.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Led the party to the werewolf den and gave Malron Darkvision.","post":"2025-05-06-echoes-of-the-black-terro"}]},
-{"name":"Belview Family","type":"faction","aliases":["Belviews","Bellview"],"summary":"A family mutated by the Abbot's experiments.","facts":[
-{"text":"Includes Otto, Zygfrek and Cloven.","post":"2025-04-29-shadows-over-st-markovia"}]},
+{"name":"Belview Family","type":"faction","aliases":["Belviews","Belview"],"summary":"A family mutated by the Abbot's experiments.","facts":[
+{"text":"Includes Otto, Zygfrek and Clovin.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Otto","type":"npc","aliases":[],"summary":"A mutated member of the Belview family.","facts":[
 {"text":"Met at the abbey.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Zygfrek","type":"npc","aliases":[],"summary":"A mutated member of the Belview family.","facts":[
 {"text":"Met at the abbey.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Cloven","type":"npc","aliases":[],"summary":"A mutated member of the Belview family.","facts":[
+{"name":"Clovin","type":"npc","aliases":[],"summary":"A mutated member of the Belview family.","facts":[
 {"text":"Met at the abbey.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Syrus Bellview","type":"npc","aliases":[],"summary":"A Bellview held in Ravenloft.","facts":[
+{"name":"Cyrus Belview","type":"npc","aliases":[],"summary":"A Belview held in Ravenloft.","facts":[
 {"text":"May bring rewards if rescued from Ravenloft.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Marzena","type":"npc","aliases":[],"summary":"A woman at the abbey who sent a flower necklace to a sibling.","facts":[
 {"text":"Gave a necklace for her sibling in the East Wing.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Necklace of Flowers","type":"item","aliases":[],"summary":"Marzena's gift for her sibling.","facts":[
 {"text":"Malron carries it.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Lake Baratok Cave","type":"place","aliases":["Werewolf Cave"],"summary":"The werewolf den near Lake Baratok.","facts":[
-{"text":"Holds the kidnapped Ilia.","post":"2025-04-29-shadows-over-st-markovia"},
+{"text":"Holds the kidnapped Ilya.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"The party fought five werewolves there.","post":"2025-05-06-echoes-of-the-black-terro"},
 {"text":"Contains the Shrine of Mother Night.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Kiril Vonstrranovich","type":"npc","aliases":["Black Terror","The Black Terror","Kiril"],"summary":"The werewolf pack leader, empowered by Baba Lasaga.","facts":[
+{"name":"Kiril Stoyanovich","type":"npc","aliases":["Black Terror","The Black Terror","Kiril"],"summary":"The werewolf pack leader, empowered by Baba Lysaga.","facts":[
 {"text":"Leads the werewolf pack.","post":"2025-04-29-shadows-over-st-markovia"},
-{"text":"Took Esmerelda's leg.","post":"2025-05-06-echoes-of-the-black-terro"},
-{"text":"Captured Emil with help from Strahd and Baba Lasaga.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Illya","type":"npc","aliases":["Ilia"],"summary":"A werewolf prisoner in the Lake Baratok cave.","facts":[
+{"text":"Took Ezmerelda's leg.","post":"2025-05-06-echoes-of-the-black-terro"},
+{"text":"Captured Emil with help from Strahd and Baba Lysaga.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"name":"Ilya","type":"npc","aliases":["Ilya"],"summary":"A werewolf prisoner in the Lake Baratok cave.","facts":[
 {"text":"Was kidnapped and held in the werewolf cave.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Wore a silver-thorn collar and said the Abbot deceived him.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Zurika","type":"npc","aliases":[],"summary":"A werewolf prisoner sworn to free Emil.","facts":[
+{"name":"Zuleika","type":"npc","aliases":[],"summary":"A werewolf prisoner sworn to free Emil.","facts":[
 {"text":"Gave Olfin the Symbol of Ravenkind for the party's oath.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Emil","type":"npc","aliases":[],"summary":"The missing leader of the werewolves, held in Ravenloft.","facts":[
 {"text":"Was captured by Kiril and jailed in Ravenloft's dungeons.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Wondrous Flint and Steel","type":"item","aliases":[],"summary":"A flint and steel that makes smokeless fire.","facts":[
-{"text":"Esmerelda used it to hide the party's camp.","post":"2025-05-06-echoes-of-the-black-terro"}]},
+{"text":"Ezmerelda used it to hide the party's camp.","post":"2025-05-06-echoes-of-the-black-terro"}]},
 {"name":"Shrine of Mother Night","type":"place","aliases":[],"summary":"A cursed altar in the werewolf den.","facts":[
 {"text":"Holds a cursed ruby medallion, gems and gold.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Silver-thorn Collars","type":"item","aliases":[],"summary":"Collars made by Baba Lasaga that block werewolf transformation.","facts":[
-{"text":"Worn by Illya and Zurika.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"name":"Silver-thorn Collars","type":"item","aliases":[],"summary":"Collars made by Baba Lysaga that block werewolf transformation.","facts":[
+{"text":"Worn by Ilya and Zuleika.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Ruby Medallion","type":"item","aliases":[],"summary":"A cursed medallion from the Shrine of Mother Night.","facts":[
 {"text":"Found in the shrine, part of a cursed treasure.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Order of the Silver Dragon","type":"faction","aliases":[],"summary":"A fallen knightly order based at Argynvostholt.","facts":[
-{"text":"Its commander Hornguard was slain by Rahadin.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Sir Godfried Gwilym","type":"npc","aliases":[],"summary":"A spectral knight of the Order of the Silver Dragon.","facts":[
+{"text":"Its commander Horngaard was slain by Rahadin.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
+{"name":"Sir Godfrey Gwilym","type":"npc","aliases":[],"summary":"A spectral knight of the Order of the Silver Dragon.","facts":[
 {"text":"Told the party the order's history and warned them of dangers.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Argynvost","type":"npc","aliases":[],"summary":"The Silver Dragon honored by the Order of the Silver Dragon.","facts":[
 {"text":"Strahd stole his skull.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Hornguard","type":"npc","aliases":[],"summary":"Slain commander of the Order of the Silver Dragon, now a vengeful presence.","facts":[
+{"name":"Horngaard","type":"npc","aliases":[],"summary":"Slain commander of the Order of the Silver Dragon, now a vengeful presence.","facts":[
 {"text":"Was killed by Rahadin; his chamber should be avoided.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Amber Temple","type":"place","aliases":[],"summary":"A place where the Sunsword may be hidden.","facts":[
 {"text":"The Sunsword is possibly hidden there.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]}

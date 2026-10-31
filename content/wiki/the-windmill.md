@@ -9,9 +9,9 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-Morgantha sold us dream pastries at the windmill, where she lives with her daughters Bella and Offailia ([Dream Pies](/posts/dream-pies/)). At the refugee camp Franz told us he had sold his children for her pies, and hears the windmill's blades in his nightmares. A clue said three black hearts beat as one in the millstone under the windmill ([Helping Victor](/posts/helping-victor/)).
+Morgantha sold us dream pastries at the windmill, where she lives with her daughters Bella and Offalia ([Dream Pies](/posts/dream-pies/)). At the refugee camp Franz told us he had sold his children for her pies, and hears the windmill's blades in his nightmares. A clue said three black hearts beat as one in the millstone under the windmill ([Helping Victor](/posts/helping-victor/)).
 
-Shabasta and Olfin talked us inside as would-be partners of the hags, and our rogues climbed the tower on a rope. We freed the children, found the coven's contract, learned their true names (Morgantha, Belladonna Sunbane and Offalia Wormwiggle), and beat them while Lady Fiona and Viktor held a binding circle around them ([The Windmill Heist](/posts/the-windmill-heist/)).
+Shabasta and Olfin talked us inside as would-be partners of the hags, and our rogues climbed the tower on a rope. We freed the children, found the coven's contract, learned their true names (Morgantha, Belladonna Sunbane and Offalia Wormwiggle), and beat them while Lady Fiona and Victor held a binding circle around them ([The Windmill Heist](/posts/the-windmill-heist/)).
 
 <!-- from-the-log -->
 ## From the adventure log

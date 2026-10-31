@@ -10,6 +10,6 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Appeared as a hollow-eyed girl in a nightgown at Wachter Haus. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))
+* Appeared as a hollow-eyed girl in a nightgown at Wachterhaus. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))
 * Her spirit appeared in a mirror; she saw a night hag near the refugee camp. ([Helping Victor](/posts/helping-victor/))
 * Was rescued from the spirit realm. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))

@@ -23,7 +23,7 @@ Son of Father Donavich who led a rebellion to the castle on the hill. Came back 
 * Returned as a vampire, took the holy symbol, and was staked beneath the church. ([Rest for the Wicked](/posts/rest-for-the-wicked/))
 * His body dissolved in a stream. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
 * Blackmailed Van Richten into leading a revolt on the castle. ([Finding Arabelle!](/posts/finding-arabelle/))
-* Led the attack that Damien's son joined. ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/))
+* Led the attack that Davian's son joined. ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/))
 * Was a friend of Escher, who is believed to have betrayed him. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Was once engaged to Gertruda. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Was dissolved in running water, but his information formed the basis of the party's map. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))

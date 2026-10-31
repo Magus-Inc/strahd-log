@@ -15,7 +15,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 **Summary:**  
 Our rogues trailed Izek unseen and overheard him talking with his spy about someone selling pies that let people dream while awake. A mastiff growled at Aera, and she killed it with one blow.
 
-Izek went to the eastern gate, where refugees sick with longing for dream pastries were trying to get in. He ordered a dream pastry for himself from the guards for the next morning, dismissed the two guards and went on to the Zarovich gate. At the lake he took out a doll of Irena and drank the poisoned wine.
+Izek went to the eastern gate, where refugees sick with longing for dream pastries were trying to get in. He ordered a dream pastry for himself from the guards for the next morning, dismissed the two guards and went on to the Zarovich gate. At the lake he took out a doll of Ireena and drank the poisoned wine.
 
 A long and epic fight followed, and in the end we won it.
 

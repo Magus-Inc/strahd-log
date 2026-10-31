@@ -2,9 +2,8 @@
 title: Cyrus Belview
 type: npc
 aliases:
-- Syrus Bellview
 - Cyrus
-summary: A Bellview held in Ravenloft.
+summary: A Belview held in Ravenloft.
 source: Compiled from the adventure log, with a description written for the site
 ---
 

@@ -5,8 +5,7 @@ aliases:
 - Strahd
 - Count Strahd von Zarovich
 - Vlahd
-- Strahd Von Zarovich
-- Lord Von Zarovich
+- Lord von Zarovich
 - Count Strahd
 summary: The vampire lord of Barovia.
 source: Compiled from the adventure log, with a description written for the site
@@ -26,7 +25,7 @@ The lord of Barovia, a vampire, and our host, tormentor and quarry. His letter i
 
 He likes games. He came to Aera's window in Vallaki asking to be let in ([Shadows Over Vallaki](/posts/shadows-over-vallaki/)). He wagered with us over Winter Splinter and paid up at the Whispering Wall ([Stop Winter Splinter](/posts/stop-winter-splinter/), [The Whispering Wall](/posts/the-whispering-wall/)). After we raided the werewolf den he made each of us choose a sacrifice by an hourglass of blood ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). He sent his carriage for us, hosted us at Castle Ravenloft, toured us through it and caught Aera when she nearly fell from its stairs ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/), [The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/), [Varushka's Key](/posts/varushkas-key/)).
 
-The skeletal rider we believe is his brother Sergei told us Strahd murdered him, and that Strahd now seeks Ireena as Tatyana reborn ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). We broke into his castle while he rode out on Becephalus, robbed his catacombs and destroyed two of his brides ([Unwelcome Guests](/posts/unwelcome-guests/), [The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)). His answers so far: wolves and scarecrows on the road for Aera, and a mocking letter in an empty carriage ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/), [The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
+The skeletal rider we believe is his brother Sergei told us Strahd murdered him, and that Strahd now seeks Ireena as Tatyana reborn ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). We broke into his castle while he rode out on Beucephalus, robbed his catacombs and destroyed two of his brides ([Unwelcome Guests](/posts/unwelcome-guests/), [The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)). His answers so far: wolves and scarecrows on the road for Aera, and a mocking letter in an empty carriage ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/), [The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -47,10 +46,10 @@ The skeletal rider we believe is his brother Sergei told us Strahd murdered him,
 * Rewarded the party at the Whispering Wall with gemstones and showed them the Twilight Crest. ([The Whispering Wall](/posts/the-whispering-wall/))
 * Made the party play a blood hourglass game of sacrifices. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
 * Stole the skull of Argynvost. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
-* Murdered his brother Sergei and seeks Ireena, believing she is Tatiana reborn. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
+* Murdered his brother Sergei and seeks Ireena, believing she is Tatyana reborn. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Hosted the party at Castle Ravenloft and recommended they visit the Amber Temple. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Granted the party resistance to necrotic damage for 36 hours, saying "The cows have teeth after all.". ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Follows a 14-day hunting cycle, which the party planned to exploit. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
-* Was seen leaving the castle on his nightmare, Becephalus. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* Was seen leaving the castle on his nightmare, Beucephalus. ([Unwelcome Guests](/posts/unwelcome-guests/))
 * Sent dire wolves, scarecrows and a duplicate of Aera's corpse to punish her for stealing. ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/))
 * Left a mocking letter in a black carriage: "Even the dead return for an encore.". ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))

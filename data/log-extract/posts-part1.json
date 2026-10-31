@@ -12,7 +12,7 @@
       {"text": "Found a guide to killing vampires in the burgomaster's mansion.", "post": "2024-02-13-barovia-barovia"},
       {"text": "Pilfered two healing potions from an overpriced shop in Barovia village.", "post": "2024-03-26-leaving-village-barovia"},
       {"text": "Madam Eva asked her to deliver 10 gold to Blinsky's toy shop to buy something for her grandchild Arabelle.", "post": "2024-04-16-tser-pool"},
-      {"text": "Bought a wolf pelt from Zoldar that turned out to be glamour weave.", "post": "2024-10-01-looking-for-zoldars-tower"}
+      {"text": "Bought a wolf pelt from Szoldar that turned out to be glamour weave.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {
@@ -42,7 +42,7 @@
       {"text": "Scouted through the looping fog on a rope to find the fourth marked tree.", "post": "2024-02-13-barovia-barovia"},
       {"text": "Volunteered to return the sunburst relic to Father Donavich.", "post": "2024-03-26-leaving-village-barovia"},
       {"text": "Tried to bribe the Vallaki guards with dream pies.", "post": "2024-07-30-welcome-to-vellaki-"},
-      {"text": "Staged a fall to reveal the signet ring to Viktor.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
+      {"text": "Staged a fall to reveal the signet ring to Victor.", "post": "2024-08-20-whispers-in-the-barons-mansion"}
     ]
   },
   {
@@ -54,10 +54,10 @@
       {"text": "Found a teapot with wine, lace and a contraceptive powder in the Durst Manor pantry.", "post": "2023-11-28-entering-durst-manor"},
       {"text": "Was knocked out by an animated broom.", "post": "2023-12-12-deeper-into-the-manor"},
       {"text": "Thorn Durst's spirit joined with his body.", "post": "2024-01-09-finishing-the-manor"},
-      {"text": "Recovered Ireena's keepsakes and was given a silver bracelet inscribed Tatiana; noticed bite marks on her neck.", "post": "2024-03-26-leaving-village-barovia"},
+      {"text": "Recovered Ireena's keepsakes and was given a silver bracelet inscribed Tatyana; noticed bite marks on her neck.", "post": "2024-03-26-leaving-village-barovia"},
       {"text": "Healed an injured bird and tied a lock of his hair to its leg.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
       {"text": "Told a lie about being raised by hags and read Van Richten's werewolf manuscript aloud.", "post": "2024-04-16-tser-pool"},
-      {"text": "Used the signet ring's pattern to unlock the Tower of Kazan.", "post": "2024-10-01-looking-for-zoldars-tower"}
+      {"text": "Used the signet ring's pattern to unlock the Tower of Khazan.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {
@@ -93,8 +93,8 @@
     "summary": "A porcupine-like bard met at the Vistani encampment who travels with the party.",
     "facts": [
       {"text": "Met at the Vistani encampment near Vallaki, telling tales and playing a lute.", "post": "2024-08-13-a-doll-for-arabelle"},
-      {"text": "Found wolf tracks and a hollow full of paint near the wagon at the Tower of Kazan.", "post": "2024-10-01-looking-for-zoldars-tower"},
-      {"text": "Triggered a silver net and fire potions in Esmeralda's wagon.", "post": "2024-10-22-the-staff-is-a-lie"},
+      {"text": "Found wolf tracks and a hollow full of paint near the wagon at the Tower of Khazan.", "post": "2024-10-01-looking-for-zoldars-tower"},
+      {"text": "Triggered a silver net and fire potions in Ezmerelda's wagon.", "post": "2024-10-22-the-staff-is-a-lie"},
       {"text": "Performed at the Blue Water Inn for a bed and beer.", "post": "2024-10-29-finding-arabelle"}
     ]
   },
@@ -223,7 +223,7 @@
   {
     "name": "Ireena Kolyana",
     "type": "npc",
-    "aliases": ["Ireena", "Irena"],
+    "aliases": ["Ireena", "Ireena"],
     "summary": "Ismark's adopted sister, whom the party escorts to sanctuary.",
     "facts": [
       {"text": "Ismark's adopted sister, found in the forest as a little girl.", "post": "2024-02-13-barovia-barovia"},
@@ -232,13 +232,13 @@
       {"text": "Told a tale of a wolf by a lake that she claimed was a dream.", "post": "2024-04-16-tser-pool"},
       {"text": "Was enraged by the refugee camp and the Baron's callousness.", "post": "2024-07-30-welcome-to-vellaki-"},
       {"text": "A doll resembling her was seen in Blinsky's toy store.", "post": "2024-08-13-a-doll-for-arabelle"},
-      {"text": "Escorted to St. Andral's Church, where Father Lucien offered her shelter.", "post": "2024-10-29-finding-arabelle"}
+      {"text": "Escorted to St. Andral's Church, where Father Lucian offered her shelter.", "post": "2024-10-29-finding-arabelle"}
     ]
   },
   {
     "name": "Ismark",
     "type": "npc",
-    "aliases": ["Ismark the lesser", "Imsark"],
+    "aliases": ["Ismark the lesser", "Ismark"],
     "summary": "Ireena's brother and grandson of Ismark Antonovich the Great, in Barovia village.",
     "facts": [
       {"text": "Met at the Blood on the Vine Tavern; asked the party to help his sister.", "post": "2024-02-13-barovia-barovia"},
@@ -256,7 +256,7 @@
     ]
   },
   {
-    "name": "Billdrath",
+    "name": "Bildrath",
     "type": "npc",
     "aliases": [],
     "summary": "A man in the Blood on the Vine Tavern who scorned Ismark.",
@@ -265,7 +265,7 @@
     ]
   },
   {
-    "name": "Gertrude",
+    "name": "Gertruda",
     "type": "npc",
     "aliases": [],
     "summary": "A girl from Barovia village who left alone for Vallaki at night.",
@@ -276,7 +276,7 @@
   {
     "name": "Father Donavich",
     "type": "npc",
-    "aliases": ["Father Donavan", "Donavitch", "Faher Donavich"],
+    "aliases": ["Father Donavich", "Donavich", "Father Donavich"],
     "summary": "The priest of the Morninglord at Barovia village's church, father of Doru.",
     "facts": [
       {"text": "His son Doru led a party to the castle.", "post": "2024-02-13-barovia-barovia"},
@@ -371,20 +371,20 @@
     "aliases": ["Arturi"],
     "summary": "A cursed Vistani-looking visitor searching for Van Richten.",
     "facts": [
-      {"text": "Claimed to know Rudolf Von Richten.", "post": "2024-04-16-tser-pool"},
+      {"text": "Claimed to know Rudolph van Richten.", "post": "2024-04-16-tser-pool"},
       {"text": "Left the camp at night and was found in a tree surrounded by 12 zombies.", "post": "2024-04-16-tser-pool"}
     ]
   },
   {
     "name": "Rudolph van Richten",
     "type": "npc",
-    "aliases": ["Rudolf Von Richten", "Van Richten", "R V Richten", "Rictavio", "Ric Tavio", "Rictavio Von Richten"],
+    "aliases": ["Rudolph van Richten", "Van Richten", "R V Richten", "Rictavio", "Ric Tavio", "Rictavio van Richten"],
     "summary": "A vampire hunter and scholar disguised in Vallaki as the carnival showman Rictavio.",
     "facts": [
       {"text": "A chest carved 'R V Richten' held silver bolts and holy water.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
       {"text": "Wrote 'A Study of the Werewolf's Curse'.", "post": "2024-04-16-tser-pool"},
       {"text": "As Rictavio, claimed to be an agent of the Keepers of the Feather.", "post": "2024-07-30-welcome-to-vellaki-"},
-      {"text": "A journal in the Tower of Kazan revealed Rictavio is Van Richten.", "post": "2024-10-22-the-staff-is-a-lie"},
+      {"text": "A journal in the Tower of Khazan revealed Rictavio is Van Richten.", "post": "2024-10-22-the-staff-is-a-lie"},
       {"text": "Rescued Arabelle and hid her in his wagon.", "post": "2024-10-29-finding-arabelle"},
       {"text": "Gave Malron the Talisman of Echoes.", "post": "2024-10-29-finding-arabelle"}
     ]
@@ -392,7 +392,7 @@
   {
     "name": "Morgantha",
     "type": "npc",
-    "aliases": ["Morantha"],
+    "aliases": ["Morgantha"],
     "summary": "A fiend who sells dream pastries from the windmill with her daughters.",
     "facts": [
       {"text": "Sold her cart to Aera and warned that Vallaki guards take silver.", "post": "2024-07-16-dream-pies"},
@@ -409,7 +409,7 @@
     ]
   },
   {
-    "name": "Offailia",
+    "name": "Offalia",
     "type": "npc",
     "aliases": [],
     "summary": "One of Morgantha's daughters.",
@@ -418,7 +418,7 @@
     ]
   },
   {
-    "name": "Sir Godfried William",
+    "name": "Sir Godfrey Gwilym",
     "type": "creature",
     "aliases": [],
     "summary": "A revenant knight guarding the Tser Falls bridge.",
@@ -430,9 +430,9 @@
     "name": "Vladimir Horngaard",
     "type": "npc",
     "aliases": [],
-    "summary": "Commander who banished Sir Godfried William.",
+    "summary": "Commander who banished Sir Godfrey Gwilym.",
     "facts": [
-      {"text": "Named as Sir Godfried William's commander.", "post": "2024-07-16-dream-pies"}
+      {"text": "Named as Sir Godfrey Gwilym's commander.", "post": "2024-07-16-dream-pies"}
     ]
   },
   {
@@ -494,7 +494,7 @@
     ]
   },
   {
-    "name": "Viktor",
+    "name": "Victor",
     "type": "npc",
     "aliases": ["Victor"],
     "summary": "The Baron's son, a secretive student of magic.",
@@ -505,40 +505,40 @@
     ]
   },
   {
-    "name": "Irwin",
+    "name": "Urwin",
     "type": "npc",
     "aliases": [],
-    "summary": "A man at the Blue Water Inn bar, married to Danica.",
+    "summary": "A man at the Blue Water Inn bar, married to Danika.",
     "facts": [
       {"text": "Welcomed the party into the inn.", "post": "2024-07-30-welcome-to-vellaki-"}
     ]
   },
   {
-    "name": "Danica",
+    "name": "Danika",
     "type": "npc",
     "aliases": [],
     "summary": "Runs the Blue Water Inn.",
     "facts": [
-      {"text": "Runs the inn and is married to Irwin.", "post": "2024-07-30-welcome-to-vellaki-"},
+      {"text": "Runs the inn and is married to Urwin.", "post": "2024-07-30-welcome-to-vellaki-"},
       {"text": "Told the party Rictavio was at his yellow wagon.", "post": "2024-10-29-finding-arabelle"}
     ]
   },
   {
-    "name": "Carl",
+    "name": "Karl",
     "type": "npc",
     "aliases": [],
     "summary": "A man at the Blue Water Inn who opposes the Baron.",
     "facts": [
-      {"text": "Pranked with a stuffed bat at the inn; against the Baron along with Nicolai.", "post": "2024-07-30-welcome-to-vellaki-"}
+      {"text": "Pranked with a stuffed bat at the inn; against the Baron along with Nikolai.", "post": "2024-07-30-welcome-to-vellaki-"}
     ]
   },
   {
-    "name": "Nicolai",
+    "name": "Nikolai",
     "type": "npc",
     "aliases": [],
     "summary": "A man at the Blue Water Inn who opposes the Baron.",
     "facts": [
-      {"text": "Pranked with a stuffed bat at the inn; against the Baron along with Carl.", "post": "2024-07-30-welcome-to-vellaki-"}
+      {"text": "Pranked with a stuffed bat at the inn; against the Baron along with Karl.", "post": "2024-07-30-welcome-to-vellaki-"}
     ]
   },
   {
@@ -580,7 +580,7 @@
   {
     "name": "Arabelle",
     "type": "npc",
-    "aliases": ["Aerabelle", "Aerabel", "Aerabell", "eraville"],
+    "aliases": ["Arabelle", "Arabelle", "Arabelle", "eraville"],
     "summary": "Madam Eva's young Vistani grandchild, kidnapped and then hidden by Van Richten.",
     "facts": [
       {"text": "Madam Eva wanted a toy bought for her.", "post": "2024-04-16-tser-pool"},
@@ -648,37 +648,37 @@
   {
     "name": "Khazan",
     "type": "npc",
-    "aliases": ["Kazan"],
-    "summary": "The original mage tied to the ring's symbol and the Tower of Kazan.",
+    "aliases": ["Khazan"],
+    "summary": "The original mage tied to the ring's symbol and the Tower of Khazan.",
     "facts": [
       {"text": "The ring's symbol connects to him.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
       {"text": "His name is on the red seal of the tower door.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {
-    "name": "Zoldar",
+    "name": "Szoldar",
     "type": "npc",
     "aliases": [],
-    "summary": "A guide who led the party toward the Tower of Kazan.",
+    "summary": "A guide who led the party toward the Tower of Khazan.",
     "facts": [
-      {"text": "Lives in a shack with his brother Yvgeny and sold Aera a glamour weave pelt.", "post": "2024-10-01-looking-for-zoldars-tower"},
+      {"text": "Lives in a shack with his brother Yevgeni and sold Aera a glamour weave pelt.", "post": "2024-10-01-looking-for-zoldars-tower"},
       {"text": "Returned to his hut afterward.", "post": "2024-10-29-finding-arabelle"}
     ]
   },
   {
-    "name": "Yvgeny",
+    "name": "Yevgeni",
     "type": "npc",
     "aliases": [],
-    "summary": "Zoldar's brother.",
+    "summary": "Szoldar's brother.",
     "facts": [
-      {"text": "Met in the shack with Zoldar.", "post": "2024-10-01-looking-for-zoldars-tower"}
+      {"text": "Met in the shack with Szoldar.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {
     "name": "Ezmerelda d'Avenir",
     "type": "npc",
-    "aliases": ["Esmeralda", "Esmeralda dasramir"],
-    "summary": "Van Richten's former apprentice, whose wagon sits at the Tower of Kazan.",
+    "aliases": ["Ezmerelda", "Ezmerelda d'Avenir"],
+    "summary": "Van Richten's former apprentice, whose wagon sits at the Tower of Khazan.",
     "facts": [
       {"text": "A sign at the tower names it her home and property.", "post": "2024-10-01-looking-for-zoldars-tower"},
       {"text": "Her trapped wagon held weapons, kits and spell scrolls.", "post": "2024-10-22-the-staff-is-a-lie"},
@@ -725,14 +725,14 @@
   {
     "name": "Arrigal",
     "type": "npc",
-    "aliases": ["Aeragul"],
+    "aliases": ["Arrigal"],
     "summary": "A Vistani who tailed the party and disagrees with Van Richten about Arabelle.",
     "facts": [
       {"text": "Revealed himself after tailing the party; cleared of the plot to abduct Arabelle.", "post": "2024-10-29-finding-arabelle"}
     ]
   },
   {
-    "name": "Heinrich",
+    "name": "Henrik",
     "type": "npc",
     "aliases": [],
     "summary": "A man delivering church repair materials in Vallaki.",
@@ -741,7 +741,7 @@
     ]
   },
   {
-    "name": "Milvoj",
+    "name": "Milivoj",
     "type": "npc",
     "aliases": [],
     "summary": "A worker repairing St. Andral's Church, suspected in the bone theft.",
@@ -750,7 +750,7 @@
     ]
   },
   {
-    "name": "Father Lucien",
+    "name": "Father Lucian",
     "type": "npc",
     "aliases": [],
     "summary": "The priest of St. Andral's Church in Vallaki.",
@@ -842,7 +842,7 @@
   {
     "name": "Vallaki",
     "type": "place",
-    "aliases": ["Vellaki", "Velaki"],
+    "aliases": ["Vallaki", "Velaki"],
     "summary": "A walled town west of Barovia village ruled by a harsh Baron.",
     "facts": [
       {"text": "Some villagers fled here.", "post": "2024-02-13-barovia-barovia"},
@@ -863,7 +863,7 @@
   {
     "name": "Abbey of Saint Markovia",
     "type": "place",
-    "aliases": ["St. Markova Abbey"],
+    "aliases": ["St. Markovia Abbey"],
     "summary": "An abbey in Krezk near the mists.",
     "facts": [
       {"text": "Ismark asked the party to escort Ireena here.", "post": "2024-03-26-leaving-village-barovia"},
@@ -894,7 +894,7 @@
     "name": "Blue Water Inn",
     "type": "place",
     "aliases": ["Blue Inn"],
-    "summary": "An inn in Vallaki run by Danica.",
+    "summary": "An inn in Vallaki run by Danika.",
     "facts": [
       {"text": "Recommended by the guards; the party rented rooms there.", "post": "2024-07-30-welcome-to-vellaki-"},
       {"text": "Where the party confronted Rictavio.", "post": "2024-10-29-finding-arabelle"}
@@ -903,7 +903,7 @@
   {
     "name": "Blinsky's Toy Store",
     "type": "place",
-    "aliases": ["Blinsky toys", "Blilnksly toys"],
+    "aliases": ["Blinsky toys", "Blinsky toys"],
     "summary": "A toy shop in Vallaki.",
     "facts": [
       {"text": "Madam Eva sent coins to buy something there.", "post": "2024-04-16-tser-pool"},
@@ -931,12 +931,12 @@
     ]
   },
   {
-    "name": "Tower of Kazan",
+    "name": "Tower of Khazan",
     "type": "place",
-    "aliases": ["Kazan's Tower", "Khazan's tower"],
+    "aliases": ["Khazan's Tower", "Khazan's tower"],
     "summary": "A tower by Lake Baratok tied to the mage Khazan.",
     "facts": [
-      {"text": "Viktor was curious about it.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Victor was curious about it.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
       {"text": "Opened with the signet ring pattern.", "post": "2024-10-01-looking-for-zoldars-tower"},
       {"text": "Its top floor held signs of recent living and a journal.", "post": "2024-10-22-the-staff-is-a-lie"},
       {"text": "Has a permanent antimagic field.", "post": "2024-10-29-finding-arabelle"}
@@ -995,7 +995,7 @@
     "aliases": [],
     "summary": "A knightly order.",
     "facts": [
-      {"text": "Sir Godfried William claims to be one of its knights.", "post": "2024-07-16-dream-pies"}
+      {"text": "Sir Godfrey Gwilym claims to be one of its knights.", "post": "2024-07-16-dream-pies"}
     ]
   },
   {
@@ -1110,17 +1110,17 @@
     "summary": "A sigil-bearing ring linked to Khazan.",
     "facts": [
       {"text": "Kasimir held it; its design mixed necromancy and evocation.", "post": "2024-08-13-a-doll-for-arabelle"},
-      {"text": "Its symbol matched Viktor's spellbook.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
-      {"text": "Its pattern unlocked the Tower of Kazan.", "post": "2024-10-01-looking-for-zoldars-tower"}
+      {"text": "Its symbol matched Victor's spellbook.", "post": "2024-08-20-whispers-in-the-barons-mansion"},
+      {"text": "Its pattern unlocked the Tower of Khazan.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {
-    "name": "Staff of Kazan",
+    "name": "Staff of Khazan",
     "type": "item",
     "aliases": [],
-    "summary": "A legendary staff the party sought in the Tower of Kazan.",
+    "summary": "A legendary staff the party sought in the Tower of Khazan.",
     "facts": [
-      {"text": "Zoldar was to guide the party to the tower holding it.", "post": "2024-10-01-looking-for-zoldars-tower"}
+      {"text": "Szoldar was to guide the party to the tower holding it.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {
@@ -1156,7 +1156,7 @@
     "aliases": ["glamour weave"],
     "summary": "A wolf pelt made of rare magical glamour weave.",
     "facts": [
-      {"text": "Aera bought it from Zoldar for 50 gold.", "post": "2024-10-01-looking-for-zoldars-tower"}
+      {"text": "Aera bought it from Szoldar for 50 gold.", "post": "2024-10-01-looking-for-zoldars-tower"}
     ]
   },
   {

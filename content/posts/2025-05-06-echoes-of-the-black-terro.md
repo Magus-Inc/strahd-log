@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-As we made ready, Esmerelda led us to a hidden hollow near the mouth of the werewolf den. With a wondrous flint and steel she lit a fire that gave no smoke, so no one would see us. She gave me the gift of seeing in the dark for the night, to help us scout.
+As we made ready, Ezmerelda led us to a hidden hollow near the mouth of the werewolf den. With a wondrous flint and steel she lit a fire that gave no smoke, so no one would see us. She gave me the gift of seeing in the dark for the night, to help us scout.
 
 While we waited for nightfall she told us of her past: how she lost her leg to the Black Terror, and the shocking truth that her own family had a hand in taking van Richten’s son.
 
@@ -26,13 +26,13 @@ Note: Booming Blade plus Suggestion. The werewolf walked into its own death.
 
 ## Key Locations:
 
-**Hidden Hollow Near the Den**: A safe, hidden place where Esmerelda readied us for the raid.
+**Hidden Hollow Near the Den**: A safe, hidden place where Ezmerelda readied us for the raid.
 
 **Werewolf Cave**: Guarded by a deadly pack, full of prisoners and mysteries still to uncover.
 
 ## Encounters:
 
-* **Esmerelda’s Story**: Her sorrows, and what she knows of our enemies.
+* **Ezmerelda’s Story**: Her sorrows, and what she knows of our enemies.
 * **The Ambush**: Aera was found out, and five werewolves and their wolves fell on us.
 * **Fire**: Oogway and I cleared out many foes with well-timed flames.
 * **The Last Werewolf**: Oogway’s thunder and Zorpheus’ suggestion ended the fight in a way none of us expected.
@@ -40,22 +40,22 @@ Note: Booming Blade plus Suggestion. The werewolf walked into its own death.
 ## Loot:
 
 * **Wondrous Flint and Steel**: Makes a smokeless fire, giving warmth and light without giving us away.
-* **Esmerelda’s Knowledge**: No thing to carry, but priceless word of Strahd’s reach and the werewolves’ order.
+* **Ezmerelda’s Knowledge**: No thing to carry, but priceless word of Strahd’s reach and the werewolves’ order.
 
 ## Notable NPCs:
 
-* **Esmerelda**: A skilled monster hunter, deeply scarred by her fights with Strahd’s servants.
-* **The Black Terror (Kiril Vonstrranovich)**: The savage werewolf leader who maimed Esmerelda.
+* **Ezmerelda**: A skilled monster hunter, deeply scarred by her fights with Strahd’s servants.
+* **The Black Terror (Kiril Stoyanovich)**: The savage werewolf leader who maimed Ezmerelda.
 
 ## Plot Points:
 
-* Esmerelda told us painful truths about her family’s part in the disappearance of van Richten’s son.
+* Ezmerelda told us painful truths about her family’s part in the disappearance of van Richten’s son.
 * The den is well built and well defended; we must plan carefully.
 * Magic turned the battle, by both force and cunning.
 
 ## Session Highlights:
 
-* Esmerelda’s smokeless fire, a simple thing and a great help in staying hidden.
+* Ezmerelda’s smokeless fire, a simple thing and a great help in staying hidden.
 * “I never expected fire to be our greatest ally tonight!” I said, after the flames had done their work.
 * Zorpheus’ clever suggestion, turning the beast’s own steps against it.
 * The last werewolf sealing its own fate with a single step.
