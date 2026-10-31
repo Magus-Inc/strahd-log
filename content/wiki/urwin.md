@@ -7,6 +7,12 @@ summary: A man at the Blue Water Inn bar, married to Danika.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Urwin Martikov behind the bar of the Blue Water Inn, a raven on the beam above](/images/urwin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

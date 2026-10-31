@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Ghostly knights of the Order of the Silver Dragon in the cemetery as a silver light frees them](/images/order-of-the-silver-dragon-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Argynvost's knights, who stayed on as revenants at Argynvostholt under Vladimir Horngaard ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We found their vow carved on a table and their relics behind a painting ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). When Argynvost's skull came home, the knights were freed, and we swore their oath and took up their legacy ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).

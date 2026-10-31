@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Emil in a silver thorn collar, chained in the flooded Drowning Cells](/images/emil-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 The werewolves' missing leader. Strahd and Baba Lysaga helped Kiril take him and lock him in Castle Ravenloft, and we swore to Zuleika to free him ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We found him in the Drowning Cells, broken and in a silver thorn collar whose key Volenta held ([Depths of Ravenloft](/posts/depths-of-ravenloft/)). We took it from her body and freed him, and he traveled with us after ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/), [The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).

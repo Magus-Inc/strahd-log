@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Ravens of the Keepers of the Feather watching travellers from a vineyard fence at dusk](/images/keepers-of-the-feather-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 A secret society set against Strahd that guides and shelters rather than fighting openly, and works through ravens. Rictavio claimed to be one of their agents ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/)). Davian Martikov leads them and his son Urwin is one too ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/), [Welcome to Krezk](/posts/welcome-to-krezk/)). The ravens that guarded us on the road out of Barovia had heard of our deeds from them ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).
