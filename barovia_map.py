@@ -78,6 +78,9 @@ TRACKS = {
     "Berez trail": [(350, 278), (340, 310), (345, 350), (342, 400), (330, 450)],
     "Lake Baratok trail": [(350, 278), (310, 250), (276, 232), (242, 225)],
     "Tower of Kazan spur": [(242, 225), (258, 214), (250, 202)],
+    # Up from the abbey into the hills on the west side of Lake Baratok, to the werewolf den. The
+    # official map shows no road there; this is a track, drawn dotted.
+    "Werewolf den trail": [(133, 208), (150, 196), (170, 186), (192, 172)],
     "Lake Baratok to the Raven River crossroads": [(242, 225), (231, 244), (220, 262)],
     "Wizard of Wines trail": [(150, 340), (130, 352), (110, 360)],
     "Yester Hill trail": [(150, 340), (130, 400), (100, 452), (70, 488)],
@@ -94,7 +97,7 @@ UNUSED_TRACKS = {
 LAKES = {
     "Lake Zarovich": [(322, 195), (335, 160), (370, 130), (420, 115), (480, 115), (530, 135), (550, 170),
                       (540, 205), (500, 222), (450, 230), (400, 234), (355, 224)],
-    "Lake Baratok": [(212, 160), (232, 150), (250, 160), (250, 185), (240, 198), (220, 202), (210, 185)],
+    "Lake Baratok": [(200, 152), (222, 140), (246, 144), (258, 160), (256, 184), (244, 198), (222, 203), (204, 192), (197, 172)],
     "Luna Lake": [(180, 588), (200, 576), (226, 578), (232, 596), (218, 612), (190, 612)],
     "Tser Pool": [(676, 455), (692, 450), (702, 466), (700, 494), (690, 508), (678, 496), (674, 478)],
     "": [(350, 462), (366, 456), (378, 466), (372, 480), (356, 480)],  # the marsh by Berez
@@ -542,6 +545,7 @@ class Place:
     names: list[str]
     anchor: str = "middle"  # where the label sits: above ("middle"), below, to the right ("start"), left ("end")
     offroad: bool = False   # no road leads here; the trail arrives by a dotted line
+    label_at: tuple[float, float] | None = None  # put the label here instead (e.g. on a lake)
     sessions: list = field(default_factory=list)  # posts with a stop here, newest first
 
     @property
@@ -550,6 +554,8 @@ class Place:
 
     @property
     def label_xy(self) -> tuple[float, float]:
+        if self.label_at:
+            return self.label_at
         if self.anchor == "start":
             return self.x + 10, self.y + 4
         if self.anchor == "end":
@@ -560,6 +566,8 @@ class Place:
 
     @property
     def text_anchor(self) -> str:
+        if self.label_at:
+            return "middle"
         return "middle" if self.anchor == "below" else self.anchor
 
 
@@ -579,7 +587,8 @@ def load_places(path: Path, pages: list[wiki.WikiPage]) -> tuple[dict[str, Place
         if anchor not in ("middle", "below", "start", "end"):
             raise ValueError(f"data/map.yaml: {slug}: anchor must be middle, below, start or end")
         places[slug] = Place(slug, str(spec.get("label") or page.title), float(x), float(y),
-                             [str(n) for n in spec.get("names") or page.names], anchor, bool(spec.get("offroad")))
+                             [str(n) for n in spec.get("names") or page.names], anchor, bool(spec.get("offroad")),
+                             tuple(float(v) for v in spec["label_at"]) if spec.get("label_at") else None)
     parent = {slug: slug for slug in places}
     for slug, target in (data.get("within") or {}).items():
         if target not in places:

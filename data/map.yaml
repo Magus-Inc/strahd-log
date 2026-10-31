@@ -31,8 +31,11 @@ places:
   # Raven River crossroads (R) further west, where the Krezk, Tsolenka and Lake Baratok roads meet.
   luna-river-crossroads: {xy: [350, 278], anchor: below}
   raven-river-crossroads: {xy: [220, 262], anchor: below}
-  lake-baratok: {xy: [258, 214], anchor: start}
+  # The name sits on the water; the pin stays where the trail forks by the lake.
+  lake-baratok: {xy: [258, 214], label_at: [227, 176]}
   tower-of-khazan: {xy: [250, 202]}
+  # The werewolf den: a cave in the hills on the west side of Lake Baratok (Z on the official map).
+  lake-baratok-cave: {xy: [192, 172], label: Werewolf Den, anchor: end}
   krezk: {xy: [120, 232], anchor: end}
   abbey-of-saint-markovia: {xy: [133, 208], label: Abbey of St. Markovia}
   wizard-of-wines: {xy: [110, 360], anchor: start}
@@ -66,7 +69,6 @@ within:
   drowning-cells: castle-ravenloft
   hall-of-niches: abbey-of-saint-markovia
   false-meadow: abbey-of-saint-markovia
-  lake-baratok-cave: lake-baratok
 
 # Hand-drawn pictures laid on the map (static/images/map/sprites/<image>.webp, cut by tools/make_sprites.py).
 # name: {image: file stem, xy: [x, y] centre of the picture, width: in map units; the height
@@ -78,7 +80,8 @@ sprites:
   krezk: {image: krezk, xy: [112, 228], width: 54}
   abbey-of-saint-markovia: {image: abbey-of-saint-markovia, xy: [138, 198], width: 40}
   the-windmill: {image: the-windmill, xy: [474, 290], width: 44}
-  tower-of-khazan: {image: tower-of-khazan, xy: [254, 192], width: 30}
+  tower-of-khazan: {image: tower-of-khazan, xy: [258, 192], width: 30}
+  werewolf-den: {image: werewolf-den, xy: [190, 164], width: 36}
   argynvostholt: {image: argynvostholt, xy: [330, 366], width: 50}
   wizard-of-wines: {image: wizard-of-wines, xy: [104, 352], width: 44}
   yester-hill: {image: yester-hill, xy: [70, 480], width: 44}

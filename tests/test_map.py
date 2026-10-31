@@ -135,6 +135,12 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     # Place names link to their wiki pages (every place on the map has one).
     assert 'wiki/vallaki/" tabindex="-1"><text' in page_html
     second = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    # A session's map stops at that session: no crumbs from later sessions.
+    first = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
+    assert 'data-i="1"' in first and 'data-i="2"' not in first and 'current" data-i="2"' in second
+    # Dragging the map never selects (highlights) place names.
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert re.search(r"\.map \{[^}]*user-select: none", css) and re.search(r"\.map \{[^}]*-webkit-user-select: none", css)
     assert "Where we were" in second and 'class="crumb current"' in second and 'class="marker current"' in second
     inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
     assert "On the map" in inn and 'data-place="vallaki"' in inn
@@ -431,3 +437,20 @@ def test_sprite_cutting_keeps_the_drawing_solid_and_fades_the_edge():
     edge = [alpha.getpixel((x, h // 2)) for x in range(w // 2)]
     assert any(0 < a < 255 for a in edge) or edge.count(0) > 1   # a dithered edge, not a hard cut
     assert set(make_sprites.SHEETS) == {p.name for p in (ROOT / "tools" / "sprite_sheets").iterdir()}
+
+
+def test_werewolf_den_sits_west_of_lake_baratok_and_the_lake_is_named_on_the_water():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, parent = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    den, lake = places["lake-baratok-cave"], barovia_map.LAKES["Lake Baratok"]
+    assert den.title == "Werewolf Den" and den.x < min(x for x, _ in lake) and parent["lake-baratok-cave"] == "lake-baratok-cave"
+    assert barovia_map.inside(places["lake-baratok"].label_xy, lake)
+    # The den's sessions stop at the den, not at the lake.
+    visits = barovia_map.load_visits(ROOT / "data" / "trail.yaml", places)
+    assert visits["2025-05-06-echoes-of-the-black-terro"] == ["lake-baratok-cave"]
+
+
+def test_a_place_can_put_its_label_at_a_given_spot(tmp_path):
+    path = write(tmp_path / "map.yaml", "places:\n  vallaki: {xy: [400, 270], label_at: [410, 240]}\n")
+    places, _ = barovia_map.load_places(path, PAGES)
+    assert places["vallaki"].label_xy == (410, 240) and places["vallaki"].text_anchor == "middle"

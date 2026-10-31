@@ -19,6 +19,9 @@
       <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
 {% endfor %}
     </g>
+{# On a session's page the trail stops at that session: later sessions haven't happened yet. #}
+{% set upto = (legs | selectattr("post.slug", "equalto", current) | map(attribute="n") | first) if current else none %}
+{% if upto %}{% set legs = legs | selectattr("n", "le", upto) | list %}{% endif %}
 {% if legs %}
     <g class="trail" aria-label="The party's trail">
 {% for leg in legs %}

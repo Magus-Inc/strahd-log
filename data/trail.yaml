@@ -41,8 +41,8 @@ sessions:
   2025-04-15-the-whispering-wall: [yester-hill, whispering-wall]   # "defeats Winter Splinter"; then Whispering Wall (not on map), "journey back to the winery"  # Chris: ends at the Whispering Wall, west of Yester Hill
   2025-04-22-welcome-to-krezk: [wizard-of-wines, krezk]   # "returns to the Wizard of Wines ... head to Krezk"
   2025-04-29-shadows-over-st-markovia: [krezk, abbey-of-saint-markovia]   # "ascend the treacherous mountain road ... Upon arrival" at the Abbey
-  2025-05-06-echoes-of-the-black-terro: [lake-baratok]   # "concealed hollow near the entrance to the werewolf den" (den = "cave at Lake Baratok" per prior post)
-  2025-05-13-blood-and-oaths-under-moonligh: [lake-baratok, argynvostholt]   # "Within the cave ... Shrine of Mother Night"; "press forward to Argynvostholt"
+  2025-05-06-echoes-of-the-black-terro: [lake-baratok-cave]   # "concealed hollow near the entrance to the werewolf den" (den = "cave at Lake Baratok" per prior post)
+  2025-05-13-blood-and-oaths-under-moonligh: [lake-baratok-cave, argynvostholt]   # "Within the cave ... Shrine of Mother Night"; "press forward to Argynvostholt"
   2025-06-03-echoes-of-the-silver-dragon: [argynvostholt]   # "continues their exploration of Argynvostholt"
   2025-07-29-the-oath-the-spy-and-the-silver-moon: [argynvostholt, vallaki, castle-ravenloft]   # "fourth floor of Argynvostholt"; "Blue Water Inn"; "approach the gates of Barovia ... A black carriage awaits"
   2025-08-12-velvet-vintages-and-veiled-intentions: [castle-ravenloft]   # "arrives at Castle Ravenloft in a black carriage"

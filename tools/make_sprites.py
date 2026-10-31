@@ -26,6 +26,7 @@ SHEETS = {
                             "wizard-of-wines", "yester-hill", "durst-manor", "tser-pool"]),
     "places-2.jpg": (4, 2, ["gates", "abbey-of-saint-markovia", "berez", "amber-temple",
                             "watchtower", "bridge", "dead-tree", "whispering-wall"]),
+    "places-3.jpg": (1, 1, ["werewolf-den"]),
 }
 BAND = 9        # how far in from the edge the fade reaches, in sheet pixels
 MAX_SIDE = 260  # sprites are stored at most this big
