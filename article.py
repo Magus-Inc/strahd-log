@@ -163,6 +163,35 @@ def ai_credits(html: str) -> str:
     return AI_CREDIT.sub(r'<p class="ai-credit">\1</p>', html)
 
 
+WIKI_PICTURE = re.compile(r"!\[[^\]]*\]\((/images/[^)\s]+)")
+LONE_PICTURE = re.compile(r'<p>(<img [^>]*src="([^"]+)"[^>]*>)</p>(\s*<p class="ai-credit">AI-generated images?)\b')
+
+
+def ai_picture_owners(pages: list[wiki.WikiPage]) -> dict[str, wiki.WikiPage]:
+    """Each AI picture (name-ai.jpg, name-ai-2.jpg, name-ai-portrait.jpg) maps to the wiki page that
+    shows it. The file name need not match the slug, so the wiki page's own pictures decide."""
+    owners: dict[str, wiki.WikiPage] = {}
+    for page in pages:
+        for src in WIKI_PICTURE.findall(page.body_md):
+            if re.search(r"-ai(?:-\d+|-portrait)?\.\w+$", src):
+                owners.setdefault(src, page)
+    return owners
+
+
+def link_ai_pictures(html: str, owners: dict[str, wiki.WikiPage]) -> str:
+    """In a post, an AI picture of someone or somewhere in the wiki links to that wiki page, and the
+    credit under it names what is pictured: "AI-generated image of <a>Ismark Kolyanovich</a> (...)"."""
+    def one(match: re.Match) -> str:
+        page = owners.get(match.group(2))
+        if page is None:
+            return match.group(0)
+        href = f"/{page.path}"
+        return (f'<p><a class="ai-picture" href="{href}" title="{escape(page.title)} in the wiki">'
+                f'{match.group(1)}</a></p>{match.group(3)} of '
+                f'<a class="wiki-link" href="{href}">{escape(page.title)}</a>')
+    return LONE_PICTURE.sub(one, html)
+
+
 def teaser(html: str, limit: int = 150) -> str:
     """One or two plain-text lines for a session card: the first glance bullet, else the first paragraph."""
     items = glance_items(html)

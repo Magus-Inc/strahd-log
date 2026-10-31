@@ -174,3 +174,44 @@ def test_ai_credit_is_small_gray_and_still_readable():
     contrast = (max(fg, bg) + 0.05) / (min(fg, bg) + 0.05)
     assert 4.5 <= contrast < 9  # grayer than body text, but meets WCAG AA for small text
     assert tokens[var.group(1)].lower() != tokens["--text"].lower()
+
+
+ISMARK = wiki.WikiPage(slug="ismark-kolyanovich", title="Ismark Kolyanovich", type="character",
+                       body_md="![Ismark](/images/ismark-kolyanovich-ai.jpg)\n\nText.\n")
+IZEK = wiki.WikiPage(slug="izek-strazni", title="Izek Strazni", type="character",
+                     body_md="![Izek](/images/izek-strahsne-ai.jpg)\n")
+
+
+def test_ai_picture_owners_come_from_the_wiki_page_that_shows_the_picture():
+    # The file name need not match the slug (izek-strahsne-ai.jpg is on the izek-strazni page).
+    owners = article.ai_picture_owners([ISMARK, IZEK])
+    assert owners["/images/ismark-kolyanovich-ai.jpg"] is ISMARK
+    assert owners["/images/izek-strahsne-ai.jpg"] is IZEK
+
+
+def test_post_ai_picture_links_to_its_wiki_page_and_the_credit_names_who_it_is():
+    # 2026-10-31 Chris: clicking post art opens the NPC's wiki page, and the AI disclaimer says who
+    # is pictured, with the name linking to the wiki too.
+    html = article.ai_credits(build.render_markdown(
+        "Before.\n\n![Ismark in a tavern](/images/ismark-kolyanovich-ai.jpg)\n\n"
+        "*AI-generated image (Google Gemini, October 2026). Not official art.*\n\nAfter.\n"))
+    linked = article.link_ai_pictures(html, article.ai_picture_owners([ISMARK, IZEK]))
+    assert re.search(r'<a class="ai-picture" href="/wiki/ismark-kolyanovich/"[^>]*>'
+                     r'<img [^>]*src="/images/ismark-kolyanovich-ai.jpg"[^>]*></a>', linked)
+    assert ('<p class="ai-credit">AI-generated image of '
+            '<a class="wiki-link" href="/wiki/ismark-kolyanovich/">Ismark Kolyanovich</a> '
+            '(Google Gemini, October 2026). Not official art.</p>') in linked
+    assert article.link_ai_pictures(linked, article.ai_picture_owners([ISMARK])) == linked  # safe to re-run
+
+
+def test_pictures_with_no_wiki_page_are_left_alone():
+    html = article.ai_credits(build.render_markdown(
+        "![A wolf](/images/wolf-ai.jpg)\n\n*AI-generated image (Google Gemini). Not official art.*\n\n"
+        "![Ismark by Ryan](/images/ismark-by-ryan.webp)\n"))
+    assert article.link_ai_pictures(html, article.ai_picture_owners([ISMARK])) == html
+
+
+def test_linked_picture_has_no_underline_and_shows_it_can_be_clicked():
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert re.search(r"\.prose a\.ai-picture\s*\{[^}]*text-decoration:\s*none", css)
+    assert re.search(r"\.prose a\.ai-picture:hover img\s*\{", css)
