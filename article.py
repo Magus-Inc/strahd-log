@@ -78,11 +78,12 @@ def margin_notes(html: str) -> str:
 @dataclass
 class Deck:
     """One slide deck for a session: its label (empty when it is the only one), a short key for votes,
-    root-relative image paths in order, and the PDF if there is one."""
+    root-relative image paths in order, the PDF if there is one, and a short subheading on its style."""
     label: str
     key: str
     slides: list[str]
     pdf: str = ""
+    note: str = ""
 
 
 def add_deck(html: str, slides: list[str], pdf: str = "") -> str:
@@ -114,7 +115,8 @@ def add_decks(html: str, decks: list[Deck]) -> str:
     else:
         parts = "".join(
             f'<div class="deck" aria-label="{escape(d.label)} slides">\n<p class="deck-label">{escape(d.label)}</p>\n'
-            f'{deck_body(d, True)}<p class="deck-vote"><button type="button" data-vote="{escape(d.key)}" '
+            + (f'<p class="deck-note">{escape(d.note)}</p>\n' if d.note else '')
+            + f'{deck_body(d, True)}<p class="deck-vote"><button type="button" data-vote="{escape(d.key)}" '
             f'data-label="{escape(d.label)}">Vote for {escape(d.label)}</button></p>\n</div>\n' for d in decks)
         block = ('<section class="decks vote-group" aria-label="Session slides">\n<h2>The Slides</h2>\n'
                  f'<p class="deck-intro">This session has {len(decks)} slide decks. Look through them and vote for your '

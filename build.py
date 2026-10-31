@@ -145,7 +145,8 @@ def find_slides(posts: list[Post], static_dir: Path) -> None:
     """A post's slide deck is static/slides/<post file name>/ (e.g. 2026-09-29-the-beacon-of-argynvostholt/):
     one image per slide (01.webp, 02.webp, ...) and, optionally, the deck as a PDF. Another deck for the
     same session goes in a subfolder (e.g. gemini/) laid out the same way; readers vote between them.
-    A label.txt in a deck's folder names it (e.g. "NotebookLM")."""
+    A label.txt in a deck's folder names it (e.g. "NotebookLM"); an optional second line is a short
+    subheading on the deck's style, shown under the name."""
     for post in posts:
         name = post.source.stem if post.source else post.slug
         folder = static_dir / "slides" / name
@@ -160,10 +161,11 @@ def find_slides(posts: list[Post], static_dir: Path) -> None:
 def read_deck(folder: Path, static_dir: Path) -> article.Deck:
     rel = folder.relative_to(static_dir).as_posix()
     label_file = folder / "label.txt"
-    label = label_file.read_text(encoding="utf-8").strip() if label_file.exists() else ""
+    lines = [ln.strip() for ln in label_file.read_text(encoding="utf-8").splitlines()] if label_file.exists() else []
+    label, note = (lines + ["", ""])[:2]
     pdfs = sorted(folder.glob("*.pdf"))
     return article.Deck(label, tag_slug(label) or folder.name, [f"{rel}/{f.name}" for f in sorted(folder.glob("*.webp"))],
-                        f"{rel}/{pdfs[0].name}" if pdfs else "")
+                        f"{rel}/{pdfs[0].name}" if pdfs else "", note)
 
 
 def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
