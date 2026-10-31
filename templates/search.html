@@ -63,7 +63,7 @@
             (h.e.s ? '<p class="meta"><span class="slides-tag">' + SLIDES_ICON + h.e.s + (h.e.s === 1 ? " slide" : " slides") + "</span></p>" : "");
           li.innerHTML = h.e.p ? '<div class="wiki-card-text">' + text + '</div><span class="pic-badge"><span class="pic-thumb"><img src="' + base + h.e.p +
             '" alt="" loading="lazy" decoding="async"></span>' +
-            (h.e.n > 1 ? '<span class="pic-count">' + PICTURE_ICON + h.e.n + " pictures</span>" : "") + "</span>" : text;
+            (h.e.n > 1 ? '<span class="pic-count" role="img" aria-label="' + h.e.n + ' pictures">' + PICTURE_ICON + h.e.n + "</span>" : "") + "</span>" : text;
           list.appendChild(li);
         });
       }
