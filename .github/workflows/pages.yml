@@ -83,9 +83,10 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
+  # Every deploy rebuilds every open pull request, so every one gets (or keeps) its link comment,
+  # whatever triggered the run. Unchanged comments are left alone.
   comment:
     needs: [build, deploy]
-    if: github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -95,7 +96,7 @@ jobs:
         with:
           ref: main
           persist-credentials: false
-      - name: Comment the preview link
+      - name: Comment the preview links
         run: python3 tools/pr_previews.py comment-from-env
         env:
           GH_TOKEN: ${{ github.token }}

@@ -120,16 +120,18 @@ def build_one(pull: dict, public: Path, work: Path, origin: str, base_path: str,
 
 
 def build_previews(public: Path, origin: str, base_path: str, repo: str, pulls: list[dict],
-                   work: Path, checkout: Path = ROOT) -> dict[str, list[int]]:
+                   work: Path, checkout: Path = ROOT) -> dict:
     """Build each pull request into public/pr-preview/; a failed one is reported, not fatal."""
     public.joinpath("robots.txt").write_text(robots_txt(base_path), encoding="utf-8")
     (public / PREVIEW_DIR).mkdir(parents=True, exist_ok=True)
     work.mkdir(parents=True, exist_ok=True)
-    results: dict[str, list[int]] = {"built": [], "failed": []}
+    results: dict = {"built": [], "failed": [], "shas": {}}
     for pull in pulls:
         try:
             build_one(pull, public, work, origin, base_path, repo, checkout)
             results["built"].append(pull["number"])
+            if pull.get("headRefOid"):
+                results["shas"][str(pull["number"])] = pull["headRefOid"]
         except (subprocess.CalledProcessError, OSError) as err:
             print(f"Preview for #{pull['number']} failed: {err}", file=sys.stderr)
             results["failed"].append(pull["number"])
@@ -154,24 +156,26 @@ def comment_body(number: int, url: str, state: str, sha: str = "", run_url: str 
     return MARKER + "\n" + "\n".join(lines) + "\n"
 
 
-def comment_from_env(env: dict[str, str]) -> tuple[int, str]:
-    """(pull request number, comment body) from the Pages workflow's comment step."""
-    number = int(env["NUMBER"])
+def comments_from_env(env: dict[str, str]) -> list[tuple[int, str]]:
+    """(pull request number, comment body) for every pull request this deploy touched: each preview
+    built or failed, and the pull request that is closing."""
     results = json.loads(env.get("RESULTS") or "{}")
-    if env.get("CLOSED") == "true":
-        state = "removed"
-    elif number in results.get("built", []):
-        state = "built"
-    else:
-        state = "failed"
-    url = preview_url(env.get("ORIGIN", ""), env.get("BASE_PATH", ""), number)
-    return number, comment_body(number, url, state, env.get("SHA", ""), env.get("RUN_URL", ""))
+    shas = {int(k): v for k, v in (results.get("shas") or {}).items()}
+    origin, base, run_url = env.get("ORIGIN", ""), env.get("BASE_PATH", ""), env.get("RUN_URL", "")
+    out = [(n, comment_body(n, preview_url(origin, base, n), "built", shas.get(n, ""))) for n in results.get("built", [])]
+    out += [(n, comment_body(n, "", "failed", run_url=run_url)) for n in results.get("failed", [])]
+    if env.get("CLOSED") == "true" and env.get("NUMBER"):
+        out.append((int(env["NUMBER"]), comment_body(int(env["NUMBER"]), "", "removed")))
+    return sorted(out)
 
 
 def upsert_comment(repo: str, number: int, body: str) -> None:
+    """Keep one preview comment per pull request; leave it alone when nothing changed."""
     comments = json.loads(run(["gh", "api", "--paginate", "--slurp", f"repos/{repo}/issues/{number}/comments"],
                               capture_output=True).stdout)
     mine = [c for page in comments for c in page if MARKER in (c.get("body") or "")]
+    if mine and mine[0].get("body") == body:
+        return
     if mine:
         run(["gh", "api", "-X", "PATCH", f"repos/{repo}/issues/comments/{mine[0]['id']}", "-f", f"body={body}"],
             capture_output=True)
@@ -201,8 +205,14 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", "Magus-Inc/strahd-log"))
     args = parser.parse_args(argv)
     if args.cmd == "comment-from-env":
-        upsert_comment(args.repo, *comment_from_env(dict(os.environ)))
-        return 0
+        failed = 0
+        for number, body in comments_from_env(dict(os.environ)):
+            try:
+                upsert_comment(args.repo, number, body)
+            except subprocess.CalledProcessError as err:
+                print(f"Could not comment on #{number}: {err}", file=sys.stderr)
+                failed += 1
+        return 1 if failed else 0
     if args.cmd == "build":
         pulls = previewable(open_pulls(args.repo), args.skip)
         results = build_previews(args.public, args.origin, args.base_path, args.repo, pulls, args.work)

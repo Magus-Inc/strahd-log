@@ -1,3 +1,4 @@
+import json
 import re
 import subprocess
 from pathlib import Path
@@ -118,7 +119,7 @@ def test_build_previews_builds_each_pull_request_and_survives_a_broken_one(repo_
     (public / "index.html").write_text("main", encoding="utf-8")
     results = pr_previews.build_previews(public, "https://owlbear.dicelore.quest", "", REPO,
                                          [{"number": 1}, {"number": 2}], tmp_path / "work", repo_with_pulls)
-    assert results == {"built": [1], "failed": [2]}
+    assert results["built"] == [1] and results["failed"] == [2]
     assert (public / "index.html").read_text(encoding="utf-8") == "main"
     assert (public / "robots.txt").read_text(encoding="utf-8") == "User-agent: *\nDisallow: /pr-preview/\n"
     preview = (public / "pr-preview" / "pr-1" / "index.html").read_text(encoding="utf-8")
@@ -129,19 +130,40 @@ def test_build_previews_builds_each_pull_request_and_survives_a_broken_one(repo_
     assert "pr-" not in git(repo_with_pulls, "worktree", "list")
 
 
-@pytest.mark.parametrize("closed, results, expect", [
-    ("false", '{"built": [62], "failed": []}', "**Preview:** https://owlbear.dicelore.quest/pr-preview/pr-62/"),
-    ("false", '{"built": [], "failed": [62]}', "the build failed"),
-    ("false", "", "the build failed"),
-    ("true", '{"built": [], "failed": []}', "removed now that this pull request is closed"),
-])
-def test_comment_matches_what_happened(closed, results, expect):
-    number, body = pr_previews.comment_from_env({
-        "NUMBER": "62", "RESULTS": results, "CLOSED": closed, "ORIGIN": "https://owlbear.dicelore.quest",
-        "BASE_PATH": "", "SHA": "abcdef1234", "RUN_URL": "https://github.com/x/runs/1"})
-    assert number == 62
-    assert body.startswith(pr_previews.MARKER)
-    assert expect in body
+def test_every_preview_built_or_failed_gets_its_comment_whatever_triggered_the_run():
+    env = {"NUMBER": "", "CLOSED": "false", "ORIGIN": "https://owlbear.dicelore.quest", "BASE_PATH": "",
+           "RUN_URL": "https://github.com/x/runs/1",
+           "RESULTS": '{"built": [62, 64], "failed": [65], "shas": {"62": "abcdef1234", "64": "1234567890"}}'}
+    comments = dict(pr_previews.comments_from_env(env))
+    assert sorted(comments) == [62, 64, 65]
+    assert all(body.startswith(pr_previews.MARKER) for body in comments.values())
+    assert "**Preview:** https://owlbear.dicelore.quest/pr-preview/pr-62/" in comments[62]
+    assert "abcdef1" in comments[62] and "1234567" in comments[64]
+    assert "the build failed" in comments[65] and "runs/1" in comments[65]
+
+
+def test_a_closing_pull_request_is_told_its_preview_is_gone():
+    comments = dict(pr_previews.comments_from_env({
+        "NUMBER": "63", "CLOSED": "true", "RESULTS": '{"built": [62], "failed": [], "shas": {}}',
+        "ORIGIN": "https://owlbear.dicelore.quest", "BASE_PATH": ""}))
+    assert sorted(comments) == [62, 63]
+    assert "removed now that this pull request is closed" in comments[63]
+    assert pr_previews.comments_from_env({"NUMBER": "", "CLOSED": "false", "RESULTS": ""}) == []
+
+
+def test_unchanged_comment_is_left_alone(monkeypatch):
+    calls = []
+    body = pr_previews.comment_body(62, "https://x/pr-preview/pr-62/", "built", "abcdef1")
+
+    def fake_run(cmd, **kw):
+        calls.append(cmd)
+        out = json.dumps([[{"id": 5, "body": body}]]) if "--paginate" in cmd else ""
+        return subprocess.CompletedProcess(cmd, 0, out, "")
+    monkeypatch.setattr(pr_previews, "run", fake_run)
+    pr_previews.upsert_comment(REPO, 62, body)
+    assert len(calls) == 1  # read only
+    pr_previews.upsert_comment(REPO, 62, body.replace("abcdef1", "9999999"))
+    assert calls[-1][:4] == ["gh", "api", "-X", "PATCH"] and "issues/comments/5" in calls[-1][4]
 
 
 def workflow() -> dict:
@@ -171,6 +193,7 @@ def test_workflow_deploys_main_and_previews_from_main_only():
     assert jobs["deploy"]["permissions"] == {"pages": "write", "id-token": "write"}
     assert jobs["deploy"]["environment"]["name"] == "github-pages"
     assert jobs["comment"]["needs"] == ["build", "deploy"]
+    assert "if" not in jobs["comment"]  # every deploy comments on every preview, not just PR events
     assert jobs["comment"]["permissions"] == {"pull-requests": "write"}
     assert "comment-from-env" in jobs["comment"]["steps"][-1]["run"]
 
