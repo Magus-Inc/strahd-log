@@ -139,6 +139,10 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 .prose > :first-child { margin-top: 0; }
 .prose p, .prose li { max-width: var(--measure); }
 .prose .ai-credit { margin: -0.4rem 0 1.2rem; font-size: 0.78rem; line-height: 1.5; color: var(--faint); }
+.prose a.ai-picture { display: block; text-decoration: none; }
+.prose a.ai-picture img { transition: border-color 0.15s, box-shadow 0.15s; }
+.prose a.ai-picture:hover img { border-color: var(--accent-hi); box-shadow: 0 0 0 1px var(--accent-hi); }
+.prose a.ai-picture:focus-visible img { border-color: var(--accent-hi); box-shadow: 0 0 0 1px var(--accent-hi); }
 .prose ul, .prose ol { padding-left: 1.3rem; }
 .prose li { margin: 0.3rem 0; }
 .prose li::marker { color: var(--accent); }

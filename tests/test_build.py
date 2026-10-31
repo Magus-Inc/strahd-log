@@ -122,6 +122,19 @@ def test_ai_disclaimers_on_the_real_site_are_quiet_credits(real_site):
         assert "<em>AI-generated" not in html, page
 
 
+def test_post_npc_art_links_to_the_wiki_and_its_credit_names_who_it_is(real_site):
+    html = (real_site / "posts" / "barovia-barovia" / "index.html").read_text(encoding="utf-8")
+    assert re.search(r'<a class="ai-picture" href="/wiki/ismark-kolyanovich/"[^>]*><img [^>]*ismark-kolyanovich-ai.jpg', html)
+    assert 'AI-generated image of <a class="wiki-link" href="/wiki/ismark-kolyanovich/">Ismark Kolyanovich</a>' in html
+
+
+def test_every_ai_picture_in_a_post_links_to_a_wiki_page(real_site):
+    for page in (real_site / "posts").rglob("index.html"):
+        html = page.read_text(encoding="utf-8")
+        for img in re.findall(r'(?:<a [^>]*>)?<img [^>]*src="[^"]*-ai(?:-\d+|-portrait)?\.(?:jpe?g|png|webp)"', html):
+            assert img.startswith('<a class="ai-picture" href="/wiki/'), (page, img)
+
+
 def test_no_images_on_links_that_expire(real_site):
     # Discord attachment links carry an expiry (ex=...) and stop working, so their images go in static/.
     expiring = {page.relative_to(real_site).as_posix()

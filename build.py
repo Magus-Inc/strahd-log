@@ -199,13 +199,14 @@ def make_thumbnails(pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path)
 
 def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     """Reading time, table of contents, glance callout, slides, card teaser and cast for every post."""
+    owners = article.ai_picture_owners(pages)
     for post in posts:
         post.minutes = article.reading_minutes(post.html)
         post.glance = article.glance_items(post.html)
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(post.mentions, pages)
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_decks(article.wrap_glance(article.ai_credits(post.html)), post.decks)))
+            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(post.html), owners)), post.decks)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:
