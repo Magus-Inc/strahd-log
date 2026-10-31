@@ -389,3 +389,127 @@ def test_closing_full_screen_slides_returns_to_the_strip():
     # Chris: after leaving a full-screen slide he was often further down the page.
     template = (build.ROOT / "templates" / "post.html").read_text(encoding="utf-8")
     assert 'frame.scrollIntoView({block: "center"})' in template and "returnUntil" in template
+
+
+# --- list badges: which sessions have slides and which wiki pages have pictures -----------------
+
+def test_slide_count_adds_up_every_deck(content, tmp_path):
+    posts = build.load_posts(content)
+    folder = tmp_path / "static" / "slides" / "2026-09-01-third"
+    (folder / "gemini").mkdir(parents=True)
+    for name in ("01.webp", "02.webp", "gemini/01.webp"):
+        (folder / name).write_bytes(b"")
+    build.find_slides(posts, tmp_path / "static")
+    by_slug = {p.slug: p for p in posts}
+    assert by_slug["third"].slide_count == 3
+    assert by_slug["first"].slide_count == 0
+
+
+def test_wiki_page_counts_its_pictures():
+    import wiki
+    page = wiki.WikiPage(slug="aera", title="Aera", body_md=(
+        "## Description\n\n![Aera with Zorya](/images/aera-ai-portrait.jpg)\n\nText.\n\n"
+        "![Second look](/images/aera-2.jpg)\n\n[not a picture](/wiki/zorya/)\n"))
+    assert page.pictures == ["/images/aera-ai-portrait.jpg", "/images/aera-2.jpg"]
+    assert wiki.WikiPage(slug="grom", title="Grom", body_md="No art yet.\n").pictures == []
+
+
+@pytest.fixture
+def badge_site(tmp_path):
+    """Three sessions (the newest and the oldest have slides) and three wiki pages: one with a picture,
+    one with none, one whose picture file is missing."""
+    from PIL import Image
+    root = tmp_path
+    posts = root / "content" / "posts"
+    write_post(posts, "2026-01-01-old.md", "title: Old Deck\ndate: '2026-01-01'\ntags: [Barovia]\n", "Aera ran.\n")
+    write_post(posts, "2026-02-01-plain.md", "title: No Deck\ndate: '2026-02-01'\ntags: [Barovia]\n", "Aera hid.\n")
+    write_post(posts, "2026-03-01-new.md", "title: New Deck\ndate: '2026-03-01'\n", "Aera fought.\n")
+    wiki_dir = root / "content" / "wiki"
+    wiki_dir.mkdir(parents=True)
+    (wiki_dir / "aera.md").write_text("---\ntitle: Aera\ntype: character\nsummary: Wood-elf Rogue\n---\n\n"
+                                      "![Aera](/images/aera.jpg)\n\n![Aera again](/images/aera-2.jpg)\n", encoding="utf-8")
+    (wiki_dir / "grom.md").write_text("---\ntitle: Grom\ntype: character\n---\n\nNo art yet.\n", encoding="utf-8")
+    (wiki_dir / "lost.md").write_text("---\ntitle: Lost\ntype: npc\n---\n\n![Gone](/images/gone.jpg)\n", encoding="utf-8")
+    static = root / "static"
+    (static / "images").mkdir(parents=True)
+    Image.new("RGB", (800, 1000), "red").save(static / "images" / "aera.jpg")
+    Image.new("RGB", (800, 1000), "blue").save(static / "images" / "aera-2.jpg")
+    for name, count in (("2026-01-01-old", 2), ("2026-03-01-new", 3)):
+        (static / "slides" / name).mkdir(parents=True)
+        for i in range(count):
+            (static / "slides" / name / f"0{i + 1}.webp").write_bytes(b"")
+    out = root / "public"
+    build.build(posts, out, site_url="https://x.example", wiki_dir=wiki_dir, slides_static=static)
+    return out
+
+
+def read(path: Path) -> str:
+    return path.read_text(encoding="utf-8")
+
+
+def card_for(html: str, title: str) -> str:
+    return next(c for c in re.findall(r'<li class="card[^"]*".*?</li>', html, re.S) if f">{title}<" in c)
+
+
+def test_home_cards_mark_sessions_with_slides(badge_site):
+    home = read(badge_site / "index.html")
+    old = card_for(home, "Old Deck")
+    assert '<span class="slides-tag"' in old and "2 slides" in old and "<svg" in old
+    assert "slides-tag" not in card_for(home, "No Deck")
+
+
+def test_latest_session_hero_shows_its_slides(badge_site):
+    hero = read(badge_site / "index.html").split('<section class="chronicle"')[0]
+    assert "New Deck" in hero and "3 slides" in hero and "slides-tag" in hero
+
+
+def test_tags_page_and_appears_in_list_mark_sessions_with_slides(badge_site):
+    tags = read(badge_site / "tags" / "index.html")
+    old_row = next(li for li in tags.split("<li>") if "Old Deck" in li)
+    plain_row = next(li for li in tags.split("<li>") if "No Deck" in li)
+    assert "2 slides" in old_row and "slides-tag" not in plain_row
+    appears = read(badge_site / "wiki" / "aera" / "index.html").split('class="appears-in"')[1]
+    assert "3 slides" in appears and "2 slides" in appears
+
+
+def test_one_slide_is_singular(content, tmp_path):
+    static = tmp_path / "static"
+    (static / "slides" / "2026-09-01-third").mkdir(parents=True)
+    (static / "slides" / "2026-09-01-third" / "01.webp").write_bytes(b"")
+    (static / "slides" / "2024-02-13-second").mkdir(parents=True)
+    (static / "slides" / "2024-02-13-second" / "01.webp").write_bytes(b"")
+    build.build(content, tmp_path / "public", site_url="https://x.example", slides_static=static)
+    card = card_for(read(tmp_path / "public" / "index.html"), "Second: Wolves")
+    assert "1 slide<" in card
+
+
+def test_wiki_cards_show_a_thumbnail_of_the_first_picture(badge_site):
+    from PIL import Image
+    index = read(badge_site / "wiki" / "index.html")
+    aera = card_for(index, "Aera")
+    assert 'class="pic-thumb"' in aera and 'src="/images/thumbs/aera.webp"' in aera
+    assert 'loading="lazy"' in aera and 'alt=""' in aera
+    assert "2 pictures" in aera  # the count, for screen readers and as the corner number
+    assert "pic-thumb" not in card_for(index, "Grom")
+    assert "pic-thumb" not in card_for(index, "Lost")  # its picture file is missing: no broken image
+    with Image.open(badge_site / "images" / "thumbs" / "aera.webp") as thumb:
+        assert max(thumb.size) <= 240 and thumb.size[0] < thumb.size[1]
+
+
+def test_search_index_carries_slides_and_thumbnails(badge_site):
+    entries = {e["t"]: e for e in json.loads(read(badge_site / "search-index.json"))}
+    assert entries["Old Deck"]["s"] == 2 and "s" not in entries["No Deck"]
+    assert entries["Aera"]["p"] == "images/thumbs/aera.webp" and entries["Aera"]["n"] == 2
+    assert "p" not in entries["Grom"] and "p" not in entries["Lost"]
+
+
+def test_search_and_map_pages_draw_the_badges():
+    search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
+    assert "slides-tag" in search and "pic-thumb" in search
+    assert "slides-tag" in (build.ROOT / "templates" / "map.html").read_text(encoding="utf-8")
+
+
+def test_badges_are_styled_for_phone_and_desktop():
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    for selector in (".slides-tag", ".pic-thumb", ".pic-count", ".wiki-card.has-pic"):
+        assert selector in css

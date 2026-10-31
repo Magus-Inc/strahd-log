@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "_badges.html" as badges with context %}
 {% set section = "chronicle" %}
 {% block content %}
 {% if latest %}
@@ -17,7 +18,7 @@
 {% else %}
       <p class="lede">{{ latest.teaser }}</p>
 {% endif %}
-      <p class="hero-actions"><a class="button" href="{{ base }}{{ latest.path }}">Read the session</a> <span class="muted">{{ latest.minutes }} min read</span></p>
+      <p class="hero-actions"><a class="button" href="{{ base }}{{ latest.path }}">Read the session</a> <span class="muted">{{ latest.minutes }} min read{% if latest.slide_count %} &middot; {{ badges.slides_tag(latest) }}{% endif %}</span></p>
     </section>
 {% endif %}
     <section class="chronicle" aria-labelledby="chronicle-title">
@@ -40,7 +41,7 @@
           <time class="chip date" datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time>
           <h4><a class="stretched" href="{{ base }}{{ post.path }}">{{ post.title }}</a></h4>
           <p class="teaser">{{ post.teaser }}</p>
-          <p class="meta">{{ post.minutes }} min read</p>
+          <p class="meta">{{ post.minutes }} min read{% if post.slide_count %} &middot; {{ badges.slides_tag(post) }}{% endif %}</p>
         </li>
 {% endfor %}
       </ol>

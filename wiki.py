@@ -37,6 +37,9 @@ LOG_NOTE = "From the adventure log Compiled from the session posts. Each line li
 SKIP_TAGS = {"a", "h1", "h2", "h3", "h4", "h5", "h6", "code", "pre", "script", "style"}
 
 
+PICTURE = re.compile(r"!\[[^\]]*\]\(\s*<?([^)\s>]+)")
+
+
 @dataclass
 class WikiPage:
     slug: str
@@ -52,10 +55,16 @@ class WikiPage:
     body_md: str = ""
     html: str = ""
     mentioned_in: list = field(default_factory=list)  # posts, newest first
+    thumb: str = ""  # small copy of the first picture for list cards (images/thumbs/...), set by the build
 
     @property
     def path(self) -> str:
         return f"wiki/{self.slug}/"
+
+    @property
+    def pictures(self) -> list[str]:
+        """Images in the page's own text, in order; list pages badge a page that has any."""
+        return PICTURE.findall(self.body_md)
 
     @property
     def names(self) -> list[str]:

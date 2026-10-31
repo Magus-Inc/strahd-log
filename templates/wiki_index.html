@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "_badges.html" as badges with context %}
 {% set section = "wiki" %}
 {% block title %}Wiki | {{ site_title }}{% endblock %}
 {% block content %}
@@ -23,7 +24,10 @@
       <h2>{{ label }}</h2>
       <ul class="card-grid compact">
 {% for page in entries %}
-        <li class="card wiki-card" data-search="{{ (page.title ~ ' ' ~ page.aliases | join(' ') ~ ' ' ~ page.summary) | lower }}">
+        <li class="card wiki-card{{ ' has-pic' if page.thumb }}" data-search="{{ (page.title ~ ' ' ~ page.aliases | join(' ') ~ ' ' ~ page.summary) | lower }}">
+{% if page.thumb %}
+          <div class="wiki-card-text">
+{% endif %}
           <h3><a class="stretched" href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% if page.former %} <span class="chip former">Former PC</span>{% endif %}</h3>
 {# Players' real names appear only on each PC's own page. #}
 {% if page.summary %}
@@ -31,6 +35,10 @@
 {% endif %}
 {% if page.mentioned_in %}
           <p class="meta">{{ page.mentioned_in | length }} session{{ "s" if page.mentioned_in | length != 1 }}</p>
+{% endif %}
+{% if page.thumb %}
+          </div>
+          {{ badges.pic_thumb(page) }}
 {% endif %}
         </li>
 {% endfor %}
