@@ -9,6 +9,7 @@
   --line: #2e2a31;
   --text: #ece7e1;
   --muted: #a59d97;
+  --faint: #8a8582;         /* quiet credits: 5.2:1 on --bg */
   --accent: #c8213f;        /* links, active nav, chips: 4.6:1 on --bg */
   --accent-hi: #e04a63;
   --accent-deep: #8f1027;
@@ -137,6 +138,7 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 .prose, .post > section, .post > .source { max-width: 46rem; margin-left: auto; margin-right: auto; }
 .prose > :first-child { margin-top: 0; }
 .prose p, .prose li { max-width: var(--measure); }
+.prose .ai-credit { margin: -0.4rem 0 1.2rem; font-size: 0.78rem; line-height: 1.5; color: var(--faint); }
 .prose ul, .prose ol { padding-left: 1.3rem; }
 .prose li { margin: 0.3rem 0; }
 .prose li::marker { color: var(--accent); }

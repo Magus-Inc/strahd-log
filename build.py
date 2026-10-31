@@ -144,7 +144,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(article.add_image_votes(render_markdown(page.body_md)), self_slug=page.slug)
+        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(render_markdown(page.body_md))), self_slug=page.slug)
 
 
 def find_slides(posts: list[Post], static_dir: Path) -> None:
@@ -205,7 +205,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(post.mentions, pages)
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_decks(article.wrap_glance(post.html), post.decks)))
+            article.add_decks(article.wrap_glance(article.ai_credits(post.html)), post.decks)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:

@@ -113,6 +113,15 @@ def test_schlopkht_page_features_the_picture_readers_voted_for(real_site):
     assert "AI-generated" in html
 
 
+def test_ai_disclaimers_on_the_real_site_are_quiet_credits(real_site):
+    pages = [real_site / "wiki" / "schlopkht" / "index.html",
+             *(p for p in (real_site / "posts").rglob("index.html") if "AI-generated" in p.read_text(encoding="utf-8"))]
+    for page in pages:
+        html = page.read_text(encoding="utf-8")
+        assert '<p class="ai-credit">AI-generated' in html, page
+        assert "<em>AI-generated" not in html, page
+
+
 def test_no_images_on_links_that_expire(real_site):
     # Discord attachment links carry an expiry (ex=...) and stop working, so their images go in static/.
     expiring = {page.relative_to(real_site).as_posix()
