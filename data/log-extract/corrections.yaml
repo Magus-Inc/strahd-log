@@ -47,15 +47,20 @@ facts:
 
 # Two people named Bianca.
 move_facts:
+  # Chris: the gates on the road to Castle Ravenloft are not the ones the party entered by after Durst Manor.
+  "A black carriage with Strahd's puzzle chest waited here.": West Gates of Barovia
   "A werewolf Bianca, torn between love and survival, told the party about the pack.": Bianca (werewolf)
 
 types:
+  West Gates of Barovia: place
   Escher: npc
   Zollst: npc
   Matilda: npc
   Bianca (werewolf): npc
 
 summaries:
+  Gates of Barovia: The gates between Durst Manor and the village of Barovia, which the party passed on the way in.
+  West Gates of Barovia: Fog-wreathed gates flanked by headless statues on the road toward Castle Ravenloft.
   Bianca: Franz's sister, who cares for him.
   Bianca (werewolf): A werewolf with ties to Kiril, torn between love and survival.
   Gray Stones: Gemstones Strahd gave the party at the Whispering Wall; crushed, they cast Locate Object.

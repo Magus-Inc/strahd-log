@@ -20,6 +20,8 @@ places:
   # and came to the gates before they reached the village.
   durst-manor: {xy: [968, 345], anchor: end}
   gates-of-barovia: {xy: [930, 398], label: Gates, anchor: end}
+  # Chris: a different place from the gates above, on the road toward Castle Ravenloft.
+  west-gates-of-barovia: {xy: [585, 335], label: West Gates, anchor: end}
   # The Vistani camp is on dry land just south of the pool.
   tser-pool: {xy: [690, 530], anchor: end}
   castle-ravenloft: {xy: [720, 398]}
@@ -88,9 +90,7 @@ sprites:
   yester-hill: {image: yester-hill, xy: [70, 480], width: 44}
   durst-manor: {image: durst-manor, xy: [968, 334], width: 32}
   tser-pool: {image: tser-pool, xy: [692, 526], width: 42}
-  # The west gates (on the way to Castle Ravenloft) are not the place the party walked through
-  # from Durst Manor (Chris), so they link nowhere until they get their own wiki page.
-  gates-west: {image: gates, xy: [597, 340], width: 30, place: null}
+  gates-west: {image: gates, xy: [597, 340], width: 30, place: west-gates-of-barovia}
   gates-east: {image: gates, xy: [930, 388], width: 30, place: gates-of-barovia}
   berez: {image: berez, xy: [322, 444], width: 40}
   amber-temple: {image: amber-temple, xy: [384, 630], width: 40}

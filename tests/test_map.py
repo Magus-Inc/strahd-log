@@ -202,6 +202,8 @@ def test_trail_passes_the_east_gate_only_once():
     import yaml
     sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
     assert [stem for stem, stops in sessions.items() if "gates-of-barovia" in (stops or [])] == ["2024-02-13-barovia-barovia"]
+    # The black carriage waited at the west gates, on the way to the castle.
+    assert "west-gates-of-barovia" in sessions["2025-07-29-the-oath-the-spy-and-the-silver-moon"]
 
 
 def test_answered_sessions_use_the_new_places():
@@ -486,7 +488,7 @@ def test_every_real_sprite_links_to_a_real_place_or_none():
     places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
     sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
     assert all(s.place in places for s in sprites if s.place)
-    assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"} | {"gates-west"}
+    assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"}
 
 
 def test_every_crossroads_with_a_wiki_page_has_a_signpost():
@@ -500,10 +502,17 @@ def test_every_crossroads_with_a_wiki_page_has_a_signpost():
             assert math.dist((s.x, s.y), (places[s.place].x, places[s.place].y)) < 25
 
 
-def test_west_gates_are_not_linked_to_the_east_gates_page():
-    # Chris: the gates near Castle Ravenloft and the gates by Durst Manor are different places. Only
-    # the east gates (the ones the party walked through from Durst Manor) are the Gates of Barovia
-    # place; the west gates are a plain picture until they get a page of their own.
+def test_west_and_east_gates_are_separate_places():
+    # Chris: the gates near Castle Ravenloft and the gates the party walked through after Durst Manor
+    # are different places, each with its own wiki page, pin and picture.
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
     sprites = {s.name: s for s in barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")}
-    assert sprites["gates-east"].place == "gates-of-barovia"
-    assert sprites["gates-west"].place is None
+    assert sprites["gates-east"].place == "gates-of-barovia" and sprites["gates-west"].place == "west-gates-of-barovia"
+    assert places["west-gates-of-barovia"].x < places["castle-ravenloft"].x < places["gates-of-barovia"].x
+    east = (ROOT / "content" / "wiki" / "gates-of-barovia.md").read_text(encoding="utf-8")
+    west = (ROOT / "content" / "wiki" / "west-gates-of-barovia.md").read_text(encoding="utf-8")
+    assert "black carriage" in west and "black carriage" not in east
+    assert "barovia-barovia" in east
+    # The map no longer paints a bare "Gates of Barovia" name by the west gates; the pin's label names them.
+    assert "Gates of Barovia" not in [name for name, *_ in barovia_map.LABELS]

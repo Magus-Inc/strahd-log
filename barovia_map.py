@@ -160,7 +160,6 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Mount Ghakis", (440, 714), 15, 0),
     ("Old Svalich Road", (872, 440), 10, -21),
     ("Tser Falls", (560, 420), 10, 0),
-    ("Gates of Barovia", (597, 318), 8.5, 0),
 ]
 
 
