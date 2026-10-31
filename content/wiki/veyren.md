@@ -10,6 +10,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Veyren, a hare-folk druid with a staff, a mouse on his shoulder](/images/veyren-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs.*
 
 Shabasta's hare-like brother, a druid drawn into the journey by the loss of his sibling. He joined the party carrying Shabasta's letter. At the Wizard of Wines he became a mouse to spy on a druid torturing a raven, and he read the druids' runes about Kavan the Blood Drinker. At Yester Hill he asked Strahd to his face why some people move freely in his domain. He died in Winter Splinter's explosive death.

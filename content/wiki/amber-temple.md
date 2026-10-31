@@ -7,6 +7,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![The Amber Temple glowing gold in a cliff near a snowy mountain peak](/images/amber-temple-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 The Sunsword, Strahd's father's blade of sunlight, is said to lie hidden in the Amber Temple ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). Strahd himself recommended we visit it, far to the west, which may be a trap or a path to power ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/)). After Castle Ravenloft our eyes turned to it, though we had not yet mapped the way ([Depths of Ravenloft](/posts/depths-of-ravenloft/)).

@@ -10,6 +10,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Weeble Wobleston, a high-elf fighter, his pendant glowing and pulling on its chain](/images/weeble-wobleston-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs.*
 
 A high-elf fighter from the party's first days. In Session Zero his pendant glowed and drifted toward the barn wall, leading the party into the mists. He fought through Durst Manor, promised Rose Durst to bury her family's bones in the garden, and found a compass on a dead young man on the road into the village. On the road he leaned on the Sleep spell, including on a bandit leader. He once came close to provoking Strahd himself.

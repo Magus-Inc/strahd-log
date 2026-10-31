@@ -7,6 +7,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Krezk, a walled village in snowy mountains below the abbey on its cliff](/images/krezk-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Krezk is a walled village below the Abbey of Saint Markovia. Baron Dmitri Krezkov and his wife Anna Krezkova lead it ([Welcome to Krezk](/posts/welcome-to-krezk/), [The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).

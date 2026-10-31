@@ -383,3 +383,12 @@ def test_notable_npcs_written_as_a_bold_line_link_too():
     assert 'href="/wiki/lucien/"' in section and 'href="/wiki/urwin/"' in section
     # The section ends at the next bold "Something:" line.
     assert "<strong>Urwin:</strong> Pours again." in html
+
+
+def test_pages_in_five_or_more_sessions_have_a_picture():
+    """Chris (2026-10-31): anyone or anything in 5+ sessions gets a picture on its wiki page."""
+    posts = build.load_posts(build.ROOT / "content" / "posts")
+    pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
+    build.link_wiki(posts, pages)
+    missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 5 and not p.pictures and not p.narrator)
+    assert not missing, f"add a picture to: {missing}"

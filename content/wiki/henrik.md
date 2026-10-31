@@ -5,6 +5,12 @@ summary: A man delivering church repair materials in Vallaki.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Henrik the coffin maker in his workshop, hiding something as guards come to the door](/images/henrik-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

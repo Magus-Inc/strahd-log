@@ -10,6 +10,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Saint Markovia as a glowing spirit in a simple white robe, holding out her hand](/images/saint-markovia-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Her name is on the Abbey in Krezk, her tomb lies in the catacombs of Castle Ravenloft, and there I found the Icon of Dawn's Grace in her robes ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)). When we called on her by name in the void of the Abbot's soul, she came in a simple white robe, called him Ethereal and forgave him ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/)). Beneath the abbey an image of her offered us a way out of Barovia. It was a trap ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).

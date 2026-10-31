@@ -8,6 +8,12 @@ summary: The god of Father Donavich's church.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Morninglord's gold sunrise emblem against a dawn breaking through the mists](/images/morninglord-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 
