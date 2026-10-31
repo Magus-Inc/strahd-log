@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import functools
 import http.server
+import hashlib
 import json
 import os
 import re
@@ -338,7 +339,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     if counter and not COUNTER_CODE.fullmatch(counter):
         raise ValueError(f"GOATCOUNTER must be a GoatCounter site code like 'owlbear', not {counter!r}")
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
-                       types=wiki.TYPES, all_places=places, counter=counter)
+                       types=wiki.TYPES, all_places=places, counter=counter,
+                       css_version=hashlib.sha256((ROOT / "static" / "style.css").read_bytes()).hexdigest()[:10])
     tags: dict[str, list[Post]] = {}
     for post in posts:
         for tag in post.tags:
