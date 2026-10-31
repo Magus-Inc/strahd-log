@@ -142,3 +142,35 @@ def test_deck_has_no_count_or_hint_text():
     html = article.add_deck(article.wrap_glance(POST), ["slides/x/01.webp", "slides/x/02.webp"])
     assert "deck-count" not in html and "deck-hint" not in html and "1 / 2" not in html
     assert "deck-meta" not in html  # no PDF, so nothing under the strip at all
+
+
+def test_ai_disclaimer_line_becomes_a_quiet_credit():
+    # 2026-10-31 Chris: the AI disclaimer under pictures was distracting; it gets its own small gray style.
+    html = build.render_markdown("![Ismark](/images/ismark-ai.jpg)\n\n"
+                                 "*AI-generated image (Google Gemini, October 2026). Not official art.*\n\n"
+                                 "*Ordinary italic text stays as it is.*\n")
+    quiet = article.ai_credits(html)
+    assert '<p class="ai-credit">AI-generated image (Google Gemini, October 2026). Not official art.</p>' in quiet
+    assert "<p><em>Ordinary italic text stays as it is.</em></p>" in quiet
+    assert article.ai_credits(quiet) == quiet
+
+
+def _hex_luminance(color: str) -> float:
+    channels = [int(color[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    lin = [c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
+    return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
+
+
+def test_ai_credit_is_small_gray_and_still_readable():
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    rule = re.search(r"\.ai-credit\s*\{([^}]*)\}", css)
+    assert rule, "style.css needs an .ai-credit rule"
+    size = re.search(r"font-size:\s*([\d.]+)rem", rule.group(1))
+    assert size and float(size.group(1)) <= 0.8  # body text is 18px; the credit is clearly smaller
+    var = re.search(r"color:\s*var\((--[\w-]+)\)", rule.group(1))
+    assert var, "the credit's color comes from a theme token"
+    tokens = dict(re.findall(r"(--[\w-]+):\s*(#[0-9a-fA-F]{6})", css))
+    fg, bg = _hex_luminance(tokens[var.group(1)]), _hex_luminance(tokens["--bg"])
+    contrast = (max(fg, bg) + 0.05) / (min(fg, bg) + 0.05)
+    assert 4.5 <= contrast < 9  # grayer than body text, but meets WCAG AA for small text
+    assert tokens[var.group(1)].lower() != tokens["--text"].lower()

@@ -155,6 +155,14 @@ def add_image_votes(html: str) -> str:
     return AI_PICTURES.sub(group, html)
 
 
+AI_CREDIT = re.compile(r"<p><em>(AI-generated\b(?:(?!</p>).)*?)</em></p>", re.S)
+
+
+def ai_credits(html: str) -> str:
+    """The italic "AI-generated ..." line under a picture becomes a small, gray credit (.ai-credit)."""
+    return AI_CREDIT.sub(r'<p class="ai-credit">\1</p>', html)
+
+
 def teaser(html: str, limit: int = 150) -> str:
     """One or two plain-text lines for a session card: the first glance bullet, else the first paragraph."""
     items = glance_items(html)
