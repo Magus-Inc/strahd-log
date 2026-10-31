@@ -1,18 +1,26 @@
-name: Pages preview
+name: Pages
 
-# Publishes the site on every push to main: https://owlbear.dicelore.quest/ once the custom domain is
-# set in Settings > Pages, https://magus-inc.github.io/strahd-log/ before that. configure-pages reports
-# the address and path in use, so the build's links are right either way.
+# Publishes the site on every push to main: https://owlbear.dicelore.quest/ (configure-pages reports
+# the address and path in use, so the build's links are right either way).
 # Needs the repository to be public (free plan) and Settings > Pages > Source set to "GitHub Actions".
+#
+# Pull request previews: every open pull request from a branch of this repository is built into
+# /pr-preview/pr-N/ and deployed with main, and the pull request gets a comment with the link. The
+# preview is rebuilt on each push and dropped when the pull request closes. tools/pr_previews.py keeps
+# previews out of search engines and page-view counts. Pull requests from forks get no preview.
+#
+# pull_request_target runs this file as it is on main, so the github-pages environment (which only
+# deploys from main) accepts it. The pull request's own code only runs in the build job, which can
+# read but not write.
 on:
   push:
     branches: [main]
+  pull_request_target:
+    types: [opened, reopened, synchronize, closed]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -20,14 +28,24 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'pull_request_target' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      results: ${{ steps.previews.outputs.results }}
+      origin: ${{ steps.pages.outputs.origin }}
+      base_path: ${{ steps.pages.outputs.base_path }}
     steps:
+      # Always main, whatever triggered the run.
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: pip
-          cache-dependency-path: requirements.txt
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
       - id: pages
@@ -39,6 +57,15 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
           # Page-view counts at https://owlbear.goatcounter.com (no cookies); remove to stop counting.
           GOATCOUNTER: owlbear
+      - name: Build pull request previews
+        id: previews
+        run: python tools/pr_previews.py build --origin "$ORIGIN" --base-path "$BASE_PATH" --skip "$SKIP"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ORIGIN: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # A closing pull request is left out, which removes its preview.
+          SKIP: ${{ github.event.action == 'closed' && github.event.pull_request.number || 0 }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
@@ -46,9 +73,36 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  comment:
+    needs: [build, deploy]
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      # main's copy of the comment script, never the pull request's.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Comment the preview link
+        run: python3 tools/pr_previews.py comment-from-env
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          RESULTS: ${{ needs.build.outputs.results }}
+          CLOSED: ${{ github.event.action == 'closed' }}
+          ORIGIN: ${{ needs.build.outputs.origin }}
+          BASE_PATH: ${{ needs.build.outputs.base_path }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
