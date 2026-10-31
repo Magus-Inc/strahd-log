@@ -554,7 +554,7 @@ def test_picture_count_shows_under_the_thumbnail_only_for_two_or_more(badge_site
     aera = card_for(index, "Aera")
     thumb_box = re.search(r'<span class="pic-thumb">(.*?)</span>', aera, re.S).group(1)
     assert "pic-count" not in thumb_box  # not over the picture
-    assert re.search(r"<span class=\"pic-thumb\">.*?</span><span class=\"pic-count\">.*?2 pictures</span>", aera, re.S)
+    assert re.search(r"<span class=\"pic-thumb\">.*?</span><span class=\"pic-count\"[^>]*>.*?2</span>", aera, re.S)
     solo = card_for(index, "Solo")
     assert 'class="pic-thumb"' in solo and "pic-count" not in solo
 
@@ -562,3 +562,12 @@ def test_picture_count_shows_under_the_thumbnail_only_for_two_or_more(badge_site
 def test_search_shows_the_picture_count_only_for_two_or_more():
     search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
     assert "h.e.n > 1" in search
+
+
+def test_picture_count_is_the_icon_and_number_only(badge_site):
+    aera = card_for(read(badge_site / "wiki" / "index.html"), "Aera")
+    count = re.search(r'<span class="pic-count"([^>]*)>(.*?)</span>', aera, re.S)
+    assert 'aria-label="2 pictures"' in count.group(1)
+    assert re.fullmatch(r"<svg[^>]*>.*</svg>2", count.group(2), re.S)  # no word, just icon and number
+    search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
+    assert "PICTURE_ICON + h.e.n + \"</span>\"" in search
