@@ -18,7 +18,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-The guards at Vallaki's gate pointed us here, with its sign of a blue waterfall and its meat pie. Urwin keeps the bar and is married to Danika, who runs the inn; we met the showman Rictavio and the boys Brom and Bray on our first night ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/)). Rictavio turned out to be Rudolph van Richten, and we found him in his room upstairs ([Finding Arabelle!](/posts/finding-arabelle/)).
+The guards at Vallaki's gate pointed us here, with its sign of a blue waterfall and its meat pie. Urwin keeps the bar and is married to Danika, who runs the inn; we met the showman Rictavio and the boys Brom and Bray on our first night ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/)). Rictavio turned out to be Rudolph van Richten, and we found him in his room upstairs ([Finding Arabelle!](/posts/finding-arabelle/)).
 
 Izek ransacked the place looking for Ireena and broke a window ([Consequences in Vallaki](/posts/consequences-in-vallaki/)). Strahd came to Aera's window here one night and asked to be let in; she shut it on him ([Shadows Over Vallaki](/posts/shadows-over-vallaki/)). Words appeared on a frosted window, "Help Victor" and "Erasmus," and Rahadin arrived on a phantom steed with Strahd's dinner invitation ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)).
 
@@ -29,7 +29,7 @@ Urwin, a Keeper of the Feather like his father Davian, sent us to the Wizard of 
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Recommended by the guards; the party rented rooms there. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* Recommended by the guards; the party rented rooms there. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))
 * Where the party confronted Rictavio. ([Finding Arabelle!](/posts/finding-arabelle/))
 * Was ransacked by Izek. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))
 * Erasmus's spirit wrote messages on its frosted window. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))

@@ -3,7 +3,6 @@ title: Abbey of Saint Markovia
 type: place
 aliases:
 - St. Markovia Abbey
-- St. Markova Abbey
 - Abbey of St. Markovia
 summary: An abbey in Krezk near the mists.
 source: Compiled from the adventure log, with a description written for the site

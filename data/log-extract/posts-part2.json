@@ -95,7 +95,7 @@
 {"text":"Was cut off by Liren and attached to Shabasta by Malron.","post":"2024-12-10-the-fall-of-izek"},
 {"text":"Has the powers Flame Hurl and Flame Volley.","post":"2024-12-17-delivery-for-lady-fiona"}]},
 {"name":"Fiona Wachter","type":"npc","aliases":["Lady Fiona","Fiona","Lady Fiona Wachter","Fiona Wachter","Lady Fiona Wachter","Lady Wachter","Wachter"],"summary":"A noblewoman of Vallaki who opposes the Baron and later takes control of the town.","facts":[
-{"text":"Invited Aera to dinner at Wachter Haus.","post":"2024-11-26-consequences-in-vallaki"},
+{"text":"Invited Aera to dinner at Wachterhaus.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Follows Ezra and was rescued from the woods as a girl by Lysa.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Gave the party poison wine to use against Izek.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Rewarded the party with her armory for Izek's head.","post":"2024-12-17-delivery-for-lady-fiona"},
@@ -119,7 +119,7 @@
 {"text":"Provided counter spells to hold the binding circle at the windmill.","post":"2025-01-21-the-windmill-heist"},
 {"text":"Used the heart stone to take the party into the ethereal realm.","post":"2025-02-11-entering-the-spirit-realm"}]},
 {"name":"Stella","type":"npc","aliases":[],"summary":"Lady Fiona's daughter, trapped in the spirit realm by Victor's failed spell.","facts":[
-{"text":"Appeared as a hollow-eyed girl in a nightgown at Wachter Haus.","post":"2024-12-03-shadows-over-vallaki"},
+{"text":"Appeared as a hollow-eyed girl in a nightgown at Wachterhaus.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Her spirit appeared in a mirror; she saw a night hag near the refugee camp.","post":"2025-01-07-helping-victor"},
 {"text":"Was rescued from the spirit realm.","post":"2025-02-11-entering-the-spirit-realm"}]},
 {"name":"Nikolai","type":"npc","aliases":[],"summary":"Stella's older brother, who once cursed the Baron.","facts":[
@@ -201,19 +201,19 @@
 {"text":"The party read about his wedding to Tatyana.","post":"2024-12-17-delivery-for-lady-fiona"}]},
 {"name":"Tatyana","type":"npc","aliases":[],"summary":"Bride of Prince Sergei.","facts":[
 {"text":"The party read about her wedding to Prince Sergei.","post":"2024-12-17-delivery-for-lady-fiona"}]},
-{"name":"Vallaki","type":"place","aliases":["Vellaki"],"summary":"A walled town where much of the party's early adventure takes place.","facts":[
+{"name":"Vallaki","type":"place","aliases":["Vallaki"],"summary":"A walled town where much of the party's early adventure takes place.","facts":[
 {"text":"Has an eastern gate and the Zarovich gate.","post":"2024-12-10-the-fall-of-izek"},
 {"text":"Lady Fiona took control of it.","post":"2025-01-07-helping-victor"}]},
 {"name":"Blue Water Inn","type":"place","aliases":[],"summary":"Urwin's inn in Vallaki where the party stays.","facts":[
 {"text":"Was ransacked by Izek.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Erasmus's spirit wrote messages on its frosted window.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Gets its wine from the Wizard of Wines.","post":"2025-03-04-act-3-the-broken-land"}]},
-{"name":"Wachter Haus","type":"place","aliases":["Wachter House","Wachter Estate"],"summary":"Lady Fiona's manor in Vallaki, protected by a binding circle.","facts":[
+{"name":"Wachterhaus","type":"place","aliases":["Wachterhaus","Wachter Estate"],"summary":"Lady Fiona's manor in Vallaki, protected by a binding circle.","facts":[
 {"text":"The party dined there at Fiona's invitation.","post":"2024-11-26-consequences-in-vallaki"},
 {"text":"Has an armory the party was rewarded from.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Is ringed by a binding circle against evil spirits.","post":"2025-01-14-the-hunt-for-the-heart-stone"},
 {"text":"Its cellar holds four skeletons in beds and a pentagram.","post":"2025-02-11-entering-the-spirit-realm"}]},
-{"name":"Burgomaster Mansion","type":"place","aliases":["Baron's Mansion","Valokovitch Manor"],"summary":"The Baron's mansion in Vallaki.","facts":[
+{"name":"Burgomaster Mansion","type":"place","aliases":["Baron's Mansion","Vallakovich Manor"],"summary":"The Baron's mansion in Vallaki.","facts":[
 {"text":"A woman resembling Stella was seen in a mirror in its attic.","post":"2024-12-03-shadows-over-vallaki"},
 {"text":"Victor runs teleportation experiments there.","post":"2025-01-07-helping-victor"}]},
 {"name":"Eastern Gate","type":"place","aliases":[],"summary":"Vallaki's eastern gate.","facts":[
@@ -302,7 +302,7 @@
 {"text":"Defied his father and joined Doru's assault.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
 {"name":"Doru","type":"npc","aliases":[],"summary":"Leader of a failed assault on Castle Ravenloft.","facts":[
 {"text":"Led the attack that Davian's son joined.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
-{"name":"Argynvostholt","type":"place","aliases":["Aargenvolstholt"],"summary":"The ruined mansion of the Order of the Silver Dragon.","facts":[
+{"name":"Argynvostholt","type":"place","aliases":["Argynvostholt"],"summary":"The ruined mansion of the Order of the Silver Dragon.","facts":[
 {"text":"Rumored to be connected to Revenants.","post":"2025-03-04-act-3-the-broken-land"},
 {"text":"Sir Godfrey warned the party to avoid its fourth floor and phase spiders.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Huntress","type":"deity","aliases":[],"summary":"An ancient goddess marked by a three-pointed star.","facts":[

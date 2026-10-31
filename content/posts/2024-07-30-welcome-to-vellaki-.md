@@ -1,5 +1,5 @@
 ---
-title: Welcome to Vellaki*
+title: Welcome to Vallaki*
 date: '2024-07-30T21:00:00-05:00'
 tagline: '*Only welcome if you hand us 1 gold and all your silver'
 slug: welcome-to-vellaki-

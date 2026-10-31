@@ -10,5 +10,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Runs the inn and is married to Urwin. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* Runs the inn and is married to Urwin. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))
 * Told the party Rictavio was at his yellow wagon. ([Finding Arabelle!](/posts/finding-arabelle/))

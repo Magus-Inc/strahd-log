@@ -26,12 +26,12 @@ At Blinsky’s we found the shop on fire and Blinsky unconscious. When he came t
 
 We went on to the mansion, and Shabasta disguised himself as Blinsky to send the crowd home and collect money for repairs. The crowd was confused and drifted off without giving much. Vallakovich questioned Shabasta, who faltered, and the Baron had his guards shoot at him. Vallakovich made it plain he is still Baron.
 
-Then we went to Wachter Haus, where the invitation got us in. We were shown to a dining room and offered wine or water as we liked.
+Then we went to Wachterhaus, where the invitation got us in. We were shown to a dining room and offered wine or water as we liked.
 
 **Key Locations:**  
 1. **Blue Water Inn:** Ransacked by Izek; we helped Urwin.  
 2. **Blinsky’s:** Set on fire by Izek; the crowd gathered there.  
-3. **Wachter Haus:** Where the dinner invitation led us.
+3. **Wachterhaus:** Where the dinner invitation led us.
 
 **Encounters:**  
 - **Urwin and Fiona Wachter’s messenger:** News and an invitation.  

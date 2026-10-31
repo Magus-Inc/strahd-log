@@ -18,12 +18,12 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 **Summary:**  
 I used the Talisman of Echoes to speak with Izek’s head. Oogway did the questioning and learned the powers of his arm, a hurled flame and a volley of fire. Izek also told us that the “Order of the Feather” opposes Strahd.
 
-Outside Wachter House we passed some cultish-looking folk, and Lady Fiona welcomed us in. We gave her Izek’s head, and she led us to her armory for our reward. She read to us from her family history about the wedding of Prince Sergei and Tatyana.
+Outside Wachterhaus we passed some cultish-looking folk, and Lady Fiona welcomed us in. We gave her Izek’s head, and she led us to her armory for our reward. She read to us from her family history about the wedding of Prince Sergei and Tatyana.
 
 At the inn, words appeared on a frosted window, “Help Victor” and “Erasmus”, and the spirit of Erasmus reached out to us. We agreed to help at the Vallakovich manor. Then Rahadin, the elf, arrived on a phantom steed with an invitation to dinner at Castle Ravenloft, and asked that Ireena come. In the town square, Father Lucian argued with the guards as Milivoj and Henrik were condemned to hang.
 
 **Key Locations:**  
-- **Wachter House:** Lady Fiona and our reward.  
+- **Wachterhaus:** Lady Fiona and our reward.  
 - **Inn:** Where we rested and met the spirit of Erasmus.  
 - **Town Square:** Where Milivoj and Henrik were condemned.
 

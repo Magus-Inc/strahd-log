@@ -80,6 +80,8 @@ def test_spellings_have_no_chains():
     ("Ludmila", "Ludmilla"), ("Baba Lasaga", "Baba Lysaga"), ("Kiril Vonstrranovich", "Kiril Stoyanovich"),
     ("Davien Martikov", "Davian Martikov"), ("Father Lucien", "Father Lucian"), ("Hornguard", "Horngaard"),
     ("Sir Godfried William", "Sir Godfrey Gwilym"), ("Kazan", "Khazan"), ("Mordakainen", "Mordenkainen"),
+    # Places too, at Chris's word (2026-10-31).
+    ("Welcome to Vellaki", "Welcome to Vallaki"), ("Wachter Haus", "Wachterhaus"), ("St. Markova Abbey", "St. Markovia Abbey"),
 ])
 def test_book_spellings(wrong, right):
     assert fix_spellings.fix_text(wrong, SPELLINGS)[0] == right
@@ -106,6 +108,7 @@ def test_renamed_wiki_pages_keep_their_old_address():
     redirects = build.load_redirects(ROOT / "data" / "redirects.yaml", "wiki")
     assert redirects["kiril-vonstrranovich"] == "kiril-stoyanovich"
     assert redirects["baba-lasaga"] == "baba-lysaga"
+    assert redirects["wachter-haus"] == "wachterhaus"
     slugs = {p.stem for p in (ROOT / "content" / "wiki").glob("*.md")}
     for old, new in redirects.items():
         assert old not in slugs and new in slugs, (old, new)

@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Noted along with Bray for having good masks. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* Noted along with Bray for having good masks. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))

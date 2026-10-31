@@ -6,7 +6,7 @@ slug: welcome-back-to-vellanki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-back-to-vellanki
 ---
 
-Note: This session was written up twice on Obsidian Portal: as "Welcome Back To Vellanki" and as "Shadows and Steel—The Ravenloft Infiltration Plan" (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both, checked against the session notes and the recording of the night.
+Note: This session was written up twice on Obsidian Portal: as "Welcome Back To Vallaki" and as "Shadows and Steel—The Ravenloft Infiltration Plan" (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both, checked against the session notes and the recording of the night.
 
 ## At a Glance:
 

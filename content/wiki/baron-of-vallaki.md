@@ -12,7 +12,7 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Refused to come out to the refugees; led a procession with Izek. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* Refused to come out to the refugees; led a procession with Izek. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))
 * Said a malevolent spirit plagues his mansion. ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/))
 * Had his guards shoot at Shabasta and reasserted his title. ([Consequences in Vallaki](/posts/consequences-in-vallaki/))
 * Was cursed by Nikolai in the past. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))

@@ -10,5 +10,5 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Pranked with a stuffed bat at the inn; against the Baron along with Nikolai. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* Pranked with a stuffed bat at the inn; against the Baron along with Nikolai. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))
 * Said their father died of a wasting sickness. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))

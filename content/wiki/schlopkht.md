@@ -27,5 +27,5 @@ A tabaxi monk from the party's early days, quick, curious and hard to keep out o
 * Raised the portcullis and broke a window so the party could escape the collapsing manor. ([Walter, we are coming for you!](/posts/walter-we-are-coming-for-you/))
 * Scouted through the looping fog on a rope to find the fourth marked tree. ([Barovia, Barovia](/posts/barovia-barovia/))
 * Volunteered to return the sunburst relic to Father Donavich. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
-* Tried to bribe the Vallaki guards with dream pies. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
+* Tried to bribe the Vallaki guards with dream pies. ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/))
 * Staged a fall to reveal the signet ring to Victor. ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/))

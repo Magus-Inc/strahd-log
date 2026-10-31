@@ -842,7 +842,7 @@
   {
     "name": "Vallaki",
     "type": "place",
-    "aliases": ["Vellaki", "Velaki"],
+    "aliases": ["Vallaki", "Velaki"],
     "summary": "A walled town west of Barovia village ruled by a harsh Baron.",
     "facts": [
       {"text": "Some villagers fled here.", "post": "2024-02-13-barovia-barovia"},
@@ -863,7 +863,7 @@
   {
     "name": "Abbey of Saint Markovia",
     "type": "place",
-    "aliases": ["St. Markova Abbey"],
+    "aliases": ["St. Markovia Abbey"],
     "summary": "An abbey in Krezk near the mists.",
     "facts": [
       {"text": "Ismark asked the party to escort Ireena here.", "post": "2024-03-26-leaving-village-barovia"},

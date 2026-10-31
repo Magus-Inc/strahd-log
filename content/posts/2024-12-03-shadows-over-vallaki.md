@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Shabasta:** Porcupine Bard
 
 **Summary:**  
-At Wachter Haus a young woman in a nightgown appeared in the hallway with a hollow stare. She looked like the woman we saw in the mirror in the Baron’s attic. Her name is Stella, and Nikolai, who once cursed the Baron, is her older brother. Nikolai took her for a walk around the grounds, and Lady Fiona apologized for the disturbance. Karl, the younger brother, told us their father, Nikolai, died of a wasting sickness.
+At Wachterhaus a young woman in a nightgown appeared in the hallway with a hollow stare. She looked like the woman we saw in the mirror in the Baron’s attic. Her name is Stella, and Nikolai, who once cursed the Baron, is her older brother. Nikolai took her for a walk around the grounds, and Lady Fiona apologized for the disturbance. Karl, the younger brother, told us their father, Nikolai, died of a wasting sickness.
 
 Lady Fiona told us she follows Ezra, goddess of the mists, who teaches endurance. Her older brother Frederick was meant to be the heir, until Lysa rescued Lady Fiona from the woods when she was young. She prays and hears Ezra answer, though I suspect the voice may be an imposter.
 
@@ -31,7 +31,7 @@ In the morning Fiona’s agent told us about Izek’s drinking and gave us a bot
 Aera stole his old bottle cleanly, but when Gumbo tried to slip in the new one, Izek caught him. Luckily Izek thought he was trying to steal it, snatched the bottle back and stuffed it into his basket.
 
 **Key Locations:**  
-1. **Wachter Haus:** Where we met Stella and heard Lady Fiona’s story.  
+1. **Wachterhaus:** Where we met Stella and heard Lady Fiona’s story.  
 2. **Inn:** Where we rested and Strahd came calling.
 
 **Encounters:**  
