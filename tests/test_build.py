@@ -152,7 +152,7 @@ def test_every_internal_link_respects_base_path(content, tmp_path, base):
     assert internal, "expected some internal links"
     for link in internal:
         assert link.startswith(base), link
-        target = out / link[len(base):].split("#")[0]
+        target = out / link[len(base):].split("#")[0].split("?")[0]
         assert target.exists() or (target / "index.html").exists(), link
 
     feed = ET.parse(out / "feed.xml").getroot()
@@ -165,7 +165,7 @@ def test_base_path_from_environment(content, tmp_path, monkeypatch):
     monkeypatch.setenv("BASE_PATH", "strahd-log")
     out = tmp_path / "public"
     build.build(content, out, site_url="https://example.github.io")
-    assert 'href="/strahd-log/style.css"' in (out / "index.html").read_text(encoding="utf-8")
+    assert 'href="/strahd-log/style.css?v=' in (out / "index.html").read_text(encoding="utf-8")
 
 
 def test_post_images_follow_base_path_and_are_absolute_in_feed(content, tmp_path):
@@ -513,3 +513,20 @@ def test_badges_are_styled_for_phone_and_desktop():
     css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
     for selector in (".slides-tag", ".pic-thumb", ".pic-count", ".wiki-card.has-pic"):
         assert selector in css
+
+
+def test_stylesheet_link_changes_when_the_css_changes(content, tmp_path):
+    """Phones keep style.css for up to 10 minutes; a new link makes them fetch the new one at once."""
+    import hashlib
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://x.example")
+    digest = hashlib.sha256((build.ROOT / "static" / "style.css").read_bytes()).hexdigest()[:10]
+    assert f'href="/style.css?v={digest}"' in read(out / "index.html")
+
+
+def test_badge_icons_stay_small_even_without_the_stylesheet():
+    """An old cached stylesheet must not turn an icon into a big black box."""
+    for name in ("_badges.html", "search.html", "map.html"):
+        text = (build.ROOT / "templates" / name).read_text(encoding="utf-8")
+        for svg in re.findall(r'<svg class="badge-icon"[^>]*>', text):
+            assert 'width="14"' in svg and 'height="14"' in svg and 'fill="none"' in svg and 'stroke="currentColor"' in svg
