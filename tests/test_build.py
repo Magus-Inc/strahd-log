@@ -530,3 +530,10 @@ def test_badge_icons_stay_small_even_without_the_stylesheet():
         text = (build.ROOT / "templates" / name).read_text(encoding="utf-8")
         for svg in re.findall(r'<svg class="badge-icon"[^>]*>', text):
             assert 'width="14"' in svg and 'height="14"' in svg and 'fill="none"' in svg and 'stroke="currentColor"' in svg
+
+
+def test_tapping_a_thumbnail_opens_the_page():
+    """The thumbnail sits over the card's whole-card link, so it must let taps through to it."""
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    rule = re.search(r"\n\.pic-thumb \{([^}]*)\}", css).group(1)
+    assert "pointer-events: none" in rule
