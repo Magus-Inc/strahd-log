@@ -16,9 +16,9 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-We found its wine in Durst Manor before we knew the place ([Entering Durst Manor](/posts/entering-durst-manor/)). The Martikovs make it, and the Blue Water Inn drinks it. When a shipment came sixteen days late, Irwin sent us with Muriel Winshaw to find his father, Davien ([Act 3: The Broken Land](/posts/act-3-the-broken-land/)).
+We found its wine in Durst Manor before we knew the place ([Entering Durst Manor](/posts/entering-durst-manor/)). The Martikovs make it, and the Blue Water Inn drinks it. When a shipment came sixteen days late, Urwin sent us with Muriel Vinshaw to find his father, Davian ([Act 3: The Broken Land](/posts/act-3-the-broken-land/)).
 
-Near the vineyard a cloaked figure led us down a trapdoor: Davien, hiding from the druids and blights who, with Baba Lasaga, drove his family out. His son Elrich died marching on Castle Ravenloft. We blasted through a cavern of brown mold with a winter wolf tooth to reach the cellar ([Wizard of Wines vineyard](/posts/wizard-of-wines-vineyard/)). There we killed the druid who held the shadow lord's staff and broke it. Davien told us the vines need three green gemstones: one lost ten years ago, one stolen by Baba Lasaga, one taken by the druids ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/)). We won that last one back on Yester Hill, and Davien gave us an obsidian whistle for it ([Welcome to Krezk](/posts/welcome-to-krezk/)).
+Near the vineyard a cloaked figure led us down a trapdoor: Davian, hiding from the druids and blights who, with Baba Lysaga, drove his family out. His son Elvir died marching on Castle Ravenloft. We blasted through a cavern of brown mold with a winter wolf tooth to reach the cellar ([Wizard of Wines vineyard](/posts/wizard-of-wines-vineyard/)). There we killed the druid who held the shadow lord's staff and broke it. Davian told us the vines need three green gemstones: one lost ten years ago, one stolen by Baba Lysaga, one taken by the druids ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/)). We won that last one back on Yester Hill, and Davian gave us an obsidian whistle for it ([Welcome to Krezk](/posts/welcome-to-krezk/)).
 
 <!-- from-the-log -->
 ## From the adventure log

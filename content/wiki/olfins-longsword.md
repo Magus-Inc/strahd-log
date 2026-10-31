@@ -1,8 +1,6 @@
 ---
 title: Olfin's Longsword
 type: item
-aliases:
-- Olfin's longsword
 summary: Olfin's longsword, blessed by the spirit of Argynvost with silver flame.
 source: Written from Ryan's Discord post, 2026-09-29
 ---

@@ -12,7 +12,7 @@ A row of stocks stands in the square, and every soul in them wears a crude donke
 
 ## Blinsky’s Toy Store
 
-Among the cluttered shelves of Blinsky’s shop we found a doll that looked eerily like Irena. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
+Among the cluttered shelves of Blinsky’s shop we found a doll that looked eerily like Ireena. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
 
 ## The Vistani Encampment
 

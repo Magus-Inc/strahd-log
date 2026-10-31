@@ -1,8 +1,6 @@
 ---
 title: Tatyana
 type: npc
-aliases:
-- Tatiana
 summary: Bride of Prince Sergei.
 source: Compiled from the adventure log
 ---

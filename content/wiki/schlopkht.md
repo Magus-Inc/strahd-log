@@ -13,7 +13,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 *Written from the session logs.*
 
-A tabaxi monk from the party's early days, quick, curious and hard to keep out of trouble. In Durst Manor he moved the snarling stuffed wolf, kept a shard of the haunted mirror he broke, and raised the portcullis so the party could escape the collapsing house. In the looping fog he scouted on a rope to find the way out. In Vallaki he tried to bribe the gate guards with dream pies, then staged a fall to show Viktor the signet ring.
+A tabaxi monk from the party's early days, quick, curious and hard to keep out of trouble. In Durst Manor he moved the snarling stuffed wolf, kept a shard of the haunted mirror he broke, and raised the portcullis so the party could escape the collapsing house. In the looping fog he scouted on a rope to find the way out. In Vallaki he tried to bribe the gate guards with dream pies, then staged a fall to show Victor the signet ring.
 
 [Character Sheet](https://www.dndbeyond.com/characters/112331650)
 
@@ -28,4 +28,4 @@ A tabaxi monk from the party's early days, quick, curious and hard to keep out o
 * Scouted through the looping fog on a rope to find the fourth marked tree. ([Barovia, Barovia](/posts/barovia-barovia/))
 * Volunteered to return the sunburst relic to Father Donavich. ([Leaving Village Barovia](/posts/leaving-village-barovia/))
 * Tried to bribe the Vallaki guards with dream pies. ([Welcome to Vellaki*](/posts/welcome-to-vellaki-/))
-* Staged a fall to reveal the signet ring to Viktor. ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/))
+* Staged a fall to reveal the signet ring to Victor. ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/))

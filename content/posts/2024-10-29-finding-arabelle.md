@@ -10,7 +10,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 After the battle we checked one another over and found a festering bite on Gumbo. I read the scroll of Remove Curse, though its magic was beyond my training. By Lathander’s grace it worked: Gumbo, our half-orc rogue, was cured of lycanthropy, and the scroll crumbled to nothing.
 
 **Reunions and New Friends**  
-Zoldar went back to his hut, and we found Irena again at the gate. At the Blue Water Inn, Danica told us Rictavio was at his yellow wagon, the same wagon whose traces we had seen near the tower. Shabasta played at the inn for a bed and beer. We also met Liren, a golden dragonborn barbarian with a great axe.
+Szoldar went back to his hut, and we found Ireena again at the gate. At the Blue Water Inn, Danika told us Rictavio was at his yellow wagon, the same wagon whose traces we had seen near the tower. Shabasta played at the inn for a bed and beer. We also met Liren, a golden dragonborn barbarian with a great axe.
 
 **Confronting Rictavio**  
 When Rictavio came into the inn we knocked at his door and named him Rictavio van Richten, and he let us in. We told him of our mission to save a girl and convinced him we were not Strahd’s agents. Then he told us his story.
@@ -22,7 +22,7 @@ The tower holds a permanent field that blocks magic, and so Strahd’s scrying, 
 He also told us how he first came to Barovia hoping to face Strahd alone and destroy him in his coffin while he slept. That plan failed when an undead dire wolf attacked three Barovian children, and in the fight Doru saw who he was. Doru blackmailed him into leading a revolt on the castle, threatening to bring an untrained mob to Ravenloft’s doors without him. Fearing such a mob would wake Strahd and ruin everything, van Richten agreed. Inside the castle they were betrayed: Escher, Doru’s lieutenant, slipped away in the catacombs, the mob found Strahd’s coffin empty, and soon Strahd fell upon them. Van Richten fled, knowing from long study that victory was impossible. He meant to ride and warn the villagers, but Madam Eva stopped him and warned that his message would be carried by another, and that if he returned to the village while light lingered in the valley he would surely meet his grave. Knowing her reputation, he went to Lake Baratok instead, weeping for the sons and daughters of Barovia.
 
 **Secrets Revealed**  
-Rictavio has enchanted his wagon to seem less inviting, and he confirmed he is protecting Arabelle. Aera gave Arabelle the bracelet and so revealed the clues she had left for us. Aeragul, who had been tailing us, showed himself.
+Rictavio has enchanted his wagon to seem less inviting, and he confirmed he is protecting Arabelle. Aera gave Arabelle the bracelet and so revealed the clues she had left for us. Arrigal, who had been tailing us, showed himself.
 
 Rictavio handed me the Talisman of Echoes, which lets one ask questions of the dead a few times. We used it on Yann’s head, which van Richten had kept. From it we judged that Arrigal had no part in taking Arabelle. Arrigal and van Richten disagree on how best to keep her safe, so we suggested she stay in the enchanted wagon at the Vistani camp.
 
@@ -48,14 +48,14 @@ Aera asked Arabelle whether she had anything to tell us, and she spoke a prophec
 > A thousand souls in torment black.
 
 **Back to Town**  
-We spent the night at the Blue Water Inn and in the morning escorted Irena to the Church of St. Andral. The town was making ready for the Festival of the Blazing Sun, two days off, and we met Heinrich delivering materials to repair the church.
+We spent the night at the Blue Water Inn and in the morning escorted Ireena to the Church of St. Andral. The town was making ready for the Festival of the Blazing Sun, two days off, and we met Henrik delivering materials to repair the church.
 
 **The Church**  
 A window in the chapel is broken, and a man named Milivoj was up a stepladder mending it.
 
-We asked the priest, Father Lucien, whether he could help us honor Ismark’s wish to protect Irena. He offered her shelter for good.
+We asked the priest, Father Lucian, whether he could help us honor Ismark’s wish to protect Ireena. He offered her shelter for good.
 
-The church is hallowed ground and protected from the undead, which makes it a fine place to keep Irena, and maybe Arabelle too, but only while the ward holds. It will not stop Strahd’s living agents, only the undead.
+The church is hallowed ground and protected from the undead, which makes it a fine place to keep Ireena, and maybe Arabelle too, but only while the ward holds. It will not stop Strahd’s living agents, only the undead.
 
 The protection comes from bones kept in a crypt, and a ritual must be held at each feast to renew it. But the bones were stolen recently, so the wards cannot be renewed. Yeska, the boy who works at the church, knew of the bones and the ritual, so the priest suspects him.
 

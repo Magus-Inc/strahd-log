@@ -1,8 +1,6 @@
 ---
 title: Arrigal
 type: npc
-aliases:
-- Aeragul
 summary: A Vistani who tailed the party and disagrees with Van Richten about Arabelle.
 source: Compiled from the adventure log
 ---

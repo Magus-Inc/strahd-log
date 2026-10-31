@@ -14,6 +14,8 @@
   ("Abbot", "Manor" in another town); `tools/wiki_from_extract.py` keeps a list of words to refuse.
 - Posts are the players' own writing. Fix conversion problems in `tools/import_op.py`, not by
   rewording a post, unless Chris asks.
+- Names are spelled as the Curse of Strahd book spells them (`data/spellings.yaml`; `just spellings`
+  fixes new text). The book fixes spellings only: what happened comes from the posts and Chris.
 - Posts read as Malron's journal: first person, in-world, no dice or rules talk, no DM or player
   names. Table talk goes only in a `Note:` paragraph, which renders as a handwritten margin note,
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.

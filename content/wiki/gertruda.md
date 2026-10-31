@@ -1,8 +1,6 @@
 ---
 title: Gertruda
 type: npc
-aliases:
-- Gertrude
 summary: A girl from Barovia village who left alone for Vallaki at night.
 source: Compiled from the adventure log, with a description written for the site
 ---

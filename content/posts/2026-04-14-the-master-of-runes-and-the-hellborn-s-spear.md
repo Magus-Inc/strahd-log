@@ -25,7 +25,7 @@ Then Aera stepped on a hidden marble trapdoor. She and Olfin could not leap clea
 
 Note: The group swapped several "Above the Table" stories along the way, including tales of crowded Easter church services.
 
-At last we reached the ancient catacombs of Ravenloft and began a careful search for the relics. At Crypt 15, the tomb of the archmage Kazan, Olfin hoisted a heavy portcullis by main strength. Inside lay a skeleton with black opal eyes and amber teeth. We solved a puzzle of runes for the eight schools of magic, the same order we met at Kazan’s Tower, and the legendary platinum Staff of Kazan appeared. Crusty bound himself to it, though arcane lightning surged through his veins.
+At last we reached the ancient catacombs of Ravenloft and began a careful search for the relics. At Crypt 15, the tomb of the archmage Khazan, Olfin hoisted a heavy portcullis by main strength. Inside lay a skeleton with black opal eyes and amber teeth. We solved a puzzle of runes for the eight schools of magic, the same order we met at Khazan’s Tower, and the legendary platinum Staff of Khazan appeared. Crusty bound himself to it, though arcane lightning surged through his veins.
 
 Note: The party held a long "Above the Table" debate on whether a hot dog is a sandwich, whether a calzone is a dumpling, and whether everything is just "soup or sandwich".
 
@@ -38,18 +38,18 @@ Note: Shabasta said they would "draw their own version" of the new staff, with l
 **The Brazier Room**: A square chamber with a magical hourglass and a brazier of seven stones for traveling.  
 **The Slide Trap**: A slick marble hall that drops the unwary into the cells below.  
 **The Catacombs**: A vast warren of columns and crypts beneath the castle, full of fog and filth.  
-**Crypt 15 (Kazan’s Tomb)**: The resting place of a powerful wizard, guarded by a portcullis and a puzzle of runes.  
+**Crypt 15 (Khazan’s Tomb)**: The resting place of a powerful wizard, guarded by a portcullis and a puzzle of runes.  
 **Crypt 34 (King Dostron’s Tomb)**: A chamber with a gilded sarcophagus and a harmless but fearsome stuffed owlbear.
 
 ## Encounters:
 
-**The Runes of Kazan**: We traced the eight schools of magic in the right order and the staff appeared.  
+**The Runes of Khazan**: We traced the eight schools of magic in the right order and the staff appeared.  
 **The Trapdoor Chute**: Aera and Olfin fell into the dungeon, and came back to us after some lockpicking.  
 **The Sarcophagus Warning**: A ghostly voice warned us not to open King Dostron’s tomb. We opened it anyway and took the spear.
 
 ## Loot:
 
-* **Kazan’s Staff**: A legendary platinum staff (+2 bonus to attacks/damage, grants Robe of the Archmagi benefits, increases spell DC/attack bonus by 2). Taken by **Crusty**. The item text is on the [Staff of Kazan](/wiki/staff-of-kazan/) page.
+* **Khazan’s Staff**: A legendary platinum staff (+2 bonus to attacks/damage, grants Robe of the Archmagi benefits, increases spell DC/attack bonus by 2). Taken by **Crusty**. The item text is on the [Staff of Khazan](/wiki/staff-of-khazan/) page.
 * **Spear of the Huntress**: A +1 blood spear that grants 2d6 temporary HP on a kill. Recovered by the party.
 * **Two Black Opals**: Worth 1,000 gold pieces each. Taken by **Aera**.
 * **Eight Amber Teeth**: Worth 100 gold pieces each. Taken by **Aera**.
@@ -57,7 +57,7 @@ Note: Shabasta said they would "draw their own version" of the new staff, with l
 ## Notable NPCs:
 
 **King Dostron the Hellborn**: An ancient ruler whose ghostly voice warned us off his sarcophagus.  
-**Kazan (Deceased)**: An archmage whose magic lives on in his trapped and puzzling tomb.  
+**Khazan (Deceased)**: An archmage whose magic lives on in his trapped and puzzling tomb.  
 **Gertruda (Mentioned)**: Her slipper on the spiral stair says she was taken higher into the castle.
 
 ## Plot Points:
@@ -68,9 +68,9 @@ Note: Shabasta said they would "draw their own version" of the new staff, with l
 
 ## Session Highlights:
 
-* **Crusty**, on taking up the lightning-filled Staff of Kazan.
+* **Crusty**, on taking up the lightning-filled Staff of Khazan.
 * **Malron**: “I’ll go third to heal them when they fall in.” I guessed the traps in that hall.
 * **Shabasta**, on finding a crypt with his own name on it.
-* **Aera**, looting Kazan’s costly eye-gems.
+* **Aera**, looting Khazan’s costly eye-gems.
 
 Note: Crusty: "I feel like Thor right now." Shabasta: "He saved a swap for me." Aera, to the DM: "Rob them blind."

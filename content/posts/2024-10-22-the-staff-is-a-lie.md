@@ -7,7 +7,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ---
 
 **The Wagon’s Traps**  
-Aera opened the wagon carefully with a conjured hand, standing aside as crossbow bolts shot out. Inside she found a chicken, which she suspects might be Esmeralda. Shabasta, believing the traps spent, climbed in and set off a silver net and bursting fire potions. We smothered the flames with our bedrolls.
+Aera opened the wagon carefully with a conjured hand, standing aside as crossbow bolts shot out. Inside she found a chicken, which she suspects might be Ezmerelda. Shabasta, believing the traps spent, climbed in and set off a silver net and bursting fire potions. We smothered the flames with our bedrolls.
 
 **Inside the Wagon**  
 The wagon held a treasure trove:

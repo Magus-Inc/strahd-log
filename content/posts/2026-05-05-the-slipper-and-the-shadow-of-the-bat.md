@@ -24,9 +24,9 @@ Deeper in the bedchamber we found Gertruda, sleeping fitfully beneath silk curta
 
 Note: [The DM and players checked how the "Charm" effect works and the DC 17 Wisdom save to break it. The ward was Protection from Evil and Good.]
 
-The rescue was cut short by Anastrasia, one of Strahd’s brides, who swept in with two wights, slammed the doors shut with her mind and demanded we hand over Gertruda. The parley did not last, and the bedchamber erupted into chaos. Olfin held the front while Crusty and Aera rained fire and arrows from the sides. Then it turned gruesome: Anastrasia shed her skin and became a vampiric abomination, a giant bloated bat. In one savage bite she drained Olfin’s life and killed him where he stood.
+The rescue was cut short by Anastrasya, one of Strahd’s brides, who swept in with two wights, slammed the doors shut with her mind and demanded we hand over Gertruda. The parley did not last, and the bedchamber erupted into chaos. Olfin held the front while Crusty and Aera rained fire and arrows from the sides. Then it turned gruesome: Anastrasya shed her skin and became a vampiric abomination, a giant bloated bat. In one savage bite she drained Olfin’s life and killed him where he stood.
 
-Note: [The table talked about the "two-part" nature of the fight and how deadly the "Phase 2" transformation was. Anastrasia's bite was a crit.]
+Note: [The table talked about the "two-part" nature of the fight and how deadly the "Phase 2" transformation was. Anastrasya's bite was a crit.]
 
 For vengeance and for our lives I loosed ray after ray of fire into the monster, burning it from the inside out until it fell to ash. The moment it was over I read a scroll to call Olfin back, with amber teeth from Aera as the offering, and pulled his soul back from the brink. Battered but victorious, we now make ready to use a traveling stone to escape the castle with Gertruda and the relics we have gathered.
 
@@ -44,9 +44,9 @@ Note: Malron's rays were Scorching Ray; the scroll was Revivify.
 
 **The Rescue of Gertruda**: Aera picked the lock to the bedchamber, and we convinced Gertruda we meant to save her. Olfin’s prayer broke Strahd’s charm.
 
-**Ambush at the Bedchamber**: Anastrasia, a vampire bride, and two wights.
+**Ambush at the Bedchamber**: Anastrasya, a vampire bride, and two wights.
 
-* **Outcome**: Both wights were destroyed. Anastrasia was slain after becoming a bat-abomination. Olfin Darning was killed in the fight, and I brought him back.
+* **Outcome**: Both wights were destroyed. Anastrasya was slain after becoming a bat-abomination. Olfin Darning was killed in the fight, and I brought him back.
 
 ## Loot:
 
@@ -56,7 +56,7 @@ None this time. (We spent amber teeth worth 300gp as components for the **Revivi
 
 **Gertruda**: The daughter of Mary of Barovia village. Naive but brave; Strahd lured her to the castle with talk of making amends to her village.
 
-**Anastrasia**: A vampire bride of Strahd. Elegant and mocking until she was driven to her monstrous bat form. I burned her to ash.
+**Anastrasya**: A vampire bride of Strahd. Elegant and mocking until she was driven to her monstrous bat form. I burned her to ash.
 
 **Rahadin**: (Mentioned) Strahd’s chamberlain, who fled our last fight.
 
@@ -64,11 +64,11 @@ None this time. (We spent amber teeth worth 300gp as components for the **Revivi
 
 * **The Face of Tatyana**: Ireena is the very likeness of Tatyana, which explains Strahd’s obsession.
 * **The Silver Bracelet**: The bracelet in Tatyana’s portrait is the same one recovered in the village.
-* **The Brides’ Fate**: Two of the three brides, Volenta and now Anastrasia, are done with.
+* **The Brides’ Fate**: Two of the three brides, Volenta and now Anastrasya, are done with.
 
 ## Session Highlights:
 
-* **The Chair Master**: “She’s better with the chairs than she was with the sword,” someone said after Anastrasia battered Olfin with a piece of furniture flung by her mind.
+* **The Chair Master**: “She’s better with the chairs than she was with the sword,” someone said after Anastrasya battered Olfin with a piece of furniture flung by her mind.
 * **Called Back**: My quick reading of the scroll that spared us a permanent loss.
 
 Note: The "Riz" factor: "He's got Riz," the players joked about the Paladin's high persuasion roll to convince Gertruda to follow them.

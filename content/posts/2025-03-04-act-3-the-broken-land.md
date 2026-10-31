@@ -16,13 +16,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-We woke at the Blue Water Inn, and Irwin, the innkeeper, called each of us to the bar in turn to ask for help with a troubling matter.
+We woke at the Blue Water Inn, and Urwin, the innkeeper, called each of us to the bar in turn to ask for help with a troubling matter.
 
 First he introduced Veyren, a hare of a fellow and Shabasta’s brother. We gave Veyren the letter we found on Shabasta’s body, telling of his journey with us.
 
-Then Irwin told us his worry. The Wizard of Wines vineyard supplies the inn’s wine, and the latest shipment is sixteen days overdue. He fears something has happened to Davien Martikov, his father. He arranged for us to meet Muriel Winshaw, who works at the vineyard, to guide us.
+Then Urwin told us his worry. The Wizard of Wines vineyard supplies the inn’s wine, and the latest shipment is sixteen days overdue. He fears something has happened to Davian Martikov, his father. He arranged for us to meet Muriel Vinshaw, who works at the vineyard, to guide us.
 
-Before we left, Irena came to us and asked to join. She wants to become a warrior for her people and feels the Abbey cannot protect her from Strahd. She offered her skill as a trained healer and a capable swordswoman.
+Before we left, Ireena came to us and asked to join. She wants to become a warrior for her people and feels the Abbey cannot protect her from Strahd. She offered her skill as a trained healer and a capable swordswoman.
 
 Nine strong now, we traveled southwest. We crossed a bridge to a four-way crossroads and passed a valley holding a half-collapsed mansion, Argynvostholt, said to be tied to revenants. Muriel warned of strix in the area.
 
@@ -32,11 +32,11 @@ At another crossroads a revenant guarded a bridge to the west. He urged us to vi
 
 As we neared the vineyard, Muriel stumbled into a trap. We found an ancient monument to the Huntress, a slab bearing a pristine three-pointed star.
 
-A dark-cloaked figure appeared and beckoned. Muriel knew him: Davien. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
+A dark-cloaked figure appeared and beckoned. Muriel knew him: Davian. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
 
 ## Key Locations:
 
-**Blue Water Inn**: Where this act began; Irwin’s tavern.  
+**Blue Water Inn**: Where this act began; Urwin’s tavern.  
 **Argynvostholt**: A mansion in the valley, linked to revenants and strix.  
 **Wizard of Wines Vineyard**: Our destination, full of mystery and danger.
 
@@ -52,23 +52,23 @@ Muriel caught in a snare near the vineyard.
 
 ## Notable NPCs:
 
-**Irwin**: Owner of the Blue Water Inn, asking help for the vineyard.  
+**Urwin**: Owner of the Blue Water Inn, asking help for the vineyard.  
 **Veyren**: Shabasta’s brother, now with us.  
-**Irena**: A trained healer and swordswoman, set on helping us.  
-**Muriel Winshaw**: Works at the vineyard; perhaps a raven in disguise.  
-**Davien**: The mysterious cloaked figure tied to the ravens.
+**Ireena**: A trained healer and swordswoman, set on helping us.  
+**Muriel Vinshaw**: Works at the vineyard; perhaps a raven in disguise.  
+**Davian**: The mysterious cloaked figure tied to the ravens.
 
 ## Plot Points:
 
 - The Wizard of Wines shipment is mysteriously overdue.  
 - The revenant’s cryptic warning about Argynvostholt and the blights.  
 - The mountain folk worship ancient goddesses; the forest folk worship dark powers.  
-- Strix and ravens around the vineyard, and Davien’s trapdoor.
+- Strix and ravens around the vineyard, and Davian’s trapdoor.
 
 ## Session Highlights:
 
 - Giving Veyren his brother’s letter.  
-- Irena’s heartfelt plea to join us.  
-- Davien and the ravens appearing out of nowhere.  
+- Ireena’s heartfelt plea to join us.  
+- Davian and the ravens appearing out of nowhere.  
 - The strix crying all around us.  
 - The leap down the trapdoor beneath the vineyard.

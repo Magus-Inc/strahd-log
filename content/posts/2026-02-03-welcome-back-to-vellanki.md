@@ -13,7 +13,7 @@ Note: This session was written up twice on Obsidian Portal: as "Welcome Back To 
 * **Shown the door:** After Aera’s lone look at the Heart of Sorrow and her meeting with Strahd, Rahadin escorts us out of Castle Ravenloft.
 * **Stronger:** On the carriage ride back to Vallaki, we all feel our power grow.
 * **The heist plan:** At the Blue Water Inn we plan a raid on the catacombs for while Strahd is away hunting.
-* **Targets:** A key, Argynvost’s Skull, the Icon of Dawn’s Grace, the Spear of the Huntress, Emil Tornescu and Gertruda.
+* **Targets:** A key, Argynvost’s Skull, the Icon of Dawn’s Grace, the Spear of the Huntress, Emil Toranescu and Gertruda.
 
 ## Characters:
 * [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
@@ -99,7 +99,7 @@ No new loot this time. We took stock of what we carry and what we mean to take:
 * **Ezmerelda d’Avenir**: A famed monster hunter, on our side and traveling with us as an adviser.
 * **Ireena Kolyana**: The object of Strahd’s obsession, with us and under our protection.
 * **Rudolph van Richten**: The hunter whose maps turn a suicide mission into a reckoned theft.
-* **Emil Tornescu**: A werewolf prisoner in the South Dungeon whom we mean to rescue.
+* **Emil Toranescu**: A werewolf prisoner in the South Dungeon whom we mean to rescue.
 * **Gertruda**: Mary’s daughter, surely in the King’s Bedchamber.
 
 ## Plot Points:
@@ -107,7 +107,7 @@ No new loot this time. We took stock of what we carry and what we mean to take:
 * **Argynvost’s Skull (first of all)**: Returning it to the "Shining Beacon" at Argynvostholt will light a beacon through the Barovian gloom and grant a lasting boon to the resistance.
 * **The Icon of Dawn’s Grace**: A silver statuette, the only cure for the Abbot’s madness. Without it, Krezk stays under a fallen celestial’s rule.
 * **The Spear of the Huntress**: A shard of the ancient power of the Ladies Three, needed before we face the Count.
-* **Emil Tornescu and Gertruda**: Freeing the werewolf leader could break Strahd’s alliance with the wolves. Saving Gertruda from the King’s Bedchamber is simply right.
+* **Emil Toranescu and Gertruda**: Freeing the werewolf leader could break Strahd’s alliance with the wolves. Saving Gertruda from the King’s Bedchamber is simply right.
 * **The Heart’s Pulse**: The Heart of Sorrow is the greatest thing we have learned, but we will finish the heist before we try to destroy it.
 
 ## Session Highlights:

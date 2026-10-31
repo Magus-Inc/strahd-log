@@ -28,6 +28,10 @@ import-wiki export:
 wiki-from-log *files:
     {{python}} tools/wiki_from_extract.py {{files}}
 
+# Spell names the Curse of Strahd way (data/spellings.yaml); add --check to only list them
+spellings *args:
+    {{python}} tools/fix_spellings.py {{args}}
+
 # Build the site into public/
 build:
     {{python}} build.py

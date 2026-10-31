@@ -14,7 +14,7 @@ The road ended at iron gates with wolves’ heads impaled on them.
 
 Ireena was enraged and heartbroken at the sight of the refugee camp outside the walls. [Schlopkht](/wiki/schlopkht/) tried to persuade her to feed the refugees the dream pies, to help them sleep and ease their minds.
 
-The refugees reached the gate some days ago but are not allowed in. When they tried to force their way, Izek, one of the guards, summoned fire to drive them back. The Baron will not even come out to them. Wolves and bats have attacked the camp, yet the refugees will not risk the road home. A quarter of them are addicted to dream pastries. Many were cold to Irena and would not accept her help, blaming her brother and father for their misfortune. They believe a red-haired woman has cursed them. Ireena was so angered by the Baron’s callousness that she went off with Aera.
+The refugees reached the gate some days ago but are not allowed in. When they tried to force their way, Izek, one of the guards, summoned fire to drive them back. The Baron will not even come out to them. Wolves and bats have attacked the camp, yet the refugees will not risk the road home. A quarter of them are addicted to dream pastries. Many were cold to Ireena and would not accept her help, blaming her brother and father for their misfortune. They believe a red-haired woman has cursed them. Ireena was so angered by the Baron’s callousness that she went off with Aera.
 
 ### Entering Vallaki
 
@@ -24,11 +24,11 @@ Heavy iron chains and a padlock held the gate shut. One guard carried a silvered
 
 The guards mentioned a strange man with long ears who had come to town on a carnival wagon. The Festival of the Blazing Sun is in three days. And we should be careful what we tell old Morgantha, who sells the pies.
 
-The streets were empty but for one cloaked figure walking away from us. Several ravens sat on the roof of the inn, whose sign shows a blue waterfall. Inside was a colorfully dressed half-elf in a big hat, surely the man the guards meant. Irwin at the bar welcomed us. He is married to Danica, who runs the inn. We ordered wine and a meat pie.
+The streets were empty but for one cloaked figure walking away from us. Several ravens sat on the roof of the inn, whose sign shows a blue waterfall. Inside was a colorfully dressed half-elf in a big hat, surely the man the guards meant. Urwin at the bar welcomed us. He is married to Danika, who runs the inn. We ordered wine and a meat pie.
 
 The bard was almost a ringmaster, and very entertaining. His name is Rictavio, and he went upstairs. There was some unease when talk turned to the Baron and anyone criticizing him.
 
-Two boys crouched on the balcony in front of a door, dangling a stuffed bat over the bar to tease Carl and Nicolai. Carl and Nicolai are against the Baron, and their mother is a sensitive subject. The boys, Brom and Bray, have good masks.
+Two boys crouched on the balcony in front of a door, dangling a stuffed bat over the bar to tease Karl and Nikolai. Karl and Nikolai are against the Baron, and their mother is a sensitive subject. The boys, Brom and Bray, have good masks.
 
 We rented rooms at one gold each. Vallaki demands care, with its harsh laws and its politics.
 

@@ -3,7 +3,7 @@ title: Wachter Haus
 type: place
 aliases:
 - Wachter House
-- Vachter Estate
+- Wachter Estate
 summary: Lady Fiona's manor in Vallaki, protected by a binding circle.
 source: Compiled from the adventure log
 ---

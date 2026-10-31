@@ -17,11 +17,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 As the sun sank behind the jagged peaks of the Balinoks, we stood at a turning point. We were leaving the safety of the Bluewater Inn for the heights of the Count’s domain. Everything hung on a rare chance, the master of the house away from home, and so we would no longer wander and ask questions. We would strike.
 
-We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Sarepool crossroads we met a Vistani caravan, with the elder Stanimere, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimere knew what we had done, laying Verushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
+We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Sarepool crossroads we met a Vistani caravan, with the elder Stanimir, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimir knew what we had done, laying Varushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
 
 Note: The party briefly debated a "Trojan Bunny" strategy, or stealing the Vistani crest, before settling on diplomatic neutrality.
 
-At the edge of the precipice we watched Strahd von Zarovich ride out of the castle on his nightmare, Becephalus. With the master gone, Aera made herself invisible and Krusty gave her the power to fly. She soared across the chasm and came up behind the wights on the ramparts. With a conjured hand she picked the alarm horn from the first wight’s pocket, then took the second wight’s horn as well. It nearly went very wrong when she tried a running somersault dropkick to send one of them off the edge. She stumbled and bounced off the guard, and the kick undid her invisibility. The fight broke out, and we destroyed the wights. Aera poured oil on the drawbridge chains to quiet them, and we lowered the drawbridge and reached the servants’ entrance.
+At the edge of the precipice we watched Strahd von Zarovich ride out of the castle on his nightmare, Beucephalus. With the master gone, Aera made herself invisible and Krusty gave her the power to fly. She soared across the chasm and came up behind the wights on the ramparts. With a conjured hand she picked the alarm horn from the first wight’s pocket, then took the second wight’s horn as well. It nearly went very wrong when she tried a running somersault dropkick to send one of them off the edge. She stumbled and bounced off the guard, and the kick undid her invisibility. The fight broke out, and we destroyed the wights. Aera poured oil on the drawbridge chains to quiet them, and we lowered the drawbridge and reached the servants’ entrance.
 
 Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point afterward, saying the sentries were "low-level annoyances" next to what waits deeper in.
 
@@ -37,7 +37,7 @@ Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point after
 
 ## Encounters:
 
-**Stanimere, Radu and Elizabella**: Vistani storytellers; a civil meeting that ended with a Clairvoyance Stone for Aera.
+**Stanimir, Radu and Elizabella**: Vistani storytellers; a civil meeting that ended with a Clairvoyance Stone for Aera.
 
 **The Parapet Wights**: A quick fight, begun by Aera’s failed somersault. Picking the horns from their pockets first kept the whole castle from being roused.
 
@@ -48,7 +48,7 @@ Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point after
 
 ## Notable NPCs:
 
-**Stanimere**: A Vistani elder and messenger of Madam Eva, still friendly for what we have done.
+**Stanimir**: A Vistani elder and messenger of Madam Eva, still friendly for what we have done.
 
 **Strahd von Zarovich**: Seen riding out of the castle. His absence was the whole of our chance.
 

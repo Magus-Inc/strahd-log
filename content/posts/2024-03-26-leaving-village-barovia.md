@@ -24,7 +24,7 @@ Ismark recommended stopping by the Tser Pool which is just a two hour journey we
 
 We took Doru’s body to a stream and set it in the water. As the stream flowed over him he dissolved and we recovered the stake.
 
-Olfin noticed Irena heading into the village and followed her. He dug up a keepsake box from the ground for her, which held a Silver bracelet, pressed aster flower, wooden charm and a handkerchief. Irena gave the bracelet to Olfin for his kindness and honesty. It has the Moon and Stars in lapis lazuli on it, along with the inscription **Tatiana** “Find your path in the darkest of places”
+Olfin noticed Ireena heading into the village and followed her. He dug up a keepsake box from the ground for her, which held a Silver bracelet, pressed aster flower, wooden charm and a handkerchief. Ireena gave the bracelet to Olfin for his kindness and honesty. It has the Moon and Stars in lapis lazuli on it, along with the inscription **Tatyana** “Find your path in the darkest of places”
 
 Olfin noticed two bite marks on Ireena’s neck, and she explained that Strahd bit her and controlled her in the past, but that she has not become a vampire, yet.
 
@@ -34,8 +34,8 @@ Note: The blessing was +6 maximum hit points.
 
 Meanwhile the rest of the party went shopping, but found that the prices were most unfriendly, five times what they ought to be, perhaps due to our association with Ismark. Aera made the most of the situation by feeling justified in pilfering two healing potions from the shop.
 
-At noon we gathered the party and ventured forth towards Tser pool. Irena joined us in her full armor, but we surrounded her as we took our charge to protect her most seriously.
+At noon we gathered the party and ventured forth towards Tser pool. Ireena joined us in her full armor, but we surrounded her as we took our charge to protect her most seriously.
 
-After some time on the trail we were met with a voice from the thicket which asked who we were. Grom was most confrontational and challenged the hidden party. A woman walked out of the mists, and Irena knew her for a scout of the village. Kreza and Conga were the scouts’ names. They were searching for the Landston family, two parents and five children who had gone missing from the village.
+After some time on the trail we were met with a voice from the thicket which asked who we were. Grom was most confrontational and challenged the hidden party. A woman walked out of the mists, and Ireena knew her for a scout of the village. Kreza and Conga were the scouts’ names. They were searching for the Landston family, two parents and five children who had gone missing from the village.
 
 We consulted the map Ismark gave us (I’ve made a crude copy), and decided it would be faster to leave the path and enter the woods to follow the river towards the pool. We came into a clearing with a tall ancient oak in the middle. There were seven figures, two larger than the others, surrounding an eighth figure and looking up into the tree. Red mist was coming from the final figure’s mouth and pooling onto the ground. His eyes were white and he was wearing armor. We engaged in combat and slaughtered everyone. Most certainly this was the Landston family, but we believe they were already long gone, and we spared them from a fate worse than death.

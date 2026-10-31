@@ -2,7 +2,6 @@
 title: Morgantha
 type: npc
 aliases:
-- Morantha
 - Morgantha Stormreaver
 summary: A fiend who sells dream pastries from the windmill with her daughters.
 source: Written on Obsidian Portal

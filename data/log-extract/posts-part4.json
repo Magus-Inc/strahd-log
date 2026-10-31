@@ -3,20 +3,20 @@
     "name": "Harkus Grishenko",
     "type": "npc",
     "aliases": [],
-    "summary": "A revenant guard of the Order of the Silver Dragon who warned the party of Hornguard's order.",
+    "summary": "A revenant guard of the Order of the Silver Dragon who warned the party of Horngaard's order.",
     "facts": [
       {
-        "text": "A revenant guard of the Order who found the party as they woke and warned that Commander Hornguard would order his knights to destroy them.",
+        "text": "A revenant guard of the Order who found the party as they woke and warned that Commander Horngaard would order his knights to destroy them.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       },
       {
-        "text": "Urged the party to return Argynvost's skull to the cemetery before Hornguard's wrath fell, and apologized for the harm he might be made to do them.",
+        "text": "Urged the party to return Argynvost's skull to the cemetery before Horngaard's wrath fell, and apologized for the harm he might be made to do them.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       }
     ]
   },
   {
-    "name": "Vladimir Hornguard",
+    "name": "Vladimir Horngaard",
     "type": "npc",
     "aliases": [],
     "summary": "Commander of the Order of the Silver Dragon at Argynvostholt.",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "name": "Sir Godfried William",
+    "name": "Sir Godfrey Gwilym",
     "type": "npc",
     "aliases": [],
     "summary": "A knight of the Order of the Silver Dragon.",
@@ -98,7 +98,7 @@
     "summary": "The knightly order of Argynvost.",
     "facts": [
       {
-        "text": "Its knights were freed when Vladimir Hornguard accepted his rest.",
+        "text": "Its knights were freed when Vladimir Horngaard accepted his rest.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       },
       {
@@ -114,7 +114,7 @@
     "summary": "Aera's pseudodragon companion.",
     "facts": [
       {
-        "text": "Flew into the mausoleum and harried Vladimir Hornguard's face so Aera could mount the skull without a fight.",
+        "text": "Flew into the mausoleum and harried Vladimir Horngaard's face so Aera could mount the skull without a fight.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       }
     ]
@@ -152,7 +152,7 @@
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       },
       {
-        "text": "His words persuaded Vladimir Hornguard to take Argynvost's hand and accept his rest.",
+        "text": "His words persuaded Vladimir Horngaard to take Argynvost's hand and accept his rest.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       }
     ]
@@ -232,7 +232,7 @@
     "summary": "A temple where the Sunsword may be hidden.",
     "facts": [
       {
-        "text": "Lies near the peak of Mount Ghakis, at the end of a long-lost trail, according to Sir Godfried.",
+        "text": "Lies near the peak of Mount Ghakis, at the end of a long-lost trail, according to Sir Godfrey.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       }
     ]
@@ -250,7 +250,7 @@
     ]
   },
   {
-    "name": "Kaven the Blood Drinker",
+    "name": "Kavan the Blood Drinker",
     "type": "npc",
     "aliases": [
       "Kavan"

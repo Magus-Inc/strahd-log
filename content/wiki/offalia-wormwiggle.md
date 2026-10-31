@@ -2,7 +2,7 @@
 title: Offalia Wormwiggle
 type: npc
 aliases:
-- Offailia
+- Offalia
 summary: One of Morgantha's daughters.
 source: Compiled from the adventure log
 ---
