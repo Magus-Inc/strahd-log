@@ -34,6 +34,9 @@
         return (start ? "…" : "") + esc(text.slice(start, at)) + "<mark>" + esc(text.slice(at, at + term.length)) +
           "</mark>" + esc(text.slice(at + term.length, end)) + (end < text.length ? "…" : "");
       }
+      // Same icons as templates/_badges.html.
+      var SLIDES_ICON = '<svg class="badge-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/></svg>';
+      var PICTURE_ICON = '<svg class="badge-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>';
       function run() {
         var q = fold(input.value.trim());
         list.innerHTML = "";
@@ -54,9 +57,13 @@
         status.textContent = hits.length ? hits.length + (hits.length === 1 ? " match" : " matches") : "No matches.";
         hits.slice(0, 50).forEach(function (h) {
           var li = document.createElement("li");
-          li.className = "card result";
-          li.innerHTML = '<span class="chip">' + esc(h.e.l) + '</span><h2><a class="stretched" href="' + base + h.e.u + '">' + esc(h.e.t) +
-            '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>";
+          li.className = "card result" + (h.e.p ? " has-pic" : "");
+          var text = '<span class="chip">' + esc(h.e.l) + '</span><h2><a class="stretched" href="' + base + h.e.u + '">' + esc(h.e.t) +
+            '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>" +
+            (h.e.s ? '<p class="meta"><span class="slides-tag">' + SLIDES_ICON + h.e.s + (h.e.s === 1 ? " slide" : " slides") + "</span></p>" : "");
+          li.innerHTML = h.e.p ? '<div class="wiki-card-text">' + text + '</div><span class="pic-thumb"><img src="' + base + h.e.p +
+            '" alt="" loading="lazy" decoding="async"><span class="pic-count" role="img" aria-label="' + h.e.n + (h.e.n === 1 ? " picture" : " pictures") +
+            '">' + PICTURE_ICON + h.e.n + "</span></span>" : text;
           list.appendChild(li);
         });
       }

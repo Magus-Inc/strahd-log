@@ -71,6 +71,11 @@ class Post:
         """Address relative to the site root; templates prefix it with the base path."""
         return f"posts/{self.slug}/"
 
+    @property
+    def slide_count(self) -> int:
+        """Slides across every deck; list pages badge a session that has any."""
+        return sum(len(deck.slides) for deck in self.decks)
+
 
 def split_front_matter(text: str) -> tuple[dict, str]:
     """'---\\n<yaml>\\n---\\n<body>' -> (dict, body). Text without front matter has empty meta."""
@@ -168,6 +173,29 @@ def read_deck(folder: Path, static_dir: Path) -> article.Deck:
                         f"{rel}/{pdfs[0].name}" if pdfs else "", note)
 
 
+THUMB_SIZE = 200  # px, the long side; cards show it at about 76 CSS px, so this stays sharp on phones
+
+
+def make_thumbnails(pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path) -> None:
+    """Give each wiki page with a picture a small thumbnail of its first one that exists, for list cards.
+    Pictures must live under the site (/images/...); missing files and outside links get no thumbnail."""
+    from PIL import Image  # only the build needs it, not the importer tools
+    for page in pages:
+        for src in page.pictures:
+            rel = src.split("?")[0].lstrip("/")
+            source = static_dir / rel
+            if src.startswith(("http:", "https:", "//")) or not source.is_file():
+                continue
+            thumb = f"images/thumbs/{Path(rel).stem}.webp"
+            (out_dir / thumb).parent.mkdir(parents=True, exist_ok=True)
+            with Image.open(source) as image:
+                image = image.convert("RGB")
+                image.thumbnail((THUMB_SIZE, THUMB_SIZE))
+                image.save(out_dir / thumb, "WEBP", quality=80)
+            page.thumb = thumb
+            break
+
+
 def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     """Reading time, table of contents, glance callout, slides, card teaser and cast for every post."""
     for post in posts:
@@ -257,10 +285,13 @@ def write(path: Path, text: str) -> None:
 def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
     """JSON the search page loads: title, address (relative to the base path), label, plain text."""
     # Text is NFC-normalised so the search page's accent folding keeps character positions.
-    entries = [{"t": p.title, "u": p.path, "l": nice_date(p.date), "x": wiki.plain_text(p.html)}
+    # Optional badges: "s" slide count for a session, "p" thumbnail and "n" picture count for a wiki page.
+    entries = [{"t": p.title, "u": p.path, "l": nice_date(p.date), "x": wiki.plain_text(p.html),
+                **({"s": p.slide_count} if p.slide_count else {})}
                for p in posts]
     entries += [{"t": w.title, "u": w.path, "l": wiki.LABELS[w.type],
-                 "x": " ".join([*w.aliases, w.summary, wiki.plain_text(w.html).replace(wiki.LOG_NOTE, "")])}
+                 "x": " ".join([*w.aliases, w.summary, wiki.plain_text(w.html).replace(wiki.LOG_NOTE, "")]),
+                 **({"p": w.thumb, "n": len(w.pictures)} if w.thumb else {})}
                 for w in pages]
     return json.dumps(entries, ensure_ascii=False, separators=(",", ":"))
 
@@ -317,6 +348,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     if out_dir.exists():
         shutil.rmtree(out_dir)
     shutil.copytree(ROOT / "static", out_dir)
+    make_thumbnails(pages, slides_static or ROOT / "static", out_dir)
 
     years: dict[int, list[Post]] = {}
     for post in posts[1:]:
@@ -352,7 +384,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         map_data = {
             "legs": [{"t": leg["post"].title, "u": leg["post"].path} for leg in legs],
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
-                                "sessions": [{"t": s.title, "u": s.path, "d": nice_date(s.date)} for s in p.sessions]}
+                                "sessions": [{"t": s.title, "u": s.path, "d": nice_date(s.date), "n": s.slide_count}
+                                             for s in p.sessions]}
                        for p in places.values()},
         }
         write(out_dir / "map" / "index.html",
