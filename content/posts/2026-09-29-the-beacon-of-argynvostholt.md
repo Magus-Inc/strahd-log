@@ -9,7 +9,7 @@ slug: the-beacon-of-argynvostholt
 * **A warning from the dead:** A revenant messenger tells us Commander Horngaard will order his knights to hunt us down by noon tomorrow.
 * **The road to Argynvostholt:** Three hours at a run from Krezk, a corpse drained by a vampire, and a false trail.
 * **Puppet strings:** A revenant in the foyer, bound by crawling black wire, freezes Aera where she stands before Crusty's fire takes its head off.
-* **The skull returns:** Shabasta and Aera step through the air into the mausoleum, and with Zora's help Aera sets Argynvost's skull on its mount without a fight.
+* **The skull returns:** Shabasta and Aera step through the air into the mausoleum, and with Zorya's help Aera sets Argynvost's skull on its mount without a fight.
 * **Your watch has ended:** Argynvost rises, Vladimir Horngaard finds his rest, and the knights of the Order are freed.
 * **The beacon:** We swear the Order's oath, Olfin's longsword is blessed, and Argynvost burns as a silver beacon over Barovia.
 
@@ -38,11 +38,11 @@ It moved before any of us. Its glare locked Aera rigid where she stood, and the 
 
 Note: The DM pointed out afterward that the black wire was the clue. Catching that, the party could have cut the strings and freed the revenant instead of killing it.
 
-The skull belongs in the mausoleum at the back of the cemetery, behind a high wall, and Horngaard was waiting there. We argued it out: go directly, go sneakily, a sniper on the guard tower, a zip line, Crusty turning someone into a T-Rex to break through the mausoleum wall. We settled on "sneaky but direct": the rest of us would approach Horngaard as the distraction while Aera slipped around with the skull. Zora flew to Aera and gestured wildly, trying to shape a skull with her claws, but Aera could not understand her, and even Crusty, who speaks Draconic, got only simple gestures and squeaks.
+The skull belongs in the mausoleum at the back of the cemetery, behind a high wall, and Horngaard was waiting there. We argued it out: go directly, go sneakily, a sniper on the guard tower, a zip line, Crusty turning someone into a T-Rex to break through the mausoleum wall. We settled on "sneaky but direct": the rest of us would approach Horngaard as the distraction while Aera slipped around with the skull. Zorya flew to Aera and gestured wildly, trying to shape a skull with her claws, but Aera could not understand her, and even Crusty, who speaks Draconic, got only simple gestures and squeaks.
 
 Then Shabasta offered a shortcut: the mausoleum was only 50 feet away, and he could open a door through the air to it. A step like that can go wrong and leave you stranded on another plane. Shabasta, cheerfully: "Some of you may die." He took Aera with him anyway. They arrived inside the mausoleum and had to make no sound at all, and with a little help from his lucky coin Shabasta managed it.
 
-Vladimir Horngaard was in the mausoleum with them, holding forth at the rest of us: "You're too dangerous to be left alive. Your antagonism to von Zarovich is a threat I shall not tolerate." Then Zora flew in and harried his face. While he was distracted, Aera climbed the wall with the skull and set it on its mount in one clean, perfect climb. Black shadows swirled from the torches and dark flames spread across the cemetery in a ring, but because Aera befriended a pseudodragon long ago, because of Zora's distraction, and because the skull reached its place first, we never had to fight Horngaard at all.
+Vladimir Horngaard was in the mausoleum with them, holding forth at the rest of us: "You're too dangerous to be left alive. Your antagonism to von Zarovich is a threat I shall not tolerate." Then Zorya flew in and harried his face. While he was distracted, Aera climbed the wall with the skull and set it on its mount in one clean, perfect climb. Black shadows swirled from the torches and dark flames spread across the cemetery in a ring, but because Aera befriended a pseudodragon long ago, because of Zorya's distraction, and because the skull reached its place first, we never had to fight Horngaard at all.
 
 Silver light rose through the mist toward the skull, and pricks of light flared in its great eyes. With a roar like thunder, a bank of silver mist burst from the mausoleum and an enormous ghostly dragon took shape in the sky: Argynvost. Vladimir dropped his greatsword and stared upward. "My knights, what has this land done to you?" the dragon rumbled. "You have forsaken courage for fear and faith for despair, and so forgotten me." Vladimir, weeping, swore they never gave up the faith. The dragon reached out a clawed hand to offer him rest, but Vladimir stopped: "What have I left, if not the suffering of the one who took all I once loved?" Argynvost turned to us for help.
 
@@ -86,7 +86,7 @@ A drained corpse on the road, and a false trail that cost us an hour.
 
 A wire-bound revenant in the foyer. It froze Aera and wounded Olfin twice; Olfin pinned it in place, and Crusty's Fire Bolt took its head off.
 
-Shabasta's door through the air, Zora's distraction and Aera's climb put the skull in place without a fight, and Shabasta's words helped Vladimir Horngaard accept his rest.
+Shabasta's door through the air, Zorya's distraction and Aera's climb put the skull in place without a fight, and Shabasta's words helped Vladimir Horngaard accept his rest.
 
 ## Loot:
 
@@ -107,7 +107,7 @@ Shabasta's door through the air, Zora's distraction and Aera's climb put the sku
 
 **Sir Godfrey Gwilym**: Freed from his revenant body and restored to the knight he was. He shared what he knows of Kasimir and the Amber Temple.
 
-**Zora**: Aera's pseudodragon, whose distraction let us mount the skull without a fight.
+**Zorya**: Aera's pseudodragon, whose distraction let us mount the skull without a fight.
 
 **Kasimir Velikov** (mentioned): A dusk elf who sought the Amber Temple and may be able to guide us there.
 
@@ -126,6 +126,6 @@ Shabasta's door through the air, Zora's distraction and Aera's climb put the sku
 
 * Crusty's Fire Bolt taking the revenant's head off: "Just like Kamehameha."
 * Shabasta stepping through the air into the mausoleum, and Aera's flawless climb to mount the skull.
-* Zora's distraction turning a deadly fight into no fight at all.
+* Zorya's distraction turning a deadly fight into no fight at all.
 * Shabasta's words to Vladimir: "We did it in the same heart that you had."
 * All of us swearing the oath of the Order of the Silver Dragon.

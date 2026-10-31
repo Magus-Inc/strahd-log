@@ -26,7 +26,7 @@
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       },
       {
-        "text": "Waited in the cemetery mausoleum, but Zora's distraction let Aera mount the skull before any fight.",
+        "text": "Waited in the cemetery mausoleum, but Zorya's distraction let Aera mount the skull before any fight.",
         "post": "2026-09-29-the-beacon-of-argynvostholt"
       },
       {
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "name": "Zora",
+    "name": "Zorya",
     "type": "creature",
     "aliases": [],
     "summary": "Aera's pseudodragon companion.",

@@ -23,5 +23,5 @@ Commander of the Order of the Silver Dragon, who banished Sir Godfrey and holds 
 * Guards a gargoyle statue on Argynvostholt's fourth floor and believes Barovia's suffering is penance. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Is enraged by the party's assault on Ravenloft, according to a Revenant. ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/))
 * Called every knight of the Order back to Argynvostholt by noon, enraged that the party broke into Castle Ravenloft. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
-* Waited in the cemetery mausoleum, but Zora's distraction let Aera mount the skull before any fight. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
+* Waited in the cemetery mausoleum, but Zorya's distraction let Aera mount the skull before any fight. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
 * Took Argynvost's hand after Shabasta's words and crumbled to ash when the dragon told him his watch had ended. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

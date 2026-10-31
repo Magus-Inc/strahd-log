@@ -1,4 +1,5 @@
-# Names spelled as the Curse of Strahd book spells them. `just spellings` fixes the posts, wiki
+# Names spelled as the Curse of Strahd book spells them. dnd-scribe keeps a copy in
+# campaign/spellings.yaml (its tests compare them). `just spellings` fixes the posts, wiki
 # pages and log extracts; tests/test_spellings.py fails while a wrong spelling is left.
 #
 # The book fixes SPELLINGS only. What happened at the table comes from the posts and Chris, and
@@ -117,3 +118,5 @@ fix:
   Valokovitch: Vallakovich
   St. Markova: St. Markovia
   Aargenvolstholt: Argynvostholt
+  # Not from the book: Aera's pseudodragon is Zorya, by Ryan's stat block (Chris, 2026-10-28).
+  Zora: Zorya
