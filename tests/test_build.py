@@ -105,6 +105,15 @@ def test_every_link_and_image_on_the_real_site_resolves(real_site):
     assert not missing, sorted(missing)[:20]
 
 
+def test_schlopkht_page_lets_readers_vote_among_six_pictures(real_site):
+    html = (real_site / "wiki" / "schlopkht" / "index.html").read_text(encoding="utf-8")
+    grid = re.search(r'<div class="vote-group image-vote image-grid">.*?</div>', html, re.S).group(0)
+    pictures = re.findall(r'src="(/images/schlopkht-ai(?:-\d)?\.jpg)"', grid)
+    assert pictures == ["/images/schlopkht-ai.jpg"] + [f"/images/schlopkht-ai-{i}.jpg" for i in range(2, 7)]
+    assert grid.count('data-vote="image-') == 6
+    assert "AI-generated" in html
+
+
 def test_no_images_on_links_that_expire(real_site):
     # Discord attachment links carry an expiry (ex=...) and stop working, so their images go in static/.
     expiring = {page.relative_to(real_site).as_posix()
