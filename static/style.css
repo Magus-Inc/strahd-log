@@ -256,7 +256,9 @@ main.wide { max-width: 80rem; }
 /* The place card floats over the map so it is seen without scrolling: a sheet up from the bottom on
    phones, a card in the corner on wider screens. The map and its zoom stay as they were. */
 .place-panel { position: fixed; z-index: 50; left: 0; right: 0; bottom: 0; margin: 0; max-height: 55vh; overflow-y: auto;
-  border-radius: 14px 14px 0 0; box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.45); padding-bottom: calc(1rem + env(safe-area-inset-bottom)); }
+  border-radius: 14px 14px 0 0; border: 1.5px solid rgba(224, 74, 99, 0.75);
+  /* Chris: it needs to stand out from the page: a light red edge, a soft red glow and a dark shadow. */
+  box-shadow: 0 0 0 1px rgba(224, 74, 99, 0.25), 0 0 22px rgba(224, 74, 99, 0.45), 0 10px 32px rgba(0, 0, 0, 0.6); padding-bottom: calc(1rem + env(safe-area-inset-bottom)); }
 @media (min-width: 760px) {
   .place-panel { left: auto; right: 1.2rem; bottom: 1.2rem; width: 24rem; max-height: 70vh; border-radius: 12px; }
 }

@@ -152,6 +152,8 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     # The place card floats over the map (a bottom sheet on phones), so it is seen without scrolling.
     assert re.search(r"\.place-panel \{[^}]*position: fixed[^}]*bottom: 0", css) and "scrollIntoView" not in page_html
     assert '"Escape"' in page_html
+    # The card stands out from the page: a light red edge and a red glow.
+    assert re.search(r"\.place-panel \{[^}]*border: 1\.5px solid rgba\(224, 74, 99[^}]*box-shadow:[^;]*0 0 22px rgba\(224, 74, 99", css)
     # Chris: no red ring when a place is clicked, and a red glow (gold was lost on the parchment) strong enough to see: a solid red
     # edge (zero-blur shadows) plus a wide halo, also kept on the place whose card is open.
     assert ".pin:focus .pin-dot" not in css and "stroke: var(--accent)" not in css.split(".map .pin-dot")[1].split("/* Crumb")[0]
