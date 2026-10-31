@@ -88,7 +88,9 @@ sprites:
   yester-hill: {image: yester-hill, xy: [70, 480], width: 44}
   durst-manor: {image: durst-manor, xy: [968, 334], width: 32}
   tser-pool: {image: tser-pool, xy: [692, 526], width: 42}
-  gates-west: {image: gates, xy: [597, 340], width: 30, place: gates-of-barovia}
+  # The west gates (on the way to Castle Ravenloft) are not the place the party walked through
+  # from Durst Manor (Chris), so they link nowhere until they get their own wiki page.
+  gates-west: {image: gates, xy: [597, 340], width: 30, place: null}
   gates-east: {image: gates, xy: [930, 388], width: 30, place: gates-of-barovia}
   berez: {image: berez, xy: [322, 444], width: 40}
   amber-temple: {image: amber-temple, xy: [384, 630], width: 40}

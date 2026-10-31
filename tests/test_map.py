@@ -484,7 +484,7 @@ def test_every_real_sprite_links_to_a_real_place_or_none():
     places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
     sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
     assert all(s.place in places for s in sprites if s.place)
-    assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"}
+    assert {s.name for s in sprites if s.place is None} == {s.name for s in sprites if s.image == "bridge"} | {"gates-west"}
 
 
 def test_every_crossroads_with_a_wiki_page_has_a_signpost():
@@ -496,3 +496,12 @@ def test_every_crossroads_with_a_wiki_page_has_a_signpost():
     for s in sprites:
         if s.image == "signpost":
             assert math.dist((s.x, s.y), (places[s.place].x, places[s.place].y)) < 25
+
+
+def test_west_gates_are_not_linked_to_the_east_gates_page():
+    # Chris: the gates near Castle Ravenloft and the gates by Durst Manor are different places. Only
+    # the east gates (the ones the party walked through from Durst Manor) are the Gates of Barovia
+    # place; the west gates are a plain picture until they get a page of their own.
+    sprites = {s.name: s for s in barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")}
+    assert sprites["gates-east"].place == "gates-of-barovia"
+    assert sprites["gates-west"].place is None
