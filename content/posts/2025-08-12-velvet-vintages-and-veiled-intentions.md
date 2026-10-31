@@ -25,6 +25,10 @@ A masked servant came in, shaking, his fingers cut off at the first knuckle. He 
 
 Zorpheus and Sasha offered to clean it up and fetched mops from the depths of the castle. In the **kitchen** they saw a man who looked like **Cyrus**, and in the **wine cellar** they found a woman hanging upside down, being drained of her blood.
 
+![Sasha, a castle servant with a candle, whispering by the great organ](/images/sasha-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Sasha quietly passed Zorpheus a cryptic tip:
 
 > **“Sixth pedal from the left on the organ.”**

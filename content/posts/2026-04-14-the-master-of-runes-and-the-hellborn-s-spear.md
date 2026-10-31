@@ -31,6 +31,10 @@ Note: The party held a long "Above the Table" debate on whether a hot dog is a s
 
 Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectral voice warned us to stop. We did not. Olfin and I pried open the lead sarcophagus cased in gold, and inside was the Spear of the Huntress, a blood spear of great power. Now we make ready to find the Icon of Dawn’s Grace in the last crypts nearby.
 
+![King Dostron's ghost rising red over his sarcophagus and the Spear of the Huntress](/images/king-dostron-the-hellborn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Note: Shabasta said they would "draw their own version" of the new staff, with lightning effects, for the group's records.
 
 ## Key Locations:

@@ -19,6 +19,10 @@ Victor taught us the ways to take a heart stone from a hag, and we laid a plan t
 
 On the way we met a druid of the Forest Folk, hermits of the Svalich Woods who shun the towns. They hold Yester Hill, at the southwest edge of the valley, sacred, and they worship Strahd as a god for his power over the land and weather.
 
+![A hag's heart stone, dark and glowing, held up in the doorway of a windmill](/images/heart-stone-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Lady Wachter first learned of the druids as a student of her mentor, Lysa, a woods-witch of the Berez swamps who worshipped Mother Night, goddess of darkness, trickery and the occult. Lady Wachter never heard Mother Night’s “voice”, as Lysa called it, and took up the faith of Ezra soon after she came back to Vallaki.
 
 ## Key Locations:

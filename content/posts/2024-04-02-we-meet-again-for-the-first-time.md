@@ -16,6 +16,10 @@ We continued walking along the river until we met up with the road again and a c
 
 The man, or creature, was none other than Count Strahd von Zarovich and he called out to [Ireena Kolyana](/wiki/ireena-kolyana/), looking directly at where she was hiding. He looked directly at where each of us was hiding as he talked to us. He made it clear that he would not give many warnings if we disrespected him, and his seven dire wolves looked eager to tear us apart.
 
+![Strahd on a misty forest road at night with two dire wolves](/images/strahd-von-zarovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Strahd was upset about some vassal of his, which I first thought was some peasant and a case of mistaken identity, but later came to realize that he was talking about the Durst Manor and their supply of grain from the windmill. He indicated that he has plenty of wine and the vineyard was not of concern to him.
 
 Strahd demanded that Ismark follow his will, and it seemed he was going to take Ireena away with him. I’m still not sure how, but we convinced him to allow her to stay with us a bit longer, hopefully long enough to find some sanctuary for her. He also forgave us for our past transgressions, and he claimed to be no liar, but that he found us curious and would study us for a while. Weeble almost pushed his luck and nearly found out if it would be the wolves that tore him to shreds or the Longsword of Strahd. Strahd and his wolves then left us alone by the road.

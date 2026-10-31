@@ -60,6 +60,10 @@ Three vampire spawn on the road to Krezk, all destroyed.
 
 We learned the history of the holy symbol of Ravenkind and its tie to Strahd. Davian gave us an obsidian whistle, and we set out for Krezk, meeting vampire spawn on the way. In Krezk we learned of the werewolf curse on Dmitri Krezkov’s family, and the abbot’s dark work at the abbey: the flesh golem, and his manipulation of Dmitri.
 
+![Dmitri Krezkov at the snowy gate of Krezk](/images/dmitri-krezkov-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Session Highlights:
 
 Beating the vampire spawn on the road to Krezk. Learning that Strahd had his own reading from Madam Eva, and the history of the holy symbol of Ravenkind. The sad story of Dmitri Krezkov and the abbot’s manipulation.

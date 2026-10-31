@@ -56,6 +56,10 @@ We were offered **guest quarters**, with the promise that no servant would lay h
 
 Inside, **Gumbo searched a clock** and found a **map showing that the beating heart of the castle lies in the north tower**.
 
+![The Heart of Sorrow, a giant red crystal heart hanging in a tower above a spiral stair](/images/heart-of-sorrow-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We tried to stay awake, but one by one we were all pulled into unconsciousness. When we woke, **something had changed**…
 
 ## Key Locations:

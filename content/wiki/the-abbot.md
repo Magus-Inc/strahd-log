@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![The Abbot, a handsome young monk, faint wings of fallen light behind him](/images/the-abbot-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Master of the Abbey of Saint Markovia, a handsome young man in monk's robes and an angel underneath. In the shape of Dmitri Krezkov's aunt he talked Dmitri out of his wolfsbane, and he demanded Anna Krezkova's heart for his work ([Welcome to Krezk](/posts/welcome-to-krezk/)). He was building Vasilka, a bride for Strahd, and had warped the Belviews trying to cure them ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). The Icon told us he was a celestial sent to restore the Abbey, who fell to madness ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).

@@ -23,6 +23,10 @@ Note: The party briefly debated a "Trojan Bunny" strategy, or stealing the Vista
 
 At the edge of the precipice we watched Strahd von Zarovich ride out of the castle on his nightmare, Beucephalus. With the master gone, Aera made herself invisible and Krusty gave her the power to fly. She soared across the chasm and came up behind the wights on the ramparts. With a conjured hand she picked the alarm horn from the first wight’s pocket, then took the second wight’s horn as well. It nearly went very wrong when she tried a running somersault dropkick to send one of them off the edge. She stumbled and bounced off the guard, and the kick undid her invisibility. The fight broke out, and we destroyed the wights. Aera poured oil on the drawbridge chains to quiet them, and we lowered the drawbridge and reached the servants’ entrance.
 
+![Strahd riding Beucephalus, a fiery black nightmare, out of the castle gate](/images/beucephalus-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point afterward, saying the sentries were "low-level annoyances" next to what waits deeper in.
 
 ## Key Locations:

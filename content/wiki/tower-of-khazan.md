@@ -10,6 +10,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![A stone tower by a misty lake, a purple and gold Vistani wagon at its foot](/images/tower-of-khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Szoldar led us to a tower in the woods beside a lake, with a purple and gold Vistani wagon at its foot warning trespassers off in Ezmerelda's name. The door had no handle, only a red seal with Khazan's name; Olfin traced the pattern of the signet ring on it and it opened ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/)). The wagon was trapped. Inside the tower a platform lifted us between floors, and on the fourth someone had been living: a bed, a desk, a journal page in van Richten's hand and a sketch of Rictavio's carnival ([The Staff is a lie](/posts/the-staff-is-a-lie/)). Van Richten later told us he had hidden there with Arabelle, and that the tower blocks magic, Strahd's scrying included ([Finding Arabelle!](/posts/finding-arabelle/)). The runes we learned there opened Khazan's own tomb under the castle ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/)).

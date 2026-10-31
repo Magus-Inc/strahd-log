@@ -5,6 +5,12 @@ summary: Madam Eva's young Vistani grandchild, kidnapped and then hidden by Van 
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Arabelle, a Vistani girl with lavender eyes, sitting in a painted wagon's doorway](/images/arabelle-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

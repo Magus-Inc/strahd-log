@@ -18,6 +18,10 @@ Father Lucian helped us find the home of Milivoj, a leaning, decrepit house with
 
 Liren saw through him and frightened him into confessing. His parents are lost to dream pastries, and he must keep his brothers and sisters fed. He sold the bones to Henrik the day before.
 
+![The Church of Saint Andral at night, its crypt door open on an empty ossuary](/images/church-of-saint-andral-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 On the way to Henrik’s, Shabasta, disguised as Father Lucian, persuaded the guards to arrest Milivoj for theft. At Henrik’s door he talked four guards into breaking in and arresting Henrik, who would not say where the bones were. We searched the shop and found a room with thirteen coffins, then went up to the second floor, where there was a kitchen and a bedroom.
 
 I opened the wardrobe and a poisoned dart struck me. I could not move for ten minutes, and a noisemaker brought our enemies down on us. Even so, we spotted a bag that likely held the bones. We fought two vampires amid a great many fires, and Volenta, a bride of Strahd, escaped, leaving behind mist and a glowing pentagram. Aera handed me the bones and stepped into the last room of the building.

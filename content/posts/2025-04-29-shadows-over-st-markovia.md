@@ -18,6 +18,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 We set out for St. Markovia’s Abbey to seek Ezmerelda’s help. The mountain road was treacherous, and the air grew colder as we climbed, a sign of what lay ahead. At the abbey we met the strange Belview family, warped and deranged by the Abbot’s twisted experiments. Strahd’s hold on the holy place became plain as we pieced together the Abbot’s misguided plan to make a companion for Strahd. A séance with Ezmerelda brought dark truths to light and pointed us toward Castle Ravenloft and the werewolves’ cave at Lake Baratok.
 
+![The Abbey of Saint Markovia on a mountain ledge above Krezk](/images/abbey-of-saint-markovia-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Key Locations:
 
 **St. Markovia Abbey**: Once sacred, now twisted by dark experiments, looking down on the valley from its perch in the mountains.

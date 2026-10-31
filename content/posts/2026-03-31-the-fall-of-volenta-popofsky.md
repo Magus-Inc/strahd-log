@@ -19,6 +19,10 @@ Note: The session opened with a recap of the previous "YOLO run" with the yellow
 
 It was a grueling battle of magic and steel. Volenta fought with poisoned daggers and alchemical shards that burst into ice, and for a moment Crusty was frozen in place. Lathander’s radiance poured from me and burned the vampire and her zombies, while Shabasta and Aera kept at her with spells and silvered arrows. Volenta took a monstrous winged form and set the oil on the water alight, but we held together.
 
+![Volenta with bat wings and a dagger in each hand, burning oil on the water](/images/volenta-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Note: Meta talk during the fight ranged from how Uncanny Dodge and Haste work to a long, funny tangent on the "Ant-Man vs. Thanos" theory and the benefits of hiring a good CPA for tax season.
 
 At the height of it Volenta seized Shabasta and dragged him ten feet up the dungeon wall to drain his life. But we struck her again and again until she was pinned to the wall, crucified there, and her reign of terror was over. Then we took the key to free the werewolf Emil Toranescu, and stripped the bride of her treasures.

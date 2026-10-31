@@ -21,6 +21,10 @@ In the chest was a letter:
 
 From the letter we concluded that the monster must be [Elisabeth Durst](/wiki/elisabeth-durst/).
 
+![Elisabeth Durst in a black gown, an amber shard glowing at her throat](/images/elisabeth-durst-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 The attic has a hallway with a door held shut by a padlock. Other doors creaked around us, and we could not tell whether they were opening on their own.
 
 One room held a bed, a desk, a music box and a doll. It reminded all of us of the doll Rose held in a portrait we had seen earlier.

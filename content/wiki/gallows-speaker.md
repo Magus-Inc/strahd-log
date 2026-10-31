@@ -5,6 +5,12 @@ summary: A malevolent spirit that haunted Stella in the Ethereal Plane.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The gallows speaker, a shrouded spectre trailing nooses in the ethereal mist](/images/gallows-speaker-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

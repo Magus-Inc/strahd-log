@@ -5,6 +5,12 @@ summary: The Abbot's failed first attempt at a perfect vessel, chained beneath t
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Abbot's first vessel, six-armed with a golden halo nailed into its skull, facing a warrior with a battleaxe](/images/the-abbots-first-vessel-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

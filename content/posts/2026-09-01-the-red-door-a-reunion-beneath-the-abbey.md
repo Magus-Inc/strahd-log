@@ -43,6 +43,10 @@ Note: Aera's choice was a long, real debate at the table. Her player chose it kn
 
 The meadow faded back into stone. From behind another door came Aera’s muffled scream. The door was a lie: it had flung her into the next room and wounded her mind. Olfin opened the door to find her collapsed in a corner, clutching her head. Above her waited the Abbot’s first attempt at a perfect vessel, made before Vasilka: a body meant to hold a pure soul. It failed, so he chained it beneath the abbey and forgot it. With the Abbot changed, hundreds of trapped fragments of souls had flooded into it and woken it. It stood nine feet tall, with six mismatched arms, broken pieces of angel’s wings, dozens of closed eyes stitched across its body and a golden halo nailed into its skull. It spoke in the voices of the dead, Shabasta’s brother Doru among them.
 
+![The Abbot's first vessel, six-armed with a golden halo nailed into its skull, facing a warrior with a battleaxe](/images/the-abbots-first-vessel-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Liren readied her battleaxe. The thing charged Olfin and struck him hard. I dropped a burst of fire behind our line, Crusty bent fate with his foreseeing, and Gumbo’s blade found a weak spot. Olfin struck with shining light that left it open to all of us, and all three of Crusty’s rays of fire hit. Shabasta curved an orb of acid around his friends into it. Then Liren’s battleaxe went straight through the thing and it burst apart.
 
 Note: Aera's trap was 9 psychic damage. The vessel hit Olfin for 17 bludgeoning; Malron's Fireball did 38; Crusty spent his Portent dice; Gumbo's sneak attack was 21; Olfin's Shining Smite gave every attack advantage; Crusty's Scorching Ray hit with all three rays for 19; Shabasta's Chromatic Orb did 15 acid.

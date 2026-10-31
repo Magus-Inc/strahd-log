@@ -9,6 +9,12 @@ summary: The werewolf pack leader, empowered by Baba Lysaga.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Kiril Stoyanovich, a huge grey werewolf, at the mouth of his den by a lake](/images/kiril-stoyanovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

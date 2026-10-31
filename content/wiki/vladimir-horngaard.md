@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Vladimir Horngaard, an undead knight, waiting in the mausoleum at dusk](/images/vladimir-horngaard-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Commander of the Order of the Silver Dragon, who banished Sir Godfrey and holds that Barovia's suffering is penance ([Dream Pies](/posts/dream-pies/), [The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). Sir Godfrey told us Rahadin killed him ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). Enraged that we broke into Castle Ravenloft, he called his knights home to destroy us and waited for us in the cemetery. Argynvost rose before he could, and Horngaard took the dragon's hand and turned to ash ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).

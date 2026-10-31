@@ -5,6 +5,12 @@ summary: The flesh-built "perfect bride" the Abbot made for Strahd.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Vasilka, a stitched bride in a white gown, tending a mongrelfolk in the asylum](/images/vasilka-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

@@ -22,6 +22,10 @@ But the camp seethed with tension: broken pottery, cracking whips. Alexi begged 
 
 Kasimir clutched a ring bearing a sigil, its design woven from necromancy and evocation. It may be the key to deeper truths.
 
+![Kasimir Velikov, a grey-skinned dusk elf, clutching a glowing signet ring in the Vistani camp](/images/kasimir-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Alexi offered us five hundred gold pieces if we bring Arabelle back alive.
 
 ## The Dusk Elves

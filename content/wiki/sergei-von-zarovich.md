@@ -8,6 +8,12 @@ summary: A prince whose wedding to Tatyana is recorded in the Wachter family his
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Sergei's ghost as the skeletal rider, holding a lantern on a misty road](/images/sergei-von-zarovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

@@ -7,6 +7,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Gertruda waking in the King's Bedchamber, Tatyana's portrait above the hearth](/images/gertruda-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Mary's daughter, who went alone toward Vallaki one night and never arrived ([Barovia, Barovia](/posts/barovia-barovia/)). Sasha told us she was held in the castle, Doru's betrothed, and begged us to rescue her ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/)). We followed her slipper up the stairs and found her in the King's Bedchamber, clouded by a vampire's charm until Olfin's prayer cleared it. Strahd had lured her there with talk of making amends to her village, and she had been kept alone and tormented by his brides ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/), [The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)). We brought her home to Barovia through the brazier's flame ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).

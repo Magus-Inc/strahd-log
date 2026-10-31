@@ -5,6 +5,12 @@ summary: A werewolf prisoner in the Lake Baratok cave.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Zuleika and Ilya in silver thorn collars, Zuleika offering the Symbol of Ravenkind by the fire](/images/zuleika-and-ilya-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

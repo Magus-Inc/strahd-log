@@ -20,6 +20,10 @@ I used the Talisman of Echoes to speak with Izek’s head. Oogway did the questi
 
 Outside Wachterhaus we passed some cultish-looking folk, and Lady Fiona welcomed us in. We gave her Izek’s head, and she led us to her armory for our reward. She read to us from her family history about the wedding of Prince Sergei and Tatyana.
 
+![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 At the inn, words appeared on a frosted window, “Help Victor” and “Erasmus”, and the spirit of Erasmus reached out to us. We agreed to help at the Vallakovich manor. Then Rahadin, the elf, arrived on a phantom steed with an invitation to dinner at Castle Ravenloft, and asked that Ireena come. In the town square, Father Lucian argued with the guards as Milivoj and Henrik were condemned to hang.
 
 **Key Locations:**  

@@ -24,6 +24,10 @@ slug: the-beacon-of-argynvostholt
 
 As we woke, a revenant found us: Harkus Grishenko, a guard of the Order, sent to summon us. He carried word from a phantom warrior. Commander Vladimir Horngaard has called every knight of the Order of the Silver Dragon back to Argynvostholt by noon tomorrow. Horngaard is enraged that we broke into Castle Ravenloft, he counts Strahd a necessary evil, and he is expected to command his knights to destroy us at any cost. Harkus apologized for the harm he may be made to do us if we meet again. Had we spoken with Sir Godfrey Gwilym and learned of his mission? We had. Then, he urged, if we held the skull, we must fulfill the dragon's prophecy and return it to the cemetery before Horngaard's full wrath fell.
 
+![Vladimir Horngaard, an undead knight, waiting in the mausoleum at dusk](/images/vladimir-horngaard-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We weighed creeping in against simply arriving fast. From Krezk by the Raven River crossroads it is about three hours to Argynvostholt, so we ran.
 
 Haste dulled our eyes. In the middle of the road lay a man in fine clothes, his purse gone, no one of importance by the look of him, dried out and drained through the bite marks on his neck. I gave him last rites in Lathander's light while the others kept watch. Halfway along the second stretch we found we had been following a false trail and lost an hour turning back, but we still reached Argynvostholt before dusk.

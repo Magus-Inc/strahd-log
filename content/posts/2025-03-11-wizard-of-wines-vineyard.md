@@ -18,6 +18,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 It was evening when we entered the cloaked figure’s hiding place and found Davian Martikov, father of Urwin Martikov. Davian told us the forest folk, druids, and their blights, along with Baba Lysaga, whom some call Lysa, have driven his family from the Wizard of Wines vineyard.
 
+![The Wizard of Wines winery among misty vineyards, blights lurking at the edge](/images/wizard-of-wines-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 He laid out what waits ahead: four druids, eight needle blights, three greater strix and eight vine blights. The druids’ leader carries a magical staff that commands these creatures, and it must be destroyed or stolen. He advised us to go underground into the cellar to find it.
 
 The tunnel to the cellar runs through a cavern full of brown mold. Fire only feeds it, but cold kills it, and we must keep to the middle of the dirt path to come through unharmed.

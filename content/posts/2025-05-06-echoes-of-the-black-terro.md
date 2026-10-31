@@ -16,6 +16,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 As we made ready, Ezmerelda led us to a hidden hollow near the mouth of the werewolf den. With a wondrous flint and steel she lit a fire that gave no smoke, so no one would see us. She gave me the gift of seeing in the dark for the night, to help us scout.
 
+![Kiril Stoyanovich, a huge grey werewolf, at the mouth of his den by a lake](/images/kiril-stoyanovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 While we waited for nightfall she told us of her past: how she lost her leg to the Black Terror, and the shocking truth that her own family had a hand in taking van Richten’s son.
 
 Aera tried to slip in unseen, invisible, but the guards’ keen senses found her, and the fight began. Soon the whole cave was roused: five werewolves and a pack of wolves. Oogway and I each loosed a burst of fire that killed the wolves and burned the werewolves badly.

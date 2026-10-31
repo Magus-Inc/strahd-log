@@ -5,6 +5,12 @@ summary: A giant twig blight the druids tried to summon.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Winter Splinter, a giant tree blight, striding out of a burning forest toward the vineyard](/images/winter-splinter-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

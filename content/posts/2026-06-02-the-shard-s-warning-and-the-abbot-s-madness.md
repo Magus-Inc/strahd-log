@@ -29,6 +29,10 @@ In Vallaki, Baron Dmitri Krezkov was waiting for us at the Blue Water Inn. Despe
 
 At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made ready to climb to the Abbey, the Icon of Ravenloft, the Shard of Divinity, spoke to us mind to mind. It told us the sad history of the Abbot: a celestial sent to restore the Abbey, who fell into madness. Corrupted by Strahd’s scheming and by his own obsessive work crafting flesh to make a bride for the vampire lord, the Abbot now sees the maiming of others as a needed sacrifice for a “holy” mission. The Shard told us to ready our steel, and we steeled ourselves for what is coming.
 
+![The Abbot, a handsome young monk, faint wings of fallen light behind him](/images/the-abbot-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Key Locations:
 
 **Brazier Room (Castle Ravenloft)**: A place for traveling, with seven colored stones.  

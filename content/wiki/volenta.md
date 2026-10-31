@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Volenta with bat wings and a dagger in each hand, burning oil on the water](/images/volenta-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 One of Strahd's brides. She escaped us at Henrik's shop in Vallaki, leaving mist and a glowing pentagram ([The Quest for the Missing Bones](/posts/the-quest-for-the-missing-bones/)). Ludmilla scorned her ([Stop Winter Splinter](/posts/stop-winter-splinter/)). Her white dress took the spilled wine at Strahd's reception ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/)). She held the key to Emil's collar and met us in the flooded torture chamber with a jar of oil. She fought with poisoned daggers and shards of ice, took a winged form and set the water burning, and died pinned to the wall ([Depths of Ravenloft](/posts/depths-of-ravenloft/), [The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/)).

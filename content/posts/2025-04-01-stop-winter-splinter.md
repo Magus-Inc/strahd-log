@@ -18,6 +18,10 @@ As we went through the forest, Strahd came out of the shadows on his fiery steed
 
 Strahd told us Winter Splinter is a giant twig blight. When Veyren asked why some can move freely in his domain, he said Madam Eva gives him information, and so certain people pass unchallenged. He also spoke of Rahadin, his servant.
 
+![Winter Splinter, a giant tree blight, striding out of a burning forest toward the vineyard](/images/winter-splinter-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 At Yester Hill lightning struck the boulder-ringed summit. On top stood a fifty-foot statue of a cloaked man with fangs, inside two rings of stones, with thirteen druids chanting in a circle. Thorny vines bound the druids, and mist swirled above them. Further out stood four figures with axes, and one we took for Ludmilla, a bride of Strahd.
 
 Strahd hovered above the ground watching the ritual, turning a small thing in his hands. Ludmilla saw us and in a blink was close by. Strahd idly toyed with a pawn from a chess set. Ludmilla went cold at the sight of it, displeased that he was playing a game with her. Then he vanished into the ethereal plane.

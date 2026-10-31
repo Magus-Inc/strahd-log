@@ -22,6 +22,10 @@ A messenger came from Fiona Wachter with an invitation for Aera to dine the next
 
 We had a choice to make: go to the dinner, look into Izek, or see to the trouble at Blinsky’s. Olfin sent a lock of his hair to Ireena so he could speak with her and warn her about Izek. Overnight bats wheeled about as the full moon drew near, and Aera shot some of them outside the window.
 
+![Blinsky the toymaker grinning in his shop full of creepy toys](/images/blinsky-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 At Blinsky’s we found the shop on fire and Blinsky unconscious. When he came to, he told us Izek had done it after a doll went missing. Shabasta rallied a crowd to put out the fire and demand justice from the Baron. Blinsky mentioned he had recently sold a noise toy to Henrik.
 
 We went on to the mansion, and Shabasta disguised himself as Blinsky to send the crowd home and collect money for repairs. The crowd was confused and drifted off without giving much. Vallakovich questioned Shabasta, who faltered, and the Baron had his guards shoot at him. Vallakovich made it plain he is still Baron.
