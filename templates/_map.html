@@ -12,7 +12,13 @@
   </div>
 {% endif %}
   <svg class="map" viewBox="0 0 1000 750" role="img" aria-label="{{ label }}">
+    <image href="{{ base }}images/map/parchment.jpg" width="1000" height="750" preserveAspectRatio="none"/>
     <image href="{{ base }}map/barovia.svg" width="1000" height="750"/>
+    <g class="sprites" aria-hidden="true">
+{% for s in map_sprites %}
+      <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
+{% endfor %}
+    </g>
 {% if legs %}
     <g class="trail" aria-label="The party's trail">
 {% for leg in legs %}

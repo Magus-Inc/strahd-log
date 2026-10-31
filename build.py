@@ -329,6 +329,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
     visits = barovia_map.load_visits(map_dir / "trail.yaml", places) if places else {}
     legs = barovia_map.trail(posts, places, parent, pages, visits) if places else []
+    sprites = barovia_map.load_sprites(map_file or content_dir.parent.parent / "data" / "map.yaml",
+                                       ROOT / "static" / "images" / "map" / "sprites") if places else []
     leg_by_post = {leg["post"].slug: leg for leg in legs}
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
@@ -346,6 +348,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         for tag in post.tags:
             tags.setdefault(tag, []).append(post)
     env.globals["has_tags"] = bool(tags)
+    env.globals["map_sprites"] = sprites
 
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -382,7 +385,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     write(out_dir / "search" / "index.html", env.get_template("search.html").render())
     if places:
         write(out_dir / "map" / "barovia.svg",
-              barovia_map.draw_base())
+              barovia_map.draw_base(sprites))
         map_data = {
             "legs": [{"t": leg["post"].title, "u": leg["post"].path} for leg in legs],
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),

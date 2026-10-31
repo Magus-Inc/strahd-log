@@ -1,8 +1,9 @@
 """Our own map of Barovia, and the party's breadcrumb trail along its roads.
 
-draw_base() returns the map as standalone SVG in the style of a hand-coloured regional map: light
-parchment, green conifer woods, snow-capped grey mountains, blue lakes and rivers, tan roads and
-mist at the edges. It is generated from a fixed seed, so every build draws the same map. The
+draw_base() returns the map as standalone SVG, sketched in ink to lie on the parchment
+(static/images/map/parchment.jpg): ink-outlined conifers, hatched mountains, lakes and rivers drawn
+as one body of water, dirt roads, mist at the edges. Hand-drawn place sprites (data/map.yaml
+`sprites`) lie over it. It is generated from a fixed seed, so every build draws the same map. The
 geography follows where the table map puts things; nothing is traced. Places and the trail are an
 overlay (templates/_map.html), so this base stays a clean source map.
 
@@ -31,13 +32,14 @@ SEED = 1987
 
 INK = "#3b2a1a"        # outlines and lettering
 PAPER = "#ece2c8"
-TREE = "#3e5b3a"
+TREE = "#4f5e36"
 TREE_DARK = "#26382a"
-WATER = "#86a9c4"
+WATER = "#8fa9b3"
 WATER_EDGE = "#3f6684"
-ROAD = "#a8875a"
-SNOW = "#f4f3ef"
-ROCK = "#8f969b"
+ROAD = "#dcc79c"
+RUTS = "#a88a5c"
+SNOW = "#e9dcb8"
+ROCK = "#7a6a55"
 
 # --- geography (drawing space 1000 x 750, x east, y south) -------------------------------------
 
@@ -72,18 +74,21 @@ ROADS = {
     "Amber Temple road": [(240, 578), (288, 614), (330, 648), (352, 672), (362, 705), (366, 748)],
 }
 TRACKS = {
-    "Berez trail": [(350, 278), (366, 320), (368, 370), (352, 415), (330, 450)],
+    # Down the west bank of the Luna River to Berez: the trail keeps to the bank, never the water.
+    "Berez trail": [(350, 278), (340, 310), (345, 350), (342, 400), (330, 450)],
     "Lake Baratok trail": [(350, 278), (310, 250), (276, 232), (242, 225)],
     "Tower of Kazan spur": [(242, 225), (258, 214), (250, 202)],
     "Lake Baratok to the Raven River crossroads": [(242, 225), (231, 244), (220, 262)],
     "Wizard of Wines trail": [(150, 340), (130, 352), (110, 360)],
     "Yester Hill trail": [(150, 340), (130, 400), (100, 452), (70, 488)],
-    "Amber Temple trail": [(352, 672), (352, 652), (340, 638)],
-    "Tser Pool trail (to the camp)": [(680, 555), (676, 515), (670, 472)],
+    # The trail climbs about an hour and a half up into the peaks to the Amber Temple.
+    "Amber Temple trail": [(352, 672), (366, 662), (362, 648), (380, 640)],
+    # The Vistani camp sits on dry land just south of Tser Pool.
+    "Tser Pool trail (to the camp)": [(680, 555), (690, 530)],
 }
 # Drawn like tracks but never walked by the trail: the party never took them.
 UNUSED_TRACKS = {
-    "Tser Pool trail (past the pool)": [(670, 472), (648, 450), (622, 428), (600, 405)],
+    "Tser Pool trail (past the pool)": [(690, 530), (655, 515), (628, 485), (606, 448), (600, 405)],
 }
 
 LAKES = {
@@ -93,15 +98,25 @@ LAKES = {
     "Luna Lake": [(180, 588), (200, 576), (226, 578), (232, 596), (218, 612), (190, 612)],
     "Tser Pool": [(676, 455), (692, 450), (702, 466), (700, 494), (690, 508), (678, 496), (674, 478)],
     "": [(350, 462), (366, 456), (378, 466), (372, 480), (356, 480)],  # the marsh by Berez
+    # Two ponds in the hills along the branch of the Luna that feeds Tser Falls, as on the official
+    # map and the old Obsidian Portal map.
+    "Hill pond (west)": [(418, 372), (432, 364), (446, 370), (444, 386), (428, 390), (416, 384)],
+    "Hill pond (east)": [(478, 380), (492, 372), (504, 382), (502, 410), (494, 428), (484, 418), (480, 398)],
+    "Falls pond": [(550, 368), (566, 360), (582, 366), (580, 378), (562, 382)],
 }
 
 RIVERS = {
-    "Raven River": [(212, 192), (190, 230), (150, 256), (100, 264), (50, 262), (2, 260)],
+    "Raven River": [(212, 192), (196, 224), (178, 262), (150, 272), (100, 272), (50, 268), (2, 265)],
     "Luna River": [(338, 224), (352, 262), (362, 300), (366, 350), (360, 400), (345, 445), (330, 500),
                    (290, 560), (232, 588)],
     "Luna River (west)": [(180, 596), (130, 560), (70, 530), (2, 525)],
     "Ivlis River": [(700, 494), (740, 506), (780, 490), (840, 496), (910, 500), (998, 505)],
-    "Tser Falls": [(555, 320), (585, 370), (600, 405)],
+    # The water: Lake Zarovich drains south as the Luna; a branch of the Luna runs east through
+    # the hill ponds and over Tser Falls into Tser Pool, which drains east as the Ivlis.
+    "Tser Falls": [(366, 350), (400, 352), (432, 356), (470, 362), (520, 368), (566, 372), (582, 400),
+                   (600, 405)],
+    "To the west hill pond": [(432, 356), (431, 370)],
+    "To the east hill pond": [(470, 362), (490, 382)],
     "Below the falls": [(600, 405), (630, 440), (674, 470)],
     "Northern streams": [(392, 116), (388, 80), (380, 45), (378, 14)],
     "Northern streams 2": [(500, 116), (510, 80), (522, 45), (530, 14)],
@@ -127,6 +142,7 @@ MOUNTAINS = [  # (centre, radius, count, size)
     ((630, 270), 110, 26, 11),   # the highlands between Old Bonegrinder and the castle
     ((524, 286), 30, 14, 15),    # the hill the road climbs round, north of Old Bonegrinder
     ((700, 26), 60, 10, 22),     # Mount Baratok
+    ((394, 632), 34, 10, 16),    # the peaks the Amber Temple trail climbs into
 ]
 
 LABELS = [  # (text, (x, y), size, angle)
@@ -141,7 +157,7 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Mount Ghakis", (440, 714), 15, 0),
     ("Old Svalich Road", (872, 440), 10, -21),
     ("Tser Falls", (560, 420), 10, 0),
-    ("Gates of Barovia", (562, 352), 8.5, 0),
+    ("Gates of Barovia", (597, 318), 8.5, 0),
 ]
 
 
@@ -186,63 +202,135 @@ def near_line(point, line, distance) -> bool:
 
 
 def tree(rng: random.Random, x: float, y: float) -> str:
-    """A small conifer: two shades of green, the shadow side darker."""
+    """A small conifer sketched in ink: a wobbly two-tier outline over a green wash, a trunk tick."""
     h = rng.uniform(9, 13)
-    w = h * rng.uniform(0.36, 0.46)
-    return (f'<path d="M{x:.1f},{y - h:.1f} L{x - w:.1f},{y:.1f} L{x + w:.1f},{y:.1f} Z" fill="{TREE}"/>'
-            f'<path d="M{x:.1f},{y - h:.1f} L{x + w:.1f},{y:.1f} L{x + w * 0.15:.1f},{y:.1f} Z" fill="{TREE_DARK}"/>')
+    w = h * rng.uniform(0.34, 0.44)
+
+    def j() -> float:
+        return rng.uniform(-0.5, 0.5)
+
+    d = (f"M{x + j():.1f},{y - h:.1f} L{x - w * 0.6 + j():.1f},{y - h * 0.45:.1f} L{x - w * 0.25:.1f},{y - h * 0.48:.1f} "
+         f"L{x - w + j():.1f},{y:.1f} L{x + w + j():.1f},{y:.1f} L{x + w * 0.25:.1f},{y - h * 0.48:.1f} "
+         f"L{x + w * 0.6 + j():.1f},{y - h * 0.45:.1f} Z")
+    return (f'<g class="tree" data-xy="{x:.1f},{y:.1f}">'
+            f'<path d="{d}" fill="{TREE}" fill-opacity="0.78" stroke="{INK}" stroke-width="0.55" stroke-linejoin="round"/>'
+            f'<path d="M{x:.1f},{y:.1f} v2.2 M{x + w * 0.15:.1f},{y - h * 0.3:.1f} l{w * 0.5:.1f},{h * 0.25:.1f}" '
+            f'stroke="{INK}" stroke-width="0.5"/></g>')
 
 
 def mountain(rng: random.Random, x: float, y: float, size: float) -> str:
-    """A peak lit from the west: snow on the lit face, grey rock in shadow, a snow cap."""
+    """A peak sketched in ink: a ragged ridge with a shoulder, hatching down the shadowed east face."""
     w = size * rng.uniform(0.8, 1.15)
     h = size * rng.uniform(0.8, 1.15)
-    px = x + rng.uniform(-w * 0.12, w * 0.12)
-    lit = f"M{x - w:.1f},{y:.1f} L{px:.1f},{y - h:.1f} L{px + w * 0.1:.1f},{y:.1f} Z"
-    shade = f"M{px:.1f},{y - h:.1f} L{x + w:.1f},{y:.1f} L{px + w * 0.1:.1f},{y:.1f} Z"
-    outline = f"M{x - w:.1f},{y:.1f} L{px:.1f},{y - h:.1f} L{x + w:.1f},{y:.1f}"
-    return (f'<path d="{lit}" fill="{SNOW}"/><path d="{shade}" fill="{ROCK}"/>'
-            f'<path d="{outline}" fill="none" stroke="{INK}" stroke-width="0.9" stroke-linejoin="round"/>')
+    px = x + rng.uniform(-w * 0.15, w * 0.15)
+    sx, sy = px + w * rng.uniform(0.3, 0.5), y - h * rng.uniform(0.45, 0.6)
+    ridge = [(x - w, y), (x - w * 0.62, y - h * rng.uniform(0.3, 0.5)), (x - w * 0.35, y - h * rng.uniform(0.55, 0.7)),
+             (px, y - h), (px + w * 0.18, y - h * rng.uniform(0.75, 0.9)), (sx, sy),
+             (x + w * 0.75, y - h * rng.uniform(0.1, 0.25)), (x + w, y)]
+    pts = " ".join(f"{a + rng.uniform(-0.6, 0.6):.1f},{b + rng.uniform(-0.6, 0.6):.1f}" for a, b in ridge)
+    hatch = []
+    n = int(4 + size / 4)
+    for i in range(1, n):
+        t = i / n
+        ax, ay = px + (x + w - px) * t, (y - h) + h * t
+        hatch.append(f"M{ax:.1f},{ay:.1f} l{-w * 0.28 * (1 - t * 0.5):.1f},{h * 0.32 * (1 - t * 0.4):.1f}")
+    return (f'<polygon points="{pts}" fill="{SNOW}" fill-opacity="0.55"/>'
+            f'<path d="M{px:.1f},{y - h:.1f} L{sx:.1f},{sy:.1f} L{x + w:.1f},{y:.1f} L{px + w * 0.12:.1f},{y:.1f} Z" '
+            f'fill="{ROCK}" fill-opacity="0.28"/>'
+            f'<path d="{" ".join(hatch)}" stroke="{INK}" stroke-width="0.45" fill="none"/>'
+            f'<path d="M{px:.1f},{y - h:.1f} q{w * 0.05:.1f},{h * 0.4:.1f} {w * 0.12:.1f},{h * 0.75:.1f}" fill="none" '
+            f'stroke="{INK}" stroke-width="0.6"/>'
+            f'<polyline points="{pts}" fill="none" stroke="{INK}" stroke-width="0.95" stroke-linejoin="round" '
+            f'stroke-linecap="round"/>')
 
 
-def castle(x: float, y: float) -> str:
-    """Castle Ravenloft on its crag."""
-    stone, dark = "#9aa0a4", "#5d6468"
-    return (
-        f'<g stroke="{INK}" stroke-width="0.9" stroke-linejoin="round">'
-        f'<path d="M{x - 26},{y + 14} q8,-10 16,-12 q10,-4 14,-14 q6,8 16,10 q10,4 12,16 Z" fill="{dark}"/>'
-        f'<path d="M{x - 11},{y + 2} v-22 h22 v22 Z" fill="{stone}"/>'
-        f'<path d="M{x - 11},{y - 20} l11,-12 l11,12 Z" fill="{dark}"/>'
-        f'<path d="M{x - 21},{y + 4} v-16 h7 v16 Z M{x + 14},{y + 4} v-18 h7 v18 Z" fill="{stone}"/>'
-        f'<path d="M{x - 21},{y - 12} l3.5,-8 l3.5,8 Z M{x + 14},{y - 14} l3.5,-9 l3.5,9 Z" fill="{dark}"/>'
-        f'<path d="M{x - 3},{y + 2} v-7 h6 v7" fill="{INK}"/></g>')
+def smooth_points(points, n: int = 8) -> list[Point]:
+    """The Catmull-Rom curve smooth_path() draws, as points (n per span)."""
+    pts = list(points)
+    pts = pts[:1] + pts + pts[-1:]
+    out = [pts[1]]
+    for i in range(1, len(pts) - 2):
+        p0, p1, p2, p3 = pts[i - 1], pts[i], pts[i + 1], pts[i + 2]
+        c1 = (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6)
+        c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
+        for k in range(1, n + 1):
+            t = k / n
+            u = 1 - t
+            out.append((u ** 3 * p1[0] + 3 * u * u * t * c1[0] + 3 * u * t * t * c2[0] + t ** 3 * p2[0],
+                        u ** 3 * p1[1] + 3 * u * u * t * c1[1] + 3 * u * t * t * c2[1] + t ** 3 * p2[1]))
+    return out
 
 
-def gates(x: float, y: float, angle: float) -> str:
-    """A pair of gateposts across the road (the western gates of Barovia, by the castle fork)."""
-    return (f'<g transform="rotate({angle} {x} {y})" stroke="{INK}" stroke-width="0.7">'
-            f'<rect x="{x - 2}" y="{y - 11}" width="4" height="8" fill="#8a8f93"/>'
-            f'<rect x="{x - 2}" y="{y + 3}" width="4" height="8" fill="#8a8f93"/>'
-            f'<path d="M{x},{y - 3} v6" stroke-dasharray="1 1.2" fill="none"/></g>')
+def into_lakes(points) -> list[Point]:
+    """The river, with an end that stops at a lake's shore carried a little way into the lake."""
+    pts = list(points)
+    for end in (0, -1):
+        x, y = pts[end]
+        for shore in LAKES.values():
+            if inside((x, y), shore) or near_line((x, y), shore + shore[:1], 22):
+                cx = sum(a for a, _ in shore) / len(shore)
+                cy = sum(b for _, b in shore) / len(shore)
+                d = math.dist((x, y), (cx, cy)) or 1
+                inner = (x + (cx - x) / d * 12, y + (cy - y) / d * 12)
+                pts.insert(0, inner) if end == 0 else pts.append(inner)
+                break
+    return pts
 
 
-def manor(x: float, y: float) -> str:
-    """Durst Manor: a tall townhouse with a pointed roof, out past the gates in the mists."""
-    return (f'<g stroke="{INK}" stroke-width="0.8" stroke-linejoin="round">'
-            f'<path d="M{x - 8},{y + 2} v-16 h16 v16 Z" fill="#8a7e74"/>'
-            f'<path d="M{x - 10},{y - 14} l10,-10 l10,10 Z" fill="#4a3b33"/>'
-            f'<path d="M{x - 5},{y - 10} h3 v3 h-3 Z M{x + 2},{y - 10} h3 v3 h-3 Z M{x - 5},{y - 4} h3 v3 h-3 Z '
-            f'M{x + 2},{y - 4} h3 v3 h-3 Z" fill="#e9d79b" stroke-width="0.4"/></g>')
+def draw_water(rng: random.Random) -> str:
+    """Lakes and rivers as one body of water, in ink.
+
+    Every ink bank is drawn before any water, so where a river meets a lake or another river the
+    water runs on through without a seam. Rivers widen downstream; the wide ones carry faint pale
+    streaks of slow current, and the lakes ink contour lines inside the shore.
+    """
+    ink, water, rings, flow = [], [], [], []
+    for pts in LAKES.values():
+        shore = jitter(rng, [q for a, b in zip(pts, pts[1:] + pts[:1])
+                             for q in (a, ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2))], 2.2)
+        d = smooth_path(shore, closed=True)
+        ink.append(f'<path d="{d}" fill="none" stroke="{INK}" stroke-width="2.6" stroke-linejoin="round"/>')
+        water.append(f'<path d="{d}" fill="{WATER}"/>')
+        cx = sum(x for x, _ in pts) / len(pts)
+        cy = sum(y for _, y in pts) / len(pts)
+        for k, scale in enumerate((0.88, 0.77, 0.66)):
+            ring = [(cx + (x - cx) * scale, cy + (y - cy) * scale) for x, y in shore]
+            rings.append(f'<path d="{smooth_path(ring, closed=True)}" fill="none" stroke="{INK}" '
+                         f'stroke-width="0.45" stroke-opacity="{0.45 - k * 0.1:.2f}"/>')
+    for name, pts in RIVERS.items():
+        small = "streams" in name or name.startswith("To the")
+        line = smooth_points(into_lakes(pts), 10)
+        w0, w1 = (1.6, 2.6) if small else (2.6, 6.0)
+        step = 4
+        for i in range(0, len(line) - 1, step):
+            seg = line[i:i + step + 1]
+            w = w0 + (w1 - w0) * i / max(len(line) - 1, 1)
+            d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in seg)
+            ink.append(f'<path d="{d}" fill="none" stroke="{INK}" stroke-width="{w + 1.8:.2f}" '
+                       f'stroke-linecap="round" stroke-linejoin="round"/>')
+            water.append(f'<path d="{d}" fill="none" stroke="{WATER}" stroke-width="{w:.2f}" '
+                         f'stroke-linecap="round" stroke-linejoin="round"/>')
+        if not small:
+            d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in line[len(line) // 4:])
+            flow.append(f'<path d="{d}" fill="none" stroke="#dfe8ea" stroke-width="0.7" stroke-opacity="0.7" '
+                        f'stroke-dasharray="9 7 3 9" stroke-linecap="round"/>')
+    return "".join(ink + water + rings + flow)
 
 
-def village(rng: random.Random, x: float, y: float, n: int = 5) -> str:
-    """A cluster of roofs."""
-    out = []
-    for _ in range(n):
-        hx, hy = x + rng.uniform(-11, 11), y + rng.uniform(-8, 6)
-        out.append(f'<path d="M{hx - 3.5:.1f},{hy:.1f} v-4 l3.5,-3.5 l3.5,3.5 v4 Z" fill="#b9634a" '
-                   f'stroke="{INK}" stroke-width="0.6"/>')
-    return "".join(out)
+def draw_roads() -> str:
+    """Dirt roads with an ink edge and faint wheel ruts, every edge before any surface so junctions
+    join cleanly; tracks are dotted ink."""
+    roads = [smooth_path(p) for p in ROADS.values()]
+    casing = "".join(f'<path d="{d}" fill="none" stroke="{INK}" stroke-opacity="0.85" stroke-width="4.8" '
+                     f'stroke-linecap="round" stroke-linejoin="round"/>' for d in roads)
+    surface = "".join(f'<path d="{d}" fill="none" stroke="{ROAD}" stroke-width="3" stroke-linecap="round" '
+                      f'stroke-linejoin="round"/>' for d in roads)
+    ruts = "".join(f'<path d="{d}" fill="none" stroke="{RUTS}" stroke-width="0.6" stroke-dasharray="4 5" '
+                   f'stroke-opacity="0.7"/>' for d in roads)
+    tracks = "".join(f'<path d="{smooth_path(p)}" fill="none" stroke="{INK}" stroke-width="1.7" '
+                     f'stroke-dasharray="0.5 4.5" stroke-linecap="round"/>'
+                     for p in list(TRACKS.values()) + list(UNUSED_TRACKS.values()))
+    return casing + surface + ruts + tracks
 
 
 def compass(x: float, y: float, r: float) -> str:
@@ -281,14 +369,14 @@ def mists(rng: random.Random) -> str:
 
 # --- the base map --------------------------------------------------------------------------------
 
-def draw_base() -> str:
-    """The base map."""
+def draw_base(sprites: list[Sprite] = ()) -> str:
+    """The base map, drawn to lie on the parchment (static/images/map/parchment.jpg), under the sprites."""
     rng = random.Random(SEED)
     water = list(LAKES.values())
     lines = list(ROADS.values()) + list(TRACKS.values()) + list(UNUSED_TRACKS.values()) + list(RIVERS.values())
 
-    # Clearings around the buildings, so no tree or peak is drawn over them.
-    clearings = [((720, 392), 26), ((968, 337), 20), ((780, 456), 18), ((400, 248), 20), ((120, 238), 16), ((106, 372), 16), ((330, 370), 14), ((474, 298), 10)]
+    # Clearings under the sprites, so no tree or peak is drawn under a building.
+    clearings = [((sp.x, sp.y), max(sp.width, sp.height) * 0.45) for sp in sprites]
 
     def clear(point, margin=9) -> bool:
         return (not any(inside(point, lake) for lake in water)
@@ -303,31 +391,10 @@ def draw_base() -> str:
         if clear(p, 12) and not any(inside(p, poly) for poly in FORESTS):
             x, y = p
             marks.append(f"M{x:.1f},{y:.1f} l-2,-4 M{x + 2:.1f},{y:.1f} l0,-5 M{x + 4:.1f},{y:.1f} l2,-4")
-    parts.append(f'<path d="{" ".join(marks)}" fill="none" stroke="#9c9a6a" stroke-width="0.7"/>')
+    parts.append(f'<path d="{" ".join(marks)}" fill="none" stroke="#3b2a1a" stroke-opacity="0.45" stroke-width="0.55"/>')
 
-    for name, pts in LAKES.items():
-        shore = jitter(rng, [q for a, b in zip(pts, pts[1:] + pts[:1])
-                             for q in (a, ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2))], 3)
-        parts.append(f'<path d="{smooth_path(shore, closed=True)}" fill="{WATER}" stroke="{WATER_EDGE}" stroke-width="1.4"/>')
-        cx = sum(x for x, _ in pts) / len(pts)
-        cy = sum(y for _, y in pts) / len(pts)
-        ring = [(cx + (x - cx) * 0.72, cy + (y - cy) * 0.72) for x, y in shore]
-        parts.append(f'<path d="{smooth_path(ring, closed=True)}" fill="none" stroke="#b9d0e0" stroke-width="1" '
-                     f'stroke-dasharray="10 6"/>')
-    for name, pts in RIVERS.items():
-        width = 1.6 if "streams" in name else 2.8
-        parts.append(f'<path d="{smooth_path(jitter(rng, pts, 0.8))}" fill="none" stroke="{WATER_EDGE}" '
-                     f'stroke-width="{width + 1:.1f}" stroke-linecap="round"/>'
-                     f'<path d="{smooth_path(pts)}" fill="none" stroke="{WATER}" stroke-width="{width - 0.8:.1f}" '
-                     f'stroke-linecap="round"/>')
-
-    for pts in ROADS.values():
-        d = smooth_path(pts)
-        parts.append(f'<path d="{d}" fill="none" stroke="#6f5434" stroke-width="4" stroke-linecap="round"/>'
-                     f'<path d="{d}" fill="none" stroke="#d8c39a" stroke-width="2.4" stroke-linecap="round"/>')
-    for pts in list(TRACKS.values()) + list(UNUSED_TRACKS.values()):
-        parts.append(f'<path d="{smooth_path(pts)}" fill="none" stroke="#6f5434" stroke-width="1.6" '
-                     f'stroke-dasharray="1 5" stroke-linecap="round"/>')
+    parts.append(draw_water(rng))
+    parts.append(draw_roads())
 
     # Mountains, back to front.
     peaks = []
@@ -356,13 +423,6 @@ def draw_base() -> str:
     trees.sort(key=lambda p: p[1])
     parts.append("".join(tree(rng, x, y) for x, y in trees))
 
-    parts.append(castle(720, 398))
-    parts.append(manor(968, 345))
-    parts.append(gates(597, 347, -40))
-    for x, y in [(780, 450), (400, 238), (120, 232)]:
-        parts.append(village(rng, x, y + 12, 6))
-    parts.append(f'<path d="M94,366 h12 v10 h-12 Z M108,370 h10 v7 h-10 Z" fill="#8b5a3c" stroke="{INK}" stroke-width="0.6"/>')
-
     for text, (x, y), size, angle in LABELS:
         parts.append(f'<text x="{x}" y="{y}" font-size="{size}" text-anchor="middle" font-style="italic" '
                      f'transform="rotate({angle} {x} {y})" fill="{INK}" stroke="{PAPER}" stroke-width="3.5" '
@@ -381,16 +441,11 @@ def draw_base() -> str:
                  f'About 5 hours on foot, roughly</text>')
     parts.append("".join(scale))
 
-    defs = (
-        '<radialGradient id="paper" cx="50%" cy="46%" r="75%">'
-        f'<stop offset="0" stop-color="{PAPER}"/><stop offset="0.75" stop-color="#e2d4b2"/>'
-        '<stop offset="1" stop-color="#c9b48a"/></radialGradient>' + mist_defs
-    )
+    defs = mist_defs
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
         f'font-family="\'Palatino Linotype\', Palatino, \'Book Antiqua\', Georgia, serif">'
         f'<title>Barovia, drawn for the Owlbear Chronicles</title><defs>{defs}</defs>'
-        f'<rect width="{W}" height="{H}" fill="url(#paper)"/>'
         + "".join(parts)
         + f'<rect x="8" y="8" width="{W - 16}" height="{H - 16}" fill="none" stroke="{INK}" stroke-width="2"/>'
           f'<rect x="13" y="13" width="{W - 26}" height="{H - 26}" fill="none" stroke="{INK}" stroke-width="0.6"/>'
@@ -437,6 +492,43 @@ def route(graph, start: Point, end: Point) -> list[Point] | None:
                 came[there] = here
                 heapq.heappush(queue, (dist + step, there))
     return None
+
+
+# --- sprites -------------------------------------------------------------------------------------
+
+@dataclass
+class Sprite:
+    """A hand-drawn picture of a place, laid on the map over the base (data/map.yaml `sprites`)."""
+    name: str
+    image: str      # file stem in static/images/map/sprites/ (.webp)
+    x: float        # centre of the picture, in the map's drawing space
+    y: float
+    width: float
+    height: float   # from the image's own shape
+
+    @property
+    def box(self) -> tuple[float, float, float, float]:
+        return (round(self.x - self.width / 2, 1), round(self.y - self.height / 2, 1),
+                round(self.width, 1), round(self.height, 1))
+
+
+def load_sprites(path: Path, sprite_dir: Path) -> list[Sprite]:
+    if not path.exists():
+        return []
+    from PIL import Image
+
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    out = []
+    for name, spec in (data.get("sprites") or {}).items():
+        file = sprite_dir / f"{spec['image']}.webp"
+        if not file.exists():
+            raise ValueError(f"{path.name}: sprite {name}: no sprite image {file.name}")
+        with Image.open(file) as im:
+            iw, ih = im.size
+        x, y = spec["xy"]
+        width = float(spec["width"])
+        out.append(Sprite(str(name), str(spec["image"]), float(x), float(y), width, round(width * ih / iw, 1)))
+    return out
 
 
 # --- places and the trail -----------------------------------------------------------------------

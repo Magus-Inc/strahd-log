@@ -1,3 +1,4 @@
+import math
 import re
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -104,13 +105,18 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     write(root / "content" / "wiki" / "vallaki.md", "---\ntitle: Vallaki\ntype: place\n---\n")
     write(root / "content" / "wiki" / "blue-water-inn.md", "---\ntitle: Blue Water Inn\ntype: place\n---\n")
     write(root / "data" / "map.yaml", "places:\n  barovia: {xy: [780, 450], names: [Village of Barovia]}\n  vallaki: {xy: [400, 270]}\n"
-                                      "within:\n  blue-water-inn: vallaki\n")
+                                      "within:\n  blue-water-inn: vallaki\n"
+                                      "sprites:\n  vallaki: {image: vallaki, xy: [400, 260], width: 60}\n")
     out = root / "public"
     build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
 
     assert (out / "map" / "barovia.svg").is_file()
     page_html = (out / "map" / "index.html").read_text(encoding="utf-8")
     assert 'href="/strahd-log/map/barovia.svg"' in page_html and 'class="crumb' in page_html
+    # The parchment lies under the drawing, and the sprites over it, under the trail and the pins.
+    assert page_html.index("images/map/parchment.jpg") < page_html.index("map/barovia.svg") \
+        < page_html.index('href="/strahd-log/images/map/sprites/vallaki.webp" x="370.0"') < page_html.index('class="trail"')
+    assert (out / "images" / "map" / "sprites" / "vallaki.webp").is_file()
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
@@ -262,7 +268,7 @@ def test_the_trail_past_tser_pool_is_drawn_but_never_walked():
         assert inner and not any(p in graph for p in inner)
     assert "stroke-dasharray" in barovia_map.draw_base()
     # From the Tser Pool camp to the fork below the falls, the party goes back round by the road.
-    path = barovia_map.route(graph, (670, 472), (600, 405))
+    path = barovia_map.route(graph, (690, 530), (600, 405))
     assert (680, 555) in path
 
 
@@ -272,3 +278,156 @@ def test_scale_bar_reads_in_hours_that_fit_the_roads():
     assert abs(statistics.median(per_hour) - barovia_map.HOUR) <= 4
     svg = barovia_map.draw_base()
     assert "About 5 hours on foot" in svg and "Miles" not in svg
+
+
+# --- the hand-drawn look: one water network, roads that only cross it, sprites -------------------
+
+def touches(point, line, within=3.0):
+    return barovia_map.near_line(point, line, within)
+
+
+def test_water_is_one_network_like_the_official_and_old_maps():
+    lakes, rivers = barovia_map.LAKES, barovia_map.RIVERS
+
+    def ends_somewhere(name, end):
+        x, y = end
+        return (x <= 2 or x >= barovia_map.W - 2 or y <= 14
+                or any(touches(end, shore + shore[:1], 14) or barovia_map.inside(end, shore) for shore in lakes.values())
+                or any(touches(end, line) for other, line in rivers.items() if other != name))
+
+    for name, line in rivers.items():
+        assert ends_somewhere(name, line[0]) and ends_somewhere(name, line[-1]), name
+
+    # Both sources: Tser Falls is fed by a branch of the Luna River, not a spring, and Tser Pool
+    # drains east as the River Ivlis.
+    branch = rivers["Tser Falls"]
+    assert touches(branch[0], rivers["Luna River"])
+    assert touches(branch[-1], rivers["Below the falls"]) or branch[-1] == rivers["Below the falls"][0]
+    assert barovia_map.inside(rivers["Below the falls"][-1], lakes["Tser Pool"]) or \
+        touches(rivers["Below the falls"][-1], lakes["Tser Pool"] + lakes["Tser Pool"][:1], 14)
+    assert touches(rivers["Ivlis River"][0], lakes["Tser Pool"] + lakes["Tser Pool"][:1], 14)
+    # Two ponds sit in the hills along the branch, as on both maps.
+    assert len([n for n in lakes if n.startswith("Hill pond")]) == 2
+
+
+def test_roads_and_trails_only_cross_water_never_run_along_it():
+    roads = {**barovia_map.ROADS, **barovia_map.TRACKS, **barovia_map.UNUSED_TRACKS}
+    for road, line in roads.items():
+        for river, water in barovia_map.RIVERS.items():
+            close = 0.0
+            for a, b in zip(line, line[1:]):
+                steps = max(int(math.dist(a, b)), 1)
+                for k in range(steps):
+                    p = (a[0] + (b[0] - a[0]) * k / steps, a[1] + (b[1] - a[1]) * k / steps)
+                    close += barovia_map.near_line(p, water, 7)
+            assert close < 16, f"{road} runs along {river} for about {close:.0f} units"
+        for lake, shore in barovia_map.LAKES.items():
+            assert not any(barovia_map.inside(p, shore) for p in line), f"{road} goes into {lake or 'a pond'}"
+
+
+def test_tser_pool_camp_sits_south_of_the_pool_on_dry_land():
+    import yaml
+    xy = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["places"]["tser-pool"]["xy"]
+    pool = barovia_map.LAKES["Tser Pool"]
+    assert not barovia_map.inside(tuple(xy), pool)
+    assert xy[1] > max(y for _, y in pool)
+
+
+def test_amber_temple_trail_climbs_into_the_mountains_for_about_an_hour_and_a_half():
+    line = barovia_map.TRACKS["Amber Temple trail"]
+    hours = barovia_map.path_length(line) / barovia_map.HOUR
+    assert 1.2 <= hours <= 2.0
+    top = line[-1]
+    assert any(math.dist(top, centre) <= radius for centre, radius, _, _ in barovia_map.MOUNTAINS)
+
+
+def test_sprites_load_with_their_sizes_and_clear_the_woods(tmp_path):
+    from PIL import Image
+    sprite_dir = tmp_path / "sprites"
+    sprite_dir.mkdir()
+    Image.new("RGBA", (200, 100)).save(sprite_dir / "keep.webp")
+    path = write(tmp_path / "map.yaml", "sprites:\n  # the castle\n  castle: {image: keep, xy: [720, 400], width: 80}\n")
+    sprites = barovia_map.load_sprites(path, sprite_dir)
+    assert [(s.name, s.image, s.x, s.y, s.width, s.height) for s in sprites] == [("castle", "keep", 720, 400, 80, 40)]
+    with pytest.raises(ValueError, match="no sprite image"):
+        barovia_map.load_sprites(write(tmp_path / "bad.yaml", "sprites:\n  x: {image: nope, xy: [1, 2], width: 9}\n"),
+                                 sprite_dir)
+    svg = barovia_map.draw_base(sprites)
+    assert svg == barovia_map.draw_base(sprites)
+    trees = [tuple(map(float, m)) for m in re.findall(r'class="tree" data-xy="([\d.]+),([\d.]+)"', svg)]
+    assert trees and not any(math.dist(t, (720, 400)) < 30 for t in trees)
+
+
+def test_every_real_sprite_has_its_image():
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    names = {s.name for s in sprites}
+    assert {"castle-ravenloft", "vallaki", "gates-west", "gates-east", "tser-pool", "amber-temple"} <= names
+
+
+def test_sprite_editor_rewrites_one_line_and_keeps_comments():
+    import map_editor
+    text = ("places:\n  vallaki: {xy: [400, 250]}\n\nsprites:\n  # Vallaki, walls and all\n"
+            "  vallaki: {image: vallaki, xy: [400, 240], width: 60}\n  castle: {image: c, xy: [1, 2], width: 9}\n")
+    out = map_editor.move_sprite(text, "vallaki", (412.46, 236.2), 72.04)
+    assert out == text.replace("xy: [400, 240], width: 60", "xy: [412.5, 236.2], width: 72")
+    with pytest.raises(KeyError):
+        map_editor.move_sprite(text, "nowhere", (1, 2), 3)
+
+
+def crossings(line, water):
+    found = []
+    for p1, p2 in zip(line, line[1:]):
+        for p3, p4 in zip(water, water[1:]):
+            d = (p2[0] - p1[0]) * (p4[1] - p3[1]) - (p2[1] - p1[1]) * (p4[0] - p3[0])
+            if not d:
+                continue
+            t = ((p3[0] - p1[0]) * (p4[1] - p3[1]) - (p3[1] - p1[1]) * (p4[0] - p3[0])) / d
+            u = ((p3[0] - p1[0]) * (p2[1] - p1[1]) - (p3[1] - p1[1]) * (p2[0] - p1[0])) / d
+            if 0 <= t <= 1 and 0 <= u <= 1:
+                found.append((p1[0] + t * (p2[0] - p1[0]), p1[1] + t * (p2[1] - p1[1])))
+    return found
+
+
+def test_roads_cross_water_only_where_the_official_map_does():
+    # Read off the official map and the old Obsidian Portal map (both agree): the Old Svalich Road
+    # bridges the Luna at the Luna River crossroads and the Raven River between the Raven River
+    # crossroads and Krezk; the loop road crosses the Tser Falls water at the falls; the road from the
+    # village to the River Ivlis crossroads bridges the Ivlis; the road past Tsolenka Pass crosses the
+    # Luna where it runs into Luna Lake. The trail past Tser Pool meets the road on the falls bridge.
+    rivers = {name: ("Tser Falls" if name == "Below the falls" else name) for name in barovia_map.RIVERS}
+    roads = {**barovia_map.ROADS, **barovia_map.TRACKS, **barovia_map.UNUSED_TRACKS}
+    found = {}
+    for road, line in roads.items():
+        for river, water in barovia_map.RIVERS.items():
+            for point in crossings(line, water):
+                found.setdefault((road, rivers[river]), []).append(point)
+    assert set(found) == {
+        ("Old Svalich Road (the lake shore)", "Luna River"),
+        ("Old Svalich Road (west)", "Raven River"),
+        ("The loop past Tser Falls", "Tser Falls"),
+        ("Village to the Ivlis crossroads", "Ivlis River"),
+        ("Amber Temple road", "Luna River"),
+        ("Tser Pool trail (past the pool)", "Tser Falls"),
+    }
+    # The Luna crossing is at the Luna River crossroads, and every crossing has its bridge.
+    luna = found[("Old Svalich Road (the lake shore)", "Luna River")][0]
+    assert math.dist(luna, (350, 278)) < 10
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    bridges = [(s.x, s.y) for s in sprites if s.image == "bridge"]
+    for (road, river), points in found.items():
+        for point in points:
+            assert any(math.dist(point, b) < 10 for b in bridges), f"no bridge where {road} crosses {river}"
+
+
+def test_sprite_cutting_keeps_the_drawing_solid_and_fades_the_edge():
+    from PIL import Image, ImageDraw
+    import make_sprites
+    cell = Image.new("RGB", (120, 120), "white")
+    ImageDraw.Draw(cell).rectangle((30, 30, 90, 90), fill=(90, 70, 50))
+    sprite = make_sprites.cut(cell)
+    alpha = sprite.getchannel("A")
+    w, h = sprite.size
+    assert alpha.getpixel((0, 0)) == 0 and alpha.getpixel((w // 2, h // 2)) == 255
+    edge = [alpha.getpixel((x, h // 2)) for x in range(w // 2)]
+    assert any(0 < a < 255 for a in edge) or edge.count(0) > 1   # a dithered edge, not a hard cut
+    assert set(make_sprites.SHEETS) == {p.name for p in (ROOT / "tools" / "sprite_sheets").iterdir()}
