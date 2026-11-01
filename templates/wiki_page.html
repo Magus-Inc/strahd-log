@@ -29,9 +29,9 @@
 {% if page.mentioned_in %}
       <section class="appears-in">
         <h2>Appears in {{ page.mentioned_in | length }} session{{ "s" if page.mentioned_in | length != 1 }}</h2>
-        <ol class="session-list">
+        <ol class="session-list numbered">
 {% for post in page.mentioned_in %}
-          <li><a href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time> {{ badges.slides_tag(post) }}</li>
+          <li><span class="num">{{ post.number }}</span><a href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time> {{ badges.slides_tag(post) }}</li>
 {% endfor %}
         </ol>
       </section>

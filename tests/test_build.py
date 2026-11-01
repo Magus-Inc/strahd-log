@@ -593,3 +593,26 @@ def test_picture_count_is_the_icon_and_number_only(badge_site):
     assert re.fullmatch(r"<svg[^>]*>.*</svg>2", count.group(2), re.S)  # no word, just icon and number
     search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
     assert "PICTURE_ICON + h.e.n + \"</span>\"" in search
+
+
+def test_real_map_and_wiki_share_session_numbers(real_site):
+    """Map markers carry the same session numbers as the wiki citations, and every session is on the map."""
+    posts = sorted(build.load_posts(build.ROOT / "content" / "posts"), key=lambda p: (p.date, p.slug))
+    number = {p.slug: i for i, p in enumerate(posts, 1)}
+    map_page = (real_site / "map" / "index.html").read_text(encoding="utf-8")
+    listed = dict((s, int(n)) for n, s in re.findall(r'class="num">(\d+)</span><a href="/posts/([^"]+)/"', map_page))
+    assert listed and all(number[s] == n for s, n in listed.items())
+    assert listed == number  # Skeletal Rider sits at Tser Pool (Chris, 2026-11-01)
+    last = max(listed.values())
+    assert f'max="{last}" value="{last}"' in map_page
+    # The slider's "Session N" line can name every session up to the last on the map, by number.
+    data = json.loads(re.search(r"var data = (.*);\n", map_page).group(1))
+    assert len(data["legs"]) >= last and data["legs"][number["skeletal-rider"] - 1]["u"] == "posts/skeletal-rider/"
+    # Wiki pages cite by the same number, and no "(Post Title)" bracket is left in a page's text.
+    icon = (real_site / "wiki" / "icon-of-dawns-grace" / "index.html").read_text(encoding="utf-8")
+    prose = icon.split('<div class="prose">', 1)[1].split("</div>", 1)[0]
+    cites = re.findall(r'<a class="cite" href="/posts/([^"]+)/"[^>]*>(\d+)</a>', prose)
+    assert cites and all(number[s] == int(n) for s, n in cites)
+    left = [p.relative_to(real_site).as_posix() for p in (real_site / "wiki").rglob("index.html")
+            if re.search(r'\(<a href="/posts/', p.read_text(encoding="utf-8").split('<div class="prose">', 1)[-1].split("</div>", 1)[0])]
+    assert left == []

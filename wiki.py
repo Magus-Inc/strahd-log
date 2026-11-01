@@ -55,6 +55,7 @@ class WikiPage:
     body_md: str = ""
     html: str = ""
     mentioned_in: list = field(default_factory=list)  # posts, newest first
+    cited_html: str = ""  # html with "(Session Title)" links as session numbers, set by the build
     thumb: str = ""  # small copy of the first picture for list cards (images/thumbs/...), set by the build
 
     @property
@@ -203,6 +204,31 @@ def link_npc_names(html: str, linker: Linker) -> str:
         return "<strong>" + linker.pattern.sub(linker.anchor, inner) + "</strong>"
 
     return NPC_SECTION.sub(lambda m: m.group(1) + re.sub(r"<strong>(.*?)</strong>", strong, m.group(3), flags=re.S), html)
+
+# A session reference as the wiki writes it: "(Title)" or "(Title, Title; Title)", each a link to a post,
+# with nothing else inside the brackets. The space before the bracket goes too, so the marker hugs the word.
+POST_LINK = r'<a href="/posts/([^"/]+)/">([^<]*)</a>'
+# A short note after the links, such as a date ("..., February 2025"), stays behind in brackets.
+CITATION = re.compile(rf" ?\(({POST_LINK}(?:[,;] {POST_LINK})*)(?:, ([^()<>]{{1,40}}))?\)")
+
+
+def cite_sessions(html: str, marker, sep: str = "") -> tuple[str, list[str]]:
+    """Turn bracketed session links into small markers: marker(post slug, plain title) -> HTML.
+
+    Returns the new HTML and the cited post slugs in the order first cited."""
+    cited: list[str] = []
+
+    def replace(match: re.Match) -> str:
+        parts = []
+        for slug, title in re.findall(POST_LINK, match.group(1)):
+            if slug not in cited:
+                cited.append(slug)
+            parts.append(marker(slug, htmllib.unescape(title)))
+        note = match.group(match.re.groups) or ""  # the last group: the note after the links
+        return sep.join(parts) + (f" ({note})" if note else "")
+
+    return CITATION.sub(replace, html), cited
+
 
 def plain_text(html: str) -> str:
     """Rendered HTML -> plain text for the search index."""

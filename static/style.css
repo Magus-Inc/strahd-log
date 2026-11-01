@@ -158,8 +158,15 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 .prose th, .prose td { border-bottom: 1px solid var(--line); padding: 0.5rem 0.7rem; text-align: left; }
 .prose th { color: var(--muted); font-weight: 600; }
 .prose hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
-.prose a.wiki-link { color: var(--text); text-decoration: underline dotted rgba(224, 74, 99, 0.7); text-underline-offset: 0.22em; }
-.prose a.wiki-link:hover { color: #fff; text-decoration-style: solid; }
+/* A wiki name reads as a keyword: gold, like the list badges. */
+.prose a.wiki-link { color: var(--gold); text-decoration: none; }
+.prose a.wiki-link:hover, .prose a.wiki-link:focus-visible { color: #f0d48e; text-decoration: underline; text-underline-offset: 0.2em; }
+/* A session citation on a wiki page: the session's number in a small red dot, like the map's markers. */
+/* Plain inline (not inline-block), so the word joiner before it keeps it on the line of the word it follows. */
+.prose a.cite { display: inline; padding: 0.18em 0.42em; margin-left: 0.15em; border-radius: 999px;
+  background: rgba(200, 33, 63, 0.22); color: #f2c6ce; font-size: 0.68rem; font-weight: 700; line-height: 1;
+  text-decoration: none; vertical-align: 0.18em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.prose a.cite:hover, .prose a.cite:focus-visible { background: var(--accent); color: #fff; }
 .callout.glance {
   background: linear-gradient(180deg, rgba(143, 16, 39, 0.16), rgba(143, 16, 39, 0.06)); border: 1px solid rgba(200, 33, 63, 0.35);
   border-radius: var(--radius); padding: 1rem 1.3rem 0.6rem; margin: 0 0 2rem;

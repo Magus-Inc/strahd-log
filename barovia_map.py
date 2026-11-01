@@ -644,15 +644,16 @@ def trail(posts: list, places: dict[str, Place], parent: dict[str, str], pages: 
     """[{post, n, stops, segments, marker}] oldest first; also fills each Place.sessions.
 
     A post listed in `visits` uses that list (an empty list means "nowhere on the map"); any other
-    post falls back to the places it mentions, in order. n numbers the sessions on the map.
+    post falls back to the places it mentions, in order. n is the session's number among all sessions,
+    on the map or not, so the map's numbers match the wiki's session citations.
     """
     visits = visits or {}
     legs = []
-    for post in sorted(posts, key=lambda p: (p.date, p.slug)):
+    for number, post in enumerate(sorted(posts, key=lambda p: (p.date, p.slug)), 1):
         stem = post.source.stem if post.source else post.slug
         here = visits[stem] if stem in visits else stops(wiki.plain_text(post.html), places, parent, pages)
         if here:
-            legs.append({"post": post, "n": len(legs) + 1, "stops": here})
+            legs.append({"post": post, "n": number, "stops": here})
             for slug in here:
                 places[slug].sessions.insert(0, post)
     add_route(legs, places)

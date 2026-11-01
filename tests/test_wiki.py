@@ -399,3 +399,79 @@ def test_every_player_character_has_a_picture():
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
     missing = sorted(p.slug for p in pages if p.type == "character" and not p.pictures)
     assert not missing, f"add a picture to: {missing}"
+
+
+# --- session citations -------------------------------------------------------------------------
+
+def mark(slug, title):
+    return f"[{slug}]"
+
+
+def test_session_citations_become_markers_that_hug_the_word():
+    html = '<p>We met him (<a href="/posts/a/">Night A</a>). Then left.</p>'
+    out, cited = wiki.cite_sessions(html, mark)
+    assert out == "<p>We met him[a]. Then left.</p>"
+    assert cited == ["a"]
+
+
+def test_several_sessions_in_one_bracket_each_get_a_marker():
+    html = ('<li>Fought. (<a href="/posts/a/">A</a>, <a href="/posts/b/">The B, part 2</a>; '
+            '<a href="/posts/a/">A</a>)</li>')
+    out, cited = wiki.cite_sessions(html, lambda s, t: f"<{s}>", sep="|")
+    assert out == "<li>Fought.<a>|<b>|<a></li>"
+    assert cited == ["a", "b"]
+
+
+def test_brackets_with_other_words_or_wiki_links_are_left_alone():
+    html = ('<p>Old (see <a href="/posts/a/">A</a>) and (<a href="/wiki/x/">X</a>) '
+            'and <a href="/posts/b/">B</a> in running text.</p>')
+    out, cited = wiki.cite_sessions(html, mark)
+    assert out == html and cited == []
+
+
+def test_citation_titles_with_markup_entities_still_match():
+    html = '<p>It spoke (<a href="/posts/s/">The Shard&rsquo;s Warning &amp; Madness</a>).</p>'
+    out, cited = wiki.cite_sessions(html, lambda s, t: f"[{t}]")
+    assert out == "<p>It spoke[The Shard’s Warning & Madness].</p>"
+
+
+def test_wiki_pages_cite_sessions_by_number_and_number_the_appears_in_list(site):
+    write(site / "content" / "posts" / "2024-03-05-third.md",
+          "---\ntitle: The Third Night\ndate: '2024-03-05T21:00:00-06:00'\n---\n\nNothing named here.\n")
+    write(site / "content" / "wiki" / "strahd.md",
+          "---\ntitle: Strahd\ntype: npc\n---\n\nThe vampire watched us ([Second](/posts/second/)) and spoke "
+          "([First Night](/posts/first/), [The Third Night](/posts/third/)).\n\n"
+          "* Seen at the gates. ([Second](/posts/second/))\n")
+    out = site / "public"
+    build.build(site / "content" / "posts", out, site_url="https://log.example", base_path="/strahd-log/")
+    strahd = (out / "wiki" / "strahd" / "index.html").read_text(encoding="utf-8")
+    prose = strahd.split('<div class="prose">', 1)[1].split("</div>", 1)[0]
+    # Sessions are numbered in date order: First 1, Second 2, Third 3. The number opens the post.
+    assert ('watched us&#8288;<a class="cite" href="/strahd-log/posts/second/" title="Session 2: Second" '
+            'aria-label="Session 2: Second">2</a> and') in prose
+    assert 'spoke&#8288;<a class="cite" href="/strahd-log/posts/first/"' in prose and ">1</a>&#8288;<a class=\"cite\"" in prose
+    assert "Seen at the gates.&#8288;<a class=\"cite\"" in prose
+    assert "(" not in prose and "The Third Night" not in prose.replace('title="Session 3: The Third Night"', "").replace(
+        'aria-label="Session 3: The Third Night"', "")
+    # The Appears-in list carries the same numbers, and takes in a session cited but never named.
+    appears = strahd.split('class="appears-in"', 1)[1]
+    assert "Appears in 3 sessions" in appears
+    assert '<span class="num">3</span><a href="/strahd-log/posts/third/">' in appears
+    assert '<span class="num">1</span><a href="/strahd-log/posts/first/">' in appears
+    # The search index keeps the readable titles, not bare numbers.
+    entries = {e["t"]: e for e in json.loads((out / "search-index.json").read_text(encoding="utf-8"))}
+    assert "watched us (Second)" in entries["Strahd"]["x"]
+
+
+def test_wiki_links_are_gold_and_citations_are_red_dots():
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    link = re.search(r"\.prose a\.wiki-link \{([^}]*)\}", css).group(1)
+    assert "var(--gold)" in link and "dotted" not in link
+    cite = re.search(r"\.prose a\.cite \{([^}]*)\}", css)
+    assert cite and "border-radius" in cite.group(1)
+
+
+def test_a_date_after_the_session_link_stays_in_brackets():
+    html = '<p>She died at the gallows (<a href="/posts/a/">A</a>, February 2025). Later.</p>'
+    out, cited = wiki.cite_sessions(html, mark)
+    assert out == "<p>She died at the gallows[a] (February 2025). Later.</p>" and cited == ["a"]

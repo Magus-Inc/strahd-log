@@ -11,7 +11,7 @@
     <div class="map-controls">
       <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
       <label class="switch"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
-      <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs | length }}" value="{{ legs | length }}"> <output id="trail-n">{{ legs | length }}</output></label>
+      <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}"> <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></label>
       <p class="trail-now" id="trail-now" aria-live="polite"></p>
     </div>
     {{ barovia(places, legs, interactive=True) }}
