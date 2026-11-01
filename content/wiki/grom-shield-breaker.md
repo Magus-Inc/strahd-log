@@ -10,6 +10,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ## Description
 
+![Grom Shield-Breaker, a hill dwarf fighter with shield and axe, holding up his family tooth](/images/grom-shield-breaker-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs.*
 
 A hill dwarf fighter from the party's early days in Barovia. As the party tells it, Grom had always been with them. Like every member of his family, he carries a tooth. He challenged the hidden scouts on the road to Tser Pool and won the Vistani storytelling game at their camp.

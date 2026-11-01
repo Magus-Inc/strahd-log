@@ -7,6 +7,12 @@ summary: An ossuary in Castle Ravenloft decorated with human remains.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Hall of Bones, an ossuary of skulls and bones lit by candles](/images/hall-of-bones-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

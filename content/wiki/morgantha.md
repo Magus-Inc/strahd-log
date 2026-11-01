@@ -8,6 +8,12 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/morgantha
 ---
 
+## Description
+
+![Morgantha, an old hag at her pastry cart on a forest road, the windmill behind her](/images/morgantha-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 Morgantha is a Hag or Witch that sells Dream Pies
 
 <!-- from-the-log -->

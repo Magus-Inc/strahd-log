@@ -22,6 +22,10 @@ Aera's pseudodragon companion. Aera found her when the party first explored Argy
 
 ## Description
 
+![Zorya, a tiny ghostly pseudodragon, hovering in a ruined hall at Argynvostholt](/images/zorya-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 When we first explored Argynvostholt, a pseudodragon found Aera and began to follow her, drawn to her somehow ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). Zorya has been with her ever since, and she serves as Aera's eyes in the dark ([Unwelcome Guests](/posts/unwelcome-guests/)). In the chaos of the fight with Rahadin in Castle Ravenloft, Aera sent her to scout for Gertruda ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).

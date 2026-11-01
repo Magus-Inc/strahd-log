@@ -5,6 +5,12 @@ summary: The original mage tied to the ring's symbol and the Tower of Khazan.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Khazan's tomb: a skeleton with opal eyes, eight glowing runes and the platinum staff appearing](/images/khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

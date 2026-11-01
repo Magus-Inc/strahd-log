@@ -392,3 +392,10 @@ def test_pages_in_five_or_more_sessions_have_a_picture():
     build.link_wiki(posts, pages)
     missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 5 and not p.pictures and not p.narrator)
     assert not missing, f"add a picture to: {missing}"
+
+
+def test_every_player_character_has_a_picture():
+    """Chris (2026-11-01): every PC, current or former, has a picture on its wiki page."""
+    pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
+    missing = sorted(p.slug for p in pages if p.type == "character" and not p.pictures)
+    assert not missing, f"add a picture to: {missing}"

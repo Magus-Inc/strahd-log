@@ -5,6 +5,12 @@ summary: A worker repairing St. Andral's Church, suspected in the bone theft.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Milivoj, black-haired in a grey cloak, carrying planks past St. Andral's Church](/images/milivoj-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

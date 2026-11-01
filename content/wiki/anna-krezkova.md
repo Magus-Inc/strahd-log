@@ -8,6 +8,12 @@ summary: Dmitri's wife.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Anna Krezkova in snowy Krezk with wolfsbane, a white feather at her feet](/images/anna-krezkova-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

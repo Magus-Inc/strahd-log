@@ -8,6 +8,12 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/father-donavich
 ---
 
+## Description
+
+![Father Donavich praying in his church beside the latched trapdoor](/images/father-donavich-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 Priest in the village of Barovia of the land Barovia. Father to Doru.
 
 <!-- from-the-log -->

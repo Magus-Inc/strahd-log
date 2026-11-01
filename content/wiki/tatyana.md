@@ -5,6 +5,12 @@ summary: Bride of Prince Sergei.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![A portrait of Tatyana, red-haired, wearing a silver moon-and-stars bracelet](/images/tatyana-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 
