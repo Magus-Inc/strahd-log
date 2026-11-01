@@ -596,13 +596,13 @@ def test_picture_count_is_the_icon_and_number_only(badge_site):
 
 
 def test_real_map_and_wiki_share_session_numbers(real_site):
-    """Skeletal Rider is off the map, but keeps its number: later map markers match the wiki citations."""
+    """Map markers carry the same session numbers as the wiki citations, and every session is on the map."""
     posts = sorted(build.load_posts(build.ROOT / "content" / "posts"), key=lambda p: (p.date, p.slug))
     number = {p.slug: i for i, p in enumerate(posts, 1)}
     map_page = (real_site / "map" / "index.html").read_text(encoding="utf-8")
     listed = dict((s, int(n)) for n, s in re.findall(r'class="num">(\d+)</span><a href="/posts/([^"]+)/"', map_page))
     assert listed and all(number[s] == n for s, n in listed.items())
-    assert "skeletal-rider" not in listed
+    assert listed == number  # Skeletal Rider sits at Tser Pool (Chris, 2026-11-01)
     last = max(listed.values())
     assert f'max="{last}" value="{last}"' in map_page
     # The slider's "Session N" line can name every session up to the last on the map, by number.

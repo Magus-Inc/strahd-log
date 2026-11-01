@@ -17,7 +17,7 @@ sessions:
   2024-03-26-leaving-village-barovia: [barovia]   # Doru dissolved in stream, shopping; "At noon we ... ventured forth towards Tser pool" (ends at the oak, not on map)
   2024-04-02-we-meet-again-for-the-first-time: [tser-pool]   # "found a clearing by a lake ... Perhaps this is the Vistani encampment with Madam Eva"
   2024-04-16-tser-pool: [tser-pool]   # "We are welcomed to a Vistani camp"; "We sleep the night at the camp"
-  2024-07-09-skeletal-rider: []   # follows rider "along an old hunting path", bandit fight; no named map place
+  2024-07-09-skeletal-rider: [tser-pool]   # follows rider "along an old hunting path" off the road, bandit fight; Chris: mark it at Tser Pool, where it starts and the next session picks up
   2024-07-16-dream-pies: [tser-pool, tser-crossroads, the-windmill]   # "navigating around the Tser Pool"; "Tser Pool/Falls Bridge"; "Morgantha ... living at the windmill"  # Chris: via the Tser Pool crossroads, ending at the windmill
   2024-07-30-welcome-to-vellaki-: [vallaki]   # "Road ends at iron gates"; refugee camp; Blue Water Inn
   2024-08-13-a-doll-for-arabelle: [vallaki]   # Blinsky's Toy Store; "sit in the waiting room" of the Baron's manor
