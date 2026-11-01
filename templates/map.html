@@ -6,7 +6,7 @@
     <header class="page-head">
       <p class="eyebrow">The land of mists</p>
       <h1>Map of Barovia</h1>
-      <p class="lede">The red breadcrumbs follow the roads the party took, session by session. Tap a place to see every session tied to it, with its map number (its name in the card opens its wiki page); tap a numbered crumb to read that session.</p>
+      <p class="lede">The red breadcrumbs follow the roads the party took, session by session. Tap a place to see its sessions (its name in the card opens its wiki page); tap a numbered crumb to read that session.</p>
     </header>
     {% call(part) barovia(places, legs, interactive=True) %}
 {% if part == "top" %}
@@ -26,8 +26,8 @@
       <p class="eyebrow">Place</p>
       <h2><a id="place-title" href="#"></a></h2>
       <p id="place-summary" class="muted"></p>
-      <p class="place-key muted"><span class="place-num here">#</span> its number is here <span class="place-num">#</span> went near or passed</p>
       <ol id="place-sessions" class="session-list place-sessions"></ol>
+      <p class="place-key muted"><span class="place-num here">#</span> number on the map here <span class="place-num">#</span> elsewhere</p>
     </aside>
     <section class="trail-list">
       <h2>The road so far</h2>

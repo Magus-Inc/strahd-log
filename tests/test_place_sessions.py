@@ -116,5 +116,7 @@ def test_map_card_shows_numbers_and_how_each_session_relates(tmp_path):
     # The card draws the number in the same red disc as the map's markers when the number sits here,
     # and an outlined one with a short reason otherwise.
     assert "place-num" in html and "set out from here" in html and "passed by" in html
+    # Chris: the key is read once, so it sits after the list, not in front of it.
+    assert html.index('id="place-sessions"') < html.index('class="place-key')
     css = build.ROOT.joinpath("static", "style.css").read_text(encoding="utf-8")
     assert re.search(r"\.place-num\.here \{[^}]*background", css)

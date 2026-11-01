@@ -312,7 +312,8 @@ html.map-full-open, html.map-full-open body { overflow: hidden; }
 .place-sessions .place-why { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
 .place-sessions li.muted { display: block; }
 .place-sessions time { margin-left: 0; }
-.place-key { font-size: 0.8rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin: 0 0 0.5rem; }
+/* The key reads once and then stays out of the way: small, at the end of the list (Chris). */
+.place-key { font-size: 0.75rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin: 0.6rem 0 0; }
 .place-key .place-num { width: 1.3rem; height: 1.3rem; font-size: 0.65rem; }
 .place-key .place-num:not(:first-child) { margin-left: 0.6rem; }
 
