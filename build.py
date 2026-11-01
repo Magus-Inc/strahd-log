@@ -15,6 +15,7 @@ import argparse
 import functools
 import http.server
 import hashlib
+from html import escape
 import json
 import os
 import re
@@ -66,6 +67,7 @@ class Post:
     slides: list[str] = field(default_factory=list)  # static/slides/<file stem>/*.webp, in page order
     slides_pdf: str = ""
     decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
+    number: int = 0  # the session's number, oldest first; the map and wiki citations use it
 
     @property
     def path(self) -> str:
@@ -145,6 +147,33 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
         page.html, _ = linker.link(article.ai_credits(article.add_image_votes(render_markdown(page.body_md))), self_slug=page.slug)
+
+
+def number_sessions(posts: list[Post]) -> None:
+    """Number every session oldest first, the same order the map numbers its markers in."""
+    for number, post in enumerate(sorted(posts, key=lambda p: (p.date, p.slug)), 1):
+        post.number = number
+
+
+def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
+    """On wiki pages, turn "(Session Title)" links into small session numbers that open the post, and
+    count a cited session as one the page appears in. page.html keeps the titles for search."""
+    by_slug = {p.slug: p for p in posts}
+
+    def marker(slug: str, title: str) -> str:
+        post = by_slug.get(slug)
+        if post is None:  # not a session we know: leave the link as it was written
+            return f' (<a href="/posts/{slug}/">{escape(title)}</a>)'
+        label = escape(f"Session {post.number}: {post.title}", quote=True)
+        # A word joiner keeps the number on the line of the word it follows.
+        return f'&#8288;<a class="cite" href="/posts/{slug}/" title="{label}" aria-label="{label}">{post.number}</a>'
+
+    for page in pages:
+        page.cited_html, cited = wiki.cite_sessions(page.html, marker)
+        known = {p.slug for p in page.mentioned_in}
+        extra = [by_slug[s] for s in cited if s in by_slug and s not in known]
+        if extra:
+            page.mentioned_in = sorted([*page.mentioned_in, *extra], key=lambda p: (p.date, p.slug), reverse=True)
 
 
 def find_slides(posts: list[Post], static_dir: Path) -> None:
@@ -323,7 +352,9 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
+    number_sessions(posts)
     link_wiki(posts, pages)
+    cite_sessions(posts, pages)
     find_slides(posts, slides_static or ROOT / "static")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
@@ -382,14 +413,15 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     for page in pages:
         write(out_dir / "wiki" / page.slug / "index.html",
               env.get_template("wiki_page.html").render(
-                  page=page, body=rebase(page.html, base),
+                  page=page, body=rebase(page.cited_html, base),
                   place=places.get(parent.get(page.slug, "")) if places else None))
     write(out_dir / "search" / "index.html", env.get_template("search.html").render())
     if places:
         write(out_dir / "map" / "barovia.svg",
               barovia_map.draw_base(sprites))
         map_data = {
-            "legs": [{"t": leg["post"].title, "u": leg["post"].path} for leg in legs],
+            # Every session by number (the slider's "Session N" line), including any off the map.
+            "legs": [{"t": p.title, "u": p.path} for p in sorted(posts, key=lambda p: p.number)],
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
                                 "sessions": [{"t": s.title, "u": s.path, "d": nice_date(s.date), "n": s.slide_count}
                                              for s in p.sessions]}

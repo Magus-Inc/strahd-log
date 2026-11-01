@@ -527,3 +527,18 @@ def test_west_and_east_gates_are_separate_places():
     assert "barovia-barovia" in east
     # The map no longer paints a bare "Gates of Barovia" name by the west gates; the pin's label names them.
     assert "Gates of Barovia" not in [name for name, *_ in barovia_map.LABELS]
+
+
+def test_session_numbers_count_every_session_even_off_the_map(tmp_path, places):
+    by_slug, parent = places
+    posts = []
+    for stem, title in [("2024-01-01-a", "A"), ("2024-01-08-b", "B"), ("2024-01-15-c", "C")]:
+        post = build.parse_post(write(tmp_path / "posts" / f"{stem}.md", f"---\ntitle: {title}\ndate: '{stem[:10]}'\n---\n\nKrezk.\n"))
+        post.html = build.render_markdown(post.body_md)
+        posts.append(post)
+    visits = barovia_map.load_visits(write(tmp_path / "trail.yaml", "sessions:\n  2024-01-08-b: []\n"), by_slug)
+    legs = barovia_map.trail(posts, by_slug, parent, PAGES, visits)
+    # B is nowhere on the map, but keeps its number so the map and the wiki citations agree.
+    assert [(leg["post"].title, leg["n"]) for leg in legs] == [("A", 1), ("C", 3)]
+    build.number_sessions(posts)
+    assert [p.number for p in posts] == [1, 2, 3]
