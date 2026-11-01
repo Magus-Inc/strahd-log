@@ -399,3 +399,37 @@ def test_every_player_character_has_a_picture():
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
     missing = sorted(p.slug for p in pages if p.type == "character" and not p.pictures)
     assert not missing, f"add a picture to: {missing}"
+
+
+# --- session citations -------------------------------------------------------------------------
+
+def mark(slug, title):
+    return f"[{slug}]"
+
+
+def test_session_citations_become_markers_that_hug_the_word():
+    html = '<p>We met him (<a href="/posts/a/">Night A</a>). Then left.</p>'
+    out, cited = wiki.cite_sessions(html, mark)
+    assert out == "<p>We met him[a]. Then left.</p>"
+    assert cited == ["a"]
+
+
+def test_several_sessions_in_one_bracket_each_get_a_marker():
+    html = ('<li>Fought. (<a href="/posts/a/">A</a>, <a href="/posts/b/">The B, part 2</a>; '
+            '<a href="/posts/a/">A</a>)</li>')
+    out, cited = wiki.cite_sessions(html, lambda s, t: f"<{s}>", sep="|")
+    assert out == "<li>Fought.<a>|<b>|<a></li>"
+    assert cited == ["a", "b"]
+
+
+def test_brackets_with_other_words_or_wiki_links_are_left_alone():
+    html = ('<p>Old (see <a href="/posts/a/">A</a>) and (<a href="/wiki/x/">X</a>) '
+            'and <a href="/posts/b/">B</a> in running text.</p>')
+    out, cited = wiki.cite_sessions(html, mark)
+    assert out == html and cited == []
+
+
+def test_citation_titles_with_markup_entities_still_match():
+    html = '<p>It spoke (<a href="/posts/s/">The Shard&rsquo;s Warning &amp; Madness</a>).</p>'
+    out, cited = wiki.cite_sessions(html, lambda s, t: f"[{t}]")
+    assert out == "<p>It spoke[The Shard’s Warning & Madness].</p>"

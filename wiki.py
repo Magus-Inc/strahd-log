@@ -204,6 +204,29 @@ def link_npc_names(html: str, linker: Linker) -> str:
 
     return NPC_SECTION.sub(lambda m: m.group(1) + re.sub(r"<strong>(.*?)</strong>", strong, m.group(3), flags=re.S), html)
 
+# A session reference as the wiki writes it: "(Title)" or "(Title, Title; Title)", each a link to a post,
+# with nothing else inside the brackets. The space before the bracket goes too, so the marker hugs the word.
+POST_LINK = r'<a href="/posts/([^"/]+)/">([^<]*)</a>'
+CITATION = re.compile(rf" ?\(({POST_LINK}(?:[,;] {POST_LINK})*)\)")
+
+
+def cite_sessions(html: str, marker, sep: str = "") -> tuple[str, list[str]]:
+    """Turn bracketed session links into small markers: marker(post slug, plain title) -> HTML.
+
+    Returns the new HTML and the cited post slugs in the order first cited."""
+    cited: list[str] = []
+
+    def replace(match: re.Match) -> str:
+        parts = []
+        for slug, title in re.findall(POST_LINK, match.group(1)):
+            if slug not in cited:
+                cited.append(slug)
+            parts.append(marker(slug, htmllib.unescape(title)))
+        return sep.join(parts)
+
+    return CITATION.sub(replace, html), cited
+
+
 def plain_text(html: str) -> str:
     """Rendered HTML -> plain text for the search index."""
     text = re.sub(r"</?(?:p|li|ul|ol|h[1-6]|br|div|tr|td|th|blockquote|aside|table)[^>]*>", " ", html)
