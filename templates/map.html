@@ -10,13 +10,16 @@
     </header>
     {% call(part) barovia(places, legs, interactive=True) %}
 {% if part == "top" %}
-  <div class="map-controls map-bar">
-    <label class="chip"><input type="checkbox" id="show-trail" checked> <span>Trail</span></label>
-    <label class="chip"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
-    <label class="trail-range"><span>Up to</span> <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}" aria-label="Show the trail up to session"> <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></label>
+  <div class="map-controls map-layers">
+    <button type="button" class="layers-toggle" aria-expanded="false" aria-controls="map-layers-panel"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 2 8l10 5 10-5-10-5zM2 13l10 5 10-5"/></svg> <span>Trail</span></button>
+    <div class="layers-panel" id="map-layers-panel" hidden>
+      <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
+      <label class="switch"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
+      <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}"> <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></label>
+    </div>
   </div>
 {% else %}
-  <p class="map-controls map-foot trail-now" id="trail-now" aria-live="polite"></p>
+  <p class="map-controls map-pill trail-now" id="trail-now" aria-live="polite"></p>
 {% endif %}
     {% endcall %}
     <aside class="place-panel card" id="place-panel" hidden>
@@ -80,6 +83,13 @@
       });
       applyFaint();
       upto.addEventListener("input", redraw);
+
+      // The Trail button in the map's corner opens and closes the trail settings.
+      var layers = document.querySelector(".layers-toggle"), layersPanel = document.getElementById("map-layers-panel");
+      layers.addEventListener("click", function () {
+        layersPanel.hidden = !layersPanel.hidden;
+        layers.setAttribute("aria-expanded", layersPanel.hidden ? "false" : "true");
+      });
 
       svg.querySelectorAll(".js-pin").forEach(function (pin) {
         pin.addEventListener("click", function (event) {
