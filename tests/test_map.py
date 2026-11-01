@@ -168,6 +168,17 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert "On the map" in inn and 'data-place="vallaki"' in inn
     assert 'href="/strahd-log/map/"' in (out / "index.html").read_text(encoding="utf-8")
 
+    # Chris: pinch-zoom didn't work on a post's map on his phone (the map blocks the browser's own
+    # pinch so it can pan the page). Every map, not only the map page, zooms and pans with our own
+    # code: buttons, two-finger pinch, one-finger drag once zoomed in, double-tap.
+    for html in (page_html, second, inn):
+        assert html.count('class="map-zoom"') == 1 and all(f'data-zoom="{z}"' in html for z in ("in", "out", "reset"))
+        assert html.count("function zoomAt(") == 1 and '"pointerdown"' in html and '"dblclick"' in html
+        assert "<script src=" not in html
+    # Small maps sit in the middle of a post, so a plain scroll wheel keeps scrolling the page there;
+    # only a trackpad pinch (a wheel with Ctrl) zooms them. The map page zooms with the plain wheel.
+    assert 'data-wheel="zoom"' in page_html and 'data-wheel="zoom"' not in second + inn
+
 
 def test_no_map_file_means_no_map(tmp_path):
     write(tmp_path / "content" / "posts" / "2024-01-09-a.md", "---\ntitle: A\ndate: '2024-01-09'\n---\n\nHi.\n")
