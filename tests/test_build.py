@@ -616,3 +616,11 @@ def test_real_map_and_wiki_share_session_numbers(real_site):
     left = [p.relative_to(real_site).as_posix() for p in (real_site / "wiki").rglob("index.html")
             if re.search(r'\(<a href="/posts/', p.read_text(encoding="utf-8").split('<div class="prose">', 1)[-1].split("</div>", 1)[0])]
     assert left == []
+
+
+def test_place_card_close_button_stays_in_view_while_the_card_scrolls():
+    """Chris 2026-11-01: on a phone the card's X scrolled away with a long session list."""
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    rule = re.search(r"\n\.place-close \{([^}]*)\}", css).group(1)
+    assert "position: sticky" in rule and "top: 0" in rule and "z-index" in rule
+    assert "position: absolute" not in rule
