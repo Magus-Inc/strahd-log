@@ -7,6 +7,12 @@ summary: Lady Fiona's manor in Vallaki, protected by a binding circle.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Wachterhaus at dusk, a glowing circle of runes on the cobbles around it](/images/wachterhaus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

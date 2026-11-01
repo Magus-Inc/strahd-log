@@ -5,6 +5,12 @@ summary: A Vistani who tailed the party and disagrees with Van Richten about Ara
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Arrigal, a Vistani man in a tavern corner, folding a secret note](/images/arrigal-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

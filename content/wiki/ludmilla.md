@@ -7,6 +7,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Ludmilla, a vampire bride in a dark gown, on Yester Hill by firelight](/images/ludmilla-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 One of Strahd's brides, at his reception and at the Winter Splinter ritual ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/), [Stop Winter Splinter](/posts/stop-winter-splinter/)). On Yester Hill she sneered at Volenta, told us a wereraven had been among those who attacked the castle, and that Baba Lysaga helped her take the winery and lives in Berez. We slipped past her rather than fight. Strahd later warned she will not forget us ([Stop Winter Splinter](/posts/stop-winter-splinter/), [The Whispering Wall](/posts/the-whispering-wall/)). She is the last of the three brides we have met.

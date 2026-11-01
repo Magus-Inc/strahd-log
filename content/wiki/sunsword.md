@@ -8,6 +8,12 @@ summary: A weapon of vengeance named in Madam Eva's reading.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Sunsword, a blade of blazing sunlight in an amber-lit vault](/images/sunsword-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

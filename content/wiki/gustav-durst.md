@@ -8,6 +8,12 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/gustav-durst
 ---
 
+## Description
+
+![Gustav Durst's ghost dancing with Klara's while Elisabeth's ghost glares, her amber shard glowing](/images/gustav-durst-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

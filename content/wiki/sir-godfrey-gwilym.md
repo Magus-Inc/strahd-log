@@ -8,6 +8,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/sir-g
 
 ## Description
 
+![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 A revenant knight of the Order of the Silver Dragon, banished by his commander, who guarded the bridge at Tser Falls and asked whether we served Strahd ([Dream Pies](/posts/dream-pies/)). At Argynvostholt he told us how the Order fell ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). When Argynvost rose he was restored to the golden-haired knight he had been, knelt to us, and told us what he knew of Kasimir and the Amber Temple ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).

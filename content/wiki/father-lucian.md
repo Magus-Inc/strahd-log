@@ -7,6 +7,12 @@ summary: The priest of St. Andral's Church in Vallaki.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Father Lucian in his church, holding a reliquary of holy bones](/images/father-lucian-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 
