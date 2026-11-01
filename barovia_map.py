@@ -57,7 +57,7 @@ ROADS = {
     "Road to the castle": [(610, 360), (645, 368), (680, 382), (700, 392), (720, 398)],
     "Old Svalich Road (the hairpin)": [(610, 360), (585, 335), (560, 315), (520, 312), (488, 308), (500, 284),
                                        (526, 262), (550, 248)],
-    "Old Svalich Road (the lake shore)": [(550, 248), (510, 252), (465, 256), (420, 262), (400, 268),
+    "Old Svalich Road (the lake shore)": [(550, 248), (510, 252), (465, 256), (442, 259), (420, 262), (400, 268),
                                           (380, 270), (350, 278)],
     "Vallaki lane": [(400, 268), (400, 250)],
     # From the Luna River crossroads (P) the Old Svalich Road bends south-west past the fork to
@@ -600,6 +600,33 @@ def load_places(path: Path, pages: list[wiki.WikiPage]) -> tuple[dict[str, Place
     return places, parent
 
 
+def load_spots(path: Path, places: dict[str, Place]) -> dict[str, Place]:
+    """Spots from data/map.yaml `spots`: points on the roads (or off them) that are not places.
+
+    A spot has no wiki page, pin, label or card. A session's trail can pass through one, and its
+    marker can sit at one, so the numbers show where the main action was, such as a bridge or a
+    stretch of road (see load_visits).
+    """
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    spots: dict[str, Place] = {}
+    for slug, spec in (data.get("spots") or {}).items():
+        if slug in places:
+            raise ValueError(f"data/map.yaml: spot {slug!r} is already a place")
+        x, y = spec["xy"]
+        spots[slug] = Place(slug, str(spec.get("label") or slug), float(x), float(y), [], offroad=bool(spec.get("offroad")))
+    return spots
+
+
+class Stops(list):
+    """A session's stops in order (place or spot slugs), and the one its marker sits at (None: the last)."""
+
+    def __init__(self, slugs=(), marker: str | None = None):
+        super().__init__(slugs)
+        self.marker = marker
+
+
 def stops(text: str, places: dict[str, Place], parent: dict[str, str], pages: list[wiki.WikiPage]) -> list[str]:
     """Mapped places in a post's plain text, in the order first mentioned, repeats collapsed."""
     found: list[tuple[int, str]] = []
@@ -620,28 +647,40 @@ def stops(text: str, places: dict[str, Place], parent: dict[str, str], pages: li
     return order
 
 
-def load_visits(path: Path, places: dict[str, Place]) -> dict[str, list[str]]:
-    """{post file stem: [place slugs]}: where the party actually went each session (data/trail.yaml).
+def load_visits(path: Path, places: dict[str, Place], spots: dict[str, Place] | None = None) -> dict[str, Stops]:
+    """{post file stem: Stops}: where the party actually went each session (data/trail.yaml).
 
     Mentions are not visits: a session can talk about the castle all night without going there.
     The visit list is written by reading each post (today by Claude, later by the same step that
-    writes the post) and reviewed like any other content.
+    writes the post) and reviewed like any other content. An entry is a list of places, or
+    {stops: [...], marker: slug} to put the session's number where its main action was instead of
+    where it ended; stops may name spots as well as places.
     """
     if not path.exists():
         return {}
+    spots = spots or {}
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     visits = {}
-    for stem, slugs in (data.get("sessions") or {}).items():
-        unknown = [s for s in slugs or [] if s not in places]
+    for stem, entry in (data.get("sessions") or {}).items():
+        if isinstance(entry, dict):
+            slugs, marker = list(entry.get("stops") or []), entry.get("marker")
+        else:
+            slugs, marker = list(entry or []), None
+        unknown = [s for s in slugs if s not in places and s not in spots]
         if unknown:
             raise ValueError(f"{path.name}: {stem}: unknown places {', '.join(unknown)}")
-        visits[str(stem)] = list(slugs or [])
+        if marker is not None and marker not in slugs:
+            raise ValueError(f"{path.name}: {stem}: marker {marker!r} is not one of its stops")
+        visits[str(stem)] = Stops(slugs, marker)
     return visits
 
 
 def trail(posts: list, places: dict[str, Place], parent: dict[str, str], pages: list[wiki.WikiPage],
-          visits: dict[str, list[str]] | None = None) -> list[dict]:
-    """[{post, n, stops, segments, marker}] oldest first; also fills each Place.sessions.
+          visits: dict[str, list[str]] | None = None, spots: dict[str, Place] | None = None) -> list[dict]:
+    """[{post, n, stops, path, segments, marker}] oldest first; also fills each Place.sessions.
+
+    `path` is every stop the trail runs through, spots included; `stops` is just the places, for
+    the lists of where the party went.
 
     A post listed in `visits` uses that list (an empty list means "nowhere on the map"); any other
     post falls back to the places it mentions, in order. n is the session's number among all sessions,
@@ -653,15 +692,18 @@ def trail(posts: list, places: dict[str, Place], parent: dict[str, str], pages: 
         stem = post.source.stem if post.source else post.slug
         here = visits[stem] if stem in visits else stops(wiki.plain_text(post.html), places, parent, pages)
         if here:
-            legs.append({"post": post, "n": number, "stops": here})
-            for slug in here:
+            named = [slug for slug in here if slug in places]
+            legs.append({"post": post, "n": number, "stops": named, "path": list(here),
+                         "marker_at": getattr(here, "marker", None)})
+            for slug in named:
                 places[slug].sessions.insert(0, post)
-    add_route(legs, places)
+    add_route(legs, {**(spots or {}), **places})
     return legs
 
 
 def add_route(legs: list[dict], places: dict[str, Place]) -> None:
-    """Give each leg its breadcrumbs along the roads, and a numbered marker where it ended.
+    """Give each leg its breadcrumbs along the roads, and a numbered marker where it ended (or at
+    leg["marker_at"], where its main action was). `places` includes any spots the legs pass.
 
     leg["segments"] is a list of {"d", "road", "points"}: one per hop from the party's previous
     stop, following the road graph by the shortest route. An off-road place is reached by a short
@@ -677,7 +719,7 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
     previous = None
     for leg in legs:
         leg["segments"] = []
-        for slug in leg["stops"]:
+        for slug in leg.get("path", leg["stops"]):
             if previous and previous != slug:
                 pa, pb = places[previous], places[slug]
                 a, b = node[previous], node[slug]
@@ -700,7 +742,7 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
                     pts = [b, (pb.x, pb.y)]
                     leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
             previous = slug
-        end = places[leg["stops"][-1]]
+        end = places[leg.get("marker_at") or leg.get("path", leg["stops"])[-1]]
         k = markers_at.get(end.slug, 0)
         markers_at[end.slug] = k + 1
         angle = math.radians(k * 137.5 + 100)

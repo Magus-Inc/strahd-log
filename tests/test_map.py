@@ -542,3 +542,73 @@ def test_session_numbers_count_every_session_even_off_the_map(tmp_path, places):
     assert [(leg["post"].title, leg["n"]) for leg in legs] == [("A", 1), ("C", 3)]
     build.number_sessions(posts)
     assert [p.number for p in posts] == [1, 2, 3]
+
+
+SPOT_MAP = MAP + """spots:
+  tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
+  the-oak: {xy: [745, 520], label: the old oak, offroad: true}
+"""
+
+
+def spot_posts(tmp_path, stems):
+    posts = []
+    for stem in stems:
+        post = build.parse_post(write(tmp_path / "posts" / f"{stem}.md", f"---\ntitle: {stem}\ndate: '{stem[:10]}'\n---\n\nx\n"))
+        post.html = "<p>x</p>"
+        posts.append(post)
+    return posts
+
+
+def test_a_session_marker_can_sit_where_the_main_action_was(tmp_path):
+    # Chris: the number goes where the session's main action happened, so the trail of numbers
+    # shows the journey instead of always the start or end. A spot is a point on the roads (or off
+    # them) with no wiki page: it routes the trail and can carry the marker, but gets no pin or card.
+    path = write(tmp_path / "map.yaml", SPOT_MAP)
+    places, parent = barovia_map.load_places(path, PAGES)
+    spots = barovia_map.load_spots(path, places)
+    assert set(spots) == {"tser-falls-bridge", "the-oak"} and spots["the-oak"].offroad
+    visits = barovia_map.load_visits(write(tmp_path / "trail.yaml", """sessions:
+  2024-01-01-a: [barovia]
+  2024-01-08-b: {stops: [barovia, tser-falls-bridge, vallaki], marker: tser-falls-bridge}
+  2024-01-15-c: {stops: [vallaki, krezk], marker: vallaki}
+  2024-01-22-d: [krezk, the-oak]
+"""), places, spots)
+    assert visits["2024-01-01-a"] == ["barovia"] and visits["2024-01-01-a"].marker is None
+    legs = barovia_map.trail(spot_posts(tmp_path, ["2024-01-01-a", "2024-01-08-b", "2024-01-15-c", "2024-01-22-d"]),
+                             places, parent, PAGES, visits, spots)
+    a, b, c, d = legs
+    # Listed stops (post pages, the map's session list, place cards) are real places only.
+    assert b["stops"] == ["barovia", "vallaki"] and d["stops"] == ["krezk"]
+    assert [p.title for p in places["vallaki"].sessions] == ["2024-01-15-c", "2024-01-08-b"]
+    # The trail runs through the spot: the bridge is on B's road path.
+    assert any((600, 405) in seg["points"] for seg in b["segments"])
+    # B's number sits by the bridge, C's by Vallaki where it started, D's at the oak, off the road.
+    assert math.dist(b["marker"], (600, 405)) < 20
+    assert math.dist(c["marker"], (400, 270)) < 20
+    assert math.dist(d["marker"], (745, 520)) < 20 and d["segments"][-1]["road"] is False
+    # A has no marker key, so it keeps the default: where the session ended.
+    assert math.dist(a["marker"], (780, 450)) < 20
+
+
+def test_trail_entries_are_checked(tmp_path):
+    path = write(tmp_path / "map.yaml", SPOT_MAP)
+    places, _ = barovia_map.load_places(path, PAGES)
+    spots = barovia_map.load_spots(path, places)
+    with pytest.raises(ValueError, match="marker"):
+        barovia_map.load_visits(write(tmp_path / "t1.yaml", "sessions:\n  x: {stops: [barovia], marker: vallaki}\n"), places, spots)
+    with pytest.raises(ValueError, match="atlantis"):
+        barovia_map.load_visits(write(tmp_path / "t2.yaml", "sessions:\n  x: {stops: [barovia, atlantis]}\n"), places, spots)
+    with pytest.raises(ValueError, match="vallaki"):
+        barovia_map.load_spots(write(tmp_path / "m2.yaml", MAP + "spots:\n  vallaki: {xy: [1, 1]}\n"), places)
+
+
+def test_every_real_spot_sits_on_a_road_unless_offroad():
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    graph = barovia_map.road_graph()
+    for slug, spot in (data.get("spots") or {}).items():
+        assert spot.get("label"), slug
+        if spot.get("offroad"):
+            assert barovia_map.nearest_vertex(graph, *spot["xy"]) is None, slug
+        else:
+            assert tuple(spot["xy"]) in graph, slug
