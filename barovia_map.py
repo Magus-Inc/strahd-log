@@ -86,6 +86,8 @@ TRACKS = {
     "Yester Hill trail": [(150, 340), (130, 400), (100, 452), (70, 488)],
     # The trail climbs about an hour and a half up into the peaks to the Amber Temple.
     "Amber Temple trail": [(352, 672), (366, 662), (362, 648), (380, 640)],
+    # The Vistani camp by Vallaki, a short walk south of the lake road toward the Luna River.
+    "Vallaki Vistani camp trail": [(380, 270), (378, 300)],
     # The Vistani camp sits on dry land just south of Tser Pool.
     "Tser Pool trail (to the camp)": [(680, 555), (690, 530)],
 }
@@ -154,7 +156,7 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Svalich Woods", (870, 200), 15, 62),
     ("Svalich Woods", (850, 660), 15, -8),
     ("Svalich Woods", (90, 160), 13, 0),
-    ("Luna River", (392, 330), 11, 84),
+    ("Luna River", (378, 400), 11, 84),   # clear of the Vistani camp by Vallaki
     ("Raven River", (70, 252), 10, 0),
     ("Ivlis River", (850, 516), 11, 0),
     ("Mount Ghakis", (440, 714), 15, 0),
