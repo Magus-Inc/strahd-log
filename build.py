@@ -359,8 +359,9 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
-    visits = barovia_map.load_visits(map_dir / "trail.yaml", places) if places else {}
-    legs = barovia_map.trail(posts, places, parent, pages, visits) if places else []
+    spots = barovia_map.load_spots(map_file or content_dir.parent.parent / "data" / "map.yaml", places) if places else {}
+    visits = barovia_map.load_visits(map_dir / "trail.yaml", places, spots) if places else {}
+    legs = barovia_map.trail(posts, places, parent, pages, visits, spots) if places else []
     sprites = barovia_map.load_sprites(map_file or content_dir.parent.parent / "data" / "map.yaml",
                                        ROOT / "static" / "images" / "map" / "sprites") if places else []
     leg_by_post = {leg["post"].slug: leg for leg in legs}

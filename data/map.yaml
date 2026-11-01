@@ -49,6 +49,19 @@ places:
   tsolenka-pass: {xy: [240, 578], anchor: start}
   amber-temple: {xy: [380, 640]}
 
+# spots:    points on the roads that are not places (no wiki page, pin, label or card), named so a
+#           session's trail can pass through one and its number can sit where the main action was
+#           (data/trail.yaml `marker`). Each sits on a road vertex, unless offroad: true.
+spots:
+  the-old-oak: {xy: [712, 486], label: the old oak by the River Ivlis, offroad: true}
+  tser-pool-road: {xy: [640, 535], label: the road west of the Tser Pool camp}
+  tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
+  lake-road: {xy: [510, 252], label: the lake road east of Vallaki}
+  bonegrinder-road: {xy: [526, 262], label: the road to Old Bonegrinder}
+  bonegrinder-fork: {xy: [488, 308], label: the turnoff to Old Bonegrinder}
+  yester-hill-trail: {xy: [130, 400], label: the trail to Yester Hill}
+  vallaki-east-road: {xy: [442, 259], label: the road an hour east of Vallaki}
+
 within:
   durst-mill: barovia
   blue-water-inn: vallaki
