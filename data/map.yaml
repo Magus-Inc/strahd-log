@@ -58,6 +58,7 @@ spots:
   tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
   lake-road: {xy: [510, 252], label: the lake road east of Vallaki}
   bonegrinder-road: {xy: [526, 262], label: the road to Old Bonegrinder}
+  bonegrinder-fork: {xy: [488, 308], label: the turnoff to Old Bonegrinder}
   yester-hill-trail: {xy: [130, 400], label: the trail to Yester Hill}
   vallaki-east-road: {xy: [442, 259], label: the road an hour east of Vallaki}
 

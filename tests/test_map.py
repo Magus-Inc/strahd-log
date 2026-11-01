@@ -212,16 +212,22 @@ def test_trail_passes_the_east_gate_only_once():
     # The party came through the east gate of Barovia once, from Durst Manor into the village.
     import yaml
     sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
-    assert [stem for stem, stops in sessions.items() if "gates-of-barovia" in (stops or [])] == ["2024-02-13-barovia-barovia"]
+    stops = {stem: (e["stops"] if isinstance(e, dict) else e or []) for stem, e in sessions.items()}
+    assert [stem for stem, s in stops.items() if "gates-of-barovia" in s] == ["2024-02-13-barovia-barovia"]
     # The black carriage waited at the west gates, on the way to the castle.
-    assert "west-gates-of-barovia" in sessions["2025-07-29-the-oath-the-spy-and-the-silver-moon"]
+    assert "west-gates-of-barovia" in stops["2025-07-29-the-oath-the-spy-and-the-silver-moon"]
 
 
 def test_answered_sessions_use_the_new_places():
     import yaml
     sessions = yaml.safe_load(Path("data/trail.yaml").read_text(encoding="utf-8"))["sessions"]
-    assert sessions["2024-07-16-dream-pies"] == ["tser-pool", "tser-crossroads", "the-windmill"]
-    assert sessions["2025-01-14-the-hunt-for-the-heart-stone"] == ["vallaki", "tser-crossroads"]
+    # Chris (2026-11-01): Dream Pies met Morgantha's cart at the turnoff to Old Bonegrinder and never
+    # went down to the windmill; its number sits at Tser Falls bridge, where Sir Godfrey stood.
+    assert sessions["2024-07-16-dream-pies"] == {
+        "stops": ["tser-pool-road", "tser-falls-bridge", "tser-crossroads", "bonegrinder-fork", "lake-road"],
+        "marker": "tser-falls-bridge"}
+    # Heart Stone: planning in Vallaki, then the road toward the windmill heist (not the Tser Pool crossroads).
+    assert sessions["2025-01-14-the-hunt-for-the-heart-stone"] == {"stops": ["vallaki", "bonegrinder-road"], "marker": "vallaki"}
     assert sessions["2025-04-15-the-whispering-wall"] == ["yester-hill", "whispering-wall"]
     assert sessions["2026-02-10-unwelcome-guests"] == ["vallaki", "tser-crossroads", "castle-ravenloft"]
     assert "2026-02-03-notebook" not in sessions  # merged into welcome-back-to-vellanki
@@ -484,7 +490,8 @@ def test_werewolf_den_sits_west_of_lake_baratok_and_the_lake_is_named_on_the_wat
     assert den.title == "Werewolf Den" and den.x < min(x for x, _ in lake) and parent["lake-baratok-cave"] == "lake-baratok-cave"
     assert barovia_map.inside(places["lake-baratok"].label_xy, lake)
     # The den's sessions stop at the den, not at the lake.
-    visits = barovia_map.load_visits(ROOT / "data" / "trail.yaml", places)
+    visits = barovia_map.load_visits(ROOT / "data" / "trail.yaml", places,
+                                     barovia_map.load_spots(ROOT / "data" / "map.yaml", places))
     assert visits["2025-05-06-echoes-of-the-black-terro"] == ["lake-baratok-cave"]
 
 
@@ -612,3 +619,64 @@ def test_every_real_spot_sits_on_a_road_unless_offroad():
             assert barovia_map.nearest_vertex(graph, *spot["xy"]) is None, slug
         else:
             assert tuple(spot["xy"]) in graph, slug
+
+
+def real_legs():
+    pages = wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)
+    places, parent = barovia_map.load_places(ROOT / "data" / "map.yaml", pages)
+    spots = barovia_map.load_spots(ROOT / "data" / "map.yaml", places)
+    visits = barovia_map.load_visits(ROOT / "data" / "trail.yaml", places, spots)
+    posts = [build.parse_post(f) for f in sorted((ROOT / "content" / "posts").glob("*.md"))]
+    for post in posts:
+        post.html = ""
+    legs = barovia_map.trail(posts, places, parent, pages, visits, spots)
+    return {leg["post"].slug: leg for leg in legs}, places, spots
+
+
+def test_dream_pies_number_sits_at_tser_falls_bridge_and_skips_the_windmill():
+    legs, places, spots = real_legs()
+    leg = legs["dream-pies"]
+    bridge = spots["tser-falls-bridge"]
+    assert math.dist(leg["marker"], (bridge.x, bridge.y)) < 20
+    assert "the-windmill" not in leg["stops"]
+    assert "dream-pies" not in [p.slug for p in places["the-windmill"].sessions]
+    # The trail passes the turnoff but never walks the lane down to the windmill.
+    windmill = (places["the-windmill"].x, places["the-windmill"].y)
+    assert all(windmill not in seg["points"] for seg in leg["segments"])
+
+
+def test_heart_stone_number_sits_in_vallaki():
+    legs, places, _ = real_legs()
+    leg = legs["the-hunt-for-the-heart-stone"]
+    assert math.dist(leg["marker"], (places["vallaki"].x, places["vallaki"].y)) < 35
+    assert leg["stops"] == ["vallaki"]
+
+
+@pytest.mark.parametrize("slug, at", [
+    # Chris's picks (2026-11-01): each number sits where the session's main action happened.
+    ("leaving-village-barovia", "the-old-oak"),          # the fight at the ancient oak
+    ("skeletal-rider", "tser-pool-road"),                # the toll-men by the road
+    ("looking-for-zoldars-tower", "luna-river-crossroads"),  # scarecrows and twig blights
+    ("finishing-up-at-the-vineyard", "yester-hill-trail"),   # Kavan, and Strahd rides up
+    ("blood-and-oaths-under-moonligh", "lake-baratok-cave"), # the shrine and the oath
+    ("the-oath-the-spy-and-the-silver-moon", "west-gates-of-barovia"),  # the black carriage
+    ("the-shard-s-warning-and-the-abbot-s-madness", "vallaki-east-road"),  # the roadside ambush
+])
+def test_picked_numbers_sit_at_the_main_action(slug, at):
+    legs, places, spots = real_legs()
+    spot = places.get(at) or spots[at]
+    assert math.dist(legs[slug]["marker"], (spot.x, spot.y)) < 25
+
+
+def test_the_oath_session_stops_at_the_west_gates_and_the_carriage_brings_the_next_one_in():
+    legs, _, _ = real_legs()
+    assert legs["the-oath-the-spy-and-the-silver-moon"]["stops"][-1] == "west-gates-of-barovia"
+    assert legs["velvet-vintages-and-veiled-intentions"]["segments"]  # the carriage ride to the castle
+
+
+def test_every_spot_is_used_by_some_session():
+    import yaml
+    spots = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["spots"]
+    sessions = yaml.safe_load((ROOT / "data" / "trail.yaml").read_text(encoding="utf-8"))["sessions"]
+    used = {s for e in sessions.values() for s in (e["stops"] if isinstance(e, dict) else e or [])}
+    assert set(spots) <= used

@@ -1,4 +1,6 @@
 # Where the party actually went each session, in order (places from data/map.yaml).
+# A session's number sits where its main action happened, so the numbers show the journey (Chris,
+# 2026-11-01); `marker:` says where when that isn't the last stop. Stops may name map.yaml spots.
 # Written by having Claude read each post; mentions of a place are not visits. Review like any
 # other content: the quote after each entry is the evidence. An empty list means nowhere on the map.
 # Chris: the sessions before the village were at Durst Manor, east of the gates, not in the village,
@@ -14,15 +16,15 @@ sessions:
   2024-01-30-walter-we-are-coming-for-you: [durst-manor]   # kills Walter under the manor; "climbed out of the house, which then collapsed"
   2024-02-13-barovia-barovia: [durst-manor, gates-of-barovia, barovia]   # "reached some stonework and a closed gate"; "entered a village"; "Blood on the Vine Tavern"
   2024-02-27-rest-for-the-wicked: [barovia]   # "took Ismark's father up to the church"; Doru beneath the church
-  2024-03-26-leaving-village-barovia: [barovia]   # Doru dissolved in stream, shopping; "At noon we ... ventured forth towards Tser pool" (ends at the oak, not on map)
+  2024-03-26-leaving-village-barovia: {stops: [barovia, the-old-oak], marker: the-old-oak}   # "leave the path and enter the woods to follow the river towards the pool"; the fight at "a tall ancient oak"
   2024-04-02-we-meet-again-for-the-first-time: [tser-pool]   # "found a clearing by a lake ... Perhaps this is the Vistani encampment with Madam Eva"
   2024-04-16-tser-pool: [tser-pool]   # "We are welcomed to a Vistani camp"; "We sleep the night at the camp"
-  2024-07-09-skeletal-rider: [tser-pool]   # follows rider "along an old hunting path" off the road, bandit fight; Chris: mark it at Tser Pool, where it starts and the next session picks up
-  2024-07-16-dream-pies: [tser-pool, tser-crossroads, the-windmill]   # "navigating around the Tser Pool"; "Tser Pool/Falls Bridge"; "Morgantha ... living at the windmill"  # Chris: via the Tser Pool crossroads, ending at the windmill
+  2024-07-09-skeletal-rider: {stops: [tser-pool, tser-pool-road], marker: tser-pool-road}   # follows the rider south, "head back to the main road ... started north"; the toll-men fight by the road
+  2024-07-16-dream-pies: {stops: [tser-pool-road, tser-falls-bridge, tser-crossroads, bonegrinder-fork, lake-road], marker: tser-falls-bridge}   # "skirting around Tser Pool"; revenant at "Tser Falls Bridge"; the fork; Morgantha's pie cart. Chris: met at the branch to Old Bonegrinder, never went down to the windmill; then ravens, Ireena asks for the lake, wolves
   2024-07-30-welcome-to-vellaki-: [vallaki]   # "Road ends at iron gates"; refugee camp; Blue Water Inn
   2024-08-13-a-doll-for-arabelle: [vallaki]   # Blinsky's Toy Store; "sit in the waiting room" of the Baron's manor
   2024-08-20-whispers-in-the-barons-mansion: [vallaki]   # Baron's den, kitchen, library, attic
-  2024-10-01-looking-for-zoldars-tower: [vallaki, luna-river-crossroads, tower-of-khazan]   # "Arriving at a crossroads ... broken signpost"; "a tower nestled in the woods by a lake ... the name Khazan"
+  2024-10-01-looking-for-zoldars-tower: {stops: [vallaki, luna-river-crossroads, tower-of-khazan], marker: luna-river-crossroads}   # scarecrows and twig blights "at a crossroads ... broken signpost"; then "a tower ... the name Khazan"
   2024-10-22-the-staff-is-a-lie: [tower-of-khazan]   # wagon traps, "Tower Exploration"; werewolves "on our journey back north to town"
   2024-10-29-finding-arabelle: [vallaki]   # "reunited with Irena at the gate. At the Blue Water Inn"; St. Andral's Church
   2024-11-19-the-quest-for-the-missing-bones: [vallaki]   # Milivoj's home, Heinrich's shop
@@ -31,20 +33,20 @@ sessions:
   2024-12-10-the-fall-of-izek: [vallaki]   # "Izek heads to the eastern gate ... Zarovich gate. At the lake"
   2024-12-17-delivery-for-lady-fiona: [vallaki]   # Wachter House, Inn, Town Square
   2025-01-07-helping-victor: [vallaki]   # Burgomaster mansion; "The party ventures to the refugee camp"
-  2025-01-14-the-hunt-for-the-heart-stone: [vallaki, tser-crossroads]   # Wachter estate; druid met "while traveling" (no arrival)  # Chris: ends at the Tser Pool crossroads
+  2025-01-14-the-hunt-for-the-heart-stone: {stops: [vallaki, bonegrinder-road], marker: vallaki}   # Wachter estate in Vallaki; druid met "on the way" to the windmill (heist next session). Chris picked this over the Tser Pool crossroads
   2025-01-21-the-windmill-heist: [the-windmill]   # "The party infiltrates a windmill occupied by hags"
   2025-02-11-entering-the-spirit-realm: [vallaki]   # "We ventured into the cellar with her" (Lady Fiona's), then ethereal realm
   2025-03-04-act-3-the-broken-land: [vallaki, luna-river-crossroads, wizard-of-wines]   # "waking at the Blue Water Inn"; "cross a bridge leading to a four-way intersection"; "approaches the vineyard"
   2025-03-11-wizard-of-wines-vineyard: [wizard-of-wines]   # Davien's hiding place, tunnel, "reaches the cellar"
-  2025-03-25-finishing-up-at-the-vineyard: [wizard-of-wines]   # druids/staff in winery cellar; "begins their journey" to Yester Hill before dawn
+  2025-03-25-finishing-up-at-the-vineyard: {stops: [wizard-of-wines, yester-hill-trail], marker: yester-hill-trail}   # druids in the winery cellar; set out "two hours before dawn"; Kavan called up, Strahd rides up
   2025-04-01-stop-winter-splinter: [yester-hill]   # "Arriving at Yester Hill, the party witnesses lightning"
   2025-04-15-the-whispering-wall: [yester-hill, whispering-wall]   # "defeats Winter Splinter"; then Whispering Wall (not on map), "journey back to the winery"  # Chris: ends at the Whispering Wall, west of Yester Hill
   2025-04-22-welcome-to-krezk: [wizard-of-wines, krezk]   # "returns to the Wizard of Wines ... head to Krezk"
   2025-04-29-shadows-over-st-markovia: [krezk, abbey-of-saint-markovia]   # "ascend the treacherous mountain road ... Upon arrival" at the Abbey
   2025-05-06-echoes-of-the-black-terro: [lake-baratok-cave]   # "concealed hollow near the entrance to the werewolf den" (den = "cave at Lake Baratok" per prior post)
-  2025-05-13-blood-and-oaths-under-moonligh: [lake-baratok-cave, argynvostholt]   # "Within the cave ... Shrine of Mother Night"; "press forward to Argynvostholt"
+  2025-05-13-blood-and-oaths-under-moonligh: {stops: [lake-baratok-cave, argynvostholt], marker: lake-baratok-cave}   # "Within the cave ... Shrine of Mother Night", the oath and the Symbol of Ravenkind; "press forward to Argynvostholt"
   2025-06-03-echoes-of-the-silver-dragon: [argynvostholt]   # "continues their exploration of Argynvostholt"
-  2025-07-29-the-oath-the-spy-and-the-silver-moon: [argynvostholt, vallaki, west-gates-of-barovia, castle-ravenloft]   # "fourth floor of Argynvostholt"; "Blue Water Inn"; "approach the gates of Barovia ... A black carriage awaits"
+  2025-07-29-the-oath-the-spy-and-the-silver-moon: {stops: [argynvostholt, vallaki, west-gates-of-barovia], marker: west-gates-of-barovia}   # "fourth floor of Argynvostholt"; "Blue Water Inn"; "approach the gates of Barovia ... A black carriage awaits" (arrives at the castle next session)
   2025-08-12-velvet-vintages-and-veiled-intentions: [castle-ravenloft]   # "arrives at Castle Ravenloft in a black carriage"
   2025-08-26-the-boon-the-bride-and-the-beating-heart: [castle-ravenloft]   # "continues their uneasy stay at Castle Ravenloft"
   2025-09-26-varushkas-key: [castle-ravenloft]   # Chris's notes: the guest tower nightmare, then "sent out of the castle in Strahd's carriage"
@@ -56,7 +58,7 @@ sessions:
   2026-04-14-the-master-of-runes-and-the-hellborn-s-spear: [castle-ravenloft]   # "reaching the ancient catacombs of Ravenloft"
   2026-04-21-the-echoing-choirs-of-ravenloft: [castle-ravenloft]   # "exploration of the catacombs beneath Castle Ravenloft"
   2026-05-05-the-slipper-and-the-shadow-of-the-bat: [castle-ravenloft]   # "ascended into the Rooms of Weeping ... King's Bedchamber"
-  2026-06-02-the-shard-s-warning-and-the-abbot-s-madness: [castle-ravenloft, barovia, vallaki, raven-river-crossroads, krezk]   # Brazier Room -> "cemetery of the Village of Barovia" -> "Upon reaching Vallaki" -> "near the Raven River crossroads" -> "gates of Krezk"
+  2026-06-02-the-shard-s-warning-and-the-abbot-s-madness: {stops: [castle-ravenloft, barovia, vallaki-east-road, vallaki, raven-river-crossroads, krezk], marker: vallaki-east-road}   # Brazier Room -> Barovia -> ambush "an hour before you reach Vallaki" (transcript) -> Vallaki -> Raven River crossroads -> Krezk
   2026-07-21-the-abbot-unveiled-wings-lies-and-the-fallen-star: [krezk, abbey-of-saint-markovia]   # "climbs the winding road out of the village of Krezk toward the Abbey"
   2026-08-25-the-fallen-star-ape-sacrifice-and-redemption: [abbey-of-saint-markovia]   # "The fight in the Abbey's asylum picks up"
   2026-09-01-the-red-door-a-reunion-beneath-the-abbey: [abbey-of-saint-markovia]   # "sleeps in the Abbey of St. Markovia"; red door "beneath the abbey"
