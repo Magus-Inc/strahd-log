@@ -5,6 +5,12 @@ summary: A traveling merchant with a magical market wagon.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Minofaustus, a smiling merchant, beside his wagon of a magical market on a misty road](/images/minofaustus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 
