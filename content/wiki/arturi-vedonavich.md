@@ -7,6 +7,12 @@ summary: A cursed Vistani-looking visitor searching for Van Richten.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Arturi Vedonavich up a tree in the night forest, twelve zombies reaching for him below](/images/arturi-vedonavich-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 
