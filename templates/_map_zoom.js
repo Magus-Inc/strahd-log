@@ -11,18 +11,35 @@
 //    posts leave the plain wheel to scroll the page.
 // Zoom runs from the whole map to 6x and the view never leaves the map. A drag is not a click,
 // so taps on markers and places still open them.
+//  - full screen: the corner button fills the window with the map (and the screen too, with the
+//    browser's own full screen where it has one; iPhone doesn't, so there it fills the window). The
+//    map's frame takes the screen's shape, so the whole map fits with a margin on the long side.
+//    Esc or the button again leaves it; an open place card closes first.
 (function (figure) {
   var svg = figure.querySelector(".map");
   var wheelZooms = figure.getAttribute("data-wheel") === "zoom";
-  var full = {x: 0, y: 0, w: 1000, h: 750}, view = Object.assign({}, full);
-  var MIN_W = full.w / 6;
+  var MAP = {w: 1000, h: 750}, MIN_W = MAP.w / 6;
+  // Height over width of what shows: the map's own 3:4, or in full screen the screen's shape.
+  function aspect() {
+    if (!figure.classList.contains("map-full")) return 0.75;
+    return (svg.clientHeight / svg.clientWidth) || 0.75;
+  }
+  // The whole map, with a margin on the long side when the frame is a different shape.
+  function fit() {
+    var a = aspect();
+    return a >= 0.75 ? {x: 0, y: (MAP.h - MAP.w * a) / 2, w: MAP.w, h: MAP.w * a}
+                     : {x: (MAP.w - MAP.h / a) / 2, y: 0, w: MAP.h / a, h: MAP.h};
+  }
+  var full = fit(), view = Object.assign({}, full);
+  function clampAxis(at, span, size) { return span >= size ? (size - span) / 2 : Math.min(size - span, Math.max(0, at)); }
   function apply() {
-    view.w = Math.min(full.w, Math.max(MIN_W, view.w)); view.h = view.w * 0.75;
-    view.x = Math.min(full.w - view.w, Math.max(0, view.x)); view.y = Math.min(full.h - view.h, Math.max(0, view.y));
+    full = fit();
+    view.w = Math.min(full.w, Math.max(MIN_W, view.w)); view.h = view.w * aspect();
+    view.x = clampAxis(view.x, view.w, MAP.w); view.y = clampAxis(view.y, view.h, MAP.h);
     svg.setAttribute("viewBox", [view.x, view.y, view.w, view.h].join(" "));
     svg.classList.toggle("zoomed", view.w < full.w - 0.5);
     // Markers, pins and names grow more slowly than the map, so they don't get huge.
-    svg.style.setProperty("--mark", Math.pow(view.w / full.w, 0.45).toFixed(3));
+    svg.style.setProperty("--mark", Math.min(1, Math.pow(view.w / MAP.w, 0.45)).toFixed(3));
   }
   function toMap(cx, cy) {
     var r = svg.getBoundingClientRect();
@@ -36,15 +53,41 @@
   figure.querySelectorAll("[data-zoom]").forEach(function (b) {
     b.addEventListener("click", function () {
       var z = b.getAttribute("data-zoom");
-      if (z === "in") zoom(0.66); else if (z === "out") zoom(1.5); else { view = Object.assign({}, full); apply(); }
+      if (z === "in") zoom(0.66); else if (z === "out") zoom(1.5);
+      else if (z === "full") setFull(!figure.classList.contains("map-full"));
+      else { view = fit(); apply(); }
     });
   });
+
+  var fullButton = figure.querySelector('[data-zoom="full"]'), root = document.documentElement;
+  function setFull(on) {
+    if (on === figure.classList.contains("map-full")) return;
+    figure.classList.toggle("map-full", on);
+    root.classList.toggle("map-full-open", on);
+    if (fullButton) {
+      fullButton.setAttribute("aria-pressed", on ? "true" : "false");
+      fullButton.setAttribute("aria-label", on ? "Leave full screen" : "Full screen");
+    }
+    try {
+      if (on && root.requestFullscreen && !document.fullscreenElement) root.requestFullscreen().catch(function () {});
+      if (!on && document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function () {});
+    } catch (err) {}
+    view = fit(); apply();
+  }
+  // The browser's own full screen ended (its Esc, or a swipe): leave ours too.
+  document.addEventListener("fullscreenchange", function () { if (!document.fullscreenElement) setFull(false); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape" || !figure.classList.contains("map-full")) return;
+    if (document.querySelector(".place-panel:not([hidden])")) return;  // the card closes first
+    setFull(false);
+  });
+  window.addEventListener("resize", function () { if (figure.classList.contains("map-full")) apply(); });
 
   svg.addEventListener("wheel", function (e) {
     var dy = e.deltaY * (e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 600 : 1);  // lines or pages to pixels
     if (!dy) return;
     var pinch = e.ctrlKey || e.metaKey;  // a trackpad pinch arrives as a wheel with Ctrl held
-    if (!pinch && (!wheelZooms || (dy > 0 ? view.w >= full.w - 0.5 : view.w <= MIN_W + 0.5))) return;  // let the page scroll
+    if (!pinch && (!(wheelZooms || figure.classList.contains("map-full")) || (dy > 0 ? view.w >= full.w - 0.5 : view.w <= MIN_W + 0.5))) return;  // let the page scroll
     e.preventDefault();
     zoomAt(Math.exp(Math.max(-120, Math.min(120, dy)) * (pinch ? 0.01 : 0.0025)), toMap(e.clientX, e.clientY));
   }, {passive: false});
@@ -79,7 +122,7 @@
       var ids = Object.keys(pointers), a = pointers[ids[0]], b = pointers[ids[1]];
       var w = Math.min(full.w, Math.max(MIN_W, gesture.view.w * gesture.d / (Math.hypot(a.x - b.x, a.y - b.y) || 1)));
       var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
-      view.w = w; view.h = w * 0.75;
+      view.w = w; view.h = w * aspect();
       view.x = gesture.at.x - (mx - r.left) / r.width * w; view.y = gesture.at.y - (my - r.top) / r.height * view.h;
       moved = true; apply();
     } else {
