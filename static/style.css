@@ -299,6 +299,23 @@ html.map-full-open, html.map-full-open body { overflow: hidden; }
 .place-close { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: center; margin: -0.4rem -0.4rem -2.4rem auto;
   width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--surface); border: 1px solid var(--line); color: var(--text); font-size: 1.6rem; line-height: 1; cursor: pointer; }
 .trail-list { margin-top: 3rem; max-width: 50rem; }
+/* Chris (2026-11-01): a place lists every session tied to it, each with its map number. A red disc like
+   the map's markers: that session's number sits here. An outlined disc: it set out from here, stopped,
+   went near, or passed by, said in small type under the title. */
+.place-sessions li { display: grid; grid-template-columns: 2rem 1fr; column-gap: 0.6rem; align-items: start; }
+.place-sessions li > :not(.place-num) { grid-column: 2; }
+.place-sessions li > a { grid-row: 1; }
+.place-sessions .place-num { grid-row: span 3; }
+.place-num { display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; font-size: 0.78rem; font-weight: 700;
+  border: 1.5px solid rgba(224, 74, 99, 0.7); color: #f2c6ce; background: transparent; }
+.place-num.here { background: var(--accent); border-color: var(--accent); color: #fff; }
+.place-sessions .place-why { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
+.place-sessions li.muted { display: block; }
+.place-sessions time { margin-left: 0; }
+/* The key reads once and then stays out of the way: small, at the end of the list (Chris). */
+.place-key { font-size: 0.75rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin: 0.6rem 0 0; }
+.place-key .place-num { width: 1.3rem; height: 1.3rem; font-size: 0.65rem; }
+.place-key .place-num:not(:first-child) { margin-left: 0.6rem; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); background: #0e0c10; color: var(--muted); font-size: 0.9rem; }

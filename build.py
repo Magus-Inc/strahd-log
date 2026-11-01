@@ -420,12 +420,17 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     if places:
         write(out_dir / "map" / "barovia.svg",
               barovia_map.draw_base(sprites))
+        related = barovia_map.place_sessions(legs, places, spots)
         map_data = {
             # Every session by number (the slider's "Session N" line), including any off the map.
             "legs": [{"t": p.title, "u": p.path} for p in sorted(posts, key=lambda p: p.number)],
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
-                                "sessions": [{"t": s.title, "u": s.path, "d": nice_date(s.date), "n": s.slide_count}
-                                             for s in p.sessions]}
+                                # Every session tied to the place, oldest first, with its map number (i) and how
+                                # it relates (k: here, ended, stop, near, from, past; w: the spot, for near).
+                                "sessions": [{"t": leg["post"].title, "u": leg["post"].path, "d": nice_date(leg["post"].date),
+                                              "n": leg["post"].slide_count, "i": leg["n"], "k": kind,
+                                              **({"w": where} if where else {})}
+                                             for leg, kind, where in related.get(p.slug, [])]}
                        for p in places.values()},
         }
         write(out_dir / "map" / "index.html",
