@@ -259,11 +259,31 @@ main.wide { max-width: 80rem; }
 .map-zoom { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 1; display: flex; flex-direction: column; gap: 0.35rem; }
 .map-zoom button { width: 2.2rem; height: 2.2rem; border-radius: 10px; border: 1px solid rgba(43, 29, 18, 0.25); background: rgba(255, 250, 240, 0.92); color: #2b1d12; font: 600 1.2rem/1 var(--sans); cursor: pointer; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
 .map-zoom button:hover { background: #fff; }
-.map-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; font-size: 0.95rem; color: var(--muted); }
-.map-controls input { accent-color: var(--accent); }
-.trail-range input { vertical-align: middle; width: 11rem; }
-.trail-range output { color: var(--text); font-weight: 600; }
-.trail-now { margin: 0; flex-basis: 100%; min-height: 1.6em; color: var(--text); }
+/* The map page's controls are part of the map's frame: a strip of dark leather across the top
+   (trail switches and the session slider) and one along the bottom (the session line), so nothing
+   sits between the heading and the map and nothing covers the map. */
+.map-stage { position: relative; }
+.map-bar, .map-foot { background: #2a211b; color: #eadfc8; font-size: 0.92rem; }
+.map-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem 0.6rem; padding: 0.5rem 0.65rem;
+  border-bottom: 1px solid rgba(234, 223, 200, 0.18); }
+.map-bar .chip { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem 0.3rem 0.55rem;
+  border-radius: 999px; border: 1px solid rgba(234, 223, 200, 0.3); cursor: pointer; white-space: nowrap; }
+.map-bar .chip:has(input:checked) { background: rgba(200, 33, 63, 0.28); border-color: var(--accent-hi); }
+.map-bar input { accent-color: var(--accent); margin: 0; }
+.trail-range { display: inline-flex; align-items: center; gap: 0.5rem; flex: 1 1 12rem; min-width: 0; white-space: nowrap; }
+.trail-range input { flex: 1; min-width: 6rem; max-width: 18rem; }
+.trail-range output { color: #fff; font-weight: 700; min-width: 1.6em; }
+.map-foot { margin: 0; padding: 0.45rem 0.8rem; min-height: 2.2em; border-top: 1px solid rgba(234, 223, 200, 0.18); }
+.map-foot a { color: #ff8a9c; }
+/* Full screen: the frame fills the window, the strips stay, the map takes the rest. */
+html.map-full-open, html.map-full-open body { overflow: hidden; }
+.map-figure.map-full { position: fixed; inset: 0; z-index: 45; margin: 0; border: 0; border-radius: 0; display: flex; flex-direction: column;
+  background: #1b1612; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+.map-full .map-stage { flex: 1; min-height: 0; }
+.map-full .map { width: 100%; height: 100%; }
+.map-zoom .full-icon { display: block; margin: auto; }
+.map-zoom .leave-full, .map-full .map-zoom .go-full { display: none; }
+.map-full .map-zoom .leave-full { display: inline; }
 /* The place card floats over the map so it is seen without scrolling: a sheet up from the bottom on
    phones, a card in the corner on wider screens. The map and its zoom stay as they were. */
 .place-panel { position: fixed; z-index: 50; left: 0; right: 0; bottom: 0; margin: 0; max-height: 55vh; overflow-y: auto;

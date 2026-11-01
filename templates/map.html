@@ -8,13 +8,17 @@
       <h1>Map of Barovia</h1>
       <p class="lede">The red breadcrumbs follow the roads the party took, session by session. Tap a place to see every session there (its name in the card opens its wiki page); tap a numbered crumb to read that session.</p>
     </header>
-    <div class="map-controls">
-      <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
-      <label class="switch"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
-      <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}"> <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></label>
-      <p class="trail-now" id="trail-now" aria-live="polite"></p>
-    </div>
-    {{ barovia(places, legs, interactive=True) }}
+    {% call(part) barovia(places, legs, interactive=True) %}
+{% if part == "top" %}
+  <div class="map-controls map-bar">
+    <label class="chip"><input type="checkbox" id="show-trail" checked> <span>Trail</span></label>
+    <label class="chip"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
+    <label class="trail-range"><span>Up to</span> <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}" aria-label="Show the trail up to session"> <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></label>
+  </div>
+{% else %}
+  <p class="map-controls map-foot trail-now" id="trail-now" aria-live="polite"></p>
+{% endif %}
+    {% endcall %}
     <aside class="place-panel card" id="place-panel" hidden>
       <button type="button" class="place-close" aria-label="Close">&times;</button>
       <p class="eyebrow">Place</p>
