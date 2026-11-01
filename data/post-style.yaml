@@ -1,0 +1,10 @@
+# One look for every session post (poststyle.py). Picked by Chris on the post style page, 2026-11-01.
+# Each setting's values are listed in poststyle.OPTIONS; the first value of each leaves posts as written.
+cast: pills          # PCs present as pills under the title; the Characters list is not repeated
+headings: real       # bold first lines become headings; no colon after "Summary"
+entries: bullets     # Key Locations, Encounters, Loot, NPCs...: one bullet per entry, name in bold
+links: gold          # hand-made wiki links look like the automatic gold ones
+bold: plain          # no bold names mid-sentence in the story (recap lists keep theirs)
+glance: new-posts    # keep the At a Glance box where written; new posts get one
+tagline: keep        # keep the line under the title where written
+picture: scene       # the feature picture stays beside the scene it shows

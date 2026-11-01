@@ -16,6 +16,9 @@
   rewording a post, unless Chris asks.
 - Names are spelled as the Curse of Strahd book spells them (`data/spellings.yaml`; `just spellings`
   fixes new text). The book fixes spellings only: what happened comes from the posts and Chris.
+- One look for every post: `data/post-style.yaml` (Chris's picks) and `poststyle.py` restyle the
+  rendered HTML at build time (PC pills, real headings, bulleted recap entries...), so old posts are
+  never reworded to match. Change the look there, not in the posts.
 - Posts read as Malron's journal: first person, in-world, no dice or rules talk, no DM or player
   names. Table talk goes only in a `Note:` paragraph, which renders as a handwritten margin note,
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.

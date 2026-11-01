@@ -32,6 +32,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import article
 import barovia_map
+import poststyle
 import wiki
 
 ROOT = Path(__file__).resolve().parent
@@ -64,9 +65,12 @@ class Post:
     glance: list[str] = field(default_factory=list)
     teaser: str = ""
     cast: list = field(default_factory=list)
+    characters_html: str = ""  # its Characters section (poststyle), shown or not
+    listed: list[str] = field(default_factory=list)  # player characters that section names
     slides: list[str] = field(default_factory=list)  # static/slides/<file stem>/*.webp, in page order
     slides_pdf: str = ""
     decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
+    show_cast: bool = True  # pills under the title (poststyle cast setting)
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
 
     @property
@@ -142,11 +146,24 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     for post in posts:  # newest first, so mentioned_in comes out newest first too
         post.html, post.mentions = linker.link(post.html)
         post.html = wiki.link_npc_names(post.html, linker)
-        post.mentions |= narrators
+        if post.characters_html:  # who the Characters section names, even when the style hides it
+            _, named = linker.link(post.characters_html)
+            post.listed = sorted(s for s in named if by_slug[s].type == "character")
+        post.mentions |= narrators | set(post.listed)
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
         page.html, _ = linker.link(article.ai_credits(article.add_image_votes(render_markdown(page.body_md))), self_slug=page.slug)
+
+
+def apply_style(posts: list[Post], style: dict) -> None:
+    """One look for every post (see poststyle.py and data/post-style.yaml)."""
+    for post in posts:
+        styled = poststyle.apply(post.html, style)
+        post.html, post.characters_html = styled.html, styled.characters
+        if style["tagline"] == "none":
+            post.tagline = ""
+        post.show_cast = style["cast"] != "list"
 
 
 def number_sessions(posts: list[Post]) -> None:
@@ -233,7 +250,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.minutes = article.reading_minutes(post.html)
         post.glance = article.glance_items(post.html)
         post.teaser = article.teaser(post.html)
-        post.cast = article.cast(post.mentions, pages)
+        post.cast = article.cast(set(post.listed) or post.mentions, pages) if post.show_cast else []
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
             article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(post.html), owners)), post.decks)))
 
@@ -347,11 +364,13 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
           site_url: str | None = None, base_path: str | None = None,
           wiki_dir: Path | None = None, map_file: Path | None = None,
-          slides_static: Path | None = None) -> list[Post]:
+          slides_static: Path | None = None, style_file: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
+    style = poststyle.load_style(style_file or content_dir.parent.parent / "data" / "post-style.yaml")
+    apply_style(posts, style)
     number_sessions(posts)
     link_wiki(posts, pages)
     cite_sessions(posts, pages)
