@@ -7,6 +7,12 @@ summary: The harsh ruler of Vallaki.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Baron of Vallaki in a fur-trimmed coat and chain of office, leading a procession with Izek through the silent town square](/images/baron-of-vallaki-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 
