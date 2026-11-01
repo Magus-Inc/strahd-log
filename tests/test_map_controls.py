@@ -23,12 +23,29 @@ def figure_of(html: str) -> str:
 def test_map_page_controls_sit_inside_the_map_frame(site):
     html = (site / "map" / "index.html").read_text(encoding="utf-8")
     fig = figure_of(html)
-    for control in ('id="show-trail"', 'id="faint-markers"', 'id="trail-upto"', 'id="trail-now"'):
+    for control in ('id="show-trail"', 'id="faint-markers"', 'id="trail-upto"'):
         assert control in fig, control
         assert html.count(control) == 1, control  # not also left above the map
     # Nothing between the page heading and the map any more.
     between = html.split("</header>", 1)[1].split('<figure class="map-figure"', 1)[0]
     assert "<input" not in between
+
+
+def test_trail_card_is_a_button_in_the_map_with_the_session_number_above_the_slider(site):
+    """Chris 2026-11-01 picked B: a Trail button on the map opens the card; no last-session line;
+    the label and number sit above a full-width slider so the number fits."""
+    html = (site / "map" / "index.html").read_text(encoding="utf-8")
+    fig = figure_of(html)
+    assert re.search(r'<button[^>]*class="layers-toggle"[^>]*aria-expanded="false"', fig)
+    assert 'id="trail-now"' not in html and "map-pill" not in html
+    label = re.search(r'<label class="trail-range">(.*?)</label>', fig, re.S).group(1)
+    head, slider = label.split("<input", 1)
+    assert "Up to session" in head and 'id="trail-n"' in head  # words and number first, above
+    assert "<output" not in slider
+    panel = re.search(r"\n\.layers-panel \{([^}]*)\}", CSS).group(1)
+    assert re.search(r"width: min\(19rem", panel)
+    rng = re.search(r"\n\.trail-range \{([^}]*)\}", CSS).group(1)
+    assert "flex-direction: column" in rng or "display: grid" in rng
 
 
 def test_post_maps_have_no_trail_controls(site):

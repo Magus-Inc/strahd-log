@@ -15,11 +15,10 @@
     <div class="layers-panel" id="map-layers-panel" hidden>
       <label class="switch"><input type="checkbox" id="show-trail" checked> <span>Show the trail</span></label>
       <label class="switch"><input type="checkbox" id="faint-markers"> <span>See-through numbers</span></label>
-      <label class="trail-range"><span>Up to session</span> <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}"> <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></label>
+      <label class="trail-range"><span class="trail-range-head">Up to session <output id="trail-n">{{ legs[-1].n if legs else 1 }}</output></span>
+        <input type="range" id="trail-upto" min="1" max="{{ legs[-1].n if legs else 1 }}" value="{{ legs[-1].n if legs else 1 }}"></label>
     </div>
   </div>
-{% else %}
-  <p class="map-controls map-pill trail-now" id="trail-now" aria-live="polite"></p>
 {% endif %}
     {% endcall %}
     <aside class="place-panel card" id="place-panel" hidden>
@@ -48,7 +47,6 @@
       var show = document.getElementById("show-trail");
       var upto = document.getElementById("trail-upto");
       var n = document.getElementById("trail-n");
-      var now = document.getElementById("trail-now");
       var panel = document.getElementById("place-panel");
 
       function esc(s) {
@@ -64,8 +62,6 @@
           el.classList.toggle("hidden", i > limit);
           el.classList.toggle("latest", i === limit);
         });
-        var leg = data.legs[limit - 1];
-        now.innerHTML = show.checked && leg ? 'Session ' + limit + ': <a href="' + base + leg.u + '">' + esc(leg.t) + "</a>" : "";
       }
       show.addEventListener("change", redraw);
 

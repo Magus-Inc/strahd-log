@@ -260,7 +260,7 @@ main.wide { max-width: 80rem; }
 .map-zoom button { width: 2.2rem; height: 2.2rem; border-radius: 10px; border: 1px solid rgba(43, 29, 18, 0.25); background: rgba(255, 250, 240, 0.92); color: #2b1d12; font: 600 1.2rem/1 var(--sans); cursor: pointer; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
 .map-zoom button:hover { background: #fff; }
 /* The map page's controls live inside the map: a Trail button in the top-left corner opens a small
-   card of trail settings over the map, and the session line is a pill along the bottom edge. */
+   card of trail settings over the map (Chris picked this, 2026-11-01). */
 .map-stage { position: relative; }
 .map-layers { position: absolute; top: 0.75rem; left: 0.75rem; z-index: 2; max-width: calc(100% - 4.5rem); }
 .layers-toggle { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; border-radius: 10px;
@@ -268,17 +268,13 @@ main.wide { max-width: 80rem; }
   cursor: pointer; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
 .layers-toggle[aria-expanded="true"] { background: #2b1d12; color: #fff8ec; }
 .layers-panel { margin-top: 0.4rem; padding: 0.7rem 0.85rem; border-radius: 10px; background: rgba(255, 250, 240, 0.96); color: #2b1d12;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35); display: grid; gap: 0.55rem; font-size: 0.95rem; width: 17rem; max-width: 100%; }
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35); display: grid; gap: 0.55rem; font-size: 0.95rem; width: min(19rem, calc(100vw - 6rem)); }
 .layers-panel[hidden] { display: none; }
 .layers-panel input { accent-color: var(--accent); }
-.trail-range { display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
-.trail-range input { flex: 1; min-width: 5rem; }
-.trail-range output { font-weight: 700; min-width: 1.6em; }
-.map-pill { position: absolute; left: 0.75rem; bottom: 0.75rem; z-index: 2; margin: 0; max-width: calc(100% - 1.5rem);
-  padding: 0.3rem 0.75rem; border-radius: 999px; background: rgba(27, 22, 18, 0.85); color: #eadfc8; font-size: 0.88rem;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.map-pill:empty { display: none; }
-.map-pill a { color: #ff8a9c; }
+/* The words and the number sit above a full-width slider, so the number always fits. */
+.trail-range { display: flex; flex-direction: column; gap: 0.3rem; }
+.trail-range input { width: 100%; margin: 0; }
+.trail-range output { font-weight: 700; }
 /* Full screen: the frame fills the window, the strips stay, the map takes the rest. */
 html.map-full-open, html.map-full-open body { overflow: hidden; }
 .map-figure.map-full { position: fixed; inset: 0; z-index: 45; margin: 0; border: 0; border-radius: 0; display: flex; flex-direction: column;
