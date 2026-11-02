@@ -9,7 +9,7 @@ source: Compiled from the adventure log
 
 ## Description
 
-![Wachterhaus at dusk, a glowing circle of runes on the cobbles around it](/images/wachterhaus-ai.jpg)
+![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
