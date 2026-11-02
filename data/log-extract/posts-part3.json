@@ -105,7 +105,7 @@
   "name": "Shabasta",
   "type": "character",
   "aliases": [
-   "Sibasa",
+   "Shabasta",
    "Shipnasty"
   ],
   "player": "Grant Haseloff",
@@ -181,12 +181,12 @@
   ]
  },
  {
-  "name": "Krusty",
+  "name": "Crusty",
   "type": "character",
   "aliases": [
    "Crusty",
    "Ralph Kristofferson",
-   "Krusty – Ralph Kristofferson"
+   "Crusty – Ralph Kristofferson"
   ],
   "player": "Cole Smarr",
   "summary": "A Wizard (High Elf Sage Wizard) new to the party, later revealed as a Divination wizard.",

@@ -2,9 +2,8 @@
 title: Crusty
 type: character
 aliases:
-- Krusty
 - Ralph Kristofferson
-- Krusty – Ralph Kristofferson
+- Crusty – Ralph Kristofferson
 summary: High Elf Sage Wizard
 player: Cole Smarr
 source: Written on Obsidian Portal
