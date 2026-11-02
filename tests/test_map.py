@@ -180,6 +180,44 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     assert 'data-wheel="zoom"' in page_html and 'data-wheel="zoom"' not in second + inn
 
 
+def test_wiki_page_map_opens_on_its_place_and_marks_it(tmp_path):
+    """Chris 2026-11-02: on Berez and Durst Manor's wiki pages you couldn't tell where on the map the
+    place was. A wiki page's map opens zoomed in on its place, its picture glows red and its name is
+    red; a place with no picture gets a red dot. A room's page (the Blue Water Inn) marks its town."""
+    root = tmp_path
+    write(root / "content" / "posts" / "2024-01-09-first.md", "---\ntitle: First\ndate: '2024-01-09'\n---\n\nIn the Village of Barovia, then Vallaki.\n")
+    write(root / "content" / "wiki" / "barovia.md", "---\ntitle: Barovia\ntype: place\naliases: [Village of Barovia]\n---\n")
+    write(root / "content" / "wiki" / "vallaki.md", "---\ntitle: Vallaki\ntype: place\n---\n")
+    write(root / "content" / "wiki" / "blue-water-inn.md", "---\ntitle: Blue Water Inn\ntype: place\n---\n")
+    write(root / "data" / "map.yaml", "places:\n  barovia: {xy: [780, 450], names: [Village of Barovia]}\n  vallaki: {xy: [400, 270]}\n"
+                                      "within:\n  blue-water-inn: vallaki\n"
+                                      "sprites:\n  vallaki: {image: vallaki, xy: [400, 260], width: 60}\n")
+    out = root / "public"
+    build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    vallaki = (out / "wiki" / "vallaki" / "index.html").read_text(encoding="utf-8")
+    inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
+    barovia = (out / "wiki" / "barovia" / "index.html").read_text(encoding="utf-8")
+    for html in (vallaki, inn):
+        assert 'data-focus="400.0 270.0"' in html
+        assert re.search(r'<a class="sprite here" href="/strahd-log/wiki/vallaki/" data-place="vallaki">', html)
+        assert re.search(r'<a class="here" href="/strahd-log/wiki/vallaki/" tabindex="-1"><text', html)
+        assert 'class="here-dot"' not in html  # the glowing picture marks it
+    assert 'data-focus="780.0 450.0"' in barovia and 'class="here-dot"' in barovia
+    # The glow is the map page's chosen-place glow; names and dots are the same red.
+    assert re.search(r"\.map \.sprite\.here image[^{]*\{[^}]*drop-shadow\(1px 0 0 var\(--glow\)\)[^}]*drop-shadow\(0 0 6px", css)
+    assert re.search(r"\.map \.labels \.here text \{[^}]*fill: #b3122e", css)
+    assert re.search(r"\.map \.here-dot \{[^}]*fill: #b3122e", css)
+    # The zoom script starts from the focus, and the whole-map button still shows the whole map.
+    assert 'getAttribute("data-focus")' in vallaki
+    # A place on the east edge (Durst Manor) isn't left under the zoom buttons: zoomed in, the view may
+    # run a little past that edge.
+    assert "EAST_SPARE = 0.14" in vallaki and "clampAxis(view.x, view.w, MAP.w, EAST_SPARE)" in vallaki
+    # Other maps don't focus: the map page and the posts open on the whole map.
+    assert "data-focus=" not in (out / "map" / "index.html").read_text(encoding="utf-8")
+    assert "data-focus=" not in (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
+
+
 def test_no_map_file_means_no_map(tmp_path):
     write(tmp_path / "content" / "posts" / "2024-01-09-a.md", "---\ntitle: A\ndate: '2024-01-09'\n---\n\nHi.\n")
     out = tmp_path / "public"
