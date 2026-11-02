@@ -475,15 +475,20 @@ body.deck-lock { overflow: hidden; }
 .wiki-hero .ai-credit, .infobox-picture .ai-credit, .wiki-hero p em, .infobox-picture p em { display: block; margin: 0.45rem 0 0; font-size: 0.78rem; line-height: 1.5; color: var(--faint); font-style: normal; }
 .wiki-hero p, .infobox-picture p { margin: 0; }
 .infobox { max-width: 46rem; margin: 0 auto 2rem; padding: 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
-.infobox dl { margin: 0.9rem 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.45rem 0.9rem; font-size: 0.92rem; }
+.infobox dl { margin: 0.9rem 0 0; display: grid; gap: 0.45rem 1.2rem; font-size: 0.92rem; }
+.infobox dl > div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0 0.9rem; }
 .infobox-picture + dl { padding-top: 0.8rem; border-top: 1px solid var(--line); }
 .infobox dl:first-child { margin-top: 0; }
 .infobox dt { color: var(--muted); }
 .infobox dd { margin: 0; }
 .infobox .num { display: inline-grid; place-items: center; min-width: 1.5rem; height: 1.5rem; padding: 0 0.3rem; border-radius: 999px; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.75rem; font-weight: 700; margin-right: 0.25rem; }
+/* Desktop: the picture keeps the box's full width and the facts sit below it in pairs (Chris,
+   2026-11-02: a side column for the facts squeezed the picture to 17rem) */
+.infobox-picture img { width: auto; max-width: 100%; max-height: 80vh; object-fit: contain; }
 @media (min-width: 760px) {
-  .infobox:has(.infobox-picture) { display: grid; grid-template-columns: 17rem 1fr; gap: 1.2rem; align-items: start; }
-  .infobox-picture + dl { margin-top: 0; padding-top: 0; border-top: 0; }
+  .infobox dl { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
+  .infobox dl > div { display: block; }
+  .infobox dt { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.2rem; }
 }
 .prose details.log-notes { margin: 2rem 0 0; border-top: 1px solid var(--line); padding-top: 0.8rem; }
 .prose details.log-notes > summary { cursor: pointer; font-family: var(--serif); font-size: 1.15rem; color: var(--text); padding: 0.3rem 0; }
@@ -496,3 +501,12 @@ body.deck-lock { overflow: hidden; }
 .infobox-picture .image-vote figure { margin: 0; }
 .infobox-picture .image-vote figcaption { margin-top: 0.4rem; }
 .infobox-picture .image-vote button { font-size: 0.8rem; padding: 0.35rem 0.6rem; }
+/* Tap any picture to see it full size (the inline script in base.html) */
+img[data-zoomable] { cursor: zoom-in; }
+dialog.zoom { max-width: none; max-height: none; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; background: rgba(8, 6, 6, 0.97); color: var(--text); }
+dialog.zoom::backdrop { background: rgba(8, 6, 6, 0.97); }
+dialog.zoom[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.7rem; }
+dialog.zoom img { display: block; max-width: 96vw; max-height: 90vh; width: auto; height: auto; object-fit: contain; border-radius: var(--radius); cursor: zoom-out; }
+dialog.zoom p { margin: 0; padding: 0 1rem; max-width: 60rem; text-align: center; font-size: 0.9rem; color: var(--muted); }
+dialog.zoom a { color: var(--accent-hi); }
+dialog.zoom .zoom-close { position: fixed; top: 0.6rem; right: 0.8rem; width: 2.6rem; height: 2.6rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 1.5rem; line-height: 1; cursor: pointer; }
