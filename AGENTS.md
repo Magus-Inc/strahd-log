@@ -10,7 +10,9 @@
   add facts there, each citing the post it came from. Above it, agents may write and extend a
   `## Description` in Malron's words from the posts, and for new people and places the DM's
   description from the session transcript (the rules are dnd-scribe's `update-wiki` skill), but never
-  reword text someone else wrote, such as the Obsidian Portal pages.
+  reword text someone else wrote, such as the Obsidian Portal pages. The one exception (Chris,
+  2026-11-02): a few loose Obsidian Portal lines left under the story, or a pasted `## As “…”` section
+  from a merge, are folded into the story with every fact kept, so the page reads as one article.
 - Wiki aliases are linked automatically everywhere, so an alias must not be an ordinary word
   ("Abbot", "Manor" in another town); `tools/wiki_from_extract.py` keeps a list of words to refuse.
 - Posts are the players' own writing. Fix conversion problems in `tools/import_op.py`, not by

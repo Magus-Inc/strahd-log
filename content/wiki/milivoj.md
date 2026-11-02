@@ -2,7 +2,7 @@
 title: Milivoj
 type: npc
 summary: A worker repairing St. Andral's Church, suspected in the bone theft.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
 
 ## Description
@@ -10,6 +10,12 @@ source: Compiled from the adventure log
 ![Milivoj, black-haired in a grey cloak, carrying planks past St. Andral's Church](/images/milivoj-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
+*Written from the session logs, in Malron's words.*
+
+A young man of Vallaki we found up a stepladder mending the broken chapel window of the Church of Saint Andral. With his black hair and gray cloak, he was our first suspect in the theft of the church's bones ([Finding Arabelle!](/posts/finding-arabelle/)). Father Lucian, who believed him innocent, led us to his home, a leaning house with a door hanging askew, full of children. Liren frightened him into the truth: his parents are lost to dream pastries, he must keep his brothers and sisters fed, and he had sold the bones to Henrik the day before. Shabasta, disguised as the priest, had the guards arrest him for theft ([The Quest for the Missing Bones](/posts/the-quest-for-the-missing-bones/)).
+
+He was condemned to hang beside Henrik ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)). When Rahadin passed sentence, Shabasta's speech moved him to leave their fates to chance, and Milivoj went free ([Helping Victor](/posts/helping-victor/)).
 
 <!-- from-the-log -->
 ## From the adventure log

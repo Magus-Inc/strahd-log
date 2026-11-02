@@ -515,3 +515,12 @@ def test_wachterhaus_picture_shows_the_manor_in_its_grounds_without_a_drawn_ward
         assert words in alt, words
     for words in ("circle", "ring", "rune", "cobbles"):
         assert words not in alt, words
+
+
+def test_merged_pages_read_as_one_article():
+    # Chris, 2026-11-02: Durst Manor's pasted-in "As “Manor”" section from the Obsidian Portal merge
+    # "read very awkwardly"; merged text is folded into the story instead.
+    pages = Path(__file__).resolve().parent.parent / "content" / "wiki"
+    pasted = [p.name for p in sorted(pages.glob("*.md"))
+              if re.search(r"^#+ As “", p.read_text(encoding="utf-8"), re.MULTILINE)]
+    assert pasted == []
