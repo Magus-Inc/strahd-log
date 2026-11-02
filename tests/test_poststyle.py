@@ -5,6 +5,7 @@ from pathlib import Path
 import pytest
 
 import build
+import article
 import poststyle
 
 ROOT = Path(build.__file__).parent
@@ -34,7 +35,8 @@ def test_blog_uses_the_picks():
     """Chris's picks for this blog (2026-11-01 post style page)."""
     style = poststyle.load_style(ROOT / "data" / "post-style.yaml")
     assert style == {"cast": "pills", "headings": "real", "entries": "bullets", "links": "gold",
-                     "bold": "plain", "glance": "none", "tagline": "keep", "picture": "scene"}
+                     "bold": "plain", "glance": "none", "tagline": "keep", "picture": "scene",
+                     "story": "no-heading"}
 
 
 # --- cast -----------------------------------------------------------------------------------
@@ -151,6 +153,34 @@ def test_plain_story_unbolds_names_but_keeps_labels():
     assert "<strong>150 gold</strong>" in html  # recap sections keep their bold
 
 
+# --- story heading ------------------------------------------------------------------------
+
+NOHEAD = {**poststyle.AS_WRITTEN, "headings": "real", "story": "no-heading"}
+
+
+def test_the_summary_heading_goes_and_the_story_starts_after_the_pills():
+    html = poststyle.apply(md("## Summary:\n\nWe ran.\n\n## Key Locations:\n\n* **A**: b\n"), NOHEAD).html
+    assert "Summary" not in html and html.startswith("<!--story-->\n<p>We ran.</p>")
+    assert "<h2>Key Locations</h2>" in html
+
+
+def test_a_summary_with_a_title_keeps_the_title_as_a_scene_heading():
+    html = poststyle.apply(md("## Summary: The Crawl\n\nWe crawled.\n"), NOHEAD).html
+    assert "Summary" not in html and "<h3>The Crawl</h3>" in html
+
+
+def test_the_old_bold_summary_line_goes_too():
+    html = poststyle.apply(md("**Summary:**  \nFather Lucian helped us.\n"),
+                           {**poststyle.AS_WRITTEN, "story": "no-heading"}).html
+    assert html == "<!--story-->\n<p>Father Lucian helped us.</p>"
+
+
+def test_slides_go_where_the_summary_heading_was():
+    html = poststyle.apply(md("## Characters:\n\n* x\n\n## Summary:\n\nWe ran.\n\n## Loot:\n\n* y\n"), NOHEAD).html
+    html = article.add_deck(html, ["slides/a/1.webp"])
+    assert html.index("<h2>Characters</h2>") < html.index('class="deck"') < html.index("We ran.")
+
+
 # --- glance, picture ------------------------------------------------------------------------
 
 def test_glance_none_removes_the_box():
@@ -181,6 +211,7 @@ def test_every_post_follows_the_template(site):
     out, posts = site
     checks = {"Characters section": r"<h[23][^>]*>Characters", "heading colon": r":\s*</h[23]>",
               "bold-line heading": r"<p><strong>[^<]{1,60}</strong><br", "red wiki link": r'<a href="/wiki/', "dash list": r"<p>- ", "glance box": r'class="callout glance"',
+              "summary heading": r"<h[23][^>]*>Summary",
               "heading as a bullet": r"<li><strong>[^<]*:</strong></li>"}
     problems = []
     for slug, _ in posts:

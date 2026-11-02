@@ -30,6 +30,7 @@ OPTIONS = {
     "glance": ["new-posts", "every-post", "none"],   # the "At a Glance" box (every-post is writing, not build)
     "tagline": ["keep", "every-post", "none"],       # the line under the title (every-post is writing)
     "picture": ["scene", "top"],                     # the feature picture beside its scene, or first
+    "story": ["as-written", "no-heading"],           # no "Summary" heading over the story itself
 }
 AS_WRITTEN = {name: values[0] for name, values in OPTIONS.items()}
 
@@ -64,6 +65,8 @@ class Styled:
 def apply(html: str, style: dict) -> Styled:
     if style["headings"] == "real":
         html = outside_quotes(html, real_headings)
+    if style["story"] == "no-heading":
+        html = drop_summary_heading(html)
     characters = characters_section(html)
     if style["cast"] == "pills":
         html = drop_characters(html)
@@ -145,6 +148,20 @@ def characters_section(html: str) -> str:
 
 def drop_characters(html: str) -> str:
     return CHARACTERS.sub("", html, count=1)
+
+
+STORY = "<!--story-->"  # where the story starts once its heading is gone; the slides go here
+
+
+def drop_summary_heading(html: str) -> str:
+    """The template's "Summary" heading sits over the whole story, which is not a summary. Drop it,
+    as the earliest posts have none; "Summary: The Crawl" keeps "The Crawl" as a scene heading."""
+    def heading(m: re.Match) -> str:
+        rest = re.sub(r"^\s*:\s*", "", m.group(1)).strip()
+        return STORY + "\n" + (f"<h3>{rest}</h3>" if rest else "")
+
+    html = re.sub(r"<h[23]>Summary(.*?)</h[23]>\s*", heading, html, count=1, flags=re.S)
+    return re.sub(r"<p><strong>Summary:?</strong>\s*<br\s*/?>\s*", STORY + "\n<p>", html, count=1)
 
 
 def drop_glance(html: str) -> str:

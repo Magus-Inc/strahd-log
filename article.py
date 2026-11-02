@@ -124,6 +124,8 @@ def add_decks(html: str, decks: list[Deck]) -> str:
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
     if m:
         at = m.end()
+    elif "<!--story-->" in html:  # where the story starts when the post style drops its heading
+        at = html.index("<!--story-->")
     else:
         h2 = re.search(r"<h2[ >]", html)
         at = h2.start() if h2 else 0
