@@ -7,7 +7,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![A revenant guarding the bridge over the Raven River](/images/raven-river-crossroads-ai.jpg)
+![A revenant knight raising a hand in greeting at the crossroads by the one stone bridge over the Raven River](/images/raven-river-crossroads-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
