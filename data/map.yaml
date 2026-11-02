@@ -26,12 +26,12 @@ places:
   tser-pool: {xy: [690, 530], anchor: end}
   castle-ravenloft: {xy: [720, 398]}
   tser-crossroads: {xy: [610, 360], label: Tser Pool Crossroads, anchor: end}
-  the-windmill: {xy: [474, 300], label: Old Bonegrinder, anchor: below}
+  the-windmill: {xy: [473, 314], label: Old Bonegrinder, anchor: below}
   # Vallaki sits just off the Old Svalich Road, up a short lane toward the lake.
   vallaki: {xy: [400, 250]}
   # The Vistani camp by Vallaki: south of town, toward the Luna River ("A doll for Arabelle": Yann's
   # head lay "toward the Luna River"; Chris remembers the camp south of Vallaki).
-  vallaki-vistani-camp: {xy: [378, 300], label: Vistani Camp, label_at: [404, 328]}
+  vallaki-vistani-camp: {xy: [378, 300], label: Vistani Camp, label_at: [398, 346]}
   # Two crossroads: the Luna River crossroads (P) just west of Vallaki, a four-way crossroads (Act 3:
   # roads east to Vallaki and on to Raven River, trails to Lake Baratok and Berez), and the
   # Raven River crossroads (R) further west, where the Krezk, Tsolenka and Lake Baratok roads meet.
@@ -62,7 +62,7 @@ spots:
   tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
   lake-road: {xy: [499, 252], label: the lake road east of Vallaki}
   bonegrinder-road: {xy: [530, 286], label: the road to Old Bonegrinder, near: the-windmill}
-  bonegrinder-fork: {xy: [488, 308], label: the turnoff to Old Bonegrinder, near: the-windmill}
+  bonegrinder-fork: {xy: [487, 319], label: the turnoff to Old Bonegrinder, near: the-windmill}
   yester-hill-trail: {xy: [130, 400], label: the trail to Yester Hill}
   vallaki-east-road: {xy: [442, 259], label: the road an hour east of Vallaki}
 
@@ -99,7 +99,7 @@ sprites:
   vallaki: {image: vallaki, xy: [400, 246], width: 70}
   krezk: {image: krezk, xy: [112, 228], width: 54}
   abbey-of-saint-markovia: {image: abbey-of-saint-markovia, xy: [138, 198], width: 40}
-  the-windmill: {image: the-windmill, xy: [474, 290], width: 44}
+  the-windmill: {image: the-windmill, xy: [473, 304], width: 44}
   tower-of-khazan: {image: tower-of-khazan, xy: [258, 192], width: 30}
   werewolf-den: {image: werewolf-den, xy: [190, 164], width: 36, place: lake-baratok-cave}
   argynvostholt: {image: argynvostholt, xy: [330, 366], width: 50}

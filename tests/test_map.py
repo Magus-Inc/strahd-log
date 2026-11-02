@@ -192,7 +192,7 @@ def test_route_follows_roads_between_junctions():
     vallaki, castle = (400, 250), (720, 398)
     path = barovia_map.route(graph, vallaki, castle)
     assert path[0] == vallaki and path[-1] == castle
-    assert (488, 308) in path and (610, 360) in path  # round the hairpin by Old Bonegrinder, then the fork
+    assert (490, 305) in path and (610, 360) in path  # round the hairpin by Old Bonegrinder, then the switchbacks
     assert all(b in graph[a] for a, b in zip(path, path[1:]))
     assert barovia_map.route(graph, vallaki, vallaki) == [vallaki]
 
@@ -728,7 +728,7 @@ def test_the_road_to_old_bonegrinder_winds_like_the_official_map():
     # Tser Pool crossroads to the Old Bonegrinder turnoff, then swings in a wide loop north-east
     # to a hairpin before it runs back west along the lake to Vallaki. Ours was nearly straight.
     graph = barovia_map.road_graph()
-    crossroads, fork, east_of_vallaki = (610, 360), (488, 308), (442, 259)
+    crossroads, fork, east_of_vallaki = (610, 360), (487, 319), (442, 259)
 
     def length(path):
         return sum(math.dist(a, b) for a, b in zip(path, path[1:]))
@@ -743,3 +743,16 @@ def test_the_road_to_old_bonegrinder_winds_like_the_official_map():
     assert length(loop) > 2.5 * math.dist(fork, east_of_vallaki)
     assert max(x for x, _ in loop) > fork[0] + 60     # the hairpin is well east of the turnoff
     assert min(y for _, y in loop) < east_of_vallaki[1] - 15   # and north, toward the lake
+
+
+def test_the_bonegrinder_turnoff_is_at_the_foot_of_the_switchbacks():
+    # Chris, 2026-11-02: the turnoff was too far north. On the official map the lane to Old
+    # Bonegrinder leaves the road at the bottom of the last bend, and the windmill sits west of it.
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    fork, mill = data["spots"]["bonegrinder-fork"]["xy"], data["places"]["the-windmill"]["xy"]
+    graph = barovia_map.road_graph()
+    assert tuple(fork) in graph[tuple(mill)]
+    lowest_bend = max(y for x, y in barovia_map.ROADS["Old Svalich Road (the switchbacks)"] if x < 520)
+    assert fork[1] > 315 and lowest_bend - fork[1] < 25
+    assert mill[0] < fork[0] - 10 and abs(mill[1] - fork[1]) < 10

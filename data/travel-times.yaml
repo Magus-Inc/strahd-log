@@ -10,7 +10,7 @@
 junctions:
   ivlis-crossroads: [680, 555]      # F, River Ivlis crossroads
   falls-fork: [600, 405]            # below Tser Falls, where the trail past Tser Pool meets the road (H)
-  bonegrinder-turn: [488, 308]      # where the lane to Old Bonegrinder (O) leaves the hairpin
+  bonegrinder-turn: [487, 319]      # where the lane to Old Bonegrinder (O) leaves the hairpin
   vallaki-east-gate: [420, 262]     # N
   vallaki-west-gate: [380, 270]     # N
   argynvostholt-fork: [263, 307]    # the Old Svalich Road and the road south to Argynvostholt (Q)
