@@ -6,6 +6,9 @@ aliases:
 - Abbey of St. Markovia
 summary: An abbey in Krezk near the mists.
 source: Compiled from the adventure log, with a description written for the site
+heard_of_in:
+- tser-pool
+- welcome-to-krezk
 ---
 
 ## Description

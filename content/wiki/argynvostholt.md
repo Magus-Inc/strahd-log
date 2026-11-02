@@ -3,6 +3,8 @@ title: Argynvostholt
 type: place
 summary: The ruined mansion of the Order of the Silver Dragon.
 source: Compiled from the adventure log, with a description written for the site
+heard_of_in:
+- dream-pies
 ---
 
 ## Description

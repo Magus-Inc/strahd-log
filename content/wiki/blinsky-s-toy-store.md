@@ -5,6 +5,8 @@ aliases:
 - Blinsky toys
 summary: A toy shop in Vallaki.
 source: Compiled from the adventure log
+heard_of_in:
+- tser-pool
 ---
 
 <!-- from-the-log -->

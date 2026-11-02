@@ -5,6 +5,8 @@ aliases:
 - Werewolf Cave
 summary: The werewolf den near Lake Baratok.
 source: Compiled from the adventure log, with a description written for the site
+heard_of_in:
+- tser-pool
 ---
 
 ## Description
