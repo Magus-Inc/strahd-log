@@ -18,7 +18,6 @@ Python build turns them into plain HTML in `public/`, published by GitHub Pages 
 | `.github/workflows/pages.yml` | Builds and publishes the site to GitHub Pages on every push to `main`, with a preview of each open pull request |
 | `static/slides/<post file name>/` | A session's slide deck: `01.webp`, `02.webp`, ... (1600 px wide) and optionally a `.pdf`; shown as a swipeable strip after At a Glance |
 | `static/CNAME` | The site's own address, `owlbear.dicelore.quest` |
-| `netlify.toml` | Settings for hosting on Netlify instead (not used today) |
 | `public/` | Build output (not in git) |
 
 ## Recipes
@@ -195,6 +194,3 @@ next to the page views):
 
 Each is sent at most once per visit. Compare `finished` with the post's views to see how many visitors
 read it all.
-
-`netlify.toml` and the `_redirects` file the build writes are kept so the site can move to Netlify
-later without changes; nothing uses them on GitHub Pages.

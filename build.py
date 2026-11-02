@@ -39,7 +39,7 @@ import wiki
 ROOT = Path(__file__).resolve().parent
 SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
 SITE_SUBTITLE = "An adventure log from the mists of Barovia"
-# The publish workflow sets URL to the site's address (Netlify also sets it, if we ever move there).
+# The publish workflow sets URL to the site's address.
 DEFAULT_SITE_URL = "http://localhost:8000"
 # Where the site lives under its host: "/" on owlbear.dicelore.quest and locally, "/strahd-log/" on
 # GitHub Pages' default address.
@@ -603,10 +603,8 @@ def forwarding_page(title: str, target: str, what: str) -> str:
 
 def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post], base: str,
                     wiki_redirects: dict[str, str] | None = None, pages: list[wiki.WikiPage] = ()) -> None:
-    """Keep old post and wiki addresses working: a forwarding page at each (GitHub Pages) and a
-    Netlify _redirects rule (Netlify serves the site at /)."""
+    """Keep old post and wiki addresses working: a forwarding page at each old address."""
     by_stem = {p.source.stem: p for p in posts if p.source}
-    rules = []
     by_slug = {w.slug: w for w in pages}
     for old, new in sorted((wiki_redirects or {}).items()):
         if new not in by_slug:
@@ -615,15 +613,11 @@ def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post],
             raise ValueError(f"data/redirects.yaml: wiki {old} is still a page; remove it or the redirect")
         page = by_slug[new]
         write(out_dir / "wiki" / old / "index.html", forwarding_page(page.title, base + page.path, "page"))
-        rules += [f"/wiki/{old}/ /{page.path} 301", f"/wiki/{old} /{page.path} 301"]
     for old_stem, new_stem in sorted(redirects.items()):
         if new_stem not in by_stem:
             raise ValueError(f"data/redirects.yaml: {old_stem} points at unknown post {new_stem}")
         old, new = slug_from_filename(Path(old_stem)), by_stem[new_stem]
         write(out_dir / "posts" / old / "index.html", forwarding_page(new.title, base + new.path, "session"))
-        rules += [f"/posts/{old}/ /{new.path} 301", f"/posts/{old} /{new.path} 301"]
-    if rules:
-        write(out_dir / "_redirects", "\n".join(rules) + "\n")
 
 
 def serve(out_dir: Path, port: int) -> None:

@@ -1,4 +1,4 @@
-# Site build (what Netlify installs) plus the importer and tests.
+# Site build (requirements.txt) plus the importer and tests.
 -r requirements.txt
 textile==4.0.4
 markdownify==1.2.3
