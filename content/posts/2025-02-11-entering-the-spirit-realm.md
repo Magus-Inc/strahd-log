@@ -21,6 +21,10 @@ Lady Fiona had to drop her wards to allow us entry into the ethereal realm. We v
 
 Victor used the hag’s heart stone to transport us to the ethereal realm. A teenage voice exclaimed “Victor!” behind us, revealing a fading figure with legs disappearing below the knees into the mist.
 
+![Victor raises the glowing heart stone over the pentagram in the Wachter cellar as the walls fade into ethereal mist](/images/wachter-cellar-crossing-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 Victor began drawing a teleportation circle to save her, requiring ten minutes to complete. Boyish laughter emerged from the mist, revealing the spectral silhouette of Erasmus, a 14-year-old spirit assisting Stella in hiding. Erasmus warned us of the spirits aware of our presence and described the gallows speaker waiting outside for the ward to be dropped.
 
 Oogway asked Erasmus about the gallows speaker’s weaknesses. It has none, and spells, poisons and the touch of death all slide off it. It cannot be held, stunned or knocked down.
