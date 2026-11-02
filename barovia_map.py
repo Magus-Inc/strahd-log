@@ -55,10 +55,18 @@ ROADS = {
     "The loop past Tser Falls": [(680, 555), (640, 535), (600, 515), (576, 485), (582, 445), (600, 405),
                                  (610, 360)],
     "Road to the castle": [(610, 360), (645, 368), (680, 382), (700, 392), (720, 398)],
-    "Old Svalich Road (the hairpin)": [(610, 360), (585, 335), (560, 315), (520, 312), (488, 308), (500, 284),
-                                       (526, 262), (550, 248)],
-    "Old Svalich Road (the lake shore)": [(550, 248), (510, 252), (465, 256), (442, 259), (420, 262), (400, 268),
-                                          (380, 270), (350, 278)],
+    # Traced from the official map (Chris, 2026-11-02): switchbacks down from the Tser Pool
+    # crossroads past the West Gates to the Old Bonegrinder turnoff, then a wide loop north-east
+    # round a wooded hill to a hairpin, and back west toward the lake and Vallaki.
+    "Old Svalich Road (the switchbacks)": [(610, 360), (604, 348), (600, 334), (593, 328), (581, 327), (570, 324),
+                                           (562, 316), (559, 310), (551, 308), (541, 312), (532, 320), (524, 330),
+                                           (517, 337), (509, 338), (503, 334), (502, 326), (505, 316), (506, 308),
+                                           (502, 302), (496, 301), (490, 305), (488, 308)],
+    "Old Svalich Road (the hairpin)": [(488, 308), (488, 296), (490, 284), (498, 278), (507, 277), (515, 282),
+                                       (522, 287), (530, 286), (538, 280), (545, 270), (555, 262), (561, 256),
+                                       (562, 246), (559, 239), (553, 237), (543, 239), (534, 244), (524, 246),
+                                       (515, 247), (499, 252), (480, 258), (463, 263), (442, 259)],
+    "Old Svalich Road (the lake shore)": [(442, 259), (420, 262), (400, 268), (380, 270), (350, 278)],
     "Vallaki lane": [(400, 268), (400, 250)],
     # From the Luna River crossroads (P) the Old Svalich Road bends south-west past the fork to
     # Argynvostholt, then north-west to the Raven River crossroads (R); there is no straight road
@@ -145,7 +153,7 @@ MOUNTAINS = [  # (centre, radius, count, size)
     ((440, 688), 60, 14, 32),    # Mount Ghakis
     ((250, 480), 95, 28, 20),    # the western mountains the Tsolenka road climbs through
     ((630, 270), 110, 26, 11),   # the highlands between Old Bonegrinder and the castle
-    ((524, 286), 30, 14, 15),    # the hill the road climbs round, north of Old Bonegrinder
+    ((530, 262), 14, 8, 13),     # the wooded hill inside the hairpin loop, north-east of Old Bonegrinder
     ((700, 26), 60, 10, 22),     # Mount Baratok
     ((394, 632), 34, 10, 16),    # the peaks the Amber Temple trail climbs into
 ]

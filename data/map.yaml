@@ -21,7 +21,7 @@ places:
   durst-manor: {xy: [968, 345], anchor: end}
   gates-of-barovia: {xy: [930, 398], label: Gates, anchor: end}
   # Chris: a different place from the gates above, on the road toward Castle Ravenloft.
-  west-gates-of-barovia: {xy: [585, 335], label: West Gates, anchor: end}
+  west-gates-of-barovia: {xy: [600, 334], label: West Gates, anchor: end}
   # The Vistani camp is on dry land just south of the pool.
   tser-pool: {xy: [690, 530], anchor: end}
   castle-ravenloft: {xy: [720, 398]}
@@ -60,8 +60,8 @@ spots:
   the-old-oak: {xy: [712, 486], label: the old oak by the River Ivlis, offroad: true}
   tser-pool-road: {xy: [640, 535], label: the road west of the Tser Pool camp}
   tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
-  lake-road: {xy: [510, 252], label: the lake road east of Vallaki}
-  bonegrinder-road: {xy: [526, 262], label: the road to Old Bonegrinder, near: the-windmill}
+  lake-road: {xy: [499, 252], label: the lake road east of Vallaki}
+  bonegrinder-road: {xy: [530, 286], label: the road to Old Bonegrinder, near: the-windmill}
   bonegrinder-fork: {xy: [488, 308], label: the turnoff to Old Bonegrinder, near: the-windmill}
   yester-hill-trail: {xy: [130, 400], label: the trail to Yester Hill}
   vallaki-east-road: {xy: [442, 259], label: the road an hour east of Vallaki}

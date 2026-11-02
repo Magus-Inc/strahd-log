@@ -721,3 +721,25 @@ def test_the_lost_girl_session_visits_the_vallaki_vistani_camp():
     entry = trail["2024-08-13-a-doll-for-arabelle"]
     assert "vallaki-vistani-camp" in entry["stops"]
     assert entry["marker"] == "vallaki-vistani-camp"
+
+
+def test_the_road_to_old_bonegrinder_winds_like_the_official_map():
+    # Chris, 2026-11-02: on the official map the Old Svalich Road zig-zags down switchbacks from the
+    # Tser Pool crossroads to the Old Bonegrinder turnoff, then swings in a wide loop north-east
+    # to a hairpin before it runs back west along the lake to Vallaki. Ours was nearly straight.
+    graph = barovia_map.road_graph()
+    crossroads, fork, east_of_vallaki = (610, 360), (488, 308), (442, 259)
+
+    def length(path):
+        return sum(math.dist(a, b) for a, b in zip(path, path[1:]))
+
+    down = barovia_map.route(graph, crossroads, fork)
+    assert length(down) > 1.4 * math.dist(crossroads, fork)
+    # the switchbacks: the road turns back on itself (heads east again) at least twice going down
+    turns = sum(1 for a, b, c in zip(down, down[1:], down[2:]) if (b[0] - a[0]) * (c[0] - b[0]) < 0)
+    assert turns >= 2
+
+    loop = barovia_map.route(graph, fork, east_of_vallaki)
+    assert length(loop) > 2.5 * math.dist(fork, east_of_vallaki)
+    assert max(x for x, _ in loop) > fork[0] + 60     # the hairpin is well east of the turnoff
+    assert min(y for _, y in loop) < east_of_vallaki[1] - 15   # and north, toward the lake
