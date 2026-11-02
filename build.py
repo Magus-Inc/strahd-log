@@ -35,6 +35,7 @@ import barovia_map
 import poststyle
 import share
 import wiki
+import wikistyle
 
 ROOT = Path(__file__).resolve().parent
 SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
@@ -273,6 +274,15 @@ def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
             page.mentioned_in = sorted([*page.mentioned_in, *extra], key=lambda p: (p.date, p.slug), reverse=True)
 
 
+def apply_wiki_style(pages: list[wiki.WikiPage], style: dict) -> None:
+    """One layout for every wiki page (see wikistyle.py and data/wiki-style.yaml)."""
+    for page in pages:
+        styled = wikistyle.apply(page.cited_html, style, page.type)
+        page.cited_html, page.top_picture = styled.html, styled.picture
+        page.facts = wikistyle.facts(page) if style["top"] == "infobox" and (
+            style["kinds"] == "all" or page.type in wikistyle.PEOPLE) else []
+
+
 def find_slides(posts: list[Post], static_dir: Path) -> None:
     """A post's slide deck is static/slides/<post file name>/ (e.g. 2026-09-29-the-beacon-of-argynvostholt/):
     one image per slide (01.webp, 02.webp, ...) and, optionally, the deck as a PDF. Another deck for the
@@ -478,7 +488,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
           site_url: str | None = None, base_path: str | None = None,
           wiki_dir: Path | None = None, map_file: Path | None = None,
           slides_static: Path | None = None, style_file: Path | None = None,
-          party_file: Path | None = None) -> list[Post]:
+          party_file: Path | None = None, wiki_style_file: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
@@ -489,6 +499,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     number_sessions(posts)
     link_wiki(posts, pages, style["relink"])
     cite_sessions(posts, pages)
+    wiki_style = wikistyle.load_style(wiki_style_file or data_dir / "wiki-style.yaml")
+    apply_wiki_style(pages, wiki_style)
     find_slides(posts, slides_static or ROOT / "static")
     apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")
     add_reading_aids(posts, pages)
@@ -517,6 +529,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
             tags.setdefault(tag, []).append(post)
     env.globals["has_tags"] = bool(tags)
     env.globals["post_style"] = style
+    env.globals["wiki_style"] = wiki_style
     env.globals["map_sprites"] = sprites
     env.globals["all_places"] = places
 

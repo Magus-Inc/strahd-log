@@ -7,8 +7,6 @@ summary: Aera's pseudodragon companion, a tiny undead spirit she found at Argynv
 source: Added from Ryan's stat block (27 May 2025)
 ---
 
-Aera's pseudodragon companion. Aera found her when the party first explored Argynvostholt ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/), 3 June 2025).
-
 ## What she is
 
 *Ryan shared Zorya's stat block on 27 May 2025. In short:*

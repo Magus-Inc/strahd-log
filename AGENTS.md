@@ -35,3 +35,8 @@
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.
 - The map (`barovia_map.py`) is our own drawing. Never trace or embed a published Curse of Strahd
   map in the repo; a licensed background, if we ever get one, is an overlay swap, not a commit here.
+- One layout for every wiki page (Chris, 2026-11-02): `data/wiki-style.yaml` and `wikistyle.py`
+  lay out the rendered page at build time: the first picture at the top in a facts box (other
+  names, first and last session seen), the `## Description` shown as "Malron’s Account", any stat
+  block after it, and "From the adventure log" folded under a story. Keep writing pages as before
+  (`## Description`, picture inside it); change the look in the yaml, not in the pages.

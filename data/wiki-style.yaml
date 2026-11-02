@@ -1,0 +1,9 @@
+# One layout for every wiki page (wikistyle.py). Picked by Chris on the wiki layout page, 2026-11-02
+# (https://claude.ai/artifact/S3xxMGHdr8nk5ppytE23JN). The first value of each setting in
+# wikistyle.OPTIONS leaves pages as written.
+top: infobox          # the first picture at the top, in a box with quick facts (other names, first/last seen)
+story-heading: account   # "Description" is called Malron’s Account, as on posts
+story-title: Malron’s Account
+extras: after-story   # a stat block or other section above the story goes after it
+log: folded           # "From the adventure log" under a story folds into one tap-to-open line
+kinds: all            # people, places, items, factions and deities alike
