@@ -58,7 +58,7 @@ places:
 #           session's trail can pass through one and its number can sit where the main action was
 #           (data/trail.yaml `marker`). Each sits on a road vertex, unless offroad: true.
 spots:
-  the-old-oak: {xy: [712, 486], label: the old oak by the River Ivlis, offroad: true}
+  the-old-oak: {xy: [712, 486], label: the old oak by the River Ivlis}
   tser-pool-road: {xy: [649, 567], label: the road west of the Tser Pool camp}
   tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
   lake-road: {xy: [499, 252], label: the lake road east of Vallaki}

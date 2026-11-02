@@ -824,3 +824,26 @@ def _seg_distance(p, a, b):
     bx, by = b
     t = max(0.0, min(1.0, ((p[0] - ax) * (bx - ax) + (p[1] - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2)))
     return math.dist(p, (ax + t * (bx - ax), ay + t * (by - ay)))
+
+
+def test_leaving_barovia_follows_the_ivlis_north_bank_to_the_old_oak():
+    # Session 8: "leave the path and enter the woods to follow the river towards the pool". Chris:
+    # "we hit the river from Barovia before the bridge, not after." So the trail leaves the road
+    # just north of the Ivlis bridge and keeps to the north bank; it never crosses the river.
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    places = {**data["places"], **data["spots"]}
+    oak, village = tuple(places["the-old-oak"]["xy"]), tuple(places["barovia"]["xy"])
+    assert not places["the-old-oak"].get("offroad")
+    path = barovia_map.route(barovia_map.road_graph(), village, oak)
+    assert path and path[-1] == oak
+    river = barovia_map.RIVERS["Ivlis River"]
+
+    def river_y(x):
+        for (ax, ay), (bx, by) in zip(river, river[1:]):
+            if ax <= x <= bx:
+                return ay + (by - ay) * (x - ax) / (bx - ax)
+        return math.inf
+
+    assert all(y < river_y(x) for x, y in path), "the walk to the oak crosses the Ivlis"
+    assert barovia_map.path_length(path) / barovia_map.HOUR < 3   # no detour round by the bridge
