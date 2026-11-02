@@ -4,7 +4,7 @@ type: npc
 aliases:
 - Kavan
 summary: A figure of the first folk who wields a long wooden spear.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
 
 ## Description
@@ -12,6 +12,12 @@ source: Compiled from the adventure log
 ![Kavan the Blood Drinker's spirit rising from his cairn, holding a long wooden spear](/images/kavan-the-blood-drinker-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
+*Written from the session logs, in Malron's words.*
+
+We first heard his name at the Wizard of Wines, where Maren had secretly arranged to meet him and Davian did not like his reputation. Veyren read druidic runes telling of Kavan the Blood Drinker, and Mira, who heals herself of any wound, called him up by dripping her blood. He appeared holding a long wooden spear, and Sverog offered him a wand in exchange for a powerful weapon, until Strahd rode up on his fiery steed in the middle of it all ([Finishing up at the vineyard](/posts/finishing-up-at-the-vineyard/)).
+
+At his cairn, an old place of worship, Kavan told us the legends of the Seeker, the Weaver and the Huntress, how the first folk split into mountain and forest clans, and that we must recover the Spear of the Ladies ([The Whispering Wall](/posts/the-whispering-wall/)). When Argynvost's beacon flared over the valley, its light found his spirit at his lonely cairn, lifting his head in remembrance ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log

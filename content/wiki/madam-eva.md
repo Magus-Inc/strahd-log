@@ -5,7 +5,7 @@ aliases:
 - Eva
 - Katarina
 summary: An old Vistani seer at Tser Pool who reads fortunes.
-source: Written on Obsidian Portal
+source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/madam-eva
 ---
 
@@ -19,9 +19,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/madam
 
 *Written from the session logs, in Malron's words.*
 
-An old Vistani seer. She came to each of us in a dream and called us to Tser Pool ([Rest for the Wicked](/posts/rest-for-the-wicked/)). There she read our fortunes in five Tarokka cards, which have guided us ever since, and told us Strahd leaves her alone because he fears her sight of the future. She sent Aera to buy a toy for her granddaughter Arabelle ([Tser Pool](/posts/tser-pool/)). Strahd later told us Madam Eva gives him information, and Muriel said he had a reading from her before we did ([Stop Winter Splinter](/posts/stop-winter-splinter/), [Welcome to Krezk](/posts/welcome-to-krezk/)). Katarina's letter at the ancient oak, and the Seer card Varushka left us, tell of her past and a love she lost ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/), [Varushka's Key](/posts/varushkas-key/)).
-
-Vistani woman that showed up in our dreams
+An old Vistani seer. She came to each of us in a dream, warned of the "Winds of Doom" and called us to her tent at Tser Pool, west of a place of death ([Rest for the Wicked](/posts/rest-for-the-wicked/)). There she read our fortunes in five Tarokka cards, which have guided us ever since, and told us Strahd leaves her alone because he fears her sight of the future. She sent Aera to buy a toy for her granddaughter Arabelle ([Tser Pool](/posts/tser-pool/)). Strahd later told us Madam Eva gives him information, and Muriel said he had a reading from her before we did ([Stop Winter Splinter](/posts/stop-winter-splinter/), [Welcome to Krezk](/posts/welcome-to-krezk/)). Katarina's letter at the ancient oak, and the Seer card Varushka left us, tell of her past and a love she lost ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/), [Varushka's Key](/posts/varushkas-key/)).
 
 <!-- from-the-log -->
 ## From the adventure log

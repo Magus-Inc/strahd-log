@@ -6,7 +6,7 @@ aliases:
 - Village Barovia
 - Village of Barovia
 summary: Both the land ruled by Strahd and the village beneath his castle.
-source: Written on Obsidian Portal
+source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/barovia
 ---
 
@@ -28,7 +28,7 @@ Long after, we stepped out of the castle's brazier into the village cemetery wit
 
 ### Locations
 
-* [Manor](/wiki/durst-manor/) which turns out to be [Durst Manor](/wiki/durst-manor/)
+* [Durst Manor](/wiki/durst-manor/), where the mists first brought us
 
 ### People
 
