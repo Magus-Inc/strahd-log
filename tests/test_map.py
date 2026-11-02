@@ -774,3 +774,18 @@ def test_east_roads_bend_like_the_official_map():
     # The castle road climbs north over a rise before it comes down to the castle gate.
     up = barovia_map.route(graph, tser, castle)
     assert min(y for _, y in up) < 350
+
+
+def test_roads_west_of_vallaki_bend_like_the_official_map():
+    # Region 2 of the retrace (Chris, 2026-11-02): around the Luna River crossroads.
+    graph = barovia_map.road_graph()
+    luna, fork, raven, argyn, baratok = (350, 278), (263, 307), (220, 262), (330, 375), (242, 225)
+    # From the Luna crossroads the Old Svalich Road sags south through the woods to the fork.
+    sag = barovia_map.route(graph, luna, fork)
+    assert max(y for _, y in sag) > 315
+    # The Argynvostholt road drops south, runs east along the valley, then turns down to the gate.
+    valley = barovia_map.route(graph, fork, argyn)
+    assert any(x > 300 and y < 345 for x, y in valley)
+    # The Lake Baratok trail heads north from the crossroads, then arcs west along the lake.
+    arc = barovia_map.route(graph, luna, baratok)
+    assert min(y for _, y in arc) < 223 and any(x > 335 and y < 255 for x, y in arc)
