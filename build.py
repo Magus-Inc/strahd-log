@@ -69,6 +69,8 @@ class Post:
     slides_pdf: str = ""
     decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
+    deaths: list = field(default_factory=list)   # (wiki page, brought back?) from data/party.yaml
+    changes: list = field(default_factory=list)  # (kind, [wiki pages]): joined, returned, left
 
     @property
     def path(self) -> str:
@@ -79,6 +81,79 @@ class Post:
     def slide_count(self) -> int:
         """Slides across every deck; list pages badge a session that has any."""
         return sum(len(deck.slides) for deck in self.decks)
+
+    @property
+    def death_names(self) -> str:
+        """First names on the skull badge: "Olfin", or "Olfin, Aera"."""
+        return ", ".join(first_name(page) for page, _ in self.deaths)
+
+    @property
+    def death_aria(self) -> str:
+        return "; ".join(f"{first_name(page)} died" + (" and was brought back" if back else "")
+                         for page, back in self.deaths)
+
+    @property
+    def party_label(self) -> str:
+        """Party badge text: "Veyren joins", "Crusty joins, Shabasta returns". Characters who come back
+        for one session and leave again (both returned and left) read "Gumbo and Liren return, then leave"."""
+        return ", ".join(f"{and_list([first_name(p) for p in pages])} {PARTY_VERBS[kind][len(pages) > 1]}"
+                         for kind, pages in self.changes)
+
+
+# What the party badge and the post page say for each kind of change (one character, several).
+PARTY_VERBS = {"joined": ("joins", "join"), "returned": ("returns", "return"), "left": ("leaves", "leave"),
+               "visited": ("returns, then leaves", "return, then leave")}
+PARTY_SENTENCES = {"joined": ("joins the party", "join the party"),
+                   "returned": ("returns to the party", "return to the party"),
+                   "left": ("leaves the party", "leave the party"),
+                   "visited": ("returns for one session, then leaves", "return for one session, then leave")}
+PARTY_KEYS = ("died", "brought_back", "joined", "returned", "left")
+
+
+def first_name(page) -> str:
+    return page.title.split()[0]
+
+
+def and_list(names: list[str]) -> str:
+    return names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
+
+
+def apply_party_entry(post: "Post", entry: dict, pages: dict) -> None:
+    """One post's entry in data/party.yaml: who died (and who of them was brought back), who joined,
+    came back or left. Names are wiki slugs of player characters."""
+    for key in entry:
+        if key not in PARTY_KEYS:  # "visited" is made below, never written
+            raise ValueError(f"data/party.yaml: {post.slug}: unknown key {key} (use {', '.join(PARTY_KEYS)})")
+    found = {}
+    for key, names in entry.items():
+        for name in names or []:
+            page = pages.get(name)
+            if page is None:
+                raise ValueError(f"data/party.yaml: {post.slug}: no wiki page {name}")
+            if page.type != "character":
+                raise ValueError(f"data/party.yaml: {post.slug}: {name} is not a player character")
+            found.setdefault(key, []).append(page)
+    died = entry.get("died") or []
+    back = entry.get("brought_back") or []
+    for name in back:
+        if name not in died:
+            raise ValueError(f"data/party.yaml: {post.slug}: {name} brought back without dying")
+    post.deaths = [(page, page.slug in back) for page in found.get("died", [])]
+    post.changes = [(kind, found[kind]) for kind in PARTY_VERBS if kind in found]
+    if "returned" in found and [p.slug for p in found["returned"]] == [p.slug for p in found.get("left", [])]:
+        post.changes = [(k, v) for k, v in post.changes if k not in ("returned", "left")] + [("visited", found["returned"])]
+
+
+def apply_party(posts: list["Post"], pages: list, path: Path) -> None:
+    if not path.exists():
+        return
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    by_slug = {p.slug: p for p in posts}
+    by_page = {p.slug: p for p in pages}
+    for slug, entry in data.items():
+        if slug not in by_slug:
+            raise ValueError(f"data/party.yaml: unknown post {slug}")
+        apply_party_entry(by_slug[slug], entry or {}, by_page)
 
 
 def split_front_matter(text: str) -> tuple[dict, str]:
@@ -349,9 +424,11 @@ def write(path: Path, text: str) -> None:
 def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
     """JSON the search page loads: title, address (relative to the base path), label, plain text."""
     # Text is NFC-normalised so the search page's accent folding keeps character positions.
-    # Optional badges: "s" slide count for a session, "p" thumbnail and "n" picture count for a wiki page.
+    # Optional badges: "s" slide count, "d" skull (names, spoken label) and "c" party change for a session, "p" thumbnail and "n" picture count for a wiki page.
     entries = [{"t": p.title, "u": p.path, "l": nice_date(p.date), "x": wiki.plain_text(p.html),
-                **({"s": p.slide_count} if p.slide_count else {})}
+                **({"s": p.slide_count} if p.slide_count else {}),
+                **({"d": {"n": p.death_names, "a": p.death_aria}} if p.deaths else {}),
+                **({"c": p.party_label} if p.changes else {})}
                for p in posts]
     entries += [{"t": w.title, "u": w.path, "l": wiki.LABELS[w.type],
                  "x": " ".join([*w.aliases, w.summary, wiki.plain_text(w.html).replace(wiki.LOG_NOTE, "")]),
@@ -380,7 +457,7 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
 def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
           site_url: str | None = None, base_path: str | None = None,
           wiki_dir: Path | None = None, map_file: Path | None = None,
-          slides_static: Path | None = None) -> list[Post]:
+          slides_static: Path | None = None, party_file: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
@@ -389,6 +466,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     link_wiki(posts, pages)
     cite_sessions(posts, pages)
     find_slides(posts, slides_static or ROOT / "static")
+    apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
@@ -413,6 +491,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     for post in posts:
         for tag in post.tags:
             tags.setdefault(tag, []).append(post)
+    env.globals["party_sentences"] = PARTY_SENTENCES
     env.globals["has_tags"] = bool(tags)
     env.globals["map_sprites"] = sprites
     env.globals["all_places"] = places
@@ -461,9 +540,13 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
             "legs": [{"t": p.title, "u": p.path} for p in sorted(posts, key=lambda p: p.number)],
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
                                 # Every session tied to the place, oldest first, with its map number (i) and how
-                                # it relates (k: here, ended, stop, near, from, past; w: the spot, for near).
+                                # it relates (k: here, ended, stop, near, from, past; w: the spot, for near), plus the
+                                # skull (d) and party change (c) badges.
                                 "sessions": [{"t": leg["post"].title, "u": leg["post"].path, "d": nice_date(leg["post"].date),
                                               "n": leg["post"].slide_count, "i": leg["n"], "k": kind,
+                                              **({"d": {"n": leg["post"].death_names, "a": leg["post"].death_aria}}
+                                                 if leg["post"].deaths else {}),
+                                              **({"c": leg["post"].party_label} if leg["post"].changes else {}),
                                               **({"w": where} if where else {})}
                                              for leg, kind, where in related.get(p.slug, [])]}
                        for p in places.values()},

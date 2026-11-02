@@ -436,6 +436,18 @@ body.deck-lock { overflow: hidden; }
 .badge-icon { width: 1.05em; height: 1.05em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .slides-tag { display: inline-flex; align-items: center; gap: 0.25rem; color: var(--gold); font-weight: 600; font-size: 0.82rem; white-space: nowrap; vertical-align: baseline; }
 .session-list .slides-tag { margin-left: 0.4rem; }
+.death-tag, .party-tag { display: inline-flex; align-items: center; gap: 0.25rem; font-weight: 600; font-size: 0.82rem; white-space: nowrap; vertical-align: baseline; }
+.death-tag { color: var(--accent-hi); }
+.party-tag { color: #9fb8c9; }
+.session-list .death-tag, .session-list .party-tag { margin-left: 0.4rem; }
+.row-tags { display: inline-flex; flex-wrap: wrap; align-items: center; column-gap: 0.6rem; margin-left: 0.4rem; }
+.session-list .row-tags > span { margin-left: 0; }
+.session-list.numbered .row-tags { grid-column: 2; margin-left: 0; }
+.party-notes { list-style: none; margin: 0.9rem 0 0; padding: 0; display: grid; gap: 0.3rem; font-size: 0.95rem; color: #cfc7c0; }
+.party-notes li { display: flex; align-items: center; gap: 0.45rem; }
+.party-notes .badge-icon { width: 1.15em; height: 1.15em; }
+.party-notes .death-note .badge-icon { color: var(--accent-hi); }
+.party-notes .change-note .badge-icon { color: #9fb8c9; }
 .wiki-card.has-pic, .result.has-pic { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.9rem; align-items: start; }
 .wiki-card.has-pic[hidden], .result.has-pic[hidden] { display: none; }
 .wiki-card-text { min-width: 0; }

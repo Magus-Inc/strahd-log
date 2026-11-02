@@ -1,0 +1,31 @@
+# Sessions where a player character died (the post gets a skull, even if they were brought back) and
+# sessions where the party changed: a new character joined, an old one came back, or one left.
+# Keys are post slugs; names are the characters' wiki page slugs. Keys: died, brought_back (a subset
+# of died), joined, returned, left. Chris confirmed the list on a pick page, 2 November 2026.
+entering-the-spirit-realm:
+  died: [shabasta]
+the-whispering-wall:
+  died: [veyren]
+  joined: [zorpheus]
+the-slipper-and-the-shadow-of-the-bat:
+  died: [olfin-darning]
+  brought_back: [olfin-darning]
+the-fallen-star-ape-sacrifice-and-redemption:
+  died: [olfin-darning]
+  brought_back: [olfin-darning]
+leaving-village-barovia:
+  joined: [grom-shield-breaker]
+looking-for-zoldars-tower:
+  joined: [shabasta]
+finding-arabelle:
+  joined: [gumbo, liren]
+delivery-for-lady-fiona:
+  joined: [oogway]
+act-3-the-broken-land:
+  joined: [veyren]
+welcome-back-to-vellanki:
+  joined: [crusty]
+  returned: [shabasta]
+the-red-door-a-reunion-beneath-the-abbey:
+  returned: [gumbo, liren]
+  left: [gumbo, liren]
