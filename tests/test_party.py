@@ -177,6 +177,8 @@ def test_chris_confirmed_list():
                     ("the-slipper-and-the-shadow-of-the-bat", "olfin-darning"),
                     ("the-whispering-wall", "veyren")]
     assert data["a-doll-for-arabelle"]["joined"] == ["shabasta"]
+    assert data["welcome-back-to-vellanki"] == {"joined": ["crusty"], "returned": ["shabasta"], "left": ["zorpheus"]}
+    assert "varushkas-key" not in data
     assert data["the-red-door-a-reunion-beneath-the-abbey"] == {"returned": ["gumbo", "liren"], "left": ["gumbo", "liren"]}
 
 
