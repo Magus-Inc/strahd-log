@@ -516,6 +516,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         for tag in post.tags:
             tags.setdefault(tag, []).append(post)
     env.globals["has_tags"] = bool(tags)
+    env.globals["post_style"] = style
     env.globals["map_sprites"] = sprites
     env.globals["all_places"] = places
 

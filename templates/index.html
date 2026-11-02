@@ -7,7 +7,7 @@
       <p class="eyebrow">Latest session &middot; <time datetime="{{ latest.date.isoformat() }}">{{ latest.date | nice_date }}</time></p>
       <h1><a href="{{ base }}{{ latest.path }}">{{ latest.title }}</a></h1>
 {% if latest.tagline %}
-      <p class="lede">{{ latest.tagline }}</p>
+      <p class="lede tagline tagline-{{ post_style['tagline-look'] }}">{{ latest.tagline }}</p>
 {% endif %}
 {% if latest.glance %}
       <ul class="glance-list">
@@ -40,7 +40,12 @@
         <li class="card session-card">
           <time class="chip date" datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time>
           <h4><a class="stretched" href="{{ base }}{{ post.path }}">{{ post.title }}</a></h4>
+{% if post.tagline and post_style['card-tagline'] != "hide" %}
+          <p class="card-tagline">{{ post.tagline }}</p>
+{% endif %}
+{% if not (post.tagline and post_style['card-tagline'] == "instead") %}
           <p class="teaser">{{ post.teaser }}</p>
+{% endif %}
           <p class="meta">{{ post.minutes }} min read{{ badges.meta_tags(post) }}</p>
         </li>
 {% endfor %}

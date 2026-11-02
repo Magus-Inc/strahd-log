@@ -30,6 +30,8 @@ OPTIONS = {
     "bold": ["as-written", "plain"],                 # no bold names mid-sentence in the story
     "glance": ["new-posts", "every-post", "none"],   # the "At a Glance" box (every-post is writing, not build)
     "tagline": ["keep", "every-post", "none"],       # the line under the title (every-post is writing)
+    "tagline-look": ["plain", "subtitle", "quote", "hand"],  # how the tagline looks under the title
+    "card-tagline": ["hide", "above-teaser", "instead"],  # the tagline on chronicle cards
     "picture": ["scene", "top"],                     # the feature picture beside its scene, or first
     "story": ["as-written", "no-heading", "titled"], # no "Summary" heading; or one named by story-title
     "scenes": ["as-written", "written"],             # scene headings from data/scene-headings.yaml

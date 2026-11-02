@@ -9,6 +9,7 @@ import article
 import poststyle
 
 ROOT = Path(build.__file__).parent
+TAGLINE_LOOK, CARD_TAGLINE = "subtitle", "above-teaser"  # Chris's tagline picks (2026-11-02 tagline look page)
 md = build.render_markdown
 
 
@@ -40,7 +41,9 @@ def test_blog_uses_the_picks():
                      # the layout review, 2026-11-02
                      "slides": "above-story", "opening": "in-story", "extra-titles": "hide", "quotes": "letters",
                      "recap-prose": "bullets", "sections": "template", "recap-pictures": "story",
-                     "relink": "each-heading"}
+                     "relink": "each-heading",
+                     # the tagline look, 2026-11-02
+                     "tagline-look": TAGLINE_LOOK, "card-tagline": CARD_TAGLINE}
 
 
 # --- cast -----------------------------------------------------------------------------------

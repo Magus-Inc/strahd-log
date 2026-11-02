@@ -11,7 +11,7 @@
         <p class="eyebrow"><a href="{{ base }}">Chronicle</a> &middot; <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time> &middot; {{ post.minutes }} min read</p>
         <h1>{{ post.title }}</h1>
 {% if post.tagline %}
-        <p class="lede">{{ post.tagline }}</p>
+        <p class="lede tagline tagline-{{ post_style['tagline-look'] }}">{{ post.tagline }}</p>
 {% endif %}
 {% if post.cast %}
         <ul class="pills" aria-label="Characters in this session">
