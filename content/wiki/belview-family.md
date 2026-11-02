@@ -10,7 +10,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![Two of the Belviews waiting at the abbey's north gate](/images/belview-family-ai.jpg)
+![Two of the Belviews waiting outside the abbey's north gate for news of Cyrus](/images/belview-family-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 

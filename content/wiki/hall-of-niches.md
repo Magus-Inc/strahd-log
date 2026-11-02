@@ -9,9 +9,9 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![The hall of niches full of lost things, shadows peeling off the walls](/images/hall-of-niches-ai.jpg)
+![The Hall of Niches beneath the abbey, full of lost keepsakes, as the shadows peel off its walls](/images/hall-of-niches-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*The hall behind the red door, as the six shadows peeled off its walls. AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
