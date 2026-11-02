@@ -1,7 +1,7 @@
 ---
 title: The Master of Runes and the Hellborn’s Spear
 date: '2026-04-14T21:00:00-05:00'
-tagline: The tomb said stop. We did not.
+tagline: The tomb said stop
 slug: the-master-of-runes-and-the-hellborn-s-spear
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-master-of-runes-and-the-hellborn-s-spear
 ---

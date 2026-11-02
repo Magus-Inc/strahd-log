@@ -1,7 +1,7 @@
 ---
 title: The Oath, the Spy, and the Silver Moon
 date: '2025-07-29T22:45:00-05:00'
-tagline: Three questions. Three no's.
+tagline: A skeleton, a love letter and a puzzle box
 slug: the-oath-the-spy-and-the-silver-moon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-oath-the-spy-and-the-silver-moon
 ---

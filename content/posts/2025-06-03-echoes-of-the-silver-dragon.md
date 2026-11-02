@@ -1,7 +1,7 @@
 ---
 title: Echoes of the Silver Dragon
 date: '2025-06-03T21:00:00-05:00'
-tagline: Aera adopts a pseudodragon. No one was consulted.
+tagline: Aera adopts a pseudodragon
 slug: echoes-of-the-silver-dragon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-silver-dragon
 ---

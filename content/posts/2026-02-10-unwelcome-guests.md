@@ -1,7 +1,7 @@
 ---
 title: Unwelcome Guests
 date: '2026-02-10T22:45:00-06:00'
-tagline: The dropkick did not go as planned
+tagline: Strahd rode out. We snuck in.
 slug: unwelcome-guests
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/unwelcome-guests
 ---

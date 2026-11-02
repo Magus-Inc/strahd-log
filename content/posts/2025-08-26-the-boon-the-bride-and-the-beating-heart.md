@@ -1,7 +1,7 @@
 ---
 title: The Boon, the Bride, and the Beating Heart
 date: '2025-08-26T22:45:00-05:00'
-tagline: 'Strahd''s hospitality: tea, judgment and a locked door'
+tagline: The cows have teeth after all
 slug: the-boon-the-bride-and-the-beating-heart
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-boon-the-bride-and-the-beating-heart
 ---
