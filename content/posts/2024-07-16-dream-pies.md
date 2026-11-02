@@ -18,7 +18,9 @@ We came upon a ruined watch tower, three stories tall and covered in moss and iv
 
 A revenant guarded the bridge and asked whether we served *him*. He named himself [Sir Godfrey Gwilym](/wiki/sir-godfrey-gwilym/), a knight of the Order of the Silver Dragon, banished by his commander, Vladimir Horngaard.
 
-![Portrait of a bridge revenant](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/images/Bridge%20Revenant.png)
+![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### The Fork in the Road
 
