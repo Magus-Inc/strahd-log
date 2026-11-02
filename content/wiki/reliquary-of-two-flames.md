@@ -7,7 +7,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![The palm-sized silver reliquary holding the two flames of Liren and Gumbo](/images/reliquary-of-two-flames-ai.jpg)
+![The palm-sized silver reliquary holding the two flames of Liren and Gumbo, on a cloth beside two old copper coins](/images/reliquary-of-two-flames-ai.jpg)
 
 *A silver reliquary small enough to sit in a palm. AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
