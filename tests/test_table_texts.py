@@ -42,7 +42,7 @@ FACTS = {
     "silver-tablet-and-banner": ["hidden stone shelf"],
     "moontouched-rapier": ["hole in the mortar"],
     # Chris 2026-11-02: the party heard this at a Vistani campfire and takes it as true
-    "ireena-kolyana": ["went fishing", "Kolyan Indirovich"],
+    "ireena-kolyana": ["went fishing", "Kolyan Indirovich", "set us wondering"],
     "izek-strazni": ["fishing trip", "doll of her"],
 }
 
