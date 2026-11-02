@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![The Vistani camp by Vallaki at dusk: painted wagons round a fire, broken pots, a whip cracking, dusk elves sitting apart, the Luna River to the west and Vallaki's palisade with refugee tents beyond](/images/vallaki-vistani-camp-ai.jpg)
+![The Vistani camp by Vallaki at dusk: painted wagons round a fire, broken pots, a whip cracking, dusk elves sitting apart, the Luna River to the west, the main road, and Vallaki's palisade with refugee tents beyond](/images/vallaki-vistani-camp-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
