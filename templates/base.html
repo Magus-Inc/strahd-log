@@ -152,6 +152,12 @@
         note.hidden = !note.textContent;
         box.showModal();
         if (big.complete) fit();
+        var full = img.dataset.full;  // a bigger copy, fetched only now that someone wants a closer look
+        if (full) {
+          var hi = new Image();
+          hi.onload = function () { if (box.open && big.alt === img.alt) big.src = full; };
+          hi.src = full;
+        }
       }
       document.querySelectorAll(ZOOMABLE).forEach(function (img) {
         if (img.closest(".deck, .map, .pic-thumb")) return;

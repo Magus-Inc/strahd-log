@@ -211,7 +211,7 @@ def render_markdown(text: str) -> str:
 def rebase(html: str, prefix: str) -> str:
     """Point root-relative links in rendered Markdown ("/images/x.png") at prefix ("/strahd-log/" or
     an absolute site address), so post bodies can use /images/... whatever the base path."""
-    return re.sub(r'((?:src|href)=")/(?!/)', lambda m: m.group(1) + prefix, html)
+    return re.sub(r'((?:src|href|data-full)=")/(?!/)', lambda m: m.group(1) + prefix, html)
 
 
 # Where a section starts for relink: every heading in the On this page box, or only the big ones.
@@ -233,7 +233,8 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(render_markdown(page.body_md))), self_slug=page.slug)
+        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(
+            article.full_size(render_markdown(page.body_md), ROOT / "static"))), self_slug=page.slug)
 
 
 def apply_style(posts: list[Post], style: dict, scenes: dict | None = None) -> None:
@@ -374,7 +375,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(set(post.listed) or post.mentions, pages) if post.show_cast else []
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(post.html), owners)), post.decks, post.slides_at)))
+            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(article.full_size(post.html, ROOT / "static")), owners)), post.decks, post.slides_at)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:

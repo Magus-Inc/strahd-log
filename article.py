@@ -10,6 +10,7 @@ from __future__ import annotations
 import html as htmllib
 import re
 from dataclasses import dataclass
+from pathlib import Path
 
 import wiki
 
@@ -223,3 +224,14 @@ def cast(post_mentions: set[str], pages: list[wiki.WikiPage]) -> list[wiki.WikiP
 
 def escape(text: str) -> str:
     return htmllib.escape(text, quote=True)
+
+
+def full_size(html: str, static_dir: Path) -> str:
+    """Give each picture that has a bigger copy in static/images/full/ a data-full address, which the
+    picture viewer loads only when a reader opens it (Chris, 2026-11-02). Pages keep the small file."""
+    def add(m: re.Match) -> str:
+        name = m.group(2)
+        if not (static_dir / "images" / "full" / name).is_file():
+            return m.group(0)
+        return f'{m.group(1)} data-full="/images/full/{name}">'
+    return re.sub(r'(<img\b[^>]*\bsrc="/images/([^"/]+)"[^>]*?)\s*/?>', add, html)
