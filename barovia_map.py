@@ -27,7 +27,7 @@ import wiki
 W, H = 1000, 750
 # About how much road an hour on foot covers, going by the hours the official map marks on its
 # roads (the median over data/travel-times.yaml). It sets the scale bar.
-HOUR = 37
+HOUR = 41  # map units per hour on foot; the roads traced from the official map wind, so the scale grew from 37
 SEED = 1987
 
 INK = "#3b2a1a"        # outlines and lettering
@@ -83,21 +83,29 @@ ROADS = {
     # From the Luna River crossroads (P) the Old Svalich Road bends south-west past the fork to
     # Argynvostholt, then north-west to the Raven River crossroads (R); there is no straight road
     # between the two crossroads.
-    "Old Svalich Road (P to R)": [(350, 278), (322, 298), (292, 309), (263, 307), (240, 290), (220, 262)],
+    "Old Svalich Road (P to R)": [(350, 278), (344, 284), (336, 293), (326, 303), (316, 311), (306, 316), (292, 318),
+                                  (279, 314), (269, 310), (263, 307), (258, 300), (251, 291), (243, 282), (236, 273),
+                                  (229, 267), (220, 262)],
     "Old Svalich Road (west)": [(220, 262), (195, 256), (160, 244), (120, 232), (60, 222), (2, 215)],
     # The lane to Old Bonegrinder leaves the foot of the last bend and runs west to the windmill.
     "Bonegrinder lane": [(490, 305), (487, 319), (473, 314)],
     "Abbey road": [(120, 232), (125, 220), (133, 208)],
-    "Argynvostholt road": [(263, 307), (292, 330), (318, 352), (330, 375)],
-    "Road to Tsolenka Pass": [(220, 262), (232, 300), (226, 345), (205, 395), (186, 440), (178, 490), (198, 535),
-                              (240, 578)],
+    "Argynvostholt road": [(263, 307), (264, 317), (267, 327), (276, 335), (286, 338), (299, 340), (309, 341),
+                           (314, 348), (315, 358), (315, 370), (316, 384)],
+    "Road to Tsolenka Pass": [(220, 262), (219, 269), (217, 280), (214, 296), (203, 318), (186, 337), (176, 348),
+                              (175, 359), (179, 371), (182, 384), (179, 398), (167, 409), (150, 417), (139, 428),
+                              (134, 442), (137, 450), (144, 439), (155, 432), (169, 434), (183, 442), (197, 440),
+                              (208, 437), (219, 440), (225, 451), (227, 467), (221, 484), (207, 492), (202, 506),
+                              (202, 523), (210, 534), (221, 542), (232, 550), (237, 561), (240, 578)],
     "Vineyard road": [(195, 256), (184, 292), (165, 322), (150, 340)],
-    "Amber Temple road": [(240, 578), (288, 614), (330, 648), (352, 672), (362, 705), (366, 748)],
+    "Amber Temple road": [(240, 578), (256, 590), (272, 596), (282, 604), (285, 617), (289, 630), (297, 640), (306, 649), (317, 650), (325, 649), (333, 654),
+                          (343, 661), (351, 667), (352, 672), (362, 705), (366, 748)],
 }
 TRACKS = {
     # Down the west bank of the Luna River to Berez: the trail keeps to the bank, never the water.
-    "Berez trail": [(350, 278), (340, 310), (345, 350), (342, 400), (330, 450)],
-    "Lake Baratok trail": [(350, 278), (310, 250), (276, 232), (242, 225)],
+    "Berez trail": [(350, 278), (345, 310), (350, 350), (348, 400), (330, 450)],
+    "Lake Baratok trail": [(350, 278), (345, 272), (341, 261), (338, 250), (332, 237), (322, 229), (309, 224),
+                           (292, 221), (274, 220), (260, 221), (249, 224), (242, 225)],
     "Tower of Kazan spur": [(242, 225), (258, 214), (250, 202)],
     # Up from the abbey into the hills on the west side of Lake Baratok, to the werewolf den. The
     # official map shows no road there; this is a track, drawn dotted.
