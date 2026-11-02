@@ -120,4 +120,4 @@ No new loot this time. We took stock of what we carry and what we mean to take:
 * **The Vampiric Axolotl**: Our name for the Heart of Sorrow, a ten-foot red crystal heart with a sliver of darkness swirling inside.
 * **"Ghost In, Fire Out"**: We agreed on stealth and magic to reach the objectives, but we are ready to leave with fire blazing if the undead wake.
 
-Note: Level 7 upgrades: Aera's Evasion and Krusty bringing Fireball to the table. The Fingernail Gambit was a half-meta plan to "tag" Strahd and track him during the heist. And the Crokinole tangent ended with the suggestion that the party be "polite" while flicking enemies into the castle chasm.
+Note: Level 7 upgrades: Aera's Evasion and Crusty bringing Fireball to the table. The Fingernail Gambit was a half-meta plan to "tag" Strahd and track him during the heist. And the Crokinole tangent ended with the suggestion that the party be "polite" while flicking enemies into the castle chasm.

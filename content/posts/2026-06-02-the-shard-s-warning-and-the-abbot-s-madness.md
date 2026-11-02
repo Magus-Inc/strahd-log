@@ -44,7 +44,7 @@ At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made 
 
 ## Encounters:
 
-**The Roadside Ambush**: Six dire wolves and two scarecrows, waiting by a false corpse of Aera. All were destroyed; Aera fell but was revived; Strahd, it seems, counts us a “nuisance”.  
+**The Roadside Ambush**: Six dire wolves and two scarecrows, waiting by a false corpse of Aera. All were destroyed; Aera was knocked unconscious but awakened; Strahd, it seems, counts us a “nuisance”.  
 **Baron Dmitri Krezkov**: A desperate plea to save his wife from a celestial executioner.  
 **The Revenant at the Bridge**: A warning that Vladimir Horngaard’s phantom warriors are watching where we go.
 

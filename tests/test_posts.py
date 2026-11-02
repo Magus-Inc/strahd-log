@@ -13,6 +13,13 @@ def test_posts_found():
     assert POSTS
 
 
+def test_varushkas_key_is_dated_by_chris_notes():
+    """Chris's notes for the guest-tower nightmare are from Tuesday 16 Sep 2025, not Friday the 26th."""
+    post = build.parse_post(POSTS[0].parent / "2025-09-16-varushkas-key.md")
+    assert post.date.date().isoformat() == "2025-09-16" and post.slug == "varushkas-key"
+    assert not (POSTS[0].parent / "2025-09-26-varushkas-key.md").exists()
+
+
 @pytest.mark.parametrize("path", POSTS, ids=lambda p: p.stem)
 def test_post_body_has_no_title_heading(path):
     """The post page already shows the title as its heading, so a "# Title" line in the body
