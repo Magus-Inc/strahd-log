@@ -93,7 +93,7 @@ Selections:
 
 **Strahd von Zarovich**: Gave us the gems as our reward and led us through the Wall’s challenge.
 
-**Kavan**: Told the old legends of his people’s split and of the need to recover the Spear of the Ladies.
+**Kavan**: Told the old legends of his people’s split and of the need to recover the Spear of the Huntress.
 
 **Minofaustus (Merchant)**: A traveling trader with a magical market, whose deals come with interest.
 

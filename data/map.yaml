@@ -95,8 +95,6 @@ within:
   zarovich-gate: vallaki
   # The cursed altar in the werewolf den (Blood and Oaths Under Moonlight).
   shrine-of-mother-night: lake-baratok-cave
-  # Chris: the Sarepool crossroads is the Tser Pool crossroads (Unwelcome Guests).
-  sarepool: tser-crossroads
 
 # landmarks: wiki pages for things drawn on the map that are not places to stop (rivers, woods, mountains,
 #            a lone tree): wiki page slug -> {xy, anchor, label}. Only the page's own map shows one, opening

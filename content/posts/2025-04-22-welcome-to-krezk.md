@@ -53,7 +53,7 @@ Three vampire spawn on the road to Krezk, all destroyed.
 
 **Dmitri Krezkov**: A werewolf by a curse passed down the generations; his wife gathers wolfsbane to hold it back.
 
-**Anna Krezkov**: Dmitri’s wife, who gathers wolfsbane to hold back the curse.
+**Anna Krezkova**: Dmitri’s wife, who gathers wolfsbane to hold back the curse.
 
 **The Abbot**: The mysterious figure who has taken over the abbey and is building a flesh golem that needs the heart of a willing victim.
 

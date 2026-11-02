@@ -1,5 +1,6 @@
 """Names are spelled as the Curse of Strahd book spells them (data/spellings.yaml)."""
 import json
+import re
 from pathlib import Path
 
 import pytest
@@ -91,9 +92,64 @@ def test_spellings_have_no_chains():
     ("Sir Godfried William", "Sir Godfrey Gwilym"), ("Kazan", "Khazan"), ("Mordakainen", "Mordenkainen"),
     # Places too, at Chris's word (2026-10-31).
     ("Welcome to Vellaki", "Welcome to Vallaki"), ("Wachter Haus", "Wachterhaus"), ("St. Markova Abbey", "St. Markovia Abbey"),
+    # Misheard names whose wiki link was right but whose words were not (Chris, 2026-11-02).
+    ("Near the Sarepool crossroads", "Near the Tser Pool crossroads"), ("Test Pool", "Tser Pool"),
+    ("Velaki", "Vallaki"), ("Forest Fand", "Forest Fane"), ("the Bluewater Inn", "the Blue Water Inn"),
+    ("St. Andrals Church", "St. Andral's Church"), ("Ric Tavio", "Rictavio"),
+    ("Holy Symbol of Raven Kind", "Holy Symbol of Ravenkind"), ("Anna Krezkov", "Anna Krezkova"),
+    ("a Vistano", "a Vistana"), ("a priest of Latander", "a priest of Lathander"),
+    # Chris's picks on the review page (2026-11-02).
+    ("spies for Vlahd", "spies for Strahd"), ("Maren has secretly arranged", "Mira has secretly arranged"),
+    ("the Spear of the Ladies", "the Spear of the Huntress"),
 ])
 def test_book_spellings(wrong, right):
     assert fix_spellings.fix_text(wrong, SPELLINGS)[0] == right
+
+
+def test_near_misses_finds_an_alias_spelled_almost_like_its_page():
+    """Chris, 2026-11-02: "Sarepool crossroads" linked to the Tser Pool Crossroads page, so the link
+    was right and the words were wrong. An alias a letter or two off its page's name is a misspelling."""
+    pages = {
+        "tser-crossroads": ["Tser Pool Crossroads", "Sarepool crossroads"],
+        "vallaki": ["Vallaki", "Velaki"],
+        "anna-krezkova": ["Anna Krezkova", "Anna", "Anna Krezkov"],
+        "chest-of-holding": ["Chest of Holding", "Chest of Holden"],
+        "sarepool": ["Tser Pool Crossroads", "Sarepool"],
+        "lady-fiona-wachter": ["Lady Fiona Wachter", "Fiona Watcher"],
+        "blue-water-inn": ["Blue Water Inn", "Bluewater Inn"],
+        "van-richten": ["Van Richten", "Rictavio", "Ric Tavio"],
+    }
+    found = fix_spellings.near_misses(pages, keep={"Chest of Holden"})
+    assert found == [("anna-krezkova", "Anna Krezkov", "Anna Krezkova"),
+                     ("blue-water-inn", "Bluewater Inn", "Blue Water Inn"),
+                     ("lady-fiona-wachter", "Fiona Watcher", "Lady Fiona Wachter"),
+                     ("sarepool", "Sarepool", "Tser Pool Crossroads"),
+                     ("tser-crossroads", "Sarepool crossroads", "Tser Pool Crossroads"),
+                     ("vallaki", "Velaki", "Vallaki"),
+                     ("van-richten", "Ric Tavio", "Rictavio"), ("van-richten", "Rictavio", "Ric Tavio")]
+
+
+@pytest.mark.parametrize("names", [
+    ["Lady Fiona Wachter", "Fiona Wachter", "Lady Fiona"],      # shorter forms of the name
+    ["Emil", "Emil Toranescu"],                                  # a longer form
+    ["Silver-thorn Collars", "Silver Thorn Collar"],            # hyphen, plural
+    ["Belview Family", "Belviews"], ["Blinsky's Toy Store", "Blinsky toys"],
+    ["Argynvost’s Skull", "Argynvost Skull"],                   # possessive
+    ["Ezmerelda d'Avenir", "Ezmerelda d’Avenir"],               # curly quote
+    ["Strahd von Zarovich", "Count Strahd von Zarovich", "Vlahd"],  # a different word is not a slip
+])
+def test_near_misses_leaves_other_forms_of_a_name_alone(names):
+    assert fix_spellings.near_misses({"page": names}) == []
+
+
+def test_kept_variants_are_explained_and_used():
+    """The deliberate near-spellings (a pun, an in-story rename...) are listed in spellings.yaml
+    under keep, and each is still an alias somewhere, so the list doesn't go stale."""
+    keep = fix_spellings.load_keep(ROOT / "data" / "spellings.yaml")
+    assert "Chest of Holden" in keep and "Blood of the Vine Tavern" in keep
+    aliases = {a for p in wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter) for a in p.aliases}
+    assert keep <= aliases, keep - aliases
+    assert not keep & set(SPELLINGS)
 
 
 # --- the site -----------------------------------------------------------------------------------
@@ -103,6 +159,51 @@ def test_posts_wiki_and_log_extracts_use_book_spellings():
     text, run `just spellings`; to add a name, add it to data/spellings.yaml."""
     found = fix_spellings.check(fix_spellings.DEFAULT_PATHS, SPELLINGS)
     assert not found, "Misspelled names (file, wrong, right): " + repr(found[:20])
+
+
+def test_wiki_aliases_are_not_misspellings_of_their_page():
+    """Aliases link the name wherever it appears, so a misspelled alias hides a misspelling behind a
+    right link. Fix it in data/spellings.yaml, or list it under keep if the table means it."""
+    keep = fix_spellings.load_keep(ROOT / "data" / "spellings.yaml")
+    pages = {p.slug: [p.title, *p.aliases]
+             for p in wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)}
+    assert fix_spellings.near_misses(pages, keep) == []
+
+
+def test_fixed_names_still_link_to_the_right_page():
+    """The fix must keep the link right: the crossroads, not the lake."""
+    linker = wiki.Linker(wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter))
+    html, slugs = linker.link("<p>Near the Tser Pool Crossroads we met a Vistani caravan.</p>")
+    assert slugs == {"tser-crossroads", "vistani"}, html
+    post = (ROOT / "content" / "posts" / "2026-02-10-unwelcome-guests.md").read_text(encoding="utf-8")
+    assert "Near the Tser Pool Crossroads we met" in post
+
+
+def _posts():
+    out = {}
+    for f in sorted((ROOT / "content" / "posts").glob("*.md")):
+        meta, body = build.split_front_matter(f.read_text(encoding="utf-8"))
+        out[meta.get("slug", f.stem)] = (meta["title"], body)
+    return out
+
+
+def test_post_titles_cut_off_by_obsidian_portal_read_in_full():
+    """Obsidian Portal cut two titles mid-word; their addresses stay as they were."""
+    posts = _posts()
+    assert posts["echoes-of-the-black-terro"][0] == "Echoes of the Black Terror"
+    assert posts["blood-and-oaths-under-moonligh"][0] == "Blood and Oaths Under Moonlight"
+
+
+def test_links_to_posts_do_not_cut_a_word():
+    """A wiki line citing a post uses its title; a stale copy of a cut-off title shows up here."""
+    titles = {slug: title for slug, (title, _) in _posts().items()}
+    cut = []
+    for f in (ROOT / "content").rglob("*.md"):
+        for text, slug in re.findall(r"\[([^\]]+)\]\(/posts/([^/)#]+)/?\)", f.read_text(encoding="utf-8")):
+            title = titles.get(slug, "")
+            if title.startswith(text) and len(title) > len(text) and title[len(text)].isalnum():
+                cut.append((f.name, text, title))
+    assert not cut, cut[:10]
 
 
 def test_npc_pages_named_from_the_book():
@@ -118,6 +219,7 @@ def test_renamed_wiki_pages_keep_their_old_address():
     assert redirects["kiril-vonstrranovich"] == "kiril-stoyanovich"
     assert redirects["baba-lasaga"] == "baba-lysaga"
     assert redirects["wachter-haus"] == "wachterhaus"
+    assert redirects["sarepool"] == "tser-crossroads"  # "Sarepool" was Tser Pool misheard
     slugs = {p.stem for p in (ROOT / "content" / "wiki").glob("*.md")}
     for old, new in redirects.items():
         assert old not in slugs and new in slugs, (old, new)

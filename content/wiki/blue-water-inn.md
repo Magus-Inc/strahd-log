@@ -3,7 +3,6 @@ title: Blue Water Inn
 type: place
 aliases:
 - Blue Inn
-- Bluewater Inn
 summary: An inn in Vallaki run by Danika.
 source: Compiled from the adventure log, with a description written for the site
 ---

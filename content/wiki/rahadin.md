@@ -28,7 +28,7 @@ At the castle he greeted us, brought a chained prisoner for our judgment, warned
 * Arrived on a phantom steed with an invitation to dinner at Castle Ravenloft. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Rolled dice to decide Milivoj's and Henrik's fates. ([Helping Victor](/posts/helping-victor/))
 * Strahd calls him a servant. ([Stop Winter Splinter](/posts/stop-winter-splinter/))
-* Killed Horngaard, commander of the Order of the Silver Dragon. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Killed Horngaard, commander of the Order of the Silver Dragon. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Greeted the party when they arrived at Castle Ravenloft. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Brought a chained prisoner for judgment and locked the party in the guest room. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Uses the tomb of King Barov and Queen Ravenovia (K88) as his sanctuary. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))

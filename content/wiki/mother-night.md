@@ -12,4 +12,4 @@ source: Compiled from the adventure log
 
 * The Myrmidon card's treasure belongs to her. ([Tser Pool](/posts/tser-pool/))
 * Was worshipped by Lysa. ([The Hunt for the Heart Stone](/posts/the-hunt-for-the-heart-stone/))
-* Has a cursed shrine inside the werewolf den. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Has a cursed shrine inside the werewolf den. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))

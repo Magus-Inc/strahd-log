@@ -820,7 +820,7 @@
   "summary": "A Vistani elder and messenger of Madam Eva.",
   "facts": [
    {
-    "text": "Met the party near Sarepool and gave them a Clairvoyance Stone.",
+    "text": "Met the party near the Tser Pool Crossroads and gave them a Clairvoyance Stone.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -1253,7 +1253,7 @@
   "summary": "A travelling people of Barovia.",
   "facts": [
    {
-    "text": "A Vistani wagon led by Stanimir met the party near Sarepool.",
+    "text": "A Vistani wagon led by Stanimir met the party near the Tser Pool Crossroads.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -1624,7 +1624,7 @@
   "name": "Blue Water Inn",
   "type": "place",
   "aliases": [
-   "Bluewater Inn"
+   "Blue Water Inn"
   ],
   "summary": "An inn in Vallaki and the party's base.",
   "facts": [
@@ -1643,10 +1643,10 @@
   ]
  },
  {
-  "name": "Sarepool",
+  "name": "Tser Pool Crossroads",
   "type": "place",
   "aliases": [],
-  "summary": "A Vistani camp at a crossroads.",
+  "summary": "The crossroads above Tser Pool.",
   "facts": [
    {
     "text": "The party met Stanimir near here.",
@@ -1791,7 +1791,7 @@
   "name": "Forest Fane",
   "type": "place",
   "aliases": [
-   "Forest Fand"
+   "Forest Fane"
   ],
   "summary": "An ancient fane that could restore the Spear of the Huntress.",
   "facts": [

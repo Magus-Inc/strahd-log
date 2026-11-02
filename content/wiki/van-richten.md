@@ -5,7 +5,6 @@ aliases:
 - Rudolph van Richten
 - R V Richten
 - Rictavio
-- Ric Tavio
 - Rictavio van Richten
 summary: A vampire hunter and scholar disguised in Vallaki as the carnival showman Rictavio.
 source: Compiled from the adventure log, with a description written for the site
@@ -33,5 +32,5 @@ Rudolph van Richten, a vampire hunter whose child a vampire murdered. We found h
 * Rescued Arabelle and hid her in his wagon. ([Finding Arabelle!](/posts/finding-arabelle/))
 * Gave Malron the Talisman of Echoes. ([Finding Arabelle!](/posts/finding-arabelle/))
 * Erasmus shared lore from Van Richten's guide. ([Helping Victor](/posts/helping-victor/))
-* Ezmerelda's family had a hand in kidnapping his son. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
+* Ezmerelda's family had a hand in kidnapping his son. ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/))
 * Provided the castle maps that turned the infiltration into a planned heist. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
