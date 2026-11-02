@@ -56,6 +56,8 @@ class WikiPage:
     html: str = ""
     mentioned_in: list = field(default_factory=list)  # posts, newest first
     cited_html: str = ""  # html with "(Session Title)" links as session numbers, set by the build
+    top_picture: str = ""  # the first picture and its caption, when the wiki layout puts it at the top
+    facts: list = field(default_factory=list)  # the facts box (wikistyle.facts), when the layout has one
     thumb: str = ""  # small copy of the first picture for list cards (images/thumbs/...), set by the build
 
     @property
