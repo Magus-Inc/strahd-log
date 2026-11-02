@@ -92,6 +92,34 @@ def test_a_phrase_links_only_its_bracketed_words_and_counts_as_a_mention():
     assert "/wiki/abbey/" not in html
 
 
+def test_a_name_that_starts_in_a_phrase_wins_and_a_name_after_it_still_links():
+    pages = [wiki.WikiPage(slug="abbey", title="Abbey of St. Markovia", type="place"),
+             wiki.WikiPage(slug="markovia", title="St. Markovia", type="npc"),
+             wiki.WikiPage(slug="tower", title="Tower of Khazan", type="place"),
+             wiki.WikiPage(slug="lake", title="Lake Baratok", type="place")]
+    linker = wiki.Linker(pages, {"abbey": ["the [Abbey]"], "tower": ["[tower] at Lake Baratok"]})
+    html, mentioned = linker.link("<p>We rode to the Abbey of St. Markovia, then the tower at Lake Baratok.</p>")
+    assert '<a class="wiki-link" href="/wiki/abbey/" title="Abbey of St. Markovia">Abbey of St. Markovia</a>' in html
+    assert '<a class="wiki-link" href="/wiki/tower/" title="Tower of Khazan">tower</a> at ' \
+           '<a class="wiki-link" href="/wiki/lake/" title="Lake Baratok">Lake Baratok</a>' in html
+    assert mentioned == {"abbey", "tower", "lake"}
+
+
+def test_a_bold_list_entry_that_is_a_phrase_links_its_words():
+    castle = wiki.WikiPage(slug="castle", title="Castle Ravenloft", type="place")
+    linker = wiki.Linker([castle], {"castle": ["the [castle]"]})
+    html = wiki.link_npc_names("<h2>Key Locations</h2><p><strong>The castle</strong>: dark.</p>", linker)
+    assert '<strong>The <a class="wiki-link" href="/wiki/castle/"' in html
+
+
+def test_a_phrase_listed_for_two_places_is_refused(tmp_path):
+    path = tmp_path / "described-places.yaml"
+    path.write_text("phrases:\n  a: [the castle]\n  b: [The castle]\n", encoding="utf-8")
+    pages = [wiki.WikiPage(slug=s, title=s.upper() + " page", type="place") for s in "ab"]
+    with pytest.raises(ValueError, match="twice"):
+        wiki.load_phrases(path, pages)
+
+
 def test_a_phrase_never_links_on_its_own_page_or_inside_a_heading():
     cave = wiki.WikiPage(slug="cave", title="Lake Baratok Cave", type="place")
     linker = wiki.Linker([cave], {"cave": ["werewolf den"]})

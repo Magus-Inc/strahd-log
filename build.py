@@ -543,7 +543,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
-    if wiki_style["top"] == "infobox":
+    if wiki_style["top"] == "infobox" and wiki_style["kinds"] == "all":
         add_place_facts(pages, parent, data_dir / "nearby.yaml")
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
     spots = barovia_map.load_spots(map_file or content_dir.parent.parent / "data" / "map.yaml", places) if places else {}

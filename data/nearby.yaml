@@ -1,26 +1,28 @@
 # The places one road or trail stop away from each place on the map (data/map.yaml), shown as a
-# "Nearby" row in a place page's facts box (Chris, 2026-11-02). Read off our map's roads
-# (data/travel-times.yaml) and the posts, by hand; every pair is listed both ways (a test checks it).
+# "Nearby" row in a place page's facts box (Chris, 2026-11-02). Read off our map's roads and trails
+# (data/travel-times.yaml, barovia_map.py), plus places in plain sight of each other: the castle on the
+# cliff above the village, and the tower and the werewolf den by Lake Baratok. Every pair is listed
+# both ways (tests/test_place_links.py checks it).
 nearby:
-  barovia: [gates-of-barovia, castle-ravenloft, tser-pool]
+  barovia: [gates-of-barovia, castle-ravenloft, tser-pool, tser-crossroads]
   durst-manor: [gates-of-barovia]
   gates-of-barovia: [durst-manor, barovia]
-  west-gates-of-barovia: [castle-ravenloft, tser-crossroads]
+  west-gates-of-barovia: [tser-crossroads, the-windmill]
   tser-pool: [barovia, tser-crossroads]
-  castle-ravenloft: [barovia, west-gates-of-barovia, tser-crossroads]
-  tser-crossroads: [castle-ravenloft, west-gates-of-barovia, tser-pool, the-windmill]
-  the-windmill: [tser-crossroads, vallaki]
+  castle-ravenloft: [barovia, tser-crossroads]
+  tser-crossroads: [castle-ravenloft, west-gates-of-barovia, tser-pool, barovia]
+  the-windmill: [west-gates-of-barovia, vallaki]
   vallaki: [the-windmill, vallaki-vistani-camp, luna-river-crossroads]
   vallaki-vistani-camp: [vallaki, luna-river-crossroads]
   luna-river-crossroads: [vallaki, vallaki-vistani-camp, lake-baratok, argynvostholt, raven-river-crossroads, berez]
-  raven-river-crossroads: [luna-river-crossroads, argynvostholt, lake-baratok, krezk, wizard-of-wines, tsolenka-pass]
+  raven-river-crossroads: [luna-river-crossroads, argynvostholt, lake-baratok, krezk, wizard-of-wines, yester-hill, tsolenka-pass]
   lake-baratok: [tower-of-khazan, lake-baratok-cave, luna-river-crossroads, raven-river-crossroads]
   tower-of-khazan: [lake-baratok, lake-baratok-cave]
-  lake-baratok-cave: [lake-baratok, tower-of-khazan]
+  lake-baratok-cave: [lake-baratok, tower-of-khazan, abbey-of-saint-markovia]
   krezk: [abbey-of-saint-markovia, raven-river-crossroads]
-  abbey-of-saint-markovia: [krezk]
+  abbey-of-saint-markovia: [krezk, lake-baratok-cave]
   wizard-of-wines: [raven-river-crossroads, yester-hill]
-  yester-hill: [wizard-of-wines, whispering-wall]
+  yester-hill: [wizard-of-wines, raven-river-crossroads, whispering-wall]
   whispering-wall: [yester-hill]
   argynvostholt: [luna-river-crossroads, raven-river-crossroads]
   berez: [luna-river-crossroads]

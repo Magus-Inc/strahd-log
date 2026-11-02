@@ -73,7 +73,7 @@ def test_notable_npcs_are_linked_and_from_the_story(path, linker):
             continue
         m = linker.pattern.search(name)
         assert m, f"{path.name}: Notable NPC {name!r} has no wiki page to link to"
-        slug = linker.by_name[wiki.fold(m.group(1))].slug
+        slug = linker.page_of(m).slug
         assert slug in mentioned, f"{path.name}: {name!r} is not in this post's story"
 
 
