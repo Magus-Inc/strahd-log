@@ -9,9 +9,9 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![The Church of Saint Andral at night, its crypt door open on an empty ossuary](/images/church-of-saint-andral-ai.jpg)
+![The Church of Saint Andral the morning we brought Ireena, its doors open on the pews and a bare altar, as Milivoj mends a broken window and Henrik unloads planks](/images/church-of-saint-andral-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
