@@ -1,7 +1,7 @@
 ---
 title: Depths of Ravenloft
 date: '2026-03-10T20:30:00-05:00'
-tagline: 'Chronicle of the Larder’s Ransom: The Sanctuary Sprint and the Torture Chamber’s Threshold'
+tagline: The wrong spoon, the right spoon, and an iron maiden
 slug: depths-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/depths-of-ravenloft
 ---
