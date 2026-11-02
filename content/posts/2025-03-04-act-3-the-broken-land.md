@@ -1,6 +1,7 @@
 ---
 title: 'Act 3: The Broken Land'
 date: '2025-03-04T21:00:00-06:00'
+tagline: Shabasta's brother is a hare. We didn't ask.
 slug: act-3-the-broken-land
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/act-3-the-broken-land
 ---

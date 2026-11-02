@@ -1,6 +1,7 @@
 ---
 title: Welcome to Krezk
 date: '2025-04-22T21:00:00-05:00'
+tagline: Auntie was the Abbot. Of course she was.
 slug: welcome-to-krezk
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-to-krezk
 ---

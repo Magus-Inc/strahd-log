@@ -1,6 +1,7 @@
 ---
 title: Wizard of Wines vineyard
 date: '2025-03-11T21:00:00-05:00'
+tagline: The druid would like a word with the mouse
 slug: wizard-of-wines-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/wizard-of-wines-vineyard
 ---

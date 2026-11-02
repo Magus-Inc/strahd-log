@@ -1,6 +1,7 @@
 ---
 title: The Echoing Choirs of Ravenloft
 date: '2026-04-21T21:00:00-05:00'
+tagline: Rahadin wants it all back
 slug: the-echoing-choirs-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-echoing-choirs-of-ravenloft
 ---

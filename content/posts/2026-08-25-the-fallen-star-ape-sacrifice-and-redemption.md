@@ -1,6 +1,7 @@
 ---
 title: 'The Fallen Star: Ape, Sacrifice and Redemption'
 date: '2026-08-25T16:30:00-05:00'
+tagline: It's time to monkey around
 slug: the-fallen-star-ape-sacrifice-and-redemption
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fallen-star-ape-sacrifice-and-redemption
 ---

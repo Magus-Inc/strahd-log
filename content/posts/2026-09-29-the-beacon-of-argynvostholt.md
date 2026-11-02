@@ -1,6 +1,7 @@
 ---
 title: 'The Beacon of Argynvostholt'
 date: '2026-09-29T17:00:00-05:00'
+tagline: '''Some of you may die,'' Shabasta said cheerfully'
 slug: the-beacon-of-argynvostholt
 ---
 

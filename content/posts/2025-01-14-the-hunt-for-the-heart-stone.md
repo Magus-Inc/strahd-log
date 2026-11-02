@@ -1,6 +1,7 @@
 ---
 title: The Hunt for the Heart Stone
 date: '2025-01-14T21:00:00-06:00'
+tagline: First, find a hag. Then, take her heart.
 slug: the-hunt-for-the-heart-stone
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-hunt-for-the-heart-stone
 ---

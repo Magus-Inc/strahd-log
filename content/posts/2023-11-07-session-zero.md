@@ -1,6 +1,7 @@
 ---
 title: Session Zero
 date: '2023-11-07T20:00:00-06:00'
+tagline: Never follow a floating tooth into the fog
 slug: session-zero
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/session-zero
 ---

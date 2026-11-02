@@ -1,6 +1,7 @@
 ---
 title: Finishing up at the vineyard
 date: '2025-03-25T21:00:00-05:00'
+tagline: Look who rode in on a burning horse
 slug: finishing-up-at-the-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finishing-up-at-the-vineyard
 ---

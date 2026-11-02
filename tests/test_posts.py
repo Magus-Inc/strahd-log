@@ -22,8 +22,18 @@ def test_post_body_has_no_title_heading(path):
     assert not re.search(r"<h1[\s>]", html), f"{path.name}: remove the '# {post.title}' line from the body"
 
 
+@pytest.mark.parametrize("path", POSTS, ids=lambda p: p.stem)
+def test_every_post_has_a_short_tagline(path):
+    """Chris (2026-11-01) loves the funny line under a post title and wants one on every post.
+    It sits under the title as a one-line subtitle, so it stays short and on one line."""
+    tagline = build.parse_post(path).tagline
+    assert tagline.strip(), f"{path.name}: add a 'tagline:' line to the front matter"
+    assert "\n" not in tagline, f"{path.name}: keep the tagline on one line"
+    assert len(tagline) <= 90, f"{path.name}: the tagline is {len(tagline)} characters; keep it under 90"
+
+
 ROOT = Path(build.__file__).parent
-WIKI = sorted((ROOT / "content" / "wiki").glob("*.md"))
+WIKI =sorted((ROOT / "content" / "wiki").glob("*.md"))
 LOCAL_IMAGE = re.compile(r"!\[[^\]]*\]\((/images/[^)\s]+)\)")
 
 

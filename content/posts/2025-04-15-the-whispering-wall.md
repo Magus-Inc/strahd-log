@@ -1,6 +1,7 @@
 ---
 title: The Whispering Wall
 date: '2025-04-15T21:00:00-05:00'
+tagline: Gumbo bought a rogue. Aera bought a debt.
 slug: the-whispering-wall
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-whispering-wall
 ---
