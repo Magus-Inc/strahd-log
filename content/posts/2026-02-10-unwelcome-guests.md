@@ -18,7 +18,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 As the sun sank behind the jagged peaks of the Balinoks, we stood at a turning point. We were leaving the safety of the Blue Water Inn for the heights of the Count’s domain. Everything hung on a rare chance, the master of the house away from home, and so we would no longer wander and ask questions. We would strike.
 
-We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Tser Pool crossroads we met a Vistani caravan, with the elder Stanimir, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimir knew what we had done, laying Varushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
+We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Tser Pool Crossroads we met a Vistani caravan, with the elder Stanimir, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimir knew what we had done, laying Varushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
 
 Note: The party briefly debated a "Trojan Bunny" strategy, or stealing the Vistani crest, before settling on diplomatic neutrality.
 

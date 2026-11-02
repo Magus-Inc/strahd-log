@@ -111,18 +111,26 @@ def test_near_misses_finds_an_alias_spelled_almost_like_its_page():
         "vallaki": ["Vallaki", "Velaki"],
         "anna-krezkova": ["Anna Krezkova", "Anna", "Anna Krezkov"],
         "chest-of-holding": ["Chest of Holding", "Chest of Holden"],
+        "sarepool": ["Tser Pool Crossroads", "Sarepool"],
+        "lady-fiona-wachter": ["Lady Fiona Wachter", "Fiona Watcher"],
+        "blue-water-inn": ["Blue Water Inn", "Bluewater Inn"],
+        "van-richten": ["Van Richten", "Rictavio", "Ric Tavio"],
     }
     found = fix_spellings.near_misses(pages, keep={"Chest of Holden"})
     assert found == [("anna-krezkova", "Anna Krezkov", "Anna Krezkova"),
+                     ("blue-water-inn", "Bluewater Inn", "Blue Water Inn"),
+                     ("lady-fiona-wachter", "Fiona Watcher", "Lady Fiona Wachter"),
+                     ("sarepool", "Sarepool", "Tser Pool Crossroads"),
                      ("tser-crossroads", "Sarepool crossroads", "Tser Pool Crossroads"),
-                     ("vallaki", "Velaki", "Vallaki")]
+                     ("vallaki", "Velaki", "Vallaki"),
+                     ("van-richten", "Ric Tavio", "Rictavio"), ("van-richten", "Rictavio", "Ric Tavio")]
 
 
 @pytest.mark.parametrize("names", [
     ["Lady Fiona Wachter", "Fiona Wachter", "Lady Fiona"],      # shorter forms of the name
     ["Emil", "Emil Toranescu"],                                  # a longer form
-    ["Morninglord", "Morning Lord"], ["Sunsword", "Sun Sword"],  # spacing
     ["Silver-thorn Collars", "Silver Thorn Collar"],            # hyphen, plural
+    ["Belview Family", "Belviews"], ["Blinsky's Toy Store", "Blinsky toys"],
     ["Argynvost’s Skull", "Argynvost Skull"],                   # possessive
     ["Ezmerelda d'Avenir", "Ezmerelda d’Avenir"],               # curly quote
     ["Strahd von Zarovich", "Count Strahd von Zarovich", "Vlahd"],  # a different word is not a slip
@@ -157,6 +165,15 @@ def test_wiki_aliases_are_not_misspellings_of_their_page():
     pages = {p.slug: [p.title, *p.aliases]
              for p in wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)}
     assert fix_spellings.near_misses(pages, keep) == []
+
+
+def test_fixed_names_still_link_to_the_right_page():
+    """The fix must keep the link right: the crossroads, not the lake."""
+    linker = wiki.Linker(wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter))
+    html, slugs = linker.link("<p>Near the Tser Pool Crossroads we met a Vistani caravan.</p>")
+    assert slugs == {"tser-crossroads", "vistani"}, html
+    post = (ROOT / "content" / "posts" / "2026-02-10-unwelcome-guests.md").read_text(encoding="utf-8")
+    assert "Near the Tser Pool Crossroads we met" in post
 
 
 def _posts():

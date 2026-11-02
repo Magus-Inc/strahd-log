@@ -34,7 +34,7 @@ Note: The blessing was +6 maximum hit points.
 
 Meanwhile the rest of the party went shopping, but found that the prices were most unfriendly, five times what they ought to be, perhaps due to our association with Ismark. Aera made the most of the situation by feeling justified in pilfering two healing potions from the shop.
 
-At noon we gathered the party and ventured forth towards Tser pool. Ireena joined us in her full armor, but we surrounded her as we took our charge to protect her most seriously.
+At noon we gathered the party and ventured forth towards Tser Pool. Ireena joined us in her full armor, but we surrounded her as we took our charge to protect her most seriously.
 
 After some time on the trail we were met with a voice from the thicket which asked who we were. Grom was most confrontational and challenged the hidden party. A woman walked out of the mists, and Ireena knew her for a scout of the village. Kreza and Conga were the scouts’ names. They were searching for the Landston family, two parents and five children who had gone missing from the village.
 

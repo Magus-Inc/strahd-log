@@ -39,20 +39,27 @@ def load_keep(path: Path = SPELLINGS) -> set[str]:
 def _words(name: str) -> list[str]:
     name = name.replace("\u2019", "'").casefold()
     name = re.sub(r"'s\b", "", name)
-    return re.findall(r"[^\W_]+", name)
+    return [w if len(w) < 4 else w.removesuffix("s") for w in re.findall(r"[^\W_]+", name)]
 
 
 def _same_name(a: str, b: str) -> bool:
-    """One is a shorter or longer form of the other, or they differ only in spacing, hyphens,
-    quotes, a possessive or a plural."""
-    wa, wb = _words(a), _words(b)
-    if set(wa) <= set(wb) or set(wb) <= set(wa):
-        return True
-    ja, jb = "".join(wa), "".join(wb)
-    return ja.rstrip("s") == jb.rstrip("s")
+    """One is a shorter or longer form of the other, or they differ only in hyphens, quotes, a
+    possessive or a plural (_words drops those). Spacing is not: "Bluewater" is a slip for "Blue Water"."""
+    wa, wb = set(_words(a)), set(_words(b))
+    return wa <= wb or wb <= wa
 
 
-def near_misses(pages: dict[str, list[str]], keep=frozenset(), cutoff: float = 0.7) -> list[tuple[str, str, str]]:
+def _closeness(alias: str, name: str) -> float:
+    """How alike the words the two names don't share are: the alias's odd words, run together,
+    against each run of the name's odd words ("Sarepool" against "Tser Pool")."""
+    wa, wn = _words(alias), _words(name)
+    ours = "".join(w for w in wa if w not in wn)
+    theirs = [w for w in wn if w not in wa]
+    runs = ["".join(theirs[i:j]) for i in range(len(theirs)) for j in range(i + 1, len(theirs) + 1)]
+    return max((SequenceMatcher(None, ours, run).ratio() for run in runs), default=0.0)
+
+
+def near_misses(pages: dict[str, list[str]], keep=frozenset(), cutoff: float = 0.75) -> list[tuple[str, str, str]]:
     """(page, alias, name) for each alias spelled almost, but not quite, like another name of the
     same page: "Sarepool crossroads" for "Tser Pool Crossroads", "Velaki" for "Vallaki". Only the
     words the two names don't share are compared, so "St." for "Saint" or "Count Strahd" for
@@ -62,16 +69,8 @@ def near_misses(pages: dict[str, list[str]], keep=frozenset(), cutoff: float = 0
         for alias in names[1:]:
             if alias in keep:
                 continue
-            close = []
-            for name in names:
-                if name == alias or _same_name(alias, name):
-                    continue
-                wa, wn = _words(alias), _words(name)
-                ours = "".join(w for w in wa if w not in wn)
-                theirs = "".join(w for w in wn if w not in wa)
-                ratio = SequenceMatcher(None, ours, theirs).ratio()
-                if ratio >= cutoff:
-                    close.append((ratio, name))
+            close = [(_closeness(alias, n), n) for n in names if n != alias and not _same_name(alias, n)]
+            close = [c for c in close if c[0] >= cutoff]
             if close:
                 found.append((page, alias, max(close)[1]))
     return sorted(found)
