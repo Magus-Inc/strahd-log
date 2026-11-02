@@ -2,11 +2,12 @@
    places: Place objects to pin; legs: trail legs to draw (or none); current: slug of the post
    whose leg is highlighted (other legs fade, and only its marker shows); interactive: the map
    page, with place panels and plain-wheel zoom. Every map zooms, pans and goes full screen
-   (templates/_map_zoom.js). Called with {% call %}, the caller's controls are drawn inside the
+   (templates/_map_zoom.js). focus: a wiki page's place; the map opens zoomed in on it, its picture
+   glows and its name is red (a red dot when it has no picture). Called with {% call %}, the caller's controls are drawn inside the
    map's frame: caller("top") above the picture, caller("foot") below it (the map page's trail
    switches, session slider and session line). #}
-{% macro barovia(places, legs=[], current=None, interactive=False, label="Map of Barovia") %}
-<figure class="map-figure"{% if interactive %} data-wheel="zoom"{% endif %}>
+{% macro barovia(places, legs=[], current=None, interactive=False, label="Map of Barovia", focus=None) %}
+<figure class="map-figure"{% if interactive %} data-wheel="zoom"{% endif %}{% if focus %} data-focus="{{ focus.x }} {{ focus.y }}"{% endif %}>
 {% if caller is defined %}{{ caller("top") }}{% endif %}
   <div class="map-stage">
   <div class="map-zoom" role="group" aria-label="Zoom the map">
@@ -24,7 +25,7 @@
 {% for s in map_sprites %}
 {% set p = by_slug.get(s.place) or all_places.get(s.place) %}
 {% if p %}
-      <a class="sprite{% if interactive %} js-pin{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
+      <a class="sprite{% if interactive %} js-pin{% endif %}{% if focus and p.slug == focus.slug %} here{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
         <title>{{ p.title }}</title>
         <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
       </a>
@@ -54,6 +55,9 @@
         <circle cx="{{ p.x }}" cy="{{ p.y }}" r="11" class="pin-dot" style="transform-origin: {{ p.x }}px {{ p.y }}px"/>
       </a>
 {% endfor %}
+{% if focus and focus.slug not in drawn %}
+      <circle class="here-dot" cx="{{ focus.x }}" cy="{{ focus.y }}" r="4.5" style="transform-origin: {{ focus.x }}px {{ focus.y }}px"/>
+{% endif %}
     </g>
     {# Place names sit under the session markers, so a name never hides a number. On the map page a name,
        a picture and a pin all open the same place card (its title links to the wiki page); on the small
@@ -61,7 +65,7 @@
        readers and the keyboard the same links. #}
     <g class="labels" aria-hidden="true">
 {% for p in places %}
-      <a href="{{ base }}{{ p.path }}"{% if interactive %} class="js-pin" data-place="{{ p.slug }}"{% endif %} tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}" style="transform-origin: {{ p.label_xy[0] }}px {{ p.label_xy[1] }}px">{{ p.title }}</text></a>
+      <a{% if focus and p.slug == focus.slug %} class="here"{% endif %} href="{{ base }}{{ p.path }}"{% if interactive %} class="js-pin" data-place="{{ p.slug }}"{% endif %} tabindex="-1"><text x="{{ p.label_xy[0] }}" y="{{ p.label_xy[1] }}" text-anchor="{{ p.text_anchor }}" style="transform-origin: {{ p.label_xy[0] }}px {{ p.label_xy[1] }}px">{{ p.title }}</text></a>
 {% endfor %}
     </g>
 {% if legs %}

@@ -4,6 +4,7 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 import pytest
+import yaml
 
 import barovia_map
 import build
@@ -178,6 +179,92 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     # Small maps sit in the middle of a post, so a plain scroll wheel keeps scrolling the page there;
     # only a trackpad pinch (a wheel with Ctrl) zooms them. The map page zooms with the plain wheel.
     assert 'data-wheel="zoom"' in page_html and 'data-wheel="zoom"' not in second + inn
+
+
+def test_wiki_page_map_opens_on_its_place_and_marks_it(tmp_path):
+    """Chris 2026-11-02: on Berez and Durst Manor's wiki pages you couldn't tell where on the map the
+    place was. A wiki page's map opens zoomed in on its place, its picture glows red and its name is
+    red; a place with no picture gets a red dot. A room's page (the Blue Water Inn) marks its town."""
+    root = tmp_path
+    write(root / "content" / "posts" / "2024-01-09-first.md", "---\ntitle: First\ndate: '2024-01-09'\n---\n\nIn the Village of Barovia, then Vallaki.\n")
+    write(root / "content" / "wiki" / "barovia.md", "---\ntitle: Barovia\ntype: place\naliases: [Village of Barovia]\n---\n")
+    write(root / "content" / "wiki" / "vallaki.md", "---\ntitle: Vallaki\ntype: place\n---\n")
+    write(root / "content" / "wiki" / "blue-water-inn.md", "---\ntitle: Blue Water Inn\ntype: place\n---\n")
+    write(root / "data" / "map.yaml", "places:\n  barovia: {xy: [780, 450], names: [Village of Barovia]}\n  vallaki: {xy: [400, 270]}\n"
+                                      "within:\n  blue-water-inn: vallaki\n"
+                                      "sprites:\n  vallaki: {image: vallaki, xy: [400, 260], width: 60}\n")
+    out = root / "public"
+    build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    vallaki = (out / "wiki" / "vallaki" / "index.html").read_text(encoding="utf-8")
+    inn = (out / "wiki" / "blue-water-inn" / "index.html").read_text(encoding="utf-8")
+    barovia = (out / "wiki" / "barovia" / "index.html").read_text(encoding="utf-8")
+    for html in (vallaki, inn):
+        assert 'data-focus="400.0 270.0"' in html
+        assert re.search(r'<a class="sprite here" href="/strahd-log/wiki/vallaki/" data-place="vallaki">', html)
+        assert re.search(r'<a class="here" href="/strahd-log/wiki/vallaki/" tabindex="-1"><text', html)
+        assert 'class="here-dot"' not in html  # the glowing picture marks it
+    assert 'data-focus="780.0 450.0"' in barovia and 'class="here-dot"' in barovia
+    # The glow is the map page's chosen-place glow; names and dots are the same red.
+    assert re.search(r"\.map \.sprite\.here image[^{]*\{[^}]*drop-shadow\(1px 0 0 var\(--glow\)\)[^}]*drop-shadow\(0 0 6px", css)
+    assert re.search(r"\.map \.labels \.here text \{[^}]*fill: #b3122e", css)
+    assert re.search(r"\.map \.here-dot \{[^}]*fill: #b3122e", css)
+    # The zoom script starts from the focus, and the whole-map button still shows the whole map.
+    assert 'getAttribute("data-focus")' in vallaki
+    # A place on the east edge (Durst Manor) isn't left under the zoom buttons: zoomed in, the view may
+    # run a little past that edge.
+    assert "EAST_SPARE = 0.14" in vallaki and "clampAxis(view.x, view.w, MAP.w, EAST_SPARE)" in vallaki
+    # Other maps don't focus: the map page and the posts open on the whole map.
+    assert "data-focus=" not in (out / "map" / "index.html").read_text(encoding="utf-8")
+    assert "data-focus=" not in (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
+
+
+def test_landmarks_mark_a_wiki_page_on_its_map_only(tmp_path):
+    """A landmark (a river, a wood, a lone tree) has a wiki page but no pin, label or card on the map
+    page; its wiki page's map opens on it with a red dot and its name (Chris, 2026-11-02)."""
+    pages = PAGES + [page("luna-river", "Luna River")]
+    path = write(tmp_path / "map.yaml", MAP + "landmarks:\n  luna-river: {xy: [366, 350], anchor: start}\n")
+    places, _ = barovia_map.load_places(path, pages)
+    marks = barovia_map.load_landmarks(path, pages, places)
+    assert "luna-river" not in places and marks["luna-river"].title == "Luna River"
+    assert (marks["luna-river"].x, marks["luna-river"].y) == (366.0, 350.0) and marks["luna-river"].anchor == "start"
+    with pytest.raises(ValueError, match="no wiki page"):
+        barovia_map.load_landmarks(write(tmp_path / "bad.yaml", MAP + "landmarks:\n  nowhere: {xy: [1, 2]}\n"), pages, places)
+    with pytest.raises(ValueError, match="already a place"):
+        barovia_map.load_landmarks(write(tmp_path / "dup.yaml", MAP + "landmarks:\n  vallaki: {xy: [1, 2]}\n"), pages, places)
+
+    root = tmp_path / "site"
+    write(root / "content" / "posts" / "2024-01-09-first.md", "---\ntitle: First\ndate: '2024-01-09'\n---\n\nTo Vallaki by the Luna River.\n")
+    write(root / "content" / "wiki" / "vallaki.md", "---\ntitle: Vallaki\ntype: place\n---\n")
+    write(root / "content" / "wiki" / "luna-river.md", "---\ntitle: Luna River\ntype: place\n---\n")
+    write(root / "data" / "map.yaml", "places:\n  vallaki: {xy: [400, 270]}\nlandmarks:\n  luna-river: {xy: [366, 350], anchor: start}\n")
+    out = root / "public"
+    build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
+    river = (out / "wiki" / "luna-river" / "index.html").read_text(encoding="utf-8")
+    assert "On the map" in river and 'data-focus="366.0 350.0"' in river and 'class="here-dot"' in river
+    assert re.search(r'<a class="here" href="/strahd-log/wiki/luna-river/" tabindex="-1"><text[^>]*>Luna River</text>', river)
+    whole = (out / "map" / "index.html").read_text(encoding="utf-8")
+    assert "wiki/luna-river/" not in whole  # no pin, name or card on the map page
+
+
+def test_every_barovian_place_page_has_a_map():
+    """Every place page set in Barovia shows where it is (Chris, 2026-11-02). Places the party has only
+    heard of stay off until they go there; places outside Barovia never get one."""
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    mapped = set(data["places"]) | set(data["within"]) | set(data.get("landmarks") or {})
+    not_yet = {"forest-fane", "kavan-s-cairn", "zoldoph"}            # only talked about so far
+    elsewhere = {"daggerford", "ethereal-plane", "the-void", "othrondil"}  # not in Barovia
+    for f in sorted((ROOT / "content" / "wiki").glob("*.md")):
+        if "\ntype: place\n" in f.read_text(encoding="utf-8").replace("\r\n", "\n"):
+            assert f.stem in mapped | not_yet | elsewhere, f"{f.stem} has no place on the map"
+    assert not mapped & (not_yet | elsewhere)
+    # Where the posts put them: gates of Vallaki, the shrine in the werewolf den, Sarepool is the Tser
+    # Pool crossroads (Chris), the ancient oak is the old oak by the Ivlis.
+    within = data["within"]
+    assert within["eastern-gate"] == within["zarovich-gate"] == "vallaki"
+    assert within["shrine-of-mother-night"] == "lake-baratok-cave" and within["sarepool"] == "tser-crossroads"
+    assert data["landmarks"]["ancient-oak"]["xy"] == data["spots"]["the-old-oak"]["xy"]
+    assert {"luna-river", "svalich-woods", "balinoks"} <= set(data["landmarks"])
 
 
 def test_no_map_file_means_no_map(tmp_path):

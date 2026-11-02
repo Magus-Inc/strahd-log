@@ -507,6 +507,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
     spots = barovia_map.load_spots(map_file or content_dir.parent.parent / "data" / "map.yaml", places) if places else {}
+    landmarks = barovia_map.load_landmarks(map_file or content_dir.parent.parent / "data" / "map.yaml", pages, places) if places else {}
     visits = barovia_map.load_visits(map_dir / "trail.yaml", places, spots) if places else {}
     legs = barovia_map.trail(posts, places, parent, pages, visits, spots) if places else []
     sprites = barovia_map.load_sprites(map_file or content_dir.parent.parent / "data" / "map.yaml",
@@ -566,7 +567,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         write(out_dir / "wiki" / page.slug / "index.html",
               env.get_template("wiki_page.html").render(
                   page=page, share_page=shares[page.path], body=rebase(page.cited_html, base),
-                  place=places.get(parent.get(page.slug, "")) if places else None))
+                  place=(places.get(parent.get(page.slug, "")) or landmarks.get(page.slug)) if places else None))
     write(out_dir / "search" / "index.html", env.get_template("search.html").render(share_page={"path": "search/"}))
     if places:
         write(out_dir / "map" / "barovia.svg",
