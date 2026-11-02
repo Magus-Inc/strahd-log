@@ -35,6 +35,11 @@ both cite the posts they come from.
      under "grow"), add one paragraph in Malron's words under a `## Since then` heading below the
      notes, on how they have changed, and set `grown_through: <post stem>` in the front matter
      (Chris, 2026-10-29: "evolving description would be a nicer way to ... show character growth").
+   - **Who gets a page** (Chris, 2026-11-02): a new name does when the post lists it in Notable
+     NPCs or Key Locations, the DM spent a while describing it (dnd-scribe's `wiki-plan` counts the
+     DM's words and prints "new page" with the reason), it comes back in a second post, or we
+     talked with, fought or went to it. Names said once in passing, unnamed guards and table jokes
+     don't.
    - A new page needs `title`, `type` (character, npc, creature, place, item, faction, deity,
      other), `summary` (one line) and `aliases` for other spellings the posts use. An alias must not
      be an ordinary word, because aliases link automatically everywhere.

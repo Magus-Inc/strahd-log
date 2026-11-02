@@ -28,3 +28,10 @@ def test_the_picture_prompt_uses_them_after_review():
 def test_agents_allows_transcript_descriptions_for_new_names():
     text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     assert "description from the session transcript" in text
+
+
+def test_the_skill_says_who_gets_a_page():
+    text = SKILL.read_text(encoding="utf-8")
+    assert "**Who gets a page**" in text
+    assert "the DM spent a while describing it" in text
+    assert "table jokes" in text
