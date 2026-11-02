@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Shabasta** Porcupine Bard
 
 **Summary:**  
-Father Lucian helped us find the home of Milivoj, a leaning, decrepit house with a door hanging askew. The father believes Milivoj is innocent of the theft. A woman answered our knock with three children behind her. Shabasta played music for the children, but the older boy said Milivoj was too ill to see anyone. His sister talked him round, and Milivoj came out with more children on his shoulders.
+Father Lucian helped us find the home of Milivoj, a leaning, decrepit house with a door hanging askew. Father Lucian believes Milivoj is innocent of the theft. A woman answered our knock with three children behind her. Shabasta played music for the children, but the older boy said Milivoj was too ill to see anyone. The sister talked him round, and Milivoj came out with more children on his shoulders.
 
 Liren saw through him and frightened him into confessing. His parents are lost to dream pastries, and he must keep his brothers and sisters fed. He sold the bones to Henrik the day before.
 
