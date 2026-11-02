@@ -14,7 +14,9 @@ We did not know what to do, but we felt compelled to follow those relics as they
 
 After we could not say how long in the mists, we came upon a [four-story manor](/wiki/durst-manor/) with a balcony on the third floor. A boy and a girl stood near the front, as if waiting to greet us. The mists drew back, and when I looked behind us there was no path to show how we might return to Daggerford, had we wanted to.
 
-![IMG_1002.jpeg](/images/session-zero-1.jpeg)
+![A four-story manor looming out of the mist at dusk, a girl and a little boy waiting near the front](/images/durst-manor-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ## Key Locations:
 

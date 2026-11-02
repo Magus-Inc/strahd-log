@@ -10,6 +10,10 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/durst
 
 ## Description
 
+![Durst Manor, four stories with a third-floor balcony, looming out of the mist at dusk, a girl and a little boy waiting near the front](/images/durst-manor-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 ### What we found

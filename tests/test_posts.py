@@ -72,3 +72,17 @@ def test_ai_pictures_carry_the_credit(path):
     text = path.read_text(encoding="utf-8")
     for m in re.finditer(r"!\[[^\]]*\]\(/images/[^)\s]*-ai[^)\s]*\)", text):
         assert text[m.end():m.end() + 200].lstrip().startswith("*AI-generated"), f"{path.name}: credit after {m.group(0)}"
+
+
+DM_ART = ("ireena-by-ryan.webp", "keepers-whistle-by-ryan.webp", "session-zero-1.jpeg")
+
+
+def test_no_page_shows_art_the_dm_shared():
+    """Chris, 2026-11-02: the pictures Ryan shared are other artists' work, used only as inspiration,
+    so the site shows our own pictures of Ireena, the Keeper's Whistle and Rose and Thorn instead."""
+    root = Path(build.__file__).parent
+    pages = [*POSTS, *sorted((root / "content" / "wiki").glob("*.md"))]
+    shown = [(p.name, name) for p in pages for name in DM_ART if name in p.read_text(encoding="utf-8")]
+    assert shown == []
+    assert [n for n in DM_ART if (root / "static" / "images" / n).exists()] == []
+    assert not [p.name for p in pages if "-by-ryan" in p.read_text(encoding="utf-8")]
