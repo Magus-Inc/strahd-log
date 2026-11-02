@@ -1,6 +1,7 @@
 ---
 title: The Slipper and the Shadow of the Bat
 date: '2026-05-05T21:00:00-05:00'
+tagline: Olfin died. Olfin got better.
 slug: the-slipper-and-the-shadow-of-the-bat
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-slipper-and-the-shadow-of-the-bat
 ---

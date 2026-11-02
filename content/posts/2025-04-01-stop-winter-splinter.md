@@ -1,6 +1,7 @@
 ---
 title: Stop Winter Splinter
 date: '2025-04-01T21:00:00-05:00'
+tagline: Strahd plays chess. Guess who the pawns are.
 slug: stop-winter-splinter
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/stop-winter-splinter
 ---

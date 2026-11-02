@@ -1,6 +1,7 @@
 ---
 title: Retrieval of the Dragon Skull
 date: '2026-02-17T20:00:00-06:00'
+tagline: Came for a spoon, left with a dragon skull
 slug: retrieval-of-the-dragon-skull
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/retrieval-of-the-dragon-skull
 ---

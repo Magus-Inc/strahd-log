@@ -1,6 +1,7 @@
 ---
 title: Shadows Over St. Markovia
 date: '2025-04-29T21:00:00-05:00'
+tagline: The Belviews are fine. Really.
 slug: shadows-over-st-markovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/shadows-over-st-markovia
 ---

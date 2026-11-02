@@ -1,6 +1,7 @@
 ---
 title: Welcome to Krezk
 date: '2025-04-22T21:00:00-05:00'
+tagline: The cards are dealt
 slug: welcome-to-krezk
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-to-krezk
 ---

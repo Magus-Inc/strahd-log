@@ -1,6 +1,7 @@
 ---
 title: The Fall of Volenta Popofsky
 date: '2026-03-31T20:30:00-05:00'
+tagline: Volenta brought daggers. We brought Lathander.
 slug: the-fall-of-volenta-popofsky
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fall-of-volenta-popofsky
 ---

@@ -1,6 +1,7 @@
 ---
 title: The Windmill Heist
 date: '2025-01-21T21:00:00-06:00'
+tagline: The hags offered a deal. We offered steel.
 slug: the-windmill-heist
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-windmill-heist
 ---

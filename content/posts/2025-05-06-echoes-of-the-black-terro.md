@@ -1,6 +1,7 @@
 ---
 title: Echoes of the Black Terro
 date: '2025-05-06T21:00:00-05:00'
+tagline: The werewolf took one step too many
 slug: echoes-of-the-black-terro
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-black-terro
 ---
