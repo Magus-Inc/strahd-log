@@ -16,9 +16,9 @@ After the ritual a great swarm of bats flew from the church up to the west, perh
 
 Ismark asked us to escort [Ireena](/wiki/ireena-kolyana/) to the Abbey of Saint Markovia in Krezk, and that the Church of Saint Andral in Vallaki could be a sanctuary along the way. My notes also mention “Red har – bad luck” but I can no longer make sense of it.
 
-![Ireena, red-haired, in a breastplate and long dark skirt, with a sword in each hand](/images/ireena-by-ryan.webp)
+![Ireena, red-haired, in a breastplate and crimson scarf, a rapier in hand on a misty forest road](/images/ireena-kolyana-ai.jpg)
 
-*Ireena, in art shared with our table.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Ismark recommended stopping by the Tser Pool which is just a two hour journey west of here. We were to leave at noon, which gives us some time to shop or wander around.
 

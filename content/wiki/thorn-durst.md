@@ -10,9 +10,9 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/thorn
 
 ## Description
 
-![Rose and Thorn Durst, two ghost children hand in hand at the manor gate](/images/rose-and-thorn-durst-ai.jpg)
+![Rose and Thorn Durst, two ghost children side by side at the manor gate, Thorn hugging a stuffed toy](/images/rose-and-thorn-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
 <!-- from-the-log -->
 ## From the adventure log

@@ -9,9 +9,9 @@ source: Compiled from the adventure log, with notes from the table
 
 ## Description
 
-![The Keeper's Whistle: a black raven's head on a short handle bound with cord](/images/keepers-whistle-by-ryan.webp)
+![The Keeper's Whistle: a black obsidian raven with an open beak, its mouthpiece bound with cord, on a candlelit table](/images/obsidian-whistle-ai.jpg)
 
-*The Keeper's Whistle, in art Ryan shared with the table.*
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
