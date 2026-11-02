@@ -69,12 +69,13 @@ spots:
 
 within:
   durst-mill: barovia
+  # The tavern in the village where the party met Ismark (Barovia, Barovia).
+  blood-on-the-vine-tavern: barovia
   blue-water-inn: vallaki
   wachterhaus: vallaki
   blinsky-s-toy-store: vallaki
   baron-s-mansion: vallaki
   church-of-saint-andral: vallaki
-  blood-on-the-vine-tavern: vallaki
   refugee-camp: vallaki
   hill-of-ravenloft: castle-ravenloft
   kings-bedchamber: castle-ravenloft

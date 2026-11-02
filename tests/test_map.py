@@ -270,6 +270,9 @@ def test_every_barovian_place_page_has_a_map():
     within = data["within"]
     assert within["eastern-gate"] == within["zarovich-gate"] == "vallaki"
     assert within["shrine-of-mother-night"] == "lake-baratok-cave" and within["sarepool"] == "tser-crossroads"
+    # The Blood on the Vine is the tavern in the Village of Barovia where the party met Ismark (Barovia,
+    # Barovia); it was wrongly in Vallaki (Chris, 2026-11-02).
+    assert within["blood-on-the-vine-tavern"] == "barovia"
     assert data["landmarks"]["ancient-oak"]["xy"] == data["spots"]["the-old-oak"]["xy"]
     assert {"luna-river", "svalich-woods", "balinoks"} <= set(data["landmarks"])
 
