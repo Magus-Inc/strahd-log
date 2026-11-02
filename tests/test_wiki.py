@@ -505,11 +505,13 @@ def test_hall_of_bones_picture_shows_the_skull_doors_and_bone_table():
         assert words in alt, words
 
 
-def test_wachterhaus_picture_rings_the_whole_estate():
-    # Chris, 2026-11-02: the old picture put the binding circle on the street beside the house. The
-    # posts say the manor is "ringed by a binding circle" and has grounds Stella was walked around.
+def test_wachterhaus_picture_shows_the_manor_in_its_grounds_without_a_drawn_ward():
+    # Chris, 2026-11-02: the first picture put the binding circle on the street beside the house, and a
+    # drawn ring around the estate looked "awkward and distracting ... not fantasy", so the picture shows
+    # the manor in its walled grounds (Stella was walked "around the grounds") with no ward drawn.
     text = (build.ROOT / "content" / "wiki" / "wachterhaus.md").read_text(encoding="utf-8")
     alt = re.search(r"!\[([^\]]*)\]\(/images/wachterhaus-ai\.jpg\)", text).group(1).lower()
-    for words in ("grounds", "circle", "around the house", "garden"):
+    for words in ("grounds", "garden", "manor"):
         assert words in alt, words
-    assert "cobbles" not in alt
+    for words in ("circle", "ring", "rune", "cobbles"):
+        assert words not in alt, words
