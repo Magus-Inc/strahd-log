@@ -27,7 +27,7 @@ import wiki
 W, H = 1000, 750
 # About how much road an hour on foot covers, going by the hours the official map marks on its
 # roads (the median over data/travel-times.yaml). It sets the scale bar.
-HOUR = 37
+HOUR = 41  # map units per hour on foot; the roads traced from the official map wind, so the scale grew from 37
 SEED = 1987
 
 INK = "#3b2a1a"        # outlines and lettering
@@ -92,10 +92,14 @@ ROADS = {
     "Abbey road": [(120, 232), (125, 220), (133, 208)],
     "Argynvostholt road": [(263, 307), (264, 317), (267, 327), (276, 335), (286, 338), (299, 340), (309, 341),
                            (316, 346), (319, 357), (325, 365), (328, 370), (330, 375)],
-    "Road to Tsolenka Pass": [(220, 262), (232, 300), (226, 345), (205, 395), (186, 440), (178, 490), (198, 535),
-                              (240, 578)],
+    "Road to Tsolenka Pass": [(220, 262), (219, 269), (217, 280), (214, 296), (203, 318), (186, 337), (176, 348),
+                              (175, 359), (179, 371), (182, 384), (179, 398), (167, 409), (150, 417), (139, 428),
+                              (134, 442), (137, 450), (144, 439), (155, 432), (169, 434), (183, 442), (197, 440),
+                              (208, 437), (219, 440), (225, 451), (227, 467), (221, 484), (207, 492), (202, 506),
+                              (202, 523), (210, 534), (221, 542), (232, 550), (237, 561), (240, 578)],
     "Vineyard road": [(195, 256), (184, 292), (165, 322), (150, 340)],
-    "Amber Temple road": [(240, 578), (288, 614), (330, 648), (352, 672), (362, 705), (366, 748)],
+    "Amber Temple road": [(240, 578), (256, 590), (272, 596), (282, 604), (285, 617), (289, 630), (297, 640), (306, 649), (317, 650), (325, 649), (333, 654),
+                          (343, 661), (351, 667), (352, 672), (362, 705), (366, 748)],
 }
 TRACKS = {
     # Down the west bank of the Luna River to Berez: the trail keeps to the bank, never the water.
