@@ -31,7 +31,7 @@ places:
   vallaki: {xy: [400, 250]}
   # The Vistani camp by Vallaki: south of town, toward the Luna River ("A doll for Arabelle": Yann's
   # head lay "toward the Luna River"; Chris remembers the camp south of Vallaki).
-  vallaki-vistani-camp: {xy: [378, 300], label: Vistani Camp, label_at: [398, 346]}
+  vallaki-vistani-camp: {xy: [378, 300], label: Vistani Camp, label_at: [431, 305]}
   # Two crossroads: the Luna River crossroads (P) just west of Vallaki, a four-way crossroads (Act 3:
   # roads east to Vallaki and on to Raven River, trails to Lake Baratok and Berez), and the
   # Raven River crossroads (R) further west, where the Krezk, Tsolenka and Lake Baratok roads meet.
@@ -108,6 +108,8 @@ sprites:
   yester-hill: {image: yester-hill, xy: [71.2, 480], width: 46.4}
   durst-manor: {image: durst-manor, xy: [972.7, 332.8], width: 22.6}
   tser-pool: {image: tser-pool, xy: [691.8, 526], width: 42.5}
+  # The camp by Vallaki reuses the Tser Pool camp's ring of wagons, a little smaller.
+  vallaki-vistani-camp: {image: tser-pool, xy: [378, 303], width: 36}
   gates-west: {image: gates, xy: [599.6, 340], width: 35.3, place: west-gates-of-barovia}
   gates-east: {image: gates, xy: [932.6, 388], width: 35.3, place: gates-of-barovia}
   berez: {image: berez, xy: [325.7, 444], width: 35.5}
