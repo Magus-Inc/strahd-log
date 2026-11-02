@@ -169,7 +169,7 @@ class Linker:
                 if m and m.group(2).lower() in SKIP_TAGS and not token.endswith("/>"):
                     skip_depth += -1 if m.group(1) else 1
                     skip_depth = max(skip_depth, 0)
-                out.append(token)
+                out.append(self.style_hand_link(token))
                 continue
 
             def replace(match: re.Match) -> str:
@@ -185,6 +185,16 @@ class Linker:
 
             out.append(self.pattern.sub(replace, token))
         return "".join(out), mentioned
+
+    def style_hand_link(self, tag: str) -> str:
+        """A link written by hand to a wiki page ("the [werewolves' cave](/wiki/lake-baratok-cave/)") looks
+        like the automatic ones: gold, with the page's summary on hover. Classed links (map sprites) stay."""
+        m = re.fullmatch(r'<a href="(/wiki/[^"#]+/)">', tag)
+        page = self.by_href.get(m.group(1)) if m else None
+        if page is None:
+            return tag
+        title = htmllib.escape(page.summary or page.title, quote=True)
+        return f'<a class="wiki-link" href="{m.group(1)}" title="{title}">'
 
 
     def anchor(self, match: re.Match) -> str:

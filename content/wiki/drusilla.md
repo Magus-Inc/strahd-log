@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-Van Richten's horse. He kept her hidden at the tower at Lake Baratok along with the covered wagon he had first driven into Barovia, and from there he set out with Arabelle for Vallaki ([Finding Arabelle!](/posts/finding-arabelle/)).
+Van Richten's horse. He kept her hidden at the [tower](/wiki/tower-of-khazan/) at Lake Baratok along with the covered wagon he had first driven into Barovia, and from there he set out with Arabelle for Vallaki ([Finding Arabelle!](/posts/finding-arabelle/)).
 
 <!-- from-the-log -->
 ## From the adventure log

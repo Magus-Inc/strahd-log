@@ -13,7 +13,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/fortu
 
 **Mists**: A vistano wanders alone searching for a mentor. Doesn’t stay in one place for long. Seek her out in St. Markovia Abbey near the mists
 
-**Marionette**: Look to Great heights, find the beating heart of the castle.
+**Marionette**: Look to Great heights, find the beating heart of the [castle](/wiki/castle-ravenloft/).
 
 ## A later reading (22 April 2025)
 

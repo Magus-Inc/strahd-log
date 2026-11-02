@@ -17,7 +17,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-The skull of the silver dragon Argynvost, stolen by Strahd ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). The prophecy at Argynvostholt told us that bringing it out of the castle could weaken Strahd's hold ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). We found it over the doors of the Hall of Bones, shrank it with magic, lowered it with four conjured hands into our Chest of Holding, and fought our way out of the sealed room ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/)). Aera set it back on its mount in the mausoleum at Argynvostholt, and Argynvost rose ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
+The skull of the silver dragon Argynvost, stolen by Strahd ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). The prophecy at Argynvostholt told us that bringing it out of the [castle](/wiki/castle-ravenloft/) could weaken Strahd's hold ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/)). We found it over the doors of the Hall of Bones, shrank it with magic, lowered it with four conjured hands into our Chest of Holding, and fought our way out of the sealed room ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/)). Aera set it back on its mount in the mausoleum at Argynvostholt, and Argynvost rose ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log
