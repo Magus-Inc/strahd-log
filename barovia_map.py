@@ -50,11 +50,23 @@ ROCK = "#7a6a55"
 ROADS = {
     "Old Svalich Road (east)": [(998, 390), (960, 394), (930, 398)],
     "Manor lane": [(960, 394), (964, 370), (968, 345)],
-    "Gates to the village": [(930, 398), (880, 418), (830, 436), (780, 450)],
-    "Village to the Ivlis crossroads": [(780, 450), (745, 480), (712, 520), (680, 555)],
-    "The loop past Tser Falls": [(680, 555), (640, 535), (600, 515), (576, 485), (582, 445), (600, 405),
-                                 (610, 360)],
-    "Road to the castle": [(610, 360), (645, 368), (680, 382), (700, 392), (720, 398)],
+    # The east, traced from the official map (Chris, 2026-11-02): the road drops south from the gates
+    # and runs straight west into the village, heads south over the Ivlis to its crossroads, loops
+    # far west past Tser Falls, and climbs over a rise to the castle.
+    "Gates to the village": [(930, 398), (922, 399), (913, 406), (907, 414), (902, 424), (896, 436), (889, 444),
+                             (881, 448), (873, 450), (834, 450), (809, 450), (780, 450)],
+    "Village to the Ivlis crossroads": [(780, 450), (769, 454), (767, 458), (765, 469), (764, 481), (763, 492),
+                                        (761, 504), (760, 519), (758, 528), (749, 535), (737, 539), (726, 538),
+                                        (713, 534), (693, 540), (685, 547), (680, 555)],
+    "The loop past Tser Falls": [(680, 555), (667, 566), (649, 567), (630, 565), (620, 559), (614, 547), (615, 533),
+                                 (620, 525), (624, 511), (622, 493), (620, 474), (614, 465), (604, 462), (595, 468),
+                                 (585, 481), (573, 494), (559, 502), (543, 502), (532, 495), (528, 484), (534, 474),
+                                 (546, 465), (560, 454), (575, 444), (586, 436), (592, 425), (595, 414), (600, 405),
+                                 (607, 404), (611, 399), (614, 394), (615, 389), (608, 387), (601, 383), (597, 378),
+                                 (598, 372), (603, 365), (610, 360)],
+    "Road to the castle": [(610, 360), (619, 357), (623, 352), (628, 347), (636, 346), (643, 349), (648, 356),
+                           (655, 359), (668, 358), (671, 362), (672, 368), (677, 375), (682, 380), (689, 384),
+                           (696, 385), (704, 387), (720, 398)],
     # Traced from the official map (Chris, 2026-11-02): switchbacks down from the Tser Pool
     # crossroads past the West Gates to the Old Bonegrinder turnoff, then a wide loop north-east
     # round a wooded hill to a hairpin, and back west toward the lake and Vallaki.
@@ -124,7 +136,11 @@ RIVERS = {
     "Luna River": [(338, 224), (352, 262), (362, 300), (366, 350), (360, 400), (345, 445), (330, 500),
                    (290, 560), (232, 588)],
     "Luna River (west)": [(180, 596), (130, 560), (70, 530), (2, 525)],
-    "Ivlis River": [(700, 494), (740, 506), (780, 490), (840, 496), (910, 500), (998, 505)],
+    # Traced from the official map with the east roads: out of Tser Pool, south of the village, then
+    # north-east toward the gates and off the map.
+    "Ivlis River": [(700, 494), (725, 500), (745, 515), (768, 531), (783, 539), (798, 540), (813, 535), (828, 530),
+                    (843, 529), (859, 526), (874, 515), (889, 503), (904, 494), (919, 489), (934, 488), (949, 484),
+                    (969, 482), (998, 478)],
     # The water: Lake Zarovich drains south as the Luna; a branch of the Luna runs east through
     # the hill ponds and over Tser Falls into Tser Pool, which drains east as the Ivlis.
     "Tser Falls": [(366, 350), (400, 352), (432, 356), (470, 362), (520, 368), (566, 372), (582, 400),

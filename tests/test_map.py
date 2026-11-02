@@ -756,3 +756,21 @@ def test_the_bonegrinder_turnoff_is_at_the_foot_of_the_switchbacks():
     lowest_bend = max(y for x, y in barovia_map.ROADS["Old Svalich Road (the switchbacks)"] if x < 520)
     assert fork[1] > 315 and lowest_bend - fork[1] < 25
     assert mill[0] < fork[0] - 10 and abs(mill[1] - fork[1]) < 10
+
+
+def test_east_roads_bend_like_the_official_map():
+    # Chris, 2026-11-02: retrace the roads from the official map, region by region; the east first.
+    graph = barovia_map.road_graph()
+    gates, village, ivlis, falls, tser, castle = (930, 398), (780, 450), (680, 555), (600, 405), (610, 360), (720, 398)
+    # From the gates the road drops south, then runs straight west into the village.
+    down = barovia_map.route(graph, gates, village)
+    assert any(x > 860 and y >= 448 for x, y in down)
+    # From the village it heads south past the Ivlis before it turns west to the crossroads.
+    south = barovia_map.route(graph, village, ivlis)
+    assert any(x > 755 and y > 520 for x, y in south)
+    # The road past Tser Falls swings south of the crossroads and loops far west before the falls.
+    loop = barovia_map.route(graph, ivlis, falls)
+    assert max(y for _, y in loop) > ivlis[1] + 8 and min(x for x, _ in loop) < 540
+    # The castle road climbs north over a rise before it comes down to the castle gate.
+    up = barovia_map.route(graph, tser, castle)
+    assert min(y for _, y in up) < 350

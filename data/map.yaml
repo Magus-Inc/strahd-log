@@ -58,7 +58,7 @@ places:
 #           (data/trail.yaml `marker`). Each sits on a road vertex, unless offroad: true.
 spots:
   the-old-oak: {xy: [712, 486], label: the old oak by the River Ivlis, offroad: true}
-  tser-pool-road: {xy: [640, 535], label: the road west of the Tser Pool camp}
+  tser-pool-road: {xy: [649, 567], label: the road west of the Tser Pool camp}
   tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
   lake-road: {xy: [499, 252], label: the lake road east of Vallaki}
   bonegrinder-road: {xy: [530, 286], label: the road to Old Bonegrinder, near: the-windmill}
@@ -120,5 +120,5 @@ sprites:
   bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22, place: null}
   bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22, place: null}
   bridge-tser-falls: {image: bridge, xy: [600, 405], width: 22, place: null}
-  bridge-ivlis: {image: bridge, xy: [726.8, 502], width: 22, place: null}
+  bridge-ivlis: {image: bridge, xy: [758.8, 524.6], width: 22, place: null}
   bridge-luna-lake: {image: bridge, xy: [245, 581.7], width: 22, place: null}
