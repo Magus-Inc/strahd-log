@@ -31,8 +31,8 @@
 {% if page.facts %}
         <dl>
 {% for label, value in page.facts %}
-          <dt>{{ label }}</dt>
-          <dd>{% if value is sequence and value is not string %}<span class="num">{{ value[0] }}</span> <a href="{{ base }}{{ value[2] }}">{{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd>
+          <div><dt>{{ label }}</dt>
+          <dd>{% if value is sequence and value is not string %}<span class="num">{{ value[0] }}</span> <a href="{{ base }}{{ value[2] }}">{{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd></div>
 {% endfor %}
         </dl>
 {% endif %}
