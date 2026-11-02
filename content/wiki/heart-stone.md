@@ -7,7 +7,7 @@ source: Compiled from the adventure log
 
 ## Description
 
-![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone has slipped from a tear in her robe onto the mud](/images/heart-stone-ai.jpg)
+![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone, an egg-sized polished oval, has slipped from her robe onto the mud](/images/heart-stone-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
