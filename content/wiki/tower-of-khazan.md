@@ -6,6 +6,8 @@ aliases:
 - Khazan’s Tower
 summary: A tower by Lake Baratok tied to the mage Khazan.
 source: Compiled from the adventure log, with a description written for the site
+heard_of_in:
+- whispers-in-the-barons-mansion
 ---
 
 ## Description

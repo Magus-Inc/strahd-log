@@ -5,6 +5,8 @@ aliases:
 - camp by Vallaki
 summary: A Vistani camp just southwest of Vallaki, toward the Luna River, where Alexi begged the party to find his daughter Arabelle.
 source: Compiled from the adventure log, with a description written for the site
+heard_of_in:
+- tser-pool
 ---
 
 ## Description

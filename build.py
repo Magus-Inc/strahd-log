@@ -256,7 +256,8 @@ def number_sessions(posts: list[Post]) -> None:
 
 def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     """On wiki pages, turn "(Session Title)" links into small session numbers that open the post, and
-    count a cited session as one the page appears in. page.html keeps the titles for search."""
+    count a cited session as one the page appears in, unless the page lists it under heard_of_in
+    (we were only told of the place or thing there). page.html keeps the titles for search."""
     by_slug = {p.slug: p for p in posts}
 
     def marker(slug: str, title: str) -> str:
@@ -269,10 +270,16 @@ def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
 
     for page in pages:
         page.cited_html, cited = wiki.cite_sessions(page.html, marker)
+        stray = [s for s in page.heard_of_in if s not in cited]
+        if stray:
+            raise ValueError(f"wiki/{page.slug}: heard_of_in names {', '.join(stray)}, which the page never cites")
+        heard = set(page.heard_of_in)
         known = {p.slug for p in page.mentioned_in}
         extra = [by_slug[s] for s in cited if s in by_slug and s not in known]
         if extra:
             page.mentioned_in = sorted([*page.mentioned_in, *extra], key=lambda p: (p.date, p.slug), reverse=True)
+        if heard:
+            page.mentioned_in = [p for p in page.mentioned_in if p.slug not in heard]
 
 
 def apply_wiki_style(pages: list[wiki.WikiPage], style: dict) -> None:
