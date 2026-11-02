@@ -415,7 +415,8 @@
 {"text":"Leads the werewolf pack.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Took Ezmerelda's leg.","post":"2025-05-06-echoes-of-the-black-terro"},
 {"text":"Captured Emil with help from Strahd and Baba Lysaga.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
-{"name":"Ilya","type":"npc","aliases":["Ilya"],"summary":"A werewolf prisoner in the Lake Baratok cave.","facts":[
+{"name":"Ilya","type":"npc","aliases":["Ilya"],"summary":"Dmitri and Anna Krezkov's son, a werewolf held prisoner in the Lake Baratok cave.","facts":[
+{"text":"The Krezkovs' son: tricked by the Abbot off his wolfsbane, he turned, killed his sister and ran off into the woods.","post":"2025-04-22-welcome-to-krezk"},
 {"text":"Was kidnapped and held in the werewolf cave.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Wore a silver-thorn collar and said the Abbot deceived him.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Zuleika","type":"npc","aliases":[],"summary":"A werewolf prisoner sworn to free Emil.","facts":[

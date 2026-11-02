@@ -35,7 +35,7 @@ Back at the Wizard of Wines we learned the history of the holy symbol of Ravenki
 
 **Krezk**: We met the Krezkovs and learned of the werewolf curse on Dmitri Krezkov and his family. His wife gathers wolfsbane to hold the curse back and keep him calmer. The curse passes down the generations, and we do not know which of Dmitri’s children, if any, carry it.
 
-**Abbey**: Someone has taken over the abbey and is building a flesh golem out of corpses, and it needs the heart of a willing victim. The abbot has been spying on the Krezkovs in the shape of Dmitri’s aunt. He talked their son out of the wolfsbane potion, and the boy did not know it was helping him. He stopped taking it, turned into a werewolf, killed his sister that night and ran off into the woods. The abbot has promised to bring the sister back if the mother, Anna, gives up her heart a month from now.
+**Abbey**: Someone has taken over the abbey and is building a flesh golem out of corpses, and it needs the heart of a willing victim. The abbot has been spying on the Krezkovs in the shape of Dmitri’s aunt. He talked their son, Ilya, out of the wolfsbane potion, and the boy did not know it was helping him. He stopped taking it, turned into a werewolf, killed his sister that night and ran off into the woods. The abbot has promised to bring the sister back if the mother, Anna, gives up her heart a month from now.
 
 ## Encounters:
 
