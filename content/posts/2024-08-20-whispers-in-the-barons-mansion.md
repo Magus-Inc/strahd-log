@@ -22,7 +22,9 @@ I found a book of the births and deaths of Vallaki’s families and saw a famili
 
 Victor turned out to be an invisible man, and he appeared before us in the library. His spellbook bears the ring’s symbol, which ties it to Khazan, the original mage. Victor has been studying necromancy and other arts by means of the ring, and his curiosity centers on Khazan’s tower, a place barred to outsiders. He kept glancing nervously at the mirrors. His spectral cat and the painted dolls hint at more.
 
-![Portrait of Victor Vallakovich](https://publish-01.obsidian.md/access/7db64b11c71d88572ddc6cd06b888976/images/Victor%20Vallakovich.png)
+![Victor fading into view out of invisibility in the Baron's mansion library, a spellbook in hand, a ghostly cat at his feet and a face in the mirror](/images/baron-s-mansion-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ## The Attic
 

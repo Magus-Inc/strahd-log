@@ -86,3 +86,18 @@ def test_no_page_shows_art_the_dm_shared():
     assert shown == []
     assert [n for n in DM_ART if (root / "static" / "images" / n).exists()] == []
     assert not [p.name for p in pages if "-by-ryan" in p.read_text(encoding="utf-8")]
+
+
+def test_every_picture_is_hosted_here():
+    """Chris, 2026-11-02: no picture from Ryan's notes stays on the site. Three portraits were linked
+    straight from his Obsidian Publish notes (Kasimir, Victor, the bridge revenant); a picture from
+    anywhere else would come the same way, so every picture in a post or wiki page is one of ours in
+    static/images, where its source can be checked."""
+    root = Path(build.__file__).parent
+    pages = [*POSTS, *sorted((root / "content" / "wiki").glob("*.md"))]
+    linked = [(p.name, src) for p in pages
+              for src in re.findall(r'!\[[^\]]*\]\(\s*<?([^)\s>]+)|<img[^>]*\bsrc="([^"]+)"', p.read_text(encoding="utf-8"))
+              for src in [s for s in (src if isinstance(src, tuple) else (src,)) if s]
+              if not src.startswith("/images/")]
+    assert linked == []
+
