@@ -204,19 +204,49 @@ def jitter(rng: random.Random, points, amount=1.4):
     return [(x + rng.uniform(-amount, amount), y + rng.uniform(-amount, amount)) for x, y in points]
 
 
-def smooth_path(points, closed=False) -> str:
-    """Catmull-Rom through the points, as cubic Beziers."""
+Point = tuple[float, float]
+Bezier = tuple[Point, Point, Point, Point]  # start, two control points, end
+
+
+def curves_of(points, closed=False) -> list[Bezier]:
+    """Catmull-Rom through the points, as one cubic Bezier per pair of neighbouring points."""
     pts = list(points)
     if len(pts) < 2:
-        return ""
+        return []
     pts = (pts[-1:] + pts + pts[:2]) if closed else (pts[:1] + pts + pts[-1:])
-    d = [f"M{pts[1][0]:.1f},{pts[1][1]:.1f}"]
+    out = []
     for i in range(1, len(pts) - 2):
         p0, p1, p2, p3 = pts[i - 1], pts[i], pts[i + 1], pts[i + 2]
         c1 = (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6)
         c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
-        d.append(f"C{c1[0]:.1f},{c1[1]:.1f} {c2[0]:.1f},{c2[1]:.1f} {p2[0]:.1f},{p2[1]:.1f}")
+        out.append((p1, c1, c2, p2))
+    return out
+
+
+def bezier_path(beziers: list[Bezier], closed=False) -> str:
+    if not beziers:
+        return ""
+    d = [f"M{beziers[0][0][0]:.1f},{beziers[0][0][1]:.1f}"]
+    d += [f"C{c1[0]:.1f},{c1[1]:.1f} {c2[0]:.1f},{c2[1]:.1f} {p[0]:.1f},{p[1]:.1f}" for _, c1, c2, p in beziers]
     return " ".join(d) + (" Z" if closed else "")
+
+
+def smooth_path(points, closed=False) -> str:
+    """Catmull-Rom through the points, as cubic Beziers."""
+    return bezier_path(curves_of(points, closed), closed)
+
+
+def bezier_points(bez: Bezier, step: float = 1.0) -> list[Point]:
+    """Points along one Bezier, about `step` apart."""
+    (x0, y0), (x1, y1), (x2, y2), (x3, y3) = bez
+    n = max(4, int(math.dist(bez[0], bez[3]) / step) + 1)
+    out = []
+    for k in range(n + 1):
+        u = k / n
+        v = 1 - u
+        a, b, c, d = v * v * v, 3 * v * v * u, 3 * v * u * u, u * u * u
+        out.append((a * x0 + b * x1 + c * x2 + d * x3, a * y0 + b * y1 + c * y2 + d * y3))
+    return out
 
 
 def inside(point, polygon) -> bool:
@@ -354,13 +384,20 @@ def draw_water(rng: random.Random) -> str:
     return "".join(ink + water + rings + flow)
 
 
+ROAD_WIDTH = 3      # a road's dirt surface, in map units (its ink edge is drawn 4.8 wide under it)
+# Breadcrumb lanes across a road, off its middle in map units: the first trip over a stretch runs down
+# the middle, later trips beside it, all on the dirt (Chris, 2026-11-02: crumbs on the road's black
+# edge were hard to see). A fourth trip shares the least-used lane.
+LANES = (0.0, 0.9, -0.9)
+
+
 def draw_roads() -> str:
     """Dirt roads with an ink edge and faint wheel ruts, every edge before any surface so junctions
     join cleanly; tracks are dotted ink."""
     roads = [smooth_path(p) for p in ROADS.values()]
     casing = "".join(f'<path d="{d}" fill="none" stroke="{INK}" stroke-opacity="0.85" stroke-width="4.8" '
                      f'stroke-linecap="round" stroke-linejoin="round"/>' for d in roads)
-    surface = "".join(f'<path d="{d}" fill="none" stroke="{ROAD}" stroke-width="3" stroke-linecap="round" '
+    surface = "".join(f'<path d="{d}" fill="none" stroke="{ROAD}" stroke-width="{ROAD_WIDTH}" stroke-linecap="round" '
                       f'stroke-linejoin="round"/>' for d in roads)
     ruts = "".join(f'<path d="{d}" fill="none" stroke="{RUTS}" stroke-width="0.6" stroke-dasharray="4 5" '
                    f'stroke-opacity="0.7"/>' for d in roads)
@@ -492,7 +529,6 @@ def draw_base(sprites: list[Sprite] = ()) -> str:
 
 # --- the road graph ------------------------------------------------------------------------------
 
-Point = tuple[float, float]
 
 
 def road_graph() -> dict[Point, dict[Point, float]]:
@@ -745,16 +781,18 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
     """Give each leg its breadcrumbs along the roads, and a numbered marker where it ended (or at
     leg["marker_at"], where its main action was). `places` includes any spots the legs pass.
 
-    leg["segments"] is a list of {"d", "road", "points"}: one per hop from the party's previous
-    stop, following the road graph by the shortest route. An off-road place is reached by a short
-    straight hop, marked off-road, from the road vertex nearest it; a hop between places with no
-    road between them at all is drawn straight. Repeat trips over the same road are nudged a
-    little to the side so a well-worn road shows several crumb lines. Markers for sessions that
-    ended at the same place fan out around it.
+    leg["segments"] is a list of {"d", "road", "points", "drawn"}: one per hop from the party's
+    previous stop, following the road graph by the shortest route. An off-road place is reached by
+    a short straight hop, marked off-road, from the road vertex nearest it; a hop between places
+    with no road between them at all is drawn straight. Repeat trips over the same stretch of road
+    take another lane (LANES) so a well-worn road shows several crumb lines. A crumb line follows
+    the road's own drawn curve ("beziers"; "drawn" its corner points), "points" the road under it. Markers for sessions that ended at the same place fan out
+    around it.
     """
     graph = road_graph()
+    curves = road_curves()
     node = {slug: nearest_vertex(graph, p.x, p.y, math.inf if p.offroad else 30) for slug, p in places.items()}
-    worn: dict[tuple[Point, Point], int] = {}
+    worn: dict[tuple[Point, Point], dict[float, int]] = {}
     markers_at: dict[str, int] = {}
     previous = None
     for leg in legs:
@@ -766,21 +804,20 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
                 path = route(graph, a, b) if a and b else None
                 if path is None:
                     pts = [(pa.x, pa.y), (pb.x, pb.y)]
-                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    leg["segments"].append({"road": False, "points": pts, "drawn": pts, "d": smooth_path(pts)})
                     previous = slug
                     continue
                 if pa.offroad:
                     pts = [(pa.x, pa.y), a]
-                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    leg["segments"].append({"road": False, "points": pts, "drawn": pts, "d": smooth_path(pts)})
                 if len(path) > 1:
-                    n = max(worn.get(tuple(sorted(e)), 0) for e in zip(path, path[1:]))
-                    for e in zip(path, path[1:]):
-                        worn[tuple(sorted(e))] = worn.get(tuple(sorted(e)), 0) + 1
-                    shift = ((n % 4) - 1.5) * 1.3
-                    leg["segments"].append({"road": True, "points": path, "d": smooth_path(offset(path, shift))})
+                    beziers = follow(path, lanes(path, worn), curves)
+                    drawn = [bez[0] for bez in beziers] + [beziers[-1][3]]
+                    leg["segments"].append({"road": True, "points": path, "drawn": drawn, "beziers": beziers,
+                                            "d": bezier_path(beziers)})
                 if pb.offroad:
                     pts = [b, (pb.x, pb.y)]
-                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    leg["segments"].append({"road": False, "points": pts, "drawn": pts, "d": smooth_path(pts)})
             previous = slug
         end = places[leg.get("marker_at") or leg.get("path", leg["stops"])[-1]]
         k = markers_at.get(end.slug, 0)
@@ -850,17 +887,65 @@ def place_sessions(legs: list[dict], places: dict[str, Place], spots: dict[str, 
     return related
 
 
-def offset(points: list[Point], by: float) -> list[Point]:
-    """The polyline moved sideways by `by` (perpendicular to each vertex's direction of travel)."""
-    if not by or len(points) < 2:
-        return points
+def lanes(path: list[Point], worn: dict) -> list[float]:
+    """The lane (a LANES value; + and - are the two sides of travel) for each edge of a trip along `path`.
+
+    `worn` counts, for each edge, the trips in each lane, kept on the edge's own fixed side so trips
+    in either direction agree on which side is which; it is updated. Each edge takes its least-used
+    lane, and among equals keeps the lane it was in, so a trip changes lane only where it must.
+    """
+    out, current = [], LANES[0]
+    for a, b in zip(path, path[1:]):
+        key = (a, b) if (a, b) < (b, a) else (b, a)
+        side = 1 if key == (a, b) else -1
+        used = worn.setdefault(key, {})
+        order = [current] + [lane for lane in LANES if lane != current]
+        current = min(order, key=lambda lane: (used.get(lane * side, 0), order.index(lane)))
+        used[current * side] = used.get(current * side, 0) + 1
+        out.append(current)
+    return out
+
+
+def road_curves() -> dict[tuple[Point, Point], Bezier]:
+    """The drawn curve of every road and track edge, by (from, to), both ways round."""
+    out = {}
+    for pts in list(ROADS.values()) + list(TRACKS.values()):
+        for a, c1, c2, b in curves_of(pts):
+            out[(a, b)] = (a, c1, c2, b)
+            out[(b, a)] = (b, c2, c1, a)
+    return out
+
+
+def _unit(dx: float, dy: float) -> tuple[float, float]:
+    length = math.hypot(dx, dy)
+    return (dx / length, dy / length) if length else (0.0, 0.0)
+
+
+def follow(path: list[Point], shifts: list[float], curves: dict) -> list[Bezier]:
+    """The road's own drawn curve along `path`, moved sideways by shifts[i] along its i-th edge.
+
+    Chris (2026-11-02): crumbs drawn as their own curve through the road's corner points bent
+    differently from the road wherever it met another road or turned, drifting up to 3.6 units off
+    it. So each crumb edge is the road's drawn curve for that edge with every point moved the same
+    way at each end: along the curve's normal there (the mean of the two edges' directions at a
+    corner, so the line stays joined), by the mean of the two edges' lanes.
+    """
+    beziers = [curves[e] for e in zip(path, path[1:])]
+    n = len(beziers)
+    moves = []
+    for i in range(n + 1):
+        into = _unit(beziers[i - 1][3][0] - beziers[i - 1][2][0], beziers[i - 1][3][1] - beziers[i - 1][2][1]) if i else None
+        out_ = _unit(beziers[i][1][0] - beziers[i][0][0], beziers[i][1][1] - beziers[i][0][1]) if i < n else None
+        ways = [t for t in (into, out_) if t]
+        tx, ty = _unit(sum(t[0] for t in ways), sum(t[1] for t in ways))
+        if not (tx or ty):  # a dead turn back: keep to the way out
+            tx, ty = out_ or into
+        lane = sum(shifts[j] for j in (i - 1, i) if 0 <= j < n) / len([j for j in (i - 1, i) if 0 <= j < n])
+        moves.append((-ty * lane, tx * lane))
     out = []
-    for i, (x, y) in enumerate(points):
-        ax, ay = points[max(i - 1, 0)]
-        bx, by_ = points[min(i + 1, len(points) - 1)]
-        dx, dy = bx - ax, by_ - ay
-        length = math.hypot(dx, dy) or 1
-        out.append((x - dy / length * by, y + dx / length * by))
+    for i, (a, c1, c2, b) in enumerate(beziers):
+        (ax, ay), (bx, by) = moves[i], moves[i + 1]
+        out.append(((a[0] + ax, a[1] + ay), (c1[0] + ax, c1[1] + ay), (c2[0] + bx, c2[1] + by), (b[0] + bx, b[1] + by)))
     return out
 
 

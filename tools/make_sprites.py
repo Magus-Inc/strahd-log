@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 STYLE = ("hand-drawn fantasy map icons, brown iron-gall ink linework with fine cross-hatching, muted "
@@ -30,12 +30,88 @@ SHEETS = {
     "places-4.jpg": (1, 1, ["signpost"]),
 }
 BAND = 9        # how far in from the edge the fade reaches, in sheet pixels
+DARK = 200      # ink this dark is a picture's linework (lighter ink may be a wash or mist)
+SPILL = 35      # a line moved this far off the grid means a neighbour spills well over it (the gates' mist)
+REACH = 70      # how far from a grid line, in sheet pixels, to look for the gap between two pictures
 MAX_SIDE = 260  # sprites are stored at most this big
 
 
-def cut(cell: Image.Image, seed: int = 7) -> Image.Image:
-    """One picture from its cell, on a transparent ground with a dithered edge."""
+def _gap(counts: np.ndarray, nominal: int) -> int:
+    """The middle of the emptiest run of lines within REACH of a grid line (the nearest such run)."""
+    lo, hi = max(nominal - REACH, 1), min(nominal + REACH, len(counts) - 1)
+    window = counts[lo:hi]
+    best = np.flatnonzero(window == window.min()) + lo
+    pick = best[np.argmin(abs(best - nominal))]
+    start = end = pick
+    while start - 1 in best:
+        start -= 1
+    while end + 1 in best:
+        end += 1
+    return int((start + end + 1) // 2)
+
+
+def cells(sheet: Image.Image, cols: int, rows: int) -> list[tuple[int, int, int, int]]:
+    """Each cell's box, row by row, with the lines moved off the grid into the gaps between pictures.
+
+    The drawings don't keep to an exact grid: the gates spill over into the abbey's cell (and their
+    mist reaches its rock), so a plain grid cut put half a gate tower beside the abbey and cut the
+    gates in two. Each line moves to the column (or row) within REACH with the least dark linework.
+    """
+    dark = np.asarray(sheet.convert("RGB")).min(axis=2) <= DARK
+    h, w = dark.shape
+    ys = [0] + [_gap(dark.sum(axis=1), r * h // rows) for r in range(1, rows)] + [h]
+    boxes = []
+    for r in range(rows):
+        band = dark[ys[r]:ys[r + 1]].sum(axis=0)
+        xs = [0] + [_gap(band, c * w // cols) for c in range(1, cols)] + [w]
+        boxes += [(xs[c], ys[r], xs[c + 1], ys[r + 1]) for c in range(cols)]
+    return boxes
+
+
+def spill(box: tuple[int, int, int, int], index: int, size: tuple[int, int], cols: int, rows: int) -> set[str]:
+    """The sides of a cell whose line moved inward more than SPILL off the grid: a neighbour's
+    picture spills well over there, so its light wash (mist) may reach into this cell. Small moves
+    are left alone: a picture's own light edges (snow, water) reach its cell's sides too."""
+    w, h = size
+    r, c = divmod(index, cols)
+    sides = set()
+    if box[0] - c * w // cols > SPILL:
+        sides.add("left")
+    if (c + 1) * w // cols - box[2] > SPILL:
+        sides.add("right")
+    if box[1] - r * h // rows > SPILL:
+        sides.add("top")
+    if (r + 1) * h // rows - box[3] > SPILL:
+        sides.add("bottom")
+    return sides
+
+
+def _clear_wash(rgb: np.ndarray, sides) -> np.ndarray:
+    """Whiten the light wash that reaches in from the given sides, up to the first dark line.
+
+    A picture's own wash sits behind its ink outline, so it stays; the neighbour's mist, which
+    drifts in from the edge with nothing dark in between, goes.
+    """
+    light = rgb.min(axis=2)
+    mask = Image.fromarray(((light > DARK) & (light <= 252)).astype("uint8") * 255).copy()  # writable
+    h, w = light.shape
+    edge = {"left": [(0, y) for y in range(h)], "right": [(w - 1, y) for y in range(h)],
+            "top": [(x, 0) for x in range(w)], "bottom": [(x, h - 1) for x in range(w)]}
+    for side in sides:
+        for xy in edge[side]:
+            if mask.getpixel(xy) == 255:
+                ImageDraw.floodfill(mask, xy, 128)
+    out = rgb.copy()
+    out[np.asarray(mask) == 128] = 255
+    return out
+
+
+def cut(cell: Image.Image, seed: int = 7, clear=()) -> Image.Image:
+    """One picture from its cell, on a transparent ground with a dithered edge. `clear`: sides
+    (see spill) where a neighbour's light wash reaching in is whitened first."""
     rgb = np.asarray(cell.convert("RGB")).astype(int)
+    if clear:
+        rgb = _clear_wash(rgb, clear)
     ink = rgb.min(axis=2) <= 236
     ys, xs = np.where(ink)
     if not len(xs):
@@ -70,13 +146,10 @@ def main(out_dir: Path = ROOT / "static" / "images" / "map" / "sprites") -> None
     out_dir.mkdir(parents=True, exist_ok=True)
     for sheet, (cols, rows, names) in SHEETS.items():
         im = Image.open(ROOT / "tools" / "sprite_sheets" / sheet)
-        w, h = im.size
-        for i, name in enumerate(names):
+        for i, (name, box) in enumerate(zip(names, cells(im, cols, rows))):
             if name is None:
                 continue
-            r, c = divmod(i, cols)
-            cell = im.crop((c * w // cols, r * h // rows, (c + 1) * w // cols, (r + 1) * h // rows))
-            cut(cell, seed=i).save(out_dir / f"{name}.webp", quality=88, method=6)
+            cut(im.crop(box), seed=i, clear=spill(box, i, im.size, cols, rows)).save(out_dir / f"{name}.webp", quality=88, method=6)
             print(name)
 
 
