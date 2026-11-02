@@ -136,7 +136,7 @@
     "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
    },
    {
-    "text": "Is the brother of Doru, whose voice spoke from the Abbot's first vessel.",
+    "text": "Heard his dead brother Veyren's voice among those speaking from the Abbot's first vessel.",
     "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
    }
   ]
@@ -481,7 +481,7 @@
   "name": "Doru",
   "type": "npc",
   "aliases": [],
-  "summary": "A dissolved vampire spawn whose intelligence helped the party plan their heist; Shabasta's brother.",
+  "summary": "A dissolved vampire spawn whose intelligence helped the party plan their heist.",
   "facts": [
    {
     "text": "Was a friend of Escher, who is believed to have betrayed him.",
@@ -496,7 +496,7 @@
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "His voice spoke from the Abbot's first vessel; he is called Shabasta's brother.",
+    "text": "His voice was among the dead speaking from the Abbot's first vessel.",
     "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
    }
   ]

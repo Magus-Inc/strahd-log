@@ -29,4 +29,4 @@ The son of Father Donavich. He led villagers against the castle, and an elf came
 * Was a friend of Escher, who is believed to have betrayed him. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Was once engaged to Gertruda. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Was dissolved in running water, but his information formed the basis of the party's map. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
-* His voice spoke from the Abbot's first vessel; he is called Shabasta's brother. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* His voice was among the dead speaking from the Abbot's first vessel. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
