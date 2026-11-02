@@ -47,3 +47,7 @@ map-edit port="8001":
 # Re-cut the map sprites from tools/sprite_sheets/ into static/images/map/sprites/
 map-sprites:
     {{python}} tools/make_sprites.py
+
+# Check the libraries copied into static/vendor/ (add --advisories to ask osv.dev for security problems)
+vendor-check *args:
+    {{python}} tools/vendor_check.py {{args}}

@@ -129,8 +129,9 @@ AI art are CC BY-NC 4.0; drawings and photos by the players and the DM stay thei
 
 `static/style.css` is a dark editorial theme with one blood-red accent: a serif for display, the
 system sans for reading, an 18px body on a 68-character measure, colours that meet WCAG AA. No web
-fonts, frameworks or outside scripts; a few lines of the site's own JavaScript drive the map,
-search, the wiki filter and the table of contents highlight. `article.py` adds the reading aids:
+fonts, frameworks or scripts from other sites; a few lines of the site's own JavaScript drive the map,
+search, the wiki filter and the table of contents highlight. Small libraries may be copied into
+`static/vendor/` under the rules in `AGENTS.md` (listed in `data/vendor.yaml`). `article.py` adds the reading aids:
 reading time, heading ids and a table of contents, the "At a Glance" callout, card teasers and
 the cast list.
 

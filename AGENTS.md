@@ -5,7 +5,17 @@
 - Read and write text with `encoding="utf-8"`; tests must not depend on line endings or the OS.
 - Tests build their own fixtures in `tmp_path`; never depend on the Obsidian Portal export folder.
 - The site build needs only `requirements.txt`; keep importer and test packages in `requirements-dev.txt`.
-- No external JavaScript on the site. It must stay readable on a phone.
+- Scripts (Chris, 2026-11-02): the site runs its own JavaScript plus libraries copied into
+  `static/vendor/`; it never loads a script, stylesheet or font from another site (no CDNs), so
+  readers' browsers talk only to the blog and GoatCounter. Reach for a library when our own code
+  would pass about 150 lines or the problem is a known hard one; small helpers stay hand-written,
+  and working code is left alone. Each library: a permissive license (MIT, BSD, ISC, Apache-2.0; OFL
+  for fonts) with its text beside the file, at most 30 KB zipped (60 KB for all libraries on one
+  page), loaded only on the pages that use it, the unminified build when it fits, no cookies,
+  storage or network calls of its own, and listed in `data/vendor.yaml` with version, download URL,
+  sha256 and why. `tests/test_vendor.py` enforces this, and a monthly workflow opens an issue when
+  osv.dev reports a security problem in a listed version. Every page must stay readable on a phone,
+  even if a script fails.
 - Wiki text above `<!-- from-the-log -->` is ours; only the section after it is generated. Tools
   add facts there, each citing the post it came from. Above it, agents may write and extend a
   `## Description` in Malron's words from the posts, and for new people and places the DM's

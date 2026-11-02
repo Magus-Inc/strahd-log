@@ -1,0 +1,40 @@
+name: Library security check
+
+# Once a month, ask osv.dev whether any library copied into static/vendor/ has a known security
+# problem, and open an issue if one does. Copied files get no automatic update PRs, so this is how
+# we hear about fixes (the script rule in AGENTS.md). One open issue at a time: a still-open one gets
+# a comment instead of a new issue. If osv.dev can't be reached the run fails, and GitHub emails that.
+on:
+  schedule:
+    - cron: "17 14 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  advisories:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Look up advisories
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python tools/vendor_check.py --advisories > advisories.txt
+          cat advisories.txt
+          if [ "$(cat advisories.txt)" != "No problems." ]; then
+            title="Security fix needed for a copied JavaScript library"
+            open=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body-file advisories.txt
+            else
+              gh issue create --title "$title" --body-file advisories.txt
+            fi
+          fi
