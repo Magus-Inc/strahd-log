@@ -9,7 +9,7 @@ source: Compiled from the adventure log
 
 ## Description
 
-![Wachterhaus at dusk, a glowing circle of runes on the cobbles around it](/images/wachterhaus-ai.jpg)
+![Wachterhaus at dusk in its walled garden grounds near the town palisade, a faint silver binding circle on the ground all the way around the house and garden](/images/wachterhaus-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
