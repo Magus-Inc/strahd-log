@@ -117,6 +117,9 @@ TRACKS = {
     "Amber Temple trail": [(352, 672), (366, 662), (362, 648), (380, 640)],
     # The Vistani camp by Vallaki, a short walk south of the lake road toward the Luna River.
     "Vallaki Vistani camp trail": [(380, 270), (378, 300)],
+    # Session 8: the party left the road just before the Ivlis bridge and followed the river's north
+    # bank west, through the woods, to the old oak (Chris: "we hit the river before the bridge").
+    "Ivlis north bank to the old oak": [(761, 504), (746, 503), (731, 494), (718, 488), (712, 486)],
     # The Vistani camp sits on dry land just south of Tser Pool.
     "Tser Pool trail (to the camp)": [(680, 555), (690, 530)],
 }
