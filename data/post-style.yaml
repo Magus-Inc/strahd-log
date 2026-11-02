@@ -8,4 +8,6 @@ bold: plain          # no bold names mid-sentence in the story (recap lists keep
 glance: none         # no At a Glance box; the story starts after the pills
 tagline: keep        # keep the line under the title where written
 picture: scene       # the feature picture stays beside the scene it shows
-story: no-heading   # no "Summary" heading over the story; it starts right after the pills
+story: titled       # one heading over the story, named below (not "Summary"; picked 2026-11-02)
+story-title: Malron’s Account
+scenes: written      # scene headings at natural breaks, short, in Malron's voice (data/scene-headings.yaml)

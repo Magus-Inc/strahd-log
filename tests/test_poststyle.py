@@ -36,7 +36,7 @@ def test_blog_uses_the_picks():
     style = poststyle.load_style(ROOT / "data" / "post-style.yaml")
     assert style == {"cast": "pills", "headings": "real", "entries": "bullets", "links": "gold",
                      "bold": "plain", "glance": "none", "tagline": "keep", "picture": "scene",
-                     "story": "no-heading"}
+                     "story": "titled", "story-title": "Malron’s Account", "scenes": "written"}
 
 
 # --- cast -----------------------------------------------------------------------------------
@@ -181,6 +181,74 @@ def test_slides_go_where_the_summary_heading_was():
     assert html.index("<h2>Characters</h2>") < html.index('class="deck"') < html.index("We ran.")
 
 
+# --- story title and scene headings ---------------------------------------------------------
+
+TITLED = {**NOHEAD, "story": "titled", "story-title": "Malron’s Account"}
+SCENES = {**TITLED, "scenes": "written"}
+TEMPLATE = ("## Characters:\n\n* x\n\n## Summary: The Crawl\n\nAs we woke, a revenant found us.\n\n"
+            "We ran for three hours.\n\nNote: The table laughed.\n\n### The Foyer\n\nThick fog covered the floor.\n\n"
+            "## Key Locations:\n\n### Krezk\n\n* **A**: b\n")
+
+
+def test_the_story_gets_one_parent_heading_and_the_slides_sit_above_it():
+    html = poststyle.apply(md(TEMPLATE), TITLED).html
+    assert "Summary" not in html and "<!--story-->\n<h2>Malron’s Account</h2>" in html
+    html = article.add_deck(html, ["slides/a/1.webp"])
+    assert html.index('class="deck"') < html.index("<h2>Malron’s Account</h2>") < html.index("As we woke")
+
+
+def test_a_post_with_no_summary_heading_gets_the_parent_heading_first():
+    html = poststyle.apply(md("We crawled.\n\n### The Foyer\n\nFog.\n"), TITLED).html
+    assert html.startswith("<!--story-->\n<h2>Malron’s Account</h2>\n<p>We crawled.</p>")
+
+
+def test_the_parent_heading_goes_after_a_characters_list_that_stays():
+    html = poststyle.apply(md("## Characters:\n\n* x\n\nWe crawled.\n"), {**TITLED, "cast": "list"}).html
+    assert html.index("Characters") < html.index("Malron’s Account") < html.index("We crawled.")
+
+
+def test_written_scene_headings_replace_the_old_ones_in_the_story_only():
+    scenes = [("As we woke", "Called Before Noon"), ("Thick fog", "Strings of Black Wire")]
+    html = poststyle.apply(md(TEMPLATE), SCENES, scenes).html
+    assert re.findall(r"<h3>(.*?)</h3>", html) == ["Called Before Noon", "Strings of Black Wire", "Krezk"]
+    assert html.index("<h2>Malron’s Account</h2>") < html.index("<h3>Called Before Noon</h3>\n<p>As we woke")
+    assert "The Crawl" not in html and "The Foyer" not in html
+
+
+def test_scene_anchors_ignore_case_quotes_and_links():
+    html = md("He said, \u201cSome of you may die.\u201d\n\n[Krezk](/wiki/krezk/) at dawn.\n")
+    out = poststyle.apply(html, SCENES, [('he said, "some of you', "One"), ("Krezk at", "Two")]).html
+    assert "<h3>One</h3>\n<p>He said" in out and '<h3>Two</h3>\n<p><a' in out
+
+
+def test_a_scene_anchor_that_matches_no_paragraph_or_two_is_an_error():
+    with pytest.raises(ValueError, match="Lost words"):
+        poststyle.apply(md("We ran.\n"), SCENES, [("Lost words", "X")])
+    with pytest.raises(ValueError, match="We"):
+        poststyle.apply(md("We ran.\n\nWe hid.\n"), SCENES, [("We", "X")])
+
+
+def test_a_run_in_label_gives_way_to_the_written_heading():
+    html = poststyle.apply(md("**The Secret Path.** In K-24 the room was wrecked.\n"), SCENES,
+                           [("The Secret Path.", "The Coffin Wardrobe")]).html
+    assert "<h3>The Coffin Wardrobe</h3>\n<p>In K-24" in html and "Secret Path" not in html
+
+
+def test_scenes_as_written_ignore_the_list():
+    html = poststyle.apply(md(TEMPLATE), TITLED, [("As we woke", "Called Before Noon")]).html
+    assert "Called Before Noon" not in html and "<h3>The Crawl</h3>" in html
+
+
+def test_every_post_has_its_scene_headings_listed():
+    """Each post is listed, even with no breaks (a very short story), and headings stay short."""
+    scenes = poststyle.load_scenes(ROOT / "data" / "scene-headings.yaml")
+    slugs = {build.split_front_matter(p.read_text(encoding="utf-8"))[0]["slug"]
+             for p in (ROOT / "content" / "posts").glob("*.md")}
+    assert set(scenes) == slugs
+    long = [h for hs in scenes.values() for _, h in hs if len(h.split()) > 6]
+    assert long == []
+
+
 # --- glance, picture ------------------------------------------------------------------------
 
 def test_glance_none_removes_the_box():
@@ -234,6 +302,20 @@ def test_pills_match_the_characters_list(site):
                                              "shabasta"]
 
 
-def test_a_rule_under_the_slides_marks_where_the_story_starts():
+def test_every_story_has_its_parent_heading_and_long_ones_their_scenes(site):
+    out, posts = site
+    problems = []
+    for slug, _ in posts:
+        page = (out / "posts" / slug / "index.html").read_text(encoding="utf-8")
+        if page.count(">Malron’s Account</h2>") != 1:
+            problems.append(f"{slug}: no Malron’s Account heading")
+    assert problems == []
+    beacon = (out / "posts" / "the-beacon-of-argynvostholt" / "index.html").read_text(encoding="utf-8")
+    assert 'class="toc-h3"><a href="#called-before-noon">Called Before Noon' in beacon
+
+
+def test_one_rule_between_the_slides_and_the_story():
+    """The story's own heading draws the rule above it, so the slides draw none below them."""
     css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
-    assert re.search(r"section\.deck, section\.decks \{[^}]*border-bottom", css)
+    assert re.search(r"\.prose h2 \{[^}]*border-top", css)
+    assert not re.search(r"section\.deck, section\.decks \{[^}]*border-bottom", css)

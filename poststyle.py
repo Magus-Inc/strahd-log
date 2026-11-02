@@ -12,6 +12,7 @@ from a bold line carries no link and the first mention in the story gets it inst
 
 from __future__ import annotations
 
+import html as htmllib
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -30,9 +31,12 @@ OPTIONS = {
     "glance": ["new-posts", "every-post", "none"],   # the "At a Glance" box (every-post is writing, not build)
     "tagline": ["keep", "every-post", "none"],       # the line under the title (every-post is writing)
     "picture": ["scene", "top"],                     # the feature picture beside its scene, or first
-    "story": ["as-written", "no-heading"],           # no "Summary" heading over the story itself
+    "story": ["as-written", "no-heading", "titled"], # no "Summary" heading; or one named by story-title
+    "scenes": ["as-written", "written"],             # scene headings from data/scene-headings.yaml
 }
-AS_WRITTEN = {name: values[0] for name, values in OPTIONS.items()}
+# Settings that take any text rather than one of a list.
+TEXT = {"story-title": "Malron’s Account"}  # the parent heading over the story when story is titled
+AS_WRITTEN = {**{name: values[0] for name, values in OPTIONS.items()}, **TEXT}
 
 # The recap template's sections. Their headings are h2; any other heading in a post is a place or a
 # scene inside the story, and is h3.
@@ -48,12 +52,24 @@ def load_style(path: Path) -> dict:
     if path.is_file():
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         for name, value in data.items():
+            if name in TEXT:
+                style[name] = str(value)
+                continue
             if name not in OPTIONS:
-                raise ValueError(f"{path.name}: unknown setting {name!r}; known: {', '.join(OPTIONS)}")
+                raise ValueError(f"{path.name}: unknown setting {name!r}; known: {', '.join([*OPTIONS, *TEXT])}")
             if value not in OPTIONS[name]:
                 raise ValueError(f"{path.name}: {name} must be one of {', '.join(OPTIONS[name])}, not {value!r}")
             style[name] = value
     return style
+
+
+def load_scenes(path: Path) -> dict[str, list[tuple[str, str]]]:
+    """data/scene-headings.yaml: post slug -> [[first words of a paragraph, the heading to put before it]].
+    A post with no natural break is listed with an empty list, so every post is accounted for."""
+    if not path.is_file():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {slug: [(str(a), str(h)) for a, h in (pairs or [])] for slug, pairs in data.items()}
 
 
 @dataclass
@@ -62,16 +78,22 @@ class Styled:
     characters: str = ""  # the post's Characters section as HTML, whether or not it is still shown
 
 
-def apply(html: str, style: dict) -> Styled:
+def apply(html: str, style: dict, scenes: list[tuple[str, str]] | None = None) -> Styled:
+    style = {**AS_WRITTEN, **style}
     if style["headings"] == "real":
         html = outside_quotes(html, real_headings)
-    if style["story"] == "no-heading":
+    if style["story"] != "as-written":
         html = drop_summary_heading(html)
     characters = characters_section(html)
     if style["cast"] == "pills":
         html = drop_characters(html)
     if style["glance"] == "none":
         html = drop_glance(html)
+    if style["story"] == "titled":
+        html = mark_story(html)
+        if style["scenes"] == "written" and scenes is not None:
+            html = scene_headings(html, scenes)
+        html = html.replace(STORY + "\n", f"{STORY}\n<h2>{htmllib.escape(style['story-title'], quote=False)}</h2>\n", 1)
     if style["entries"] == "bullets":
         html = on_sections(html, RECAP, bullet_entries)
     if style["bold"] == "plain":
@@ -162,6 +184,52 @@ def drop_summary_heading(html: str) -> str:
 
     html = re.sub(r"<h[23]>Summary(.*?)</h[23]>\s*", heading, html, count=1, flags=re.S)
     return re.sub(r"<p><strong>Summary:?</strong>\s*<br\s*/?>\s*", STORY + "\n<p>", html, count=1)
+
+
+def mark_story(html: str) -> str:
+    """Make sure the story's start is marked: posts with no Summary heading start with the story,
+    after any At a Glance box or Characters list still shown."""
+    if STORY in html:
+        return html
+    at = 0
+    for rx in (r"<h[23]>At a Glance:?</h[23]>\s*<ul>.*?</ul>\s*", CHARACTERS.pattern):
+        m = re.match(r"\s*" + rx, html[at:], re.S | re.I)
+        if m:
+            at += m.end()
+    return html[:at] + STORY + "\n" + html[at:]
+
+
+def story_span(html: str) -> tuple[int, int]:
+    """Where the story runs: from its marker to the first recap section."""
+    start = html.index(STORY)
+    end = len(html)
+    for m in re.finditer(r"<h2[^>]*>(.*?)</h2>", html[start:], re.S):
+        if is_section(heading_text(m.group(1)), RECAP):
+            end = start + m.start()
+            break
+    return start, end
+
+
+def anchor_text(text: str) -> str:
+    text = text.translate(str.maketrans("‘’“”", "''\"\""))
+    return re.sub(r"\s+", " ", text).strip().casefold()
+
+
+def scene_headings(html: str, scenes: list[tuple[str, str]]) -> str:
+    """Drop the story's own scene headings and put the written ones before the paragraphs they name."""
+    start, end = story_span(html)
+    story = re.sub(r"<h3[^>]*>.*?</h3>\s*", "", html[start:end], flags=re.S)
+    for words, heading in scenes:
+        want = anchor_text(words)
+        hits = [m for m in re.finditer(r"<p>(.*?)</p>", story, re.S)
+                if anchor_text(wiki.plain_text(m.group(1))).startswith(want)]
+        if len(hits) != 1:
+            raise ValueError(f"scene heading {heading!r}: {words!r} starts {len(hits)} paragraphs, not 1")
+        at = hits[0].start()
+        # A run-in label ("**The Secret Path.** In K-24...") was the writer's scene heading; the written one replaces it.
+        story = story[:at] + re.sub(r"^<p><strong>[^<]{1,60}\.</strong>\s*", "<p>", story[at:], count=1)
+        story = story[:at] + f"<h3>{htmllib.escape(heading, quote=False)}</h3>\n" + story[at:]
+    return html[:start] + story + html[end:]
 
 
 def drop_glance(html: str) -> str:
