@@ -9,7 +9,7 @@ import article
 import poststyle
 
 ROOT = Path(build.__file__).parent
-TAGLINE_LOOK, CARD_TAGLINE = "subtitle", "above-teaser"  # Chris's tagline picks (2026-11-02 tagline look page)
+TAGLINE_LOOK, CARD_TAGLINE = "subtitle", "instead"  # Chris's tagline picks (2026-11-02 tagline look page)
 md = build.render_markdown
 
 

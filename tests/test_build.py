@@ -201,6 +201,17 @@ def test_chronicle_cards_can_show_the_tagline_instead_of_the_teaser(content, tmp
     assert 'class="teaser"' in chronicle_card(index, "first")  # a post without a tagline keeps its teaser
 
 
+def test_latest_session_drops_the_summary_when_cards_do(content, tmp_path):
+    """Chris (2026-11-02): the summary is not a summary (a random first line) and only makes scrolling
+    longer, so with card-tagline: instead the latest-session hero shows the tagline and no summary either."""
+    second = content / "2026-09-01-third.md"
+    second.write_text(second.read_text(encoding="utf-8").replace("title: Third & Last\n", "title: Third & Last\ntagline: Last one\n"),
+                      encoding="utf-8")
+    hero = build_with_style(content, tmp_path, "card-tagline: instead\n") / "index.html"
+    hero = re.search(r'<section class="hero">.*?</section>', hero.read_text(encoding="utf-8"), re.S).group(0)
+    assert "Last one" in hero and hero.count('class="lede') == 1
+
+
 def test_duplicate_slugs_fail(tmp_path):
     write_post(tmp_path, "2024-01-01-a.md", "title: A\ndate: '2024-01-01'\nslug: same\n")
     write_post(tmp_path, "2024-01-02-b.md", "title: B\ndate: '2024-01-02'\nslug: same\n")

@@ -15,7 +15,7 @@
         <li>{{ item | rebase | safe }}</li>
 {% endfor %}
       </ul>
-{% else %}
+{% elif not (latest.tagline and post_style['card-tagline'] == "instead") %}
       <p class="lede">{{ latest.teaser }}</p>
 {% endif %}
       <p class="hero-actions"><a class="button" href="{{ base }}{{ latest.path }}">Read the session</a> <span class="muted">{{ latest.minutes }} min read{{ badges.meta_tags(latest) }}</span></p>
