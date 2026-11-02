@@ -69,3 +69,66 @@ def test_the_viewer_zooms_in_with_scroll_pinch_and_tap_and_pans_by_dragging():
     assert "naturalWidth" in zoom  # opens fitted to the screen, even past the file's own size
     assert re.search(r"dialog\.zoom img \{[^}]*touch-action: none", CSS)  # the page doesn't pinch instead
     assert "Scroll or pinch to zoom" in script
+
+
+# --- the full-size files the viewer loads (Chris, 2026-11-02: "I have the bigger res pictures") --
+
+FULL = ROOT / "static" / "images" / "full"
+
+
+def test_a_picture_with_a_full_size_file_says_so_and_others_do_not(tmp_path):
+    (tmp_path / "images" / "full").mkdir(parents=True)
+    (tmp_path / "images" / "full" / "big-ai.jpg").write_bytes(b"x")
+    html = '<p><img alt="A" src="/images/big-ai.jpg"></p><p><img alt="B" src="/images/small-ai.jpg"></p>'
+    out = build.article.full_size(html, tmp_path)
+    assert '<img alt="A" src="/images/big-ai.jpg" data-full="/images/full/big-ai.jpg">' in out
+    assert '<img alt="B" src="/images/small-ai.jpg">' in out
+
+
+def test_full_size_addresses_follow_the_base_path():
+    assert build.rebase('<img src="/images/a.jpg" data-full="/images/full/a.jpg">', "/strahd-log/") == \
+        '<img src="/strahd-log/images/a.jpg" data-full="/strahd-log/images/full/a.jpg">'
+
+
+def test_every_full_size_file_is_a_bigger_copy_of_a_published_picture():
+    from PIL import Image
+    files = sorted(FULL.glob("*"))
+    assert len(files) >= 100
+    for f in files:
+        small = ROOT / "static" / "images" / f.name
+        assert small.is_file(), f.name
+        with Image.open(f) as big, Image.open(small) as pic:
+            assert big.width > pic.width, f.name
+            assert abs(big.width / big.height - pic.width / pic.height) < 0.02, f.name
+
+
+def test_pages_point_the_viewer_at_the_full_size_file_and_ship_it(site):
+    assert 'data-full="/images/full/zorya-ai.jpg"' in read(site, "wiki/zorya")
+    assert 'data-full="/images/full/kasimir-ai.jpg"' in read(site, "posts/a-doll-for-arabelle")
+    assert (site / "images" / "full" / "zorya-ai.jpg").is_file()
+
+
+def test_the_viewer_swaps_in_the_full_size_file_only_when_opened():
+    script = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
+    zoom = script[script.index("<script data-zoom>"):]
+    assert "dataset.full" in zoom[:zoom.index("</script>")]
+
+
+# The 7 player portraits from Chris's Gemini app chats; only 765x1024 copies exist so far. This list
+# only shrinks: drop a name when its bigger file arrives.
+NO_FULL_SIZE_YET = {"aera-ai-portrait.jpg", "crusty-ai-portrait.jpg", "gumbo-ai-portrait.jpg", "liren-ai-portrait.jpg",
+                    "malron-ai-portrait.jpg", "olfin-ai-portrait.jpg", "shabasta-ai-portrait.jpg"}
+
+
+def test_every_ai_picture_on_the_site_keeps_its_full_size_original():
+    """Chris's rule, 2026-11-02: every picture we generate and host keeps its full-size original
+    in static/images/full/, beside the smaller copy the pages show."""
+    pictures = {f.name for f in (ROOT / "static" / "images").glob("*-ai*.*")}
+    missing = {name for name in pictures if not (FULL / name).is_file()}
+    assert missing <= NO_FULL_SIZE_YET, sorted(missing - NO_FULL_SIZE_YET)
+    assert NO_FULL_SIZE_YET <= pictures - {f.name for f in FULL.glob("*")}, "drop names that now have a full file"
+
+
+def test_agents_md_states_the_full_size_rule():
+    text = " ".join((ROOT / "AGENTS.md").read_text(encoding="utf-8").split())
+    assert "static/images/full/" in text and "full-size original" in text

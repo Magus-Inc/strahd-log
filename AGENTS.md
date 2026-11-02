@@ -43,3 +43,7 @@
   names, first and last session seen), the `## Description` shown as "Malron’s Account", any stat
   block after it, and "From the adventure log" folded under a story. Keep writing pages as before
   (`## Description`, picture inside it); change the look in the yaml, not in the pages.
+- Every AI picture we host keeps its full-size original (Chris, 2026-11-02): the page shows the
+  smaller copy in `static/images/` (720px wide portraits, 1100px landscapes) and the original
+  Gemini picture, full size as a JPEG, goes in `static/images/full/` under the same name. The build gives the picture a
+  `data-full` address and the picture viewer loads it only when a reader taps the picture.
