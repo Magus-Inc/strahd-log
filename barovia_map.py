@@ -675,6 +675,26 @@ def load_places(path: Path, pages: list[wiki.WikiPage]) -> tuple[dict[str, Place
     return places, parent
 
 
+def load_landmarks(path: Path, pages: list[wiki.WikiPage], places: dict[str, Place]) -> dict[str, Place]:
+    """Landmarks from data/map.yaml `landmarks`: wiki pages for things drawn on the map that are not
+    places to stop (a river, a wood, a mountain range, a lone tree). Only the page's own map shows one,
+    zoomed in with a red dot and its name; the map page has no pin, label or card for it."""
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    by_slug = {p.slug: p for p in pages}
+    marks: dict[str, Place] = {}
+    for slug, spec in (data.get("landmarks") or {}).items():
+        if slug not in by_slug:
+            raise ValueError(f"data/map.yaml: landmark {slug!r} has no wiki page")
+        if slug in places:
+            raise ValueError(f"data/map.yaml: landmark {slug!r} is already a place")
+        x, y = spec["xy"]
+        marks[slug] = Place(slug, str(spec.get("label") or by_slug[slug].title), float(x), float(y), [],
+                            str(spec.get("anchor") or "middle"))
+    return marks
+
+
 def load_spots(path: Path, places: dict[str, Place]) -> dict[str, Place]:
     """Spots from data/map.yaml `spots`: points on the roads (or off them) that are not places.
 
