@@ -1,6 +1,7 @@
 ---
 title: The Shard’s Warning and the Abbot’s Madness
 date: '2026-06-02T21:00:00-05:00'
+tagline: An unkindness, not a murder
 slug: the-shard-s-warning-and-the-abbot-s-madness
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-shard-s-warning-and-the-abbot-s-madness
 ---

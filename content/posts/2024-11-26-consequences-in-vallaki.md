@@ -1,6 +1,7 @@
 ---
 title: Consequences in Vallaki
 date: '2024-11-26T21:00:00-06:00'
+tagline: Izek got there first
 slug: consequences-in-vallaki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/consequences-in-vallaki
 ---

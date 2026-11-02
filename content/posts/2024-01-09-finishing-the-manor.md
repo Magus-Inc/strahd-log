@@ -1,6 +1,7 @@
 ---
 title: Finishing the Manor?
 date: '2024-01-09T21:00:00-06:00'
+tagline: The monster is Mom. No, Walter. No, Dad.
 slug: finishing-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finishing-the-manor
 ---

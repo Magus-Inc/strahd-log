@@ -1,6 +1,7 @@
 ---
 title: The Fall of Izek
 date: '2024-12-10T21:15:00-06:00'
+tagline: Shabasta needed a hand. Izek no longer did.
 slug: the-fall-of-izek
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fall-of-izek
 ---

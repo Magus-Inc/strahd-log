@@ -1,6 +1,7 @@
 ---
 title: 'The Beacon of Argynvostholt'
 date: '2026-09-29T17:00:00-05:00'
+tagline: Your watch has ended
 slug: the-beacon-of-argynvostholt
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 'The Red Door: A Reunion Beneath the Abbey'
 date: '2026-09-01T17:00:00-05:00'
+tagline: Never open the red door. We opened the red door.
 slug: the-red-door-a-reunion-beneath-the-abbey
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-red-door-a-reunion-beneath-the-abbey
 ---

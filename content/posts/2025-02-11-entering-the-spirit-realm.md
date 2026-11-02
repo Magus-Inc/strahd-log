@@ -1,6 +1,7 @@
 ---
 title: Entering the Spirit Realm
 date: '2025-02-11T21:00:00-06:00'
+tagline: Stella came home. Shabasta did not.
 slug: entering-the-spirit-realm
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-the-spirit-realm
 ---

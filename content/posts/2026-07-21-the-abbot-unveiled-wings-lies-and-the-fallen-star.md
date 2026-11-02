@@ -1,6 +1,7 @@
 ---
 title: 'The Abbot Unveiled: Wings, Lies and the Fallen Star'
 date: '2026-07-21T16:30:00-05:00'
+tagline: Cyrus is nine feet tall. Trust us.
 slug: the-abbot-unveiled-wings-lies-and-the-fallen-star
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-abbot-unveiled-wings-lies-and-the-fallen-star
 ---

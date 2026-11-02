@@ -192,7 +192,7 @@ def test_route_follows_roads_between_junctions():
     vallaki, castle = (400, 250), (720, 398)
     path = barovia_map.route(graph, vallaki, castle)
     assert path[0] == vallaki and path[-1] == castle
-    assert (488, 308) in path and (610, 360) in path  # round the hairpin by Old Bonegrinder, then the fork
+    assert (490, 305) in path and (610, 360) in path  # round the hairpin by Old Bonegrinder, then the switchbacks
     assert all(b in graph[a] for a, b in zip(path, path[1:]))
     assert barovia_map.route(graph, vallaki, vallaki) == [vallaki]
 
@@ -721,3 +721,106 @@ def test_the_lost_girl_session_visits_the_vallaki_vistani_camp():
     entry = trail["2024-08-13-a-doll-for-arabelle"]
     assert "vallaki-vistani-camp" in entry["stops"]
     assert entry["marker"] == "vallaki-vistani-camp"
+
+
+def test_the_road_to_old_bonegrinder_winds_like_the_official_map():
+    # Chris, 2026-11-02: on the official map the Old Svalich Road zig-zags down switchbacks from the
+    # Tser Pool crossroads to the Old Bonegrinder turnoff, then swings in a wide loop north-east
+    # to a hairpin before it runs back west along the lake to Vallaki. Ours was nearly straight.
+    graph = barovia_map.road_graph()
+    crossroads, fork, east_of_vallaki = (610, 360), (487, 319), (442, 259)
+
+    def length(path):
+        return sum(math.dist(a, b) for a, b in zip(path, path[1:]))
+
+    down = barovia_map.route(graph, crossroads, fork)
+    assert length(down) > 1.4 * math.dist(crossroads, fork)
+    # the switchbacks: the road turns back on itself (heads east again) at least twice going down
+    turns = sum(1 for a, b, c in zip(down, down[1:], down[2:]) if (b[0] - a[0]) * (c[0] - b[0]) < 0)
+    assert turns >= 2
+
+    loop = barovia_map.route(graph, fork, east_of_vallaki)
+    assert length(loop) > 2.5 * math.dist(fork, east_of_vallaki)
+    assert max(x for x, _ in loop) > fork[0] + 60     # the hairpin is well east of the turnoff
+    assert min(y for _, y in loop) < east_of_vallaki[1] - 15   # and north, toward the lake
+
+
+def test_the_bonegrinder_turnoff_is_at_the_foot_of_the_switchbacks():
+    # Chris, 2026-11-02: the turnoff was too far north. On the official map the lane to Old
+    # Bonegrinder leaves the road at the bottom of the last bend, and the windmill sits west of it.
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    fork, mill = data["spots"]["bonegrinder-fork"]["xy"], data["places"]["the-windmill"]["xy"]
+    graph = barovia_map.road_graph()
+    assert tuple(fork) in graph[tuple(mill)]
+    lowest_bend = max(y for x, y in barovia_map.ROADS["Old Svalich Road (the switchbacks)"] if x < 520)
+    assert fork[1] > 315 and lowest_bend - fork[1] < 25
+    assert mill[0] < fork[0] - 10 and abs(mill[1] - fork[1]) < 10
+
+
+def test_east_roads_bend_like_the_official_map():
+    # Chris, 2026-11-02: retrace the roads from the official map, region by region; the east first.
+    graph = barovia_map.road_graph()
+    gates, village, ivlis, falls, tser, castle = (930, 398), (780, 450), (680, 555), (600, 405), (610, 360), (720, 398)
+    # From the gates the road drops south, then runs straight west into the village.
+    down = barovia_map.route(graph, gates, village)
+    assert any(x > 860 and y >= 448 for x, y in down)
+    # From the village it heads south past the Ivlis before it turns west to the crossroads.
+    south = barovia_map.route(graph, village, ivlis)
+    assert any(x > 755 and y > 520 for x, y in south)
+    # The road past Tser Falls swings south of the crossroads and loops far west before the falls.
+    loop = barovia_map.route(graph, ivlis, falls)
+    assert max(y for _, y in loop) > ivlis[1] + 8 and min(x for x, _ in loop) < 540
+    # The castle road climbs north over a rise before it comes down to the castle gate.
+    up = barovia_map.route(graph, tser, castle)
+    assert min(y for _, y in up) < 350
+
+
+def test_roads_west_of_vallaki_bend_like_the_official_map():
+    # Region 2 of the retrace (Chris, 2026-11-02): around the Luna River crossroads.
+    graph = barovia_map.road_graph()
+    luna, fork, raven, argyn, baratok = (350, 278), (263, 307), (220, 262), (316, 384), (242, 225)
+    # From the Luna crossroads the Old Svalich Road sags south through the woods to the fork.
+    sag = barovia_map.route(graph, luna, fork)
+    assert max(y for _, y in sag) > 315
+    # The Argynvostholt road drops south, runs east along the valley, then turns down to the gate.
+    valley = barovia_map.route(graph, fork, argyn)
+    assert any(x > 300 and y < 345 for x, y in valley)
+    # The Lake Baratok trail heads north from the crossroads, then arcs west along the lake.
+    arc = barovia_map.route(graph, luna, baratok)
+    assert min(y for _, y in arc) < 223 and any(x > 335 and y < 255 for x, y in arc)
+
+
+def test_south_roads_bend_like_the_official_map():
+    # Region 4 of the retrace (Chris, 2026-11-02): the long road south to Tsolenka Pass and on.
+    graph = barovia_map.road_graph()
+    raven, tsolenka, amber_fork = (220, 262), (240, 578), (352, 672)
+    south = barovia_map.route(graph, raven, tsolenka)
+    # it swings well west into the hills, doubles back on a hairpin, and winds down to the pass
+    assert min(x for x, _ in south) < 140
+    turns = sum(1 for a, b, c in zip(south, south[1:], south[2:]) if (b[0] - a[0]) * (c[0] - b[0]) < 0)
+    assert turns >= 3
+    # past the pass it climbs east, then down a long bend to the fork below the Amber Temple
+    on = barovia_map.route(graph, tsolenka, amber_fork)
+    assert sum(math.dist(a, b) for a, b in zip(on, on[1:])) > 1.05 * math.dist(tsolenka, amber_fork)
+
+
+def test_argynvostholt_stands_clear_of_the_berez_trail():
+    # Chris, 2026-11-02: Argynvostholt sat too close to the trail down to Berez. On the official map
+    # the trail runs well east of the mansion, between it and the Luna.
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    mansion = data["places"]["argynvostholt"]["xy"]
+    sprite = data["sprites"]["argynvostholt"]
+    trail = barovia_map.TRACKS["Berez trail"]
+    gap = min(_seg_distance(mansion, a, b) for a, b in zip(trail, trail[1:]))
+    assert gap >= 28
+    edge = sprite["xy"][0] + sprite["width"] / 2
+    assert min(x for x, y in trail if abs(y - sprite["xy"][1]) < 30) - edge >= 8
+
+
+def _seg_distance(p, a, b):
+    ax, ay = a
+    bx, by = b
+    t = max(0.0, min(1.0, ((p[0] - ax) * (bx - ax) + (p[1] - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2)))
+    return math.dist(p, (ax + t * (bx - ax), ay + t * (by - ay)))

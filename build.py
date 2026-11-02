@@ -33,6 +33,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import article
 import barovia_map
 import poststyle
+import share
 import wiki
 
 ROOT = Path(__file__).resolve().parent
@@ -243,6 +244,38 @@ def make_thumbnails(pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path)
             break
 
 
+def picture_card(stem: str, picture, title: str, out_dir: Path, site: dict) -> dict:
+    """The card for a page's picture: made on the site from a local file, or the outside address as is."""
+    if picture is None:
+        return site
+    source, alt = picture
+    if isinstance(source, str):
+        return {"image_url": source, "alt": share.alt_text(alt, title)}
+    return {"image": share.card(stem, source, out_dir), "alt": share.alt_text(alt, title)}
+
+
+def share_cards(posts: list[Post], pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path) -> dict:
+    """Link-preview details for each post and wiki page, by path: title, snippet, card picture (made
+    from the page's first picture, else the site's card) and its alt text. Key None is the site's card."""
+    default = next(p for p in (static_dir / share.DEFAULT_PICTURE, ROOT / "static" / share.DEFAULT_PICTURE)
+                   if p.is_file())
+    site = {"image": share.card("site", default, out_dir), "alt": share.DEFAULT_ALT}
+    cards: dict = {None: site}
+    for post in posts:
+        picture = share.first_picture(post.body_md, static_dir)
+        cards[post.path] = {
+            "path": post.path, "title": post.title, "type": "article", "published": post.date.isoformat(),
+            "description": share.post_snippet(post.tagline, post.html) or post.title,
+            **picture_card(f"post-{post.slug}", picture, post.title, out_dir, site)}
+    for page in pages:
+        picture = share.first_picture(page.body_md, static_dir)
+        cards[page.path] = {
+            "path": page.path, "title": page.title,
+            "description": share.wiki_snippet(page.summary, page.html) or page.title,
+            **picture_card(f"wiki-{page.slug}", picture, page.title, out_dir, site)}
+    return cards
+
+
 def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     """Reading time, table of contents, glance callout, slides, card teaser and cast for every post."""
     owners = article.ai_picture_owners(pages)
@@ -407,35 +440,37 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         shutil.rmtree(out_dir)
     shutil.copytree(ROOT / "static", out_dir)
     make_thumbnails(pages, slides_static or ROOT / "static", out_dir)
+    shares = share_cards(posts, pages, slides_static or ROOT / "static", out_dir)
+    env.globals.update(site_card=shares.pop(None), card_size=(share.CARD_W, share.CARD_H))
 
     years: dict[int, list[Post]] = {}
     for post in posts[1:]:
         years.setdefault(post.date.year, []).append(post)
     write(out_dir / "index.html",
-          env.get_template("index.html").render(latest=posts[0] if posts else None, years=list(years.items()),
+          env.get_template("index.html").render(share_page={"path": ""}, latest=posts[0] if posts else None, years=list(years.items()),
                                                 count=len(posts)))
     for i, post in enumerate(posts):
         newer = posts[i - 1] if i > 0 else None
         older = posts[i + 1] if i + 1 < len(posts) else None
         write(out_dir / "posts" / post.slug / "index.html",
               env.get_template("post.html").render(
-                  post=post, body=rebase(post.html, base), newer=newer, older=older, legs=legs,
+                  post=post, share_page=shares[post.path], body=rebase(post.html, base), newer=newer, older=older, legs=legs,
                   leg=leg_by_post.get(post.slug),
                   stops=[places[s] for s in leg_by_post[post.slug]["stops"]] if post.slug in leg_by_post else []))
 
     # The tags page and its menu link only exist once some post has tags.
     if tags:
         write(out_dir / "tags" / "index.html",
-              env.get_template("tags.html").render(tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
+              env.get_template("tags.html").render(share_page={"path": "tags/"}, tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
     groups = [(label, [w for w in pages if w.type == kind]) for kind, label in wiki.TYPES.items()]
     write(out_dir / "wiki" / "index.html",
-          env.get_template("wiki_index.html").render(groups=[g for g in groups if g[1]], count=len(pages)))
+          env.get_template("wiki_index.html").render(share_page={"path": "wiki/"}, groups=[g for g in groups if g[1]], count=len(pages)))
     for page in pages:
         write(out_dir / "wiki" / page.slug / "index.html",
               env.get_template("wiki_page.html").render(
-                  page=page, body=rebase(page.cited_html, base),
+                  page=page, share_page=shares[page.path], body=rebase(page.cited_html, base),
                   place=places.get(parent.get(page.slug, "")) if places else None))
-    write(out_dir / "search" / "index.html", env.get_template("search.html").render())
+    write(out_dir / "search" / "index.html", env.get_template("search.html").render(share_page={"path": "search/"}))
     if places:
         write(out_dir / "map" / "barovia.svg",
               barovia_map.draw_base(sprites))
@@ -453,7 +488,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
                        for p in places.values()},
         }
         write(out_dir / "map" / "index.html",
-              env.get_template("map.html").render(places=list(places.values()), legs=legs, map_data=map_data))
+              env.get_template("map.html").render(share_page={"path": "map/"}, places=list(places.values()), legs=legs, map_data=map_data))
     write(out_dir / "search-index.json", build_search_index(posts, pages))
     write(out_dir / "bot" / "corpus.json", build_bot_corpus(posts, pages, site_url + base))
     write(out_dir / "404.html", env.get_template("404.html").render())

@@ -185,5 +185,16 @@ page's path, title and referring site to <https://owlbear.goatcounter.com>. Loca
 serve` and pull-request checks leave `GOATCOUNTER` unset, so they never count. To use a different
 GoatCounter site, change that line; to stop counting, delete it.
 
+Session posts also report whether they were read, as GoatCounter events (they show on the dashboard
+next to the page views):
+
+- `/read/posts/<post>/started`: the post was open, with the tab in front, for 30 seconds.
+- `/read/posts/<post>/halfway`: the reader scrolled past the middle of the post.
+- `/read/posts/<post>/finished`: the reader reached the end after spending at least half the post's
+  "min read" time on it, so a quick scroll to the bottom doesn't count.
+
+Each is sent at most once per visit. Compare `finished` with the post's views to see how many visitors
+read it all.
+
 `netlify.toml` and the `_redirects` file the build writes are kept so the site can move to Netlify
 later without changes; nothing uses them on GitHub Pages.

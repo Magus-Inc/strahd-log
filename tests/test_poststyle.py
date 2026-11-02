@@ -216,7 +216,7 @@ def test_every_post_follows_the_template(site):
     problems = []
     for slug, _ in posts:
         page = (out / "posts" / slug / "index.html").read_text(encoding="utf-8")
-        body = page.split('<div class="prose">', 1)[1].split("</article>", 1)[0]
+        body = re.split(r'<div class="prose"[^>]*>', page, maxsplit=1)[1].split("</article>", 1)[0]
         body = body.split('<section class="where-we-were">', 1)[0]
         body = re.sub(r"<blockquote>.*?</blockquote>", "", body, flags=re.S)  # quoted letters keep their bold
         problems += [f"{slug}: {name}: {m.group(0)[:60]}" for name, rx in checks.items()

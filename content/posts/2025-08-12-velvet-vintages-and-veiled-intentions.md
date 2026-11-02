@@ -1,6 +1,7 @@
 ---
 title: Velvet, Vintages, and Veiled Intentions
 date: '2025-08-12T21:00:00-05:00'
+tagline: Never spill red wine on a vampire's white dress
 slug: velvet-vintages-and-veiled-intentions
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/velvet-vintages-and-veiled-intentions
 ---

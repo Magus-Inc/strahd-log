@@ -1,6 +1,7 @@
 ---
 title: Blood and Oaths Under Moonligh
 date: '2025-05-13T21:00:00-05:00'
+tagline: He doesn't force pain. He makes you choose it.
 slug: blood-and-oaths-under-moonligh
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/blood-and-oaths-under-moonligh
 ---
