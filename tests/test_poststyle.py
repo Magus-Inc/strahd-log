@@ -34,7 +34,7 @@ def test_blog_uses_the_picks():
     """Chris's picks for this blog (2026-11-01 post style page)."""
     style = poststyle.load_style(ROOT / "data" / "post-style.yaml")
     assert style == {"cast": "pills", "headings": "real", "entries": "bullets", "links": "gold",
-                     "bold": "plain", "glance": "new-posts", "tagline": "keep", "picture": "scene"}
+                     "bold": "plain", "glance": "none", "tagline": "keep", "picture": "scene"}
 
 
 # --- cast -----------------------------------------------------------------------------------
@@ -180,7 +180,7 @@ def site(tmp_path_factory):
 def test_every_post_follows_the_template(site):
     out, posts = site
     checks = {"Characters section": r"<h[23][^>]*>Characters", "heading colon": r":\s*</h[23]>",
-              "bold-line heading": r"<p><strong>[^<]{1,60}</strong><br", "red wiki link": r'<a href="/wiki/', "dash list": r"<p>- ",
+              "bold-line heading": r"<p><strong>[^<]{1,60}</strong><br", "red wiki link": r'<a href="/wiki/', "dash list": r"<p>- ", "glance box": r'class="callout glance"',
               "heading as a bullet": r"<li><strong>[^<]*:</strong></li>"}
     problems = []
     for slug, _ in posts:

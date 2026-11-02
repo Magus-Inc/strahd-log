@@ -5,6 +5,6 @@ headings: real       # bold first lines become headings; no colon after "Summary
 entries: bullets     # Key Locations, Encounters, Loot, NPCs...: one bullet per entry, name in bold
 links: gold          # hand-made wiki links look like the automatic gold ones
 bold: plain          # no bold names mid-sentence in the story (recap lists keep theirs)
-glance: new-posts    # keep the At a Glance box where written; new posts get one
+glance: none         # no At a Glance box; the story starts after the pills
 tagline: keep        # keep the line under the title where written
 picture: scene       # the feature picture stays beside the scene it shows

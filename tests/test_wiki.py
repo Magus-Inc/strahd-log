@@ -385,6 +385,23 @@ def test_notable_npcs_written_as_a_bold_line_link_too():
     assert "<strong>Urwin:</strong> Pours again." in html
 
 
+def test_entry_names_in_every_reference_list_link():
+    """Chris (2026-11-02): one linking rule. The first mention in the story links, and so does the bold
+    name of every entry in Key Locations, Encounters, Loot and Notable NPCs, where readers look things up."""
+    linker = wiki.Linker([page("fiona", "Lady Fiona Wachter", ["Lady Fiona"]), page("estate", "Wachter Estate"),
+                          page("mirror", "Mirror of Victor")])
+    html = build.render_markdown(
+        "## Summary:\n\nLady Fiona helps at the Wachter Estate with the Mirror of Victor.\n\n"
+        "## Key Locations:\n\n* **Wachter Estate**: A manor.\n\n## Encounters:\n\n* **Lady Fiona**: We talked.\n\n"
+        "## Loot:\n\n* **Mirror of Victor**: A mirror.\n\n## Plot Points:\n\n* **Lady Fiona** is kind.\n")
+    html, _ = linker.link(html)
+    html = wiki.link_npc_names(html, linker)
+    for section, slug in (("Key Locations", "estate"), ("Encounters", "fiona"), ("Loot", "mirror")):
+        part = html[html.index(section):]
+        assert f'<strong><a class="wiki-link" href="/wiki/{slug}/"' in part.split("<h2")[0], section
+    assert "<strong>Lady Fiona</strong> is kind." in html  # Plot Points are sentences, not entries
+
+
 def test_pages_in_five_or_more_sessions_have_a_picture():
     """Chris (2026-10-31): anyone or anything in 5+ sessions gets a picture on its wiki page."""
     posts = build.load_posts(build.ROOT / "content" / "posts")

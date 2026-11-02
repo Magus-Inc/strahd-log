@@ -185,15 +185,18 @@ class Linker:
         return f'<a class="wiki-link" href="/wiki/{page.slug}/" title="{title}">{match.group(0)}</a>'
 
 
-# The section starts at a "Notable NPCs" heading, or in older posts at a bold "Notable NPCs:" line, and
-# runs to the next heading or bold "Something:" line that starts a paragraph.
-NPC_SECTION = re.compile(r"(<h([23])[^>]*>[^<]*Notable NPCs[^<]*</h\2>|<p><strong>Notable NPCs:?</strong>)"
+# Reference lists whose entries start with a bold name: Key Locations, Encounters, Loot, Notable NPCs.
+# A section starts at its heading, or in older posts at a bold "Notable NPCs:" line, and runs to the next
+# heading or bold "Something:" line that starts a paragraph.
+ENTRY_SECTIONS = r"(?:Key Locations|Encounters|Loot|Notable NPCs)"
+NPC_SECTION = re.compile(rf"(<h([23])[^>]*>[^<]*{ENTRY_SECTIONS}[^<]*</h\2>|<p><strong>{ENTRY_SECTIONS}:?</strong>)"
                          r"(.*?)(?=<h[23][ >]|<p><strong>[^<]*:</strong>|$)", re.S | re.I)
 
 
 def link_npc_names(html: str, linker: Linker) -> str:
-    """In a post's Notable NPCs section, link every bold name to its wiki page, even when the post
-    already linked an earlier mention: the section is where readers look someone up."""
+    """In a post's reference lists (Key Locations, Encounters, Loot, Notable NPCs), link every bold
+    entry name to its wiki page, even when the story already linked an earlier mention: the lists are
+    where readers look someone up. Everywhere else only the first mention links."""
     if linker.pattern is None:
         return html
 
