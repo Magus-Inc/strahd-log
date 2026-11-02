@@ -112,3 +112,23 @@ def test_the_viewer_swaps_in_the_full_size_file_only_when_opened():
     script = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
     zoom = script[script.index("<script data-zoom>"):]
     assert "dataset.full" in zoom[:zoom.index("</script>")]
+
+
+# The 7 player portraits from Chris's Gemini app chats; only 765x1024 copies exist so far. This list
+# only shrinks: drop a name when its bigger file arrives.
+NO_FULL_SIZE_YET = {"aera-ai-portrait.jpg", "crusty-ai-portrait.jpg", "gumbo-ai-portrait.jpg", "liren-ai-portrait.jpg",
+                    "malron-ai-portrait.jpg", "olfin-ai-portrait.jpg", "shabasta-ai-portrait.jpg"}
+
+
+def test_every_ai_picture_on_the_site_keeps_its_full_size_original():
+    """Chris's rule, 2026-11-02: every picture we generate and host keeps its full-size original
+    in static/images/full/, beside the smaller copy the pages show."""
+    pictures = {f.name for f in (ROOT / "static" / "images").glob("*-ai*.*")}
+    missing = {name for name in pictures if not (FULL / name).is_file()}
+    assert missing <= NO_FULL_SIZE_YET, sorted(missing - NO_FULL_SIZE_YET)
+    assert NO_FULL_SIZE_YET <= pictures - {f.name for f in FULL.glob("*")}, "drop names that now have a full file"
+
+
+def test_agents_md_states_the_full_size_rule():
+    text = " ".join((ROOT / "AGENTS.md").read_text(encoding="utf-8").split())
+    assert "static/images/full/" in text and "full-size original" in text
