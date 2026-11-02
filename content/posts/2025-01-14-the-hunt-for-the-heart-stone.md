@@ -20,7 +20,7 @@ Victor taught us the ways to take a heart stone from a hag, and we laid a plan t
 
 On the way we met a druid of the Forest Folk, hermits of the Svalich Woods who shun the towns. They hold Yester Hill, at the southwest edge of the valley, sacred, and they worship Strahd as a god for his power over the land and weather.
 
-![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone has slipped from a tear in her robe onto the mud](/images/heart-stone-ai.jpg)
+![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone, an egg-sized polished oval, has slipped from her robe onto the mud](/images/heart-stone-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026). Not official art.*
 
