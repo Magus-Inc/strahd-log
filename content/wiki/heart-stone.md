@@ -7,9 +7,13 @@ source: Compiled from the adventure log
 
 ## Description
 
-![A hag's heart stone, dark and glowing, held up in the doorway of a windmill](/images/heart-stone-ai.jpg)
+![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone has slipped from a tear in her robe onto the mud](/images/heart-stone-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
+![Victor raises the glowing heart stone over the pentagram in the Wachter cellar as the walls fade into ethereal mist](/images/wachter-cellar-crossing-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
 <!-- from-the-log -->
 ## From the adventure log
