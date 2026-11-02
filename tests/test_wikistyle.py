@@ -173,11 +173,9 @@ def test_blog_uses_the_picks():
         "extras": "after-story", "log": "folded", "kinds": "all"}
 
 
-@pytest.fixture(scope="module")
-def site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("wiki-site") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
+@pytest.fixture
+def site(real_build):
+    return real_build.out
 
 
 def page(site, slug):
