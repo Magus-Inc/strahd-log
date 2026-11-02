@@ -20,6 +20,8 @@ both cite the posts they come from.
    - Extend it: add a sentence or a paragraph at the right point in the story (in time order; a
      `###` subsection when a place gets a new visit), ending with a link to the post,
      `([Post title](/posts/<slug>/))`. Don't restate what is already there.
+   - A page for someone or somewhere new opens with how we met them and what they looked like,
+     from the DM's description (see "New people and places" below).
    - If the page has no description yet and the post makes the subject matter (a recurring NPC, a
      place the party spent a session in, an item that changed a fight), write one from every post
      that mentions it, not just the new one.
@@ -33,15 +35,31 @@ both cite the posts they come from.
      under "grow"), add one paragraph in Malron's words under a `## Since then` heading below the
      notes, on how they have changed, and set `grown_through: <post stem>` in the front matter
      (Chris, 2026-10-29: "evolving description would be a nicer way to ... show character growth").
+   - **Who gets a page** (Chris, 2026-11-02): a new name does when the post lists it in Notable
+     NPCs or Key Locations, the DM spent a while describing it (dnd-scribe's `wiki-plan` counts the
+     DM's words and prints "new page" with the reason), it comes back in a second post, or we
+     talked with, fought or went to it. Names said once in passing, unnamed guards and table jokes
+     don't.
    - A new page needs `title`, `type` (character, npc, creature, place, item, faction, deity,
      other), `summary` (one line) and `aliases` for other spellings the posts use. An alias must not
      be an ordinary word, because aliases link automatically everywhere.
 
 ## The rules for what goes in
 
-- **Only what the posts say.** The DM changes the module, so events, outcomes and who did what come
-  only from the posts (and from Chris). The book is good for spellings only; use the wiki's own page
-  titles. Summarize, never quote, published book text.
+- **Only what the table saw.** The DM changes the module, so events, outcomes and who did what come
+  only from the posts, the session transcript and Chris. The book is good for spellings only; use
+  the wiki's own page titles. Summarize, never quote, published book text.
+- **New people and places carry their details here, not in the post** (Chris, 2026-11-02: "a
+  great time to try and capture detailed descriptions as they're introduced"). When a session
+  brings someone or somewhere new, the post gives a sentence or two; the page gets the rest from
+  the DM's description in the transcript: looks, clothes, voice, manner, the setting they were met
+  in. dnd-scribe's `just wiki-plan <post> --session <session>` prints that passage under
+  "introduced". Retell it in Malron's words with a link to the post; never copy the read-out, since
+  the DM often reads the book's box text, and never paste transcript lines into the site (the
+  transcripts stay private). A passage marked "check the speaker" had no DM line naming them: read
+  around it, ask Chris if it matters, and leave a detail out rather than guess. The same details
+  go into the page's picture prompt, which is reviewed against the posts and wiki before it goes to
+  Gemini; `just picture` in dnd-scribe picks the model from the picture's kind.
 - **Malron's voice.** First person ("we", "I"), past tense, in-world, as in the posts. No dice, DCs,
   levels, spell or feature names, rules talk, DM name or player names. Real player names appear
   only on each PC's own wiki page.
