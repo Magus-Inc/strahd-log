@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_map.html" import barovia %}
+{% import "_badges.html" as badges with context %}
 {% set section = "chronicle" %}
 {% block title %}{{ post.title }} | {{ site_title }}{% endblock %}
 {% block description %}{{ post.tagline or post.teaser or post.title }}{% endblock %}
@@ -16,6 +17,13 @@
         <ul class="pills" aria-label="Characters in this session">
 {% for c in post.cast %}
           <li><a class="pill" href="{{ base }}{{ c.path }}">{{ c.title }}</a></li>
+{% endfor %}
+        </ul>
+{% endif %}
+{% if post.party %}
+        <ul class="party-notes">
+{% for kind, pages, words in post.life_lines %}
+          <li class="{{ kind }}-note">{{ badges.life_icon(kind) }}<span>{% for page in pages %}{% if not loop.first %}{{ " and " if loop.last else ", " }}{% endif %}<a href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% endfor %} {{ words }}</span></li>
 {% endfor %}
         </ul>
 {% endif %}

@@ -1,0 +1,47 @@
+# Sessions where a player character died or was brought back, and sessions where the party changed.
+# Keys are post slugs; names are the characters' wiki page slugs. Keys:
+#   died      the post gets a red skull with the name
+#   revived   a green sunrise: brought back (the same session as the death, or a later one)
+#   joined, returned   the party tag ("Veyren joins", "Shabasta returns")
+#   left      the leaves tag, on the character's last post when no post says they left
+# Chris confirmed the list on a pick page on 2 November 2026.
+leaving-village-barovia:
+  joined: [grom-shield-breaker]
+tser-pool:
+  left: [grom-shield-breaker]
+skeletal-rider:
+  left: [weeble-wobleston]
+a-doll-for-arabelle:
+  joined: [shabasta]  # Grant joined the Discord on 8 Aug 2024 (Chris)
+whispers-in-the-barons-mansion:
+  left: [schlopkht]
+finding-arabelle:
+  joined: [gumbo, liren]
+delivery-for-lady-fiona:
+  joined: [oogway]
+entering-the-spirit-realm:
+  died: [shabasta]
+act-3-the-broken-land:
+  joined: [veyren]
+the-whispering-wall:
+  died: [veyren]
+  joined: [zorpheus]
+the-oath-the-spy-and-the-silver-moon:
+  left: [liren]
+velvet-vintages-and-veiled-intentions:
+  left: [oogway]
+the-boon-the-bride-and-the-beating-heart:
+  left: [gumbo]
+welcome-back-to-vellanki:
+  joined: [crusty]
+  returned: [shabasta]
+  left: [zorpheus]  # Chris: over the holidays Ryan let Grant swap back to Shabasta; no record of a death
+the-slipper-and-the-shadow-of-the-bat:
+  died: [olfin-darning]
+  revived: [olfin-darning]
+the-fallen-star-ape-sacrifice-and-redemption:
+  died: [olfin-darning]
+  revived: [olfin-darning]
+the-red-door-a-reunion-beneath-the-abbey:
+  returned: [gumbo, liren]
+  left: [gumbo, liren]

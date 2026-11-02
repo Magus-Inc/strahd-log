@@ -30,7 +30,7 @@ Note: Meta details: the players talked about using physical NFC cards, repurpose
 
 Note: Meta details: rules questions came up about Misty Step as a bonus action under the 2024 and 2014 rules, and about keeping a grapple while being dragged into an elevator shaft.
 
-**The Hall of Bones.** With the spawn destroyed, we went into K-67, the Hall of Bones, where human remains serve as both ornament and furniture. Over the eastern doors hung the skull of Argynvost. Aera took the spoon from the hand of a bone chair, and Krusty shrank the skull, which weighs some two hundred and fifty pounds. Four conjured hands together lowered it into our Chest of Holding. Taking it sprang a trap that sealed the room, and the mounds of bones in the corners began to knit themselves into skeletal sentries.
+**The Hall of Bones.** With the spawn destroyed, we went into K-67, the Hall of Bones, where human remains serve as both ornament and furniture. Over the eastern doors hung the skull of Argynvost. Aera took the spoon from the hand of a bone chair, and Crusty shrank the skull, which weighs some two hundred and fifty pounds. Four conjured hands together lowered it into our Chest of Holding. Taking it sprang a trap that sealed the room, and the mounds of bones in the corners began to knit themselves into skeletal sentries.
 
 ![Argynvost's silver skull over the doors of the Hall of Bones](/images/argynvosts-skull-ai.jpg)
 
