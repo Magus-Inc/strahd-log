@@ -70,3 +70,11 @@ def test_story_cites_a_post(stem):
 @pytest.mark.parametrize("stem", ["bracelet-of-warding", "amulet-of-knights-passage"])
 def test_rules_from_the_item_card_are_dated(stem):
     assert "*From the item card shared at the table (3 June 2025). In short:*" in _ours(stem)
+
+
+def test_heart_stone_post_has_ryans_second_paragraph():
+    # Chris 2026-11-02 picked "add it to the post": the 1/14/2025 post had only the first half
+    post = WIKI.parent / "posts" / "2025-01-14-the-hunt-for-the-heart-stone.md"
+    text = post.read_text(encoding="utf-8")
+    for words in ["banished from Berez", "Lady Lovina Wachter", "House Wachter has been loyal"]:
+        assert words in text
