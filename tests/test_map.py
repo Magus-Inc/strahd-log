@@ -824,3 +824,23 @@ def _seg_distance(p, a, b):
     bx, by = b
     t = max(0.0, min(1.0, ((p[0] - ax) * (bx - ax) + (p[1] - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2)))
     return math.dist(p, (ax + t * (bx - ax), ay + t * (by - ay)))
+
+
+def test_vallaki_vistani_camp_has_a_picture_and_its_label_beside_it():
+    # Chris: "Vistani camp has no sprite and the label is very far south." The camp reuses the
+    # wagon-ring drawing from the Tser Pool camp, and its label sits right next to the picture.
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    sprites = barovia_map.load_sprites(ROOT / "data" / "map.yaml", ROOT / "static" / "images" / "map" / "sprites")
+    camp_sprite = [s for s in sprites if s.place == "vallaki-vistani-camp"]
+    assert len(camp_sprite) == 1 and camp_sprite[0].image == "tser-pool"
+    camp = data["places"]["vallaki-vistani-camp"]
+    sprite = camp_sprite[0]
+    assert math.dist((sprite.x, sprite.y), camp["xy"]) < 8
+    place = barovia_map.Place("vallaki-vistani-camp", "Vistani Camp", *camp["xy"], [],
+                              camp.get("anchor", "middle"),
+                              label_at=tuple(camp["label_at"]) if camp.get("label_at") else None)
+    lx, ly = place.label_xy
+    # beside the picture: just past its edge, not a long way south of it
+    assert abs(ly - sprite.y) <= sprite.height / 2 + 12
+    assert abs(lx - sprite.x) <= sprite.width / 2 + 45   # the label is centred, about 70 wide
