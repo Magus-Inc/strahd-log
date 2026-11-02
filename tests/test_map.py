@@ -779,7 +779,7 @@ def test_east_roads_bend_like_the_official_map():
 def test_roads_west_of_vallaki_bend_like_the_official_map():
     # Region 2 of the retrace (Chris, 2026-11-02): around the Luna River crossroads.
     graph = barovia_map.road_graph()
-    luna, fork, raven, argyn, baratok = (350, 278), (263, 307), (220, 262), (330, 375), (242, 225)
+    luna, fork, raven, argyn, baratok = (350, 278), (263, 307), (220, 262), (316, 384), (242, 225)
     # From the Luna crossroads the Old Svalich Road sags south through the woods to the fork.
     sag = barovia_map.route(graph, luna, fork)
     assert max(y for _, y in sag) > 315
@@ -789,3 +789,24 @@ def test_roads_west_of_vallaki_bend_like_the_official_map():
     # The Lake Baratok trail heads north from the crossroads, then arcs west along the lake.
     arc = barovia_map.route(graph, luna, baratok)
     assert min(y for _, y in arc) < 223 and any(x > 335 and y < 255 for x, y in arc)
+
+
+def test_argynvostholt_stands_clear_of_the_berez_trail():
+    # Chris, 2026-11-02: Argynvostholt sat too close to the trail down to Berez. On the official map
+    # the trail runs well east of the mansion, between it and the Luna.
+    import yaml
+    data = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))
+    mansion = data["places"]["argynvostholt"]["xy"]
+    sprite = data["sprites"]["argynvostholt"]
+    trail = barovia_map.TRACKS["Berez trail"]
+    gap = min(_seg_distance(mansion, a, b) for a, b in zip(trail, trail[1:]))
+    assert gap >= 28
+    edge = sprite["xy"][0] + sprite["width"] / 2
+    assert min(x for x, y in trail if abs(y - sprite["xy"][1]) < 30) - edge >= 8
+
+
+def _seg_distance(p, a, b):
+    ax, ay = a
+    bx, by = b
+    t = max(0.0, min(1.0, ((p[0] - ax) * (bx - ax) + (p[1] - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2)))
+    return math.dist(p, (ax + t * (bx - ax), ay + t * (by - ay)))
