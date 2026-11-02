@@ -1,9 +1,6 @@
 ---
 title: Schlopkht
 type: character
-aliases:
-- Scholpkht
-- Schloptk
 summary: Tabaxi Monk
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/schlopkht

@@ -16,7 +16,7 @@ Among the cluttered shelves of Blinsky’s shop we found a doll that looked eeri
 
 ## The Vistani Encampment
 
-At the encampment we met Shivasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
+At the encampment we met Shabasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
 
 But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Yann, who had drugged Alexi and stood accused of taking Arabelle, had met a grisly end, his severed head lying toward the Luna River.
 

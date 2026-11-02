@@ -33,7 +33,7 @@
   {
     "name": "Schlopkht",
     "type": "character",
-    "aliases": ["Scholpkht", "Schloptk"],
+    "aliases": ["Schlopkht", "Schlopkht"],
     "summary": "A sneaky party member who often scouts ahead and tries clever ruses.",
     "facts": [
       {"text": "Moved the snarling stuffed wolf and found Lady Fiona Wachter's invitation in a coat closet.", "post": "2023-11-28-entering-durst-manor"},
@@ -63,7 +63,7 @@
   {
     "name": "Malron Lichtstrahl",
     "type": "character",
-    "aliases": ["Malron", "Malon"],
+    "aliases": ["Malron", "Malron"],
     "summary": "A cleric of Lathander in the party and author of several log entries.",
     "facts": [
       {"text": "Found a book titled 'Tale of Malron' telling his own life story in Durst Manor.", "post": "2023-11-28-entering-durst-manor"},
@@ -89,7 +89,7 @@
   {
     "name": "Shabasta",
     "type": "character",
-    "aliases": ["Shivasta", "Shivasta the Great"],
+    "aliases": ["Shabasta", "Shabasta the Great"],
     "summary": "A porcupine-like bard met at the Vistani encampment who travels with the party.",
     "facts": [
       {"text": "Met at the Vistani encampment near Vallaki, telling tales and playing a lute.", "post": "2024-08-13-a-doll-for-arabelle"},

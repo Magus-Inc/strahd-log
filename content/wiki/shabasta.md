@@ -2,9 +2,7 @@
 title: Shabasta
 type: character
 aliases:
-- Shivasta
-- Shivasta the Great
-- Sibasa
+- Shabasta the Great
 - Shipnasty
 summary: A porcupine bard!
 player: Grant Haseloff
