@@ -19,6 +19,10 @@
 - One look for every post: `data/post-style.yaml` (Chris's picks) and `poststyle.py` restyle the
   rendered HTML at build time (PC pills, real headings, bulleted recap entries...), so old posts are
   never reworded to match. Change the look there, not in the posts.
+- Every story sits under one "Malron’s Account" heading, split by scene headings from
+  `data/scene-headings.yaml` (short, in Malron's voice, at natural breaks; a very short story gets
+  `[]`). A new post needs its entry there; the build fails if a heading's opening words don't
+  match exactly one paragraph. Chris checks new headings before they go live.
 - Posts read as Malron's journal: first person, in-world, no dice or rules talk, no DM or player
   names. Table talk goes only in a `Note:` paragraph, which renders as a handwritten margin note,
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.

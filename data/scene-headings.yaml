@@ -1,0 +1,284 @@
+# Scene headings for each post's story (poststyle scenes: written), drafted 2026-11-02 for Chris to check.
+# Short, in Malron's voice, at natural breaks (new place, new day, a fight, a reveal); no fixed count.
+# Each pair: the first words of the paragraph the heading goes before, then the heading.
+# A post with no natural break (a very short story) is listed with [].
+
+session-zero:
+  - ["On a dark and gloomy evening", "A Loft in Daggerford"]
+  - ["After a time a thick fog", "The Relics Pull"]
+  - ["After we could not say", "A Manor Out of the Mist"]
+entering-durst-manor:
+  - ["We spoke with the two children", "Rose and Thorn"]
+  - ["We braved Durst Manor", "Six Chimes and a Verse"]
+  - ["The entrance doors were locked", "Stuffed Wolves and Old Wine"]
+  - ["Then we went carefully up", "A Book of My Own Life"]
+  - ["The last room was a ballroom", "The Harpsichord Plays Alone"]
+deeper-into-the-manor:
+  - ["We climbed to the third floor", "The Armor Lurches"]
+  - ["Aera shan Ravanór looked into the mirror", "Klara in the Mirror"]
+  - ["A room to the north held", "The Broom Fights Back"]
+  - ["The last room was the master bedroom", "An Amber Glow"]
+finishing-the-manor:
+  - ["Aera put the amber shard", "A Letter from Strahd"]
+  - ["The attic has a hallway", "The Locked Attic"]
+  - ["Another bedroom held nothing", "Rose and Thorn’s Secret"]
+  - ["We went down the staircase", "Down Into the Chanting"]
+  - ["When we disturbed the bones", "The Great Worm"]
+walter-we-are-coming-for-you:
+  - ["After that last hard fight", "Catching Our Breath"]
+  - ["Further on we found a room with a statue", "The Eye That Speaks"]
+  - ["There was one door out", "A Door With Teeth"]
+  - ["In the next rooms Weeble", "The Boneless"]
+  - ["Schlopkht and Aera crept down", "“He Is the Land”"]
+  - ["In the middle of the room stood an altar", "The Altar and the Mound"]
+  - ["The apparition of Elisabeth Durst", "The House Comes Down"]
+barovia-barovia:
+  - ["We spent the night in a nearby tower", "Burying Rose and Thorn"]
+  - ["The road leading from the tower", "Driven by the Fog"]
+  - ["Schlopkht caught the foul scent", "“Seer Spoke True”"]
+  - ["We kept along the road, still driven", "A Village Under the Castle"]
+  - ["We ended up at the", "Blood on the Vine"]
+  - ["We walked to the mayors mansion", "Ireena Behind Three Locks"]
+  - ["Aera shan Ravanór found a guide", "How to Kill a Vampire"]
+rest-for-the-wicked:
+  - ["Overnight I had a dream", "Madam Eva’s Warning"]
+  - ["In the morning we took Ismark", "Father Donavich’s Grief"]
+  - ["We used the key Father Donavich", "Beneath the Church"]
+leaving-village-barovia:
+  - ["Grom Shield-Breaker", "Burial Rites"]
+  - ["Ismark asked us to escort", "Escort to Krezk"]
+  - ["We took Doru’s body to a stream", "Doru Dissolves"]
+  - ["Olfin noticed Ireena heading", "Ireena’s Keepsake Box"]
+  - ["Meanwhile the rest of the party", "Prices Five Times Over"]
+  - ["At noon we gathered", "On the Road to Tser Pool"]
+we-meet-again-for-the-first-time:
+  - ["We found a locked wooden chest", "Van Richten’s Chest"]
+  - ["We continued walking along the river", "Strahd Stops His Carriage"]
+  - ["We continued on our journey and after", "A Bird in Distress"]
+  - ["Next thing we knew", "The Strix and the Dire Wolf"]
+  - ["We continued along the wagon path", "Tents by the Lake"]
+tser-pool:
+  - ["A man who introduced himself", "Madam Eva Reads Our Fortune"]
+  - ["Just outside the tent", "Eliza and Arturi"]
+  - ["Around the fire we told tales", "Truths and Lies by the Fire"]
+  - ["Olfin read the manuscript", "The Werewolf’s Curse"]
+  - ["Arturi bade us farewell", "Arturi Up a Tree"]
+  - ["In the morning Madam Eva", "Ten Gold for a Toy"]
+skeletal-rider:
+  - ["We saw a skeletal rider", "The Rider Without Light"]
+  - ["This went on for over half", "Back to the Main Road"]
+  - ["It turned out to be five men", "A Toll We Didn’t Pay"]
+dream-pies:
+  - ["We continued north", "Graves at the Watch Tower"]
+  - ["A revenant guarded the bridge", "Sir Godfrey at the Bridge"]
+  - ["The road split", "The Seeker’s Stone"]
+  - ["At the windmill we met Morgantha", "Morgantha’s Dream Pies"]
+  - ["Ravens began to follow", "Hundreds of Ravens"]
+  - ["Eight wolves attacked us", "A Pie for the Wolf"]
+welcome-to-vellaki-:
+  - ["The road ended at iron gates", "Wolves’ Heads on the Gate"]
+  - ["Ireena was enraged", "Refugees Outside the Walls"]
+  - ["Heavy iron chains", "Teeth and Garlic"]
+  - ["The streets were empty", "Rictavio at the Inn"]
+  - ["A procession silenced", "The Baron’s Procession"]
+a-doll-for-arabelle:
+  - ["A row of stocks", "Donkey Heads in the Stocks"]
+  - ["Among the cluttered shelves", "A Doll Like Ireena"]
+  - ["At the encampment we met", "Arabelle Is Missing"]
+  - ["Kasimir told us the dusk elves", "Kasimir’s Story"]
+  - ["The footprints told", "What the Footprints Told"]
+  - ["To learn the ring’s secret", "An Appointment with the Baron"]
+whispers-in-the-barons-mansion:
+  - ["The den welcomed us", "A Spirit in the Mansion"]
+  - ["In the kitchen a distorted", "Shadows in the Kitchen"]
+  - ["I found a book of the births", "Ireena Strazni, Long Dead"]
+  - ["Victor turned out to be", "Victor, Unseen"]
+  - ["“All is not well”", "“All Is Not Well”"]
+looking-for-zoldars-tower:
+  - ["We set out to find Szoldar", "Seeking Szoldar"]
+  - ["In the shack we met", "A Pelt of Glamour Weave"]
+  - ["By a river we found", "Initials by the River"]
+  - ["At a crossroads stood", "Scarecrows and Twig Blights"]
+  - ["Our path led to a tower", "“Trespassers Will Be Incinerated”"]
+  - ["The tower door had no handles", "Khazan’s Red Seal"]
+the-staff-is-a-lie:
+  - ["Aera opened the wagon", "The Wagon Bites Back"]
+  - ["The wagon held a treasure trove", "A Hunter’s Treasure Trove"]
+  - ["We rested a while", "Climbing Khazan’s Tower"]
+  - ["The journal tells", "Van Richten’s Journal"]
+  - ["On our way back north", "Trappers Turn to Wolves"]
+finding-arabelle:
+  - ["After the battle we checked", "Gumbo’s Festering Bite"]
+  - ["Szoldar went back", "Reunions at the Inn"]
+  - ["When Rictavio came into", "Rictavio van Richten"]
+  - ["Rictavio has enchanted", "Arabelle Found"]
+  - ["Aera asked Arabelle", "Arabelle’s Prophecy"]
+  - ["We spent the night at the Blue Water", "Ireena at St. Andral’s"]
+  - ["The protection comes from bones", "The Bones Are Gone"]
+the-quest-for-the-missing-bones:
+  - ["Father Lucian helped us find", "Milivoj Confesses"]
+  - ["On the way to Henrik’s", "Henrik’s Wardrobe"]
+consequences-in-vallaki:
+  - ["We gave the bones", "Trouble at the Inn"]
+  - ["At Blinsky’s we found", "Blinsky’s Shop Burns"]
+  - ["Then we went to Wachterhaus", "Dinner at Wachterhaus"]
+shadows-over-vallaki:
+  - ["At Wachterhaus a young woman", "Lady Fiona’s Table"]
+  - ["We went back to the inn to rest", "Strahd at the Window"]
+  - ["In the morning Fiona’s agent", "Poisoned Wine for Izek"]
+the-fall-of-izek:
+  - ["Our rogues trailed Izek", "Trailing Izek"]
+  - ["A long and epic fight", "Izek Falls"]
+delivery-for-lady-fiona:
+  - ["I used the Talisman", "Izek’s Head Speaks"]
+  - ["Outside Wachterhaus", "A Head for Lady Fiona"]
+  - ["At the inn, words appeared", "“Help Victor”"]
+helping-victor:
+  - ["Rahadin sentenced Milivoj", "Rahadin’s Verdict"]
+  - ["Lady Fiona now holds", "Stella in the Mirror"]
+  - ["From van Richten’s writings on night hags", "Notes on Night Hags"]
+  - ["We went to the refugee camp", "Franz Sold His Children"]
+the-hunt-for-the-heart-stone:
+  - ["Victor taught us", "How to Take a Heart Stone"]
+  - ["On the way we met a druid", "The Forest Folk"]
+the-windmill-heist: []
+entering-the-spirit-realm:
+  - ["Lady Fiona had to drop", "Into the Ethereal"]
+  - ["Victor began drawing", "Ten Minutes to Hold"]
+  - ["A great fight followed", "Shabasta Falls"]
+act-3-the-broken-land:
+  - ["We woke at the Blue Water", "Urwin’s Worry"]
+  - ["Before we left, Ireena", "Ireena Joins Us"]
+  - ["Nine strong now", "The Road Southwest"]
+  - ["A dark-cloaked figure", "Down the Trapdoor"]
+wizard-of-wines-vineyard:
+  - ["It was evening when we", "Davian’s Hiding Place"]
+  - ["Muriel stayed behind", "Wolf Teeth and Brown Mold"]
+  - ["Veyren became a mouse", "A Mouse Among Druids"]
+finishing-up-at-the-vineyard:
+  - ["The druids worship Lorgoth", "The Druids’ Lost Stone"]
+  - ["Then the forest folk attacked", "Keepers of the Feather"]
+  - ["The winery depends on three", "Three Green Gems"]
+  - ["After a long rest we were woken", "Kavan the Blood Drinker"]
+  - ["Sverog offered Kavan", "Strahd Rides Up"]
+stop-winter-splinter:
+  - ["As we went through the forest", "Strahd in Splendid Armor"]
+  - ["At Yester Hill lightning", "The Ritual on Yester Hill"]
+  - ["Ludmilla made no secret", "Ludmilla’s Warning"]
+the-whispering-wall:
+  - ["We destroyed Winter Splinter", "Winter Splinter Falls"]
+  - ["We went to the Whispering Wall", "“The Way Back Comes but Once”"]
+  - ["Strahd gave us gemstones", "Strahd’s Gifts"]
+  - ["On the way back to the winery", "Minofaustus’s Market"]
+welcome-to-krezk: []
+shadows-over-st-markovia: []
+echoes-of-the-black-terro:
+  - ["As we made ready", "Ezmerelda’s Smokeless Fire"]
+  - ["Aera tried to slip in", "The Werewolf Den"]
+blood-and-oaths-under-moonligh:
+  - ["In the cave we found", "The Shrine of Mother Night"]
+  - ["We escaped the cave", "Strahd’s Hourglass of Blood"]
+  - ["When Strahd’s game was done", "Sir Godfrey’s Tale"]
+echoes-of-the-silver-dragon:
+  - ["We went on exploring", "Ghosts of the Order"]
+  - ["On the second floor a chill", "Minodora’s Plea"]
+  - ["A journal page held", "Argynvost’s Last Stand"]
+  - ["Behind a painting Aera", "Andral’s Letter"]
+the-oath-the-spy-and-the-silver-moon:
+  - ["We crept up to the fourth", "The Gargoyle Wakes"]
+  - ["At the Blue Water Inn, Aera", "Arrigal’s Note"]
+  - ["On the road east we met", "Three Questions for Sergei"]
+  - ["We found a massive oak", "K & V"]
+  - ["Fog rolled in as we neared", "Strahd’s Black Carriage"]
+  - ["A magical chest", "The Animal Riddle"]
+velvet-vintages-and-veiled-intentions:
+  - ["We came to Castle Ravenloft", "Guests of Castle Ravenloft"]
+  - ["A masked servant came in", "Red Wine on a White Dress"]
+the-boon-the-bride-and-the-beating-heart:
+  - ["Our uneasy stay", "“The Cows Have Teeth”"]
+  - ["Strahd began a grand tour", "The Grand Tour"]
+  - ["Meanwhile, Sasha drew Zorpheus", "Sasha’s Plea"]
+  - ["Later, Escher brought Zorpheus", "The Prisoner’s Judgment"]
+  - ["Suddenly lightning struck", "Locked in the Guest Tower"]
+varushkas-key:
+  - ["Our night in the guest tower", "A Night That Loops"]
+  - ["Zorpheus came in through", "Pidlwick Under the Bed"]
+  - ["On the bed above lay", "Varushka’s Story"]
+  - ["Through the trap door once more", "Down to the Servants’ Quarters"]
+  - ["Aera slipped into Rahadin", "Stealing the Key"]
+  - ["A spectral woman floated", "“No One Leaves”"]
+  - ["Aera climbed higher still", "The Heart of Sorrow"]
+welcome-back-to-vellanki:
+  - ["We began by going back", "Shown Out of Ravenloft"]
+  - ["On the road back to Vallaki", "A Plan at the Blue Water"]
+unwelcome-guests:
+  - ["As the sun sank", "Toward the Count’s Heights"]
+  - ["We still had twelve hours", "Stanimir’s Caravan"]
+  - ["At the edge of the precipice", "Strahd Rides Out"]
+retrieval-of-the-dragon-skull:
+  - ["We went into the servants", "Above Stairs"]
+  - ["The Secret Path.", "The Coffin Wardrobe"]
+  - ["The Tower and the Heart.", "Ladder to the Heart"]
+  - ["The Ambush.", "Cyrus and the Spawn"]
+  - ["The Hall of Bones.", "Argynvost’s Skull"]
+depths-of-ravenloft:
+  - ["We are at a turning point", "Hunting the Sunsword"]
+  - ["Our first steps in the Larders", "The Wrong Spoon"]
+  - ["The right spoon lay", "Forty Zombies and a Spoon"]
+  - ["We went on down into the Drowning", "The Drowning Cells"]
+the-fall-of-volenta-popofsky:
+  - ["We were in a flooded chamber", "Volenta on the Balcony"]
+  - ["At the height of it", "Pinned to the Wall"]
+the-master-of-runes-and-the-hellborn-s-spear:
+  - ["We began on a balcony", "The White Flame"]
+  - ["We left the brazier", "Three Doors"]
+  - ["Then Aera stepped on a hidden", "Down the Slimy Chute"]
+  - ["At last we reached the ancient", "Khazan’s Crypt"]
+  - ["Further south we found Crypt 34", "The Spear of the Huntress"]
+the-echoing-choirs-of-ravenloft:
+  - ["We pressed on through the catacombs", "Saint Markovia’s Tomb"]
+  - ["The Icon is alive", "The Icon Speaks"]
+  - ["We searched on and came to Crypt 37", "Growmor’s Scrolls"]
+  - ["The rest did not last", "A Choir of Screams"]
+  - ["The battle was brutal", "Rahadin Driven Off"]
+the-slipper-and-the-shadow-of-the-bat:
+  - ["We came out of a brutal fight", "Licking Our Wounds"]
+  - ["Following the slipper", "The King’s Bedchamber"]
+  - ["Deeper in the bedchamber", "Gertruda, Found"]
+  - ["The rescue was cut short", "Anastrasya’s Ambush"]
+  - ["For vengeance and for our lives", "Calling Olfin Back"]
+the-shard-s-warning-and-the-abbot-s-madness:
+  - ["With our business in Castle Ravenloft", "Gertruda Goes Home"]
+  - ["In Barovia, Ismark the Lesser", "A Snow-White Feather"]
+  - ["As we left Barovia a flock", "An Unkindness of Ravens"]
+  - ["In Vallaki, Baron Dmitri", "The Baron’s Plea"]
+  - ["At the gates of Krezk", "The Abbot’s Sad History"]
+the-abbot-unveiled-wings-lies-and-the-fallen-star:
+  - ["After a long rest at the Burgomaster", "Up to the Abbey"]
+  - ["We found the Abbot in the asylum", "The Abbot in the Asylum"]
+  - ["Olfin ended the talking", "Olfin Ends the Talking"]
+  - ["Ethereal seized Olfin", "The Golem Joins Us"]
+  - ["Then Aera’s aim was true", "Shot Through the Heart"]
+the-fallen-star-ape-sacrifice-and-redemption:
+  - ["The fight in the Abbey’s asylum", "The Fallen Star Rises"]
+  - ["Aera planted her feet", "Two of Us Down"]
+  - ["Then Crusty changed the fight", "“Time to Monkey Around”"]
+  - ["Then Olfin’s breath stopped", "Olfin’s Last Strength"]
+  - ["The Icon of Dawn’s Grace stirred", "Golden Flame"]
+  - ["St. Markovia appeared", "Saint Markovia Returns"]
+the-red-door-a-reunion-beneath-the-abbey:
+  - ["With the Abbot restored", "Fog from the Well"]
+  - ["A pounding began beneath", "Never Open the Red Door"]
+  - ["Six shadows came at us", "Six Shadows"]
+  - ["Beyond, a hallway ended", "Light Beyond the Gate"]
+  - ["The meadow faded back", "The Lying Door"]
+  - ["Hundreds of spirits streamed", "Goodbye to Liren and Gumbo"]
+  - ["Outside, a black carriage", "An Encore from Strahd"]
+the-beacon-of-argynvostholt:
+  - ["As we woke, a revenant", "Called Before Noon"]
+  - ["We weighed creeping in", "Drained on the Road"]
+  - ["Thick fog covered the floor", "Strings of Black Wire"]
+  - ["The skull belongs in the mausoleum", "“Some of You May Die”"]
+  - ["Silver light rose through the mist", "Your Watch Has Ended"]
+  - ["The revenants haunting Argynvostholt", "What Godfrey Knew"]
+  - ["Argynvost offered a boon", "A Silver Beacon"]

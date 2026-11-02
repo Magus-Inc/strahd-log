@@ -366,7 +366,7 @@ h1 .chip.former { font-size: 0.8rem; }
 /* The session's slide deck: a strip that swipes one slide at a time, and fills the screen on tap. */
 .deck { margin: 1.75rem 0; }
 /* With no heading over the story, a rule under the slides shows where the story starts. */
-section.deck, section.decks { padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+section.deck, section.decks { padding-bottom: 0.5rem; }
 .deck-strip { list-style: none; margin: 0; padding: 0; display: flex; overflow-x: auto; scrollbar-width: none;
   scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
 .deck-strip::-webkit-scrollbar { display: none; }

@@ -230,10 +230,10 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         page.html, _ = linker.link(article.ai_credits(article.add_image_votes(render_markdown(page.body_md))), self_slug=page.slug)
 
 
-def apply_style(posts: list[Post], style: dict) -> None:
-    """One look for every post (see poststyle.py and data/post-style.yaml)."""
+def apply_style(posts: list[Post], style: dict, scenes: dict | None = None) -> None:
+    """One look for every post (see poststyle.py, data/post-style.yaml and data/scene-headings.yaml)."""
     for post in posts:
-        styled = poststyle.apply(post.html, style)
+        styled = poststyle.apply(post.html, style, (scenes or {}).get(post.slug))
         post.html, post.characters_html = styled.html, styled.characters
         if style["tagline"] == "none":
             post.tagline = ""
@@ -477,8 +477,9 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
     pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
-    style = poststyle.load_style(style_file or content_dir.parent.parent / "data" / "post-style.yaml")
-    apply_style(posts, style)
+    data_dir = content_dir.parent.parent / "data"
+    style = poststyle.load_style(style_file or data_dir / "post-style.yaml")
+    apply_style(posts, style, poststyle.load_scenes(data_dir / "scene-headings.yaml"))
     number_sessions(posts)
     link_wiki(posts, pages)
     cite_sessions(posts, pages)
