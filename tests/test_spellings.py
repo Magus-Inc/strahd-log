@@ -98,6 +98,9 @@ def test_spellings_have_no_chains():
     ("St. Andrals Church", "St. Andral's Church"), ("Ric Tavio", "Rictavio"),
     ("Holy Symbol of Raven Kind", "Holy Symbol of Ravenkind"), ("Anna Krezkov", "Anna Krezkova"),
     ("a Vistano", "a Vistana"), ("a priest of Latander", "a priest of Lathander"),
+    # Chris's picks on the review page (2026-11-02).
+    ("spies for Vlahd", "spies for Strahd"), ("Maren has secretly arranged", "Mira has secretly arranged"),
+    ("the Spear of the Ladies", "the Spear of the Huntress"),
 ])
 def test_book_spellings(wrong, right):
     assert fix_spellings.fix_text(wrong, SPELLINGS)[0] == right

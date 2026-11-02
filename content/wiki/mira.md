@@ -1,8 +1,6 @@
 ---
 title: Mira
 type: npc
-aliases:
-- Maren
 summary: A companion with regenerative abilities who summoned Kavan.
 source: Compiled from the adventure log
 ---

@@ -208,7 +208,7 @@
   {
     "name": "Strahd von Zarovich",
     "type": "npc",
-    "aliases": ["Strahd", "Count Strahd von Zarovich", "Vlahd"],
+    "aliases": ["Strahd", "Count Strahd von Zarovich", "Strahd"],
     "summary": "The vampire lord of Barovia.",
     "facts": [
       {"text": "Wrote a scornful letter to Elisabeth Durst.", "post": "2024-01-09-finishing-the-manor"},

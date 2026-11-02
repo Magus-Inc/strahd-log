@@ -4,7 +4,6 @@ type: npc
 aliases:
 - Strahd
 - Count Strahd von Zarovich
-- Vlahd
 - Lord von Zarovich
 - Count Strahd
 summary: The vampire lord of Barovia.

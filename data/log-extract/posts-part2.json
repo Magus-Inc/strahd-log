@@ -326,12 +326,12 @@
 {"name":"Gemheart","type":"item","aliases":[],"summary":"One of the winery's green gemstones with plant-growing magic.","facts":[
 {"text":"One gem was lost ten years ago, one stolen by Baba Lysaga, one taken by the druids.","post":"2025-03-25-finishing-up-at-the-vineyard"},
 {"text":"Was recovered by defeating Winter Splinter.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"Mira","type":"npc","aliases":["Maren"],"summary":"A companion with regenerative abilities who summoned Kavan.","facts":[
+{"name":"Mira","type":"npc","aliases":["Mira"],"summary":"A companion with regenerative abilities who summoned Kavan.","facts":[
 {"text":"Secretly planned to meet Kavan, whom Davian disapproves of.","post":"2025-03-25-finishing-up-at-the-vineyard"},
 {"text":"Summoned Kavan by dripping her blood.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
 {"name":"Kavan the Blood Drinker","type":"npc","aliases":["Kavan","Kavan"],"summary":"A figure of the first folk who wields a long wooden spear.","facts":[
 {"text":"Was summoned by Mira and offered a deal for powerful items.","post":"2025-03-25-finishing-up-at-the-vineyard"},
-{"text":"Told of the split between mountain and forest folk and the Spear of the Ladies.","post":"2025-04-15-the-whispering-wall"}]},
+{"text":"Told of the split between mountain and forest folk and the Spear of the Huntress.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"Sverog","type":"npc","aliases":[],"summary":"A figure who bargained with Kavan.","facts":[
 {"text":"Offered Kavan a wand for a powerful weapon.","post":"2025-03-25-finishing-up-at-the-vineyard"}]},
 {"name":"Madam Eva","type":"npc","aliases":[],"summary":"A fortune teller who gives Strahd information.","facts":[
@@ -365,7 +365,7 @@
 {"text":"A legendary spear waits there.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"King Dostron","type":"npc","aliases":[],"summary":"An ancient king buried at the Hill of Ravenloft.","facts":[
 {"text":"Rests at the Hill of Ravenloft.","post":"2025-04-15-the-whispering-wall"}]},
-{"name":"Spear of the Ladies","type":"item","aliases":[],"summary":"A legendary spear.","facts":[
+{"name":"Spear of the Huntress","type":"item","aliases":[],"summary":"A legendary spear.","facts":[
 {"text":"Kavan says it must be retrieved.","post":"2025-04-15-the-whispering-wall"}]},
 {"name":"Zoldoph","type":"place","aliases":[],"summary":"A place the party needs to reach.","facts":[
 {"text":"Reaching it needs mountain folk help and a token of the Ladies.","post":"2025-04-15-the-whispering-wall"}]},
