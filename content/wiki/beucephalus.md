@@ -7,7 +7,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![Strahd on Beucephalus, a black nightmare with a burning mane, flying at night from the highest tower of Castle Ravenloft over the chasm, the drawbridge raised](/images/beucephalus-ai.jpg)
+![Strahd on Beucephalus, a black nightmare with a burning mane, flying at night from Castle Ravenloft over the narrow chasm, the drawbridge raised at the end of the road](/images/beucephalus-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
 
