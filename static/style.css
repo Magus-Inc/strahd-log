@@ -238,14 +238,15 @@ main.wide { max-width: 80rem; }
 .map.zoomed { cursor: grab; touch-action: none; }
 .map .pin { cursor: pointer; }
 /* A place's picture is a link too: under the mouse, keyboard focus, or while its card is open it gets a
-   solid red edge and a wide red halo (Chris: gold was lost on the parchment). No focus outline box. */
+   solid red edge and a wide red halo (Chris: gold was lost on the parchment). No focus outline box. The glow
+   is the map's own SVG filter (templates/_map.html): iPhone Safari ignores CSS drop shadows on SVG pictures. */
 .map .sprite { cursor: pointer; --glow: #c8213f; outline: none; }
 .map .sprite:hover image, .map .sprite:focus-visible image, .map .sprite.chosen image {
-  filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+  filter: url(#place-glow); }
 /* A wiki page's map marks its own place: the picture glows like a chosen one, the name turns red, and a
    place with no picture gets a red dot (Chris, 2026-11-02: Berez and Durst Manor were hard to find). */
 .map .sprite.here image {
-  filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+  filter: url(#place-glow); }
 .map .labels .here text { fill: #b3122e; font-size: 15px; }
 .map .here-dot { fill: #b3122e; stroke: #fff8ec; stroke-width: 1.5; transform: scale(var(--mark, 1)); transform-box: view-box; }
 /* No dots: the sprites mark the places. The pin is an invisible tap target with no ring (Chris). */
