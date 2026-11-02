@@ -17,6 +17,17 @@
     <button type="button" data-zoom="full" aria-label="Full screen" aria-pressed="false"><svg class="full-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="go-full" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="leave-full" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button>
   </div>
   <svg class="map" viewBox="0 0 1000 750" role="img" aria-label="{{ label }}">
+    {# The red glow on a chosen place's picture: a solid edge and a wide halo. An SVG filter, not CSS
+       drop-shadow(), which iPhone Safari ignores on SVG pictures. #}
+    <defs>
+      <filter id="place-glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+        <feMorphology in="SourceAlpha" operator="dilate" radius="1.2" result="edge"/>
+        <feFlood flood-color="#c8213f"/>
+        <feComposite in2="edge" operator="in" result="red-edge"/>
+        <feGaussianBlur in="red-edge" stdDeviation="3.5" result="halo"/>
+        <feMerge><feMergeNode in="halo"/><feMergeNode in="halo"/><feMergeNode in="red-edge"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
     <image href="{{ base }}images/map/parchment.jpg" width="1000" height="750" preserveAspectRatio="none"/>
     <image href="{{ base }}map/barovia.svg" width="1000" height="750"/>
     {# A place's picture links to the place, like its pin (the map page opens the place panel). #}
@@ -27,7 +38,7 @@
 {% if p %}
       <a class="sprite{% if interactive %} js-pin{% endif %}{% if focus and p.slug == focus.slug %} here{% endif %}" href="{{ base }}{{ p.path }}" data-place="{{ p.slug }}">
         <title>{{ p.title }}</title>
-        <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
+        <image{% if focus and p.slug == focus.slug %} filter="url(#place-glow)"{% endif %} href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}"/>
       </a>
 {% else %}
       <image href="{{ base }}images/map/sprites/{{ s.image }}.webp" x="{{ s.box[0] }}" y="{{ s.box[1] }}" width="{{ s.box[2] }}" height="{{ s.box[3] }}" aria-hidden="true"/>
