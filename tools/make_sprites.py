@@ -30,7 +30,41 @@ SHEETS = {
     "places-4.jpg": (1, 1, ["signpost"]),
 }
 BAND = 9        # how far in from the edge the fade reaches, in sheet pixels
+DARK = 200      # ink this dark is a picture's linework (lighter ink may be a wash or mist)
+REACH = 70      # how far from a grid line, in sheet pixels, to look for the gap between two pictures
 MAX_SIDE = 260  # sprites are stored at most this big
+
+
+def _gap(counts: np.ndarray, nominal: int) -> int:
+    """The middle of the emptiest run of lines within REACH of a grid line (the nearest such run)."""
+    lo, hi = max(nominal - REACH, 1), min(nominal + REACH, len(counts) - 1)
+    window = counts[lo:hi]
+    best = np.flatnonzero(window == window.min()) + lo
+    pick = best[np.argmin(abs(best - nominal))]
+    start = end = pick
+    while start - 1 in best:
+        start -= 1
+    while end + 1 in best:
+        end += 1
+    return int((start + end + 1) // 2)
+
+
+def cells(sheet: Image.Image, cols: int, rows: int) -> list[tuple[int, int, int, int]]:
+    """Each cell's box, row by row, with the lines moved off the grid into the gaps between pictures.
+
+    The drawings don't keep to an exact grid: the gates spill over into the abbey's cell (and their
+    mist reaches its rock), so a plain grid cut put half a gate tower beside the abbey and cut the
+    gates in two. Each line moves to the column (or row) within REACH with the least dark linework.
+    """
+    dark = np.asarray(sheet.convert("RGB")).min(axis=2) <= DARK
+    h, w = dark.shape
+    ys = [0] + [_gap(dark.sum(axis=1), r * h // rows) for r in range(1, rows)] + [h]
+    boxes = []
+    for r in range(rows):
+        band = dark[ys[r]:ys[r + 1]].sum(axis=0)
+        xs = [0] + [_gap(band, c * w // cols) for c in range(1, cols)] + [w]
+        boxes += [(xs[c], ys[r], xs[c + 1], ys[r + 1]) for c in range(cols)]
+    return boxes
 
 
 def cut(cell: Image.Image, seed: int = 7) -> Image.Image:
@@ -70,13 +104,10 @@ def main(out_dir: Path = ROOT / "static" / "images" / "map" / "sprites") -> None
     out_dir.mkdir(parents=True, exist_ok=True)
     for sheet, (cols, rows, names) in SHEETS.items():
         im = Image.open(ROOT / "tools" / "sprite_sheets" / sheet)
-        w, h = im.size
-        for i, name in enumerate(names):
+        for i, (name, box) in enumerate(zip(names, cells(im, cols, rows))):
             if name is None:
                 continue
-            r, c = divmod(i, cols)
-            cell = im.crop((c * w // cols, r * h // rows, (c + 1) * w // cols, (r + 1) * h // rows))
-            cut(cell, seed=i).save(out_dir / f"{name}.webp", quality=88, method=6)
+            cut(im.crop(box), seed=i).save(out_dir / f"{name}.webp", quality=88, method=6)
             print(name)
 
 

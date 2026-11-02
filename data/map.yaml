@@ -95,31 +95,31 @@ within:
 # follows the picture's shape, place: the place it shows and links to (default: the name; null for
 # none)}. Move them with `just map-edit` (drag, or scroll to resize).
 sprites:
-  castle-ravenloft: {image: castle-ravenloft, xy: [720, 385], width: 80}
-  barovia: {image: barovia, xy: [780, 440], width: 64}
+  castle-ravenloft: {image: castle-ravenloft, xy: [722.5, 385.4], width: 85.1}
+  barovia: {image: barovia, xy: [783.4, 437.9], width: 57.3}
   vallaki: {image: vallaki, xy: [400, 246], width: 70}
   krezk: {image: krezk, xy: [112, 228], width: 54}
-  abbey-of-saint-markovia: {image: abbey-of-saint-markovia, xy: [138, 198], width: 40}
+  abbey-of-saint-markovia: {image: abbey-of-saint-markovia, xy: [144.5, 197.8], width: 39.1}
   the-windmill: {image: the-windmill, xy: [473, 304], width: 44}
-  tower-of-khazan: {image: tower-of-khazan, xy: [258, 192], width: 30}
+  tower-of-khazan: {image: tower-of-khazan, xy: [258, 189.2], width: 30}
   werewolf-den: {image: werewolf-den, xy: [190, 164], width: 36, place: lake-baratok-cave}
   argynvostholt: {image: argynvostholt, xy: [314, 375], width: 50}
-  wizard-of-wines: {image: wizard-of-wines, xy: [104, 352], width: 44}
-  yester-hill: {image: yester-hill, xy: [70, 480], width: 44}
-  durst-manor: {image: durst-manor, xy: [968, 334], width: 32}
-  tser-pool: {image: tser-pool, xy: [692, 526], width: 42}
-  gates-west: {image: gates, xy: [597, 340], width: 30, place: west-gates-of-barovia}
-  gates-east: {image: gates, xy: [930, 388], width: 30, place: gates-of-barovia}
-  berez: {image: berez, xy: [322, 444], width: 40}
-  amber-temple: {image: amber-temple, xy: [384, 630], width: 40}
-  whispering-wall: {image: whispering-wall, xy: [44, 514], width: 34}
+  wizard-of-wines: {image: wizard-of-wines, xy: [104.2, 352], width: 44.3}
+  yester-hill: {image: yester-hill, xy: [71.2, 480], width: 46.4}
+  durst-manor: {image: durst-manor, xy: [972.7, 332.8], width: 22.6}
+  tser-pool: {image: tser-pool, xy: [691.8, 526], width: 42.5}
+  gates-west: {image: gates, xy: [599.6, 340], width: 35.3, place: west-gates-of-barovia}
+  gates-east: {image: gates, xy: [932.6, 388], width: 35.3, place: gates-of-barovia}
+  berez: {image: berez, xy: [325.7, 444], width: 35.5}
+  amber-temple: {image: amber-temple, xy: [384.8, 630], width: 38.4}
+  whispering-wall: {image: whispering-wall, xy: [43.3, 514], width: 35.5}
   # A signpost at each crossroads with a wiki page.
   signpost-luna-river: {image: signpost, xy: [342, 262], width: 24, place: luna-river-crossroads}
   signpost-raven-river: {image: signpost, xy: [228, 246], width: 24, place: raven-river-crossroads}
   signpost-tser-pool: {image: signpost, xy: [624, 346], width: 24, place: tser-crossroads}
   # A bridge wherever a road crosses water (see test_roads_cross_water_only_where_the_official_map_does).
-  bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22, place: null}
-  bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22, place: null}
-  bridge-tser-falls: {image: bridge, xy: [600, 405], width: 22, place: null}
-  bridge-ivlis: {image: bridge, xy: [758.8, 524.6], width: 22, place: null}
-  bridge-luna-lake: {image: bridge, xy: [245, 581.7], width: 22, place: null}
+  bridge-luna-crossroads: {image: bridge, xy: [355.8, 276.5], width: 22.9, place: null}
+  bridge-raven-river: {image: bridge, xy: [182.8, 251.8], width: 22.9, place: null}
+  bridge-tser-falls: {image: bridge, xy: [600, 405], width: 22.9, place: null}
+  bridge-ivlis: {image: bridge, xy: [758.8, 524.6], width: 22.9, place: null}
+  bridge-luna-lake: {image: bridge, xy: [245, 581.7], width: 22.9, place: null}
