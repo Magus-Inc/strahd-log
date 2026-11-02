@@ -9,7 +9,8 @@
 //    too, wheel up in and down out; a wheel that can't zoom any further (down with the whole map
 //    showing, up at 6x) scrolls the page as usual, so the map never traps the page. Small maps in
 //    posts leave the plain wheel to scroll the page.
-// Zoom runs from the whole map to 6x and the view never leaves the map. A drag is not a click,
+// A wiki page's map opens at 2.5x on its place.
+// Zoom runs from the whole map to 6x and the view never leaves the map (but for a strip past its east edge). A drag is not a click,
 // so taps on markers and places still open them.
 //  - full screen: the corner button fills the window with the map (and the screen too, with the
 //    browser's own full screen where it has one; iPhone doesn't, so there it fills the window). The
@@ -18,7 +19,7 @@
 (function (figure) {
   var svg = figure.querySelector(".map");
   var wheelZooms = figure.getAttribute("data-wheel") === "zoom";
-  var MAP = {w: 1000, h: 750}, MIN_W = MAP.w / 6;
+  var MAP = {w: 1000, h: 750}, MIN_W = MAP.w / 6, FOCUS_ZOOM = 2.5;
   // Height over width of what shows: the map's own 3:4, or in full screen the screen's shape.
   function aspect() {
     if (!figure.classList.contains("map-full")) return 0.75;
@@ -31,11 +32,14 @@
                      : {x: (MAP.w - MAP.h / a) / 2, y: 0, w: MAP.h / a, h: MAP.h};
   }
   var full = fit(), view = Object.assign({}, full);
-  function clampAxis(at, span, size) { return span >= size ? (size - span) / 2 : Math.min(size - span, Math.max(0, at)); }
+  // Zoomed in, the view may run a little past the map's east edge, so a place there (Durst Manor) can
+  // come out from under the zoom buttons in the top-right corner.
+  var EAST_SPARE = 0.14;
+  function clampAxis(at, span, size, spare) { return span >= size ? (size - span) / 2 : Math.min(size - span + span * (spare || 0), Math.max(0, at)); }
   function apply() {
     full = fit();
     view.w = Math.min(full.w, Math.max(MIN_W, view.w)); view.h = view.w * aspect();
-    view.x = clampAxis(view.x, view.w, MAP.w); view.y = clampAxis(view.y, view.h, MAP.h);
+    view.x = clampAxis(view.x, view.w, MAP.w, EAST_SPARE); view.y = clampAxis(view.y, view.h, MAP.h);
     svg.setAttribute("viewBox", [view.x, view.y, view.w, view.h].join(" "));
     svg.classList.toggle("zoomed", view.w < full.w - 0.5);
     // Markers, pins and names grow more slowly than the map, so they don't get huge.
@@ -159,5 +163,11 @@
     e.preventDefault();
     zoomAt(0.5, toMap(e.clientX, e.clientY));
   });
+  // A wiki page's map opens zoomed in on its place (data-focus "x y"); the whole-map button shows it all.
+  var focus = (figure.getAttribute("data-focus") || "").split(" ").map(Number);
+  if (focus.length === 2 && !isNaN(focus[0]) && !isNaN(focus[1])) {
+    view.w = MAP.w / FOCUS_ZOOM; view.h = view.w * aspect();
+    view.x = focus[0] - view.w / 2; view.y = focus[1] - view.h / 2;
+  }
   apply();
 })(document.currentScript.previousElementSibling);

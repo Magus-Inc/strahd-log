@@ -45,7 +45,7 @@
       <section class="where-we-were">
         <h2>On the map</h2>
         <p class="muted">{% if place.slug != page.slug %}In <a href="{{ base }}{{ place.path }}">{{ place.title }}</a> &middot; {% endif %}<a href="{{ base }}map/">Open the map</a></p>
-        {{ barovia([place], label="Where " ~ page.title ~ " is") }}
+        {{ barovia([place], label="Where " ~ page.title ~ " is", focus=place) }}
       </section>
 {% endif %}
 {% if page.mentioned_in %}
