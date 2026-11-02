@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* The sun set behind its peaks as the party approached the castle. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* The sun sank behind its peaks as the party left Vallaki for the castle. ([Unwelcome Guests](/posts/unwelcome-guests/))

@@ -273,7 +273,11 @@ def test_every_barovian_place_page_has_a_map():
     # The Blood on the Vine is the tavern in the Village of Barovia where the party met Ismark (Barovia,
     # Barovia); it was wrongly in Vallaki (Chris, 2026-11-02).
     assert within["blood-on-the-vine-tavern"] == "barovia"
-    assert data["landmarks"]["ancient-oak"]["xy"] == data["spots"]["the-old-oak"]["xy"]
+    # The Ancient Oak page is the "K & V" tree on the Old Windmill Road east of Vallaki (The Oath, the Spy
+    # and the Silver Moon), not the oak by the Ivlis (independent review, 2026-11-02).
+    assert data["landmarks"]["ancient-oak"]["xy"] == data["spots"]["bonegrinder-road"]["xy"]
+    # The Balinoks: the sun sank behind them seen from Vallaki, so the western peaks (Unwelcome Guests).
+    assert data["landmarks"]["balinoks"]["xy"][0] < data["places"]["vallaki"]["xy"][0]
     assert {"luna-river", "svalich-woods", "balinoks"} <= set(data["landmarks"])
 
 
