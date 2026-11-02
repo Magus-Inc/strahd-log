@@ -49,3 +49,21 @@ def test_the_abbey_sprite_has_no_piece_of_the_gates_beside_it():
                     .convert("RGBA"))
     left = im[: im.shape[0] // 2, : im.shape[1] // 5, 3]
     assert (left > 128).mean() < 0.02
+
+
+def test_a_neighbours_mist_drifting_over_the_line_is_left_out():
+    """The gates' mist drifts past the line into the abbey's cell, beside the abbey's rock: no
+    straight line parts them, so the abbey's sprite clears light wash reaching in from that side."""
+    px = np.full((200, 400, 3), 255, dtype=np.uint8)
+    px[40:160, 20:240] = 60       # left picture, well over the line at x=200
+    px[20:70, 240:330] = 225      # its mist, drifting on above the right picture
+    px[80:170, 270:390] = 30      # right picture: a dark outline...
+    px[84:166, 274:386] = 150     # ...round a mid-tone fill
+    sheet = Image.fromarray(px)
+    left_box, right_box = make_sprites.cells(sheet, 2, 1)
+    assert left_box[2] - 200 > make_sprites.SPILL  # the left picture spills well over the line
+    right = np.asarray(make_sprites.cut(sheet.crop(right_box), clear=make_sprites.spill(right_box, 1, sheet.size, 2, 1)))
+    assert right.shape[0] < 90 + 2 * make_sprites.BAND + 1
+    assert right.shape[1] < 120 + 2 * make_sprites.BAND + 1
+    # Without the clearing, the mist would come along.
+    assert np.asarray(make_sprites.cut(sheet.crop(right_box))).shape[0] > 90 + 2 * make_sprites.BAND + 1

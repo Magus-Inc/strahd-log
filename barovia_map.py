@@ -354,13 +354,20 @@ def draw_water(rng: random.Random) -> str:
     return "".join(ink + water + rings + flow)
 
 
+ROAD_WIDTH = 3      # a road's dirt surface, in map units (its ink edge is drawn 4.8 wide under it)
+# Breadcrumb lanes across a road, off its middle in map units: the first trip over a stretch runs down
+# the middle, later trips beside it, all on the dirt (Chris, 2026-11-02: crumbs on the road's black
+# edge were hard to see). A fourth trip shares the least-used lane.
+LANES = (0.0, 0.9, -0.9)
+
+
 def draw_roads() -> str:
     """Dirt roads with an ink edge and faint wheel ruts, every edge before any surface so junctions
     join cleanly; tracks are dotted ink."""
     roads = [smooth_path(p) for p in ROADS.values()]
     casing = "".join(f'<path d="{d}" fill="none" stroke="{INK}" stroke-opacity="0.85" stroke-width="4.8" '
                      f'stroke-linecap="round" stroke-linejoin="round"/>' for d in roads)
-    surface = "".join(f'<path d="{d}" fill="none" stroke="{ROAD}" stroke-width="3" stroke-linecap="round" '
+    surface = "".join(f'<path d="{d}" fill="none" stroke="{ROAD}" stroke-width="{ROAD_WIDTH}" stroke-linecap="round" '
                       f'stroke-linejoin="round"/>' for d in roads)
     ruts = "".join(f'<path d="{d}" fill="none" stroke="{RUTS}" stroke-width="0.6" stroke-dasharray="4 5" '
                    f'stroke-opacity="0.7"/>' for d in roads)
@@ -745,16 +752,17 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
     """Give each leg its breadcrumbs along the roads, and a numbered marker where it ended (or at
     leg["marker_at"], where its main action was). `places` includes any spots the legs pass.
 
-    leg["segments"] is a list of {"d", "road", "points"}: one per hop from the party's previous
-    stop, following the road graph by the shortest route. An off-road place is reached by a short
-    straight hop, marked off-road, from the road vertex nearest it; a hop between places with no
-    road between them at all is drawn straight. Repeat trips over the same road are nudged a
-    little to the side so a well-worn road shows several crumb lines. Markers for sessions that
-    ended at the same place fan out around it.
+    leg["segments"] is a list of {"d", "road", "points", "drawn"}: one per hop from the party's
+    previous stop, following the road graph by the shortest route. An off-road place is reached by
+    a short straight hop, marked off-road, from the road vertex nearest it; a hop between places
+    with no road between them at all is drawn straight. Repeat trips over the same stretch of road
+    take another lane (LANES) so a well-worn road shows several crumb lines; "drawn" is the line as
+    drawn, "points" the road under it. Markers for sessions that ended at the same place fan out
+    around it.
     """
     graph = road_graph()
     node = {slug: nearest_vertex(graph, p.x, p.y, math.inf if p.offroad else 30) for slug, p in places.items()}
-    worn: dict[tuple[Point, Point], int] = {}
+    worn: dict[tuple[Point, Point], dict[float, int]] = {}
     markers_at: dict[str, int] = {}
     previous = None
     for leg in legs:
@@ -766,21 +774,18 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
                 path = route(graph, a, b) if a and b else None
                 if path is None:
                     pts = [(pa.x, pa.y), (pb.x, pb.y)]
-                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    leg["segments"].append({"road": False, "points": pts, "drawn": pts, "d": smooth_path(pts)})
                     previous = slug
                     continue
                 if pa.offroad:
                     pts = [(pa.x, pa.y), a]
-                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    leg["segments"].append({"road": False, "points": pts, "drawn": pts, "d": smooth_path(pts)})
                 if len(path) > 1:
-                    n = max(worn.get(tuple(sorted(e)), 0) for e in zip(path, path[1:]))
-                    for e in zip(path, path[1:]):
-                        worn[tuple(sorted(e))] = worn.get(tuple(sorted(e)), 0) + 1
-                    shift = ((n % 4) - 1.5) * 1.3
-                    leg["segments"].append({"road": True, "points": path, "d": smooth_path(offset(path, shift))})
+                    drawn = offset(path, lanes(path, worn))
+                    leg["segments"].append({"road": True, "points": path, "drawn": drawn, "d": smooth_path(drawn)})
                 if pb.offroad:
                     pts = [b, (pb.x, pb.y)]
-                    leg["segments"].append({"road": False, "points": pts, "d": smooth_path(pts)})
+                    leg["segments"].append({"road": False, "points": pts, "drawn": pts, "d": smooth_path(pts)})
             previous = slug
         end = places[leg.get("marker_at") or leg.get("path", leg["stops"])[-1]]
         k = markers_at.get(end.slug, 0)
@@ -850,17 +855,44 @@ def place_sessions(legs: list[dict], places: dict[str, Place], spots: dict[str, 
     return related
 
 
-def offset(points: list[Point], by: float) -> list[Point]:
-    """The polyline moved sideways by `by` (perpendicular to each vertex's direction of travel)."""
-    if not by or len(points) < 2:
-        return points
+def lanes(path: list[Point], worn: dict) -> list[float]:
+    """The lane (a LANES value; + and - are the two sides of travel) for each edge of a trip along `path`.
+
+    `worn` counts, for each edge, the trips in each lane, kept on the edge's own fixed side so trips
+    in either direction agree on which side is which; it is updated. Each edge takes its least-used
+    lane, and among equals keeps the lane it was in, so a trip changes lane only where it must.
+    """
+    out, current = [], LANES[0]
+    for a, b in zip(path, path[1:]):
+        key = (a, b) if (a, b) < (b, a) else (b, a)
+        side = 1 if key == (a, b) else -1
+        used = worn.setdefault(key, {})
+        order = [current] + [lane for lane in LANES if lane != current]
+        current = min(order, key=lambda lane: (used.get(lane * side, 0), order.index(lane)))
+        used[current * side] = used.get(current * side, 0) + 1
+        out.append(current)
+    return out
+
+
+def offset(points: list[Point], by: float | list[float]) -> list[Point]:
+    """The polyline moved sideways: by `by`, or by by[i] along its i-th edge.
+
+    Each vertex moves by the mean of its two edges' shifts along their own normals, so a lane change
+    eases across a vertex and a sharp bend pulls the line in rather than throwing it wide.
+    """
+    if len(points) < 2:
+        return list(points)
+    shifts = by if isinstance(by, list) else [by] * (len(points) - 1)
+    if not any(shifts):
+        return list(points)
+    moves = []
+    for (ax, ay), (bx, by_), shift in zip(points, points[1:], shifts):
+        length = math.hypot(bx - ax, by_ - ay) or 1
+        moves.append(((ay - by_) / length * shift, (bx - ax) / length * shift))
     out = []
     for i, (x, y) in enumerate(points):
-        ax, ay = points[max(i - 1, 0)]
-        bx, by_ = points[min(i + 1, len(points) - 1)]
-        dx, dy = bx - ax, by_ - ay
-        length = math.hypot(dx, dy) or 1
-        out.append((x - dy / length * by, y + dx / length * by))
+        near = moves[max(i - 1, 0):i + 1]
+        out.append((x + sum(m[0] for m in near) / len(near), y + sum(m[1] for m in near) / len(near)))
     return out
 
 
