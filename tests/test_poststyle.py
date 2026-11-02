@@ -232,3 +232,8 @@ def test_pills_match_the_characters_list(site):
         "aera-shan-ravanor", "gumbo", "liren", "malron-lichtstrahl", "shabasta"]  # named without links
     assert dict(posts)["the-beacon-of-argynvostholt"] == ["aera-shan-ravanor", "crusty", "malron-lichtstrahl", "olfin-darning",
                                              "shabasta"]
+
+
+def test_a_rule_under_the_slides_marks_where_the_story_starts():
+    css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert re.search(r"section\.deck, section\.decks \{[^}]*border-bottom", css)
