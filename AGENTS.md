@@ -9,7 +9,7 @@
 - Wiki text above `<!-- from-the-log -->` is ours; only the section after it is generated. Tools
   add facts there, each citing the post it came from. Above it, agents may write and extend a
   `## Description` in Malron's words from the posts, and for new people and places the DM's
-  description from the session transcript (see `.claude/skills/update-wiki`), but never
+  description from the session transcript (the rules are dnd-scribe's `update-wiki` skill), but never
   reword text someone else wrote, such as the Obsidian Portal pages.
 - Wiki aliases are linked automatically everywhere, so an alias must not be an ordinary word
   ("Abbot", "Manor" in another town); `tools/wiki_from_extract.py` keeps a list of words to refuse.
