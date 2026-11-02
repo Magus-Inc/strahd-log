@@ -680,3 +680,44 @@ def test_every_spot_is_used_by_some_session():
     sessions = yaml.safe_load((ROOT / "data" / "trail.yaml").read_text(encoding="utf-8"))["sessions"]
     used = {s for e in sessions.values() for s in (e["stops"] if isinstance(e, dict) else e or [])}
     assert set(spots) <= used
+
+
+WAYS = {"three": 3, "four": 4, "five": 5, "six": 6}
+
+
+def test_a_crossroads_page_names_as_many_ways_as_the_map_draws():
+    # Chris, 2026-11-01: the Luna River crossroads page said "five-way" but the map drew four
+    # roads. The party's own log calls it "a four-way crossroads" (Act 3: The Broken Land).
+    pages = {p.slug: p for p in wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter)}
+    places, _ = barovia_map.load_places(ROOT / "data" / "map.yaml", list(pages.values()))
+    graph = barovia_map.road_graph()
+    checked = 0
+    for slug, place in places.items():
+        text = (ROOT / "content" / "wiki" / f"{slug}.md").read_text(encoding="utf-8").lower()
+        for word in re.findall(r"\b(three|four|five|six)-way\b", text):
+            assert len(graph[(place.x, place.y)]) == WAYS[word], (slug, word)
+            checked += 1
+    assert checked
+
+
+def test_vallaki_vistani_camp_sits_south_of_vallaki_toward_the_luna():
+    # "A doll for Arabelle": Alexi begs for help finding Arabelle at the Vistani encampment, and
+    # Yann's head lay "toward the Luna River". Chris remembers the camp south of Vallaki.
+    import yaml
+    places = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["places"]
+    camp, vallaki = places["vallaki-vistani-camp"]["xy"], places["vallaki"]["xy"]
+    assert camp[1] > vallaki[1] + 20 and abs(camp[0] - vallaki[0]) < 40
+    luna = barovia_map.RIVERS["Luna River"]
+    near = min(math.dist(camp, (a[0] + (b[0] - a[0]) * t / 20, a[1] + (b[1] - a[1]) * t / 20))
+               for a, b in zip(luna, luna[1:]) for t in range(21))
+    assert near < 30
+    path = barovia_map.route(barovia_map.road_graph(), tuple(vallaki), tuple(camp))
+    assert path and len(path) < 6   # a short walk from town
+
+
+def test_the_lost_girl_session_visits_the_vallaki_vistani_camp():
+    import yaml
+    trail = yaml.safe_load((ROOT / "data" / "trail.yaml").read_text(encoding="utf-8"))["sessions"]
+    entry = trail["2024-08-13-a-doll-for-arabelle"]
+    assert "vallaki-vistani-camp" in entry["stops"]
+    assert entry["marker"] == "vallaki-vistani-camp"

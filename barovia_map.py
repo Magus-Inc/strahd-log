@@ -86,6 +86,8 @@ TRACKS = {
     "Yester Hill trail": [(150, 340), (130, 400), (100, 452), (70, 488)],
     # The trail climbs about an hour and a half up into the peaks to the Amber Temple.
     "Amber Temple trail": [(352, 672), (366, 662), (362, 648), (380, 640)],
+    # The Vistani camp by Vallaki, a short walk south of the lake road toward the Luna River.
+    "Vallaki Vistani camp trail": [(380, 270), (378, 300)],
     # The Vistani camp sits on dry land just south of Tser Pool.
     "Tser Pool trail (to the camp)": [(680, 555), (690, 530)],
 }
@@ -154,7 +156,7 @@ LABELS = [  # (text, (x, y), size, angle)
     ("Svalich Woods", (870, 200), 15, 62),
     ("Svalich Woods", (850, 660), 15, -8),
     ("Svalich Woods", (90, 160), 13, 0),
-    ("Luna River", (392, 330), 11, 84),
+    ("Luna River", (378, 400), 11, 84),   # clear of the Vistani camp by Vallaki
     ("Raven River", (70, 252), 10, 0),
     ("Ivlis River", (850, 516), 11, 0),
     ("Mount Ghakis", (440, 714), 15, 0),
@@ -549,6 +551,7 @@ class Place:
     offroad: bool = False   # no road leads here; the trail arrives by a dotted line
     label_at: tuple[float, float] | None = None  # put the label here instead (e.g. on a lake)
     sessions: list = field(default_factory=list)  # posts with a stop here, newest first
+    near: str | None = None  # spots only: the place this spot belongs with (its card lists sessions here)
 
     @property
     def path(self) -> str:
@@ -614,8 +617,12 @@ def load_spots(path: Path, places: dict[str, Place]) -> dict[str, Place]:
     for slug, spec in (data.get("spots") or {}).items():
         if slug in places:
             raise ValueError(f"data/map.yaml: spot {slug!r} is already a place")
+        near = spec.get("near")
+        if near is not None and near not in places:
+            raise ValueError(f"data/map.yaml: spot {slug!r} is near unknown place {near!r}")
         x, y = spec["xy"]
-        spots[slug] = Place(slug, str(spec.get("label") or slug), float(x), float(y), [], offroad=bool(spec.get("offroad")))
+        spots[slug] = Place(slug, str(spec.get("label") or slug), float(x), float(y), [],
+                            offroad=bool(spec.get("offroad")), near=near)
     return spots
 
 
@@ -748,6 +755,66 @@ def add_route(legs: list[dict], places: dict[str, Place]) -> None:
         angle = math.radians(k * 137.5 + 100)
         r = 11 + 4.2 * math.sqrt(k)
         leg["marker"] = (round(end.x + r * math.cos(angle), 1), round(end.y + r * math.sin(angle), 1))
+
+
+PASS_BY = 20  # map units: a trail this close to a place passed it (Old Bonegrinder sits 16 off the road)
+# How a session relates to a place, strongest first; a place lists each session once, by the first that fits.
+RELATIONS = ("here", "ended", "stop", "near", "from", "past")
+
+
+def _distance_to_segment(p: Point, a: Point, b: Point) -> float:
+    (px, py), (ax, ay), (bx, by) = p, a, b
+    dx, dy = bx - ax, by - ay
+    t = 0.0 if dx == dy == 0 else max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy)))
+    return math.dist(p, (ax + t * dx, ay + t * dy))
+
+
+def place_sessions(legs: list[dict], places: dict[str, Place], spots: dict[str, Place] | None = None,
+                   reach: float = PASS_BY) -> dict[str, list[tuple[dict, str, str | None]]]:
+    """{place slug: [(leg, relation, spot label or None)]} oldest first: every session tied to a place.
+
+    Chris (2026-11-01): a place's card should list more than the session whose number sits there.
+    Relations: "here" (the session's number sits at this place), "ended" or "stop" (a listed stop
+    without the number), "near" (a stop at a spot that is `near` this place; the label says which),
+    "from" (the session set out from here, where the one before it ended), "past" (its crumbs pass
+    within `reach` of the place). Call after trail(), which draws the segments.
+    """
+    spots = spots or {}
+    related: dict[str, list[tuple[dict, str, str | None]]] = {}
+    previous = None
+    for leg in legs:
+        path = list(leg.get("path", leg.get("stops", [])))
+        marker = leg.get("marker_at") or (path[-1] if path else None)
+        found: dict[str, tuple[str, str | None]] = {}
+
+        def note(slug, kind, extra=None):
+            if slug in places and (slug not in found or RELATIONS.index(kind) < RELATIONS.index(found[slug][0])):
+                found[slug] = (kind, extra)
+
+        if marker:
+            note(marker, "here")
+        for i, slug in enumerate(path):
+            if i == len(path) - 1:
+                note(slug, "ended")
+            elif i > 0 or slug != previous:
+                note(slug, "stop")
+            else:
+                note(slug, "from")
+            spot = spots.get(slug)
+            if spot is not None and spot.near:
+                note(spot.near, "near", spot.title)
+        if previous and (not path or path[0] != previous):
+            note(previous, "from")
+        pairs = [(a, b) for seg in leg.get("segments", []) for a, b in zip(seg["points"], seg["points"][1:])]
+        if pairs:
+            for slug, place in places.items():
+                if slug not in found and min(_distance_to_segment((place.x, place.y), a, b) for a, b in pairs) < reach:
+                    note(slug, "past")
+        for slug, (kind, extra) in found.items():
+            related.setdefault(slug, []).append((leg, kind, extra))
+        if path:
+            previous = path[-1]
+    return related
 
 
 def offset(points: list[Point], by: float) -> list[Point]:
