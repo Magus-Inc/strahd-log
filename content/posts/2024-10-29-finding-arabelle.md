@@ -66,3 +66,53 @@ The protection comes from bones kept in a crypt, and a ritual must be held at ea
 We found a torn piece of gray wool and a rust-stained smear of dirt on a board, clumps of earth with grass and white petals in boot prints, and strands of dark hair on the altar.
 
 We think the damage to the church was a way in to steal the bones. Milivoj has black hair and a gray cloak, which makes him our prime suspect.
+
+## Key Locations:
+
+* **Blue Water Inn**: Where we found Rictavio, and spent the night.
+* **Rictavio’s wagon**: Enchanted to seem less inviting, with Arabelle hidden inside.
+* **The tower at Lake Baratok**: Where van Richten hid, in a field that blocks magic.
+* **Church of St. Andral**: Hallowed ground, its broken window under repair and its bones stolen.
+
+## Encounters:
+
+* **Healing Gumbo**: The scroll of Remove Curse worked, by Lathander’s grace, and crumbled to nothing.
+* **Confronting Rictavio**: We named him Rictavio van Richten, and he told us his story.
+* **Yann’s head**: Questioned with the Talisman of Echoes.
+* **Arabelle’s prophecy**: Spoken when Aera asked if she had anything to tell us.
+* **The church**: A torn piece of gray wool, a rust-stained smear, boot prints with grass and white petals, and dark hair on the altar.
+
+## Loot:
+
+* **Talisman of Echoes**: From Rictavio, to ask questions of the dead.
+
+## Notable NPCs:
+
+* **Rictavio van Richten**: Hiding in plain sight as Rictavio, keeping Arabelle safe.
+* **Arabelle**: A Vistani girl with lavender eyes, rescued from Escher.
+* **Escher**: A golden-haired vampire spawn, scarred by van Richten.
+* **Ezmerelda d’Avenir**: His former apprentice, of whom he would say no more.
+* **Madam Eva**: Who warned him away from the village.
+* **Doru**: Who blackmailed him into leading a revolt on the castle.
+* **Arrigal**: Tailing us. By the talisman, he had no part in taking Arabelle.
+* **Szoldar**: Went back to his hut.
+* **Ireena**: To stay at the church for good.
+* **Danika**: Told us where to find Rictavio.
+* **Father Lucian**: The priest of St. Andral’s, who offered Ireena shelter.
+* **Milivoj**: Mending the window, and our prime suspect.
+* **Yeska**: The boy who works at the church, suspected by the priest.
+* **Henrik**: Delivering materials to repair the church.
+
+## Plot Points:
+
+* **Strahd’s bounty**: On girls who match Arabelle exactly: dark hair, olive skin, lavender eyes.
+* **The amulet**: Arabelle wears van Richten’s spare, which guards against detection and location.
+* **Where to keep her**: In the enchanted wagon at the Vistani camp, we suggested.
+* **The church’s ward**: Bones in the crypt protect it from the undead, but they were stolen, so it cannot be renewed at the next feast.
+* **The Festival of the Blazing Sun**: Two days off.
+
+## Session Highlights:
+
+* Gumbo cured of lycanthropy.
+* Van Richten’s story of the revolt on the castle.
+* Arabelle’s prophecy: “At castle’s peak, a heart beats red.”

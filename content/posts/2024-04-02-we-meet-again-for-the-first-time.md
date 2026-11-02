@@ -32,3 +32,38 @@ Next thing we knew there was a giant artificial bird creature flying towards us.
 After the battle Olfin attempted to place a lock of hair on the bird but it escaped him. Weeble put it to sleep again, and Olfin tied his lock of hair around the birds leg. It must be some kind of Hexblood sign of life debt. I must be sure to avoid finding myself in such a predicament with Olfin. I’m not sure a Hexblood is much better than a vampire, paladin or not.
 
 We continued along the wagon path until we found a clearing by a lake. There were five tents there with wagons and horses, along with a large tent. Perhaps this is the Vistani encampment with [Madam Eva](/wiki/madam-eva/)
+
+## Key Locations:
+
+* **The great oak**: A locked chest nestled at its foot.
+* **The road by the cliff**: Where Strahd’s carriage stopped beside our hiding places.
+* **A clearing by a lake**: Five tents, wagons, horses and a large tent. Perhaps the Vistani camp of Madam Eva.
+
+## Encounters:
+
+* **Strahd’s carriage**: Seven dire wolves, and the Count calling to Ireena.
+* **The wounded bird**: Pierced by silver barbs. Weeble put it to sleep and Olfin healed it.
+* **A strix and three swarms**: Fought off together.
+* **A dire wolf**: It only watched Schlopkht from a distance.
+
+## Loot:
+
+* **R V Richten’s chest**: 20 silver crossbow bolts, 2 holy water, a healing potion, 2 healer’s kits and 20 pieces of silver.
+
+## Notable NPCs:
+
+* **Strahd von Zarovich**: Looked straight at each of our hiding places, forgave our past transgressions, and will study us.
+* **Ireena Kolyana**: Allowed to stay with us a while longer.
+* **Madam Eva**: Perhaps waiting at the camp by the lake.
+
+## Plot Points:
+
+* **Strahd’s vassal**: His anger is about the Durst Manor and its grain from the windmill. The vineyard is no concern of his.
+* **Ireena stays with us**: Long enough, we hope, to find her sanctuary.
+* **Strahd’s warnings**: He will not give many.
+* **Olfin’s lock of hair**: Tied around the bird’s leg, a sign of life debt.
+
+## Session Highlights:
+
+* Weeble very nearly pushing his luck with Strahd.
+* Olfin chasing down the bird he had just healed.

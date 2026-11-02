@@ -54,3 +54,47 @@ Ireena asks us to help the villagers that retreated to Vallaki. First they must 
 > These creatures are not wholly invincible, however, possessing a tapestry of strengths woven with fatal weaknesses. Sunlight and running water can end their cursed existence, and wooden stakes through the heart will paralyze them as they sleep. They recoil from the sight of holy symbols, and cannot enter a residence without an invitation. They bear neither shadow nor reflection, and must return to their coffins, crypts, or graves to rest by day.
 
 > It is said that the bloodlust of these creatures is an unquenchable fire that burns within their undead hearts. The young and newly turned are slaves to this craving, often losing themselves in a frenzy at the mere scent of blood. But those who have walked the night for centuries, as well as those with indomitable focus and will, may learn to temper this fire. Those who do so possess the rare ability to conceal their monstrous nature, retracting and exposing their fangs at will—a sign that the monster within is held at bay, if only while the vampire allows.”
+
+## Key Locations:
+
+* **The forest road**: Driven on by the fog, past a gate that opened and closed on its own.
+* **The trees of thirteen marks**: Four trees with arrows, and a loop that brought us back to the road from the other side.
+* **Village of Barovia**: Dilapidated, in a valley below a castle of stone.
+* **Blood on the Vine Tavern**: Lately renamed from Blood of the Vine, near the statue of Ismark Antonovich the Great.
+* **The burgomaster’s mansion**: At the south end of the village, behind three locks.
+
+## Encounters:
+
+* **Visions in the forest**: A hunched figure, the shadow of a giant flying creature, a giant bat, a figure with an axe, a distant rider.
+* **The dead young man and his horse**: Both dead of exhaustion.
+* **The fourth tree**: A horse and rider carved in it, a worn dagger, and “Horse man rides / Seer spoke true”.
+* **The blue-tipped raven**: It led us to the tavern.
+* **A frightened woman**: Crying to Ismark that Gertruda had gone alone in the night to Vallaki.
+
+## Loot:
+
+* **A compass**: From the dead young man. Its needle trembled, and later spun wildly.
+* **The guide to vampires**: Found by Aera.
+
+## Notable NPCs:
+
+* **Ismark**: Grandson of the man on the statue, who asked us to help his sister hide at a church in Vallaki.
+* **Ireena**: His sister, found by his family in the forest as a little girl.
+* **Bildrath**: “Fools errand. Do not follow Ismark the lesser.”
+* **Doru**: Father Donavich’s son, who led a party into the castle and never came back.
+* **Strahd**: The undead lord whose forces besieged the village.
+* **Gertruda**: Gone alone in the night to Vallaki.
+
+## Plot Points:
+
+* **Strahd is awake**: An elf proclaimed that Doru woke him, and that he would take vengeance.
+* **Spies**: Ismark warned of Vlahd’s bats, wolves, humans and even Vistani.
+* **Ismark’s mission**: Help Ireena hide at a church in Vallaki, a full day’s journey.
+* **Their father**: Died in the attack, and must be buried first.
+* **The vampire guide**: Sunlight, running water, stakes, holy symbols and invitations.
+
+## Session Highlights:
+
+* Adding our own tally marks, and finding them again on the far side of the loop.
+* Schlopkht walking into the fog on a rope.
+* The raven that circled back to beckon us on.

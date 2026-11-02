@@ -43,3 +43,40 @@ The master bedroom held another full-length mirror and a button beside the dumbw
 > Elisabeth
 
 We began to suspect that the beast might be the baby, Walter.
+
+## Key Locations:
+
+* **The third floor**: The room of the black armor, a bedroom with a mirror, the nursery, a storeroom and the master bedroom.
+* **The balcony**: Where we saw that Daggerford is nowhere near, only endless mist.
+
+## Encounters:
+
+* **The black armor**: It tried to shove Olfin over the rail. Olfin and Weeble took a beating before it fell.
+* **Klara in the mirror**: Aera saw her, horribly disfigured. She told us the gift for the beast is on the third floor.
+* **The breathing bed**: Under the sheet, only a bloodstained mattress and crude restraints.
+* **The broom**: It came to life and knocked Olfin out until Weeble destroyed it.
+* **The silhouette**: Behind the master bedroom doors, turning toward us with an amber glow before it vanished.
+
+## Loot:
+
+* **Amber shard**: In a silver jewelry box, with some grain and Elisabeth’s note to Drasha.
+* **Blue blooded lips**: A yellow book, a romance about an affair with a wealthy duke.
+
+## Notable NPCs:
+
+* **Klara**: Her spirit in the mirror, who pointed us to the gift.
+* **Walter**: His name carved into the headboard of the crib.
+* **Elisabeth Durst**: Her note leaves the shard to soothe the beast’s fury.
+* **Drasha**: Chosen as the beast’s custodian while Elisabeth is away.
+
+## Plot Points:
+
+* **The amber shard**: Present it and speak the beast’s name to quiet it, then be gone before it wakes at midnight.
+* **The beast**: We began to suspect it is the baby, Walter.
+* **Stairs behind the mirror**: Leading up.
+
+## Session Highlights:
+
+* Olfin holding off the armor at the rail.
+* Weeble pulling the sheet off the breathing bed.
+* A quick word of healing over Olfin after the broom fight.

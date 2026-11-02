@@ -80,3 +80,45 @@ The shelves held a rock collection and many books. Among them I found a book tit
 [Aera shan Ravanór](/wiki/aera-shan-ravanor/) searched the shelves further and found a red book that worked as a lever, revealing a hidden door behind the bookshelf. It was sealed by some magical lock that needed a gem or key of a particular geometric shape. [Schlopkht](/wiki/schlopkht/) took an impression of the slot so we could find a match on our travels.
 
 The last room was a ballroom. As we entered, we realized the harp and harpsichord there had been playing on their own, and the music stopped soon after we were all inside. One of the harpsichord's keys was stuck down. Inside it we found the cause: a hidden parchment, sheet music titled “Waltz for Kara”. One of us played the waltz, and suddenly the ballroom filled with the ghosts of gentlemen and ladies dancing. One pair looked to be [Gustav Durst](/wiki/gustav-durst/) and [Klara](/wiki/klara/). Off to one side, surely [Elisabeth Durst](/wiki/elisabeth-durst/), a woman stared at the dancing couple. Her fury was so strong that an amber shard at her neck glowed and flashed, and every apparition vanished. At that moment we heard what sounded like wood scraping, from the office or beyond it.
+
+## Key Locations:
+
+* **Durst Manor, first floor**: The entrance hall with a message in blood, the room of stuffed wolves, the kitchen and pantry, a coat closet and a banquet hall.
+* **Durst Manor, second floor**: Four suits of armor, the servants’ quarters, an office with a hidden door, and a ballroom.
+
+## Encounters:
+
+* **Rose and Thorn**: Two children outside who will neither leave the grounds nor go in.
+* **The doors slam shut**: Every light went out and six chimes rang.
+* **The stuffed wolves**: The snarling one changed while our backs were turned.
+* **Tale of Malron**: A book of my own life, ending with me reading it while an evil presence watched. I set it alight with Lathander’s glow.
+* **The ballroom**: The Waltz for Kara called up ghostly dancers, until Elisabeth’s fury flashed her amber shard and they vanished.
+
+## Loot:
+
+* **Wine from the Wizard of Wines Winery**: Hidden in a teapot in the pantry, with lace sewn with a “K”, a contraceptive powder and a note: “For the light of my life. —G.”
+* **The invitation**: Addressed to Lady Fiona Wachter, for the anniversary of the Durst Mill.
+* **Klara’s letter**: Asking the Dursts for leave.
+* **Waltz for Kara**: Sheet music hidden inside the harpsichord.
+* **Schlopkht’s impression**: The shape of the hidden door’s lock, so we can look for a gem or key to match.
+
+## Notable NPCs:
+
+* **Rose Durst**: Told us her parents are Gustav and Elisabeth, upstairs on the third floor.
+* **Thorn Durst**: Hears noises from below, though neither child believes there is a cellar.
+* **Gustav Durst**: Dancing with Klara among the ghosts.
+* **Elisabeth Durst**: Watching them in fury, an amber shard glowing at her neck.
+* **Klara**: The nursemaid, whose face was cut out of the children’s needlework.
+
+## Plot Points:
+
+* **The rhyme in blood**: A beast beneath the house wakes at the midnight chime and wants a gift. If the chimes meant six o’clock, we had six hours.
+* **Gustav and Klara**: The lace, the note from “G.”, Klara’s letter and the dance all point to the two of them.
+* **The hidden door**: Behind the office bookshelf, sealed by a magical lock that needs a gem or key of a particular shape.
+* **Wood scraping**: Heard from the office or beyond it as the ghosts vanished.
+
+## Session Highlights:
+
+* The cleric bravely setting his own life story on fire.
+* The wolves that moved when no one was looking.
+* The ghosts dancing to the Waltz for Kara.

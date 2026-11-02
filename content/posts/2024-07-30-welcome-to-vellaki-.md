@@ -41,3 +41,48 @@ The barkeep passed a parcel from under the bar to Rictavio, who tucked it under 
 A procession silenced the whole town, led by the Baron and Izek. We think Izek pushed an old woman into the mud. Her son Udo has been imprisoned, and she too was taken to the stocks. The Festival of the Sun, we now hear, is in four days.
 
 Note: LEVEL 4!!!
+
+## Key Locations:
+
+* **The gates of Vallaki**: Iron gates with wolves’ heads impaled on them, chained and padlocked.
+* **The refugee camp**: Outside the walls, where the refugees have waited for days.
+* **Vallaki**: Harsh laws and politics. The streets were empty.
+* **Blue Water Inn**: A blue waterfall on its sign, and a good meat pie.
+
+## Encounters:
+
+* **The refugees**: Many were cold to Ireena, blaming her brother and father.
+* **The gate guards**: Teeth checked, garlic tested, a gold piece each, and all silver surrendered.
+* **Brom and Bray**: Dangling a stuffed bat over the bar to tease Karl and Nikolai.
+* **The procession**: The Baron and Izek, and an old woman pushed into the mud.
+
+## Loot:
+
+* **Nothing gained**: A gold piece each for the gate toll, and one each for our rooms.
+
+## Notable NPCs:
+
+* **Ireena**: Enraged and heartbroken at the refugee camp.
+* **Izek**: The guard who summoned fire to drive the refugees back.
+* **Rictavio**: A colorful half-elf bard in a big hat, who says he is a secret agent of the Keepers of the Feather.
+* **Urwin**: At the bar, married to Danika.
+* **Danika**: Runs the inn.
+* **Brom**: One of the boys on the balcony.
+* **Bray**: The other.
+* **Karl**: Against the Baron.
+* **Nikolai**: Likewise.
+* **Udo**: The old woman’s son, imprisoned.
+* **Morgantha**: Careful what we tell her, say the guards.
+
+## Plot Points:
+
+* **The Keepers of the Feather**: A secret society set against Strahd.
+* **The Festival of the Blazing Sun**: Three days off, or four, by the latest talk.
+* **The refugees**: Shut outside the walls, and sure that a red-haired woman has cursed them.
+* **Udo and his mother**: He imprisoned, she taken to the stocks.
+
+## Session Highlights:
+
+* Schlopkht trying to pay the toll in pies.
+* Rictavio, almost a ringmaster.
+* Level 4!

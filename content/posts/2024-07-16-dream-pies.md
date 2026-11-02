@@ -39,3 +39,44 @@ Ravens began to follow us, and soon there were hundreds in tow. Ireena, in a stu
 ### Wolves
 
 Eight wolves attacked us, one of them perhaps a werewolf. The ravens swarmed that one. [Schlopkht](/wiki/schlopkht/) nearly died but came to in time to rejoin the fight. Aera floated a dream pie to one of the wolves with a conjured hand, and it took that wolf out of the fight.
+
+## Key Locations:
+
+* **The ruined watch tower**: Three stories of moss and ivy, with two fresh graves and a dead dire wolf nearby.
+* **Tser Falls Bridge**: Guarded by a revenant.
+* **The fork in the road**: East to Castle Ravenloft, west to Vallaki.
+* **The ancient monument**: A stone slab carved with a three-pointed star and a raven.
+* **The Windmill**: Home of Morgantha and her daughters.
+
+## Encounters:
+
+* **Sir Godfrey at the bridge**: He asked whether we served *him*.
+* **Morgantha’s pies**: The cat ate one and slept for five hours.
+* **The ravens**: Hundreds of them following us.
+* **Eight wolves**: One perhaps a werewolf, which the ravens swarmed. Schlopkht nearly died.
+
+## Loot:
+
+* **Morgantha’s cart**: Five gold, to carry the sleeping cat, with our silver things hidden in it.
+* **Dream Pies**: One floated to a wolf on a conjured hand took it out of the fight.
+
+## Notable NPCs:
+
+* **Sir Godfrey Gwilym**: A revenant knight of the Order of the Silver Dragon, banished by his commander.
+* **Vladimir Horngaard**: The commander who banished him.
+* **Morgantha**: A fiend who sells Dream Pastries, and warned that the Vallaki guards confiscate silver.
+* **Bella**: One of her daughters.
+* **Offalia**: The other.
+* **Ireena**: In a stupor, asking to see the lake.
+
+## Plot Points:
+
+* **The Order of the Silver Dragon**: Sir Godfrey and his commander.
+* **Silver in Vallaki**: The guards take it, so ours is hidden in the cart.
+* **The Seeker and the Ladies Three**: The monument we found.
+* **The ravens**: They took our side against the wolves.
+
+## Session Highlights:
+
+* The cat asleep for five hours in a cart we bought to carry him.
+* Aera’s dream pie, floated to a wolf.

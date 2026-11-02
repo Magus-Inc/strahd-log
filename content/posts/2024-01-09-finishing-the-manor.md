@@ -51,3 +51,45 @@ A footlocker in that room held a journal of the cult's victims, some of whom had
 The chanting grew louder as we went on. In one stretch of floor there were no footprints at all, a likely sign of a trap. We set it off with a spectral hand, and it opened onto a pit of sharpened stakes. We jumped the pit into a new room with gnawed bones and a mirror.
 
 When we disturbed the bones, a great worm dropped on us. It looked to be the remains of Gustav Durst, and it tried to fall on Schlopkht, then lashed at us with tentacles and beak. After a long fight [Schlopkht](/wiki/schlopkht/) was knocked out, and Aera shot the creature through the beak for the killing blow.
+
+## Key Locations:
+
+* **Durst Manor, attic**: A padlocked hall, Rose’s room, a chamber with a trunk, and the children’s locked room.
+* **The secret stairway**: Down three floors or more, and on for hours to a dirt tunnel.
+* **The tunnels below**: Walter’s crypt, a well thirty feet deep, a pit of stakes and a room of gnawed bones.
+
+## Encounters:
+
+* **Rose and Thorn**: Their spirits in the locked room, beside two skeletons.
+* **Elisabeth in the mirror**: A cold touch on Schlopkht’s shoulder before he broke the glass.
+* **The stake pit**: Sprung with a spectral hand, and jumped.
+* **The great worm**: The remains of Gustav Durst. It knocked Schlopkht out before Aera shot it through the beak.
+
+## Loot:
+
+* **Strahd’s letter**: In the clawed chest where Aera put the shard.
+* **The music box**: A rusted hunting knife, the key to the padlock, a crude map of altar, shrine and quarters, and a paper about recruitment.
+* **A shard of the mirror**: Wrapped in cloth by Schlopkht.
+* **The cult’s journal**: A list of victims, some of them fed to Walter.
+
+## Notable NPCs:
+
+* **Elisabeth Durst**: The monster of the house, by Strahd’s letter.
+* **Strahd von Zarovich**: Who wrote to her as “my most pathetic servant”.
+* **Rose Durst**: Showed us the secret stairway, and joined Aera as a spirit.
+* **Thorn Durst**: Joined Olfin as a spirit.
+* **Gustav Durst**: What was left of him, the great worm.
+* **Klara**: Not Walter’s nursemaid but, we concluded, his mother.
+
+## Plot Points:
+
+* **Strahd’s letter**: Elisabeth bled souls on a hidden altar, and turned to madness after her husband sired a son with another woman.
+* **The children**: Left in the attic to starve. Weeble promised to bury their bones in the garden.
+* **Walter**: Klara’s son, and by now we believed the monster’s name.
+* **The chanting**: Louder the further we went.
+
+## Session Highlights:
+
+* Rose mending Thorn’s broken toy with a little spell.
+* Rose and Thorn joining Aera and Olfin as spirits.
+* Aera’s killing shot through the worm’s beak.
