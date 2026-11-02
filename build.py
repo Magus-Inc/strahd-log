@@ -72,6 +72,7 @@ class Post:
     slides_pdf: str = ""
     decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
     show_cast: bool = True  # pills under the title (poststyle cast setting)
+    slides_at: str = "above-story"  # where the slides go (poststyle slides setting)
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
     party: dict = field(default_factory=dict)  # data/party.yaml: died/revived/joined/returned/left -> [wiki pages]
 
@@ -212,13 +213,17 @@ def rebase(html: str, prefix: str) -> str:
     return re.sub(r'((?:src|href)=")/(?!/)', lambda m: m.group(1) + prefix, html)
 
 
-def link_wiki(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
+# Where a section starts for relink: every heading in the On this page box, or only the big ones.
+SECTION_START = {"each-heading": r"<h[23][ >]", "each-section": r"<h2[ >]"}
+
+
+def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once") -> None:
     """Link wiki names in posts and wiki pages, and record which posts mention each page."""
     linker = wiki.Linker(pages)
     by_slug = {w.slug: w for w in pages}
     narrators = {w.slug for w in pages if w.narrator}
     for post in posts:  # newest first, so mentioned_in comes out newest first too
-        post.html, post.mentions = linker.link(post.html)
+        post.html, post.mentions = linker.link(post.html, each_section=SECTION_START.get(relink))
         post.html = wiki.link_npc_names(post.html, linker)
         if post.characters_html:  # who the Characters section names, even when the style hides it
             _, named = linker.link(post.characters_html)
@@ -238,6 +243,7 @@ def apply_style(posts: list[Post], style: dict, scenes: dict | None = None) -> N
         if style["tagline"] == "none":
             post.tagline = ""
         post.show_cast = style["cast"] != "list"
+        post.slides_at = style["slides"]
 
 
 def number_sessions(posts: list[Post]) -> None:
@@ -358,7 +364,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(set(post.listed) or post.mentions, pages) if post.show_cast else []
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(post.html), owners)), post.decks)))
+            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(post.html), owners)), post.decks, post.slides_at)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:
@@ -481,7 +487,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     style = poststyle.load_style(style_file or data_dir / "post-style.yaml")
     apply_style(posts, style, poststyle.load_scenes(data_dir / "scene-headings.yaml"))
     number_sessions(posts)
-    link_wiki(posts, pages)
+    link_wiki(posts, pages, style["relink"])
     cite_sessions(posts, pages)
     find_slides(posts, slides_static or ROOT / "static")
     apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")

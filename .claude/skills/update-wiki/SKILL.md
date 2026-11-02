@@ -62,3 +62,13 @@ both cite the posts they come from.
   (iPhone 13 viewport in Playwright works). Put the screenshots on the `previews` branch under a
   folder for the PR and show them in the PR body and to Chris.
 - List the pages added and extended in the PR body, so Chris can skim what changed.
+
+## Checking the new post itself
+
+Before the wiki work, check the post against the one layout (AGENTS.md, `tests/test_layout.py`):
+nothing above the Characters list but a `Note:` about the post itself, no second title, every
+entry in Key Locations, Encounters, Loot, Notable NPCs, Plot Points and Session Highlights a bullet
+with its name in bold, and a `data/scene-headings.yaml` entry. Every name a reader might look up
+needs a wiki page: the build links its first mention in every section (Chris, 2026-11-02), and
+Notable NPCs entries should always come out linked, so a missing page shows as plain text there.
+

@@ -11,3 +11,12 @@ picture: scene       # the feature picture stays beside the scene it shows
 story: titled       # one heading over the story, named below (not "Summary"; picked 2026-11-02)
 story-title: Malron’s Account
 scenes: written      # scene headings at natural breaks, short, in Malron's voice (data/scene-headings.yaml)
+# The layout review: Chris's picks, 2026-11-02 (layout pick page, https://claude.ai/artifact/6wQjcCy7ruP52QdWCkqq3Z).
+slides: above-story  # the slides right under the pills, above Malron's Account
+opening: in-story    # lines written above the Characters list are the story's first lines
+extra-titles: hide   # no second title above the story (it repeated the tagline)
+quotes: letters      # letters read as letters, not as headings
+recap-prose: bullets # every entry in Key Locations, Encounters... is a bullet
+sections: template   # "What we learned" is called Plot Points like everywhere else
+recap-pictures: story  # a picture never sits in the recap lists
+relink: each-heading # first mention of a wiki name links in every section of On this page
