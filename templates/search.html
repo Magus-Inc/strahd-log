@@ -21,9 +21,7 @@
       var status = document.getElementById("search-status");
       var entries = null;
 
-      function fold(s) {
-        return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-      }
+      {% include "_search_match.js" %}
       function esc(s) {
         return s.replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; });
       }
@@ -47,28 +45,19 @@
         }).join("");
       }
       function run() {
-        var q = fold(input.value.trim());
+        var q = input.value.trim();
         list.innerHTML = "";
         if (!q) { status.textContent = "Type to search every session and wiki page."; return; }
-        var terms = q.split(/\s+/);
-        var hits = [];
-        entries.forEach(function (e) {
-          var title = fold(e.t), body = e.f || (e.f = fold(e.x));
-          var score = 0;
-          for (var i = 0; i < terms.length; i++) {
-            var inTitle = title.indexOf(terms[i]) >= 0, inBody = body.indexOf(terms[i]) >= 0;
-            if (!inTitle && !inBody) return;
-            score += (inTitle ? 10 : 0) + (inBody ? 1 + Math.min(body.split(terms[i]).length - 1, 9) : 0);
-          }
-          hits.push({e: e, score: score});
-        });
-        hits.sort(function (a, b) { return b.score - a.score; });
-        status.textContent = hits.length ? hits.length + (hits.length === 1 ? " match" : " matches") : "No matches.";
+        var found = SearchMatch.search(entries, q), hits = found.hits;
+        // Say when a word was widened to close spellings ("Ilia" also finds Ilya).
+        var guessed = Object.keys(found.close).map(function (w) { return "“" + w + "” → " + found.close[w].join(", "); });
+        status.textContent = (hits.length ? hits.length + (hits.length === 1 ? " match" : " matches") : "No matches") +
+          (guessed.length ? ", with close spellings: " + guessed.join("; ") + "." : hits.length ? "" : ".");
         hits.slice(0, 50).forEach(function (h) {
           var li = document.createElement("li");
           li.className = "card result" + (h.e.p ? " has-pic" : "");
           var text = '<span class="chip">' + esc(h.e.l) + '</span><h2><a class="stretched" href="' + base + h.e.u + '">' + esc(h.e.t) +
-            '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>" +
+            '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, h.mark) + "</p>" +
             (h.e.s || h.e.b ? '<p class="meta">' + (h.e.s ? '<span class="slides-tag">' + SLIDES_ICON + h.e.s + (h.e.s === 1 ? " slide" : " slides") + "</span>" : "") +
               lifeTags(h.e) + "</p>" : "");
           li.innerHTML = h.e.p ? '<div class="wiki-card-text">' + text + '</div><span class="pic-badge"><span class="pic-thumb"><img src="' + base + h.e.p +
