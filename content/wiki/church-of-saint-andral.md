@@ -2,7 +2,7 @@
 title: Church of Saint Andral
 type: place
 aliases:
-- St. Andrals Church
+- St. Andral's Church
 summary: A church in Vallaki and possible sanctuary for Ireena.
 source: Compiled from the adventure log, with a description written for the site
 ---

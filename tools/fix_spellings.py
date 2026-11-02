@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+from difflib import SequenceMatcher
 from pathlib import Path
 
 import yaml
@@ -27,6 +28,53 @@ DEFAULT_PATHS = [ROOT / "content" / "posts", ROOT / "content" / "wiki", ROOT / "
 SUFFIXES = {".md", ".json", ".yaml"}
 # Spans never touched: markdown link targets, bare URLs, and a post's slug and old-site address.
 PROTECTED = re.compile(r"\]\([^)]*\)|https?://\S+|^(?:slug|obsidian_portal_url):.*$", re.M)
+
+
+def load_keep(path: Path = SPELLINGS) -> set[str]:
+    """Near-spellings the table means (a pun, an in-story rename): never reported by near_misses."""
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {str(k) for k in (data.get("keep") or {})}
+
+
+def _words(name: str) -> list[str]:
+    name = name.replace("\u2019", "'").casefold()
+    name = re.sub(r"'s\b", "", name)
+    return re.findall(r"[^\W_]+", name)
+
+
+def _same_name(a: str, b: str) -> bool:
+    """One is a shorter or longer form of the other, or they differ only in spacing, hyphens,
+    quotes, a possessive or a plural."""
+    wa, wb = _words(a), _words(b)
+    if set(wa) <= set(wb) or set(wb) <= set(wa):
+        return True
+    ja, jb = "".join(wa), "".join(wb)
+    return ja.rstrip("s") == jb.rstrip("s")
+
+
+def near_misses(pages: dict[str, list[str]], keep=frozenset(), cutoff: float = 0.7) -> list[tuple[str, str, str]]:
+    """(page, alias, name) for each alias spelled almost, but not quite, like another name of the
+    same page: "Sarepool crossroads" for "Tser Pool Crossroads", "Velaki" for "Vallaki". Only the
+    words the two names don't share are compared, so "St." for "Saint" or "Count Strahd" for
+    "Lord" pass. pages maps a page to its names, title first."""
+    found = []
+    for page, names in pages.items():
+        for alias in names[1:]:
+            if alias in keep:
+                continue
+            close = []
+            for name in names:
+                if name == alias or _same_name(alias, name):
+                    continue
+                wa, wn = _words(alias), _words(name)
+                ours = "".join(w for w in wa if w not in wn)
+                theirs = "".join(w for w in wn if w not in wa)
+                ratio = SequenceMatcher(None, ours, theirs).ratio()
+                if ratio >= cutoff:
+                    close.append((ratio, name))
+            if close:
+                found.append((page, alias, max(close)[1]))
+    return sorted(found)
 
 
 def load_spellings(path: Path = SPELLINGS) -> dict[str, str]:

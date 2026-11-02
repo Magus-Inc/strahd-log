@@ -3,7 +3,6 @@ title: Anna Krezkova
 type: npc
 aliases:
 - Anna
-- Anna Krezkov
 summary: Dmitri's wife.
 source: Compiled from the adventure log, with a description written for the site
 ---

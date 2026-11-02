@@ -362,7 +362,7 @@
     "summary": "A woman at the Tser Pool camp curious about the party.",
     "facts": [
       {"text": "Asked many questions; Malron feared she served the shadow.", "post": "2024-04-16-tser-pool"},
-      {"text": "Told a tale of ravens and a Holy Symbol of Raven Kind.", "post": "2024-04-16-tser-pool"}
+      {"text": "Told a tale of ravens and a Holy Symbol of Ravenkind.", "post": "2024-04-16-tser-pool"}
     ]
   },
   {
@@ -378,7 +378,7 @@
   {
     "name": "Rudolph van Richten",
     "type": "npc",
-    "aliases": ["Rudolph van Richten", "Van Richten", "R V Richten", "Rictavio", "Ric Tavio", "Rictavio van Richten"],
+    "aliases": ["Rudolph van Richten", "Van Richten", "R V Richten", "Rictavio", "Rictavio", "Rictavio van Richten"],
     "summary": "A vampire hunter and scholar disguised in Vallaki as the carnival showman Rictavio.",
     "facts": [
       {"text": "A chest carved 'R V Richten' held silver bolts and holy water.", "post": "2024-04-02-we-meet-again-for-the-first-time"},
@@ -842,7 +842,7 @@
   {
     "name": "Vallaki",
     "type": "place",
-    "aliases": ["Vallaki", "Velaki"],
+    "aliases": ["Vallaki", "Vallaki"],
     "summary": "A walled town west of Barovia village ruled by a harsh Baron.",
     "facts": [
       {"text": "Some villagers fled here.", "post": "2024-02-13-barovia-barovia"},
@@ -853,7 +853,7 @@
   {
     "name": "Church of Saint Andral",
     "type": "place",
-    "aliases": ["St. Andrals Church"],
+    "aliases": ["St. Andral's Church"],
     "summary": "A church in Vallaki and possible sanctuary for Ireena.",
     "facts": [
       {"text": "Ismark suggested it as a sanctuary.", "post": "2024-03-26-leaving-village-barovia"},
@@ -882,7 +882,7 @@
   {
     "name": "Tser Pool",
     "type": "place",
-    "aliases": ["Test Pool", "Tser pool"],
+    "aliases": ["Tser Pool", "Tser pool"],
     "summary": "A lake west of Barovia village where Madam Eva's Vistani camp sits.",
     "facts": [
       {"text": "Madam Eva said her tent was here.", "post": "2024-02-27-rest-for-the-wicked"},
@@ -963,7 +963,7 @@
   {
     "name": "Vistani",
     "type": "faction",
-    "aliases": ["Vistana", "Vistano"],
+    "aliases": ["Vistana", "Vistana"],
     "summary": "Traveling people of Barovia with camps near Tser Pool and Vallaki.",
     "facts": [
       {"text": "Three Vistani were at the Blood on the Vine; Ismark warned some spy for Strahd.", "post": "2024-02-13-barovia-barovia"},
@@ -1067,7 +1067,7 @@
     ]
   },
   {
-    "name": "Holy Symbol of Raven Kind",
+    "name": "Holy Symbol of Ravenkind",
     "type": "item",
     "aliases": [],
     "summary": "A holy symbol mentioned in Eliza's tale.",

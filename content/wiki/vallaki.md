@@ -1,8 +1,6 @@
 ---
 title: Vallaki
 type: place
-aliases:
-- Velaki
 summary: A walled town west of Barovia village ruled by a harsh Baron.
 source: Compiled from the adventure log, with a description written for the site
 ---

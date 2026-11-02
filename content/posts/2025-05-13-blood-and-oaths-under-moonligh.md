@@ -1,5 +1,5 @@
 ---
-title: Blood and Oaths Under Moonligh
+title: Blood and Oaths Under Moonlight
 date: '2025-05-13T21:00:00-05:00'
 tagline: He doesn't force pain. He makes you choose it.
 slug: blood-and-oaths-under-moonligh

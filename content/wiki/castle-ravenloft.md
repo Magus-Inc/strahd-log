@@ -49,7 +49,7 @@ Strahd, Rahadin (wounded, not destroyed) and Ludmilla, the last of the three bri
 * Rahadin invited the party to dinner there. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Elvir died in a march on it. ([Wizard of Wines vineyard](/posts/wizard-of-wines-vineyard/))
 * A silver statuette there could cure the Abbot. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
-* Emil is imprisoned in its dungeons. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Emil is imprisoned in its dungeons. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * The party arrived for a reception with Strahd's court. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * The party stayed overnight in a guest tower and was forced to sleep. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Guarded by a 1,000-foot chasm and drawbridge; the party broke in through the servants' entrance. ([Unwelcome Guests](/posts/unwelcome-guests/))

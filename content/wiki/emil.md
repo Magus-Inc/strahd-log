@@ -15,14 +15,14 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-The werewolves' missing leader. Strahd and Baba Lysaga helped Kiril take him and lock him in Castle Ravenloft, and we swore to Zuleika to free him ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We found him in the Drowning Cells, broken and in a silver thorn collar whose key Volenta held ([Depths of Ravenloft](/posts/depths-of-ravenloft/)). We took it from her body and freed him, and he traveled with us after ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/), [The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).
+The werewolves' missing leader. Strahd and Baba Lysaga helped Kiril take him and lock him in Castle Ravenloft, and we swore to Zuleika to free him ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). We found him in the Drowning Cells, broken and in a silver thorn collar whose key Volenta held ([Depths of Ravenloft](/posts/depths-of-ravenloft/)). We took it from her body and freed him, and he traveled with us after ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/), [The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)).
 
 <!-- from-the-log -->
 ## From the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Was captured by Kiril and jailed in Ravenloft's dungeons. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Was captured by Kiril and jailed in Ravenloft's dungeons. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * The party planned to rescue him to break Strahd's alliance with the werewolves. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Was found in the Drowning Cells, exhausted and bound by a Silver Thorn Collar. ([Depths of Ravenloft](/posts/depths-of-ravenloft/))
 * Was freed with the key taken from Volenta. ([The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/))

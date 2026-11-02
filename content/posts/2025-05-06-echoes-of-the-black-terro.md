@@ -1,5 +1,5 @@
 ---
-title: Echoes of the Black Terro
+title: Echoes of the Black Terror
 date: '2025-05-06T21:00:00-05:00'
 tagline: The werewolf took one step too many
 slug: echoes-of-the-black-terro

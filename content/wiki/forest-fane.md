@@ -1,8 +1,6 @@
 ---
 title: Forest Fane
 type: place
-aliases:
-- Forest Fand
 summary: An ancient fane that could restore the Spear of the Huntress.
 source: Compiled from the adventure log
 ---
