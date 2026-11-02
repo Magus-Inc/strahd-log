@@ -502,6 +502,7 @@ body.deck-lock { overflow: hidden; }
 .prose details.log-notes > summary::marker { color: var(--accent); }
 .infobox dd a { color: var(--text); text-decoration: none; }
 .infobox dd a:hover, .infobox dd a:focus-visible { color: var(--accent-hi); text-decoration: underline; }
+.infobox dd a:hover .num, .infobox dd a:focus-visible .num { background: var(--accent); color: #fff; }
 /* A reader vote between pictures at the top of a wiki page: side by side, so the facts stay near */
 .infobox-picture .image-vote { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
 .infobox-picture .image-vote .vote-intro, .infobox-picture .image-vote .vote-status { grid-column: 1 / -1; margin: 0; font-size: 0.85rem; color: var(--muted); }

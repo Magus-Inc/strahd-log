@@ -1,4 +1,5 @@
 """The wiki page template: one layout for every wiki page (Chris, 2026-11-02, the Zorya page)."""
+import re
 from pathlib import Path
 
 import pytest
@@ -228,3 +229,18 @@ def test_the_wiki_writing_rules_live_in_dnd_scribe():
     """Chris, 2026-11-02: the writing rules are ours; this public repo keeps only the build."""
     assert not (ROOT / ".claude" / "skills" / "update-wiki").exists()
     assert "dnd-scribe's `update-wiki` skill" in (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+
+
+def test_facts_box_session_numbers_link_to_their_post(site):
+    """Chris, 2026-11-02: tapping the red session number in a facts box (Olfin's "First seen 2")
+    did nothing; only the title beside it was a link. The number and title are one link now."""
+    html = page(site, "olfin-darning")
+    box = html[html.index('class="infobox"'):html.index("</aside>")]
+    assert '<a href="/posts/entering-durst-manor/"><span class="num">2</span> Entering Durst Manor</a>' in box
+    for f in sorted((site / "wiki").glob("*/index.html")):
+        text = f.read_text(encoding="utf-8")
+        if 'class="infobox"' not in text:
+            continue
+        box = text[text.index('class="infobox"'):text.index("</aside>")]
+        loose = re.findall(r'(?<!">)<span class="num">', box)
+        assert not loose, f"{f.parent.name}: a session number in the facts box is not inside its link"
