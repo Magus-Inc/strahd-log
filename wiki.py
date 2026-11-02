@@ -13,6 +13,8 @@ import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import yaml
+
 # Display order and headings for the wiki index.
 TYPES = {
     "character": "Player characters",
@@ -136,6 +138,39 @@ def fold(name: str) -> str:
     return htmllib.unescape(name).replace("’", "'").replace("‘", "'")
 
 
+def phrase_key(text: str) -> str:
+    """Phrases match with a small or capital first letter ("the castle", "The castle")."""
+    return text[:1].lower() + text[1:]
+
+
+def split_visible(text: str, start: int, end: int) -> tuple[str, str, str]:
+    """Split matched HTML text at visible-character offsets (an entity such as &rsquo; is one character)."""
+    if start == 0 and end >= len(fold(text)):
+        return "", text, ""
+    cuts, seen, i = {}, 0, 0
+    while i <= len(text):
+        cuts.setdefault(seen, i)
+        if i == len(text):
+            break
+        m = re.match(r"&#?\w+;", text[i:])
+        i += len(m.group(0)) if m else 1
+        seen += 1
+    return text[:cuts[start]], text[cuts[start]:cuts[end]], text[cuts[end]:]
+
+
+def load_phrases(path: Path, pages: list[WikiPage]) -> dict[str, list[str]]:
+    """data/described-places.yaml: page slug -> phrases that can only mean that place."""
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    phrases = data.get("phrases") or {}
+    slugs = {p.slug for p in pages}
+    for slug in phrases:
+        if slug not in slugs:
+            raise ValueError(f"{path.name}: no wiki page {slug!r}")
+    return {slug: [str(t) for t in texts] for slug, texts in phrases.items()}
+
+
 def name_pattern(name: str) -> str:
     parts = []
     for ch in name:
@@ -146,11 +181,23 @@ def name_pattern(name: str) -> str:
 class Linker:
     """Finds wiki names in rendered HTML and links the first mention of each page."""
 
-    def __init__(self, pages: list[WikiPage]):
+    def __init__(self, pages: list[WikiPage], phrases: dict[str, list[str]] | None = None):
         self.by_name = {fold(name): page for page in pages for name in page.names}
-        names = sorted(self.by_name, key=len, reverse=True)  # longest first: "Rose Durst" before "Rose"
-        alternation = "|".join(name_pattern(n) for n in names)
-        self.pattern = re.compile(rf"(?<!\w)({alternation})(?!\w)") if names else None
+        by_slug = {p.slug: p for p in pages}
+        # Phrases (data/described-places.yaml) name a place without its name: "the [castle]" links "castle"
+        # wherever it follows "the". They match with a capital first letter too, and never show as other names.
+        self.phrases: dict[str, tuple[WikiPage, int, int]] = {}
+        for slug, texts in (phrases or {}).items():
+            for text in texts:
+                plain = text.replace("[", "").replace("]", "")
+                start = text.find("[") if "[" in text else 0
+                end = text.find("]") - 1 if "]" in text else len(plain)
+                self.phrases[phrase_key(fold(plain))] = (by_slug[slug], start, end)
+        patterns = [(len(n), name_pattern(n)) for n in self.by_name]
+        patterns += [(len(k), f"[{k[0].upper()}{k[0]}]" + name_pattern(k[1:])) for k in self.phrases]
+        patterns.sort(key=lambda lp: lp[0], reverse=True)  # longest first: "Rose Durst" before "Rose"
+        alternation = "|".join(p for _, p in patterns)
+        self.pattern = re.compile(rf"(?<!\w)({alternation})(?!\w)") if patterns else None
         self.by_href = {f"/wiki/{p.slug}/": p for p in pages}
 
     def link(self, html: str, self_slug: str | None = None, each_section: str | None = None) -> tuple[str, set[str]]:
@@ -180,18 +227,28 @@ class Linker:
                 continue
 
             def replace(match: re.Match) -> str:
-                page = self.by_name[fold(match.group(1))]
+                text = match.group(0)
+                page, start, end = self.found(text)
                 if page.slug == self_slug:
-                    return match.group(0)
+                    return text
                 mentioned.add(page.slug)
                 if skip_depth or page.slug in linked:
-                    return match.group(0)
+                    return text
                 linked.add(page.slug)
                 title = htmllib.escape(page.summary or page.title, quote=True)
-                return f'<a class="wiki-link" href="/wiki/{page.slug}/" title="{title}">{match.group(0)}</a>'
+                # The linked words of a phrase, in the text as written (entities and all).
+                head, words, tail = split_visible(text, start, end)
+                return f'{head}<a class="wiki-link" href="/wiki/{page.slug}/" title="{title}">{words}</a>{tail}'
 
             out.append(self.pattern.sub(replace, token))
         return "".join(out), mentioned
+
+    def found(self, text: str) -> tuple[WikiPage, int, int]:
+        """The page a matched name or phrase names, and which of its visible characters to link."""
+        key = fold(text)
+        if key in self.by_name:
+            return self.by_name[key], 0, len(key)
+        return self.phrases[phrase_key(key)]
 
     def style_hand_link(self, tag: str) -> str:
         """A link written by hand to a wiki page ("the [werewolves' cave](/wiki/lake-baratok-cave/)") looks
