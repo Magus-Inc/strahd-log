@@ -2,25 +2,6 @@
 {% import "_badges.html" as badges with context %}
 {% set section = "chronicle" %}
 {% block content %}
-{% if latest %}
-    <section class="hero">
-      <p class="eyebrow">Latest session &middot; <time datetime="{{ latest.date.isoformat() }}">{{ latest.date | nice_date }}</time></p>
-      <h1><a href="{{ base }}{{ latest.path }}">{{ latest.title }}</a></h1>
-{% if latest.tagline %}
-      <p class="lede tagline tagline-{{ post_style['tagline-look'] }}">{{ latest.tagline }}</p>
-{% endif %}
-{% if latest.glance %}
-      <ul class="glance-list">
-{% for item in latest.glance[:5] %}
-        <li>{{ item | rebase | safe }}</li>
-{% endfor %}
-      </ul>
-{% elif not (latest.tagline and post_style['card-tagline'] == "instead") %}
-      <p class="lede">{{ latest.teaser }}</p>
-{% endif %}
-      <p class="hero-actions"><a class="button" href="{{ base }}{{ latest.path }}">Read the session</a> <span class="muted">{{ latest.minutes }} min read{{ badges.meta_tags(latest) }}</span></p>
-    </section>
-{% endif %}
     <section class="chronicle" aria-labelledby="chronicle-title">
       <div class="section-head">
         <h2 id="chronicle-title">The chronicle</h2>
@@ -37,8 +18,8 @@
       <h3 class="year" id="y{{ year }}">{{ year }}</h3>
       <ol class="card-grid">
 {% for post in posts %}
-        <li class="card session-card">
-          <time class="chip date" datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time>
+        <li class="card session-card{% if post is sameas latest %} latest{% endif %}">
+          <p class="card-chips">{% if post is sameas latest %}<span class="chip latest-chip">Latest</span> {% endif %}<time class="chip date" datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></p>
           <h4><a class="stretched" href="{{ base }}{{ post.path }}">{{ post.title }}</a></h4>
 {% if post.tagline and post_style['card-tagline'] != "hide" %}
           <p class="card-tagline">{{ post.tagline }}</p>

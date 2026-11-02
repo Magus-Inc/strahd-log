@@ -61,7 +61,7 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
 
     home = (out / "index.html").read_text(encoding="utf-8")
     assert home.index("Third &amp; Last") < home.index("Second: Wolves") < home.index("First Night")
-    assert "Latest session" in home and "September 1, 2026" in home
+    assert ">Latest<" in home and "September 1, 2026" in home
     assert 'id="y2024"' in home  # older sessions grouped by year
     assert "Wolves love them" in (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
 
@@ -152,6 +152,10 @@ def test_every_image_in_posts_and_wiki_has_alt_text(real_site):
     assert not bare, sorted(bare)
 
 
+def latest_card(index_html: str) -> str:
+    return re.search(r'<li class="card session-card latest">.*?</li>', index_html, re.S).group(0)
+
+
 def build_with_style(content, tmp_path, settings: str) -> Path:
     style = tmp_path / "post-style.yaml"
     style.write_text(settings, encoding="utf-8")
@@ -201,15 +205,14 @@ def test_chronicle_cards_can_show_the_tagline_instead_of_the_teaser(content, tmp
     assert 'class="teaser"' in chronicle_card(index, "first")  # a post without a tagline keeps its teaser
 
 
-def test_latest_session_drops_the_summary_when_cards_do(content, tmp_path):
-    """Chris (2026-11-02): the summary is not a summary (a random first line) and only makes scrolling
-    longer, so with card-tagline: instead the latest-session hero shows the tagline and no summary either."""
-    second = content / "2026-09-01-third.md"
-    second.write_text(second.read_text(encoding="utf-8").replace("title: Third & Last\n", "title: Third & Last\ntagline: Last one\n"),
-                      encoding="utf-8")
-    hero = build_with_style(content, tmp_path, "card-tagline: instead\n") / "index.html"
-    hero = re.search(r'<section class="hero">.*?</section>', hero.read_text(encoding="utf-8"), re.S).group(0)
-    assert "Last one" in hero and hero.count('class="lede') == 1
+def test_newest_session_is_the_first_card_not_a_separate_box(content, tmp_path):
+    """Chris (2026-11-02): no "latest session" box; the newest session leads the chronicle list."""
+    index = (build_with_style(content, tmp_path, "") / "index.html").read_text(encoding="utf-8")
+    assert '<section class="hero"' not in index
+    cards = re.findall(r'<li class="card session-card[^"]*">.*?</li>', index, re.S)
+    assert len(cards) == 3 and "/posts/third/" in cards[0]
+    assert 'class="card session-card latest"' in cards[0] and ">Latest<" in cards[0]
+    assert ">Latest<" not in "".join(cards[1:])
 
 
 def test_duplicate_slugs_fail(tmp_path):
@@ -576,8 +579,8 @@ def test_home_cards_mark_sessions_with_slides(badge_site):
     assert "slides-tag" not in card_for(home, "No Deck")
 
 
-def test_latest_session_hero_shows_its_slides(badge_site):
-    hero = read(badge_site / "index.html").split('<section class="chronicle"')[0]
+def test_latest_session_card_shows_its_slides(badge_site):
+    hero = latest_card(read(badge_site / "index.html"))
     assert "New Deck" in hero and "3 slides" in hero and "slides-tag" in hero
 
 

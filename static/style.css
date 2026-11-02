@@ -89,6 +89,9 @@ main { max-width: 74rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
 .tagline-quote { font-family: var(--serif); font-style: italic; font-size: 1.25rem; line-height: 1.4; color: #e8dfd6;
   border-left: 3px solid var(--accent); padding-left: 0.8rem; }
 .tagline-hand { font-family: var(--hand); font-weight: 500; font-size: 1.7rem; line-height: 1.2; color: #e0a3ae; transform: rotate(-1deg); }
+.card-chips { margin: 0; display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.chip.latest-chip { color: #fff; background: var(--accent-deep); border-color: var(--accent); }
+.session-card.latest { border-color: rgba(200, 33, 63, 0.55); }
 .card-tagline { margin: 0 0 0.35rem; font-family: var(--serif); font-style: italic; font-size: 1rem; line-height: 1.35; color: #e8dfd6; }
 
 .button {

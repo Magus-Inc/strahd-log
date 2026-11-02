@@ -528,7 +528,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     env.globals.update(site_card=shares.pop(None), card_size=(share.CARD_W, share.CARD_H))
 
     years: dict[int, list[Post]] = {}
-    for post in posts[1:]:
+    for post in posts:  # the newest leads the list, marked Latest (no separate box; Chris, 2026-11-02)
         years.setdefault(post.date.year, []).append(post)
     write(out_dir / "index.html",
           env.get_template("index.html").render(share_page={"path": ""}, latest=posts[0] if posts else None, years=list(years.items()),
