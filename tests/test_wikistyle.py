@@ -222,10 +222,3 @@ def test_a_picture_vote_at_the_top_sits_side_by_side():
 def test_agents_md_says_where_the_wiki_layout_lives():
     text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     assert "data/wiki-style.yaml" in text and "wikistyle.py" in text
-
-
-def test_update_wiki_says_rules_sections_come_only_from_the_dm():
-    text = " ".join((ROOT / ".claude" / "skills" / "update-wiki" / "SKILL.md").read_text(encoding="utf-8").split())
-    assert "## Rules sections" in text
-    assert "only from what the DM gave us" in text and "Never from the book" in text
-    assert "`What it does`" in text and "after Malron’s Account" in text

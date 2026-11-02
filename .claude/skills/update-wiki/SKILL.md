@@ -72,12 +72,3 @@ with its name in bold, and a `data/scene-headings.yaml` entry. Every name a read
 needs a wiki page: the build links its first mention in every section (Chris, 2026-11-02), and
 Notable NPCs entries should always come out linked, so a missing page shows as plain text there.
 
-
-## Rules sections
-
-A page gets a rules section (`What it does` for an item, `What she is` / `What he is` for a
-creature or person) only from what the DM gave us: a stat block or item text Ryan shared, or rules
-he read out at the table. Never from the book, which the DM changes. Summarize it in a few bullets
-with the date he shared it. It says what the thing can do; the story and the adventure-log notes
-say what it did, so don't repeat events there. Write it anywhere on the page: the build shows it
-after Malron’s Account (`extras: after-story` in `data/wiki-style.yaml`, Chris, 2026-11-02).
