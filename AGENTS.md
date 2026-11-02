@@ -8,8 +8,11 @@
 - No external JavaScript on the site. It must stay readable on a phone.
 - Wiki text above `<!-- from-the-log -->` is ours; only the section after it is generated. Tools
   add facts there, each citing the post it came from. Above it, agents may write and extend a
-  `## Description` in Malron's words from the posts (see `.claude/skills/update-wiki`), but never
-  reword text someone else wrote, such as the Obsidian Portal pages.
+  `## Description` in Malron's words from the posts, and for new people and places the DM's
+  description from the session transcript (the rules are dnd-scribe's `update-wiki` skill), but never
+  reword text someone else wrote, such as the Obsidian Portal pages. The one exception (Chris,
+  2026-11-02): a few loose Obsidian Portal lines left under the story, or a pasted `## As “…”` section
+  from a merge, are folded into the story with every fact kept, so the page reads as one article.
 - Wiki aliases are linked automatically everywhere, so an alias must not be an ordinary word
   ("Abbot", "Manor" in another town); `tools/wiki_from_extract.py` keeps a list of words to refuse.
 - Posts are the players' own writing. Fix conversion problems in `tools/import_op.py`, not by
@@ -35,3 +38,12 @@
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.
 - The map (`barovia_map.py`) is our own drawing. Never trace or embed a published Curse of Strahd
   map in the repo; a licensed background, if we ever get one, is an overlay swap, not a commit here.
+- One layout for every wiki page (Chris, 2026-11-02): `data/wiki-style.yaml` and `wikistyle.py`
+  lay out the rendered page at build time: the first picture at the top in a facts box (other
+  names, first and last session seen), the `## Description` shown as "Malron’s Account", any stat
+  block after it, and "From the adventure log" folded under a story. Keep writing pages as before
+  (`## Description`, picture inside it); change the look in the yaml, not in the pages.
+- Every AI picture we host keeps its full-size original (Chris, 2026-11-02): the page shows the
+  smaller copy in `static/images/` (720px wide portraits, 1100px landscapes) and the original
+  Gemini picture, full size as a JPEG, goes in `static/images/full/` under the same name. The build gives the picture a
+  `data-full` address and the picture viewer loads it only when a reader taps the picture.

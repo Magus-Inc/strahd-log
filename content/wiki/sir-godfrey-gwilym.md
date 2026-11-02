@@ -2,7 +2,7 @@
 title: Sir Godfrey Gwilym
 type: npc
 summary: A revenant knight guarding the Tser Falls bridge.
-source: Written on Obsidian Portal
+source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/sir-godfried-william
 ---
 
@@ -14,9 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/sir-g
 
 *Written from the session logs, in Malron's words.*
 
-A revenant knight of the Order of the Silver Dragon, banished by his commander, who guarded the bridge at Tser Falls and asked whether we served Strahd ([Dream Pies](/posts/dream-pies/)). At Argynvostholt he told us how the Order fell ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). When Argynvost rose he was restored to the golden-haired knight he had been, knelt to us, and told us what he knew of Kasimir and the Amber Temple ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
-
-Sir Godfrey Gwilym is an honorable undead Revenant.
+An honorable revenant, a knight of the Order of the Silver Dragon banished by his commander, Vladimir Horngaard, who guarded the bridge at Tser Falls and asked whether we served Strahd ([Dream Pies](/posts/dream-pies/)). At Argynvostholt he told us how the Order fell ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). When Argynvost rose he was restored to the golden-haired knight he had been, knelt to us, and told us what he knew of Kasimir and the Amber Temple ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log

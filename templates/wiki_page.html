@@ -12,10 +12,32 @@
 {% if page.summary %}
         <p class="lede">{{ page.summary }}</p>
 {% endif %}
-{% if page.aliases or page.player %}
+{% if (page.aliases or page.player) and not page.facts %}
         <p class="muted">{% if page.player %}Played by {{ page.player }}{% endif %}{% if page.player and page.aliases %} &middot; {% endif %}{% if page.aliases %}Also known as {{ page.aliases | join(", ") }}{% endif %}</p>
 {% endif %}
+{% if page.top_picture and not page.facts %}
+        <div class="wiki-hero prose">
+{{ page.top_picture | rebase | safe }}
+        </div>
+{% endif %}
       </header>
+{% if page.facts or (page.top_picture and wiki_style.top == "infobox") %}
+      <aside class="infobox" aria-label="At a glance">
+{% if page.top_picture %}
+        <div class="infobox-picture prose">
+{{ page.top_picture | rebase | safe }}
+        </div>
+{% endif %}
+{% if page.facts %}
+        <dl>
+{% for label, value in page.facts %}
+          <div><dt>{{ label }}</dt>
+          <dd>{% if value is sequence and value is not string %}<span class="num">{{ value[0] }}</span> <a href="{{ base }}{{ value[2] }}">{{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd></div>
+{% endfor %}
+        </dl>
+{% endif %}
+      </aside>
+{% endif %}
       <div class="prose">
 {{ body | safe }}
       </div>
@@ -23,7 +45,7 @@
       <section class="where-we-were">
         <h2>On the map</h2>
         <p class="muted">{% if place.slug != page.slug %}In <a href="{{ base }}{{ place.path }}">{{ place.title }}</a> &middot; {% endif %}<a href="{{ base }}map/">Open the map</a></p>
-        {{ barovia([place], label="Where " ~ page.title ~ " is") }}
+        {{ barovia([place], label="Where " ~ page.title ~ " is", focus=place) }}
       </section>
 {% endif %}
 {% if page.mentioned_in %}

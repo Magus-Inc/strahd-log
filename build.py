@@ -35,6 +35,7 @@ import barovia_map
 import poststyle
 import share
 import wiki
+import wikistyle
 
 ROOT = Path(__file__).resolve().parent
 SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
@@ -210,7 +211,7 @@ def render_markdown(text: str) -> str:
 def rebase(html: str, prefix: str) -> str:
     """Point root-relative links in rendered Markdown ("/images/x.png") at prefix ("/strahd-log/" or
     an absolute site address), so post bodies can use /images/... whatever the base path."""
-    return re.sub(r'((?:src|href)=")/(?!/)', lambda m: m.group(1) + prefix, html)
+    return re.sub(r'((?:src|href|data-full)=")/(?!/)', lambda m: m.group(1) + prefix, html)
 
 
 # Where a section starts for relink: every heading in the On this page box, or only the big ones.
@@ -232,7 +233,8 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(render_markdown(page.body_md))), self_slug=page.slug)
+        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(
+            article.full_size(render_markdown(page.body_md), ROOT / "static"))), self_slug=page.slug)
 
 
 def apply_style(posts: list[Post], style: dict, scenes: dict | None = None) -> None:
@@ -271,6 +273,15 @@ def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         extra = [by_slug[s] for s in cited if s in by_slug and s not in known]
         if extra:
             page.mentioned_in = sorted([*page.mentioned_in, *extra], key=lambda p: (p.date, p.slug), reverse=True)
+
+
+def apply_wiki_style(pages: list[wiki.WikiPage], style: dict) -> None:
+    """One layout for every wiki page (see wikistyle.py and data/wiki-style.yaml)."""
+    for page in pages:
+        styled = wikistyle.apply(page.cited_html, style, page.type)
+        page.cited_html, page.top_picture = styled.html, styled.picture
+        page.facts = wikistyle.facts(page) if style["top"] == "infobox" and (
+            style["kinds"] == "all" or page.type in wikistyle.PEOPLE) else []
 
 
 def find_slides(posts: list[Post], static_dir: Path) -> None:
@@ -364,7 +375,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(set(post.listed) or post.mentions, pages) if post.show_cast else []
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(post.html), owners)), post.decks, post.slides_at)))
+            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(article.full_size(post.html, ROOT / "static")), owners)), post.decks, post.slides_at)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:
@@ -478,7 +489,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
           site_url: str | None = None, base_path: str | None = None,
           wiki_dir: Path | None = None, map_file: Path | None = None,
           slides_static: Path | None = None, style_file: Path | None = None,
-          party_file: Path | None = None) -> list[Post]:
+          party_file: Path | None = None, wiki_style_file: Path | None = None) -> list[Post]:
     site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
     base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
     posts = load_posts(content_dir)
@@ -489,12 +500,15 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     number_sessions(posts)
     link_wiki(posts, pages, style["relink"])
     cite_sessions(posts, pages)
+    wiki_style = wikistyle.load_style(wiki_style_file or data_dir / "wiki-style.yaml")
+    apply_wiki_style(pages, wiki_style)
     find_slides(posts, slides_static or ROOT / "static")
     apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
     spots = barovia_map.load_spots(map_file or content_dir.parent.parent / "data" / "map.yaml", places) if places else {}
+    landmarks = barovia_map.load_landmarks(map_file or content_dir.parent.parent / "data" / "map.yaml", pages, places) if places else {}
     visits = barovia_map.load_visits(map_dir / "trail.yaml", places, spots) if places else {}
     legs = barovia_map.trail(posts, places, parent, pages, visits, spots) if places else []
     sprites = barovia_map.load_sprites(map_file or content_dir.parent.parent / "data" / "map.yaml",
@@ -517,6 +531,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
             tags.setdefault(tag, []).append(post)
     env.globals["has_tags"] = bool(tags)
     env.globals["post_style"] = style
+    env.globals["wiki_style"] = wiki_style
     env.globals["map_sprites"] = sprites
     env.globals["all_places"] = places
 
@@ -553,7 +568,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         write(out_dir / "wiki" / page.slug / "index.html",
               env.get_template("wiki_page.html").render(
                   page=page, share_page=shares[page.path], body=rebase(page.cited_html, base),
-                  place=places.get(parent.get(page.slug, "")) if places else None))
+                  place=(places.get(parent.get(page.slug, "")) or landmarks.get(page.slug)) if places else None))
     write(out_dir / "search" / "index.html", env.get_template("search.html").render(share_page={"path": "search/"}))
     if places:
         write(out_dir / "map" / "barovia.svg",
