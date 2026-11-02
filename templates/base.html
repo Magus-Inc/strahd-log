@@ -103,29 +103,55 @@
       });
     });
   </script>
-  <dialog class="zoom" aria-label="Picture, full size"><button class="zoom-close" type="button" aria-label="Close picture">&times;</button><p></p></dialog>
+  <dialog class="zoom" aria-label="Picture, full size"><button class="zoom-close" type="button" aria-label="Close picture">&times;</button><p></p><span class="zoom-hint">Scroll or pinch to zoom, drag to look around</span></dialog>
   <script data-zoom>
     // Tap a picture to see it full size (Chris, 2026-11-02). Slide decks have their own full screen,
     // and map sprites and list thumbnails are not pictures to study, so they are left alone. A post's
     // AI picture links to its wiki page: the viewer keeps that link. Without the script, links still work.
+    // In the viewer the picture fills the screen; scroll, pinch or tap to zoom in further, drag to look
+    // around, and tap outside the picture, the X or Esc to close.
     (function () {
       var ZOOMABLE = ".prose img, .infobox img, .wiki-hero img, .image-grid img";
+      var MAX_ZOOM = 6, TAP_ZOOM = 2.5;
       var box = document.querySelector("dialog.zoom");
       if (!box || !box.showModal) return;
-      var big = document.createElement("img"), note = box.querySelector("p");
+      var big = document.createElement("img"), note = box.querySelector("p"), hint = box.querySelector(".zoom-hint");
       box.insertBefore(big, note);
+      var s = 1, tx = 0, ty = 0, pointers = {}, pinch = null, moved = false;
+      function draw() {
+        big.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + s + ")";
+        big.style.cursor = s > 1 ? "grab" : "zoom-in";
+      }
+      function fit() {  // as big as the screen allows, even past the file's own size
+        var w = big.naturalWidth, h = big.naturalHeight;
+        if (!w || !h) return;
+        var k = Math.min(window.innerWidth * 0.96 / w, window.innerHeight * 0.96 / h);
+        big.style.width = Math.round(w * k) + "px"; big.style.height = Math.round(h * k) + "px";
+      }
+      function zoomTo(next, cx, cy) {  // keep the point under the cursor or fingers still
+        next = Math.max(1, Math.min(MAX_ZOOM, next));
+        var r = big.getBoundingClientRect(), left = r.left - tx, top = r.top - ty;
+        var lx = (cx - left - tx) / s, ly = (cy - top - ty) / s;
+        s = next; tx = cx - left - lx * s; ty = cy - top - ly * s;
+        if (s === 1) { tx = 0; ty = 0; }
+        draw();
+      }
       function open(img) {
+        s = 1; tx = 0; ty = 0; draw();
+        big.style.width = big.style.height = "";
+        big.onload = fit;
         big.src = img.currentSrc || img.src; big.alt = img.alt;
         note.textContent = img.alt || "";
         var link = img.closest("a.ai-picture");
         if (link) {
           var a = document.createElement("a");
           a.href = link.href; a.textContent = "See " + (link.title || "this picture in the wiki");  // title: "<name> in the wiki"
-          if (note.textContent) note.appendChild(document.createTextNode(" \u00b7 "));
+          if (note.textContent) note.appendChild(document.createTextNode(" · "));
           note.appendChild(a);
         }
         note.hidden = !note.textContent;
         box.showModal();
+        if (big.complete) fit();
       }
       document.querySelectorAll(ZOOMABLE).forEach(function (img) {
         if (img.closest(".deck, .map, .pic-thumb")) return;
@@ -136,7 +162,48 @@
           e.preventDefault(); open(img);
         });
       });
+      box.addEventListener("wheel", function (e) {
+        e.preventDefault();
+        zoomTo(s * Math.exp(-e.deltaY * (e.deltaMode ? 0.05 : 0.002)), e.clientX, e.clientY);
+      }, { passive: false });
+      big.addEventListener("pointerdown", function (e) {
+        pointers[e.pointerId] = { x: e.clientX, y: e.clientY }; moved = false;
+        big.setPointerCapture(e.pointerId);
+        var ids = Object.keys(pointers);
+        if (ids.length === 2) {
+          var p = pointers[ids[0]], q = pointers[ids[1]];
+          pinch = { d: Math.hypot(p.x - q.x, p.y - q.y), s: s };
+        }
+        e.preventDefault();
+      });
+      big.addEventListener("pointermove", function (e) {
+        var last = pointers[e.pointerId];
+        if (!last) return;
+        var dx = e.clientX - last.x, dy = e.clientY - last.y;
+        if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+        pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+        var ids = Object.keys(pointers);
+        if (ids.length === 2 && pinch) {
+          var p = pointers[ids[0]], q = pointers[ids[1]];
+          zoomTo(pinch.s * Math.hypot(p.x - q.x, p.y - q.y) / pinch.d, (p.x + q.x) / 2, (p.y + q.y) / 2);
+        } else if (ids.length === 1 && s > 1) {
+          tx += dx; ty += dy; draw();
+        }
+      });
+      function lift(e) {
+        delete pointers[e.pointerId];
+        if (Object.keys(pointers).length < 2) pinch = null;
+      }
+      big.addEventListener("pointerup", lift);
+      big.addEventListener("pointercancel", lift);
+      big.addEventListener("click", function (e) {  // a tap zooms in where you tapped, a second tap back out
+        e.stopPropagation();
+        if (moved) return;
+        zoomTo(s > 1 ? 1 : TAP_ZOOM, e.clientX, e.clientY);
+        if (hint) hint.hidden = true;
+      });
       box.addEventListener("click", function (e) { if (e.target.tagName !== "A") box.close(); });
+      window.addEventListener("resize", function () { if (box.open) { s = 1; tx = ty = 0; draw(); fit(); } });
     })();
   </script>
 {% if counter %}

@@ -506,7 +506,9 @@ img[data-zoomable] { cursor: zoom-in; }
 dialog.zoom { max-width: none; max-height: none; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; background: rgba(8, 6, 6, 0.97); color: var(--text); }
 dialog.zoom::backdrop { background: rgba(8, 6, 6, 0.97); }
 dialog.zoom[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.7rem; }
-dialog.zoom img { display: block; max-width: 96vw; max-height: 90vh; width: auto; height: auto; object-fit: contain; border-radius: var(--radius); cursor: zoom-out; }
-dialog.zoom p { margin: 0; padding: 0 1rem; max-width: 60rem; text-align: center; font-size: 0.9rem; color: var(--muted); }
+dialog.zoom { overflow: hidden; }
+dialog.zoom img { display: block; max-width: 96vw; max-height: 96vh; width: auto; height: auto; transform-origin: 0 0; touch-action: none; user-select: none; -webkit-user-drag: none; border-radius: var(--radius); cursor: zoom-in; position: relative; z-index: 1; }
+dialog.zoom .zoom-hint { position: fixed; z-index: 2; top: 1.1rem; left: 1rem; right: 4rem; font-size: 0.75rem; color: var(--faint); pointer-events: none; }
+dialog.zoom p { position: fixed; z-index: 2; bottom: 1.6rem; left: 50%; transform: translateX(-50%); width: max-content; max-width: min(60rem, calc(100vw - 2rem)); margin: 0; padding: 0.35rem 0.8rem; border-radius: var(--radius); background: rgba(8, 6, 6, 0.8); text-align: center; font-size: 0.9rem; color: var(--muted); }
 dialog.zoom a { color: var(--accent-hi); }
-dialog.zoom .zoom-close { position: fixed; top: 0.6rem; right: 0.8rem; width: 2.6rem; height: 2.6rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+dialog.zoom .zoom-close { position: fixed; z-index: 3; top: 0.6rem; right: 0.8rem; width: 2.6rem; height: 2.6rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 1.5rem; line-height: 1; cursor: pointer; }

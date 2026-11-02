@@ -55,3 +55,17 @@ def test_infobox_picture_is_full_width_on_desktop_with_the_facts_below():
     assert "grid-template-columns: 17rem 1fr" not in CSS
     assert re.search(r"\.infobox-picture img \{[^}]*max-height: 80vh", CSS)
     assert re.search(r"\.infobox dl \{[^}]*repeat\(auto-fit", CSS)
+
+
+def test_the_viewer_zooms_in_with_scroll_pinch_and_tap_and_pans_by_dragging():
+    """Chris, 2026-11-02: "clicking barely makes them bigger and scrolling once clicked won't zoom
+    in further". The picture opens as big as the screen allows, then zooms further."""
+    script = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
+    zoom = script[script.index("<script data-zoom>"):]
+    zoom = zoom[:zoom.index("</script>")]
+    assert '"wheel"' in zoom and "passive: false" in zoom      # scroll zooms instead of scrolling
+    assert '"pointerdown"' in zoom and '"pointermove"' in zoom  # drag to pan, two fingers to pinch
+    assert "MAX_ZOOM" in zoom and "TAP_ZOOM" in zoom            # a tap zooms in, a second tap back out
+    assert "naturalWidth" in zoom  # opens fitted to the screen, even past the file's own size
+    assert re.search(r"dialog\.zoom img \{[^}]*touch-action: none", CSS)  # the page doesn't pinch instead
+    assert "Scroll or pinch to zoom" in script
