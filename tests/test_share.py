@@ -230,11 +230,9 @@ def test_list_pages_share_the_site_card(site, path, title):
 
 # --- the real blog ----------------------------------------------------------------------------
 
-@pytest.fixture(scope="module")
-def real_site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("share") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
+@pytest.fixture
+def real_site(real_build):
+    return real_build.out
 
 
 def real_pages(out: Path) -> list[Path]:

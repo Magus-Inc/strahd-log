@@ -84,12 +84,10 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
     assert feed.find(f"{ATOM}updated").text == "2026-09-01T17:00:00-05:00"
 
 
-@pytest.fixture(scope="module")
-def real_site(tmp_path_factory):
-    """The whole blog, built from the repo's own posts, wiki and map."""
-    out = tmp_path_factory.mktemp("site") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
+@pytest.fixture
+def real_site(real_build):
+    """The whole blog, built from the repo's own posts, wiki and map (once per run, conftest.py)."""
+    return real_build.out
 
 
 def test_every_link_and_image_on_the_real_site_resolves(real_site):
