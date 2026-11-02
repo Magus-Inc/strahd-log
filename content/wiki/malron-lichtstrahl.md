@@ -3,8 +3,6 @@ title: Malron Lichtstrahl
 type: character
 aliases:
 - Malron
-- Malon
-- Marlon
 summary: Reborn Cleric
 narrator: true
 player: Christopher O’Toole
@@ -24,7 +22,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 Human by birth, Malron is now Reborn: a resurrection gone wrong brought him back with an ancient elf spirit sharing his body.
 
-Malron has been a cleric of Lathander for most of their adventuring life. He served in an order of clerics, under the tutelage of a Dwarven priest of Latander. In the early years of their service to the order, Malron was tasked with clearing out a crypt on behalf of a wealthy benefactor. Malron went into the crypt with a team of other followers of Lathander, but became separated at one point and was snared in the web of a Giant Spider where he became poisoned and knocked unconscious. Malron’s party only discovered the spider many hours later, and his body only after it fell out of the burning webs it had been snared in. Luckily Malron’s mentor was present and was able to cast Resurection on Marlon’s’ body, unfortunately Malron wasn’t actually dead, just poisoned and unconscious with some burns, and even more unfornuately an ancient spirit in the crypt took advantage and entered Malron’s body. A struggle for control ensued, but Malron’s will was strong enough to endure and retain control.
+Malron has been a cleric of Lathander for most of their adventuring life. He served in an order of clerics, under the tutelage of a Dwarven priest of Latander. In the early years of their service to the order, Malron was tasked with clearing out a crypt on behalf of a wealthy benefactor. Malron went into the crypt with a team of other followers of Lathander, but became separated at one point and was snared in the web of a Giant Spider where he became poisoned and knocked unconscious. Malron’s party only discovered the spider many hours later, and his body only after it fell out of the burning webs it had been snared in. Luckily Malron’s mentor was present and was able to cast Resurection on Malron’s body, unfortunately Malron wasn’t actually dead, just poisoned and unconscious with some burns, and even more unfornuately an ancient spirit in the crypt took advantage and entered Malron’s body. A struggle for control ensued, but Malron’s will was strong enough to endure and retain control.
 
 Over the years Malron learned that there were other after effects of the Resurection gone wrong. He found himself able to go long stretches without feeling thirst or hunger, and even discovered no need to take a breath when going for a dive. The soul that cohabitates Malron’s body is still present, and Malron believes it to be a long dead Elf, as he’s suddenly found himself able to understand Elvish and Sylvan.
 

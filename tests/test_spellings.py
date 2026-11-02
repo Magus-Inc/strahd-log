@@ -28,6 +28,15 @@ def test_fix_text_replaces_whole_words_longest_first():
     assert counts == {"Davien Warningkoff": 1, "Davien": 1, "Kaven": 1}
 
 
+
+def test_player_characters_are_spelled_like_their_wiki_pages():
+    """Chris, 2026-11-02: the 13 Aug 2024 post called Shabasta "Shivasta", and Crusty was "Krusty"."""
+    spellings = SPELLINGS
+    for wrong, right in (("Shivasta", "Shabasta"), ("Krusty", "Crusty"), ("Marlon", "Malron"), ("Schloptk", "Schlopkht")):
+        assert spellings[wrong] == right
+    doll = (ROOT / "content" / "posts" / "2024-08-13-a-doll-for-arabelle.md").read_text(encoding="utf-8")
+    assert "Shabasta the Great" in doll and "Shivasta" not in doll
+
 def test_fix_text_leaves_links_and_urls_alone():
     spellings = {"Kaven": "Kavan"}
     text, _ = fix_spellings.fix_text(
