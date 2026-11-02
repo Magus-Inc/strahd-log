@@ -9,7 +9,7 @@ source: Compiled from the adventure log
 
 ## Description
 
-![The Hall of Bones, an ossuary of skulls and bones lit by candles](/images/hall-of-bones-ai.jpg)
+![The Hall of Bones: Argynvost's silver skull over the steel-banded double doors in the side wall, a long table of bones with ten bone chairs, and mounds of bones in the corners](/images/hall-of-bones-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 

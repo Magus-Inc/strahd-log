@@ -492,3 +492,12 @@ def test_a_date_after_the_session_link_stays_in_brackets():
     html = '<p>She died at the gallows (<a href="/posts/a/">A</a>, February 2025). Later.</p>'
     out, cited = wiki.cite_sessions(html, mark)
     assert out == "<p>She died at the gallows[a] (February 2025). Later.</p>" and cited == ["a"]
+
+
+def test_hall_of_bones_picture_shows_the_skull_doors_and_bone_table():
+    # Chris, 2026-11-02: the picture needs Argynvost's skull over the steel-banded double doors in
+    # the side wall and the long bone table with its bone chairs (Ryan read both out on 17 Feb 2026).
+    text = (build.ROOT / "content" / "wiki" / "hall-of-bones.md").read_text(encoding="utf-8")
+    alt = re.search(r"!\[([^\]]*)\]\(/images/hall-of-bones-ai\.jpg\)", text).group(1).lower()
+    for words in ("skull", "double doors", "table", "chairs"):
+        assert words in alt, words
