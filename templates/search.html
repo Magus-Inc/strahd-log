@@ -37,13 +37,14 @@
       // Same icons as templates/_badges.html.
       var SLIDES_ICON = '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/></svg>';
       var PICTURE_ICON = '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>';
-      var SKULL_ICON = '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a8 8 0 0 0-8 8c0 2.6 1.2 4.4 3 5.5V20h10v-3.5c1.8-1.1 3-2.9 3-5.5a8 8 0 0 0-8-8z"/><circle cx="9" cy="11.5" r="1.6"/><circle cx="15" cy="11.5" r="1.6"/><path d="M10.5 20v-2.5M13.5 20v-2.5"/></svg>';
-      var PARTY_ICON = '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.6c2.6.2 4.5 2.1 4.5 5.4"/></svg>';
-      // Skull for a death (d: names, spoken label) and party tag for a joining, return or leaving (c).
+      var LIFE_ICONS = {died: '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a8 8 0 0 0-8 8c0 2.6 1.2 4.4 3 5.5V20h10v-3.5c1.8-1.1 3-2.9 3-5.5a8 8 0 0 0-8-8z"/><circle cx="9" cy="11.5" r="1.6"/><circle cx="15" cy="11.5" r="1.6"/><path d="M10.5 20v-2.5M13.5 20v-2.5"/></svg>', revived: '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 18h18"/><path d="M7 18a5 5 0 0 1 10 0"/><path d="M12 6v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></svg>', party: '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.6c2.6.2 4.5 2.1 4.5 5.4"/></svg>', left: '<svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5 1.6 0 3 .5 4.1 1.4"/><path d="M15 17h6M18 14l3 3-3 3"/></svg>'};
+      // Skull (died), sunrise (brought back), party (joined or came back) and leaves badges: e.b.
       function lifeTags(e) {
-        return (e.d ? ' <span class="death-tag" role="img" aria-label="' + esc(e.d.a) + '" title="' + esc(e.d.a) + '">' + SKULL_ICON +
-                  '<span aria-hidden="true">' + esc(e.d.n) + "</span></span>" : "") +
-          (e.c ? ' <span class="party-tag">' + PARTY_ICON + esc(e.c) + "</span>" : "");
+        return (e.b || []).map(function (b) {
+          var named = b.kind === "died" || b.kind === "revived";
+          return ' <span class="life-tag ' + b.kind + '-tag"' + (named ? ' role="img" aria-label="' + esc(b.aria) + '" title="' + esc(b.aria) + '"' : "") + ">" +
+            LIFE_ICONS[b.kind] + (named ? '<span aria-hidden="true">' + esc(b.label) + "</span>" : esc(b.label)) + "</span>";
+        }).join("");
       }
       function run() {
         var q = fold(input.value.trim());
@@ -68,7 +69,7 @@
           li.className = "card result" + (h.e.p ? " has-pic" : "");
           var text = '<span class="chip">' + esc(h.e.l) + '</span><h2><a class="stretched" href="' + base + h.e.u + '">' + esc(h.e.t) +
             '</a></h2><p class="teaser">' + snippet(h.e.x, h.e.f, terms[0]) + "</p>" +
-            (h.e.s || h.e.d || h.e.c ? '<p class="meta">' + (h.e.s ? '<span class="slides-tag">' + SLIDES_ICON + h.e.s + (h.e.s === 1 ? " slide" : " slides") + "</span>" : "") +
+            (h.e.s || h.e.b ? '<p class="meta">' + (h.e.s ? '<span class="slides-tag">' + SLIDES_ICON + h.e.s + (h.e.s === 1 ? " slide" : " slides") + "</span>" : "") +
               lifeTags(h.e) + "</p>" : "");
           li.innerHTML = h.e.p ? '<div class="wiki-card-text">' + text + '</div><span class="pic-badge"><span class="pic-thumb"><img src="' + base + h.e.p +
             '" alt="" loading="lazy" decoding="async"></span>' +

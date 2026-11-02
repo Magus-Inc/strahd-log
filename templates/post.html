@@ -20,13 +20,10 @@
 {% endfor %}
         </ul>
 {% endif %}
-{% if post.deaths or post.changes %}
+{% if post.party %}
         <ul class="party-notes">
-{% for page, back in post.deaths %}
-          <li class="death-note">{{ badges.skull_icon() }}<span><a href="{{ base }}{{ page.path }}">{{ page.title }}</a> died{% if back %} and was brought back{% endif %}</span></li>
-{% endfor %}
-{% for kind, pages in post.changes %}
-          <li class="change-note">{{ badges.party_icon() }}<span>{% for page in pages %}{% if not loop.first %}{{ " and " if loop.last else ", " }}{% endif %}<a href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% endfor %} {{ party_sentences[kind][pages | length > 1] }}</span></li>
+{% for kind, pages, words in post.life_lines %}
+          <li class="{{ kind }}-note">{{ badges.life_icon(kind) }}<span>{% for page in pages %}{% if not loop.first %}{{ " and " if loop.last else ", " }}{% endif %}<a href="{{ base }}{{ page.path }}">{{ page.title }}</a>{% endfor %} {{ words }}</span></li>
 {% endfor %}
         </ul>
 {% endif %}

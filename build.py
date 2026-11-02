@@ -69,8 +69,7 @@ class Post:
     slides_pdf: str = ""
     decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
-    deaths: list = field(default_factory=list)   # (wiki page, brought back?) from data/party.yaml
-    changes: list = field(default_factory=list)  # (kind, [wiki pages]): joined, returned, left
+    party: dict = field(default_factory=dict)  # data/party.yaml: died/revived/joined/returned/left -> [wiki pages]
 
     @property
     def path(self) -> str:
@@ -83,31 +82,39 @@ class Post:
         return sum(len(deck.slides) for deck in self.decks)
 
     @property
-    def death_names(self) -> str:
-        """First names on the skull badge: "Olfin", or "Olfin, Aera"."""
-        return ", ".join(first_name(page) for page, _ in self.deaths)
+    def life_badges(self) -> list[dict]:
+        """List-page badges from data/party.yaml, in a fixed order: skull (died), revive (brought back),
+        party (joined or came back) and leaves. Each is {kind, label, aria}."""
+        badges = []
+        for kind, keys in BADGE_KEYS:
+            parts = [(key, self.party[key]) for key in keys if self.party.get(key)]
+            if not parts:
+                continue
+            if kind in ("died", "revived"):
+                label = and_list([first_name(p) for _, ps in parts for p in ps])
+                aria = ", ".join(f"{and_list([first_name(p) for p in ps])} {PARTY_WORDS[key][0][len(ps) > 1]}"
+                                 for key, ps in parts)
+            else:
+                label = aria = ", ".join(f"{and_list([first_name(p) for p in ps])} {PARTY_WORDS[key][0][len(ps) > 1]}"
+                                         for key, ps in parts)
+            badges.append({"kind": kind, "label": label, "aria": aria})
+        return badges
 
     @property
-    def death_aria(self) -> str:
-        return "; ".join(f"{first_name(page)} died" + (" and was brought back" if back else "")
-                         for page, back in self.deaths)
-
-    @property
-    def party_label(self) -> str:
-        """Party badge text: "Veyren joins", "Crusty joins, Shabasta returns". Characters who come back
-        for one session and leave again (both returned and left) read "Gumbo and Liren return, then leave"."""
-        return ", ".join(f"{and_list([first_name(p) for p in pages])} {PARTY_VERBS[kind][len(pages) > 1]}"
-                         for kind, pages in self.changes)
+    def life_lines(self) -> list[tuple]:
+        """Lines under the character pills on the post: (badge kind, [wiki pages], what happened)."""
+        return [(kind, self.party[key], PARTY_WORDS[key][1][len(self.party[key]) > 1])
+                for kind, keys in BADGE_KEYS for key in keys if self.party.get(key)]
 
 
-# What the party badge and the post page say for each kind of change (one character, several).
-PARTY_VERBS = {"joined": ("joins", "join"), "returned": ("returns", "return"), "left": ("leaves", "leave"),
-               "visited": ("returns, then leaves", "return, then leave")}
-PARTY_SENTENCES = {"joined": ("joins the party", "join the party"),
-                   "returned": ("returns to the party", "return to the party"),
-                   "left": ("leaves the party", "leave the party"),
-                   "visited": ("returns for one session, then leaves", "return for one session, then leave")}
-PARTY_KEYS = ("died", "brought_back", "joined", "returned", "left")
+# Badge kinds and the data/party.yaml keys each one shows.
+BADGE_KEYS = (("died", ("died",)), ("revived", ("revived",)), ("party", ("joined", "returned")), ("left", ("left",)))
+# Per key: (badge words, post-page words), each as (one character, several).
+PARTY_WORDS = {"died": (("died", "died"), ("died", "died")),
+               "revived": (("was brought back", "were brought back"), ("was brought back", "were brought back")),
+               "joined": (("joins", "join"), ("joins the party", "join the party")),
+               "returned": (("returns", "return"), ("returns to the party", "return to the party")),
+               "left": (("leaves", "leave"), ("leaves the party", "leave the party"))}
 
 
 def first_name(page) -> str:
@@ -119,29 +126,20 @@ def and_list(names: list[str]) -> str:
 
 
 def apply_party_entry(post: "Post", entry: dict, pages: dict) -> None:
-    """One post's entry in data/party.yaml: who died (and who of them was brought back), who joined,
-    came back or left. Names are wiki slugs of player characters."""
-    for key in entry:
-        if key not in PARTY_KEYS:  # "visited" is made below, never written
-            raise ValueError(f"data/party.yaml: {post.slug}: unknown key {key} (use {', '.join(PARTY_KEYS)})")
-    found = {}
+    """One post's entry in data/party.yaml: who died, who was brought back (the same session or a later
+    one), who joined, came back or left. Names are wiki slugs of player characters."""
+    party = {}
     for key, names in entry.items():
+        if key not in PARTY_WORDS:
+            raise ValueError(f"data/party.yaml: {post.slug}: unknown key {key} (use {', '.join(PARTY_WORDS)})")
         for name in names or []:
             page = pages.get(name)
             if page is None:
                 raise ValueError(f"data/party.yaml: {post.slug}: no wiki page {name}")
             if page.type != "character":
                 raise ValueError(f"data/party.yaml: {post.slug}: {name} is not a player character")
-            found.setdefault(key, []).append(page)
-    died = entry.get("died") or []
-    back = entry.get("brought_back") or []
-    for name in back:
-        if name not in died:
-            raise ValueError(f"data/party.yaml: {post.slug}: {name} brought back without dying")
-    post.deaths = [(page, page.slug in back) for page in found.get("died", [])]
-    post.changes = [(kind, found[kind]) for kind in PARTY_VERBS if kind in found]
-    if "returned" in found and [p.slug for p in found["returned"]] == [p.slug for p in found.get("left", [])]:
-        post.changes = [(k, v) for k, v in post.changes if k not in ("returned", "left")] + [("visited", found["returned"])]
+            party.setdefault(key, []).append(page)
+    post.party = party
 
 
 def apply_party(posts: list["Post"], pages: list, path: Path) -> None:
@@ -424,11 +422,10 @@ def write(path: Path, text: str) -> None:
 def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
     """JSON the search page loads: title, address (relative to the base path), label, plain text."""
     # Text is NFC-normalised so the search page's accent folding keeps character positions.
-    # Optional badges: "s" slide count, "d" skull (names, spoken label) and "c" party change for a session, "p" thumbnail and "n" picture count for a wiki page.
+    # Optional badges: "s" slide count and "b" skull/revive/party/leaves badges for a session, "p" thumbnail and "n" picture count for a wiki page.
     entries = [{"t": p.title, "u": p.path, "l": nice_date(p.date), "x": wiki.plain_text(p.html),
                 **({"s": p.slide_count} if p.slide_count else {}),
-                **({"d": {"n": p.death_names, "a": p.death_aria}} if p.deaths else {}),
-                **({"c": p.party_label} if p.changes else {})}
+                **({"b": p.life_badges} if p.party else {})}
                for p in posts]
     entries += [{"t": w.title, "u": w.path, "l": wiki.LABELS[w.type],
                  "x": " ".join([*w.aliases, w.summary, wiki.plain_text(w.html).replace(wiki.LOG_NOTE, "")]),
@@ -491,7 +488,6 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     for post in posts:
         for tag in post.tags:
             tags.setdefault(tag, []).append(post)
-    env.globals["party_sentences"] = PARTY_SENTENCES
     env.globals["has_tags"] = bool(tags)
     env.globals["map_sprites"] = sprites
     env.globals["all_places"] = places
@@ -541,12 +537,10 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
             "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
                                 # Every session tied to the place, oldest first, with its map number (i) and how
                                 # it relates (k: here, ended, stop, near, from, past; w: the spot, for near), plus the
-                                # skull (d) and party change (c) badges.
+                                # skull, revive, party and leaves badges (b).
                                 "sessions": [{"t": leg["post"].title, "u": leg["post"].path, "d": nice_date(leg["post"].date),
                                               "n": leg["post"].slide_count, "i": leg["n"], "k": kind,
-                                              **({"d": {"n": leg["post"].death_names, "a": leg["post"].death_aria}}
-                                                 if leg["post"].deaths else {}),
-                                              **({"c": leg["post"].party_label} if leg["post"].changes else {}),
+                                              **({"b": leg["post"].life_badges} if leg["post"].party else {}),
                                               **({"w": where} if where else {})}
                                              for leg, kind, where in related.get(p.slug, [])]}
                        for p in places.values()},
