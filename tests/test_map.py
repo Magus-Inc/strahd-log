@@ -791,6 +791,20 @@ def test_roads_west_of_vallaki_bend_like_the_official_map():
     assert min(y for _, y in arc) < 223 and any(x > 335 and y < 255 for x, y in arc)
 
 
+def test_south_roads_bend_like_the_official_map():
+    # Region 4 of the retrace (Chris, 2026-11-02): the long road south to Tsolenka Pass and on.
+    graph = barovia_map.road_graph()
+    raven, tsolenka, amber_fork = (220, 262), (240, 578), (352, 672)
+    south = barovia_map.route(graph, raven, tsolenka)
+    # it swings well west into the hills, doubles back on a hairpin, and winds down to the pass
+    assert min(x for x, _ in south) < 140
+    turns = sum(1 for a, b, c in zip(south, south[1:], south[2:]) if (b[0] - a[0]) * (c[0] - b[0]) < 0)
+    assert turns >= 3
+    # past the pass it climbs east, then down a long bend to the fork below the Amber Temple
+    on = barovia_map.route(graph, tsolenka, amber_fork)
+    assert sum(math.dist(a, b) for a, b in zip(on, on[1:])) > 1.05 * math.dist(tsolenka, amber_fork)
+
+
 def test_argynvostholt_stands_clear_of_the_berez_trail():
     # Chris, 2026-11-02: Argynvostholt sat too close to the trail down to Berez. On the official map
     # the trail runs well east of the mansion, between it and the Luna.
