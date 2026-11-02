@@ -60,3 +60,46 @@ The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and vowed t
 Spectral things lashed at us on the way up, but we dodged them and the falling rocks and ran up a secret ladder into the room with the stuffed wolves. Schlopkht broke a window and we climbed out of the house. Behind us it collapsed into the ground and was gone.
 
 When the dust settled we found ourselves in a forest beside a stone tower, with Rose and Thorn.
+
+## Key Locations:
+
+* **The tunnels below Durst Manor**: The room of the orb and the five ash shadows, the mimic’s door, and a flooded hall barred by a portcullis.
+* **The altar room**: Walter’s bundle on the altar, tied to a mound of flesh at the bottom of the well.
+* **A stone tower in a forest**: Where we found ourselves with Rose and Thorn when the dust settled.
+
+## Encounters:
+
+* **Two ghouls**: Shown by Aera’s shining rock. Weeble held the passage while Aera shot them.
+* **The orb**: “Return me to the place I belong.” The five shadows came for Weeble whenever he took it up.
+* **The mimic**: The door Weeble touched. Aera killed it.
+* **A boneless in the footlocker**: It looked like Gustav Durst and wrapped itself around Weeble until Aera’s blade felled it.
+* **The flesh mound**: Its ribs split open on an undead Walter, and Aera cleaved off his head.
+* **The escape**: Gustav let us pass, and we ran from spectral things and falling rocks as the house sank into the ground.
+
+## Loot:
+
+* **Cloak of Protection**: From the footlocker, where Weeble had first claim.
+* **Chain Shirt**
+* **Flask of Alchemist Fire**
+* **Bullseye Lantern**
+* **Small wooden object**
+* **Spell book**: Disguise Self, Identify, Mage Armor, Magic Missile and Protection from Good and Evil; Darkvision, Hold Person, Invisibility and Magic Weapon.
+
+## Notable NPCs:
+
+* **Rose Durst**: Lent her power to light the way and to mend the wheel.
+* **Walter Durst**: The beast inside the flesh mound.
+* **Elisabeth Durst**: Vowed to kill us for destroying her pet.
+* **Gustav Durst**: Blocked the stairs, then let us go for his children’s sake. “Just run!”
+
+## Plot Points:
+
+* **“He is the ancient. He is the land.”**: A voice in the murky water.
+* **Walter is dead**: And Durst Manor is gone into the ground.
+* **Rose and Thorn**: Still with us in the forest.
+
+## Session Highlights:
+
+* Reasoning with Gustav’s ghost: his last chance to be a good father.
+* Holding the shard high and calling “Walter!” for the whole fight, to no effect.
+* Running for our lives as the house collapsed behind us.

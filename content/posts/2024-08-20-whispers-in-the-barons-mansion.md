@@ -29,3 +29,41 @@ Victor turned out to be an invisible man, and he appeared before us in the libra
 “All is not well” is written on the attic door, and glyphs of warding guard it. Schlopkht staged a fall to show Victor the ring, but the truth stayed out of reach. Beneath a rug, sigils etched into the floor form a teleportation circle. Victor has tested it, with gruesome results.
 
 The Baron’s mansion hides more than ghosts. Our way forward runs through deception, magic and the unknown.
+
+## Key Locations:
+
+* **The Baron’s den**: Padded chairs, and stairs I slipped up unnoticed.
+* **The kitchen**: Where a distorted silhouette hinted at the spirit.
+* **The library**: The record of Vallaki’s births and deaths.
+* **The attic**: “All is not well” on the door, glyphs of warding, and a teleportation circle under a rug.
+
+## Encounters:
+
+* **The Baron**: A malevolent spirit plagues the mansion and has driven off the staff. He refused us his books.
+* **Victor in the library**: An invisible man who appeared before us.
+* **Schlopkht’s fall**: Staged to show Victor the ring.
+
+## Loot:
+
+* **Nothing taken**: The Baron refused us his books, and the truth stayed out of reach.
+
+## Notable NPCs:
+
+* **Victor**: The Baron’s son, who studies necromancy and other arts by means of the ring.
+* **Ireena Strazni**: By the records, dead more than eighteen years ago at the age of four.
+* **Izek Strazni**: Her older brother.
+* **Grygori Strazni**: Her father, dead by hanging.
+* **Fatima Strazni**: Her mother, dead by hanging.
+* **Khazan**: The original mage, whose symbol is on the ring.
+
+## Plot Points:
+
+* **Ireena Strazni**: Cause of death unknown, presumed devoured by wolves. A familiar name.
+* **The ring’s symbol**: In Victor’s spellbook, tying it to Khazan.
+* **Khazan’s tower**: Where Victor’s curiosity lies, a place barred to outsiders.
+* **The teleportation circle**: Victor has tested it, with gruesome results.
+
+## Session Highlights:
+
+* My bold ruse up the stairs.
+* Victor’s nervous glances at the mirrors.

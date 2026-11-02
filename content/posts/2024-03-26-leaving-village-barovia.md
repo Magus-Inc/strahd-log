@@ -39,3 +39,45 @@ At noon we gathered the party and ventured forth towards Tser pool. Ireena joine
 After some time on the trail we were met with a voice from the thicket which asked who we were. Grom was most confrontational and challenged the hidden party. A woman walked out of the mists, and Ireena knew her for a scout of the village. Kreza and Conga were the scouts’ names. They were searching for the Landston family, two parents and five children who had gone missing from the village.
 
 We consulted the map Ismark gave us (I’ve made a crude copy), and decided it would be faster to leave the path and enter the woods to follow the river towards the pool. We came into a clearing with a tall ancient oak in the middle. There were seven figures, two larger than the others, surrounding an eighth figure and looking up into the tree. Red mist was coming from the final figure’s mouth and pooling onto the ground. His eyes were white and he was wearing armor. We engaged in combat and slaughtered everyone. Most certainly this was the Landston family, but we believe they were already long gone, and we spared them from a fate worse than death.
+
+## Key Locations:
+
+* **A stream near the village**: Where Doru dissolved in the running water.
+* **The village shops**: Prices five times what they ought to be.
+* **Ancient Oak**: A clearing by the river where seven figures stood around an eighth.
+
+## Encounters:
+
+* **Ireena’s keepsake box**: Olfin followed her and dug it up for her.
+* **Kreza and Conga**: Village scouts searching for the Landston family.
+* **The Landston family**: Gathered around an armored figure breathing red mist. We slaughtered them, and spared them a fate worse than death.
+
+## Loot:
+
+* **Silver bracelet**: Moon and stars in lapis lazuli, inscribed Tatyana: “Find your path in the darkest of places.” Ireena gave it to Olfin.
+* **The stake**: Recovered from the stream.
+* **Two healing potions**: Pilfered by Aera.
+* **Strength of a new dawn**: Father Donavich’s blessing on me, for three mornings.
+* **Ismark’s map**: And my crude copy of it.
+
+## Notable NPCs:
+
+* **Father Donavich**: Buried Ismark’s father and blessed me. We know Lathander by different names.
+* **Ismark**: Asked us to escort Ireena to the Abbey of Saint Markovia in Krezk.
+* **Ireena Kolyana**: Strahd bit her and controlled her in the past, but she has not become a vampire, yet.
+* **Kreza**: A scout of the village.
+* **Conga**: Her fellow scout.
+* **Doru**: At rest at last in the stream.
+
+## Plot Points:
+
+* **To Krezk**: Escort Ireena to the Abbey of Saint Markovia, with the Church of Saint Andral in Vallaki as a sanctuary on the way.
+* **Running water works**: Doru dissolved.
+* **Ireena’s bite marks**: Strahd has bitten her before.
+* **The bats**: A great swarm flew from the church toward the castle after the rites.
+
+## Session Highlights:
+
+* Schlopkht returning the sunburst and side-stepping how we came by it.
+* Learning that the Morninglord and Lathander are one god.
+* “Red har – bad luck”, a note I can no longer make sense of.

@@ -52,3 +52,46 @@ The footprints told a grim tale. Yann fought, fell and died. A second figure fle
 ## The Baron’s Library
 
 To learn the ring’s secret we went to the Baron’s manor, claiming an appointment, in hopes of reaching his library. As I write, we sit in the waiting room among dusty tomes and whispered secrets. The path ahead is dark, but we go on.
+
+## Key Locations:
+
+* **Vallaki**: A row of stocks in the square, every soul in them wearing a crude donkey head.
+* **Blinsky’s Toy Store**: Cluttered shelves, and a doll that looks eerily like Ireena.
+* **The Vistani encampment**: Broken pottery and cracking whips.
+* **The Baron’s manor**: Waiting among dusty tomes, in hopes of reaching his library.
+
+## Encounters:
+
+* **Blinsky’s doll**: Like Ireena. A thread to her fate, perhaps.
+* **Alexi’s plea**: Find his missing daughter.
+* **The footprints**: Yann fought, fell and died. A second figure fled, and a third waded into the river carrying something heavy.
+* **The dusk elves**: One bore the scars of frostbite.
+
+## Loot:
+
+* **The signet ring**: Held by Kasimir, its sigil woven from necromancy and evocation. Its secret is what took us to the Baron’s manor.
+
+## Notable NPCs:
+
+* **Blinsky**: Whispered of a clockwork man inside Castle Ravenloft.
+* **Alexi**: Offered five hundred gold pieces to bring Arabelle back alive.
+* **Arabelle**: His missing daughter.
+* **Yann**: Accused of taking her, his severed head lying toward the Luna River.
+* **Kasimir**: A dusk elf, who told us his story.
+* **Rahadin**: Kasimir’s cousin, the traitor to their people.
+* **Erevan Löwenhart**: Kasimir’s uncle, master of bladesong, who refused King Barov.
+* **King Barov**: Strahd’s father, who conquered Othrondil.
+* **Strahd**: Who crushed the elves’ revolt and claimed the valley as Barovia.
+
+## Plot Points:
+
+* **Arabelle is missing**: Five hundred gold if we bring her back alive.
+* **The signet ring**: May be the key to deeper truths.
+* **The dusk elves**: Sheltered by the Vistani from Strahd’s wrath for five centuries.
+* **The clockwork man**: Somewhere inside Castle Ravenloft.
+
+## Session Highlights:
+
+* Meeting Shabasta the Great, a porcupine of a bard.
+* Kasimir’s story of Othrondil, the Forest of Twilight.
+* The donkey heads in the stocks.

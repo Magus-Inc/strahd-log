@@ -33,3 +33,40 @@ The way into the tower stands open.
 ![A stone tower by a misty lake, a purple and gold Vistani wagon at its foot](/images/tower-of-khazan-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
+
+## Key Locations:
+
+* **Szoldar’s shack**: Decrepit, home of Szoldar and Yevgeni.
+* **The ancient monument**: A stone slab to the Dreamer and the Ladies Three.
+* **The crossroads**: Two ominous scarecrows and a broken signpost.
+* **Tower of Khazan**: In the woods beside a lake, with a purple and gold wagon at its base.
+
+## Encounters:
+
+* **The scarecrows**: Aera peppered them with arrows and sprang an ambush of twig blights.
+* **The wagon’s sign**: “Keep out, home and property of Ezmerelda d'Avenir. Trespassers will be incinerated.”
+* **The tracks**: Wolf tracks by the wagon, and a second set ending in a hollow of white and yellow paint.
+* **The red seal**: Olfin traced the signet ring’s lines on it, and the door opened.
+
+## Loot:
+
+* **A wolf pelt of glamour weave**: Bought by Aera for fifty gold pieces.
+* **A scrap of cloth**: Found by the river, with the initials RVR.
+
+## Notable NPCs:
+
+* **Szoldar**: Who could guide us to the tower.
+* **Yevgeni**: His brother.
+* **Ezmerelda d'Avenir**: Owner of the wagon, by its sign.
+* **Rudolph van Richten**: Perhaps the RVR of the cloth, a name that keeps following us.
+
+## Plot Points:
+
+* **The Staff of Khazan**: Said to be in the tower.
+* **A werewolf pack**: Prowling the area, led by a new and reckless alpha.
+* **The way in**: The tower door stands open.
+
+## Session Highlights:
+
+* Aera taking no chances with the scarecrows.
+* Olfin working out the seal.

@@ -27,3 +27,39 @@ We used the key Father Donavich gave us to unlock the latch keeping a trap door 
 I believe the vampire to be Doru, but I don’t know for certain. Based on the guidance we were given earlier, I would like to take the body to a stream or river to see if it will dissolve and provide a final resting place for this creature.
 
 - [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+
+## Key Locations:
+
+* **The village church**: In terrible shape since the attack, where Father Donavich keeps to himself.
+* **Beneath the church**: Behind a locked trap door, where Father Donavich trapped his son.
+* **Tser Pool**: Where Madam Eva has her tent, west of a place of death.
+
+## Encounters:
+
+* **Madam Eva’s dream**: She warned of the “Winds of Doom”. All of us dreamed it.
+* **The procession of souls**: From the graveyard north to the castle, and down into it from the top.
+* **The vampire beneath the church**: Helpless with laughter from the wood elf’s spell, it still nearly killed the cat and the wizard before we felled it, and I staked it.
+
+## Loot:
+
+* **Father Donavich’s key**: For the latch on the trap door.
+
+## Notable NPCs:
+
+* **Madam Eva**: An older Vistani woman who came to us in a dream.
+* **Father Donavich**: Lost without his Bronze Sunburst, the holy symbol of the Morning Lord.
+* **Doru**: His son, back as a vampire, who took the symbol.
+* **Ismark**: Stayed above with his father’s casket.
+* **Ireena**: Stayed above with him.
+
+## Plot Points:
+
+* **Seek out Madam Eva at Tser Pool**: Time is running out.
+* **The Bronze Sunburst**: Taken by Doru.
+* **Running water**: I mean to take the body to a stream or river to see whether it dissolves.
+
+## Session Highlights:
+
+* The wizard levitating the casket behind him all the way to the church.
+* The wood elf’s spell leaving the vampire helpless with laughter.
+* A stake for good measure.

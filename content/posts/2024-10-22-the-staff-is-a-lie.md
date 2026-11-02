@@ -36,3 +36,43 @@ The journal tells of a man haunted by his pursuit of darkness, which began when 
 
 **Werewolves**  
 On our way back north to town we met Zollst and Matilda, trappers from Krethi, who warned us of a bloodthirsty lady. Then they turned into werewolves. We fought hard and killed them both, and went on to town.
+
+## Key Locations:
+
+* **The wagon**: Trapped with crossbow bolts, a silver net and bursting fire potions.
+* **The tower**: Four statues around a platform that lifted us up, a weak second floor, an empty crib on the third, and a lived-in room on the fourth.
+* **The road north to town**: Where we met two trappers.
+
+## Encounters:
+
+* **The wagon’s traps**: Aera stood aside from the bolts. Shabasta set off the net and fire, and we smothered the flames with our bedrolls.
+* **A chicken**: Aera suspects it might be Ezmerelda.
+* **Zollst and Matilda**: Trappers from Krethi who warned us of a bloodthirsty lady, then turned into werewolves. We killed them both.
+
+## Loot:
+
+* **Weapons**: Battle axe, flail, morning star, light crossbow and 10 silvered crossbow bolts.
+* **Kits**: Climber’s, disguise, healer’s and poisoner’s.
+* **A wooden box**: Tarokka cards and sets of manacles.
+* **A wooden chest**: Holy symbol, holy water, perfume, antitoxin, rope, tinderbox, steel mirror, wooden stake and spyglass.
+* **Spell scrolls**: Major Image and Remove Curse.
+* **Map of Barovia**: From the wagon.
+* **From the fourth floor**: A colorful beaded bracelet, a silver dagger, a Hooded One card, a burned journal page and a singed sketch of Rictavio’s carnival.
+
+## Notable NPCs:
+
+* **Ezmerelda**: Perhaps the chicken.
+* **Rictavio**: Van Richten, by his handwriting.
+* **Zollst**: A trapper, and a werewolf.
+* **Matilda**: Likewise.
+
+## Plot Points:
+
+* **Rictavio is van Richten**: The journal’s hand matches the guide to hunting vampires, and he may be at the Blue Water Inn.
+* **The journal**: A vampire murdered his child, and a lifelong hunt has left him weary.
+* **A bloodthirsty lady**: The trappers’ warning.
+
+## Session Highlights:
+
+* Shabasta deciding the traps were spent.
+* Putting out a wagon fire with our bedrolls.
