@@ -4,7 +4,7 @@ type: npc
 aliases:
 - Walter
 summary: Klara's son by Gustav, an undead baby inside the flesh mound beneath Durst Manor.
-source: Written on Obsidian Portal
+source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/walter-durst
 ---
 
@@ -14,7 +14,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/walte
 
 *AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
 
-Son of Gustav and the nanny Klara
+*Written from the session logs, in Malron's words.*
+
+The son of Gustav Durst and the nursemaid Klara, and the Beast beneath Durst Manor. His name was carved into the headboard of a crib on the third floor, beside a finger with teeth marks, and Elisabeth's note left an amber shard to soothe the Beast's fury. We began to suspect the Beast was the baby ([Deeper into the Manor](/posts/deeper-into-the-manor/)). Below the house we passed a crypt oozing pus that bore his mark, and a footlocker held the cult's journal of victims, some of them fed to him ([Finishing the Manor?](/posts/finishing-the-manor/)).
+
+At the bottom of the dungeon a wrapped bundle lay on an altar, tied by a tendril to a pulsing mound of flesh. The mound came at us. I held the amber shard high and called "Walter!" over and over, to no effect, while the others pounded on it. At last its ribs split open on an undead Walter hovering inside, and Aera cleaved his head clean off. The mound collapsed, and the manor fell into the ground behind us ([Walter, we are coming for you!](/posts/walter-we-are-coming-for-you/)).
 
 <!-- from-the-log -->
 ## From the adventure log

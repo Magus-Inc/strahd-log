@@ -89,6 +89,27 @@ within:
   drowning-cells: castle-ravenloft
   hall-of-niches: abbey-of-saint-markovia
   false-meadow: abbey-of-saint-markovia
+  # Vallaki's gates: refugees at the Eastern Gate, Izek out through the Zarovich Gate (The Fall of Izek).
+  eastern-gate: vallaki
+  zarovich-gate: vallaki
+  # The cursed altar in the werewolf den (Blood and Oaths Under Moonlight).
+  shrine-of-mother-night: lake-baratok-cave
+  # Chris: the Sarepool crossroads is the Tser Pool crossroads (Unwelcome Guests).
+  sarepool: tser-crossroads
+
+# landmarks: wiki pages for things drawn on the map that are not places to stop (rivers, woods, mountains,
+#            a lone tree): wiki page slug -> {xy, anchor, label}. Only the page's own map shows one, opening
+#            on it with a red dot and its name; the map page has no pin, label or card for it. Each sits
+#            where the party first met it. Forest Fane, Kavan's Cairn and Zoldoph wait until the party goes there.
+landmarks:
+  # The clearing by the river with the tall ancient oak (Leaving Village Barovia): the old oak spot.
+  ancient-oak: {xy: [712, 486], anchor: end}
+  # On the river where it runs south past Vallaki toward Berez.
+  luna-river: {xy: [366, 350], anchor: start}
+  # The woods the party first walked, around Durst Manor and the Village of Barovia.
+  svalich-woods: {xy: [880, 280], anchor: end}
+  # The peaks between Old Bonegrinder and the castle, which the sun sank behind (Unwelcome Guests).
+  balinoks: {xy: [640, 280]}
 
 # Hand-drawn pictures laid on the map (static/images/map/sprites/<image>.webp, cut by tools/make_sprites.py).
 # name: {image: file stem, xy: [x, y] centre of the picture, width: in map units; the height

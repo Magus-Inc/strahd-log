@@ -14,6 +14,14 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/rose-
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
 
+*Written from the session logs, in Malron's words.*
+
+Gustav and Elisabeth Durst's daughter. We met her and her little brother Thorn outside Durst Manor. They were afraid to go in, for fear of the monster inside, and would not leave the grounds either, as if tied to the place ([Entering Durst Manor](/posts/entering-durst-manor/)).
+
+Inside we found her room in the attic, with a doll like the one she held in a family portrait. When Aera said her name softly we heard the patter of small feet. Behind a padlocked door were the spirits of Rose and Thorn, a dollhouse copy of the manor, and two small skeletons, one holding a doll. The children had been locked in and left to starve. Rose mended a toy Thorn had broken with a little spell, told us that Klara was not the one who looked after Walter, and asked Weeble to promise to bury their bones. In return she showed us a secret stair down to the basement. Then she joined Aera as a spirit ([Finishing the Manor?](/posts/finishing-the-manor/)).
+
+Her power went with Aera into the dungeon: it made a rock shine to show us the ghouls, and helped mend the broken wheel that raised the portcullis ([Walter, we are coming for you!](/posts/walter-we-are-coming-for-you/)). When the house fell, Rose and Thorn were with us in the forest by a stone tower, and the next day we buried their remains nearby, as promised ([Barovia, Barovia](/posts/barovia-barovia/)).
+
 <!-- from-the-log -->
 ## From the adventure log
 

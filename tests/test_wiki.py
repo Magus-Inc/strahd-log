@@ -402,12 +402,14 @@ def test_entry_names_in_every_reference_list_link():
     assert "<strong>Lady Fiona</strong> is kind." in html  # Plot Points are sentences, not entries
 
 
-def test_pages_in_five_or_more_sessions_have_a_picture():
-    """Chris (2026-10-31): anyone or anything in 5+ sessions gets a picture on its wiki page."""
+def test_pages_in_three_or_more_sessions_have_a_picture():
+    """Chris (2026-10-31): anyone or anything in 5+ sessions gets a picture on its wiki page.
+    2026-11-02 he lowered it to 3, for people, places and items alike (and a picture whenever the
+    DM was very descriptive or they matter, which dnd-scribe's wiki-plan flags)."""
     posts = build.load_posts(build.ROOT / "content" / "posts")
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
     build.link_wiki(posts, pages)
-    missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 5 and not p.pictures and not p.narrator)
+    missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 3 and not p.pictures and not p.narrator)
     assert not missing, f"add a picture to: {missing}"
 
 
@@ -501,3 +503,24 @@ def test_hall_of_bones_picture_shows_the_skull_doors_and_bone_table():
     alt = re.search(r"!\[([^\]]*)\]\(/images/hall-of-bones-ai\.jpg\)", text).group(1).lower()
     for words in ("skull", "double doors", "table", "chairs"):
         assert words in alt, words
+
+
+def test_wachterhaus_picture_shows_the_manor_in_its_grounds_without_a_drawn_ward():
+    # Chris, 2026-11-02: the first picture put the binding circle on the street beside the house, and a
+    # drawn ring around the estate looked "awkward and distracting ... not fantasy", so the picture shows
+    # the manor in its walled grounds (Stella was walked "around the grounds") with no ward drawn.
+    text = (build.ROOT / "content" / "wiki" / "wachterhaus.md").read_text(encoding="utf-8")
+    alt = re.search(r"!\[([^\]]*)\]\(/images/wachterhaus-ai\.jpg\)", text).group(1).lower()
+    for words in ("grounds", "garden", "manor"):
+        assert words in alt, words
+    for words in ("circle", "ring", "rune", "cobbles"):
+        assert words not in alt, words
+
+
+def test_merged_pages_read_as_one_article():
+    # Chris, 2026-11-02: Durst Manor's pasted-in "As “Manor”" section from the Obsidian Portal merge
+    # "read very awkwardly"; merged text is folded into the story instead.
+    pages = Path(__file__).resolve().parent.parent / "content" / "wiki"
+    pasted = [p.name for p in sorted(pages.glob("*.md"))
+              if re.search(r"^#+ As “", p.read_text(encoding="utf-8"), re.MULTILINE)]
+    assert pasted == []

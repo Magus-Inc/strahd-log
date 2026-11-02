@@ -242,6 +242,12 @@ main.wide { max-width: 80rem; }
 .map .sprite { cursor: pointer; --glow: #c8213f; outline: none; }
 .map .sprite:hover image, .map .sprite:focus-visible image, .map .sprite.chosen image {
   filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+/* A wiki page's map marks its own place: the picture glows like a chosen one, the name turns red, and a
+   place with no picture gets a red dot (Chris, 2026-11-02: Berez and Durst Manor were hard to find). */
+.map .sprite.here image {
+  filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+.map .labels .here text { fill: #b3122e; font-size: 15px; }
+.map .here-dot { fill: #b3122e; stroke: #fff8ec; stroke-width: 1.5; transform: scale(var(--mark, 1)); transform-box: view-box; }
 /* No dots: the sprites mark the places. The pin is an invisible tap target with no ring (Chris). */
 .map .pin-dot { fill: transparent; stroke: none; }
 .map .pin, .map .js-pin { outline: none; }
@@ -468,3 +474,47 @@ body.deck-lock { overflow: hidden; }
 .pic-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .pic-count { display: inline-flex; align-items: center; gap: 0.2rem; color: var(--gold); font-weight: 600; font-size: 0.72rem; line-height: 1.3; white-space: nowrap; }
 .result.has-pic .pic-badge { margin-top: 0.2rem; }
+
+/* Wiki page layout (wikistyle.py, data/wiki-style.yaml): the picture at the top, facts, folded notes */
+.wiki-hero { margin-top: 1.2rem; }
+.wiki-hero img, .infobox-picture img { margin: 0 auto; width: 100%; height: auto; }
+.wiki-hero .ai-credit, .infobox-picture .ai-credit, .wiki-hero p em, .infobox-picture p em { display: block; margin: 0.45rem 0 0; font-size: 0.78rem; line-height: 1.5; color: var(--faint); font-style: normal; }
+.wiki-hero p, .infobox-picture p { margin: 0; }
+.infobox { max-width: 46rem; margin: 0 auto 2rem; padding: 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.infobox dl { margin: 0.9rem 0 0; display: grid; gap: 0.45rem 1.2rem; font-size: 0.92rem; }
+.infobox dl > div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0 0.9rem; }
+.infobox-picture + dl { padding-top: 0.8rem; border-top: 1px solid var(--line); }
+.infobox dl:first-child { margin-top: 0; }
+.infobox dt { color: var(--muted); }
+.infobox dd { margin: 0; }
+.infobox .num { display: inline-grid; place-items: center; min-width: 1.5rem; height: 1.5rem; padding: 0 0.3rem; border-radius: 999px; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.75rem; font-weight: 700; margin-right: 0.25rem; }
+/* Desktop: the picture keeps the box's full width and the facts sit below it in pairs (Chris,
+   2026-11-02: a side column for the facts squeezed the picture to 17rem) */
+.infobox-picture img { width: auto; max-width: 100%; max-height: 80vh; object-fit: contain; }
+@media (min-width: 760px) {
+  .infobox dl { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
+  .infobox dl > div { display: block; }
+  .infobox dt { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.2rem; }
+}
+.prose details.log-notes { margin: 2rem 0 0; border-top: 1px solid var(--line); padding-top: 0.8rem; }
+.prose details.log-notes > summary { cursor: pointer; font-family: var(--serif); font-size: 1.15rem; color: var(--text); padding: 0.3rem 0; }
+.prose details.log-notes > summary::marker { color: var(--accent); }
+.infobox dd a { color: var(--text); text-decoration: none; }
+.infobox dd a:hover, .infobox dd a:focus-visible { color: var(--accent-hi); text-decoration: underline; }
+/* A reader vote between pictures at the top of a wiki page: side by side, so the facts stay near */
+.infobox-picture .image-vote { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.infobox-picture .image-vote .vote-intro, .infobox-picture .image-vote .vote-status { grid-column: 1 / -1; margin: 0; font-size: 0.85rem; color: var(--muted); }
+.infobox-picture .image-vote figure { margin: 0; }
+.infobox-picture .image-vote figcaption { margin-top: 0.4rem; }
+.infobox-picture .image-vote button { font-size: 0.8rem; padding: 0.35rem 0.6rem; }
+/* Tap any picture to see it full size (the inline script in base.html) */
+img[data-zoomable] { cursor: zoom-in; }
+dialog.zoom { max-width: none; max-height: none; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; background: rgba(8, 6, 6, 0.97); color: var(--text); }
+dialog.zoom::backdrop { background: rgba(8, 6, 6, 0.97); }
+dialog.zoom[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.7rem; }
+dialog.zoom { overflow: hidden; }
+dialog.zoom img { display: block; max-width: 96vw; max-height: 96vh; width: auto; height: auto; transform-origin: 0 0; touch-action: none; user-select: none; -webkit-user-drag: none; border-radius: var(--radius); cursor: zoom-in; position: relative; z-index: 1; }
+dialog.zoom .zoom-hint { position: fixed; z-index: 2; top: 1.1rem; left: 1rem; right: 4rem; font-size: 0.75rem; color: var(--faint); pointer-events: none; }
+dialog.zoom p { position: fixed; z-index: 2; bottom: 1.6rem; left: 50%; transform: translateX(-50%); width: max-content; max-width: min(60rem, calc(100vw - 2rem)); margin: 0; padding: 0.35rem 0.8rem; border-radius: var(--radius); background: rgba(8, 6, 6, 0.8); text-align: center; font-size: 0.9rem; color: var(--muted); }
+dialog.zoom a { color: var(--accent-hi); }
+dialog.zoom .zoom-close { position: fixed; z-index: 3; top: 0.6rem; right: 0.8rem; width: 2.6rem; height: 2.6rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 1.5rem; line-height: 1; cursor: pointer; }

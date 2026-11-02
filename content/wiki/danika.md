@@ -2,7 +2,7 @@
 title: Danika
 type: npc
 summary: Runs the Blue Water Inn.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
 
 ## Description
@@ -10,6 +10,10 @@ source: Compiled from the adventure log
 ![Danika in the firelit common room of the Blue Water Inn, giving a hooded traveller directions, a raven on the beam above](/images/danika-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
+*Written from the session logs, in Malron's words.*
+
+Urwin's wife, who runs the Blue Water Inn in Vallaki with him ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/)). When we came back to town looking for Rictavio, she told us he was at his yellow wagon, the same one whose tracks we had seen near the tower at Lake Baratok ([Finding Arabelle!](/posts/finding-arabelle/)).
 
 <!-- from-the-log -->
 ## From the adventure log

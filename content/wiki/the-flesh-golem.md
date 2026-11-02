@@ -2,7 +2,7 @@
 title: The Flesh Golem
 type: creature
 summary: The Abbot's hulking servant that turned on him.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
 
 ## Description
@@ -10,6 +10,12 @@ source: Compiled from the adventure log
 ![The Abbot's flesh golem in a rope crown dressed up as flowers, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+
+*Written from the session logs, in Malron's words.*
+
+The Abbot's hulking servant at the Abbey of Saint Markovia, stitched together from the dead. When we first came to the Abbey it watched us in silence ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)), and it still wore the crown of flowers it had been given long ago.
+
+When we came back to stop the Abbot, it loomed behind him in the asylum. Aera dressed a length of rope up by illusion as a new crown of flowers, walked up and gave it to the golem. Olfin asked it, "We're here to destroy your master. Will you help us?" When the Abbot rose up in his celestial form, the golem turned on him, hurling a chalice, candlesticks and a table ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)). It stayed on our side against the Fallen Star, though its throws mostly missed, and when the Abbot lay sleeping as a white-winged youth, I asked it to look after him ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/)). We have talked of taking it with us across Barovia.
 
 <!-- from-the-log -->
 ## From the adventure log
