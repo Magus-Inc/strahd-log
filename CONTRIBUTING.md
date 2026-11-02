@@ -49,8 +49,8 @@ line. Add `aliases:` for other names a page goes by and posts will link to it au
 
 Many pages also have a **Description**, the story of that person or place in Malron's words, built
 from the posts with a link to each one it draws on. When a new post adds to that story, extend the
-description; `.claude/skills/update-wiki/SKILL.md` has the rules (facts only from the posts, no
-dice or player names).
+description; the rules are the `update-wiki` skill in the dnd-scribe repo, which writes the wiki
+(facts only from what the table saw, no dice or player names).
 
 ## Other changes
 

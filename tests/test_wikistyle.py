@@ -222,3 +222,9 @@ def test_a_picture_vote_at_the_top_sits_side_by_side():
 def test_agents_md_says_where_the_wiki_layout_lives():
     text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     assert "data/wiki-style.yaml" in text and "wikistyle.py" in text
+
+
+def test_the_wiki_writing_rules_live_in_dnd_scribe():
+    """Chris, 2026-11-02: the writing rules are ours; this public repo keeps only the build."""
+    assert not (ROOT / ".claude" / "skills" / "update-wiki").exists()
+    assert "dnd-scribe's `update-wiki` skill" in (ROOT / "AGENTS.md").read_text(encoding="utf-8")
