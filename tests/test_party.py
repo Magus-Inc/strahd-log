@@ -56,7 +56,7 @@ def test_home_cards_carry_a_skull_for_a_death_and_nothing_for_a_quiet_session(pa
 
 
 def test_death_and_revival_in_one_session_show_skull_then_sunrise_with_the_name(party_site):
-    hero = read(party_site / "index.html").split('<section class="chronicle"')[0]  # the newest: the hero
+    hero = re.search(r'<li class="card session-card latest">.*?</li>', read(party_site / "index.html"), re.S).group(0)  # the newest
     skull = hero.index('class="life-tag died-tag"')
     sunrise = hero.index('class="life-tag revived-tag"')
     assert skull < sunrise
@@ -66,7 +66,7 @@ def test_death_and_revival_in_one_session_show_skull_then_sunrise_with_the_name(
 
 def test_new_character_gets_the_party_badge_and_a_leaving_one_the_leaves_badge(party_site):
     home = read(party_site / "index.html")
-    hero = home.split('<section class="chronicle"')[0]
+    hero = re.search(r'<li class="card session-card latest">.*?</li>', home, re.S).group(0)  # the newest
     assert 'class="life-tag party-tag"' in hero and "Veyren joins" in hero
     goodbye = card_for(home, "Goodbye")
     assert 'class="life-tag left-tag"' in goodbye and "Shabasta leaves" in goodbye

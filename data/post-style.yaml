@@ -7,6 +7,8 @@ links: gold          # hand-made wiki links look like the automatic gold ones
 bold: plain          # no bold names mid-sentence in the story (recap lists keep theirs)
 glance: none         # no At a Glance box; the story starts after the pills
 tagline: keep        # keep the line under the title where written
+tagline-look: subtitle    # the tagline in the title's serif, italic and larger, so it reads as a subtitle (picked 2026-11-02)
+card-tagline: instead     # chronicle cards and the latest session show the tagline, no summary (Chris, 2026-11-02)
 picture: scene       # the feature picture stays beside the scene it shows
 story: titled       # one heading over the story, named below (not "Summary"; picked 2026-11-02)
 story-title: Malron’s Account

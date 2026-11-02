@@ -61,7 +61,7 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
 
     home = (out / "index.html").read_text(encoding="utf-8")
     assert home.index("Third &amp; Last") < home.index("Second: Wolves") < home.index("First Night")
-    assert "Latest session" in home and "September 1, 2026" in home
+    assert ">Latest<" in home and "September 1, 2026" in home
     assert 'id="y2024"' in home  # older sessions grouped by year
     assert "Wolves love them" in (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
 
@@ -150,6 +150,69 @@ def test_every_image_in_posts_and_wiki_has_alt_text(real_site):
             if not re.search(r'\balt="[^"]', img) and "aria-hidden" not in img and "deck" not in img:
                 bare.add(f"{page.relative_to(real_site).as_posix()}: {img[:120]}")
     assert not bare, sorted(bare)
+
+
+def latest_card(index_html: str) -> str:
+    return re.search(r'<li class="card session-card latest">.*?</li>', index_html, re.S).group(0)
+
+
+def build_with_style(content, tmp_path, settings: str) -> Path:
+    style = tmp_path / "post-style.yaml"
+    style.write_text(settings, encoding="utf-8")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example", style_file=style)
+    return out
+
+
+def chronicle_card(index_html: str, slug: str) -> str:
+    """The chronicle card that links to /posts/<slug>/."""
+    for card in re.findall(r'<li class="card session-card">.*?</li>', index_html, re.S):
+        if f"/posts/{slug}/" in card:
+            return card
+    raise AssertionError(f"no card for {slug}")
+
+
+def test_tagline_looks_plain_and_cards_skip_it_when_not_set(content, tmp_path):
+    out = build_with_style(content, tmp_path, "")
+    post = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    assert '<p class="lede tagline tagline-plain">Wolves love them</p>' in post
+    assert "card-tagline" not in chronicle_card((out / "index.html").read_text(encoding="utf-8"), "second")
+
+
+@pytest.mark.parametrize("look", ["subtitle", "quote", "hand"])
+def test_tagline_look_setting_marks_the_line_under_the_title(content, tmp_path, look):
+    """Chris (2026-11-02): the tagline looked like ordinary text; the look is a post-style setting."""
+    out = build_with_style(content, tmp_path, f"tagline-look: {look}\n")
+    post = (out / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    assert f'<p class="lede tagline tagline-{look}">Wolves love them</p>' in post
+    assert f".tagline-{look}" in (out / "style.css").read_text(encoding="utf-8")
+
+
+def test_chronicle_cards_show_the_tagline_above_the_teaser(content, tmp_path):
+    out = build_with_style(content, tmp_path, "card-tagline: above-teaser\n")
+    index = (out / "index.html").read_text(encoding="utf-8")
+    card = chronicle_card(index, "second")
+    assert card.index('<p class="card-tagline">Wolves love them</p>') < card.index('class="teaser"')
+    assert "card-tagline" not in chronicle_card(index, "first")  # no tagline, nothing extra
+    assert ".card-tagline" in (out / "style.css").read_text(encoding="utf-8")
+
+
+def test_chronicle_cards_can_show_the_tagline_instead_of_the_teaser(content, tmp_path):
+    out = build_with_style(content, tmp_path, "card-tagline: instead\n")
+    index = (out / "index.html").read_text(encoding="utf-8")
+    card = chronicle_card(index, "second")
+    assert '<p class="card-tagline">Wolves love them</p>' in card and 'class="teaser"' not in card
+    assert 'class="teaser"' in chronicle_card(index, "first")  # a post without a tagline keeps its teaser
+
+
+def test_newest_session_is_the_first_card_not_a_separate_box(content, tmp_path):
+    """Chris (2026-11-02): no "latest session" box; the newest session leads the chronicle list."""
+    index = (build_with_style(content, tmp_path, "") / "index.html").read_text(encoding="utf-8")
+    assert '<section class="hero"' not in index
+    cards = re.findall(r'<li class="card session-card[^"]*">.*?</li>', index, re.S)
+    assert len(cards) == 3 and "/posts/third/" in cards[0]
+    assert 'class="card session-card latest"' in cards[0] and ">Latest<" in cards[0]
+    assert ">Latest<" not in "".join(cards[1:])
 
 
 def test_duplicate_slugs_fail(tmp_path):
@@ -516,8 +579,8 @@ def test_home_cards_mark_sessions_with_slides(badge_site):
     assert "slides-tag" not in card_for(home, "No Deck")
 
 
-def test_latest_session_hero_shows_its_slides(badge_site):
-    hero = read(badge_site / "index.html").split('<section class="chronicle"')[0]
+def test_latest_session_card_shows_its_slides(badge_site):
+    hero = latest_card(read(badge_site / "index.html"))
     assert "New Deck" in hero and "3 slides" in hero and "slides-tag" in hero
 
 
