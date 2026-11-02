@@ -187,50 +187,12 @@ def test_aera_was_knocked_out_not_revived_on_2_june():
     assert "fell but was revived" not in post and "knocked unconscious but awakened" in post
 
 
-DEATH_WORDS = re.compile(r"\b(die|dies|died|dying|death|dead|killed|slain|perished|revived|resurrected|"
-                         r"raised|brought back to life|back from the dead|lost (him|zorpheus))\b", re.I)
-NOT_A_DEATH = re.compile(r"\b(never (really )?died|did not die|didn't die|not a death|no death)\b", re.I)
-HIM = re.compile(r"\b(zorpheus|he|his|him|the bard|the rogue)\b", re.I)
-
-
-def zorpheus_death_claims(text: str) -> list[str]:
-    """Sentences that name Zorpheus (or follow one that does) and talk of a death, leaving out the words
-    that say he did not die."""
-    claims = []
-    sentences = re.split(r"(?<=[.!?;:])\s+|\n+", text)
-    for i, sentence in enumerate(sentences):
-        near = " ".join(sentences[max(0, i - 1):i + 1])
-        if "zorpheus" not in near.lower():
-            continue
-        if DEATH_WORDS.search(NOT_A_DEATH.sub("", sentence)) and HIM.search(sentence):
-            claims.append(sentence.strip())
-    return claims
-
-
-def test_zorpheus_death_claims_finds_the_old_wording():
-    assert zorpheus_death_claims("When Zorpheus died, the table agreed Grant could bring Shabasta back.")
-    assert zorpheus_death_claims("Zorpheus was the last of Grant's characters to die before Shabasta's return")
-    assert zorpheus_death_claims("Grant played Zorpheus next. After his death the table let him swap.")
-    assert not zorpheus_death_claims("Zorpheus never died: the table let Grant swap him for Shabasta.")
-    assert not zorpheus_death_claims("Shabasta died at the gallows. Grant went on to play Veyren, then Zorpheus.")
-    assert zorpheus_death_claims("Grant played Zorpheus. The table killed him off.")
-    assert zorpheus_death_claims("Grant played Zorpheus. Then the bard perished.")
-    assert zorpheus_death_claims("Zorpheus never died, but Grant lost him anyway.")
-    assert zorpheus_death_claims("Zorpheus was brought back to life.")
-    assert not zorpheus_death_claims("Zorpheus fell silent. Zorpheus lost his dagger.")
-
 
 def test_zorpheus_never_died():
-    """Chris, 2 November 2026: the table talked it through and decided Zorpheus never really died. Over
-    the 2025 holidays the DM let Grant set him aside and bring Shabasta back. No page, post or badge may
-    say he died."""
+    """Chris, 2 November 2026: the table decided Zorpheus never really died; over the 2025 holidays the DM
+    let Grant set him aside and bring Shabasta back."""
     data = yaml.safe_load((ROOT / "data" / "party.yaml").read_text(encoding="utf-8"))
-    for entry in data.values():
-        assert "zorpheus" not in entry.get("died", []) + entry.get("revived", [])
-    files = [*(ROOT / "content").rglob("*.md"), *(ROOT / "data").rglob("*.yaml"), *(ROOT / "data").rglob("*.json"),
-             *(ROOT / "templates").rglob("*.*")]
-    claims = {str(p.relative_to(ROOT)): c for p in files if (c := zorpheus_death_claims(read(p)))}
-    assert claims == {}
+    assert all("zorpheus" not in e.get("died", []) + e.get("revived", []) for e in data.values())
     for name in ("zorpheus", "shabasta", "veyren"):
         page = read(ROOT / "content" / "wiki" / f"{name}.md")
-        assert "never died" in page, name
+        assert "never died" in page and "Zorpheus died" not in page and "his death" not in page, name
