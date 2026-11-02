@@ -377,7 +377,7 @@
 {"name":"Obsidian Whistle","type":"item","aliases":[],"summary":"A raven-shaped whistle.","facts":[
 {"text":"Davian gave it for recovering the gem.","post":"2025-04-22-welcome-to-krezk"}]},
 {"name":"Dmitri Krezkov","type":"npc","aliases":["Dmitri"],"summary":"A man of Krezk with a hereditary werewolf curse.","facts":[
-{"text":"Was tricked by the Abbot into skipping wolfsbane and killed his sister as a werewolf.","post":"2025-04-22-welcome-to-krezk"}]},
+{"text":"His son, tricked by the Abbot into skipping wolfsbane, turned and killed his sister.","post":"2025-04-22-welcome-to-krezk"}]},
 {"name":"Anna Krezkov","type":"npc","aliases":["Anna"],"summary":"Dmitri's wife.","facts":[
 {"text":"Harvests wolfsbane to ease Dmitri's curse.","post":"2025-04-22-welcome-to-krezk"},
 {"text":"The Abbot wants her heart in a month to revive the dead sister.","post":"2025-04-22-welcome-to-krezk"}]},
