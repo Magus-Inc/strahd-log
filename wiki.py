@@ -55,6 +55,9 @@ class WikiPage:
     body_md: str = ""
     html: str = ""
     mentioned_in: list = field(default_factory=list)  # posts, newest first
+    # Posts the page cites only because someone told us of it there (Madam Eva's errand at Tser Pool
+    # for the camp by Vallaki): still cited, but not counted as a session the page was seen in.
+    heard_of_in: list[str] = field(default_factory=list)
     cited_html: str = ""  # html with "(Session Title)" links as session numbers, set by the build
     top_picture: str = ""  # the first picture and its caption, when the wiki layout puts it at the top
     facts: list = field(default_factory=list)  # the facts box (wikistyle.facts), when the layout has one
@@ -82,6 +85,9 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
     if kind not in TYPES:
         raise ValueError(f"{path.name}: unknown type {kind!r} (use one of {', '.join(TYPES)})")
     aliases = meta.get("aliases") or []
+    heard = meta.get("heard_of_in") or []
+    if isinstance(heard, str):
+        heard = [heard]
     if isinstance(aliases, str):
         aliases = [a.strip() for a in aliases.split(",") if a.strip()]
     return WikiPage(
@@ -95,6 +101,7 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         narrator=bool(meta.get("narrator")),
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
+        heard_of_in=[str(h) for h in heard],
         body_md=body,
     )
 

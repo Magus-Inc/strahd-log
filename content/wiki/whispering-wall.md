@@ -3,6 +3,9 @@ title: Whispering Wall
 type: place
 summary: An ancient god's tomb that produces Barovia's mist and shows visions of desire.
 source: Compiled from the adventure log, with a description written for the site
+heard_of_in:
+- stop-winter-splinter
+- welcome-to-krezk
 ---
 
 ## Description
