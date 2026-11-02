@@ -69,9 +69,31 @@ def test_turning_back_at_a_junction_makes_no_loop():
         assert max(shift_of(seg["drawn"], seg["points"])) <= LANE_ROOM
 
 
-def test_every_crumb_on_the_real_trail_stays_on_its_road():
+def drawn_roads():
+    """Points every quarter unit along every road and track as the map draws them (curved), in a
+    4-unit grid for quick nearest-point lookups."""
+    grid = {}
+    for pts in list(barovia_map.ROADS.values()) + list(barovia_map.TRACKS.values()):
+        for bez in barovia_map.curves_of(pts):
+            for p in barovia_map.bezier_points(bez, 0.25):
+                grid.setdefault((int(p[0] // 4), int(p[1] // 4)), []).append(p)
+    return grid
+
+
+def off_road(p, grid):
+    gx, gy = int(p[0] // 4), int(p[1] // 4)
+    return min((math.dist(p, q) for dx in (-1, 0, 1) for dy in (-1, 0, 1) for q in grid.get((gx + dx, gy + dy), [])),
+               default=math.inf)
+
+
+def test_every_crumb_on_the_real_trail_stays_on_the_road_as_drawn():
+    """Measured along the curves as drawn, not just at the road's corner points: Chris (2026-11-02)
+    saw crumbs drift off where trails meet roads and at bends, up to 3.6 units off the road's middle,
+    because the crumbs bent through each corner their own way instead of following the road's curve."""
+    grid = drawn_roads()
     for leg in real_legs():
         for seg in leg["segments"]:
             if seg["road"]:
-                assert max(shift_of(seg["drawn"], seg["points"])) <= LANE_ROOM, leg["post"].slug
-                assert seg["d"] == barovia_map.smooth_path(seg["drawn"])
+                worst = max(off_road(p, grid) for bez in seg["beziers"] for p in barovia_map.bezier_points(bez, 0.5))
+                assert worst <= LANE_ROOM, (leg["post"].slug, round(worst, 2))
+                assert seg["d"].count("C") == len(seg["beziers"])
