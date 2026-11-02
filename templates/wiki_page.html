@@ -32,7 +32,7 @@
         <dl>
 {% for label, value in page.facts %}
           <div><dt>{{ label }}</dt>
-          <dd>{% if value is sequence and value is not string %}<a href="{{ base }}{{ value[2] }}"><span class="num">{{ value[0] }}</span> {{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd></div>
+          <dd>{% if value is sequence and value is not string %}<a href="{{ base }}{{ value[2] }}"><span class="num">{{ value[0] }}</span>{{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd></div>
 {% endfor %}
         </dl>
 {% endif %}
@@ -53,7 +53,7 @@
         <h2>Appears in {{ page.mentioned_in | length }} session{{ "s" if page.mentioned_in | length != 1 }}</h2>
         <ol class="session-list numbered">
 {% for post in page.mentioned_in %}
-          <li><span class="num">{{ post.number }}</span><a href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time> {{ badges.row_tags(post) }}</li>
+          <li><a class="num" href="{{ base }}{{ post.path }}" tabindex="-1" aria-hidden="true">{{ post.number }}</a><a href="{{ base }}{{ post.path }}">{{ post.title }}</a> <time datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time> {{ badges.row_tags(post) }}</li>
 {% endfor %}
         </ol>
       </section>

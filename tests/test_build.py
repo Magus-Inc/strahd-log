@@ -689,7 +689,7 @@ def test_real_map_and_wiki_share_session_numbers(real_site):
     posts = sorted(build.load_posts(build.ROOT / "content" / "posts"), key=lambda p: (p.date, p.slug))
     number = {p.slug: i for i, p in enumerate(posts, 1)}
     map_page = (real_site / "map" / "index.html").read_text(encoding="utf-8")
-    listed = dict((s, int(n)) for n, s in re.findall(r'class="num">(\d+)</span><a href="/posts/([^"]+)/"', map_page))
+    listed = dict((s, int(n)) for n, s in re.findall(r'class="num" href="[^"]+"[^>]*>(\d+)</a><a href="/posts/([^"]+)/"', map_page))
     assert listed and all(number[s] == n for s, n in listed.items())
     assert listed == number  # Skeletal Rider sits at Tser Pool (Chris, 2026-11-01)
     last = max(listed.values())
