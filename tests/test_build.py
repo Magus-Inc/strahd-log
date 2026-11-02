@@ -353,6 +353,32 @@ def test_vote_buttons_count_through_goatcounter_without_cookies(content, tmp_pat
     assert 'data-vote="' not in single
 
 
+def test_posts_count_readers_through_goatcounter_events(content, tmp_path, monkeypatch):
+    """Did anyone read it? Posts send started / halfway / finished events, each at most once per visit."""
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example")
+    html = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    minutes = re.search(r"(\d+) min read", html).group(1)
+    assert f'data-read-minutes="{minutes}"' in html  # "finished" needs half the shown reading time
+    assert '"/read" + path' in html and "e=true" in html
+    for step in ('"started"', '"halfway"', '"finished"'):
+        assert step in html
+    assert "visibilitychange" in html  # only time with the tab in front counts
+    script = html.split("// Reading:")[1].split("</script>")[0]
+    assert "cookie" not in script and "localStorage" not in script  # nothing kept in the browser
+    home = (out / "index.html").read_text(encoding="utf-8")
+    assert '"/read" + path' not in home  # posts only
+
+
+def test_read_events_stay_off_without_the_counter(content, tmp_path, monkeypatch):
+    monkeypatch.delenv("GOATCOUNTER", raising=False)
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example")
+    html = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    assert '"/read" + path' not in html
+
+
 def test_wiki_page_with_two_ai_pictures_gets_a_vote(content, tmp_path, monkeypatch):
     monkeypatch.setenv("GOATCOUNTER", "owlbear")
     wiki_dir = tmp_path / "wiki"
