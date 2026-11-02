@@ -103,9 +103,11 @@ def deck_body(deck: Deck, labelled: bool) -> str:
     return f'<div class="deck-frame"><ol class="deck-strip">{items}</ol></div>\n{meta}'
 
 
-def add_decks(html: str, decks: list[Deck]) -> str:
-    """Put the session's slides after the glance callout (see add_deck). With more than one deck they
-    follow one another, each with its label and a button to vote for it as the favorite."""
+def add_decks(html: str, decks: list[Deck], at: str = "above-story") -> str:
+    """Put the session's slides after the glance callout (see add_deck), or with at="after-story" where
+    the story ends and the recap lists start, or with at="end" last of all (the post style's slides
+    setting). With more than one deck they follow one another, each with its label and a button to
+    vote for it as the favorite."""
     decks = [d for d in decks if d.slides]
     if not decks:
         return html
@@ -121,6 +123,11 @@ def add_decks(html: str, decks: list[Deck]) -> str:
         block = ('<section class="decks vote-group" aria-label="Session slides">\n<h2>The Slides</h2>\n'
                  f'<p class="deck-intro">This session has {len(decks)} slide decks. Look through them and vote for your '
                  f'favorite.</p>\n{parts}<p class="vote-status" role="status" hidden></p>\n</section>\n')
+    if at == "end":
+        return html.rstrip("\n") + "\n" + block
+    if at == "after-story" and "<!--story-end-->" in html:
+        where = html.index("<!--story-end-->")
+        return html[:where] + block + html[where:]
     m = re.search(r'<aside class="callout glance">.*?</aside>\n?', html, re.S)
     if m:
         at = m.end()

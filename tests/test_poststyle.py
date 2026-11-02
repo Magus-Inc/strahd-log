@@ -36,7 +36,11 @@ def test_blog_uses_the_picks():
     style = poststyle.load_style(ROOT / "data" / "post-style.yaml")
     assert style == {"cast": "pills", "headings": "real", "entries": "bullets", "links": "gold",
                      "bold": "plain", "glance": "none", "tagline": "keep", "picture": "scene",
-                     "story": "titled", "story-title": "Malron’s Account", "scenes": "written"}
+                     "story": "titled", "story-title": "Malron’s Account", "scenes": "written",
+                     # the layout review, 2026-11-02
+                     "slides": "above-story", "opening": "in-story", "extra-titles": "hide", "quotes": "letters",
+                     "recap-prose": "bullets", "sections": "template", "recap-pictures": "story",
+                     "relink": "each-heading"}
 
 
 # --- cast -----------------------------------------------------------------------------------

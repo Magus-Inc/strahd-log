@@ -144,10 +144,16 @@ class Linker:
         self.pattern = re.compile(rf"(?<!\w)({alternation})(?!\w)") if names else None
         self.by_href = {f"/wiki/{p.slug}/": p for p in pages}
 
-    def link(self, html: str, self_slug: str | None = None) -> tuple[str, set[str]]:
-        """Return (html with first mentions linked, slugs of every page mentioned)."""
+    def link(self, html: str, self_slug: str | None = None, each_section: str | None = None) -> tuple[str, set[str]]:
+        """Return (html with first mentions linked, slugs of every page mentioned). With each_section,
+        a pattern for the tags that start a section (headings), the first mention in every section
+        links, so a reader who jumps to a section finds the links there."""
         if self.pattern is None:
             return html, set()
+        if each_section:
+            parts = re.split(f"(?={each_section})", html)
+            done = [self.link(part, self_slug) for part in parts]
+            return "".join(h for h, _ in done), set().union(*(m for _, m in done))
         mentioned: set[str] = set()
         # Pages the author already linked by hand count as mentioned and are not linked again.
         for href in re.findall(r'href="(/wiki/[^"#]+/)"', html):

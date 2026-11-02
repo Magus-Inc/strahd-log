@@ -33,6 +33,15 @@ OPTIONS = {
     "picture": ["scene", "top"],                     # the feature picture beside its scene, or first
     "story": ["as-written", "no-heading", "titled"], # no "Summary" heading; or one named by story-title
     "scenes": ["as-written", "written"],             # scene headings from data/scene-headings.yaml
+    # The layout review (2026-11-02): the same order on every post.
+    "slides": ["above-story", "after-story", "end"],  # the slides: above the story, after it, or last
+    "opening": ["as-written", "in-story"],           # lines written before Characters/Summary join the story
+    "extra-titles": ["as-written", "hide"],          # a second title above the story (the tagline again)
+    "quotes": ["as-written", "letters"],             # letters whose "-" lines Markdown read as headings
+    "recap-prose": ["as-written", "bullets"],        # every recap entry a bullet, even paragraphs and "1." lines
+    "sections": ["as-written", "template"],          # "What we learned" is Plot Points
+    "recap-pictures": ["as-written", "story"],       # a picture in the recap lists moves to the story's end
+    "relink": ["once", "each-section", "each-heading"],  # link a name's first mention in the post, each h2, or each heading
 }
 # Settings that take any text rather than one of a list.
 TEXT = {"story-title": "Malron’s Account"}  # the parent heading over the story when story is titled
@@ -80,6 +89,10 @@ class Styled:
 
 def apply(html: str, style: dict, scenes: list[tuple[str, str]] | None = None) -> Styled:
     style = {**AS_WRITTEN, **style}
+    if style["quotes"] == "letters":
+        html = letters(html)
+    if style["extra-titles"] == "hide":
+        html = drop_extra_titles(html)
     if style["headings"] == "real":
         html = outside_quotes(html, real_headings)
     if style["story"] != "as-written":
@@ -89,13 +102,23 @@ def apply(html: str, style: dict, scenes: list[tuple[str, str]] | None = None) -
         html = drop_characters(html)
     if style["glance"] == "none":
         html = drop_glance(html)
+    if style["opening"] == "in-story":
+        html = opening_in_story(mark_story(html))
     if style["story"] == "titled":
         html = mark_story(html)
         if style["scenes"] == "written" and scenes is not None:
             html = scene_headings(html, scenes)
         html = html.replace(STORY + "\n", f"{STORY}\n<h2>{htmllib.escape(style['story-title'], quote=False)}</h2>\n", 1)
+    if style["sections"] == "template":
+        html = re.sub(r"<h2>What we learned</h2>", "<h2>Plot Points</h2>", html, flags=re.I)
     if style["entries"] == "bullets":
         html = on_sections(html, RECAP, bullet_entries)
+    if style["recap-prose"] == "bullets":
+        html = on_sections(html, RECAP, recap_bullets)
+    if style["story"] == "titled":
+        html = mark_story_end(html)
+        if style["recap-pictures"] == "story":
+            html = recap_pictures_to_story(html)
     if style["bold"] == "plain":
         html = outside_quotes(html, lambda h: on_sections(h, RECAP, plain_story, inside=False))
     if style["links"] == "gold":
@@ -293,3 +316,86 @@ def picture_first(html: str) -> str:
     if not m:
         return html
     return m.group(0).rstrip() + "\n" + html[:m.start()] + html[m.end():]
+
+
+STORY_END = "<!--story-end-->"  # where the story stops and the recap lists start
+
+
+def letters(html: str) -> str:
+    """A letter typed with "-" lines between its paragraphs reads to Markdown as headings over "-"
+    underlines. Inside a quote there are no headings: each is a paragraph of the letter."""
+    def quote(m: re.Match) -> str:
+        return re.sub(r"<h[1-6]>(.*?)</h[1-6]>", r"<p>\1</p>", m.group(0), flags=re.S)
+    return re.sub(r"<blockquote>.*?</blockquote>", quote, html, flags=re.S)
+
+
+LEADING_NOTES = re.compile(r"(?:\s*<p>(?:<strong>)?Note:.*?</p>)*\s*", re.S)
+
+
+TEMPLATE_START = re.compile(r"<h[23]>(?:Characters|Summary|At a Glance)|<p><strong>(?:Characters|Summary)", re.I)
+
+
+def drop_extra_titles(html: str) -> str:
+    """Runs on the Markdown as rendered, before any other setting. A heading or a bold first line at
+    the very top, above the Characters list or Summary heading, is a second title for the session
+    (often the tagline again, with a subtitle under it): hide it."""
+    at = LEADING_NOTES.match(html).end()
+    m = re.match(r"<h([23])>(.*?)</h\1>\s*|<p><strong>([^<]+)</strong>\s*<br\s*/?>.*?</p>\s*", html[at:], re.S)
+    start = TEMPLATE_START.search(html)
+    if not m or not start or start.start() < at + m.end():
+        return html
+    if is_section(heading_text(m.group(2) or m.group(3) or "")):
+        return html
+    return html[:at] + html[at + m.end():]
+
+
+def opening_in_story(html: str) -> str:
+    """Lines written above the Characters list or the Summary heading are the story's first lines:
+    move them under the story's start. Notes about the post itself stay first."""
+    start = html.index(STORY)
+    at = LEADING_NOTES.match(html).end()
+    if at >= start:
+        return html
+    opening = html[at:start].strip()
+    rest = html[start + len(STORY):].lstrip("\n")
+    return html[:at] + STORY + "\n" + opening + "\n" + rest
+
+
+def mark_story_end(html: str) -> str:
+    if STORY_END in html:
+        return html
+    _, end = story_span(html)
+    return html[:end] + STORY_END + "\n" + html[end:]
+
+
+def recap_bullets(html: str) -> str:
+    """What is still a paragraph in a recap list becomes a bullet: "1." lines one each, an entry
+    with "-" lines under it a bullet with a nested list, any other paragraph one bullet. Spaced-out
+    lists close up. Notes and pictures stay as they are."""
+    html = re.sub(r"<li>\s*<p>(.*?)</p>\s*</li>", r"<li>\1</li>", html, flags=re.S)
+
+    def para(m: re.Match) -> str:
+        inner = m.group(1).strip()
+        if re.match(r"(?:<strong>)?Note:|<img|<em>AI-generated", inner):
+            return m.group(0)
+        lines = [ln.strip() for ln in re.split(r"<br\s*/?>", inner)]
+        if len(lines) > 1 and all(re.match(r"\d+\.\s", ln) for ln in lines):
+            return "<ul>\n" + "".join(f"<li>{re.sub(r'^\d+\.\s+', '', ln)}</li>\n" for ln in lines) + "</ul>"
+        if len(lines) > 1 and not lines[0].startswith("- ") and all(ln.startswith("- ") for ln in lines[1:]):
+            sub = "".join(f"<li>{ln[2:].strip()}</li>\n" for ln in lines[1:])
+            return f"<ul>\n<li>{lines[0]}<ul>\n{sub}</ul></li>\n</ul>"
+        return f"<ul>\n<li>{inner}</li>\n</ul>"
+
+    html = re.sub(r"(?<!<li>)<p>(.*?)</p>", para, html, flags=re.S)
+    return re.sub(r"</ul>\s*<ul>\n", "", html)
+
+
+def recap_pictures_to_story(html: str) -> str:
+    """A picture (and its credit) in the recap lists belongs to the story: it goes at the story's end."""
+    end = html.index(STORY_END)
+    recap = html[end:]
+    found = [m.group(0) for m in AI_PICTURE.finditer(recap)]
+    if not found:
+        return html
+    recap = AI_PICTURE.sub("", recap)
+    return html[:end] + "".join(p.rstrip() + "\n" for p in found) + recap
