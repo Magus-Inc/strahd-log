@@ -407,7 +407,7 @@ STORY_HEADING = re.compile(r"<h2>Story</h2>\s*")
 
 
 def apply_format(html: str, style: dict) -> Styled:
-    """The look for a post written in the one post format (README: "Writing a post"): who was there
+    """The look for a post written in the one post format (AGENTS.md, "One post format"): who was there
     is in the front matter, the story sits under "## Story" with its scene headings, and the recap
     lists follow. Only the look settings act here; the format rules are checked in tests/test_post_format.py."""
     style = {**AS_WRITTEN, **style}

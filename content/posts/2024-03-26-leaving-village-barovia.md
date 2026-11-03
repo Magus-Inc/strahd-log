@@ -4,7 +4,7 @@ date: '2024-03-26T21:00:00-05:00'
 tagline: There was always a Dwarf with us, right?
 slug: leaving-village-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/leaving-village-barovia
-cast: []
+cast: ["Aera shan Ravanór", "Grom Shield-Breaker", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht"]
 ---
 
 ## Story

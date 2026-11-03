@@ -4,7 +4,7 @@ date: '2024-02-27T21:00:00-06:00'
 tagline: Doru is grounded. Under the church.
 slug: rest-for-the-wicked
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/rest-for-the-wicked
-cast: []
+cast: ["Malron Lichtstrahl"]
 ---
 
 ## Story

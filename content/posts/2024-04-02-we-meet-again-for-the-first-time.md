@@ -4,7 +4,7 @@ date: '2024-04-02T20:30:00-05:00'
 tagline: The Count says hello. So do his seven wolves.
 slug: we-meet-again-for-the-first-time
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/we-meet-again-for-the-first-time
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Weeble Wobleston"]
 ---
 
 ## Story

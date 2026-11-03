@@ -4,7 +4,7 @@ date: '2024-10-29T21:00:00-05:00'
 tagline: Can we keep her safe?
 slug: finding-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finding-arabelle
-cast: []
+cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
 ---
 
 ## Story

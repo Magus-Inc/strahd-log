@@ -4,7 +4,7 @@ date: '2024-10-01T21:00:00-05:00'
 tagline: Shoot first, loot later
 slug: looking-for-zoldars-tower
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/looking-for-zoldars-tower
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 ---
 
 ## Story

@@ -91,8 +91,8 @@ def test_post_follows_the_format(path):
     for key in ("title", "date", "slug", "cast"):
         if key not in meta:
             problems.append(f"front matter has no {key}")
-    if not isinstance(meta.get("cast"), list):
-        problems.append("cast is a list of the player characters there")
+    if not isinstance(meta.get("cast"), list) or not meta.get("cast"):
+        problems.append("cast lists the player characters there")
     heads = re.findall(r"^(#{1,6}) (.*)$", body, re.M)
     names = [text for hashes, text in heads if len(hashes) == 2]
     if any(len(h) not in (2, 3) for h, _ in heads):
@@ -109,8 +109,12 @@ def test_post_follows_the_format(path):
             problems.append(f"recap sections in the order {RECAP}, not {after}")
     if any(text.endswith(":") for _, text in heads):
         problems.append("no colon after a heading")
-    if re.search(r"^\*\*[^*\n]+:\*\*\s*$", body, re.M):  # a bold quote on its own line is fine
+    if re.search(r"^\*\*[^*\n]+(?::\*\*|\*\*:)\s*$", body, re.M):  # a bold quote on its own line is fine
         problems.append("a bold line on its own is a heading: write it as ## or ###")
+    if re.search(r"^\S.*\n(?:=+|-{2,})\s*$", body, re.M):
+        problems.append("a line over === or --- is a heading by accident: write it as ### or a quote")
+    if re.search(r"^>\s*#", body, re.M):
+        problems.append("no headings inside a quote: a letter's lines are paragraphs")
     problems += [f"in {name}: {problem}" for name, problem in section_problems(body)]
     assert problems == []
 

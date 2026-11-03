@@ -4,7 +4,7 @@ date: '2024-10-22T21:00:00-05:00'
 tagline: There are just traps
 slug: the-staff-is-a-lie
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-staff-is-a-lie
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Shabasta"]
 ---
 
 ## Story

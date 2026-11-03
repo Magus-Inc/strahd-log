@@ -4,7 +4,7 @@ date: '2023-11-28T20:15:00-06:00'
 tagline: Six chimes, eight dinners, no way out
 slug: entering-durst-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-durst-manor
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht"]
 ---
 
 ## Story

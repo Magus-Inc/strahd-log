@@ -4,7 +4,7 @@ date: '2024-08-20T21:00:00-05:00'
 tagline: So, is that spelled Victor or Victor?
 slug: whispers-in-the-barons-mansion
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/whispers-in-the-barons-mansion
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Shabasta"]
 ---
 
 ## Story

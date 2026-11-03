@@ -4,7 +4,7 @@ date: '2024-08-13T21:00:00-05:00'
 tagline: she's been taken!
 slug: a-doll-for-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/a-doll-for-arabelle
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Shabasta"]
 ---
 
 ## Story

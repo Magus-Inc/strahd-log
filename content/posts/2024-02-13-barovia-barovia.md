@@ -4,7 +4,7 @@ date: '2024-02-13T21:00:00-06:00'
 tagline: Welcome to the Jungle
 slug: barovia-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/barovia-barovia
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
 ---
 
 ## Story

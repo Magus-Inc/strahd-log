@@ -4,7 +4,7 @@ date: '2024-01-30T21:00:00-06:00'
 tagline: Where did that Paladin get lost?
 slug: walter-we-are-coming-for-you
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/walter-we-are-coming-for-you
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
 ---
 
 ## Story

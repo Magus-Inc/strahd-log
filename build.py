@@ -523,6 +523,7 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
         "site": root,
         "posts": [{"title": p.title, "date": p.date.date().isoformat(), "url": root + p.path,
                    "glance": [wiki.plain_text(g) for g in p.glance], "wiki": sorted(p.mentions),
+                   "cast": sorted(p.listed),
                    "text": p.body_md.strip()} for p in reversed(posts)],
         "wiki": [{"slug": w.slug, "title": w.title, "type": "dm" if w.dm else w.type, "aliases": w.aliases, "summary": w.summary,
                   "url": root + w.path, "text": w.body_md.strip()} for w in pages],

@@ -4,7 +4,7 @@ date: '2023-12-12T20:45:00-06:00'
 tagline: Even the broom wanted us dead
 slug: deeper-into-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/deeper-into-the-manor
-cast: []
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Weeble Wobleston"]
 ---
 
 ## Story
