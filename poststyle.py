@@ -125,3 +125,41 @@ def picture_first(html: str) -> str:
     if not m:
         return html
     return m.group(0).rstrip() + "\n" + html[:m.start()] + html[m.end():]
+
+
+# --- pictures in the story (a format rule, not a look setting) --------------------------------
+
+MAX_PICTURES = 3  # Chris (2026-11-03): "a cap of 3 images per article", the feature picture included
+PICTURE_LINE = re.compile(r"^!\[[^\]]*\]\(([^)\s]+)[^)]*\)\s*$")
+CREDIT_LINE = re.compile(r"^\*AI-generated .*\*\s*$")
+AI_NAME = re.compile(r"-ai(?:-[a-z0-9]+)?\.(?:jpe?g|png|webp)$")
+
+
+def picture_problems(body: str) -> list[str]:
+    """What breaks the picture rules in a post's Markdown body: at most MAX_PICTURES pictures, the
+    first one being the feature picture; each on its own line in the story with words between it and
+    the next (two in a row would become a vote between takes); none twice; an AI picture over its
+    "AI-generated ..." credit line."""
+    problems = []
+    blocks = [b.strip() for b in re.split(r"\n\s*\n", body) if b.strip()]
+    seen: set[str] = set()
+    words_since_picture = True
+    for i, block in enumerate(blocks):
+        m = PICTURE_LINE.match(block)
+        if not m:
+            if not CREDIT_LINE.match(block) and not block.startswith("#"):
+                words_since_picture = True
+            continue
+        name = m.group(1).rsplit("/", 1)[-1]
+        if name in seen:
+            problems.append(f"{name} is shown twice")
+        elif not words_since_picture:
+            problems.append(f"{name} comes right after another picture: put a paragraph between them")
+        seen.add(name)
+        words_since_picture = False
+        if AI_NAME.search(name) and not (i + 1 < len(blocks) and CREDIT_LINE.match(blocks[i + 1])):
+            problems.append(f"{name} has no AI-generated credit line under it")
+    count = len(re.findall(r"!\[[^\]]*\]\(", body))  # a picture inside a paragraph counts too
+    if count > MAX_PICTURES:
+        problems.append(f"{count} pictures: a post holds at most {MAX_PICTURES}")
+    return problems

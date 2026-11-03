@@ -160,3 +160,44 @@ def test_no_scene_heading_list_outside_the_posts():
     # Scene headings live in the posts now; the old list matched paragraphs by their first words.
     assert not (ROOT / "data" / "scene-headings.yaml").exists()
     assert yaml.safe_load((ROOT / "data" / "post-style.yaml").read_text(encoding="utf-8"))["scenes"] == "written"
+
+
+# --- pictures in the story ---------------------------------------------------------------------
+
+CREDIT = "*AI-generated image (Google Gemini, November 2026). Not official art.*"
+
+
+def pic(name: str) -> str:
+    return f"![{name}](/images/{name}-ai.jpg)\n\n{CREDIT}\n\n"
+
+
+def test_a_post_holds_at_most_three_pictures():
+    # Chris (2026-11-03): extra pictures sprinkled through a post, "with a cap of 3 images per
+    # article". The feature picture counts, and so do maps; the slides are a deck, not pictures.
+    assert poststyle.MAX_PICTURES == 3
+    three = "## Story\n\n" + "".join(pic(n) + "We walked.\n\n" for n in ("a", "b", "c"))
+    assert poststyle.picture_problems(three) == []
+    four = three + pic("d")
+    assert poststyle.picture_problems(four) == ["4 pictures: a post holds at most 3"]
+
+
+def test_pictures_are_spread_through_the_story():
+    # Two pictures in a row become a vote between takes (article.add_image_votes), so a story's
+    # pictures need words between them, and one picture is shown once.
+    assert poststyle.picture_problems("## Story\n\n" + pic("a") + pic("b")) == [
+        "b-ai.jpg comes right after another picture: put a paragraph between them"]
+    assert poststyle.picture_problems("## Story\n\n" + pic("a") + "### Later\n\n" + pic("b")) == [
+        "b-ai.jpg comes right after another picture: put a paragraph between them"]
+    assert poststyle.picture_problems("## Story\n\n" + pic("a") + "We ran.\n\n" + pic("a")) == [
+        "a-ai.jpg is shown twice"]
+
+
+def test_an_ai_picture_carries_its_credit():
+    assert poststyle.picture_problems("## Story\n\n![a](/images/a-ai.jpg)\n\nWe ran.\n") == [
+        "a-ai.jpg has no AI-generated credit line under it"]
+    assert poststyle.picture_problems("## Story\n\n![map](/images/manor-1.jpg)\n\nWe ran.\n") == []
+
+
+@pytest.mark.parametrize("path", POSTS, ids=lambda p: p.stem)
+def test_post_pictures(path):
+    assert poststyle.picture_problems(parts(path)[1]) == []
