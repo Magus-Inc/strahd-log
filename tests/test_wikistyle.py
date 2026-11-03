@@ -243,7 +243,8 @@ def test_facts_box_session_numbers_link_to_their_post(site):
     did nothing; only the title beside it was a link. The number and title are one link now."""
     html = page(site, "olfin-darning")
     box = html[html.index('class="infobox"'):html.index("</aside>")]
-    assert '<a href="/posts/entering-durst-manor/"><span class="num">2</span>Entering Durst Manor</a>' in box
+    # Olfin was in the Session Zero barn (Chris, 2026-11-03), so he is first seen in session 1.
+    assert '<a href="/posts/session-zero/"><span class="num">1</span>Session Zero</a>' in box
     for f in sorted((site / "wiki").glob("*/index.html")):
         text = f.read_text(encoding="utf-8")
         if 'class="infobox"' not in text:
