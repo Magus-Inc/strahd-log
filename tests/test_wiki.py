@@ -477,8 +477,8 @@ def test_wiki_pages_cite_sessions_by_number_and_number_the_appears_in_list(site)
     # The Appears-in list carries the same numbers, and takes in a session cited but never named.
     appears = strahd.split('class="appears-in"', 1)[1]
     assert "Appears in 3 sessions" in appears
-    assert '<span class="num">3</span><a href="/strahd-log/posts/third/">' in appears
-    assert '<span class="num">1</span><a href="/strahd-log/posts/first/">' in appears
+    assert '<a class="num" href="/strahd-log/posts/third/" tabindex="-1" aria-hidden="true">3</a><a href="/strahd-log/posts/third/">' in appears
+    assert '<a class="num" href="/strahd-log/posts/first/" tabindex="-1" aria-hidden="true">1</a><a href="/strahd-log/posts/first/">' in appears
     # The search index keeps the readable titles, not bare numbers.
     entries = {e["t"]: e for e in json.loads((out / "search-index.json").read_text(encoding="utf-8"))}
     assert "watched us (Second)" in entries["Strahd"]["x"]
