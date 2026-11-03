@@ -973,9 +973,11 @@ def test_vallaki_vistani_camp_has_a_picture_and_its_label_beside_it():
 
 def test_ways_touching_finds_a_trail_drawn_over_a_road_but_not_a_junction():
     roads = {"Road": [(0, 0), (50, 0), (100, 0)]}
-    tracks = {"Crossing trail": [(30, -40), (40, 40)], "Branch": [(50, 0), (50, 40)]}
+    tracks = {"Crossing trail": [(30, -40), (40, 40)], "Branch": [(50, 0), (50, 40)],
+              # leaves the road at a shared point but runs along it for a while before turning off
+              "Hugging trail": [(100, 0), (88, 1), (80, 30)]}
     found = barovia_map.ways_touching({**roads, **tracks})
-    assert [(a, b) for a, b, _ in found] == [("Road", "Crossing trail")]
+    assert [(a, b) for a, b, _ in found] == [("Road", "Crossing trail"), ("Road", "Hugging trail")]
     assert math.dist(found[0][2], (35, 0)) < 2
 
 

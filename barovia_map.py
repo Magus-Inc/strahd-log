@@ -106,7 +106,8 @@ TRACKS = {
     "Berez trail": [(350, 278), (345, 310), (350, 350), (348, 400), (330, 450)],
     "Lake Baratok trail": [(350, 278), (345, 272), (341, 261), (338, 250), (332, 237), (322, 229), (309, 224),
                            (292, 221), (274, 220), (260, 221), (249, 224), (242, 225)],
-    "Tower of Kazan spur": [(242, 225), (258, 214), (250, 202)],
+    # The spur leaves the lake trail heading north, so it never doubles back along it (2026-11-03).
+    "Tower of Kazan spur": [(260, 221), (258, 214), (250, 202)],
     # Up from the abbey into the hills on the west side of Lake Baratok, to the werewolf den. The
     # official map shows no road there; this is a track, drawn dotted.
     "Werewolf den trail": [(133, 208), (150, 196), (170, 186), (192, 172)],
@@ -121,7 +122,8 @@ TRACKS = {
     # bank west, through the woods, to the old oak (Chris: "we hit the river before the bridge").
     "Ivlis north bank to the old oak": [(761, 504), (746, 503), (731, 494), (718, 488), (712, 486)],
     # The Vistani camp sits on dry land just south of Tser Pool.
-    "Tser Pool trail (to the camp)": [(680, 555), (690, 530)],
+    # It leaves the crossroads northward, clear of the road to the village (2026-11-03).
+    "Tser Pool trail (to the camp)": [(680, 555), (676, 540), (690, 530)],
 }
 # Drawn like tracks but never walked by the trail: the party never took them.
 UNUSED_TRACKS = {
@@ -932,7 +934,8 @@ def lanes(path: list[Point], worn: dict) -> list[float]:
 
 
 TOUCH = 4.0      # drawn ways closer than this, centre to centre, read as meeting (road ink is 4.8 wide)
-JUNCTION = 16.0  # near a point two ways share they may run close: that is where they meet
+JUNCTION = 8.0   # right by a point two ways share they may run close: that is where they meet;
+#                  much wider and a trail that leaves a junction along the road goes unflagged
 
 
 def ways_touching(ways: dict[str, list[Point]]) -> list[tuple[str, str, Point]]:
