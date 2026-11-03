@@ -1,4 +1,4 @@
-# Words that name a place without its name, linked like a wiki name in posts, log notes and wiki pages
+# Words that name a place (or one creature) without its name, linked like a wiki name in posts, log notes and wiki pages
 # (Chris, 2026-11-02: from Mother Night the werewolves' cave should be one tap away). wiki.Linker links
 # the words in [brackets] (all of them when there are none), only after the words around them; a phrase
 # also matches with a capital first letter. List only words that mean this one place in every post:
@@ -28,3 +28,8 @@ phrases:
     - "the [castle]"
   barovia-village-church:
     - "the [village church]"
+  # The Abbot's servant (Chris, 2026-11-03). Only "the"/"his" golem: in Welcome to Krezk "a flesh golem
+  # out of corpses" is the bride the Abbot is building (Vasilka), so "flesh golem" alone is not an alias.
+  the-flesh-golem:
+    - "the [flesh golem]"
+    - "the [golem]"
