@@ -11,11 +11,9 @@ ROOT = Path(build.__file__).parent
 CSS = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
 
 
-@pytest.fixture(scope="module")
-def site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("zoom-site") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
+@pytest.fixture
+def site(real_build):
+    return real_build.out
 
 
 def read(site, path):

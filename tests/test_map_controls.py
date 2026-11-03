@@ -9,11 +9,9 @@ CSS = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
 ZOOM_JS = (build.ROOT / "templates" / "_map_zoom.js").read_text(encoding="utf-8")
 
 
-@pytest.fixture(scope="module")
-def site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("site") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
+@pytest.fixture
+def site(real_build):
+    return real_build.out
 
 
 def figure_of(html: str) -> str:

@@ -169,10 +169,9 @@ def test_the_blog_links_every_section():
 
 # --- every post, as built ----------------------------------------------------------------------
 
-@pytest.fixture(scope="module")
-def site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("site")
-    return out, [p.slug for p in build.build(out_dir=out)]
+@pytest.fixture
+def site(real_build):
+    return real_build.out, [p.slug for p in real_build.posts]
 
 
 def body(out: Path, slug: str) -> str:

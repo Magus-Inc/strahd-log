@@ -274,12 +274,10 @@ def test_picture_top_moves_the_feature_picture_and_credit_first():
 
 # --- the real blog --------------------------------------------------------------------------
 
-@pytest.fixture(scope="module")
-def site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("site")
+@pytest.fixture
+def site(real_build):
     # Plain values only: a failing assert would otherwise try to print the posts' wiki graph.
-    posts = [(p.slug, [c.slug for c in p.cast]) for p in build.build(out_dir=out)]
-    return out, posts
+    return real_build.out, [(p.slug, [c.slug for c in p.cast]) for p in real_build.posts]
 
 
 def test_every_post_follows_the_template(site):

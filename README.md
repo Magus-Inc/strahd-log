@@ -30,6 +30,7 @@ just setup                      # create .venv and install requirements-dev.txt
 just test                       # run the tests
 just build                      # build the site into public/
 just serve                      # build, then serve at http://localhost:8000 (just serve 9000 for another port)
+just site-diff                  # compare the built site with main, page by page (--fail-on-change)
 just import <export-folder>     # re-import an Obsidian Portal export into content/posts/
 ```
 

@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # tools/site_diff.py builds main from history
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -25,3 +27,12 @@ jobs:
         run: python -m pytest -q
       - name: Build
         run: python build.py
+      # What this pull request changes on the built site (pictures by name, text word for word).
+      # A refactor should show "No changes"; run `just site-diff --fail-on-change` for that.
+      - name: Compare the site with main
+        if: github.event_name == 'pull_request'
+        run: |
+          echo '### Site changes against main' >> "$GITHUB_STEP_SUMMARY"
+          echo '```diff' >> "$GITHUB_STEP_SUMMARY"
+          python tools/site_diff.py --base "origin/${{ github.base_ref }}" --max-lines 300 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
