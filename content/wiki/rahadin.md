@@ -33,7 +33,7 @@ At the [castle](/wiki/castle-ravenloft/) he greeted us, brought a chained prison
 * Killed Horngaard, commander of the Order of the Silver Dragon. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Greeted the party when they arrived at Castle Ravenloft. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))
 * Brought a chained prisoner for judgment and locked the party in the guest room. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
-* Uses the tomb of King Barov and Queen Ravenovia as his sanctuary; it is room K88 of the castle. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
+* Uses the tomb of King Barov and Queen Ravenovia as his sanctuary. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Escorted the party out of Ravenloft the morning after their stay. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Attacked the party in the catacombs, surrounded by a deathly choir of screaming voices. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))
 * Was wounded and retreated from the catacomb fight. ([The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/))

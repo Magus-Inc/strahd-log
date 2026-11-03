@@ -6,6 +6,7 @@ slug: deeper-into-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/deeper-into-the-manor
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Weeble Wobleston"]
 sources: []
+feature: klara-ai.jpg
 ---
 
 ## Story
@@ -13,6 +14,10 @@ sources: []
 ### The Armor Lurches
 
 We climbed to the third floor and came into a dusty room with a suit of black plate armor. Oil lamps, woodland beasts and leaves decorate the walls. Suddenly the armor lurched toward [Olfin Darning](/wiki/olfin-darning/) and tried to shove him over the rail. Olfin held off that first attack.
+
+![A suit of black plate armor shoving Olfin back over the stair rail on the third floor of Durst Manor](/images/black-armor-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 It was a hard fight, and by the time the armor was destroyed Olfin and [Weeble Wobleston](/wiki/weeble-wobleston/) had taken a beating. We moved west into a bedroom with a yellow book and a wardrobe with a full-length mirror. Next door was a nursery with a crib and a strange substance on the floor. Something seemed to be breathing under the bed; the sheets rose and fell in a steady rhythm.
 

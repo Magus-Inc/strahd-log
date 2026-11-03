@@ -1,8 +1,7 @@
 ---
 title: Catacombs of Ravenloft
 type: place
-aliases:
-- K84
+book_room: K84
 summary: The crypts beneath Castle Ravenloft.
 source: Compiled from the adventure log
 ---

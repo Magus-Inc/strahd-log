@@ -4,7 +4,7 @@ date: '2023-11-07T20:00:00-06:00'
 tagline: Never follow a floating tooth into the fog
 slug: session-zero
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/session-zero
-cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Weeble Wobleston"]
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Weeble Wobleston"]  # Chris, 2026-11-03: all five were in the barn
 sources: []
 feature: durst-manor-ai.jpg
 ---
@@ -15,13 +15,17 @@ feature: durst-manor-ai.jpg
 
 On a dark and gloomy evening, a ragtag group of strangers, each with our own reason for being in [Daggerford](/wiki/daggerford/), went looking for shelter for the night. The only place left was the straw-covered loft of a barn. We arrived one by one, each picking a corner to hunker down in, and traded introductions and a little of our stories by the magical light glowing from one of the loft’s beams.
 
+![Five strangers sheltering in a straw-covered barn loft, lit by a glowing beam](/images/session-zero-barn-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### The Relics Pull
 
 After a time a thick fog settled over the town. Soon after, the tooth necklace [Aera](/wiki/aera-shan-ravanor/) wears began to float and pull toward a wall of the barn, and at the same moment the pendant [Weeble](/wiki/weeble-wobleston/) wears began to glow and drift toward the same wall.
 
 ![Weeble Wobleston, a high-elf fighter, his pendant glowing and pulling on its chain](/images/weeble-wobleston-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not player art.*
+*AI-generated image (Google Gemini, November 2026). Not player art.*
 
 We did not know what to do, but we felt compelled to follow those relics as they led us through the mists. The fog was so thick that those of us without a relic had to stay close or fall behind and be lost.
 

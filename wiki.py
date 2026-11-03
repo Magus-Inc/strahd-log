@@ -62,6 +62,8 @@ class WikiPage:
     # Real people in the role, each with the sessions they had it (post slugs; "from" defaults to the
     # first session, "to" to the latest): a DM handoff, or a PC whose player changes. Shown in the facts box.
     people: list[dict] = field(default_factory=list)
+    # The room's key in the Curse of Strahd book (K67): table talk, so it shows only in the facts box.
+    book_room: str = ""
     dm: bool = False  # the Dungeon Master: listed with the player characters, never in a post's cast or party
     source: str = ""
     obsidian_portal_url: str = ""
@@ -133,6 +135,7 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         former=bool(meta.get("former")),
         narrator=bool(meta.get("narrator")),
         dm=bool(meta.get("dm")),
+        book_room=str(meta.get("book_room") or ""),
         people=people,
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),

@@ -21,17 +21,17 @@ We went into the servants’ rooms “above stairs”, a place of household deca
 
 ### The Coffin Wardrobe
 
-In K-24 the room was strewn with splintered furniture. In the middle stood a towering wardrobe, shaped like a coffin and painted with mocking fey creatures. Aera looked over a full-length mirror and saw it had often been lifted and moved a little, which gave away a hidden passage. Inside the wardrobe a yellowed dress rose and danced a brief, ghastly dance, then fell into a heap when Shabasta touched it. Behind the mirror was a secret closet and a wooden ladder climbing twenty feet to a hidden landing.
+In one servants’ bedroom the floor was strewn with splintered furniture. In the middle stood a towering wardrobe, shaped like a coffin and painted with mocking fey creatures. Aera looked over a full-length mirror and saw it had often been lifted and moved a little, which gave away a hidden passage. Inside the wardrobe a yellowed dress rose and danced a brief, ghastly dance, then fell into a heap when Shabasta touched it. Behind the mirror was a secret closet and a wooden ladder climbing twenty feet to a hidden landing.
 
 Note: Meta details: the players talked about using physical NFC cards, repurposed from a Nintendo Switch game, as spellbook cards for the Arcane Trickster, to make the “thief that tricks” easier to run.
 
 ### Ladder to the Heart
 
-The ladder brought us to K-20, a landing with a dizzying view of the Heart of Sorrow: a huge, pulsing red crystal heart hanging in a hollow tower sixty-five feet across at the base. A spiral stair with no railing climbs the tower walls, and it shivered with the storm’s thunder as though it meant to shake us off into the pit. The Heart may be the castle’s one weak point, but the climb was too great a risk. We withdrew, closed the secret door behind us, and followed the blood trail toward the kitchens.
+The ladder brought us to a hidden landing with a dizzying view of the Heart of Sorrow: a huge, pulsing red crystal heart hanging in a hollow tower sixty-five feet across at the base. A spiral stair with no railing climbs the tower walls, and it shivered with the storm’s thunder as though it meant to shake us off into the pit. The Heart may be the castle’s one weak point, but the climb was too great a risk. We withdrew, closed the secret door behind us, and followed the blood trail toward the kitchens.
 
 ### Cyrus and the Spawn
 
-On the larder level, room K-62, we met the misshapen Cyrus Belview, kin to the poor souls at the Abbey of Saint Markovia. He greeted us with a weary, eerie familiarity and asked us to fetch his favorite cooking spoon from the ossuary nearby. But as we moved, a crystal dinner bell rang by the elevator shaft, the signal that dinner was served, and two vampire spawn dropped from the ten-foot ceiling on us. In the fight Aera and I were forced onto the elevator’s moving counterweights and had to leap again and again to keep our footing.
+In the larder off the castle kitchen we met the misshapen Cyrus Belview, kin to the poor souls at the Abbey of Saint Markovia. He greeted us with a weary, eerie familiarity and asked us to fetch his favorite cooking spoon from the ossuary nearby. But as we moved, a crystal dinner bell rang by the elevator shaft, the signal that dinner was served, and two vampire spawn dropped from the ten-foot ceiling on us. In the fight Aera and I were forced onto the elevator’s moving counterweights and had to leap again and again to keep our footing.
 
 Note: Meta details: rules questions came up about Misty Step as a bonus action under the 2024 and 2014 rules, and about keeping a grapple while being dragged into an elevator shaft.
 
@@ -41,7 +41,7 @@ Note: Meta details: rules questions came up about Misty Step as a bonus action u
 
 ### Argynvost’s Skull
 
-With the spawn destroyed, we went into K-67, the Hall of Bones, where human remains serve as both ornament and furniture. Over the eastern doors hung the skull of Argynvost. Aera took the spoon from the hand of a bone chair, and Crusty shrank the skull, which weighs some two hundred and fifty pounds. Four conjured hands together lowered it into our Chest of Holding. Taking it sprang a trap that sealed the room, and the mounds of bones in the corners began to knit themselves into skeletal sentries.
+With the spawn destroyed, we went into the Hall of Bones, where human remains serve as both ornament and furniture. Over the eastern doors hung the skull of Argynvost. Aera took the spoon from the hand of a bone chair, and Crusty shrank the skull, which weighs some two hundred and fifty pounds. Four conjured hands together lowered it into our Chest of Holding. Taking it sprang a trap that sealed the room, and the mounds of bones in the corners began to knit themselves into skeletal sentries.
 
 ![Argynvost's silver skull over the doors of the Hall of Bones](/images/argynvosts-skull-ai.jpg)
 
@@ -49,10 +49,12 @@ With the spawn destroyed, we went into K-67, the Hall of Bones, where human rema
 
 ## Key Locations
 
-* **K-24 Servants’ Quarters**: Beyond its filthy windows lies a valuable back door. The secret door behind the mirror lets us avoid the well-patrolled main halls of the Count’s home.
+Note: Room numbers in the book: servants’ quarters K24, the landing over the Heart of Sorrow K20, kitchen and larder K62 and K63, Hall of Bones K67.
+
+* **The Servants’ Quarters**: Beyond its filthy windows lies a valuable back door. The secret door behind the mirror lets us avoid the well-patrolled main halls of the Count’s home.
 * **The Heart of Sorrow Tower**: The heart of the castle’s power, and surely its weak point, though with no railing and the storm shaking the stair, a fall there is as deadly as any undead.
-* **The Kitchens and Larder**: Rooms K-62 and K-63, a rare place to talk rather than fight. Cyrus Belview gives us a small foothold among the castle’s household, though his loyalties are as twisted as his body.
-* **The Hall of Bones**: Room K-67, the ossuary. It was a blow to the heart to see the noble Argynvost’s remains used as common furnishing, so deep is the Count’s desecration. And the room is a trap, built to seal in anyone who disturbs what it holds.
+* **The Kitchens and Larder**: A rare place to talk rather than fight. Cyrus Belview gives us a small foothold among the castle’s household, though his loyalties are as twisted as his body.
+* **The Hall of Bones**: The castle’s ossuary. It was a blow to the heart to see the noble Argynvost’s remains used as common furnishing, so deep is the Count’s desecration. And the room is a trap, built to seal in anyone who disturbs what it holds.
 
 ## Encounters
 

@@ -1,8 +1,7 @@
 ---
 title: Strahd’s Tomb
 type: place
-aliases:
-- K86
+book_room: K86
 summary: Strahd's personal tomb in the catacombs.
 source: Compiled from the adventure log
 ---
