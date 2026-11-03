@@ -3,7 +3,9 @@ title: Dungeon Master
 type: character
 dm: true
 summary: Runs the game
-player: Ryan Mathews
+people:
+- name: Ryan Mathews
+  from: session-zero  # still running the game; add "to:" and a second person on a handoff
 source: Written for the blog, November 2026
 ---
 
@@ -25,5 +27,3 @@ Besides running the sessions, Ryan posted texts on the group's Discord for the p
 * **3 June 2025**, [Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/): the knightly vow of the Order of the Silver Dragon, Argynvost's last letter, Andral's letter, and the items on the hidden shelf.
 
 He also shared the rules for items and companions as the party found them: Zorya's stat block, the Clairvoyance Stone, the Symbol of Ravenkind, the Staff of Khazan and Olfin's Longsword. Many wiki pages, from the Dusk Elves to the Order of the Silver Dragon, were filled in from his texts.
-
-Many names in the campaign are his own, not the book's: Arturi, Eliza, Kreza and the Belview children among them.

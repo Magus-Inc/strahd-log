@@ -2,7 +2,9 @@
 
 Chris: the page is titled "Dungeon Master", with Ryan's full name in the article itself, "like we do
 for the player characters", and it sits in the player character section, "a section for humans".
-No page title carries a real name. The DM is not a party member, so he never gets a cast pill, a
+No page title carries a real name. Then (same day): the DM can change mid-campaign, so the facts
+box lists each real person in the role with the sessions they ran, and two people can hand the role
+over on one page. The same `people:` list works for a PC whose player changes. The DM is not a party member, so he never gets a cast pill, a
 party badge or the "Player character" label.
 """
 import json
@@ -37,6 +39,42 @@ def test_dm_never_gets_a_cast_pill():
     pages_ = [wiki.WikiPage("liren", "Liren", type="character"),
               wiki.WikiPage("dungeon-master", "Dungeon Master", type="character", dm=True)]
     assert [p.title for p in article.cast({"liren", "dungeon-master"}, pages_)] == ["Liren"]
+
+
+class P:  # a stand-in post
+    def __init__(self, n):
+        self.number, self.title, self.path, self.slug = n, f"Session {n}", f"posts/s{n}/", f"s{n}"
+
+
+def test_people_list_is_read_from_front_matter(tmp_path):
+    (tmp_path / "dm.md").write_text("---\ntitle: Dungeon Master\ntype: character\ndm: true\npeople:\n"
+                                    "- name: Pat Example\n  to: s3\n- name: Sam Sample\n  from: s4\n---\nx\n",
+                                    encoding="utf-8")
+    page = wiki.parse_wiki_page(tmp_path / "dm.md", build.split_front_matter)
+    assert page.people == [{"name": "Pat Example", "to": "s3"}, {"name": "Sam Sample", "from": "s4"}]
+    assert page.real_names == ["Pat Example", "Sam Sample"]
+
+
+def test_two_dms_hand_the_role_over_in_the_facts_box():
+    page = wiki.WikiPage("dungeon-master", "Dungeon Master", type="character", dm=True,
+                         people=[{"name": "Pat Example", "to": "s3"}, {"name": "Sam Sample", "from": "s4"}],
+                         mentioned_in=[P(n) for n in (6, 5, 4, 3, 2, 1)])
+    rows = [v for k, v in wikistyle.facts(page) if k == "Run by"]
+    assert rows == ["Pat Example: sessions 1–3", "Sam Sample: sessions 4–6"]
+    assert dict(wikistyle.facts(page))["Sessions"] == 6
+
+
+def test_people_on_a_pc_page_say_played_by():
+    page = wiki.WikiPage("liren", "Liren", type="character", people=[{"name": "Pat Example", "from": "s2"}],
+                         mentioned_in=[P(3), P(2)])
+    assert ("Played by", "Pat Example: sessions 2–3") in wikistyle.facts(page)
+
+
+def test_people_must_name_a_session_the_page_has():
+    page = wiki.WikiPage("dungeon-master", "Dungeon Master", type="character", dm=True,
+                         people=[{"name": "Pat Example", "from": "no-such-post"}], mentioned_in=[P(1)])
+    with pytest.raises(ValueError, match="no-such-post"):
+        wikistyle.facts(page)
 
 
 def test_dm_facts_box_says_run_by_not_played_by():
@@ -74,6 +112,20 @@ def test_wiki_page_without_facts_box_says_run_by():
     assert "Run by" in text
 
 
+def test_dm_is_at_every_session_but_in_no_cast():
+    # Chris (2026-11-03): "he ran all sessions": the facts box credits him with every one, like Malron.
+    posts = []
+    for n in (1, 2):
+        post = build.Post(title=f"S{n}", date=None, slug=f"s{n}", body_md="")
+        post.html = "<p>Liren fought.</p>"
+        posts.append(post)
+    pages_ = [wiki.WikiPage("liren", "Liren", type="character"),
+              wiki.WikiPage("dungeon-master", "Dungeon Master", type="character", dm=True)]
+    build.link_wiki(posts, pages_)
+    assert [p.slug for p in pages_[1].mentioned_in] == ["s1", "s2"]
+    assert [p.title for p in article.cast(posts[0].mentions, pages_)] == ["Liren"]
+
+
 def test_party_file_refuses_the_dm():
     post = build.Post(title="S", date=None, slug="s", body_md="")
     dm = wiki.WikiPage("dungeon-master", "Dungeon Master", type="character", dm=True)
@@ -86,13 +138,14 @@ def test_party_file_refuses_the_dm():
 def test_the_page_is_titled_dungeon_master_with_ryans_full_name_inside():
     page = next(p for p in pages() if p.slug == "dungeon-master")
     assert page.title == "Dungeon Master" and page.type == "character" and page.dm
-    assert page.player == "Ryan Mathews"
+    assert page.people == [{"name": "Ryan Mathews", "from": "session-zero"}]  # every session so far
     assert "Ryan Mathews" in page.body_md
     assert not page.aliases  # "the DM" in table notes must not link here and pull him into a post's cast
 
 
 def test_no_page_title_carries_a_real_name():
-    real = {part for p in pages() if p.player for part in p.player.split() if len(part) > 3}
+    real = {part for p in pages() for name in p.real_names for part in name.split() if len(part) > 3}
+    assert "Mathews" in real
     for p in pages():
         assert not any(re.search(rf"(?<!\w){re.escape(n)}(?!\w)", t) for n in real for t in p.names), p.slug
 
@@ -117,7 +170,9 @@ def test_built_site_lists_the_dm_with_the_player_characters_and_in_no_cast(real_
     nxt = index.index("<section", pcs)
     assert "/wiki/dungeon-master/" in index[pcs:nxt]
     page = (real_build.out / "wiki" / "dungeon-master" / "index.html").read_text(encoding="utf-8")
-    assert "Ryan Mathews" in page and "Run by" in page and "Played by" not in page
+    assert "Ryan Mathews: sessions 1–" in page and "Run by" in page and "Played by" not in page
+    sessions = re.search(r"Sessions</dt>\s*<dd>(\d+)</dd>", page)
+    assert sessions and int(sessions.group(1)) == len(real_build.posts)
     # The page is about the real table, so it is not "Malron's Account" (he doesn't know there is a table).
     assert "Malron’s Account" not in page and "Malron's Account" not in page
     for post in (real_build.out / "posts").glob("*/index.html"):

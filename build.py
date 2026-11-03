@@ -224,7 +224,8 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
     which posts mention each page."""
     linker = wiki.Linker(pages, phrases, exact)
     by_slug = {w.slug: w for w in pages}
-    narrators = {w.slug for w in pages if w.narrator}
+    # The narrator writes every session and the DM runs every one, so both are at each (Chris, 2026-11-03).
+    narrators = {w.slug for w in pages if w.narrator or w.dm}
     for post in posts:  # newest first, so mentioned_in comes out newest first too
         post.html, post.mentions = linker.link(post.html, each_section=SECTION_START.get(relink))
         post.html = wiki.link_npc_names(post.html, linker)
