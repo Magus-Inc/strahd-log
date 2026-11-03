@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![Ragged druids of the forest folk in a misty wood, one holding a raven, twig blights at their feet and another druid watching from a branch](/images/forest-folk-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 
 Druids of the Svalich Woods, a loose society of hermits who shun the towns. They hold Yester Hill, at the southwest edge of the valley, sacred, and they worship Strahd as a god for his power over the land and the weather. One of them watched us from a tree on the road. Lady Wachter first learned of them as a student of Lysa ([The Hunt for the Heart Stone](/posts/the-hunt-for-the-heart-stone/)). A mountain woman warned us to keep clear of them, and we heard that the mountain folk and the forest folk split long ago, the one worshipping ancient goddesses and the other dark powers ([Act 3: The Broken Land](/posts/act-3-the-broken-land/), [The Whispering Wall](/posts/the-whispering-wall/)).

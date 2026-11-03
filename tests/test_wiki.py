@@ -414,7 +414,7 @@ def test_pages_in_three_or_more_sessions_have_a_picture():
     DM was very descriptive or they matter, which dnd-scribe's wiki-plan flags)."""
     posts = build.load_posts(build.ROOT / "content" / "posts")
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
-    build.link_wiki(posts, pages)
+    build.link_wiki(posts, pages, exact=wiki.load_exact_names(build.ROOT / "data" / "name-case.yaml"))
     missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 3 and not p.pictures and not p.narrator)
     assert not missing, f"add a picture to: {missing}"
 

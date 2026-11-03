@@ -219,10 +219,10 @@ SECTION_START = {"each-heading": r"<h[23][ >]", "each-section": r"<h2[ >]"}
 
 
 def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once",
-              phrases: dict[str, list[str]] | None = None) -> None:
+              phrases: dict[str, list[str]] | None = None, exact: set[str] | frozenset = frozenset()) -> None:
     """Link wiki names (and the phrases in data/described-places.yaml) in posts and wiki pages, and record
     which posts mention each page."""
-    linker = wiki.Linker(pages, phrases)
+    linker = wiki.Linker(pages, phrases, exact)
     by_slug = {w.slug: w for w in pages}
     narrators = {w.slug for w in pages if w.narrator}
     for post in posts:  # newest first, so mentioned_in comes out newest first too
@@ -535,7 +535,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     style = poststyle.load_style(style_file or data_dir / "post-style.yaml")
     apply_style(posts, style, poststyle.load_scenes(data_dir / "scene-headings.yaml"))
     number_sessions(posts)
-    link_wiki(posts, pages, style["relink"], wiki.load_phrases(data_dir / "described-places.yaml", pages))
+    link_wiki(posts, pages, style["relink"], wiki.load_phrases(data_dir / "described-places.yaml", pages),
+              wiki.load_exact_names(data_dir / "name-case.yaml"))
     cite_sessions(posts, pages)
     wiki_style = wikistyle.load_style(wiki_style_file or data_dir / "wiki-style.yaml")
     apply_wiki_style(pages, wiki_style)

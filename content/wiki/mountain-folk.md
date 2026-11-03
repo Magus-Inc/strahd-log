@@ -5,6 +5,12 @@ summary: People of the mountains who worship ancient goddesses.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![A woman of the mountain folk with a stone axe on a rocky mountain path, raising a hand in warning above a misty forested valley](/images/mountain-folk-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

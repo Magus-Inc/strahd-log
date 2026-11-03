@@ -16,7 +16,8 @@ RECAP = ["Key Locations", "Encounters", "Loot", "Notable NPCs", "Plot Points", "
 
 @pytest.fixture(scope="module")
 def linker():
-    return wiki.Linker(wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter))
+    return wiki.Linker(wiki.load_wiki(ROOT / "content" / "wiki", build.split_front_matter),
+                       exact=wiki.load_exact_names(ROOT / "data" / "name-case.yaml"))
 
 
 def sections(path: Path) -> tuple[str, dict[str, str]]:

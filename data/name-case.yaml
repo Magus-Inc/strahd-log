@@ -1,0 +1,15 @@
+# Wiki names of two or more words link in small letters too ("the flesh golem", "dream pastries"; Chris,
+# 2026-11-03), and a "The ..." title links after "the" ("the windmill"). Names listed here link only
+# as written, because in small letters they also mean something else. tests/test_name_case.py checks
+# each is a real wiki name.
+exact:
+  # The page is the letter in the black carriage; "Strahd's letter" in Durst Manor is another one.
+  - Strahd’s Letter
+  # The page is Durst Manor's shard; Aera carries another "amber shard" by 9/29.
+  - Amber shard
+  # The page is the gate by Durst Manor; "the gates of Barovia" with headless statues are the West Gates.
+  - Gates of Barovia
+  # The page is Strahd's Dark Powers; "the forest folk worship dark powers" is a plain phrase.
+  - Dark Powers
+  # The page is the K & V oak on the Old Windmill Road; the 2024 "ancient oak" by the river looks like another tree.
+  - Ancient Oak
