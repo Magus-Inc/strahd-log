@@ -41,7 +41,8 @@ def words(text: str) -> str:
     """Quote text with Markdown marks, spacer dashes and line breaks taken out."""
     text = re.sub(r"(?m)^>\s?-?\s*$", "", text)
     text = re.sub(r"(?m)^>\s?", "", text).replace("*", "").replace("\\", "")
-    return " ".join(text.split())
+    # Posts may write curly quotes; the page shows the same marks either way (smarty).
+    return " ".join(text.translate(str.maketrans("“”‘’", "\"\"''")).split())
 
 
 def quoted(text: str) -> str:
@@ -57,7 +58,7 @@ def test_a_text_from_a_post_is_on_its_page_word_for_word(slug):
     stem, first, last = FROM_POSTS[slug]
     post = quoted((POSTS / f"{stem}.md").read_text(encoding="utf-8"))
     ours = quoted(page_text(slug))
-    assert ours.lstrip("“").startswith(first) and ours.rstrip("”").endswith(last)
+    assert ours.lstrip("\"").startswith(first) and ours.rstrip("\"").endswith(last)
     assert ours in post, f"{slug}: the page's text is not the post's, word for word"
 
 
@@ -95,6 +96,6 @@ def test_kasimirs_story_matches_the_post_that_quotes_it():
     def plain(text):
         return words(text).translate(str.maketrans("“”‘’", "\"\"''"))
     post = (POSTS / "2024-08-13-a-doll-for-arabelle.md").read_text(encoding="utf-8")
-    story = post.split("Kasimir told us his story:")[1].split("\n## ")[0]
+    story = re.split(r"\n##+ ", post.split("Kasimir told us his story:")[1])[0]  # up to the next heading
     ours = plain(quoted(page_text("fall-of-the-dusk-elves")))
     assert ours == plain(" ".join(p.strip() for p in story.split("\n") if p.strip() and not p.startswith("!")))
