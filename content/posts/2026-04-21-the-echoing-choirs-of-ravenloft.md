@@ -33,7 +33,7 @@ The rest did not last. As we made ready to leave the catacombs to find Gertruda,
 
 Note: [Realizing they faced a CR 14 opponent while still worn down, the players scrambled for a "cheese" plan with **Hold Person**, **Polymorph**, and a "Captain America" style volley of **Fireballs**. The DM said the fight was "very hard" for a group of their level.]
 
-The battle was brutal. Rahadin’s very presence is agony to the mind, and his saber nearly felled me more than once. Crusty and Aera worked together, and in the end Crusty quickened Aera so she could pepper the chamberlain with arrows from her “turbo bow.” For all we did, and though I called up a guardian of faith, Rahadin stayed a ghostly, deadly threat, zigzagging through our defenses. As I write this, we are still fighting for our lives.
+The battle was brutal. Rahadin’s very presence is agony to the mind, and his saber nearly felled me more than once. Crusty and Aera worked together, and in the end Crusty quickened Aera so she could pepper the chamberlain with arrows from her “turbo bow.” For all we did, and though I called up a guardian of faith, Rahadin stayed a ghostly, deadly threat, zigzagging through our defenses. He called up skeletons from the crypts we had opened. Then, wounded, he healed himself with an amulet and ran, though he had the upper hand.
 
 ## Key Locations:
 
@@ -45,7 +45,7 @@ The battle was brutal. Rahadin’s very presence is agony to the mind, and his s
 ## Encounters:
 
 **Poison Dart Trap (Crypt 40)**: The darts fell as we opened the door. Most of us dodged the worst, but the poison still did us real harm.  
-**Rahadin (The Chamberlain)**: A desperate battle against Strahd’s right hand. With his deathly choir and his speed he strikes several of us in a single breath. The fight is not over.
+**Rahadin (The Chamberlain)**: A desperate battle against Strahd’s right hand. With his deathly choir and his speed he strikes several of us in a single breath. He called up skeletons, healed himself with an amulet, and fled though he had the upper hand.
 
 ## Loot:
 

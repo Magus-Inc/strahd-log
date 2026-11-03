@@ -6,35 +6,41 @@ slug: whispers-in-the-barons-mansion
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/whispers-in-the-barons-mansion
 ---
 
-## The Baron’s Den
+## Summary:
 
-The den welcomed us with padded chairs, but I managed a bold ruse and slipped up the stairs unnoticed, while Schlopkht tried to jam a door to buy us time to look around.
+We were shown into the Baron’s den, all padded chairs, and told to wait for him. I did not wait. I walked out past the Baron himself as though I knew exactly what I was doing and was there on official business, and so went upstairs, though the Burgomaster had never seen me before. Meanwhile Schlopkht tried to jam the den door shut, to buy the others time to search the room.
 
-The Baron told us a malevolent spirit plagues the mansion and has driven off the staff. The cook has seen it. Why, I wonder, did he want the women kept ignorant of it? We asked to look through his books and were refused, but he agreed to show us the kitchen.
+The Baron, it turned out, walked straight past me and into the den. He cannot be a very busy man. That left the others no time to look around on their own, but it gave us a chance to talk him into letting us see the rest of the mansion, and with luck the library.
 
-## The Kitchen and Gallery
+He told us a spirit has been haunting the mansion. It began about two months ago. A butler and a lady in waiting have already left because of it, and the cook saw it most recently. He was desperate that the women who work with his wife should know nothing of it. We asked to look at his books and he refused, but he was willing to take us to the kitchen.
 
-In the kitchen a distorted silhouette hinted at the spirit. Victor, the Baron’s son, disappears into the attic for hours at a time, and strange illnesses and noises fill the house.
+On the way, Schlopkht tripped Shabasta so that he “accidentally” fell through a door. Eight women sat at a table inside. The one standing and walking among them wore the Baron’s colors, so she is most likely his wife. The upper level of the mansion has a gallery, and the library sits in the middle of the second floor, full of books, with a table for research.
 
-## The Library and Victor
+In the library I found a book of the births and deaths of Vallaki’s families and saw a familiar name: Ireena Strazni, younger sister of Izek Strazni and daughter of Grygori and Fatima Strazni. By the records, Ireena Strazni died more than eighteen years ago at the age of four, and Grygori and Fatima soon after. Their deaths are marked as suicide by hanging. Ireena’s cause of death is marked unknown, presumed devoured by wolves.
 
-I found a book of the births and deaths of Vallaki’s families and saw a familiar name: Ireena Strazni, younger sister of Izek Strazni and daughter of Grygori and Fatima Strazni. By the records, Ireena Strazni died more than eighteen years ago at the age of four, and Grygori and Fatima soon after. Their deaths are marked as suicide by hanging. Ireena’s cause of death is marked unknown, presumed devoured by wolves.
+The servant in the kitchen had seen the distorted silhouette of a young woman there. The Baron’s son, Victor, has been seen vanishing into the attic for hours at a time, and strange noises come from up there too. Two months ago a strange illness struck a girl of the Wachter family. A trapdoor in the master bedroom on the second floor leads up to the attic.
 
-Victor turned out to be an invisible man, and he appeared before us in the library. His spellbook bears the ring’s symbol, which ties it to Khazan, the original mage. Victor has been studying necromancy and other arts by means of the ring, and his curiosity centers on Khazan’s tower, a place barred to outsiders. He kept glancing nervously at the mirrors. His spectral cat and the painted dolls hint at more.
+Back in the library, an invisible man revealed himself to us. It was Victor. His spellbook bears the same symbol as the ring. He found the book in the library three years ago and has studied magic from it ever since, necromancy among other schools. Above his room is a great attic storeroom, with a clear path worn in the dust through a maze of old things. Izek once killed Victor’s cat, and Victor brought it back to life.
+
+“All is not well” is written on the attic door, and a glyph of warding guards it. Victor cast a spell on it before he opened the door. Schlopkht tripped and fell in front of him and pretended he had found the ring on the floor. Victor told us the book’s first owner was Khazan, and the ring bears his personal sigil. Khazan built a tower with a protective field that stops anyone else casting spells there, and Victor is eager to know what is inside.
+
+Victor claimed that he is the cause of the hauntings driving off the staff, and his cat is probably part of it too. We decided it was a lie. When he is nervous like this he glances at a mirror. In one corner sit three painted dolls of children, which he treats as his pupils. Then a young woman’s silhouette flashed in the mirror, and I moved the rug to cover it.
+
+Under the rug, etched into the floor, was a circle with sequences of sigils: a teleportation circle. Victor tested it on two unwilling servants, who were torn apart before they were sucked away. He means to use it to reach the plane where the spirit in the mirror is.
+
+He wants us to fetch something from Khazan’s tower: a powerful wizard’s staff, magically bound so that Khazan could call it to him by speaking his own name, “Khazan.” Victor thinks whoever had the ring may be using the tower. It lies to the west on Lake Baratok. Szoldar Szoldarovich, one of the town’s most skilled hunters, would make a good guide to the lake. He should be at the mouth of a river to the west, so we are to go out the north gate and then west along the lake to find him and his partner.
+
+On our way out Aera looked into a few of the second-floor rooms for anything worth pilfering. One room was full of dolls, so many dolls, and oddest of all, every one of them looks like Ireena Kolyana. A chest there held a silvered +1 shortsword and some clothes for a large man. Somewhere on that floor there is a mirror, too, with a verse: “Magic mirror on the wall, summon for your knight’s shade and wield your murderous blade.”
+
+We left the mansion and headed north and west to find Szoldar. Ireena chose to stay at the Blue Water Inn rather than come with us. At dusk we found a small, crudely built shack at the water’s edge, and the raven joined Olfin again.
 
 ![Victor fading into view out of invisibility in the Baron's mansion library, a spellbook in hand, a ghostly cat at his feet and a face in the mirror](/images/baron-s-mansion-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026). Not official art.*
 
-## The Attic
-
-“All is not well” is written on the attic door, and glyphs of warding guard it. Schlopkht staged a fall to show Victor the ring, but the truth stayed out of reach. Beneath a rug, sigils etched into the floor form a teleportation circle. Victor has tested it, with gruesome results.
-
-The Baron’s mansion hides more than ghosts. Our way forward runs through deception, magic and the unknown.
-
 ## Key Locations:
 
-* **The Baron’s den**: Padded chairs, and stairs I slipped up unnoticed.
+* **The Baron’s den**: Padded chairs, and the stairs I bluffed my way up.
 * **The kitchen**: Where a distorted silhouette hinted at the spirit.
 * **The library**: The record of Vallaki’s births and deaths.
 * **The attic**: “All is not well” on the door, glyphs of warding, and a teleportation circle under a rug.
@@ -47,11 +53,11 @@ The Baron’s mansion hides more than ghosts. Our way forward runs through decep
 
 ## Loot:
 
-* **Nothing taken**: The Baron refused us his books, and the truth stayed out of reach.
+* **A silvered +1 shortsword**: In a chest in the room full of Ireena dolls.
 
 ## Notable NPCs:
 
-* **Victor**: The Baron’s son, who studies necromancy and other arts by means of the ring.
+* **Victor**: The Baron’s son, who studies necromancy and other arts from Khazan’s spellbook.
 * **Ireena Strazni**: By the records, dead more than eighteen years ago at the age of four.
 * **Izek Strazni**: Her older brother.
 * **Grygori Strazni**: Her father, dead by hanging.
@@ -62,7 +68,7 @@ The Baron’s mansion hides more than ghosts. Our way forward runs through decep
 
 * **Ireena Strazni**: Cause of death unknown, presumed devoured by wolves. A familiar name.
 * **The ring’s symbol**: In Victor’s spellbook, tying it to Khazan.
-* **Khazan’s tower**: Where Victor’s curiosity lies, a place barred to outsiders.
+* **Khazan’s tower**: Where Victor’s curiosity lies. Its field stops anyone else casting spells there.
 * **The teleportation circle**: Victor has tested it, with gruesome results.
 
 ## Session Highlights:

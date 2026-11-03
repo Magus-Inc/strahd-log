@@ -13,7 +13,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Crusty](/wiki/crusty/)
 
 ## Summary:
-We came out of a brutal fight in the catacombs with Rahadin. We had wounded the chamberlain and driven him off, but we were in a bad way. I was nearly dead, and Olfin had barely escaped a final end. We drew back into the safety of a small magic hut and took a short rest to bind our wounds and ready ourselves for our last task in Castle Ravenloft: rescuing the innocent Gertruda.
+We came out of a brutal fight in the catacombs with Rahadin. We had wounded the chamberlain, and he healed himself with an amulet and fled. We were in a bad way. I was nearly dead, and Olfin had barely escaped a final end. We drew back into the safety of a small magic hut and took a short rest to bind our wounds and ready ourselves for our last task in Castle Ravenloft: rescuing the innocent Gertruda.
 
 Note: [The group talked about sourdough discard snacks and classic books like "The Outsiders" while the DM tracked hit dice and short rest mechanics.]
 

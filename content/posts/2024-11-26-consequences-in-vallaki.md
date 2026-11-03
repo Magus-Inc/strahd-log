@@ -29,7 +29,7 @@ We had a choice to make: go to the dinner, look into Izek, or see to the trouble
 
 At Blinsky’s we found the shop on fire and Blinsky unconscious. When he came to, he told us Izek had done it after a doll went missing. Shabasta rallied a crowd to put out the fire and demand justice from the Baron. Blinsky mentioned he had recently sold a noise toy to Henrik.
 
-We went on to the mansion, and Shabasta disguised himself as Blinsky to send the crowd home and collect money for repairs. The crowd was confused and drifted off without giving much. Vallakovich questioned Shabasta, who faltered, and the Baron had his guards shoot at him. Vallakovich made it plain he is still Baron.
+We went on to the mansion, and Shabasta disguised himself as Blinsky to send the crowd home and collect money for repairs. The crowd was confused and drifted off without giving much. Vallakovich thanked “Blinsky” and asked his last name. Shabasta was not sure, and the Baron had his guards loose a round of bolts at him. Vallakovich wants everyone to know he is a baron, not a mayor. Then he walked back into the mansion.
 
 Then we went to Wachterhaus, where the invitation got us in. We were shown to a dining room and offered wine or water as we liked.
 

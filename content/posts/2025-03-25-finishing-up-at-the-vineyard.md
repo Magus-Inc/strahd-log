@@ -40,7 +40,7 @@ We felt something watching us from the forest, a powerful and ancient presence w
 
 We suspect a gemstone is hidden in a statue’s chest, perhaps tied to summoning Winter Splinter. Radiant magic slows and burns the tree on Yester Hill, which will help us.
 
-Sverog offered Kavan a wand in exchange for a powerful weapon. In the middle of it all, Strahd rode up on his fiery steed and greeted us ominously.
+Kavan wants a wand that Sverog has, and if we bring it to him he will give us a weapon of great strength. In the middle of it all, Strahd rode up on his fiery steed and greeted us ominously.
 
 ## Key Locations:
 

@@ -20,7 +20,7 @@ Lady Fiona told us she follows Ezra, goddess of the mists, who teaches endurance
 
 The Baron took Lukovich the shoemaker, and may have executed him. Izek lost his arm to a wolf as a child, when his sister went missing. Could his sister be Ireena?
 
-To weaken the Baron we will follow Izek and find a moment when he is less guarded and easier to take down. Lady Fiona will send an associate to tell us his habits and give us a bottle of poisoned wine.
+To weaken Izek we will follow him and find a moment when he is less guarded and easier to take down. Lady Fiona will send an associate to tell us his habits and give us a bottle of poisoned wine.
 
 Stella has been sick for six months, since she began visiting Victor, the Baron’s son. She came home in a terrible state, and Victor will not speak to Lady Fiona. Berez, a fishing village south of Vallaki, was swept away by the river when someone challenged Strahd. Lady Fiona has heard of a glowing sword, perhaps the Sun Sword, but doubts it exists.
 

@@ -21,7 +21,7 @@ We crept up to the fourth floor of Argynvostholt, where **Horngaard** guards a g
 
 > **“When the dragon dreams its dream within its rightful tomb, the light of Argynvost will beam and rid this land of gloom.”**
 
-If I read it rightly, **bringing Argynvost’s skull out of Castle Ravenloft** could weaken Strahd’s hold on Barovia. We drew no steel and withdrew in peace, then rested before heading to **Vallaki** for supplies.
+If I read it rightly, **bringing Argynvost’s skull out of Castle Ravenloft** could weaken Strahd’s hold on Barovia. A greatsword blade and a gauntlet lay by the gargoyle. We drew no steel and withdrew in peace, and no one was hurt as we left, then rested before heading to **Vallaki** for supplies.
 
 At the **Blue Water Inn**, Aera was slipped a secret note from **Arrigal**:
 
@@ -52,6 +52,8 @@ We found a **massive oak tree** with “K & V” carved into the trunk. A scroll
 > **“…Please take [the gift] with my deepest regrets and my warmest wishes. No soul deserves love and peace more than you.”**  
 > **Sincerely and forever yours,**  
 > **Katarina”**
+
+When Strahd became a vampire he killed nearly everyone but Katarina, who is Madam Eva, and no one knows why he spared her.
 
 At the top of the tree was a **silver box** holding half of a tarnished locket, which Olfin took.
 

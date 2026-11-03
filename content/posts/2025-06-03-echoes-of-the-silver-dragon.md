@@ -23,7 +23,7 @@ Aera found **[a pseudodragon](/wiki/zorya/)**, which now follows her, drawn to h
 
 On the **second floor** a chill poured from one of the towers, and a spectral voice challenged us: **“If you be servants of the devil, be gone!”**
 
-There we met **Minodora**, a restless spirit, who begged us not to help Strahd. She gave us cryptic guidance: **“Brother Merik upstairs east galley—find his book in the west bedchambers. Read aloud the prayer.”** Brother Merik was once the Order’s chaplain.
+There we met **Minodora**, a restless spirit, who begged us not to help Strahd. She gave us cryptic guidance: **“Brother Merik upstairs east galley—find his book in the west bedchambers. Read aloud the prayer.”** Brother Merik was once the Order’s chaplain. She spoke too of Saint Markovia and an angel, whom we think is the Abbot of the town to the west.
 
 We found a table inscribed with the **knightly vow** of the Silver Dragon:
 
@@ -73,7 +73,7 @@ The scroll was a letter, signed by **Andral**, begging Argynvost to end the figh
 
 ## Session Highlights:
 
-* **“A pseudodragon companion? I think I have a new favorite party member!”** —Aera.
+* Aera’s new pseudodragon, which now follows her everywhere.
 * The tower spirit’s chilling words, a warning of trouble ahead.
 * Argynvost’s journal, a glimpse into the mind of the Silver Dragon before his fall.
 * The hidden stone shelf and its lost treasures.
