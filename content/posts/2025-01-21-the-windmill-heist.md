@@ -31,7 +31,7 @@ Then, the takedown. Lady Fiona reads Abyssal, and the true names on the contract
 
 As Morgantha died she told us Strahd’s most carefully guarded secret: a temple of forbidden lore hidden in the mountains, the Amber Temple, where he first met the entity with which he forged his terrible pact. She knew neither where it lies nor what the pact is.
 
-We took the hag’s heart stone and claimed the Bonegrinder for our base. To use the heart stone with Victor we need a night of the full moon, and Victor needs a ley line for the ritual. Lady Fiona says the cellar of her manor has one. We will rest through the day and meet at her house tonight, to perform the ritual under the full moon and rescue Stella.
+We took the hag’s heart stone and claimed the Bonegrinder for our base. We found six more pieces of cheap jewelry, twenty-five gold each, in the beds. To use the heart stone with Victor we need a night of the full moon, and Victor needs a ley line for the ritual. Lady Fiona says the cellar of her manor has one. We will rest through the day and meet at her house tonight, to perform the ritual under the full moon and rescue Stella.
 
 ## Key Locations:
 
@@ -46,6 +46,8 @@ We took the hag’s heart stone and claimed the Bonegrinder for our base. To use
 ## Loot:
 
 **Six pieces of cheap jewelry**: Each worth 25 gold pieces, found by Gumbo.
+
+**Six more pieces of cheap jewelry**: 25 gold each, found in the beds.
 
 **The heart stone**: Taken from the hag.
 
