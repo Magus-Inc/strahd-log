@@ -171,7 +171,15 @@ the-whispering-wall:
   - ["Strahd gave us gemstones", "Strahd’s Gifts"]
   - ["On the way back to the winery", "Minofaustus’s Market"]
 welcome-to-krezk: []
-shadows-over-st-markovia: []
+shadows-over-st-markovia:
+  - ["The abbey sits on a wide ledge", "Otto and Zygfrek at the Gate"]
+  - ["Inside we met Clovin", "The Belviews"]
+  - ["Then we met a young man", "A Bride for Strahd"]
+  - ["The Abbot went to fetch Marzena", "Marzena’s Necklace"]
+  - ["The Abbot took us to the east wing", "The Golem in the East Wing"]
+  - ["Inside, a half-finished chalk circle", "Ezmerelda"]
+  - ["She held a séance", "The Séance"]
+  - ["There we met", "Bianca’s Confession"]
 echoes-of-the-black-terro:
   - ["As we made ready", "Ezmerelda’s Smokeless Fire"]
   - ["Aera tried to slip in", "The Werewolf Den"]

@@ -25,7 +25,7 @@ Madam Eva's cards sent us here first: a Vistana searching for a mentor, to be fo
 
 ### The Abbot's house
 
-The road up is steep and cold. We found the Belview family, Otto, Zygfrek and Clovin, warped by the Abbot's attempts to cure them, and his flesh golem, which we gave a crown of flowers. Ezmerelda's wagon was hidden nearby, and her séance told us of a silver statuette in Castle Ravenloft that could cure the Abbot. The Abbot was making Vasilka, a bride for Strahd ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). We came back with the Icon of Dawn's Grace and found him in the asylum, a lightless hall of cells, scolding Vasilka. Clovin gave Olfin and Aera bone wings from the tower for a kind lie about Cyrus ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
+The road up is steep and cold. We found the Belview family, Otto, Zygfrek and Clovin, warped by the Abbot's attempts to cure them, and his [flesh golem](/wiki/the-flesh-golem/), which I gave Marzena's garland of flowers. Ezmerelda's wagon was hidden nearby, and her séance told us of a silver statuette in Castle Ravenloft that could cure the Abbot. The Abbot was making Vasilka, a bride for Strahd ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). We came back with the Icon of Dawn's Grace and found him in the asylum, a lightless hall of cells, scolding Vasilka. Clovin gave Olfin and Aera bone wings from the tower for a kind lie about Cyrus ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
 
 ### The Abbot redeemed
 
