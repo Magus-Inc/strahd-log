@@ -13,7 +13,7 @@
         <p class="lede">{{ page.summary }}</p>
 {% endif %}
 {% if (page.aliases or page.player) and not page.facts %}
-        <p class="muted">{% if page.player %}Played by {{ page.player }}{% endif %}{% if page.player and page.aliases %} &middot; {% endif %}{% if page.aliases %}Also known as {{ page.aliases | join(", ") }}{% endif %}</p>
+        <p class="muted">{% if page.player %}{{ "Run by" if page.dm else "Played by" }} {{ page.player }}{% endif %}{% if page.player and page.aliases %} &middot; {% endif %}{% if page.aliases %}Also known as {{ page.aliases | join(", ") }}{% endif %}</p>
 {% endif %}
 {% if page.top_picture and not page.facts %}
         <div class="wiki-hero prose">

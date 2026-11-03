@@ -333,9 +333,9 @@ def test_players_real_names_stay_on_their_pc_pages():
     pages = wiki.load_wiki(root / "content" / "wiki", build.split_front_matter)
     # A surname that is also a game word is checked only as part of the full name ("Warding Bond" is a spell).
     game_words = {"Bond"}
-    names = {part for p in pages if p.player for part in [p.player, *p.player.split()]
+    names = {part for p in pages for name in p.real_names for part in [name, *name.split()]
              if len(part) > 3 and part not in game_words}
-    assert "Ed Bond" in names and "Bond" not in names
+    assert "Ed Bond" in names and "Bond" not in names and "Ryan Mathews" in names
     for post in (root / "content" / "posts").glob("*.md"):
         text = post.read_text(encoding="utf-8")
         found = sorted(n for n in names if re.search(rf"(?<!\w){re.escape(n)}(?!\w)", text))
@@ -415,14 +415,15 @@ def test_pages_in_three_or_more_sessions_have_a_picture():
     posts = build.load_posts(build.ROOT / "content" / "posts")
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
     build.link_wiki(posts, pages, exact=wiki.load_exact_names(build.ROOT / "data" / "name-case.yaml"))
-    missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 3 and not p.pictures and not p.narrator)
+    # The DM is a real person at every session, not someone the party meets: no picture until Chris picks one.
+    missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 3 and not p.pictures and not p.narrator and not p.dm)
     assert not missing, f"add a picture to: {missing}"
 
 
 def test_every_player_character_has_a_picture():
     """Chris (2026-11-01): every PC, current or former, has a picture on its wiki page."""
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
-    missing = sorted(p.slug for p in pages if p.type == "character" and not p.pictures)
+    missing = sorted(p.slug for p in pages if p.type == "character" and not p.dm and not p.pictures)  # the DM is no PC
     assert not missing, f"add a picture to: {missing}"
 
 

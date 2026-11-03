@@ -12,15 +12,15 @@ A row of stocks stands in the square, and every soul in them wears a crude donke
 
 ## Blinsky’s Toy Store
 
-Among the cluttered shelves of Blinsky’s shop we found a doll that looked eerily like Ireena. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
+Among the cluttered shelves of Blinsky’s shop was a doll that looked eerily like Ireena, and Aera stole it. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
 
 ## The Vistani Encampment
 
 At the encampment we met Shabasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
 
-But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Yann, who had drugged Alexi and stood accused of taking Arabelle, had met a grisly end, his severed head lying toward the Luna River.
+But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Alexi claimed Yann drugged him and took her. Yann had met a grisly end: a dusk elf found his severed head nearby, toward the Luna River.
 
-Kasimir clutched a ring bearing a sigil, its design woven from necromancy and evocation. It may be the key to deeper truths.
+Kasimir held a signet ring bearing a sigil of connected symbols and lines, its design woven from necromancy and evocation. We might be able to research it in the Baron’s library.
 
 ![Kasimir Velikov, a grey-skinned dusk elf, clutching a glowing signet ring in the Vistani camp](/images/kasimir-ai.jpg)
 
@@ -30,7 +30,7 @@ Alexi offered us five hundred gold pieces if we bring Arabelle back alive.
 
 ## The Dusk Elves
 
-Kasimir told us the dusk elves have kept a silent vigil here for five centuries. The traitor Rahadin betrayed them, and the Vistani have sheltered them from Strahd’s wrath ever since. One elf bore the scars of frostbite, the mark of some perilous journey. What secrets does that blistered skin hide?
+Kasimir told us the dusk elves have kept a silent vigil here for five centuries. The traitor Rahadin betrayed them, and the Vistani have sheltered them from Strahd’s wrath ever since. In one of the houses an elf had pale, puffy, blistered skin, frostbite we think, from hiking across Mount Ghakis and falling. The dusk elves reminded Aera of her dead husband, and she asked Kasimir why they are here.
 
 Kasimir told us his story:
 
@@ -45,7 +45,7 @@ Kasimir told us his story:
 
 ## The Footprints
 
-The footprints told a grim tale. Yann fought, fell and died. A second figure fled, and a third waded into the river, burdened by something heavy. Was Yann the first victim? The symbols on the signet ring may hold the answer.
+The footprints told a grim tale. One set came from the north to a tree in the southwest and ended in the grass; others ran from west to east along the riverbank. The first and third figures fought, and the first died. The second ran away, and the third waded into the river carrying something heavy. We think the first was Yann. The symbols on the signet ring may hold the answer, so we headed back to Vallaki to look into it further.
 
 ## The Baron’s Library
 

@@ -115,14 +115,29 @@ def fold_notes(notes: str) -> str:
             f"{inner.rstrip()}\n</details>\n")
 
 
+def held(person: dict, seen: list, slug: str) -> str:
+    """"Pat Example: sessions 4–9", from the person's first to last session in the role."""
+    numbers = {p.slug: p.number for p in seen}
+    for key in ("from", "to"):
+        if key in person and person[key] not in numbers:
+            raise ValueError(f"wiki/{slug}: people: {person['name']} {key} {person[key]} is not a session of this page")
+    first = numbers[person["from"]] if "from" in person else min(numbers.values(), default=0)
+    last = numbers[person["to"]] if "to" in person else max(numbers.values(), default=0)
+    return f"{person['name']}: sessions {first}–{last}" if first != last else f"{person['name']}: session {first}"
+
+
 def facts(page) -> list[tuple[str, object]]:
-    """The facts box: other names, who plays a PC, when we first and last saw them, how often."""
+    """The facts box: other names, who plays a PC (or runs the game, for the DM), when we first and last saw them, how often."""
     out: list[tuple[str, object]] = []
     if page.aliases:
         out.append(("Also known as", ", ".join(page.aliases)))
-    if getattr(page, "player", ""):
-        out.append(("Played by", page.player))
+    role = "Run by" if getattr(page, "dm", False) else "Played by"
     seen = list(page.mentioned_in)
+    people = getattr(page, "people", [])
+    if people:
+        out += [(role, held(person, seen, page.slug)) for person in people]
+    elif getattr(page, "player", ""):
+        out.append((role, page.player))
     if seen:
         first, last = seen[-1], seen[0]
         out.append(("First seen", (first.number, first.title, first.path)))

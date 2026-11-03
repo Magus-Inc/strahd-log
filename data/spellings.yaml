@@ -3,7 +3,7 @@
 # pages and log extracts; tests/test_spellings.py fails while a wrong spelling is left.
 #
 # The book fixes SPELLINGS only. What happened at the table comes from the posts and Chris, and
-# names Ryan made up (Malron's table, the Belview children, Arturi, Eliza, Kreza...) stay as written.
+# names Ryan made up (Malron's table, the Belview children, Arturi, Elizabella, Kreza...) stay as written.
 # Matching is whole words and case-sensitive. A right spelling must never also be a wrong one.
 #
 # Checked 2026-10-31 against the book's character index (Ravenloft wiki "Curse of Strahd" page).
@@ -139,6 +139,11 @@ fix:
   Spear of the Ladies: Spear of the Huntress
   # Not from the book: Aera's pseudodragon is Zorya, by Ryan's stat block (Chris, 2026-10-28).
   Zora: Zorya
+  # Not from the book: Eliza at the Tser Pool camp (2024) and Elizabella in Stanimir's caravan (2026)
+  # are one Vistani woman (Chris, 2026-11-03). Elizabella is his note's spelling; Word heard Ryan's
+  # read-aloud as "Elisabetta".
+  Eliza: Elizabella
+  Elisabetta: Elizabella
   # Player characters, spelled as their wiki pages spell them (Chris, 2026-11-02). Nicknames the table
   # uses on purpose ("Shipnasty", "Shouldnasty") stay.
   Shivasta: Shabasta

@@ -826,6 +826,18 @@
   ]
  },
  {
+  "name": "Elizabella",
+  "type": "npc",
+  "aliases": [],
+  "summary": "A Vistani woman, first met at the Tser Pool camp.",
+  "facts": [
+   {
+    "text": "Told stories with Stanimir and Radu in a Vistani caravan near the Tser Pool Crossroads.",
+    "post": "2026-02-10-unwelcome-guests"
+   }
+  ]
+ },
+ {
   "name": "Arrigal",
   "type": "npc",
   "aliases": [],

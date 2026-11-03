@@ -1,6 +1,8 @@
 ---
 title: The Windmill
 type: place
+aliases:
+- Bonegrinder
 summary: A decrepit windmill where the hag coven lived.
 source: Compiled from the adventure log, with a description written for the site
 heard_of_in:

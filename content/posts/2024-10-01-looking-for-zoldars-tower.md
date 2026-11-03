@@ -10,7 +10,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 We set out to find Szoldar, who could guide us to the tower that holds the legendary Staff of Khazan. Along the way we came upon a decrepit shack and an old stone slab.
 
 **Szoldar and Yevgeni**  
-In the shack we met Szoldar and his brother, Yevgeni. Aera bought a wolf pelt from them for fifty gold pieces and found it was glamour weave, a rare and magical cloth.
+In the shack we met Szoldar and his brother, Yevgeni. Aera bought Shabasta a wolf pelt from them for fifty gold pieces and found it was glamour weave, a rare and magical cloth.
 
 **The Ancient Monument**  
 Before we left, we looked over the stone slab, an ancient monument to the Dreamer and the Ladies Three. The brothers warned us that a werewolf pack prowls the area, led by a new and reckless alpha.

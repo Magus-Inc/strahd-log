@@ -7,7 +7,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 ---
 
 **The Wagon’s Traps**  
-Aera opened the wagon carefully with a conjured hand, standing aside as crossbow bolts shot out. Inside she found a chicken, which she suspects might be Ezmerelda. Shabasta, believing the traps spent, climbed in and set off a silver net and bursting fire potions. We smothered the flames with our bedrolls.
+Aera opened the wagon carefully with a conjured hand, standing aside as crossbow bolts shot out. Inside she found a chicken, which she suspects might be Ezmerelda. Shabasta, believing the traps spent, climbed in and set off a silver net, and two fire potions burst out and struck him and Aera. We smothered the flames with our bedrolls and woke Shabasta.
 
 ![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
 
@@ -35,7 +35,7 @@ We rested a while before going in. Four statues stood around a central platform,
 The journal tells of a man haunted by his pursuit of darkness, which began when a vampire murdered his child. The lifelong hunt has left him weary and troubled. We knew the handwriting from a guide to hunting vampires, and so we are sure: Rictavio is van Richten, and he may be at the Blue Water Inn.
 
 **Werewolves**  
-On our way back north to town we met Zollst and Matilda, trappers from Krethi, who warned us of a bloodthirsty lady. Then they turned into werewolves. We fought hard and killed them both, and went on to town.
+On our way back north to town we met Zollst and Matilda, trappers from Krethi. Szoldar had never heard of them. They told of a lady who slays with a blade that thirsts for the blood of innocents, then warned that we had forgotten one thing: silver! Then they turned into werewolves. We fought hard and killed them both, and went on to town.
 
 ## Key Locations:
 

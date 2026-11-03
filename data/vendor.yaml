@@ -1,0 +1,5 @@
+# JavaScript libraries copied into static/vendor/ (the script rule in AGENTS.md). None yet.
+# Each entry: name, version, npm (package name, if different), file, license, license_file,
+# source (the exact download URL), sha256 (of file), why (what it does that our own code shouldn't).
+# tools/vendor_check.py and tests/test_vendor.py check every entry.
+libraries: []

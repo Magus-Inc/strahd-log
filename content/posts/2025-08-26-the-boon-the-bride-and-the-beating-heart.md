@@ -23,9 +23,7 @@ He then granted us a boon: **resistance to necrotic harm for a day and a half**,
 
 Strahd began a **grand tour of the castle**. On the second floor I spotted **pulleys running up and down a hallway and a mannequin dressed like Strahd** that seemed to be attached to them, perhaps a cheap trick to scare visitors.
 
-Meanwhile, **Sasha drew Zorpheus aside** and asked him:
-
-> **“Do you intend to steal from Castle Ravenloft?”**
+Meanwhile, **Sasha drew Zorpheus aside** and asked him whether he meant to steal from Castle Ravenloft.
 
 She pleaded with us to **rescue Gertruda**, who is held in the Keep. Gertruda was **Doru’s fiancée**, the one Ismark sent us to recover after she was lost on the road to Vallaki.
 
@@ -43,15 +41,11 @@ We were made to judge him, and Gumbo was handed a sword to carry out the punishm
 
 Suddenly **lightning struck the south gate tower**, disabling the bridge. We went back to the grand entry for tea while Strahd saw to the damage.
 
-**Diabola** told us:
-
-> **“The lightning struck a room upstairs. The bridge is disabled and repairs will take until morning.”**
+**Diabola** told us the lightning had struck a room upstairs and disabled the bridge, and the repairs would take until morning.
 
 We were offered **guest quarters**, with the promise that no servant would lay hands on us so long as we stayed in our rooms. Sasha led us up three floors to a tower guest room with a single bed.
 
-**Rahadin warned us**:
-
-> **“Do not leave your chambers until morning. Dark fiends roam the castle at night.”**
+**Rahadin warned us** again not to leave our chambers until morning, for dark fiends roam the castle at night.
 
 **Escher was set to guard the door**, and Rahadin locked us in and kept the key.
 

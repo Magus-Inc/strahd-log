@@ -106,7 +106,8 @@ TRACKS = {
     "Berez trail": [(350, 278), (345, 310), (350, 350), (348, 400), (330, 450)],
     "Lake Baratok trail": [(350, 278), (345, 272), (341, 261), (338, 250), (332, 237), (322, 229), (309, 224),
                            (292, 221), (274, 220), (260, 221), (249, 224), (242, 225)],
-    "Tower of Kazan spur": [(242, 225), (258, 214), (250, 202)],
+    # The spur leaves the lake trail heading north, so it never doubles back along it (2026-11-03).
+    "Tower of Kazan spur": [(260, 221), (258, 214), (250, 202)],
     # Up from the abbey into the hills on the west side of Lake Baratok, to the werewolf den. The
     # official map shows no road there; this is a track, drawn dotted.
     "Werewolf den trail": [(133, 208), (150, 196), (170, 186), (192, 172)],
@@ -120,12 +121,16 @@ TRACKS = {
     # Session 8: the party left the road just before the Ivlis bridge and followed the river's north
     # bank west, through the woods, to the old oak (Chris: "we hit the river before the bridge").
     "Ivlis north bank to the old oak": [(761, 504), (746, 503), (731, 494), (718, 488), (712, 486)],
-    # The Vistani camp sits on dry land just south of Tser Pool.
-    "Tser Pool trail (to the camp)": [(680, 555), (690, 530)],
+    # The Vistani camp sits on the west shore of Tser Pool, as on the official map (Chris, 2026-11-03:
+    # "where we will place the camp ... should be by the lake"). The trail leaves the crossroads
+    # northward, clear of the road to the village.
+    "Tser Pool trail (to the camp)": [(680, 555), (674, 535), (670, 510), (668, 486)],
 }
 # Drawn like tracks but never walked by the trail: the party never took them.
 UNUSED_TRACKS = {
-    "Tser Pool trail (past the pool)": [(690, 530), (655, 515), (628, 485), (606, 448), (600, 405)],
+    # As on the official map (Chris, 2026-11-03): from the camp on the shore the trail runs up between
+    # the loop road and the stream to the falls bridge; it never crosses the road.
+    "Tser Pool trail (past the pool)": [(668, 486), (652, 474), (632, 460), (605, 432), (600, 405)],
 }
 
 LAKES = {
@@ -927,6 +932,38 @@ def lanes(path: list[Point], worn: dict) -> list[float]:
         used[current * side] = used.get(current * side, 0) + 1
         out.append(current)
     return out
+
+
+TOUCH = 4.0      # drawn ways closer than this, centre to centre, read as meeting (road ink is 4.8 wide)
+JUNCTION = 8.0   # right by a point two ways share they may run close: that is where they meet;
+#                  much wider and a trail that leaves a junction along the road goes unflagged
+
+
+def ways_touching(ways: dict[str, list[Point]]) -> list[tuple[str, str, Point]]:
+    """Pairs of roads or trails whose drawn curves meet anywhere but at a point they share.
+
+    Chris (2026-11-03): the dotted trail past Tser Pool was drawn across the loop road, so on the map
+    they seemed to cross where the official map has them apart. Ways may meet only at a junction,
+    a vertex both lines list. Returns (way, other way, where), one entry per pair, closest spot."""
+    drawn = {name: [p for b in curves_of(pts) for p in bezier_points(b)] for name, pts in ways.items()}
+    names = list(ways)
+    found = []
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            shared = set(ways[a]) & set(ways[b])
+
+            def free(points):
+                return [p for p in points if all(math.dist(p, j) >= JUNCTION for j in shared)]
+
+            best = None
+            for p in free(drawn[a]):
+                for q in free(drawn[b]):
+                    d = math.dist(p, q)
+                    if d < TOUCH and (best is None or d < best[0]):
+                        best = (d, ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2))
+            if best:
+                found.append((a, b, best[1]))
+    return found
 
 
 def road_curves() -> dict[tuple[Point, Point], Bezier]:

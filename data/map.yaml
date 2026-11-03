@@ -22,8 +22,8 @@ places:
   gates-of-barovia: {xy: [930, 398], label: Gates, anchor: end}
   # Chris: a different place from the gates above, on the road toward Castle Ravenloft.
   west-gates-of-barovia: {xy: [600, 334], label: West Gates, anchor: end}
-  # The Vistani camp is on dry land just south of the pool.
-  tser-pool: {xy: [690, 530], anchor: end}
+  # The Vistani camp is on the west shore of the pool, as on the official map (Chris, 2026-11-03).
+  tser-pool: {xy: [668, 486], label_at: [642, 516]}
   castle-ravenloft: {xy: [720, 398]}
   tser-crossroads: {xy: [610, 360], label: Tser Pool Crossroads, anchor: end}
   the-windmill: {xy: [473, 314], label: Old Bonegrinder, anchor: below}
@@ -59,7 +59,7 @@ places:
 #           (data/trail.yaml `marker`). Each sits on a road vertex, unless offroad: true.
 spots:
   the-old-oak: {xy: [712, 486], label: the old oak by the River Ivlis}
-  tser-pool-road: {xy: [649, 567], label: the road west of the Tser Pool camp}
+  tser-pool-road: {xy: [649, 567], label: the loop road south of the Tser Pool camp}
   tser-falls-bridge: {xy: [600, 405], label: Tser Falls bridge}
   lake-road: {xy: [499, 252], label: the lake road east of Vallaki}
   bonegrinder-road: {xy: [530, 286], label: the road to Old Bonegrinder, near: the-windmill}
@@ -130,7 +130,7 @@ sprites:
   wizard-of-wines: {image: wizard-of-wines, xy: [104.2, 352], width: 44.3}
   yester-hill: {image: yester-hill, xy: [71.2, 480], width: 46.4}
   durst-manor: {image: durst-manor, xy: [972.7, 332.8], width: 22.6}
-  tser-pool: {image: tser-pool, xy: [691.8, 526], width: 42.5}
+  tser-pool: {image: tser-pool, xy: [659, 487], width: 38}
   # The camp by Vallaki reuses the Tser Pool camp's ring of wagons, a little smaller.
   vallaki-vistani-camp: {image: tser-pool, xy: [378, 303], width: 36}
   gates-west: {image: gates, xy: [599.6, 340], width: 35.3, place: west-gates-of-barovia}
