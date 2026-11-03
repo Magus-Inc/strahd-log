@@ -28,8 +28,8 @@ phrases:
     - "the [castle]"
   barovia-village-church:
     - "the [village church]"
-  # The Abbot's servant (Chris, 2026-11-03). Only "the"/"his" golem: in Welcome to Krezk "a flesh golem
-  # out of corpses" is the bride the Abbot is building (Vasilka), so "flesh golem" alone is not an alias.
+  # The Abbot's servant (Chris, 2026-11-03). Only "the" golem: in Welcome to Krezk "a flesh golem out of
+  # corpses" is the bride the Abbot is building, hand-linked to Vasilka, so "flesh golem" is not an alias.
   the-flesh-golem:
     - "the [flesh golem]"
     - "the [golem]"

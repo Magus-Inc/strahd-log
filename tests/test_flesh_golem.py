@@ -1,5 +1,5 @@
 """The flesh golem (Chris, 2026-11-03): its page is one tap away wherever the posts and the wiki name it,
-and it is tied to Vasilka, who made the crown of flowers it still wears (Ryan, 7/21 session)."""
+and its crown is the garland Marzena sent her "sibling" in the east wing (Chris's notes from 4/29/2025)."""
 import re
 
 import pytest
@@ -32,16 +32,17 @@ def test_pages_that_name_the_golem_link_it(site_pages, path):
     assert GOLEM in site_pages[path], f"{path} names the flesh golem without linking it"
 
 
-@pytest.mark.parametrize("path, before", [
-    ("posts/the-abbot-unveiled-wings-lies-and-the-fallen-star", "Behind them loomed the "),
-    ("posts/shadows-over-st-markovia", "The "),
-    ("wiki/vasilka", "the Abbot’s "),
-    ("wiki/abbey-of-saint-markovia", "his "),
+@pytest.mark.parametrize("path, words", [
+    ("posts/the-abbot-unveiled-wings-lies-and-the-fallen-star", "Behind them loomed (the )?<a [^>]*>(the )?flesh golem<"),
+    ("posts/shadows-over-st-markovia", "The <a [^>]*>golem<"),
+    ("wiki/vasilka", "while (the )?<a [^>]*>(the )?flesh golem<"),
+    ("wiki/abbey-of-saint-markovia", "his <a [^>]*>flesh golem<"),
 ])
-def test_the_story_links_the_golem_where_it_is_named(site_pages, path, before):
+def test_the_story_links_the_golem_where_it_is_named(site_pages, path, words):
     """Not just the bold Notable NPCs entry or the picture: the words in the story link."""
     html = site_pages[path].replace("&rsquo;", "’").replace("&#x27;", "’").replace("'", "’")
-    assert re.search(rf'{re.escape(before)}<a class="wiki-link" {GOLEM}[^>]*>flesh golem<', html), path
+    html = html.replace(f'<a class="wiki-link" {GOLEM}', "<a ")
+    assert re.search(words, html), path
 
 
 def test_this_flesh_golem_or_a_flesh_golem_is_not_a_phrase():
@@ -70,8 +71,9 @@ def test_the_bride_the_abbot_is_building_is_not_linked_as_the_golem(site_pages):
     assert len(re.findall(r'href="/wiki/vasilka/"[^>]*>flesh golem<', html)) == 3
 
 
-def test_the_golem_and_vasilka_link_each_other(site_pages):
+def test_the_golem_links_vasilka_and_marzena(site_pages):
     golem = site_pages["wiki/the-flesh-golem"]
     assert 'href="/wiki/vasilka/"' in golem
     story = re.sub(r"<[^>]+>", "", golem.split("From the adventure log")[0])
-    assert "crown of flowers that Vasilka had made for it" in story
+    assert 'href="/wiki/marzena/"' in golem
+    assert "I gave the garland to the golem" in story
