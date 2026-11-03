@@ -4,25 +4,28 @@ date: '2024-07-30T21:00:00-05:00'
 tagline: '*Only welcome if you hand us 1 gold and all your silver'
 slug: welcome-to-vellaki-
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-to-vellaki-
+cast: []
 ---
 
-### On the Road to Vallaki
+## Story
+
+### Wolves’ Heads on the Gate
 
 The road ended at iron gates with wolves’ heads impaled on them.
 
-### The Refugee Camp
+### Refugees Outside the Walls
 
 Ireena was enraged and heartbroken at the sight of the refugee camp outside the walls. [Schlopkht](/wiki/schlopkht/) tried to persuade her to feed the refugees the dream pies, to help them sleep and ease their minds.
 
 The refugees reached the gate some days ago but are not allowed in. When they tried to force their way, Izek, one of the guards, summoned fire to drive them back. The Baron will not even come out to them. Wolves and bats have attacked the camp, yet the refugees will not risk the road home. A quarter of them are addicted to dream pastries. Many were cold to Ireena and would not accept her help, blaming her brother and father for their misfortune. They believe a red-haired woman has cursed them. Ireena was so angered by the Baron’s callousness that she went off with Aera.
 
-### Entering Vallaki
+### Teeth and Garlic
 
 Heavy iron chains and a padlock held the gate shut. One guard carried a silvered spear, the other silver crossbow bolts. They checked our teeth and tested us with garlic. To enter, each of us must pay a toll of one gold piece and surrender any silver to the town. Schlopkht tried to talk the guards into taking pies instead, but in the end we each paid our gold. The guards recommended the Blue Water Inn and its meat pie.
 
-### In Town
-
 The guards mentioned a strange man with long ears who had come to town on a carnival wagon. The Festival of the Blazing Sun is in three days. And we should be careful what we tell old Morgantha, who sells the pies.
+
+### Rictavio at the Inn
 
 The streets were empty but for one cloaked figure walking away from us. Several ravens sat on the roof of the inn, whose sign shows a blue waterfall. Inside was a colorfully dressed half-elf in a big hat, surely the man the guards meant. Urwin at the bar welcomed us. He is married to Danika, who runs the inn. We ordered wine and a meat pie.
 
@@ -38,29 +41,31 @@ We rented rooms at one gold each. Vallaki demands care, with its harsh laws and 
 
 The barkeep passed a parcel from under the bar to Rictavio, who tucked it under his cloak and walked out. When we asked about Blinsky’s toys, Rictavio told us he is a secret agent of the Keepers of the Feather, a secret society set against Strahd. Then we lost him in the crowd.
 
+### The Baron’s Procession
+
 A procession silenced the whole town, led by the Baron and Izek. We think Izek pushed an old woman into the mud. Her son Udo has been imprisoned, and she too was taken to the stocks. The Festival of the Sun, we now hear, is in four days.
 
 Note: LEVEL 4!!!
 
-## Key Locations:
+## Key Locations
 
 * **The gates of Vallaki**: Iron gates with wolves’ heads impaled on them, chained and padlocked.
 * **The refugee camp**: Outside the walls, where the refugees have waited for days.
 * **Vallaki**: Harsh laws and politics. The streets were empty.
 * **Blue Water Inn**: A blue waterfall on its sign, and a good meat pie.
 
-## Encounters:
+## Encounters
 
 * **The refugees**: Many were cold to Ireena, blaming her brother and father.
 * **The gate guards**: Teeth checked, garlic tested, a gold piece each, and all silver surrendered.
 * **Brom and Bray**: Dangling a stuffed bat over the bar to tease Karl and Nikolai.
 * **The procession**: The Baron and Izek, and an old woman pushed into the mud.
 
-## Loot:
+## Loot
 
 * **Nothing gained**: A gold piece each for the gate toll, and one each for our rooms.
 
-## Notable NPCs:
+## Notable NPCs
 
 * **Ireena**: Enraged and heartbroken at the refugee camp.
 * **Izek**: The guard who summoned fire to drive the refugees back.
@@ -74,14 +79,14 @@ Note: LEVEL 4!!!
 * **Udo**: The old woman’s son, imprisoned.
 * **Morgantha**: Careful what we tell her, say the guards.
 
-## Plot Points:
+## Plot Points
 
 * **The Keepers of the Feather**: A secret society set against Strahd.
 * **The Festival of the Blazing Sun**: Three days off, or four, by the latest talk.
 * **The refugees**: Shut outside the walls, and sure that a red-haired woman has cursed them.
 * **Udo and his mother**: He imprisoned, she taken to the stocks.
 
-## Session Highlights:
+## Session Highlights
 
 * Schlopkht trying to pay the toll in pies.
 * Rictavio, almost a ringmaster.

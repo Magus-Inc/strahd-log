@@ -246,16 +246,6 @@ def test_scenes_as_written_ignore_the_list():
     assert "Called Before Noon" not in html and "<h3>The Crawl</h3>" in html
 
 
-def test_every_post_has_its_scene_headings_listed():
-    """Each post is listed, even with no breaks (a very short story), and headings stay short."""
-    scenes = poststyle.load_scenes(ROOT / "data" / "scene-headings.yaml")
-    slugs = {build.split_front_matter(p.read_text(encoding="utf-8"))[0]["slug"]
-             for p in (ROOT / "content" / "posts").glob("*.md")}
-    assert set(scenes) == slugs
-    long = [h for hs in scenes.values() for _, h in hs if len(h.split()) > 6]
-    assert long == []
-
-
 # --- glance, picture ------------------------------------------------------------------------
 
 def test_glance_none_removes_the_box():

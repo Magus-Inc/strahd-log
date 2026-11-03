@@ -34,7 +34,7 @@ OPTIONS = {
     "card-tagline": ["hide", "above-teaser", "instead"],  # the tagline on chronicle cards
     "picture": ["scene", "top"],                     # the feature picture beside its scene, or first
     "story": ["as-written", "no-heading", "titled"], # no "Summary" heading; or one named by story-title
-    "scenes": ["as-written", "written"],             # scene headings from data/scene-headings.yaml
+    "scenes": ["as-written", "written"],             # show the "###" scene headings written in the story
     # The layout review (2026-11-02): the same order on every post.
     "slides": ["above-story", "after-story", "end"],  # the slides: above the story, after it, or last
     "opening": ["as-written", "in-story"],           # lines written before Characters/Summary join the story
@@ -401,3 +401,30 @@ def recap_pictures_to_story(html: str) -> str:
         return html
     recap = AI_PICTURE.sub("", recap)
     return html[:end] + "".join(p.rstrip() + "\n" for p in found) + recap
+
+
+STORY_HEADING = re.compile(r"<h2>Story</h2>\s*")
+
+
+def apply_format(html: str, style: dict) -> Styled:
+    """The look for a post written in the one post format (README: "Writing a post"): who was there
+    is in the front matter, the story sits under "## Story" with its scene headings, and the recap
+    lists follow. Only the look settings act here; the format rules are checked in tests/test_post_format.py."""
+    style = {**AS_WRITTEN, **style}
+    m = STORY_HEADING.search(html)
+    if not m:
+        raise ValueError('a post in the post format has a "## Story" heading')
+    html = html[:m.start()] + STORY + "\n" + html[m.end():]
+    if style["glance"] == "none":
+        html = drop_glance(html)
+    if style["story"] == "titled":
+        if style["scenes"] != "written":
+            start, end = story_span(html)
+            html = html[:start] + re.sub(r"<h3[^>]*>.*?</h3>\s*", "", html[start:end], flags=re.S) + html[end:]
+        html = html.replace(STORY + "\n", f"{STORY}\n<h2>{htmllib.escape(style['story-title'], quote=False)}</h2>\n", 1)
+        html = mark_story_end(html)
+    if style["links"] == "gold":
+        html = gold_links(html)
+    if style["picture"] == "top":
+        html = picture_first(html)
+    return Styled(html)

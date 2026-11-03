@@ -47,9 +47,15 @@
   A wiki alias links a name wherever it appears, so a misspelled alias hides a wrong word behind a
   right link ("Sarepool crossroads" for Tser Pool Crossroads). `tests/test_spellings.py` fails on an
   alias spelled a letter or two off its page's name: fix it in `fix:`, or list it under `keep:` with why.
-- One look for every post: `data/post-style.yaml` (Chris's picks) and `poststyle.py` restyle the
-  rendered HTML at build time (PC pills, real headings, bulleted recap entries...), so old posts are
-  never reworded to match. Change the look there, not in the posts.
+- One post format (Chris, 2026-11-03): every post file is written one way. Front matter has
+  `cast:` (the player characters there, by wiki page title); then an optional `## At a Glance`,
+  one `## Story` with its `###` scene headings (short, in Malron's voice, at natural breaks), then
+  `## Key Locations`, `## Encounters`, `## Loot`, `## Notable NPCs`, `## Plot Points`,
+  `## Session Highlights`, one bullet per entry (`* **Name**: text`). `tests/test_post_format.py`
+  checks every post: a post that drifts is fixed in the file, never with a new style rule.
+- The look settings in `data/post-style.yaml` (Chris's picks) decide how that format becomes a page
+  (`poststyle.apply_format`): pills, "Malron’s Account" over the story, gold links, scene headings
+  shown or not. Change the look there, not in the posts.
 - Every post reads in one order (layout review, Chris, 2026-11-02): title, tagline, PC pills, the
   slides, "Malron’s Account" (all of the story, its opening lines and pictures too), the recap lists
   (Key Locations, Encounters, Loot, Notable NPCs, Plot Points, Session Highlights; every entry a
@@ -62,10 +68,6 @@
 - Wiki links: the first mention of a name links in every section of the On this page box, every
   scene and every recap list, so a reader who jumps to a section finds its links (Chris,
   2026-11-02). The build does this (`relink: each-heading`); don't hand-link repeats.
-- Every story sits under one "Malron’s Account" heading, split by scene headings from
-  `data/scene-headings.yaml` (short, in Malron's voice, at natural breaks; a very short story gets
-  `[]`). A new post needs its entry there; the build fails if a heading's opening words don't
-  match exactly one paragraph. Chris checks new headings before they go live.
 - Posts read as Malron's journal: first person, in-world, no dice or rules talk, no DM or player
   names. Table talk goes only in a `Note:` paragraph, which renders as a handwritten margin note,
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.

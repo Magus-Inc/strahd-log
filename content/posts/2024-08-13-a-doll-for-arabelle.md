@@ -4,17 +4,20 @@ date: '2024-08-13T21:00:00-05:00'
 tagline: she's been taken!
 slug: a-doll-for-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/a-doll-for-arabelle
+cast: []
 ---
 
-## Vallaki
+## Story
+
+### Donkey Heads in the Stocks
 
 A row of stocks stands in the square, and every soul in them wears a crude donkey head. Vallaki’s eccentricities never fail to surprise me. The town buzzed with talk of festivals: first the Wolf’s Head Jamboree, and now the Festival of the Blazing Sun. Both promise intrigue and danger.
 
-## Blinsky’s Toy Store
+### A Doll Like Ireena
 
-Among the cluttered shelves of Blinsky’s shop was a doll that looked eerily like Ireena, and Aera stole it. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
+Among the cluttered shelves of Blinsky’s Toy Store was a doll that looked eerily like Ireena, and Aera stole it. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
 
-## The Vistani Encampment
+### Arabelle Is Missing
 
 At the encampment we met Shabasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
 
@@ -28,7 +31,7 @@ Kasimir held a signet ring bearing a sigil of connected symbols and lines, its d
 
 Alexi offered us five hundred gold pieces if we bring Arabelle back alive.
 
-## The Dusk Elves
+### Kasimir’s Story
 
 Kasimir told us the dusk elves have kept a silent vigil here for five centuries. The traitor Rahadin betrayed them, and the Vistani have sheltered them from Strahd’s wrath ever since. In one of the houses an elf had pale, puffy, blistered skin, frostbite we think, from hiking across Mount Ghakis and falling. The dusk elves reminded Aera of her dead husband, and she asked Kasimir why they are here.
 
@@ -43,33 +46,33 @@ Kasimir told us his story:
 
 *Strahd’s hunger for conquest, however, was endless. Within a year, the last of his enemies had fallen, and he had claimed the valley for his own, naming it “Barovia.” We found ourselves trapped, imprisoned in the heart of our conqueror’s new empire. By then, however, we had built a home here, and chose to remain—hoping, in our heart of hearts, that the Vistani’s kindness would keep us safe. And so here we have remained ever since.*
 
-## The Footprints
+### What the Footprints Told
 
 The footprints told a grim tale. One set came from the north to a tree in the southwest and ended in the grass; others ran from west to east along the riverbank. The first and third figures fought, and the first died. The second ran away, and the third waded into the river carrying something heavy. We think the first was Yann. The symbols on the signet ring may hold the answer, so we headed back to Vallaki to look into it further.
 
-## The Baron’s Library
+### An Appointment with the Baron
 
 To learn the ring’s secret we went to the Baron’s manor, claiming an appointment, in hopes of reaching his library. As I write, we sit in the waiting room among dusty tomes and whispered secrets. The path ahead is dark, but we go on.
 
-## Key Locations:
+## Key Locations
 
 * **Vallaki**: A row of stocks in the square, every soul in them wearing a crude donkey head.
 * **Blinsky’s Toy Store**: Cluttered shelves, and a doll that looks eerily like Ireena.
 * **The Vistani encampment**: Broken pottery and cracking whips.
 * **The Baron’s manor**: Waiting among dusty tomes, in hopes of reaching his library.
 
-## Encounters:
+## Encounters
 
 * **Blinsky’s doll**: Like Ireena. A thread to her fate, perhaps.
 * **Alexi’s plea**: Find his missing daughter.
 * **The footprints**: Yann fought, fell and died. A second figure fled, and a third waded into the river carrying something heavy.
 * **The dusk elves**: One bore the scars of frostbite.
 
-## Loot:
+## Loot
 
 * **The signet ring**: Held by Kasimir, its sigil woven from necromancy and evocation. Its secret is what took us to the Baron’s manor.
 
-## Notable NPCs:
+## Notable NPCs
 
 * **Blinsky**: Whispered of a clockwork man inside Castle Ravenloft.
 * **Alexi**: Offered five hundred gold pieces to bring Arabelle back alive.
@@ -81,14 +84,14 @@ To learn the ring’s secret we went to the Baron’s manor, claiming an appoint
 * **King Barov**: Strahd’s father, who conquered Othrondil.
 * **Strahd**: Who crushed the elves’ revolt and claimed the valley as Barovia.
 
-## Plot Points:
+## Plot Points
 
 * **Arabelle is missing**: Five hundred gold if we bring her back alive.
 * **The signet ring**: May be the key to deeper truths.
 * **The dusk elves**: Sheltered by the Vistani from Strahd’s wrath for five centuries.
 * **The clockwork man**: Somewhere inside Castle Ravenloft.
 
-## Session Highlights:
+## Session Highlights
 
 * Meeting Shabasta the Great, a porcupine of a bard.
 * Kasimir’s story of Othrondil, the Forest of Twilight.
