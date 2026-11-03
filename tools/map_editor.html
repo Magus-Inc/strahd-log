@@ -1,0 +1,257 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map editor</title>
+<style>
+body{margin:0;font:15px Georgia,serif;background:#2b2118;color:#eee}
+#bar{padding:6px 10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;position:sticky;top:0;background:#2b2118;z-index:2}
+button{font:inherit;padding:4px 10px;border-radius:6px;border:1px solid #8a7556;background:#4a3a28;color:#eee;cursor:pointer}
+button.on{background:#c9a35b;color:#2b2118;border-color:#c9a35b}button:disabled{opacity:.4;cursor:default}
+label{font-size:13px}#status{margin-left:auto;color:#cfe8b0}#status.bad{color:#ff9a8a}
+#help{font-size:13px;color:#cbbfa8;padding:0 10px 6px}
+#wrap{position:relative}svg{display:block;width:100%;height:auto;touch-action:none;background:#1d160f}
+.sp{cursor:grab}.sp.drag{cursor:grabbing;outline:1px dashed #fff}
+text.n{font-size:7px;fill:#000;paint-order:stroke;stroke:#fff;stroke-width:2px;pointer-events:none}
+.way{fill:none;stroke-linejoin:round;stroke-linecap:round;cursor:copy}
+.hit{fill:none;stroke:transparent;cursor:copy}
+.h{cursor:grab;stroke:#1d160f}.h.sel{stroke:#ff2d2d}
+.shaped{fill:none;stroke:#a03cc8;stroke-dasharray:3 2;pointer-events:none}
+.sel-way{fill:none;stroke:#ff2d2d;pointer-events:none}
+#panel{position:fixed;right:10px;bottom:10px;max-width:340px;background:#3a2c1e;border:1px solid #c9a35b;border-radius:10px;
+  padding:10px 12px;display:none;box-shadow:0 4px 18px #000a;z-index:3}
+#panel h3{margin:0 0 6px;font-size:16px}#panel p{margin:4px 0;font-size:13px;color:#ddd}
+#panel input[type=number]{width:52px;font:inherit}#panel .row{margin:6px 0;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+</style>
+<div id="bar">
+  <button id="m-pics">Pictures</button><button id="m-roads">Roads &amp; water</button>
+  <button id="undo" title="Ctrl+Z">Undo</button>
+  <button id="zin">+</button><button id="zout">−</button><button id="zfit">Whole map</button>
+  <span id="layers"><label><input type="checkbox" data-l="roads" checked> Roads</label>
+  <label><input type="checkbox" data-l="water" checked> Water</label>
+  <label><input type="checkbox" data-l="forests"> Forests</label>
+  <label><input type="checkbox" data-l="other" checked> Mountains &amp; labels</label></span>
+  <span id="status"></span>
+</div>
+<div id="help"></div>
+<div id="wrap"><svg viewBox="0 0 1000 750" id="map">
+  <image href="/images/map/parchment.jpg" width="1000" height="750" id="paper"/>
+  <image href="/edit/base.svg?v=0" width="1000" height="750" id="base"/>
+  <g id="sprites"></g><g id="pins"></g><g id="ways"></g><g id="handles"></g>
+</svg></div>
+<div id="panel"></div>
+<script>
+const SPRITES = __SPRITES__, PLACES = __PLACES__;
+const NS = "http://www.w3.org/2000/svg", $ = id => document.getElementById(id);
+const svg = $("map"), statusEl = $("status"), panel = $("panel");
+let mode = "pics", state = null, version = 0, sel = null, vb = {x: 0, y: 0, w: 1000, h: 750};
+const show = {roads: true, water: true, forests: false, other: true};
+const COLOR = {roads: "#7a3b12", tracks: "#7a3b12", unused_tracks: "#8a8a8a", rivers: "#1f63a8", lakes: "#1f63a8", forests: "#2f6b2f"};
+const LAYER = {roads: "roads", tracks: "roads", unused_tracks: "roads", rivers: "water", lakes: "water", forests: "forests"};
+const HELP = {
+  pics: "Drag a picture to move it; scroll over it (or tap it and press + / −) to resize. Drag the background to pan, scroll it to zoom.",
+  roads: "Drag a point to move it (a red crossroads moves every road on it, and the place there). Shift-drag a lake or forest point to move it whole. " +
+         "Tap a line to add a point or shape that stretch; tap a point to delete it. Ctrl+Z undoes."};
+
+function el(name, attrs, parent) { const e = document.createElementNS(NS, name); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function pt(e) { return new DOMPoint(e.clientX, e.clientY).matrixTransform(svg.getScreenCTM().inverse()); }
+function unit() { return vb.w / svg.clientWidth; }  // map units per screen pixel
+function r1(v) { return Math.round(v * 10) / 10; }
+function say(text, bad) { statusEl.textContent = text; statusEl.className = bad ? "bad" : ""; }
+function setVB() { svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`); if (mode === "roads") drawRoads(); }
+function zoom(f, cx, cy) {
+  cx = cx ?? vb.x + vb.w / 2; cy = cy ?? vb.y + vb.h / 2;
+  const w = Math.min(1000, Math.max(40, vb.w * f)), h = w * 0.75;
+  vb = {x: cx - (cx - vb.x) * w / vb.w, y: cy - (cy - vb.y) * h / vb.h, w, h}; setVB();
+}
+
+async function send(url, body) {
+  say("Saving…");
+  let r;
+  try { r = await fetch(url, {method: "POST", body: JSON.stringify(body || {})}); }
+  catch (err) { say("NOT saved: the editor isn't running (" + err + ")", true); return false; }
+  if (!r.ok) { say("NOT saved: " + await r.text(), true); if (state) drawRoads(); return false; }
+  state = await r.json();
+  $("base").setAttribute("href", "/edit/base.svg?v=" + (++version));
+  say(url === "/undo" ? "Undone, and saved" : "Saved to the map files");
+  $("undo").disabled = !state.undo;
+  if (mode === "roads") drawRoads();
+  return true;
+}
+
+// --- Pictures mode ------------------------------------------------------------------------------
+let activeSprite = null;
+for (const p of PLACES) { el("circle", {cx: p.x, cy: p.y, r: 3, fill: "#000"}, $("pins")); el("text", {class: "n", x: p.x + 5, y: p.y + 2}, $("pins")).textContent = p.t; }
+function drawSprite(s) { s.el.setAttribute("x", s.x - s.w / 2); s.el.setAttribute("y", s.y - s.w * s.r / 2); s.el.setAttribute("width", s.w); s.el.setAttribute("height", s.w * s.r); }
+function saveSprite(s) { send("/save", {name: s.name, xy: [s.x, s.y], width: s.w}); }
+for (const s of SPRITES) {
+  s.el = el("image", {href: "/images/map/sprites/" + s.image + ".webp", class: "sp"}, $("sprites")); drawSprite(s);
+  s.el.addEventListener("pointerdown", e => { if (mode !== "pics") return; e.stopPropagation(); activeSprite = s; const q = pt(e); s.dx = s.x - q.x; s.dy = s.y - q.y; s.moved = false; s.el.classList.add("drag"); s.el.setPointerCapture(e.pointerId); });
+  s.el.addEventListener("pointermove", e => { if (activeSprite !== s || !s.el.hasPointerCapture(e.pointerId)) return; const q = pt(e); s.x = q.x + s.dx; s.y = q.y + s.dy; s.moved = true; drawSprite(s); });
+  s.el.addEventListener("pointerup", e => { if (activeSprite !== s) return; s.el.classList.remove("drag"); if (s.moved) saveSprite(s); });
+  s.el.addEventListener("wheel", e => { if (mode !== "pics") return; e.preventDefault(); e.stopPropagation(); s.w = Math.max(8, s.w * (e.deltaY < 0 ? 1.08 : 1 / 1.08)); drawSprite(s); clearTimeout(s.t); s.t = setTimeout(() => saveSprite(s), 400); });
+}
+
+// --- Roads & water mode -------------------------------------------------------------------------
+function key(p) { return r1(p[0]) + "," + r1(p[1]); }
+function wayName(w) { return typeof w.key === "number" ? "Forest #" + (w.key + 1) : (w.key || "the marsh"); }
+function visible(w) { return show[LAYER[w.section]]; }
+function pts(list) { return list.map(p => p[0] + "," + p[1]).join(" "); }
+
+function drawRoads() {
+  const ways = $("ways"), handles = $("handles"), u = unit();
+  ways.textContent = ""; handles.textContent = "";
+  if (!state) return;
+  const pins = new Map(state.pins.map(p => [key(p.xy), p])), seen = new Map();
+  state.ways.forEach((w, wi) => {
+    if (!visible(w)) return;
+    const shape = w.closed ? "polygon" : "polyline", c = COLOR[w.section];
+    el(shape, {points: pts(w.drawn), class: "way", stroke: c, "stroke-width": w.section === "roads" ? 2.2 * u : 1.4 * u,
+               "stroke-dasharray": w.section.endsWith("tracks") ? `${4 * u} ${3 * u}` : "", "stroke-opacity": 0.85}, ways);
+    const hit = el(shape, {points: pts(w.drawn), class: "hit", "stroke-width": 12 * u}, ways);
+    hit.addEventListener("pointerdown", e => { e.stopPropagation(); hit.down = [e.clientX, e.clientY]; });
+    hit.addEventListener("pointerup", e => { if (hit.down && Math.hypot(e.clientX - hit.down[0], e.clientY - hit.down[1]) < 5) pickStretch(wi, pt(e)); hit.down = null; });
+    for (const i in w.shapes) el("polyline", {points: pts([w.points[+i], w.points[+i + 1]]), class: "shaped", "stroke-width": 1.6 * u}, ways);
+    w.points.forEach((p, i) => { const k = key(p); if (!seen.has(k)) seen.set(k, {xy: p, refs: []}); seen.get(k).refs.push({wi, i}); });
+  });
+  if (sel && sel.kind === "stretch") {
+    const w = state.ways[sel.wi], a = w.points[sel.i], b = w.points[(sel.i + 1) % w.points.length];
+    el("polyline", {points: pts([a, b]), class: "sel-way", "stroke-width": 2.5 * u}, ways);
+  }
+  for (const [k, h] of seen) {
+    const pin = pins.get(k), w0 = state.ways[h.refs[0].wi];
+    const fill = pin && pin.junction ? "#ff3b3b" : pin && pin.place ? "#f0c040" : COLOR[w0.section] === "#7a3b12" ? "#f4ead2" : COLOR[w0.section];
+    const r = (pin ? 5 : 3.5) * u;
+    const c = el("circle", {cx: h.xy[0], cy: h.xy[1], r, fill, class: "h" + (sel && sel.kind === "point" && sel.k === k ? " sel" : ""), "stroke-width": u}, handles);
+    el("title", {}, c).textContent = (pin ? pin.users : h.refs.map(r => wayName(state.ways[r.wi]))).join("\n");
+    dragHandle(c, h, k);
+  }
+  if (show.other) {
+    state.mountains.forEach((m, i) => {
+      const s = 6 * u, [x, y] = m.at;
+      const t = el("polygon", {points: `${x},${y - s} ${x - s},${y + s * 0.7} ${x + s},${y + s * 0.7}`, fill: "#bbb", class: "h", "stroke-width": u}, handles);
+      el("title", {}, t).textContent = `Mountains (radius ${m.radius})`;
+      dragItem(t, "mountains", i, m.at);
+    });
+    state.labels.forEach((l, i) => {
+      const s = 4 * u, [x, y] = l.at;
+      const t = el("rect", {x: x - s, y: y - s, width: 2 * s, height: 2 * s, fill: "#e9d8a6", class: "h", "stroke-width": u}, handles);
+      el("title", {}, t).textContent = "Label: " + l.text;
+      dragItem(t, "labels", i, l.at);
+    });
+  }
+}
+
+function dragHandle(c, h, k) {
+  let start = null, moved = false, whole = false;
+  c.addEventListener("pointerdown", e => {
+    e.stopPropagation(); c.setPointerCapture(e.pointerId); start = pt(e); moved = false;
+    whole = e.shiftKey && h.refs.some(r => state.ways[r.wi].closed);
+  });
+  c.addEventListener("pointermove", e => {
+    if (!start || !c.hasPointerCapture(e.pointerId)) return;
+    const q = pt(e), dx = q.x - start.x, dy = q.y - start.y;
+    if (!moved && Math.hypot(dx, dy) < 2 * unit()) return;
+    moved = true; c.setAttribute("cx", h.xy[0] + dx); c.setAttribute("cy", h.xy[1] + dy);
+    // move the lines that use this point, so the drag shows where the road will run
+    for (const r of h.refs) {
+      const w = state.ways[r.wi], line = w.points.map((p, i) => whole && w.closed ? [p[0] + dx, p[1] + dy] : i === r.i ? [h.xy[0] + dx, h.xy[1] + dy] : p);
+      const shown = $("ways").querySelectorAll(".way")[visibleIndex(r.wi)];
+      if (shown) shown.setAttribute("points", pts(line));
+    }
+  });
+  c.addEventListener("pointerup", e => {
+    if (!start) return;
+    const q = pt(e), dx = q.x - start.x, dy = q.y - start.y; start = null;
+    if (!moved) { sel = {kind: "point", k, h}; drawRoads(); showPanel(); return; }
+    if (whole) { const r = h.refs.find(r => state.ways[r.wi].closed), w = state.ways[r.wi]; send("/geo", {op: "shift", section: w.section, key: w.key, dx: r1(dx), dy: r1(dy)}); }
+    else send("/geo", {op: "move", from: h.xy, to: [r1(h.xy[0] + dx), r1(h.xy[1] + dy)]});
+    sel = null; showPanel();
+  });
+}
+function visibleIndex(wi) { let n = 0; for (let i = 0; i < wi; i++) if (visible(state.ways[i])) n++; return n; }
+
+function dragItem(t, section, index, at) {
+  let start = null;
+  t.addEventListener("pointerdown", e => { e.stopPropagation(); t.setPointerCapture(e.pointerId); start = pt(e); });
+  t.addEventListener("pointermove", e => { if (!start || !t.hasPointerCapture(e.pointerId)) return; const q = pt(e); t.setAttribute("transform", `translate(${q.x - start.x} ${q.y - start.y})`); });
+  t.addEventListener("pointerup", e => { if (!start) return; const q = pt(e), dx = q.x - start.x, dy = q.y - start.y; start = null;
+    if (Math.hypot(dx, dy) > unit()) send("/geo", {op: "item", section, index, at: [r1(at[0] + dx), r1(at[1] + dy)]}); });
+}
+
+function pickStretch(wi, q) {
+  const w = state.ways[wi], n = w.points.length, last = w.closed ? n : n - 1;
+  let best = 0, bestD = Infinity, bestAt = null;
+  for (let i = 0; i < last; i++) {
+    const a = w.points[i], b = w.points[(i + 1) % n], dx = b[0] - a[0], dy = b[1] - a[1];
+    const t = Math.max(0, Math.min(1, ((q.x - a[0]) * dx + (q.y - a[1]) * dy) / (dx * dx + dy * dy || 1)));
+    const d = Math.hypot(q.x - a[0] - t * dx, q.y - a[1] - t * dy);
+    if (d < bestD) { bestD = d; best = i; }
+  }
+  sel = {kind: "stretch", wi, i: best, at: [r1(q.x), r1(q.y)]}; drawRoads(); showPanel();
+}
+
+function showPanel() {
+  if (!sel || mode !== "roads") { panel.style.display = "none"; return; }
+  panel.style.display = "block";
+  if (sel.kind === "point") {
+    const pin = state.pins.find(p => key(p.xy) === sel.k), r = sel.h.refs[0], w = state.ways[r.wi];
+    const on = pin ? pin.users : sel.h.refs.map(r => wayName(state.ways[r.wi]));
+    panel.innerHTML = `<h3>Point ${sel.k.replace(",", ", ")}</h3><p>On: ${on.map(esc).join(", ")}</p>
+      <div class="row"><button id="p-del">Delete point</button><button id="p-close">Close</button></div>
+      <p>Drag the point to move it. A point other ways or a place use can't be deleted.</p>`;
+    $("p-del").onclick = () => { send("/geo", {op: "delete", section: w.section, key: w.key, index: r.i}).then(ok => { if (ok) { sel = null; showPanel(); } }); };
+  } else {
+    const w = state.ways[sel.wi], s = w.shapes[sel.i], open = !w.closed && w.section !== "lakes";
+    panel.innerHTML = `<h3>${esc(wayName(w))}</h3><p>Stretch ${sel.i + 1} of ${w.closed ? w.points.length : w.points.length - 1}` +
+      (s ? `: ${s.bends ? s.bends + " switchbacks, " + s.width + " wide" : "wiggle " + s.wiggle}` : ": smooth") + `</p>
+      <div class="row"><button id="p-add">Add a point here</button><button id="p-close">Close</button></div>` +
+      (open ? `<div class="row"><button id="p-smooth">Smooth</button></div>
+      <div class="row"><button id="p-sb">Switchbacks</button> bends <input type="number" id="p-bends" min="1" max="30" value="${s && s.bends || 3}">
+        width <input type="number" id="p-width" min="2" max="80" value="${s && s.width || 14}"></div>
+      <div class="row"><button id="p-wig">Wiggle</button> up to <input type="number" id="p-wiggle" min="0.5" max="20" step="0.5" value="${s && s.wiggle || 3}"> off the line</div>` +
+      (s ? `<div class="row"><button id="p-bake">Turn into points</button></div>` : "") : "");
+    const base = {section: w.section, key: w.key, index: sel.i};
+    $("p-add").onclick = () => send("/geo", {op: "insert", section: w.section, key: w.key, after: sel.i, xy: sel.at}).then(ok => { if (ok) { sel = null; showPanel(); } });
+    if (open) {
+      $("p-smooth").onclick = () => send("/geo", {op: "shape", ...base, shape: null}).then(showPanel);
+      $("p-sb").onclick = () => send("/geo", {op: "shape", ...base, shape: {bends: +$("p-bends").value, width: +$("p-width").value}}).then(showPanel);
+      $("p-wig").onclick = () => send("/geo", {op: "shape", ...base, shape: {wiggle: +$("p-wiggle").value}}).then(showPanel);
+      if (s) $("p-bake").onclick = () => send("/geo", {op: "bake", ...base}).then(ok => { if (ok) { sel = null; showPanel(); } });
+    }
+  }
+  $("p-close").onclick = () => { sel = null; drawRoads(); showPanel(); };
+}
+function esc(t) { return String(t).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c])); }
+
+// --- pan, zoom, modes, keys ---------------------------------------------------------------------
+let pan = null;
+svg.addEventListener("pointerdown", e => { pan = {x: e.clientX, y: e.clientY, vb: {...vb}, moved: false}; svg.setPointerCapture(e.pointerId); });
+svg.addEventListener("pointermove", e => { if (!pan || !svg.hasPointerCapture(e.pointerId)) return; const u = unit(), dx = e.clientX - pan.x, dy = e.clientY - pan.y;
+  if (Math.hypot(dx, dy) > 3) pan.moved = true; vb.x = pan.vb.x - dx * u; vb.y = pan.vb.y - dy * u; svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`); });
+svg.addEventListener("pointerup", e => { if (pan && pan.moved && mode === "roads") drawRoads(); pan = null; });
+svg.addEventListener("wheel", e => { e.preventDefault(); const q = pt(e); zoom(e.deltaY < 0 ? 1 / 1.15 : 1.15, q.x, q.y); }, {passive: false});
+$("zin").onclick = () => zoom(1 / 1.5); $("zout").onclick = () => zoom(1.5); $("zfit").onclick = () => { vb = {x: 0, y: 0, w: 1000, h: 750}; setVB(); };
+$("undo").onclick = () => send("/undo");
+document.querySelectorAll("#layers input").forEach(i => { i.checked = show[i.dataset.l]; i.onchange = () => { show[i.dataset.l] = i.checked; drawRoads(); }; });
+
+function setMode(m) {
+  mode = m; $("m-pics").classList.toggle("on", m === "pics"); $("m-roads").classList.toggle("on", m === "roads");
+  $("layers").style.display = m === "roads" ? "" : "none"; $("help").textContent = HELP[m];
+  $("sprites").style.opacity = m === "roads" ? 0.35 : 1; $("sprites").style.pointerEvents = m === "roads" ? "none" : "";
+  $("pins").style.display = m === "roads" ? "none" : "";
+  sel = null; showPanel();
+  if (m === "roads") drawRoads(); else { $("ways").textContent = ""; $("handles").textContent = ""; }
+  try { localStorage.setItem("map-edit-mode", m); } catch (err) {}
+}
+$("m-pics").onclick = () => setMode("pics"); $("m-roads").onclick = () => setMode("roads");
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT") return;
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") { e.preventDefault(); send("/undo"); return; }
+  if (e.key === "Escape") { sel = null; drawRoads(); showPanel(); return; }
+  if ((e.key === "Delete" || e.key === "Backspace") && sel && sel.kind === "point") { $("p-del").click(); return; }
+  if (mode === "pics" && activeSprite && "+=-".includes(e.key)) { activeSprite.w *= e.key === "-" ? 1 / 1.08 : 1.08; drawSprite(activeSprite); saveSprite(activeSprite); }
+});
+window.addEventListener("resize", () => { if (mode === "roads") drawRoads(); });
+
+fetch("/edit/state").then(r => r.json()).then(s => { state = s; $("undo").disabled = !s.undo;
+  let m = "pics"; try { m = localStorage.getItem("map-edit-mode") || "pics"; } catch (err) {}
+  setMode(new URLSearchParams(location.search).get("mode") || m); });
+</script>

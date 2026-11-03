@@ -44,7 +44,7 @@ serve port="8000":
 site-diff *args:
     {{python}} tools/site_diff.py {{args}}
 
-# Drag the map's sprites into place in your browser; each drop saves to data/map.yaml
+# Edit the map in your browser: drag sprites, roads, crossroads, rivers, lakes; each change saves to data/
 map-edit port="8001":
     {{python}} tools/map_editor.py {{port}}
 

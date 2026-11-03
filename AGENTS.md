@@ -73,6 +73,7 @@
   map in the repo; a licensed background, if we ever get one, is an overlay swap, not a commit here.
 - The map's roads, tracks, rivers, lakes, forests, mountains and labels are data in
   `data/geography.yaml`, not code; `just map-edit` edits that file, and hand edits go there too.
+  A winding stretch can be a shape (`{bends, width}` switchbacks or `{wiggle}`) instead of many points.
 - One layout for every wiki page (Chris, 2026-11-02): `data/wiki-style.yaml` and `wikistyle.py`
   lay out the rendered page at build time: the first picture at the top in a facts box (other
   names, first and last session seen), the `## Description` shown as "Malron’s Account", any stat
