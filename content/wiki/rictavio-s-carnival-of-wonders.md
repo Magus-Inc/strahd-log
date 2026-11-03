@@ -3,6 +3,9 @@ title: Rictavio's Carnival of Wonders
 type: item
 summary: Van Richten's disguised wagon where Arabelle hides.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-vmm5cm
+- discord-gayizv
 ---
 
 ## Description

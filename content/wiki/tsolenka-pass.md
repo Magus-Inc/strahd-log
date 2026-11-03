@@ -3,6 +3,8 @@ title: Tsolenka Pass
 type: place
 summary: A mountain pass guarded by a magical curtain and petrified vrocks.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-jt7yh9
 ---
 
 ## Description

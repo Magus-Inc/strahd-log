@@ -5,6 +5,8 @@ aliases:
 - Keeper's Whistle
 summary: A raven-shaped whistle that calls a wereraven of the Keepers of the Feather.
 source: Compiled from the adventure log, with notes from the table
+sources:
+- discord-29icc2
 ---
 
 ## Description

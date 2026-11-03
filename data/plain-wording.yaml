@@ -1,0 +1,25 @@
+# Plain wording (Chris, 2026-11-03): "Before the heist we counted it a shard of the Ladies Three's
+# power, lying in the castle's south crypts" was hard to follow. Malron's voice is first person and
+# in-world, but in plain modern English: no archaic words or old senses of words, no inverted
+# clauses. tests/test_plain_wording.py fails when the text we write for the wiki, or a post's
+# story, uses one of these.
+# Quotes and the texts kept word for word (lines starting with ">", or inside quotation marks)
+# are left alone, since they are someone else's words.
+# Each entry: a regular expression (matched without case) and a plainer way to say it.
+avoid:
+  - {pattern: '\bcount(ed|s)? (it|him|her|them|us|(?-i:[A-Z]\w+)) (a|an|the)\b', instead: "believed it was a / believed it held"}
+  - {pattern: '\b(we|I) (first )?(take|took) for\b', instead: "we thought was"}
+  - {pattern: '\bknew (him|her|it|them) for (a|an|the)\b|\b(which|that) I knew for\b', instead: "recognized her as"}
+  - {pattern: '\b(smote|deemed|reckons)\b', instead: "destroyed / judged / thinks"}
+  - {pattern: '\bconsecrating anew\b', instead: "consecrating ... again"}
+  - {pattern: '\b(we|I) (take|took) (it|him|her|them) for (a|an|the)\b', instead: "we thought it was / believed she was"}
+  - {pattern: '\bwe take for\b', instead: "that we think are"}
+  - {pattern: '\bbade\b', instead: "told / asked"}
+  - {pattern: '\bbid (us|them|him|her) (a )?(farewell|goodbye)', instead: "said goodbye"}
+  - {pattern: '\bcommended us to\b', instead: "wished us"}
+  - {pattern: '\b(betwixt|naught|aught|ere|lest|thence|whence|hither|thither|yonder|methinks|unto|perchance|mayhap|forsooth|wherein|whereupon|thereof|nigh)\b', instead: "a modern word"}
+  - {pattern: '[’'']twas\b', instead: "it was"}
+  - {pattern: '\bbear (us|them|him|her) aloft\b', instead: "carry them through the air"}
+  - {pattern: '\bcarried the night\b', instead: "say plainly what did the work"}
+  - {pattern: '\bdid not set down\b', instead: "did not write down"}
+  - {pattern: '\bdressed .{0,30} up by illusion\b', instead: "used an illusion to make ... look like"}

@@ -4,6 +4,8 @@ type: npc
 summary: Father Donavich's son, who became a vampire.
 source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/doru
+sources:
+- discord-ca1rve
 ---
 
 ## Description

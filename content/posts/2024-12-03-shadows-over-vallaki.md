@@ -47,7 +47,7 @@ Aera stole his old bottle cleanly, but when Gumbo tried to slip in the new one, 
 
 ## Loot
 
-* **Poisoned Wine (Red Dragon Kresh)**: From Fiona’s associate, for Izek.
+* **Poisoned Wine**: A bottle of Red Dragon Kresh from Fiona’s associate, for Izek.
 
 ## Notable NPCs
 

@@ -584,3 +584,38 @@ def test_merged_pages_read_as_one_article():
     pasted = [p.name for p in sorted(pages.glob("*.md"))
               if re.search(r"^#+ As “", p.read_text(encoding="utf-8"), re.MULTILINE)]
     assert pasted == []
+
+
+# --- two pages with one name (Chris, 2026-11-03: no "Bianca (werewolf)" titles) -------------------
+
+def test_a_hand_linked_page_shares_a_name_without_taking_its_links(tmp_path):
+    write(tmp_path / "bianca.md", "---\ntitle: Bianca\n---\nFranz's sister.\n")
+    write(tmp_path / "bianca-werewolf.md", "---\ntitle: Bianca\nlink_by_hand: true\n---\nA werewolf.\n")
+    pages = wiki.load_wiki(tmp_path, build.split_front_matter)  # no "used by both" error
+    assert [p.title for p in pages] == ["Bianca", "Bianca"]
+    linker = wiki.Linker(pages)
+    html, mentioned = linker.link('<p>Bianca cares for Franz.</p><p><a href="/wiki/bianca-werewolf/">Bianca</a></p>')
+    assert html.count('href="/wiki/bianca/"') == 1 and mentioned == {"bianca", "bianca-werewolf"}
+
+
+def test_wiki_from_extract_gives_a_shown_title_to_a_page_linked_by_hand(tmp_path):
+    posts = tmp_path / "posts"
+    write(posts / "2024-01-09-first.md", "---\ntitle: First\n---\n")
+    wiki_dir = tmp_path / "wiki"
+    extract = write(tmp_path / "x.json", json.dumps([
+        {"name": "Bianca", "type": "npc", "facts": [{"text": "Franz's sister", "post": "2024-01-09-first"},
+                                                    {"text": "A werewolf named Bianca", "post": "2024-01-09-first"}]}]))
+    fixes = {"move_facts": {"A werewolf named Bianca": "Bianca (werewolf)"}, "titles": {"Bianca (werewolf)": "Bianca"}}
+    for _ in range(2):  # the same pages again on a second run
+        wiki_from_extract.apply([extract], wiki_dir, posts, fixes)
+        assert sorted(p.name for p in wiki_dir.iterdir()) == ["bianca-werewolf.md", "bianca.md"]
+        werewolf, body = build.split_front_matter((wiki_dir / "bianca-werewolf.md").read_text(encoding="utf-8"))
+        assert werewolf["title"] == "Bianca" and werewolf["link_by_hand"] is True and "werewolf named" in body
+        assert "werewolf" not in (wiki_dir / "bianca.md").read_text(encoding="utf-8")
+    wiki.load_wiki(wiki_dir, build.split_front_matter)
+
+
+def test_no_wiki_title_carries_a_fact_in_brackets():
+    titles = [wiki.parse_wiki_page(p, build.split_front_matter).title
+              for p in sorted((Path(__file__).resolve().parent.parent / "content" / "wiki").glob("*.md"))]
+    assert not [t for t in titles if "(" in t]
