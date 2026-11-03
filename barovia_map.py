@@ -125,7 +125,9 @@ TRACKS = {
 }
 # Drawn like tracks but never walked by the trail: the party never took them.
 UNUSED_TRACKS = {
-    "Tser Pool trail (past the pool)": [(690, 530), (655, 515), (628, 485), (606, 448), (600, 405)],
+    # As on the official map (Chris, 2026-11-03): from the camp the trail runs west of the pool and up
+    # between the loop road and the stream to the falls bridge; it never crosses the road.
+    "Tser Pool trail (past the pool)": [(690, 530), (660, 518), (642, 495), (630, 465), (605, 432), (600, 405)],
 }
 
 LAKES = {
@@ -927,6 +929,37 @@ def lanes(path: list[Point], worn: dict) -> list[float]:
         used[current * side] = used.get(current * side, 0) + 1
         out.append(current)
     return out
+
+
+TOUCH = 4.0      # drawn ways closer than this, centre to centre, read as meeting (road ink is 4.8 wide)
+JUNCTION = 16.0  # near a point two ways share they may run close: that is where they meet
+
+
+def ways_touching(ways: dict[str, list[Point]]) -> list[tuple[str, str, Point]]:
+    """Pairs of roads or trails whose drawn curves meet anywhere but at a point they share.
+
+    Chris (2026-11-03): the dotted trail past Tser Pool was drawn across the loop road, so on the map
+    they seemed to cross where the official map has them apart. Ways may meet only at a junction,
+    a vertex both lines list. Returns (way, other way, where), one entry per pair, closest spot."""
+    drawn = {name: [p for b in curves_of(pts) for p in bezier_points(b)] for name, pts in ways.items()}
+    names = list(ways)
+    found = []
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            shared = set(ways[a]) & set(ways[b])
+
+            def free(points):
+                return [p for p in points if all(math.dist(p, j) >= JUNCTION for j in shared)]
+
+            best = None
+            for p in free(drawn[a]):
+                for q in free(drawn[b]):
+                    d = math.dist(p, q)
+                    if d < TOUCH and (best is None or d < best[0]):
+                        best = (d, ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2))
+            if best:
+                found.append((a, b, best[1]))
+    return found
 
 
 def road_curves() -> dict[tuple[Point, Point], Bezier]:

@@ -969,3 +969,32 @@ def test_vallaki_vistani_camp_has_a_picture_and_its_label_beside_it():
     # beside the picture: just past its edge, not a long way south of it
     assert abs(ly - sprite.y) <= sprite.height / 2 + 12
     assert abs(lx - sprite.x) <= sprite.width / 2 + 45   # the label is centred, about 70 wide
+
+
+def test_ways_touching_finds_a_trail_drawn_over_a_road_but_not_a_junction():
+    roads = {"Road": [(0, 0), (50, 0), (100, 0)]}
+    tracks = {"Crossing trail": [(30, -40), (40, 40)], "Branch": [(50, 0), (50, 40)]}
+    found = barovia_map.ways_touching({**roads, **tracks})
+    assert [(a, b) for a, b, _ in found] == [("Road", "Crossing trail")]
+    assert math.dist(found[0][2], (35, 0)) < 2
+
+
+def test_no_road_or_trail_is_drawn_over_another_away_from_their_junctions():
+    # Chris, 2026-11-03: the dotted trail past Tser Pool was drawn across the loop road, though on the
+    # official map it never meets the road until the falls. Ways may only meet at a shared point.
+    ways = {**barovia_map.ROADS, **barovia_map.TRACKS, **barovia_map.UNUSED_TRACKS}
+    assert barovia_map.ways_touching(ways) == []
+
+
+def test_the_trail_past_tser_pool_keeps_east_of_the_loop_road():
+    # As on the official map: from the falls bridge the trail runs down between the loop road and the
+    # stream to the pool, west of the pool, to the camp; the loop road swings round west of it all.
+    curve = [p for b in barovia_map.curves_of(barovia_map.ROADS["The loop past Tser Falls"])
+             for p in barovia_map.bezier_points(b)]
+    trail = barovia_map.UNUSED_TRACKS["Tser Pool trail (past the pool)"]
+    drawn = [p for b in barovia_map.curves_of(trail) for p in barovia_map.bezier_points(b)]
+    for x, y in drawn:
+        if math.dist((x, y), (600, 405)) < 16:
+            continue  # where it meets the road on the falls bridge
+        road_xs = [rx for rx, ry in curve if abs(ry - y) < 1.5 and rx > 580]
+        assert all(x > rx + 8 for rx in road_xs), f"the trail at ({x:.0f}, {y:.0f}) is not clear east of the road"
