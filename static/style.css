@@ -212,11 +212,14 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 
 .session-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .session-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
-.session-list a { color: var(--text); text-decoration: none; font-weight: 500; } .session-list a:hover { color: var(--accent-hi); }
+/* Session titles in lists are gold, like wiki names, so they read as links (Chris, 2026-11-03: plain white
+   looked like ordinary words). Their red number discs stay red. */
+.session-list a { color: var(--gold); text-decoration: none; font-weight: 500; }
+.session-list a:hover, .session-list a:focus-visible { color: #f0d48e; text-decoration: underline; text-underline-offset: 0.2em; }
 .session-list time { color: var(--muted); font-size: 0.85rem; margin-left: 0.4rem; }
 .session-list.numbered li { display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 0.6rem; }
 .session-list .num { grid-row: span 2; align-self: start; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: grid; place-items: center; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.8rem; font-weight: 700; }
-.session-list a.num { color: #f2c6ce; font-weight: 700; } .session-list a.num:hover { background: var(--accent); color: #fff; }
+.session-list a.num { color: #f2c6ce; font-weight: 700; } .session-list a.num:hover { background: var(--accent); color: #fff; text-decoration: none; }
 .session-list .route { grid-column: 2; color: var(--muted); font-size: 0.88rem; }
 
 /* Wiki and search */
@@ -502,8 +505,9 @@ body.deck-lock { overflow: hidden; }
 .prose details.log-notes { margin: 2rem 0 0; border-top: 1px solid var(--line); padding-top: 0.8rem; }
 .prose details.log-notes > summary { cursor: pointer; font-family: var(--serif); font-size: 1.15rem; color: var(--text); padding: 0.3rem 0; }
 .prose details.log-notes > summary::marker { color: var(--accent); }
-.infobox dd a { color: var(--text); text-decoration: none; }
-.infobox dd a:hover, .infobox dd a:focus-visible { color: var(--accent-hi); text-decoration: underline; }
+/* Facts box links are gold like wiki names (Chris, 2026-11-03); the session number disc stays red. */
+.infobox dd a { color: var(--gold); text-decoration: none; }
+.infobox dd a:hover, .infobox dd a:focus-visible { color: #f0d48e; text-decoration: underline; text-underline-offset: 0.2em; }
 .infobox dd a:hover .num, .infobox dd a:focus-visible .num { background: var(--accent); color: #fff; }
 /* A reader vote between pictures at the top of a wiki page: side by side, so the facts stay near */
 .infobox-picture .image-vote { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
