@@ -72,6 +72,8 @@ def upkeep_problems(name: str, e: dict, today: dt.date | None = None) -> list[st
     """The maintenance and popularity rules for one library entry."""
     today = today or dt.date.today()
     found = [f"{name}: missing {key}" for key in UPKEEP if e.get(key) is None or not str(e.get(key)).strip()]
+    if "risks" not in e:
+        found.append(f"{name}: missing risks (write risks: [] when there are none)")
     dates = {}
     for key in ("first_release", "last_release", "checked"):
         if e.get(key) is not None:
@@ -101,7 +103,9 @@ def upkeep_problems(name: str, e: dict, today: dt.date | None = None) -> list[st
     if state == "unmaintained" and not risks:
         found.append(f"{name}: unmaintained (bug and security fixes have stopped): list the risk")
     downloads = e.get("weekly_downloads")
-    if isinstance(downloads, int) and downloads < LOW_DOWNLOADS and not risks:
+    if downloads is not None and (isinstance(downloads, bool) or not isinstance(downloads, int)):
+        found.append(f"{name}: weekly_downloads must be a whole number, not {downloads!r}")
+    elif isinstance(downloads, int) and downloads < LOW_DOWNLOADS and not risks:
         found.append(f"{name}: only {downloads} downloads a week: list low popularity as a risk")
     return found
 
@@ -150,8 +154,8 @@ def requirements(root: Path = ROOT) -> dict[str, tuple[str, str | None]]:
         for line in path.read_text(encoding="utf-8").splitlines():
             line = line.split("#")[0].strip()
             m = re.match(r"([A-Za-z0-9][A-Za-z0-9._-]*)(?:\[[^\]]*\])?\s*(?:==\s*([^\s;,]+))?", line)
-            if m and not line.startswith("-"):
-                out[_key(m.group(1))] = (m.group(1), m.group(2))
+            if m and not line.startswith("-") and not (m.group(2) is None and _key(m.group(1)) in out):
+                out[_key(m.group(1))] = (m.group(1), m.group(2))  # an exact pin anywhere wins
     return out
 
 
@@ -235,6 +239,21 @@ def _major(version: str) -> int:
     return int(m.group()) if m else 0
 
 
+def changes(name: str, e: dict, live: dict, today: dt.date) -> list[str]:
+    """What has changed since the entry was written, even where the rules still pass."""
+    out = []
+    checked, last = _date(e.get("checked")), _date(live.get("last_release"))
+    if last and checked and (checked - last).days <= QUIET_DAYS < (today - last).days:
+        out.append(f"{name}: no release since {last}, now over two years: decide again whether it is stable or unmaintained")
+    first = _date(live.get("first_release"))
+    if e.get("maintenance") == "new" and first and (today - first).days >= NEW_DAYS:
+        out.append(f"{name}: first released {first}, so it is no longer new: mark it active, stable or unmaintained")
+    was, now = e.get("weekly_downloads"), live.get("weekly_downloads")
+    if isinstance(was, int) and isinstance(now, int) and now * 2 < was:
+        out.append(f"{name}: downloads fell from {was} to {now} a week: is it losing its users?")
+    return out
+
+
 def recheck(root: Path = ROOT, fetch=registry, today: dt.date | None = None) -> list[str]:
     """Run the upkeep rules on today's registry facts, and say what has changed since we last looked."""
     today = today or dt.date.today()
@@ -243,6 +262,7 @@ def recheck(root: Path = ROOT, fetch=registry, today: dt.date | None = None) -> 
         live = fetch(package, ecosystem)
         now = {**e, **{k: live[k] for k in ("first_release", "last_release", "weekly_downloads")}, "checked": today}
         out += [f"{p} (today's registry facts)" for p in upkeep_problems(name, now, today=today)]
+        out += changes(name, e, live, today)
         checked = _date(e.get("checked"))
         if checked and (today - checked).days > RECHECK_DAYS:
             out.append(f"{name}: upkeep last checked {checked}: look again and update its entry")

@@ -188,3 +188,38 @@ def test_the_written_rule_names_every_upkeep_fact():
     rule = (vendor_check.ROOT / "AGENTS.md").read_text(encoding="utf-8")
     for word in ("data/python-libraries.yaml", "maintenance", "popular", "security fixes", "stable", "abandoned"):
         assert word in rule, word
+
+
+# From the review: the recheck also says what changed since the entry was written.
+
+def test_the_recheck_flags_a_stable_library_crossing_two_quiet_years(tmp_path):
+    write_lib(tmp_path, maintenance="stable", last_release=dt.date(2025, 3, 1))
+    found = vendor_check.recheck(tmp_path, fetch=fake_registry(last_release=dt.date(2025, 3, 1)), today=dt.date(2027, 4, 1))
+    assert any("tiny" in p and "two years" in p for p in found)
+
+
+def test_the_recheck_flags_downloads_falling_by_half(tmp_path):
+    write_lib(tmp_path)
+    found = vendor_check.recheck(tmp_path, fetch=fake_registry(weekly_downloads=100_000), today=TODAY)
+    assert any("downloads" in p and "250000" in p for p in found)
+
+
+def test_the_recheck_asks_to_reclassify_a_new_library_after_a_year(tmp_path):
+    write_lib(tmp_path, maintenance="new", first_release=dt.date(2026, 1, 1), risks=["Young."])
+    found = vendor_check.recheck(tmp_path, fetch=fake_registry(first_release=dt.date(2026, 1, 1)), today=dt.date(2027, 3, 1))
+    assert any("tiny" in p and "no longer new" in p for p in found)
+
+
+def test_risks_must_be_written_even_when_there_are_none():
+    entry = {k: v for k, v in GOOD.items() if k != "risks"}
+    assert any("missing risks" in p for p in vendor_check.upkeep_problems("tiny", entry, today=TODAY))
+
+
+def test_downloads_must_be_a_number():
+    assert any("weekly_downloads" in p for p in upkeep(weekly_downloads="lots"))
+
+
+def test_an_exact_pin_in_any_requirements_file_is_used(tmp_path):
+    (tmp_path / "requirements.txt").write_text("Pillow>=12\n", encoding="utf-8")
+    (tmp_path / "requirements-dev.txt").write_text("-r requirements.txt\nPillow==13.0.0\n", encoding="utf-8")
+    assert vendor_check.requirements(tmp_path)["pillow"] == ("Pillow", "13.0.0")
