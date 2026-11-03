@@ -356,7 +356,7 @@
     ]
   },
   {
-    "name": "Eliza",
+    "name": "Elizabella",
     "type": "npc",
     "aliases": [],
     "summary": "A woman at the Tser Pool camp curious about the party.",
@@ -1070,9 +1070,9 @@
     "name": "Holy Symbol of Ravenkind",
     "type": "item",
     "aliases": [],
-    "summary": "A holy symbol mentioned in Eliza's tale.",
+    "summary": "A holy symbol mentioned in Elizabella's tale.",
     "facts": [
-      {"text": "Seemed a key element of Eliza's raven story.", "post": "2024-04-16-tser-pool"}
+      {"text": "Seemed a key element of Elizabella's raven story.", "post": "2024-04-16-tser-pool"}
     ]
   },
   {
