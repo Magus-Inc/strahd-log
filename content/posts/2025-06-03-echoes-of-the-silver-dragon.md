@@ -5,6 +5,7 @@ tagline: Aera adopts a pseudodragon
 slug: echoes-of-the-silver-dragon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-silver-dragon
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Zorpheus"]
+sources: ["notes-c2lopb", "discord-9ekp17", "discord-bncbz7", "discord-jt7yh9", "discord-k74vij", "discord-p377c9", "discord-phtkme", "discord-zhfe39"]
 ---
 
 ## Story

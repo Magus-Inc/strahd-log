@@ -5,6 +5,7 @@ tagline: she's been taken!
 slug: a-doll-for-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/a-doll-for-arabelle
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Shabasta"]
+sources: ["notes-uj6ty6", "discord-e7o9ho", "discord-ktsn7s"]
 ---
 
 ## Story

@@ -5,6 +5,7 @@ tagline: Strahd plays chess. Guess who the pawns are.
 slug: stop-winter-splinter
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/stop-winter-splinter
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Oogway", "Veyren"]
+sources: ["notes-08sgl8"]
 ---
 
 ## Story

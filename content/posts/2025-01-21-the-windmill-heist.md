@@ -5,6 +5,7 @@ tagline: The hags offered a deal. We offered steel.
 slug: the-windmill-heist
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-windmill-heist
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+sources: ["notes-b95mcl"]
 ---
 
 ## Story

@@ -5,6 +5,7 @@ tagline: The cows have teeth after all
 slug: the-boon-the-bride-and-the-beating-heart
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-boon-the-bride-and-the-beating-heart
 cast: ["Aera shan Ravanór", "Gumbo", "Malron Lichtstrahl", "Olfin Darning", "Zorpheus"]
+sources: ["notes-6ud00l"]
 ---
 
 ## Story

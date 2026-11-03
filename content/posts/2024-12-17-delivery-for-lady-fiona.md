@@ -5,6 +5,7 @@ tagline: What's that you said about Milivoj and Henrik?
 slug: delivery-for-lady-fiona
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/delivery-for-lady-fiona
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+sources: ["notes-7xthjf"]
 ---
 
 ## Story

@@ -5,6 +5,7 @@ tagline: So, is that spelled Victor or Victor?
 slug: whispers-in-the-barons-mansion
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/whispers-in-the-barons-mansion
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Shabasta"]
+sources: ["notes-rzo4u0"]
 ---
 
 ## Story

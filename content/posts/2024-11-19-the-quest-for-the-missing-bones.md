@@ -5,6 +5,7 @@ tagline: Everything is fine...
 slug: the-quest-for-the-missing-bones
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-quest-for-the-missing-bones
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
+sources: ["notes-xpw38u"]
 ---
 
 ## Story

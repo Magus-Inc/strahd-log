@@ -5,6 +5,7 @@ tagline: The wrong spoon, the right spoon, and an iron maiden
 slug: depths-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/depths-of-ravenloft
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["notes-43jrf8", "transcript-rcznh0", "recording-vybfou", "discord-4kqb2j"]
 ---
 
 ## Story

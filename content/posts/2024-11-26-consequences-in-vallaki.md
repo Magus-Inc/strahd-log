@@ -5,6 +5,7 @@ tagline: Izek got there first
 slug: consequences-in-vallaki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/consequences-in-vallaki
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["notes-h47gdv"]
 ---
 
 ## Story

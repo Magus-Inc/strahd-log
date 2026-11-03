@@ -5,6 +5,7 @@ tagline: Shabasta needed a hand. Izek no longer did.
 slug: the-fall-of-izek
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fall-of-izek
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
+sources: ["notes-cq4cry"]
 ---
 
 ## Story

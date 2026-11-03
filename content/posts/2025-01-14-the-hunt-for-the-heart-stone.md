@@ -5,6 +5,7 @@ tagline: First, find a hag. Then, take her heart.
 slug: the-hunt-for-the-heart-stone
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-hunt-for-the-heart-stone
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+sources: ["notes-1015ce", "discord-ocbqgi", "discord-wqay9e"]
 ---
 
 ## Story

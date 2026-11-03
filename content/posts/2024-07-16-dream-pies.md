@@ -5,6 +5,7 @@ tagline: Wolves love them
 slug: dream-pies
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/dream-pies
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht"]
+sources: ["notes-ajhf5e"]
 ---
 
 ## Story

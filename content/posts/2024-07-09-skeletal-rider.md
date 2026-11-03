@@ -5,6 +5,7 @@ tagline: Red Herring?
 slug: skeletal-rider
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/skeletal-rider
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
+sources: ["notes-mq4n15"]
 ---
 
 ## Story

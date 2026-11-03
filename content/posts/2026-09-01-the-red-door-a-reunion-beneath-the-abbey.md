@@ -5,6 +5,7 @@ tagline: Never open the red door. We opened the red door.
 slug: the-red-door-a-reunion-beneath-the-abbey
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-red-door-a-reunion-beneath-the-abbey
 cast: ["Aera shan Ravanór", "Crusty", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["transcript-dvrukt", "transcript-smlkbi", "recording-lyy62g"]
 ---
 
 ## At a Glance

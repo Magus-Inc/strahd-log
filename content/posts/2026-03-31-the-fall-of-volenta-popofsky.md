@@ -5,6 +5,7 @@ tagline: Volenta brought daggers. We brought Lathander.
 slug: the-fall-of-volenta-popofsky
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fall-of-volenta-popofsky
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["transcript-0go74y", "transcript-6b4kff", "recording-0af3yq", "recording-psrkc8"]
 ---
 
 ## Story

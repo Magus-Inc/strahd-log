@@ -5,6 +5,7 @@ tagline: The monster is Mom. No, Walter. No, Dad.
 slug: finishing-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finishing-the-manor
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Weeble Wobleston"]
+sources: []
 ---
 
 ## Story

@@ -13,6 +13,7 @@ import yaml
 
 import build
 import poststyle
+import sources
 import wiki
 
 ROOT = Path(build.__file__).parent
@@ -79,6 +80,35 @@ def test_cast_in_the_front_matter_gives_the_pills(tmp_path):
     assert ">Story</h2>" in post.html and "We met" in post.html  # the plainest look keeps the heading
 
 
+def test_sources_in_the_front_matter_are_read_and_never_shown(tmp_path):
+    posts = tmp_path / "content" / "posts"
+    posts.mkdir(parents=True)
+    (posts / "2024-01-09-first.md").write_text(
+        "---\ntitle: First\ndate: '2024-01-09'\ncast: [Crusty]\nsources: [notes-7k2m9q, transcript-p4x8tw]\n---\n\n"
+        "## Story\n\nWe ran.\n", encoding="utf-8")
+    post = build.prepare(posts).posts[0]
+    assert post.sources == ["notes-7k2m9q", "transcript-p4x8tw"]
+    assert "7k2m9q" not in post.html
+
+
+def test_a_private_path_in_sources_is_refused(tmp_path):
+    posts = tmp_path / "content" / "posts"
+    posts.mkdir(parents=True)
+    (posts / "2024-01-09-first.md").write_text(
+        "---\ntitle: First\ndate: '2024-01-09'\ncast: [Crusty]\nsources: ['C:\\\\Users\\\\notes.docx']\n---\n\n"
+        "## Story\n\nWe ran.\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="sources"):
+        build.prepare(posts)
+
+
+def test_the_built_site_shows_no_source_id(real_build):
+    ids = {ref for p in POSTS for ref in parts(p)[0].get("sources") or [] if not ref.startswith("https://")}
+    assert ids
+    shown = sorted({ref for page in real_build.out.rglob("*") if page.suffix in (".html", ".json", ".xml", ".txt") for ref in ids
+                    if ref in page.read_text(encoding="utf-8")})
+    assert shown == []
+
+
 # --- every post follows the format -------------------------------------------------------------
 
 def parts(path: Path) -> tuple[dict, str]:
@@ -89,11 +119,15 @@ def parts(path: Path) -> tuple[dict, str]:
 def test_post_follows_the_format(path):
     meta, body = parts(path)
     problems = []
-    for key in ("title", "date", "slug", "cast"):
+    for key in ("title", "date", "slug", "cast", "sources"):
         if key not in meta:
             problems.append(f"front matter has no {key}")
     if not isinstance(meta.get("cast"), list) or not meta.get("cast"):
         problems.append("cast lists the player characters there")
+    try:
+        sources.parse_sources(meta.get("sources"), path.name)  # may be empty: []
+    except ValueError as err:
+        problems.append(str(err))
     heads = re.findall(r"^(#{1,6}) (.*)$", body, re.M)
     names = [text for hashes, text in heads if len(hashes) == 2]
     if any(len(h) not in (2, 3) for h, _ in heads):

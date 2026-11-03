@@ -33,6 +33,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import article
 import barovia_map
 import poststyle
+import sources as source_list
 import share
 import wiki
 import wikistyle
@@ -77,6 +78,9 @@ class Post:
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
     party: dict = field(default_factory=dict)  # data/party.yaml: died/revived/joined/returned/left -> [wiki pages]
     cast_names: list[str] = field(default_factory=list)  # front matter `cast:`: the player characters there
+    # front matter `sources:`: what the post was written from, as hidden reference ids or public links
+    # (sources.py). The site never shows them; dnd-scribe's private table says what each id is.
+    sources: list[str] = field(default_factory=list)
 
     @property
     def path(self) -> str:
@@ -203,6 +207,7 @@ def parse_post(path: Path) -> Post:
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         source=path,
         cast_names=[str(n) for n in meta.get("cast") or []],
+        sources=source_list.parse_sources(meta.get("sources"), path.name),
     )
 
 
