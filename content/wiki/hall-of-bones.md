@@ -1,8 +1,7 @@
 ---
 title: Hall of Bones
 type: place
-aliases:
-- K-67
+book_room: K67
 summary: An ossuary in Castle Ravenloft decorated with human remains.
 source: Compiled from the adventure log, with a description written for the site
 ---

@@ -72,7 +72,7 @@ Note: Crusty took zero damage the entire fight. Inspiration for the session went
 
 ## Key Locations
 
-* **The Asylum**: Room S15 of the Abbey of St. Markovia, where we fought Ethereal’s second form, littered with candlesticks and broken furniture from the golem’s throws.
+* **The Asylum**: The cell corridor of the Abbey of St. Markovia, where we fought Ethereal’s second form, littered with candlesticks and broken furniture from the golem’s throws.
 * **The Void**: A dark, endless, mist-floored space reached through the Icon of Dawn’s Grace, where the Abbot’s soul sat weeping in shackles.
 
 ## Encounters

@@ -165,6 +165,15 @@ def test_facts_for_a_pc_and_a_page_seen_once():
     assert "Last seen" not in facts and "Sessions" not in facts
 
 
+
+def test_facts_show_the_book_room_outside_the_account():
+    """Chris, 2026-11-03: room codes are table talk, so they stay out of Malron's Account and the log;
+    a page that is a room in the book shows its code in the facts box instead."""
+    page = build.wiki.WikiPage(slug="hall-of-bones", title="Hall of Bones", type="place", book_room="K67",
+                               mentioned_in=[P(30)])
+    assert dict(wikistyle.facts(page))["In the book"] == "K67"
+    assert "In the book" not in dict(wikistyle.facts(build.wiki.WikiPage(slug="x", title="X")))
+
 # --- the blog --------------------------------------------------------------------------------
 
 def test_blog_uses_the_picks():

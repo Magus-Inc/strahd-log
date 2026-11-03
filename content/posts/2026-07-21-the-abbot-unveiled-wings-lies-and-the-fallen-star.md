@@ -24,13 +24,13 @@ After a long rest at the Burgomaster’s house, and a running fight with scarecr
 
 Note: The table had not played in about two months. The DM posted a picture of the abbey on the Discord and showed off a box of normal-sized minis he had been given. The party is still seven players, “eight in heart.” Shabasta’s Deception was a 16.
 
-Before we went in, we remembered the warning of the shard in the icon we carry: “Tread carefully and ready your steel, for the Morning Lord’s rays flare only brighter when they perceive darkness before them.” We agreed to keep the icon hidden from the Abbot for now. In the courtyard, room S12, we met Clovin Belview carrying bowls of cold porridge to the padlocked shed. Olfin told him the same tale of Cyrus, and the grateful Clovin kept his promise of a reward. He led us up into the tower, room S17, and pulled a black cloth off a stand to show two sets of living bone wings, one feathered like a giant eagle’s and one like a bat’s. Olfin took the eagle wings and Aera the bat wings.
+Before we went in, we remembered the warning of the shard in the icon we carry: “Tread carefully and ready your steel, for the Morning Lord’s rays flare only brighter when they perceive darkness before them.” We agreed to keep the icon hidden from the Abbot for now. In the abbey courtyard we met Clovin Belview carrying bowls of cold porridge to the padlocked shed. Olfin told him the same tale of Cyrus, and the grateful Clovin kept his promise of a reward. He led us up into the bell tower and pulled a black cloth off a stand to show two sets of living bone wings, one feathered like a giant eagle’s and one like a bat’s. Olfin took the eagle wings and Aera the bat wings.
 
 Note: Olfin’s roll was a 23. Command word brainstorming followed. “I’m Batman” was the early favorite, and Olfin’s “America!” carried the night. The table also briefly argued over whether a paladin or a rogue should be the one to fly.
 
 ### The Abbot in the Asylum
 
-We found the Abbot in the asylum, room S15, a lightless corridor of cells whose prisoners cackle and curse behind locked doors. A handsome young man in monk’s robes stood halfway down the hall with a prayer book under his arm, scolding Vasilka, the “perfect bride” he is building for Strahd, for tending the blighted mongrelfolk on the very day of her “operation.” Behind them loomed the flesh golem we once gave a crown of flowers. The Abbot soothed Vasilka with talk of the Morning Lord’s grace and of everyone’s proper place, then turned to us: “Visitors, welcome back to the Abbey of St. Markovia. What’s your reason for being here?”
+We found the Abbot in the asylum, a lightless corridor of cells whose prisoners cackle and curse behind locked doors. A handsome young man in monk’s robes stood halfway down the hall with a prayer book under his arm, scolding Vasilka, the “perfect bride” he is building for Strahd, for tending the blighted mongrelfolk on the very day of her “operation.” Behind them loomed the flesh golem we once gave a crown of flowers. The Abbot soothed Vasilka with talk of the Morning Lord’s grace and of everyone’s proper place, then turned to us: “Visitors, welcome back to the Abbey of St. Markovia. What’s your reason for being here?”
 
 ![Vasilka, a stitched bride in a white gown, tending a mongrelfolk in the asylum](/images/vasilka-ai.jpg)
 
@@ -74,11 +74,13 @@ Note: The first phase took about an hour, so the DM called it there rather than 
 
 ## Key Locations
 
+Note: Room numbers in the book: north gate S6, courtyard S12, asylum S15, tower and belfry S17.
+
 * **Krezk**: The walled village where we have been staying, with a long rest at the Burgomaster’s house.
-* **North Gate of the Abbey**: Room S6, where Otto and Zygfrek Belview asked about Cyrus and Shabasta convinced them he has been “perfected.”
-* **Abbey Courtyard**: Room S12, where Clovin Belview carries porridge to the padlocked shed.
-* **Tower and Belfry**: Room S17, above the asylum; Clovin’s hidden stand held the two sets of bone wings.
-* **The Asylum**: Room S15, a lightless, foul-smelling corridor of cells holding the blighted mongrelfolk. A lever opens the cells. Where we fought Ethereal.
+* **North Gate of the Abbey**: Where Otto and Zygfrek Belview asked about Cyrus and Shabasta convinced them he has been “perfected.”
+* **Abbey Courtyard**: Where Clovin Belview carries porridge to the padlocked shed.
+* **Tower and Belfry**: Above the asylum; Clovin’s hidden stand held the two sets of bone wings.
+* **The Asylum**: A lightless, foul-smelling corridor of cells holding the blighted mongrelfolk. A lever opens the cells. Where we fought Ethereal.
 
 ## Encounters
 
