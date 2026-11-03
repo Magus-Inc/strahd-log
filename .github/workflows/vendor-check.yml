@@ -1,9 +1,12 @@
 name: Library security check
 
-# Once a month, ask osv.dev whether any library copied into static/vendor/ has a known security
-# problem, and open an issue if one does. Copied files get no automatic update PRs, so this is how
-# we hear about fixes (the script rule in AGENTS.md). One open issue at a time: a still-open one gets
-# a comment instead of a new issue. If osv.dev can't be reached the run fails, and GitHub emails that.
+# Once a month, ask osv.dev whether any library we use (copied into static/vendor/, or a pinned Python
+# package) has a known security problem, and open an issue if one does. Copied files get no automatic
+# update PRs, so this is how we hear about fixes (the library rules in AGENTS.md). Then check how well
+# each library is kept up against today's npm and PyPI facts (gone quiet, fewer users, a newer release,
+# not looked at for a year) and open a second issue for that. One open issue of each kind at a time: a
+# still-open one gets a comment instead of a new issue. If a registry can't be reached the run fails,
+# and GitHub emails that.
 on:
   schedule:
     - cron: "17 14 1 * *"
@@ -30,11 +33,26 @@ jobs:
           python tools/vendor_check.py --advisories > advisories.txt
           cat advisories.txt
           if [ "$(cat advisories.txt)" != "No problems." ]; then
-            title="Security fix needed for a copied JavaScript library"
+            title="Security fix needed for a library"
             open=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
             if [ -n "$open" ]; then
               gh issue comment "$open" --body-file advisories.txt
             else
               gh issue create --title "$title" --body-file advisories.txt
+            fi
+          fi
+      - name: Check upkeep
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python tools/vendor_check.py --recheck > upkeep.txt
+          cat upkeep.txt
+          if [ "$(cat upkeep.txt)" != "No problems." ]; then
+            title="Library upkeep to look at"
+            open=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body-file upkeep.txt
+            else
+              gh issue create --title "$title" --body-file upkeep.txt
             fi
           fi

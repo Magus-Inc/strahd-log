@@ -1,5 +1,6 @@
 """The script rule (AGENTS.md): the site runs its own JavaScript plus libraries copied into
 static/vendor/ and listed in data/vendor.yaml. Nothing loads from another site."""
+import datetime as dt
 import gzip
 import hashlib
 import random
@@ -14,6 +15,11 @@ import vendor_check
 ROOT = Path(__file__).resolve().parent.parent
 LIB = b"window.tiny = function (x) { return x + 1; };\n"
 MIT = "MIT License\n\nCopyright (c) 2024 Someone\n"
+# How well it is kept up (tests/test_library_upkeep.py has the rules).
+UPKEEP = {"first_release": dt.date(2015, 1, 1), "last_release": dt.date(2026, 9, 1),
+          "weekly_downloads": 250_000, "maintenance": "active",
+          "fixes": "Bug fixes every few months; the 2025 advisory was fixed in a week.",
+          "risks": [], "checked": dt.date(2026, 11, 3)}
 
 
 def write_lib(root: Path, body: bytes = LIB, **override) -> dict:
@@ -24,7 +30,7 @@ def write_lib(root: Path, body: bytes = LIB, **override) -> dict:
     entry = {"name": "tiny", "version": "1.2.3", "npm": "tiny", "file": "tiny-1.2.3.min.js",
              "license": "MIT", "license_file": "tiny-LICENSE.txt",
              "source": "https://registry.npmjs.org/tiny/-/tiny-1.2.3.tgz",
-             "sha256": hashlib.sha256(body).hexdigest(), "why": "Example."}
+             "sha256": hashlib.sha256(body).hexdigest(), "why": "Example.", **UPKEEP}
     entry.update(override)
     (root / "data").mkdir(exist_ok=True)
     (root / "data" / "vendor.yaml").write_text(yaml.safe_dump({"libraries": [entry]}), encoding="utf-8")
@@ -85,12 +91,12 @@ def test_advisories_are_looked_up_per_listed_version(tmp_path):
     write_lib(tmp_path)
     asked = []
 
-    def fake_osv(package, version):
-        asked.append((package, version))
+    def fake_osv(package, version, ecosystem):
+        asked.append((package, version, ecosystem))
         return [{"id": "GHSA-xxxx", "summary": "Prototype pollution"}]
 
     found = vendor_check.advisories(tmp_path, query=fake_osv)
-    assert asked == [("tiny", "1.2.3")]
+    assert asked == [("tiny", "1.2.3", "npm")]
     assert found == ["tiny 1.2.3: GHSA-xxxx Prototype pollution"]
 
 
