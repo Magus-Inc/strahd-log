@@ -155,9 +155,8 @@ def test_the_search_page_inlines_the_matcher_and_says_when_it_guessed():
 
 
 @pytest.fixture(scope="module")
-def real_index(tmp_path_factory) -> list[dict]:
-    out = tmp_path_factory.mktemp("site")
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
+def real_index(real_build) -> list[dict]:
+    out = real_build.out  # built once per run (conftest.py)
     page = (out / "search" / "index.html").read_text(encoding="utf-8")
     assert "function search(" in page, "the built search page carries the matcher"
     return json.loads((out / "search-index.json").read_text(encoding="utf-8"))

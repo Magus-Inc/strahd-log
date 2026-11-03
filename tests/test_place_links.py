@@ -143,9 +143,8 @@ def test_posts_and_log_notes_link_the_werewolf_den(site_pages):
 
 
 @pytest.fixture(scope="module")
-def site_pages(tmp_path_factory):
-    out = tmp_path_factory.mktemp("place-links") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
+def site_pages(real_build):
+    out = real_build.out  # built once per run (conftest.py)
 
     class Pages(dict):
         def __missing__(self, path):

@@ -59,9 +59,8 @@ def test_exact_names_are_real_names():
 
 
 @pytest.fixture(scope="module")
-def site_pages(tmp_path_factory):
-    out = tmp_path_factory.mktemp("name-case") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
+def site_pages(real_build):
+    out = real_build.out  # built once per run (conftest.py)
     return lambda path: (out / path / "index.html").read_text(encoding="utf-8")
 
 
