@@ -422,7 +422,7 @@ def test_pages_in_three_or_more_sessions_have_a_picture():
 def test_every_player_character_has_a_picture():
     """Chris (2026-11-01): every PC, current or former, has a picture on its wiki page."""
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
-    missing = sorted(p.slug for p in pages if p.type == "character" and not p.pictures)
+    missing = sorted(p.slug for p in pages if p.type == "character" and not p.dm and not p.pictures)  # the DM is no PC
     assert not missing, f"add a picture to: {missing}"
 
 

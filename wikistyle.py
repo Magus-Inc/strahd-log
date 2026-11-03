@@ -116,12 +116,12 @@ def fold_notes(notes: str) -> str:
 
 
 def facts(page) -> list[tuple[str, object]]:
-    """The facts box: other names, who plays a PC, when we first and last saw them, how often."""
+    """The facts box: other names, who plays a PC (or runs the game, for the DM), when we first and last saw them, how often."""
     out: list[tuple[str, object]] = []
     if page.aliases:
         out.append(("Also known as", ", ".join(page.aliases)))
     if getattr(page, "player", ""):
-        out.append(("Played by", page.player))
+        out.append(("Run by" if getattr(page, "dm", False) else "Played by", page.player))
     seen = list(page.mentioned_in)
     if seen:
         first, last = seen[-1], seen[0]

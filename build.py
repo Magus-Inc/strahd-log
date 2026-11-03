@@ -142,7 +142,7 @@ def apply_party_entry(post: "Post", entry: dict, pages: dict) -> None:
             page = pages.get(name)
             if page is None:
                 raise ValueError(f"data/party.yaml: {post.slug}: no wiki page {name}")
-            if page.type != "character":
+            if page.type != "character" or page.dm:
                 raise ValueError(f"data/party.yaml: {post.slug}: {name} is not a player character")
             party.setdefault(key, []).append(page)
     post.party = party
@@ -230,7 +230,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
         post.html = wiki.link_npc_names(post.html, linker)
         if post.characters_html:  # who the Characters section names, even when the style hides it
             _, named = linker.link(post.characters_html)
-            post.listed = sorted(s for s in named if by_slug[s].type == "character")
+            post.listed = sorted(s for s in named if by_slug[s].type == "character" and not by_slug[s].dm)
         post.mentions |= narrators | set(post.listed)
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
@@ -498,7 +498,7 @@ def build_search_index(posts: list[Post], pages: list[wiki.WikiPage]) -> str:
                 **({"s": p.slide_count} if p.slide_count else {}),
                 **({"b": p.life_badges} if p.party else {})}
                for p in posts]
-    entries += [{"t": w.title, "u": w.path, "l": wiki.LABELS[w.type],
+    entries += [{"t": w.title, "u": w.path, "l": wiki.label(w),
                  "x": " ".join([*w.aliases, w.summary, wiki.plain_text(w.html).replace(wiki.LOG_NOTE, "")]),
                  **({"p": w.thumb, "n": len(w.pictures)} if w.thumb else {})}
                 for w in pages]
@@ -517,7 +517,7 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
         "posts": [{"title": p.title, "date": p.date.date().isoformat(), "url": root + p.path,
                    "glance": [wiki.plain_text(g) for g in p.glance], "wiki": sorted(p.mentions),
                    "text": p.body_md.strip()} for p in reversed(posts)],
-        "wiki": [{"slug": w.slug, "title": w.title, "type": w.type, "aliases": w.aliases, "summary": w.summary,
+        "wiki": [{"slug": w.slug, "title": w.title, "type": "dm" if w.dm else w.type, "aliases": w.aliases, "summary": w.summary,
                   "url": root + w.path, "text": w.body_md.strip()} for w in pages],
     }, ensure_ascii=False, separators=(",", ":"))
 

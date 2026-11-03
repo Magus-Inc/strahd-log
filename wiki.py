@@ -1,6 +1,6 @@
 """The campaign wiki: characters, NPCs, places, items and factions, one Markdown file each.
 
-content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, narrator, source,
+content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, narrator, dm, source,
 obsidian_portal_url) and a Markdown body. The build links the first mention of any page's title or
 alias in each post and wiki page, and lists on every wiki page the posts that mention it.
 """
@@ -32,6 +32,11 @@ LABELS = {
     "item": "Item", "faction": "Faction", "deity": "Deity", "other": "Lore",
 }
 
+
+def label(page: "WikiPage") -> str:
+    """The search label: the DM's page sits with the player characters but is not one."""
+    return "Dungeon Master" if page.dm else LABELS[page.type]
+
 # The note tools/wiki_from_extract.py puts above compiled facts; left out of the search index.
 LOG_NOTE = "From the adventure log Compiled from the session posts. Each line links to the session it comes from."
 
@@ -52,6 +57,7 @@ class WikiPage:
     player: str = ""
     former: bool = False  # a player character no longer played
     narrator: bool = False  # writes the log, so is at every session even when no post names him
+    dm: bool = False  # the Dungeon Master: listed with the player characters, never in a post's cast or party
     source: str = ""
     obsidian_portal_url: str = ""
     body_md: str = ""
@@ -101,6 +107,7 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         player=str(meta.get("player") or ""),
         former=bool(meta.get("former")),
         narrator=bool(meta.get("narrator")),
+        dm=bool(meta.get("dm")),
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         heard_of_in=[str(h) for h in heard],
