@@ -11,7 +11,7 @@ cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darn
 
 ### Into the Ethereal
 
-Lady Fiona had to drop her wards to allow us entry into the ethereal realm. We ventured into the cellar with her, where we encountered peculiar sights: four skeletons lying in beds, a pentagram on the floor, and a curved dagger inscribed with the phrase “in death.” Scratches reading “traitor” were visible, remnants of a previous dweller. Fiona deemed the cellar a secure location despite her inability to remove the markings.
+Lady Fiona had to drop her wards to allow us entry into the ethereal realm. We ventured into the cellar with her, where we encountered peculiar sights: four skeletons lying in beds, a pentagram on the floor, and a curved dagger inscribed with the phrase “in death.” Scratches reading “traitor” were visible, remnants of a previous dweller. Fiona could not remove the markings, but she judged the cellar safe.
 
 Victor used the hag’s heart stone to transport us to the ethereal realm. A teenage voice exclaimed “Victor!” behind us, revealing a fading figure with legs disappearing below the knees into the mist.
 

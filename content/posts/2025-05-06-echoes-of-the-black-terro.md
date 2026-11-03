@@ -47,7 +47,7 @@ Note: Booming Blade plus Suggestion. The werewolf walked into its own death.
 ## Notable NPCs
 
 * **Ezmerelda**: A skilled monster hunter, deeply scarred by her fights with Strahd’s servants.
-* **The Black Terror (Kiril Stoyanovich)**: The savage werewolf leader who maimed Ezmerelda.
+* **The Black Terror**: Kiril Stoyanovich, the savage werewolf leader who maimed Ezmerelda.
 
 ## Plot Points
 

@@ -490,7 +490,7 @@ varushkas-key:
     told: The carriage will take us to one place of our choosing
 
 welcome-back-to-vellanki:
-  - point: Argynvost’s Skull (first of all)
+  - point: Argynvost’s Skull
     told:
       - First of all comes Argynvost’s skull
       - the light of Argynvost will beam and rid this land of gloom
@@ -548,7 +548,7 @@ the-master-of-runes-and-the-hellborn-s-spear:
   - point: Strahd’s Roads
     told: how Strahd and his brides cross Barovia in a breath
   - point: The Spear Restored
-    told: made whole again by communing with the Spirit of the Huntress, or by consecrating anew the Forest Fane
+    told: made whole again by communing with the Spirit of the Huntress, or by consecrating the Forest Fane
   - point: The Empty Crypt
     told:
       - Crypt 18 is marked “Ireena Kolyana, wife.”
@@ -605,7 +605,7 @@ the-fallen-star-ape-sacrifice-and-redemption:
     told:
       - a white-winged youth in plain white robes lay sleeping on the abbey floor
       - Ethereal is restored
-  - point: The Shepherd card (Four of Glyphs)
+  - point: The Shepherd card, the Four of Glyphs,
     told:
       - the Four of Glyphs, the Shepherd
       - a message from St. Markovia

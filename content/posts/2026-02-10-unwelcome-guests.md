@@ -36,7 +36,7 @@ Inside, everything lay under dust. A weathered, brittle book stood open on a des
 * **The Blue Water Inn**: Our base, and the last place of any safety in Vallaki.
 * **Tser Pool**: The Vistani camp, where we met the caravan at the crossroads.
 * **The Chasm and Drawbridge**: A thousand-foot drop and a fifty-foot gap, Ravenloft’s first defense.
-* **The Servants’ Entrance (K1-K2)**: A quiet way in, opened with the password “Ikame Dastra’s memory.” Inside are a register for “next of kin” and a withered corpse.
+* **The Servants’ Entrance**: Rooms K1 and K2, a quiet way in, opened with the password “Ikame Dastra’s memory.” Inside are a register for “next of kin” and a withered corpse.
 
 ## Encounters
 

@@ -67,7 +67,7 @@ Deals were struck:
 
 * **Strahd’s Challenge**: An eerie invitation to enter the wall and be enlightened, or be lost to it forever.
 * **The Wall’s Test**: – Zorpheus heard that the prophecy is real. – I learned that my reborn nature ties me to a line of elven kings. – Gumbo was cheered on by an unseen crowd. – Each of us heard a woman whisper: **“The way back comes but once.”** – Zorpheus nearly stayed trapped, but came to himself and escaped just in time.
-* **Minofaustus’ Market**: – Gumbo bargained away his gold for a servant (Zorpheus) and a **Cloak of Elvenkind**. – Aera took on a debt for a **Shades Ring**. – Liren and I bought **Half Plate** armor.
+* **Minofaustus’ Market**: – Gumbo bargained away his gold for a servant, Zorpheus, and a **Cloak of Elvenkind**. – Aera took on a debt for a **Shades Ring**. – Liren and I bought **Half Plate** armor.
 
 ## Loot
 
@@ -80,18 +80,18 @@ Deals were struck:
 * **Twilight Crest**:
     * 3 charges, regenerates one at dawn.
     * **Day**: Cast **Aid**.
-    * **Night**: Cast **Spirit Guardians** (necrotic).
+    * **Night**: Cast **Spirit Guardians**, necrotic.
     * **Full Charge**: Cast **Innervation**, prevents recharging for three days.
 * **Merchant’s Wares**:
-* **Cloak of Elvenkind** (Gumbo)
-* **Half Plate** (Liren, Malron)
-* **Shades Ring** (Aera, pending debt repayment)
+* **Cloak of Elvenkind**: Gumbo’s.
+* **Half Plate**: Bought by Liren and Malron.
+* **Shades Ring**: Aera’s, with her debt still to repay.
 
 ## Notable NPCs
 
 * **Strahd von Zarovich**: Gave us the gems as our reward and led us through the Wall’s challenge.
 * **Kavan**: Told the old legends of his people’s split and of the need to recover the Spear of the Huntress.
-* **Minofaustus (Merchant)**: A traveling trader with a magical market, whose deals come with interest.
+* **Minofaustus**: A traveling merchant with a magical market, whose deals come with interest.
 
 ## Plot Points
 

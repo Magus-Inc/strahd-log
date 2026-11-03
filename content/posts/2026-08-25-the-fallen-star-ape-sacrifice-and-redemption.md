@@ -29,7 +29,7 @@ Note: Inspiration for the last session’s damage went to Aera, whose 71 was alm
 
 Ethereal clawed at Crusty, whose shield of force turned the blow, and flicked a radiant dart from his tail into Olfin. Shabasta’s song gave Aera a bear’s toughness and lifted Olfin’s courage. I was nearly spent, and I healed my own wounds. Crusty stepped through the mist into a far corner, out of reach of the breath he expected, and fired a ray of frost, his owl steadying him against his fear.
 
-Olfin dove in with his blade blazing with holy light, only to learn that Ethereal is a celestial and shrugs most of it off. The tail thrashed back at him. Aera had moved and could not steady her aim, and her arrow missed. Ethereal bit Olfin and caught him in his jaws, and Olfin fell, even after Aera’s magic made the beast try again. A radiant dart came for Aera, and she slipped half of it.
+Olfin dove in with his blade blazing with holy light, only to learn that Ethereal is a celestial and shrugs most of it off. The tail thrashed back at him. Aera had moved and could not steady her aim, and her arrow missed. Ethereal bit Olfin and caught him in his jaws, and Olfin fell, even after Aera’s magic made the beast try again. A radiant dart came for Aera, and she dodged half of it.
 
 Shabasta hurled a cold orb that struck hard. I called on Lathander to strengthen three of us, and the prayer brought Olfin back to his senses. Crusty spent the last of his strongest magic on a bolt of lightning. Stung, Ethereal beat his wings toward Crusty and dropped Olfin on the way. Olfin woke in the arms of an angel, struck him with a wrathful smite, and was knocked senseless again by the tail.
 
@@ -63,7 +63,7 @@ Note: Crusty took zero damage the entire fight. Inspiration for the session went
 
 ## Key Locations
 
-* **The Asylum (S15), Abbey of St. Markovia**: Where we fought Ethereal’s second form, littered with candlesticks and broken furniture from the golem’s throws.
+* **The Asylum**: Room S15 of the Abbey of St. Markovia, where we fought Ethereal’s second form, littered with candlesticks and broken furniture from the golem’s throws.
 * **The Void**: A dark, endless, mist-floored space reached through the Icon of Dawn’s Grace, where the Abbot’s soul sat weeping in shackles.
 
 ## Encounters
@@ -85,7 +85,7 @@ Note: Crusty took zero damage the entire fight. Inspiration for the session went
 ## Plot Points
 
 * The Abbot’s corruption is cleansed and he is restored to his angelic, youthful form, asleep for now.
-* The Shepherd card (Four of Glyphs) carried St. Markovia’s message; her spirit still answers in Barovia.
+* The Shepherd card, the Four of Glyphs, carried St. Markovia’s message; her spirit still answers in Barovia.
 * The Abbot admitted separating parents from their children and abusing the faith of those who trusted him.
 * My rule of keeping one last great prayer to call back the dead saved Olfin’s life.
 

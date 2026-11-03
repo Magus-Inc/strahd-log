@@ -41,11 +41,11 @@ At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made 
 
 ## Key Locations
 
-* **Brazier Room (Castle Ravenloft)**: A place for traveling, with seven colored stones.
+* **Brazier Room**: In Castle Ravenloft, a place for traveling, with seven colored stones.
 * **Village of Barovia**: Our first stop, where we rested at the Burgomaster’s mansion.
 * **Raven River Crossroads**: Where a watchful revenant gave us a solemn blessing.
 * **Village of Krezk**: Where we hurry to save Anna Krezkova from the Abbot.
-* **Blue Water Inn (Vallaki)**: Where we met an anxious Baron Dmitri Krezkov.
+* **Blue Water Inn**: In Vallaki, where we met an anxious Baron Dmitri Krezkov.
 
 ## Encounters
 

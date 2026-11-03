@@ -70,7 +70,7 @@ There we met [Bianca](/wiki/bianca-werewolf/), who lives in the woods nearby wit
 * **Ezmerelda**: A skilled monster hunter, seeking answers about the Abbot’s growing madness.
 * **The Abbot**: An angelic being tainted by Strahd, who believes Vasilka can break the land’s curse.
 * **The Flesh Golem**: The Abbot’s seven-foot servant in the east wing, Marzena’s “sibling”. I gave it her garland of flowers.
-* **Kiril Stoyanovich (Black Terror)**: The ruthless leader of the werewolf pack, empowered by Baba Lysaga.
+* **Kiril Stoyanovich**: The Black Terror, the ruthless leader of the werewolf pack, empowered by Baba Lysaga.
 * **[Bianca](/wiki/bianca-werewolf/)**: A conflicted werewolf tied to Kiril, who told us something of the pack.
 
 ## Plot Points
