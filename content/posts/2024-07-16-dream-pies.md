@@ -5,6 +5,7 @@ tagline: Wolves love them
 slug: dream-pies
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/dream-pies
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht"]
+feature: sir-godfrey-gwilym-ai.jpg
 ---
 
 ## Story
@@ -33,7 +34,7 @@ We found a six-foot stone slab carved with a three-pointed star and a raven, an 
 
 At the windmill we met [Morgantha](/wiki/morgantha/), a fiend who sells Dream Pastries and lives there with her daughters, Bella and Offalia. The cat ate one of her pies and fell asleep for five hours, so [Aera](/wiki/aera-shan-ravanor/) bought Morgantha’s cart for five gold to carry him. Morgantha warned that the Vallaki guards confiscate silver, so we hid our silver things in the cart.
 
-![Morgantha, an old hag at her pastry cart on a forest road, the windmill behind her](/images/morgantha-ai.jpg)
+![Morgantha, an old woman at her pastry cart on a forest road, the windmill behind her](/images/morgantha-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026). Not official art.*
 

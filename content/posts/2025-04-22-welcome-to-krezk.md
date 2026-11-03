@@ -5,6 +5,7 @@ tagline: The cards are dealt
 slug: welcome-to-krezk
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-to-krezk
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Oogway", "Zorpheus"]
+feature: dmitri-krezkov-ai.jpg
 ---
 
 ## Story

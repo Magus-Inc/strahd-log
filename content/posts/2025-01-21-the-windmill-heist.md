@@ -5,6 +5,7 @@ tagline: The hags offered a deal. We offered steel.
 slug: the-windmill-heist
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-windmill-heist
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+feature: the-windmill-heist-1.jpg
 ---
 
 ## Story
@@ -19,7 +20,7 @@ Lady Fiona warned us that once the binding circle is up, she and her people can 
 
 First, the greeting. Shabasta knocked on the windmill door, and he and Olfin were welcomed in after saying they would like to go into business together. The talks seemed to go well, and Morgantha called her daughters down to the first floor.
 
-![A decrepit wooden windmill with broken sails on a forest road at dusk, a rope hanging from its tower, a hand cart and a stone well by the door](/images/the-windmill-ai.jpg)
+![Two hag sisters, Bella and Offalia, coming down the stair beside the millstone in the windmill](/images/belladonna-sunbane-ai.jpg)
 
 *AI-generated image (Google Gemini, November 2026). Not official art.*
 
@@ -27,13 +28,13 @@ First, the greeting. Shabasta knocked on the windmill door, and he and Olfin wer
 
 Then, the break-in. Our rogues used their conjured hands to fix a rope to the top of the tower and climbed up the outside. The window at the top was locked, so a conjured hand opened it from the inside. Aera unlocked the cage of the boy while Gumbo drew a key from the gnarled arm, then looked around for anything it might fit while Aera unlocked the second child. Gumbo found a tube in the millstone that seemed part of a lock, and the key opened it. Inside was the hags’ contract, along with six pieces of cheap jewelry worth twenty-five gold each and a charm of mass heroism. The contract is written on human skin, and the names on it are in a strange tongue, Abyssal. The rogues climbed deftly down the rope with the children and slipped them to Victor, and all but those still inside the mill went to Lady Fiona. Shabasta and Olfin excused themselves before Morgantha grew too suspicious.
 
+![A decrepit wooden windmill with broken sails on a forest road at dusk, a rope hanging from its tower, a hand cart and a stone well by the door](/images/the-windmill-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### The Takedown
 
 Then, the takedown. Lady Fiona reads Abyssal, and the true names on the contract are Morgantha Stormreaver, Belladonna Sunbane and Offalia Wormwiggle. She raised the binding circle with her followers. The hags offered a bargain: they would lend us their heart stone for three days. We refused, and the fight began. Shortly before we believed them beaten, they offered once more to answer any of our questions if we stopped and let them go. We answered by attacking harder.
-
-![Two hag sisters, Bella and Offalia, coming down the stair beside the millstone in the windmill](/images/belladonna-sunbane-ai.jpg)
-
-*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### Morgantha’s Secret
 

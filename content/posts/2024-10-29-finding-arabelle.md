@@ -5,6 +5,7 @@ tagline: Can we keep her safe?
 slug: finding-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finding-arabelle
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
+feature: arabelle-ai.jpg
 ---
 
 ## Story

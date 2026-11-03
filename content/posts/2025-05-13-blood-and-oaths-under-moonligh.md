@@ -5,6 +5,7 @@ tagline: He doesn't force pain. He makes you choose it.
 slug: blood-and-oaths-under-moonligh
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/blood-and-oaths-under-moonligh
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Zorpheus"]
+feature: zuleika-and-ilya-ai.jpg
 ---
 
 ## Story

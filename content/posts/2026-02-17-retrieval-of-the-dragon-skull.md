@@ -5,6 +5,7 @@ tagline: Came for a spoon, left with a dragon skull
 slug: retrieval-of-the-dragon-skull
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/retrieval-of-the-dragon-skull
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
+feature: argynvosts-skull-ai.jpg
 ---
 
 ## Story

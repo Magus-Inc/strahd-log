@@ -5,6 +5,7 @@ tagline: The Belviews are fine. Really.
 slug: shadows-over-st-markovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/shadows-over-st-markovia
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+feature: abbey-of-saint-markovia-ai.jpg
 ---
 
 ## Story

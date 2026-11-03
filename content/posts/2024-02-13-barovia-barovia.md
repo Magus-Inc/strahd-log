@@ -5,6 +5,7 @@ tagline: Welcome to the Jungle
 slug: barovia-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/barovia-barovia
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
+feature: ismark-kolyanovich-ai.jpg
 ---
 
 ## Story

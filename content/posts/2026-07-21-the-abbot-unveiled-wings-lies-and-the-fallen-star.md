@@ -5,6 +5,7 @@ tagline: Cyrus is nine feet tall. Trust us.
 slug: the-abbot-unveiled-wings-lies-and-the-fallen-star
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-abbot-unveiled-wings-lies-and-the-fallen-star
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: the-flesh-golem-ai.jpg
 ---
 
 ## At a Glance

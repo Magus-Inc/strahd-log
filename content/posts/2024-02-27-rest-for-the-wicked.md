@@ -5,6 +5,7 @@ tagline: Doru is grounded. Under the church.
 slug: rest-for-the-wicked
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/rest-for-the-wicked
 cast: ["Malron Lichtstrahl"]
+feature: doru-ai.jpg
 ---
 
 ## Story
@@ -21,6 +22,10 @@ In the morning we took Ismark’s father up to the church. The wizard was kind e
 
 Father Donavich was inside the church, but he looked out of sorts and depressed. He mentioned that he hasn’t been the same since he lost his Bronze Sunburst, a holy symbol of his god the Morning Lord.
 
+![Father Donavich praying in his church beside the latched trapdoor](/images/father-donavich-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 Father Donavich said that his son Doru came back, as a vampire, and that Doru took the holy symbol, but that Father Donavich was able to trap him beneath the church.
 
 ![Doru as a vampire spawn, crouched in the dark beneath the church](/images/doru-ai.jpg)
@@ -32,10 +37,6 @@ We offered to venture down and retrieve the symbol from Doru. Perhaps we could r
 ### Beneath the Church
 
 We used the key Father Donavich gave us to unlock the latch keeping a trap door shut in one of the rooms of the church. The cat snuck down the trap door first, followed by the wizard. Next the wood elf looked down the hole and quickly worked a spell that left something below helpless with laughter. I climbed halfway down and used the light of my shield to see what the ruckus was. A vampire was grabbing the wizard. I tried some spells on it but with little luck. It gets a bit hazy, but I think both the cat and the wizard almost died! The wood elf used a potion to bring one of them back and they were able to fell the vampire. I put a stake in it for good measure, but it may only keep it immobilized for now.
-
-![Father Donavich praying in his church beside the latched trapdoor](/images/father-donavich-ai.jpg)
-
-*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 I believe the vampire to be Doru, but I don’t know for certain. Based on the guidance we were given earlier, I would like to take the body to a stream or river to see if it will dissolve and provide a final resting place for this creature.
 

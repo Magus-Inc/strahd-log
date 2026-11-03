@@ -5,6 +5,7 @@ tagline: The tomb said stop
 slug: the-master-of-runes-and-the-hellborn-s-spear
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-master-of-runes-and-the-hellborn-s-spear
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: king-dostron-the-hellborn-ai.jpg
 ---
 
 ## Story

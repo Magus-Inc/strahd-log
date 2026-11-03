@@ -63,7 +63,7 @@ def load_style(path: Path) -> dict:
     return style
 
 
-def apply(html: str, style: dict, cast: list[str] | None = None) -> str:
+def apply(html: str, style: dict, cast: list[str] | None = None, feature: str = "") -> str:
     """A post's rendered Markdown, with the look settings applied; cast is its `cast:` names."""
     style = {**AS_WRITTEN, **style}
     heading = {"titled": style["story-title"], "as-written": "Story"}.get(style["story"])
@@ -87,7 +87,7 @@ def apply(html: str, style: dict, cast: list[str] | None = None) -> str:
     html = mark_story_end(html)
     html = gold_links(html)
     if style["picture"] == "top":
-        html = picture_first(html)
+        html = picture_first(html, feature)
     return html
 
 
@@ -120,8 +120,10 @@ AI_PICTURE = re.compile(r'<p><img [^>]*src="[^"]*-ai(?:-\d+)?\.(?:jpe?g|png|webp
                         r'(?:<p><em>AI-generated.*?</em></p>\s*)?', re.S)
 
 
-def picture_first(html: str) -> str:
-    m = AI_PICTURE.search(html)
+def picture_first(html: str, feature: str = "") -> str:
+    """Move the feature picture and its credit to the top: the one `feature` names, else the first."""
+    found = list(AI_PICTURE.finditer(html))
+    m = next((x for x in found if feature and f'/{feature}"' in x.group(0)), found[0] if found else None)
     if not m:
         return html
     return m.group(0).rstrip() + "\n" + html[:m.start()] + html[m.end():]
@@ -133,7 +135,8 @@ MAX_PICTURES = 3  # Chris (2026-11-03): "a cap of 3 images per article", the fea
 MOST_PICTURES = 4  # a post Chris names may say `picture-cap: 4` in its front matter ("show a fourth image")
 PICTURE_LINE = re.compile(r"^!\[[^\]]*\]\(([^)\s]+)[^)]*\)\s*$")
 CREDIT_LINE = re.compile(r"^\*AI-generated .*\*\s*$")
-AI_NAME = re.compile(r"-ai(?:-[a-z0-9]+)?\.(?:jpe?g|png|webp)$")
+AI_NAME = re.compile(r"-ai(?:-[a-z0-9]+)?\.(?:jpe?g|png|webp)$", re.I)
+ANY_PICTURE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)")
 
 
 def picture_cap(meta: dict) -> int:
@@ -145,21 +148,28 @@ def picture_cap(meta: dict) -> int:
 
 
 def picture_problems(body: str, cap: int = MAX_PICTURES) -> list[str]:
-    """What breaks the picture rules in a post's Markdown body: at most `cap` pictures, the
-    first one being the feature picture; each on its own line in the story with words between it and
-    the next (two in a row would become a vote between takes); none twice; an AI picture over its
-    "AI-generated ..." credit line."""
+    """What breaks the picture rules in a post's Markdown body: at most `cap` pictures, each on a
+    line of its own inside "## Story" with words between it and the next (two in a row read as a
+    gallery and break the scene), none twice, and an AI picture over its "AI-generated ..." credit line."""
+    body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
     problems = []
     blocks = [b.strip() for b in re.split(r"\n\s*\n", body) if b.strip()]
     seen: set[str] = set()
     words_since_picture = True
+    section = None
     for i, block in enumerate(blocks):
+        if block.startswith("## "):
+            section = block[3:].strip()
         m = PICTURE_LINE.match(block)
         if not m:
-            if not CREDIT_LINE.match(block) and not block.startswith("#"):
+            if "![" in block:
+                problems.append("a picture shares its paragraph with other text: give it a line of its own")
+            elif not CREDIT_LINE.match(block) and not block.startswith("#"):
                 words_since_picture = True
             continue
         name = m.group(1).rsplit("/", 1)[-1]
+        if section != "Story":
+            problems.append(f"{name} is outside the story")
         if name in seen:
             problems.append(f"{name} is shown twice")
         elif not words_since_picture:
@@ -168,7 +178,17 @@ def picture_problems(body: str, cap: int = MAX_PICTURES) -> list[str]:
         words_since_picture = False
         if AI_NAME.search(name) and not (i + 1 < len(blocks) and CREDIT_LINE.match(blocks[i + 1])):
             problems.append(f"{name} has no AI-generated credit line under it")
-    count = len(re.findall(r"!\[[^\]]*\]\(", body))  # a picture inside a paragraph counts too
+    count = len(ANY_PICTURE.findall(body))  # a picture inside a paragraph counts too
     if count > cap:
         problems.append(f"{count} pictures: a post holds at most {cap}")
     return problems
+
+
+def feature_problems(meta: dict, body: str) -> list[str]:
+    """A post with more than one picture names its feature picture (`feature: name.jpg`), which gives
+    its link preview and goes first under `picture: top`; it must be one of the post's pictures."""
+    names = [src.rsplit("/", 1)[-1] for src in ANY_PICTURE.findall(re.sub(r"<!--.*?-->", "", body, flags=re.S))]
+    feature = meta.get("feature")
+    if feature:
+        return [] if feature in names else [f"feature {feature} is not a picture in the post"]
+    return ["more than one picture: name the feature picture (feature: name.jpg)"] if len(names) > 1 else []

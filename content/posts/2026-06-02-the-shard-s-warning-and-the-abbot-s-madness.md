@@ -5,6 +5,7 @@ tagline: An unkindness, not a murder
 slug: the-shard-s-warning-and-the-abbot-s-madness
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-shard-s-warning-and-the-abbot-s-madness
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: the-abbot-ai.jpg
 ---
 
 ## Story

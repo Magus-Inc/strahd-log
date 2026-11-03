@@ -5,6 +5,7 @@ tagline: The Count says hello. So do his seven wolves.
 slug: we-meet-again-for-the-first-time
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/we-meet-again-for-the-first-time
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Weeble Wobleston"]
+feature: strahd-von-zarovich-ai.jpg
 ---
 
 ## Story

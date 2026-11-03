@@ -5,6 +5,7 @@ tagline: The way back comes but once
 slug: the-whispering-wall
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-whispering-wall
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Zorpheus"]
+feature: whispering-wall-ai.jpg
 ---
 
 ## Story

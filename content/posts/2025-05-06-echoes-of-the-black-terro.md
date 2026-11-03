@@ -5,6 +5,7 @@ tagline: The werewolf took one step too many
 slug: echoes-of-the-black-terro
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-black-terro
 cast: ["Aera shan Ravanór", "Gumbo", "Malron Lichtstrahl", "Oogway", "Zorpheus"]
+feature: kiril-stoyanovich-ai.jpg
 ---
 
 ## Story

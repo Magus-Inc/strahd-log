@@ -5,6 +5,7 @@ tagline: Never follow a floating tooth into the fog
 slug: session-zero
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/session-zero
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Weeble Wobleston"]
+feature: durst-manor-ai.jpg
 ---
 
 ## Story
@@ -19,7 +20,7 @@ After a time a thick fog settled over the town. Soon after, the tooth necklace [
 
 ![Weeble Wobleston, a high-elf fighter, his pendant glowing and pulling on its chain](/images/weeble-wobleston-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not player art.*
 
 We did not know what to do, but we felt compelled to follow those relics as they led us through the mists. The fog was so thick that those of us without a relic had to stay close or fall behind and be lost.
 

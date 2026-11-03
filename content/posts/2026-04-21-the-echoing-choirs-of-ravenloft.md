@@ -5,6 +5,7 @@ tagline: Rahadin wants it all back
 slug: the-echoing-choirs-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-echoing-choirs-of-ravenloft
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
+feature: icon-of-dawns-grace-ai.jpg
 ---
 
 ## Story

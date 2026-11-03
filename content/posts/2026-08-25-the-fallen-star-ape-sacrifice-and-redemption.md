@@ -5,6 +5,7 @@ tagline: It's time to monkey around
 slug: the-fallen-star-ape-sacrifice-and-redemption
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fallen-star-ape-sacrifice-and-redemption
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: the-fallen-star-1.jpg
 ---
 
 ## At a Glance

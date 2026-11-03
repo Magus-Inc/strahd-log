@@ -5,6 +5,7 @@ tagline: Olfin died. Olfin got better.
 slug: the-slipper-and-the-shadow-of-the-bat
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-slipper-and-the-shadow-of-the-bat
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning"]
+feature: gertruda-ai.jpg
 ---
 
 ## Story

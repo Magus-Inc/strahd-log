@@ -5,6 +5,7 @@ tagline: A recap after our first dinner with Strahd
 slug: welcome-back-to-vellanki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-back-to-vellanki
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: rahadin-ai.jpg
 ---
 
 Note: This session was written up twice on Obsidian Portal: as “Welcome Back To Vallaki” and as “Shadows and Steel—The Ravenloft Infiltration Plan” (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both, checked against the session notes and the recording of the night.

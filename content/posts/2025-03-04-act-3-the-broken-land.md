@@ -5,6 +5,7 @@ tagline: Shabasta's brother is a hare. We didn't ask.
 slug: act-3-the-broken-land
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/act-3-the-broken-land
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+feature: blue-water-inn-ai.jpg
 ---
 
 ## Story

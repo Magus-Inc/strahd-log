@@ -5,6 +5,7 @@ tagline: There was always a Dwarf with us, right?
 slug: leaving-village-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/leaving-village-barovia
 cast: ["Aera shan Ravanór", "Grom Shield-Breaker", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht"]
+feature: ireena-kolyana-ai.jpg
 ---
 
 ## Story
@@ -15,7 +16,7 @@ cast: ["Aera shan Ravanór", "Grom Shield-Breaker", "Malron Lichtstrahl", "Olfin
 
 ![Grom Shield-Breaker, a hill dwarf fighter with shield and axe, holding up his family tooth](/images/grom-shield-breaker-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not player art.*
 
 Schlopkht volunteered to bring the sunburst relic back to [Father Donavich](/wiki/father-donavich/) and side-step the part where we killed his undead son, and that we plan to kill him for good so that we may learn how to be rid of vampires.
 

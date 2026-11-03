@@ -5,6 +5,7 @@ tagline: The druid would like a word with the mouse
 slug: wizard-of-wines-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/wizard-of-wines-vineyard
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+feature: wizard-of-wines-ai.jpg
 ---
 
 ## Story
@@ -39,7 +40,7 @@ Veyren became a mouse and overheard a druid torturing a raven for word of someth
 
 ![Veyren, a hare-folk druid with a staff, a mouse on his shoulder](/images/veyren-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not player art.*
 
 ## Key Locations
 

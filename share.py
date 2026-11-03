@@ -95,11 +95,15 @@ def alt_text(alt: str, title: str) -> str:
     return title if not alt or re.fullmatch(r"[\w .-]+\.(?:jpe?g|png|webp|gif)", alt, re.I) else alt
 
 
-def first_picture(markdown: str, static_dir: Path) -> tuple[Path | str, str] | None:
+def first_picture(markdown: str, static_dir: Path, prefer: str = "") -> tuple[Path | str, str] | None:
     """(file, alt text) of the first picture in the text that lives on the site and exists, else
-    (address, alt text) of the first one hosted elsewhere (a few old posts show the old blog's art)."""
+    (address, alt text) of the first one hosted elsewhere (a few old posts show the old blog's art).
+    `prefer` names a file (a post's `feature:` picture) to try before the others."""
     remote = None
-    for alt, src in PICTURE.findall(markdown):
+    found = PICTURE.findall(markdown)
+    if prefer:
+        found = sorted(found, key=lambda m: m[1].split("?")[0].rsplit("/", 1)[-1] != prefer)
+    for alt, src in found:
         if src.startswith(("http:", "https:")):
             if src.split("?")[0].lower().endswith(RASTER):
                 remote = remote or (src, alt.strip())
