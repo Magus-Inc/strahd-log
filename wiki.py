@@ -1,6 +1,6 @@
 """The campaign wiki: characters, NPCs, places, items and factions, one Markdown file each.
 
-content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, narrator, source,
+content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, people, narrator, dm, source,
 obsidian_portal_url) and a Markdown body. The build links the first mention of any page's title or
 alias in each post and wiki page, and lists on every wiki page the posts that mention it.
 """
@@ -32,6 +32,11 @@ LABELS = {
     "item": "Item", "faction": "Faction", "deity": "Deity", "other": "Lore",
 }
 
+
+def label(page: "WikiPage") -> str:
+    """The search label: the DM's page sits with the player characters but is not one."""
+    return "Dungeon Master" if page.dm else LABELS[page.type]
+
 # The note tools/wiki_from_extract.py puts above compiled facts; left out of the search index.
 LOG_NOTE = "From the adventure log Compiled from the session posts. Each line links to the session it comes from."
 
@@ -52,6 +57,10 @@ class WikiPage:
     player: str = ""
     former: bool = False  # a player character no longer played
     narrator: bool = False  # writes the log, so is at every session even when no post names him
+    # Real people in the role, each with the sessions they had it (post slugs; "from" defaults to the
+    # first session, "to" to the latest): a DM handoff, or a PC whose player changes. Shown in the facts box.
+    people: list[dict] = field(default_factory=list)
+    dm: bool = False  # the Dungeon Master: listed with the player characters, never in a post's cast or party
     source: str = ""
     obsidian_portal_url: str = ""
     body_md: str = ""
@@ -75,6 +84,11 @@ class WikiPage:
         return PICTURE.findall(self.body_md)
 
     @property
+    def real_names(self) -> list[str]:
+        """Every real person this page names in its facts: the player, and anyone in `people`."""
+        return [n for n in [self.player, *(p["name"] for p in self.people)] if n]
+
+    @property
     def names(self) -> list[str]:
         return [self.title, *self.aliases]
 
@@ -92,6 +106,14 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         heard = [heard]
     if isinstance(aliases, str):
         aliases = [a.strip() for a in aliases.split(",") if a.strip()]
+    people = []
+    for person in meta.get("people") or []:
+        if not isinstance(person, dict) or not person.get("name"):
+            raise ValueError(f"{path.name}: every entry under people needs a name")
+        unknown = set(person) - {"name", "from", "to"}
+        if unknown:
+            raise ValueError(f"{path.name}: people: unknown key {sorted(unknown)[0]} (use name, from, to)")
+        people.append({k: str(v) for k, v in person.items()})
     return WikiPage(
         slug=str(meta.get("slug") or path.stem),
         title=str(meta["title"]),
@@ -101,6 +123,8 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         player=str(meta.get("player") or ""),
         former=bool(meta.get("former")),
         narrator=bool(meta.get("narrator")),
+        dm=bool(meta.get("dm")),
+        people=people,
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         heard_of_in=[str(h) for h in heard],

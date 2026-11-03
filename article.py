@@ -218,8 +218,8 @@ def teaser(html: str, limit: int = 150) -> str:
 
 
 def cast(post_mentions: set[str], pages: list[wiki.WikiPage]) -> list[wiki.WikiPage]:
-    """Player characters this post mentions, for the cast pills."""
-    return sorted((p for p in pages if p.type == "character" and p.slug in post_mentions), key=lambda p: p.title)
+    """Player characters this post mentions, for the cast pills. The DM is never in the cast."""
+    return sorted((p for p in pages if p.type == "character" and not p.dm and p.slug in post_mentions), key=lambda p: p.title)
 
 
 def escape(text: str) -> str:
