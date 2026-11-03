@@ -12,6 +12,7 @@
   --faint: #8a8582;         /* quiet credits: 5.2:1 on --bg */
   --accent: #c8213f;        /* links, active nav, chips: 4.6:1 on --bg */
   --accent-hi: #e04a63;
+  --link-red: #e85a72;      /* a link to a session post: 4.7:1 even on --surface-2 */
   --accent-deep: #8f1027;
   --radius: 12px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -135,6 +136,9 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 .card h3, .card h4 { margin: 0.6rem 0 0.4rem; font-size: 1.15rem; }
 .card.compact h3, .card-grid.compact h3 { margin-top: 0; font-size: 1.05rem; }
 .stretched { color: var(--text); text-decoration: none; }
+/* Card titles say where they go too: a wiki page's card gold, a session's card red (Chris, 2026-11-03). */
+.card a.stretched[href*="/wiki/"] { color: var(--gold); }
+.card a.stretched[href*="/posts/"] { color: var(--link-red); }
 .stretched::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .stretched:focus-visible { outline: none; } .stretched:focus-visible::after { outline: 2px solid var(--accent-hi); outline-offset: 2px; }
 .teaser { margin: 0; color: #c9c1ba; font-size: 0.95rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -205,17 +209,22 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 
 .pager { max-width: 46rem; margin: 3rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .pager-card { display: flex; flex-direction: column; gap: 0.25rem; text-decoration: none; color: var(--text); }
-.pager-card strong { font-family: var(--serif); font-size: 1.05rem; line-height: 1.3; }
+.pager-card strong { font-family: var(--serif); font-size: 1.05rem; line-height: 1.3; color: var(--link-red); }
 .pager-card .muted { font-size: 0.85rem; }
 .pager-card.next { text-align: right; grid-column: 2; }
 @media (max-width: 600px) { .pager { grid-template-columns: 1fr; } .pager-card.next { grid-column: 1; grid-row: 1; } }
 
 .session-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .session-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
-.session-list a { color: var(--text); text-decoration: none; font-weight: 500; } .session-list a:hover { color: var(--accent-hi); }
+/* Links say where they go (Chris, 2026-11-03: plain white looked like ordinary words): a wiki name is
+   gold, a session post is red. Session titles in lists are red; their number discs keep their own look. */
+.session-list a { text-decoration: none; font-weight: 500; }
+.session-list a:not(.num):not(.place-num) { color: var(--link-red); }
+.session-list a:not(.num):not(.place-num):hover, .session-list a:not(.num):not(.place-num):focus-visible { color: #ff7389; text-decoration: underline; text-underline-offset: 0.2em; }
 .session-list time { color: var(--muted); font-size: 0.85rem; margin-left: 0.4rem; }
 .session-list.numbered li { display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 0.6rem; }
 .session-list .num { grid-row: span 2; align-self: start; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: grid; place-items: center; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.8rem; font-weight: 700; }
+.session-list a.num { color: #f2c6ce; font-weight: 700; } .session-list a.num:hover { background: var(--accent); color: #fff; }
 .session-list .route { grid-column: 2; color: var(--muted); font-size: 0.88rem; }
 
 /* Wiki and search */
@@ -238,14 +247,15 @@ main.wide { max-width: 80rem; }
 .map.zoomed { cursor: grab; touch-action: none; }
 .map .pin { cursor: pointer; }
 /* A place's picture is a link too: under the mouse, keyboard focus, or while its card is open it gets a
-   solid red edge and a wide red halo (Chris: gold was lost on the parchment). No focus outline box. */
+   solid red edge and a wide red halo (Chris: gold was lost on the parchment). No focus outline box. The glow
+   is the map's own SVG filter (templates/_map.html): iPhone Safari ignores CSS drop shadows on SVG pictures. */
 .map .sprite { cursor: pointer; --glow: #c8213f; outline: none; }
 .map .sprite:hover image, .map .sprite:focus-visible image, .map .sprite.chosen image {
-  filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+  filter: url(#place-glow); }
 /* A wiki page's map marks its own place: the picture glows like a chosen one, the name turns red, and a
    place with no picture gets a red dot (Chris, 2026-11-02: Berez and Durst Manor were hard to find). */
 .map .sprite.here image {
-  filter: drop-shadow(1px 0 0 var(--glow)) drop-shadow(-1px 0 0 var(--glow)) drop-shadow(0 1px 0 var(--glow)) drop-shadow(0 -1px 0 var(--glow)) drop-shadow(0 0 6px var(--glow)); }
+  filter: url(#place-glow); }
 .map .labels .here text { fill: #b3122e; font-size: 15px; }
 .map .here-dot { fill: #b3122e; stroke: #fff8ec; stroke-width: 1.5; transform: scale(var(--mark, 1)); transform-box: view-box; }
 /* No dots: the sprites mark the places. The pin is an invisible tap target with no ring (Chris). */
@@ -325,6 +335,7 @@ html.map-full-open, html.map-full-open body { overflow: hidden; }
 .place-num { display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; font-size: 0.78rem; font-weight: 700;
   border: 1.5px solid rgba(224, 74, 99, 0.7); color: #f2c6ce; background: transparent; }
 .place-num.here { background: var(--accent); border-color: var(--accent); color: #fff; }
+a.place-num { text-decoration: none; } a.place-num:hover { background: var(--accent-hi); border-color: var(--accent-hi); color: #fff; }
 .place-sessions .place-why { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
 .place-sessions li.muted { display: block; }
 .place-sessions time { margin-left: 0; }
@@ -487,7 +498,7 @@ body.deck-lock { overflow: hidden; }
 .infobox dl:first-child { margin-top: 0; }
 .infobox dt { color: var(--muted); }
 .infobox dd { margin: 0; }
-.infobox .num { display: inline-grid; place-items: center; min-width: 1.5rem; height: 1.5rem; padding: 0 0.3rem; border-radius: 999px; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.75rem; font-weight: 700; margin-right: 0.25rem; }
+.infobox .num { display: inline-grid; place-items: center; min-width: 1.5rem; height: 1.5rem; padding: 0 0.3rem; border-radius: 999px; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.75rem; font-weight: 700; margin-right: 0.5rem; }
 /* Desktop: the picture keeps the box's full width and the facts sit below it in pairs (Chris,
    2026-11-02: a side column for the facts squeezed the picture to 17rem) */
 .infobox-picture img { width: auto; max-width: 100%; max-height: 80vh; object-fit: contain; }
@@ -499,8 +510,14 @@ body.deck-lock { overflow: hidden; }
 .prose details.log-notes { margin: 2rem 0 0; border-top: 1px solid var(--line); padding-top: 0.8rem; }
 .prose details.log-notes > summary { cursor: pointer; font-family: var(--serif); font-size: 1.15rem; color: var(--text); padding: 0.3rem 0; }
 .prose details.log-notes > summary::marker { color: var(--accent); }
-.infobox dd a { color: var(--text); text-decoration: none; }
-.infobox dd a:hover, .infobox dd a:focus-visible { color: var(--accent-hi); text-decoration: underline; }
+/* Facts box: a wiki name (Nearby) is gold, a session (First/Last seen) red (Chris, 2026-11-03). */
+.infobox dd a { text-decoration: none; }
+.infobox dd a[href*="/wiki/"] { color: var(--gold); }
+.infobox dd a[href*="/posts/"] { color: var(--link-red); }
+.infobox dd a:hover, .infobox dd a:focus-visible { text-decoration: underline; text-underline-offset: 0.2em; }
+.infobox dd a[href*="/wiki/"]:hover, .infobox dd a[href*="/wiki/"]:focus-visible { color: #f0d48e; }
+.infobox dd a[href*="/posts/"]:hover, .infobox dd a[href*="/posts/"]:focus-visible { color: #ff7389; }
+.infobox dd a:hover .num, .infobox dd a:focus-visible .num { background: var(--accent); color: #fff; }
 /* A reader vote between pictures at the top of a wiki page: side by side, so the facts stay near */
 .infobox-picture .image-vote { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
 .infobox-picture .image-vote .vote-intro, .infobox-picture .image-vote .vote-status { grid-column: 1 / -1; margin: 0; font-size: 0.85rem; color: var(--muted); }

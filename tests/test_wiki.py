@@ -5,6 +5,8 @@ from pathlib import Path
 import pytest
 
 import build
+import poststyle
+import yaml
 import import_op_wiki
 import wiki
 import wiki_from_extract
@@ -329,7 +331,11 @@ def test_players_real_names_stay_on_their_pc_pages():
     # Chris: real player names appear only on the PC wiki pages, never in a session post.
     root = Path(__file__).resolve().parent.parent
     pages = wiki.load_wiki(root / "content" / "wiki", build.split_front_matter)
-    names = {part for p in pages if p.player for part in [p.player, *p.player.split()] if len(part) > 3}
+    # A surname that is also a game word is checked only as part of the full name ("Warding Bond" is a spell).
+    game_words = {"Bond"}
+    names = {part for p in pages if p.player for part in [p.player, *p.player.split()]
+             if len(part) > 3 and part not in game_words}
+    assert "Ed Bond" in names and "Bond" not in names
     for post in (root / "content" / "posts").glob("*.md"):
         text = post.read_text(encoding="utf-8")
         found = sorted(n for n in names if re.search(rf"(?<!\w){re.escape(n)}(?!\w)", text))
@@ -408,7 +414,7 @@ def test_pages_in_three_or_more_sessions_have_a_picture():
     DM was very descriptive or they matter, which dnd-scribe's wiki-plan flags)."""
     posts = build.load_posts(build.ROOT / "content" / "posts")
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
-    build.link_wiki(posts, pages)
+    build.link_wiki(posts, pages, exact=wiki.load_exact_names(build.ROOT / "data" / "name-case.yaml"))
     missing = sorted(p.slug for p in pages if len(p.mentioned_in) >= 3 and not p.pictures and not p.narrator)
     assert not missing, f"add a picture to: {missing}"
 
@@ -475,11 +481,64 @@ def test_wiki_pages_cite_sessions_by_number_and_number_the_appears_in_list(site)
     # The Appears-in list carries the same numbers, and takes in a session cited but never named.
     appears = strahd.split('class="appears-in"', 1)[1]
     assert "Appears in 3 sessions" in appears
-    assert '<span class="num">3</span><a href="/strahd-log/posts/third/">' in appears
-    assert '<span class="num">1</span><a href="/strahd-log/posts/first/">' in appears
+    assert '<a class="num" href="/strahd-log/posts/third/" tabindex="-1" aria-hidden="true">3</a><a href="/strahd-log/posts/third/">' in appears
+    assert '<a class="num" href="/strahd-log/posts/first/" tabindex="-1" aria-hidden="true">1</a><a href="/strahd-log/posts/first/">' in appears
     # The search index keeps the readable titles, not bare numbers.
     entries = {e["t"]: e for e in json.loads((out / "search-index.json").read_text(encoding="utf-8"))}
     assert "watched us (Second)" in entries["Strahd"]["x"]
+
+
+def test_a_session_where_we_only_heard_of_a_place_is_not_where_we_saw_it(site):
+    # Chris, 2026-11-02: the Vistani camp by Vallaki said "First seen: Tser Pool" because its story
+    # cites the Tser Pool post, where Madam Eva sent us there. We first went in A doll for Arabelle.
+    # heard_of_in keeps the citation but leaves that session out of first seen and the Appears-in list.
+    write(site / "content" / "wiki" / "camp.md",
+          "---\ntitle: The Camp\ntype: place\nheard_of_in: [first]\n---\n\n"
+          "Madam Eva sent us here ([First Night](/posts/first/)). We came ([Second](/posts/second/)).\n")
+    write(site / "data" / "wiki-style.yaml", "top: infobox\nkinds: all\n")  # the facts box, as on the site
+    out = site / "public"
+    build.build(site / "content" / "posts", out, site_url="https://log.example", base_path="/strahd-log/")
+    camp = (out / "wiki" / "camp" / "index.html").read_text(encoding="utf-8")
+    prose = camp.split('<div class="prose">', 1)[1]
+    assert 'sent us here&#8288;<a class="cite" href="/strahd-log/posts/first/"' in prose  # still cited
+    box = camp.split("<dl>", 1)[1].split("</dl>", 1)[0]
+    assert "First seen" in box and "/posts/second/" in box and "/posts/first/" not in box
+    appears = camp.split('class="appears-in"', 1)[1]
+    assert "/posts/first/" not in appears and "/posts/second/" in appears
+
+
+def test_heard_of_in_must_name_a_session_the_page_cites(site):
+    write(site / "content" / "wiki" / "camp.md",
+          "---\ntitle: The Camp\ntype: place\nheard_of_in: [second]\n---\n\n"
+          "Madam Eva sent us here ([First Night](/posts/first/)).\n")
+    with pytest.raises(ValueError, match="camp.*second"):
+        build.build(site / "content" / "posts", site / "public", site_url="https://log.example")
+
+
+def test_places_are_not_first_seen_where_we_only_heard_of_them():
+    # A map place's first session should be one the party went there (data/trail.yaml), or saw it,
+    # unless the post itself names it. A session cited only because someone told us of the place
+    # goes in the page's heard_of_in (Chris, 2026-11-02: the Vallaki camp and Tser Pool mix-up).
+    seen_from_afar = {("castle-ravenloft", "barovia-barovia"),  # "from a hill on the road" we saw it
+                      ("castle-ravenloft", "rest-for-the-wicked")}  # souls "sink into the castle", from the village
+    posts = build.load_posts(build.ROOT / "content" / "posts")
+    pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
+    style = poststyle.load_style(build.ROOT / "data" / "post-style.yaml")
+    build.apply_style(posts, style, poststyle.load_scenes(build.ROOT / "data" / "scene-headings.yaml"))
+    build.number_sessions(posts)
+    build.link_wiki(posts, pages, style["relink"])
+    named = {p.slug: {x.slug for x in p.mentioned_in} for p in pages}
+    build.cite_sessions(posts, pages)
+    trail = yaml.safe_load((build.ROOT / "data" / "trail.yaml").read_text(encoding="utf-8"))["sessions"]
+    by_file = {p.source.stem: p for p in posts}
+    first_visit: dict[str, int] = {}
+    for name, stops in trail.items():
+        for place in stops["stops"] if isinstance(stops, dict) else stops:
+            first_visit.setdefault(place, by_file[name].number)
+    wrong = [(p.slug, s.slug) for p in pages if p.slug in first_visit for s in p.mentioned_in
+             if s.number < first_visit[p.slug] and s.slug not in named[p.slug]
+             and (p.slug, s.slug) not in seen_from_afar]
+    assert not wrong, f"cited where we only heard of the place; add to heard_of_in: {wrong}"
 
 
 def test_wiki_links_are_gold_and_citations_are_red_dots():

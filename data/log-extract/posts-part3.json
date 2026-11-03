@@ -136,7 +136,7 @@
     "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
    },
    {
-    "text": "Is the brother of Doru, whose voice spoke from the Abbot's first vessel.",
+    "text": "Heard his dead brother Veyren's voice among those speaking from the Abbot's first vessel.",
     "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
    }
   ]
@@ -481,7 +481,7 @@
   "name": "Doru",
   "type": "npc",
   "aliases": [],
-  "summary": "A dissolved vampire spawn whose intelligence helped the party plan their heist; Shabasta's brother.",
+  "summary": "A dissolved vampire spawn whose intelligence helped the party plan their heist.",
   "facts": [
    {
     "text": "Was a friend of Escher, who is believed to have betrayed him.",
@@ -496,7 +496,7 @@
     "post": "2026-02-03-notebook"
    },
    {
-    "text": "His voice spoke from the Abbot's first vessel; he is called Shabasta's brother.",
+    "text": "His voice was among the dead speaking from the Abbot's first vessel.",
     "post": "2026-09-01-the-red-door-a-reunion-beneath-the-abbey"
    }
   ]
@@ -820,7 +820,7 @@
   "summary": "A Vistani elder and messenger of Madam Eva.",
   "facts": [
    {
-    "text": "Met the party near Sarepool and gave them a Clairvoyance Stone.",
+    "text": "Met the party near the Tser Pool Crossroads and gave them a Clairvoyance Stone.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -1253,7 +1253,7 @@
   "summary": "A travelling people of Barovia.",
   "facts": [
    {
-    "text": "A Vistani wagon led by Stanimir met the party near Sarepool.",
+    "text": "A Vistani wagon led by Stanimir met the party near the Tser Pool Crossroads.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]
@@ -1624,7 +1624,7 @@
   "name": "Blue Water Inn",
   "type": "place",
   "aliases": [
-   "Bluewater Inn"
+   "Blue Water Inn"
   ],
   "summary": "An inn in Vallaki and the party's base.",
   "facts": [
@@ -1643,10 +1643,10 @@
   ]
  },
  {
-  "name": "Sarepool",
+  "name": "Tser Pool Crossroads",
   "type": "place",
   "aliases": [],
-  "summary": "A Vistani camp at a crossroads.",
+  "summary": "The crossroads above Tser Pool.",
   "facts": [
    {
     "text": "The party met Stanimir near here.",
@@ -1791,7 +1791,7 @@
   "name": "Forest Fane",
   "type": "place",
   "aliases": [
-   "Forest Fand"
+   "Forest Fane"
   ],
   "summary": "An ancient fane that could restore the Spear of the Huntress.",
   "facts": [
@@ -1808,7 +1808,7 @@
   "summary": "Mountains around Castle Ravenloft.",
   "facts": [
    {
-    "text": "The sun set behind its peaks as the party approached the castle.",
+    "text": "The sun sank behind its peaks as the party left Vallaki for the castle.",
     "post": "2026-02-10-unwelcome-guests"
    }
   ]

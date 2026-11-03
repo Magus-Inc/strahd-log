@@ -26,6 +26,8 @@ On the way we met a druid of the Forest Folk, hermits of the Svalich Woods who s
 
 Lady Wachter first learned of the druids as a student of her mentor, Lysa, a woods-witch of the Berez swamps who worshipped Mother Night, goddess of darkness, trickery and the occult. Lady Wachter never heard Mother Night’s “voice”, as Lysa called it, and took up the faith of Ezra soon after she came back to Vallaki.
 
+Lysa did not take her leaving lightly. A proud woman who thought of her students as her children, she took Lady Wachter’s return to Vallaki as a betrayal, and Lady Wachter has been banished from Berez ever since. Her house’s “debt” to Strahd is older still: centuries ago, when the traitor and assassin Leo Dilisnya murdered the husband of her ancestor, Lady Lovina Wachter, and tried to kill Lovina too, Strahd defended her and hunted Dilisnya down. House Wachter has been loyal to Strahd ever since.
+
 ## Key Locations:
 
 **Wachter Estate**: A grand manor ringed by a binding circle that keeps out malevolent spirits. Here we sought Lady Fiona’s help and learned more about binding circles.

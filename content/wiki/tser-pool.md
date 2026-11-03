@@ -1,8 +1,6 @@
 ---
 title: Tser Pool
 type: place
-aliases:
-- Test Pool
 summary: A lake west of Barovia village where Madam Eva's Vistani camp sits.
 source: Compiled from the adventure log, with a description written for the site
 ---

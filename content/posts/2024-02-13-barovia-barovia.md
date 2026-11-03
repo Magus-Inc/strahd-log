@@ -35,7 +35,7 @@ The tavern had villagers, a fire in the hearth, a barkeep behind the counter, th
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 
-Ismark warned us of spies for Vlahd in the form of bats, wolves, humans, and even Vistani. He then asked us for help on a mission; to help his sister hide at a church in Vallaki. It would be a full days journey, and we are welcome to spend the night at his fathers place.
+Ismark warned us of spies for Strahd in the form of bats, wolves, humans, and even Vistani. He then asked us for help on a mission; to help his sister hide at a church in Vallaki. It would be a full days journey, and we are welcome to spend the night at his fathers place.
 
 “Fools errand” boomed a voice in the tavern. “Do not follow Ismark the lesser” said a man we came to know as Bildrath. Ismark explained that he had lost friends because Ismark had been too proud to run away when the village was threatened. He explained that Doru, the son of Father Donavich, had recruited a party to explore the castle near the village and clear it of any threats. They were never heard from again, but shortly after an Elf entered the village and proclaimed that Doru had woken Strahd and that he would exact some vengeance for having his slumber interrupted.
 
@@ -88,7 +88,7 @@ Ireena asks us to help the villagers that retreated to Vallaki. First they must 
 ## Plot Points:
 
 * **Strahd is awake**: An elf proclaimed that Doru woke him, and that he would take vengeance.
-* **Spies**: Ismark warned of Vlahd’s bats, wolves, humans and even Vistani.
+* **Spies**: Ismark warned of Strahd’s bats, wolves, humans and even Vistani.
 * **Ismark’s mission**: Help Ireena hide at a church in Vallaki, a full day’s journey.
 * **Their father**: Died in the attack, and must be buried first.
 * **The vampire guide**: Sunlight, running water, stakes, holy symbols and invitations.

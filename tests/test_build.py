@@ -296,7 +296,7 @@ def test_folded_post_keeps_its_old_address(tmp_path):
     build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
     stub = (out / "posts" / "notebook" / "index.html").read_text(encoding="utf-8")
     assert "url=/strahd-log/posts/welcome/" in stub and "Welcome Back" in stub
-    assert (out / "_redirects").read_text(encoding="utf-8").splitlines()[0] == "/posts/notebook/ /posts/welcome/ 301"
+    assert not (out / "_redirects").exists()  # only GitHub Pages hosts the site; it ignores that file
 
 
 def test_folded_wiki_page_keeps_its_old_address(tmp_path):
@@ -310,7 +310,7 @@ def test_folded_wiki_page_keeps_its_old_address(tmp_path):
     build.build(root / "content" / "posts", out, site_url="https://x.example", base_path="/strahd-log/")
     stub = (out / "wiki" / "zora" / "index.html").read_text(encoding="utf-8")
     assert "url=/strahd-log/wiki/zorya/" in stub and "Zorya" in stub
-    assert "/wiki/zora/ /wiki/zorya/ 301" in (out / "_redirects").read_text(encoding="utf-8").splitlines()
+    assert not (out / "_redirects").exists()
 
 
 def test_redirect_to_an_unknown_post_fails(tmp_path):
@@ -687,7 +687,7 @@ def test_real_map_and_wiki_share_session_numbers(real_site):
     posts = sorted(build.load_posts(build.ROOT / "content" / "posts"), key=lambda p: (p.date, p.slug))
     number = {p.slug: i for i, p in enumerate(posts, 1)}
     map_page = (real_site / "map" / "index.html").read_text(encoding="utf-8")
-    listed = dict((s, int(n)) for n, s in re.findall(r'class="num">(\d+)</span><a href="/posts/([^"]+)/"', map_page))
+    listed = dict((s, int(n)) for n, s in re.findall(r'class="num" href="[^"]+"[^>]*>(\d+)</a><a href="/posts/([^"]+)/"', map_page))
     assert listed and all(number[s] == n for s, n in listed.items())
     assert listed == number  # Skeletal Rider sits at Tser Pool (Chris, 2026-11-01)
     last = max(listed.values())

@@ -7,6 +7,12 @@ summary: Sleep-inducing pies sold by Morgantha.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![Dream pastries, a few golden pies giving off a dreamy shimmer on an old hand cart on a misty forest road, a broken windmill behind](/images/dream-pastries-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

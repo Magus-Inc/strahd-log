@@ -40,7 +40,7 @@ import wikistyle
 ROOT = Path(__file__).resolve().parent
 SITE_TITLE = "Curse of Strahd: The Owlbear Chronicles"
 SITE_SUBTITLE = "An adventure log from the mists of Barovia"
-# The publish workflow sets URL to the site's address (Netlify also sets it, if we ever move there).
+# The publish workflow sets URL to the site's address.
 DEFAULT_SITE_URL = "http://localhost:8000"
 # Where the site lives under its host: "/" on owlbear.dicelore.quest and locally, "/strahd-log/" on
 # GitHub Pages' default address.
@@ -218,9 +218,11 @@ def rebase(html: str, prefix: str) -> str:
 SECTION_START = {"each-heading": r"<h[23][ >]", "each-section": r"<h2[ >]"}
 
 
-def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once") -> None:
-    """Link wiki names in posts and wiki pages, and record which posts mention each page."""
-    linker = wiki.Linker(pages)
+def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once",
+              phrases: dict[str, list[str]] | None = None, exact: set[str] | frozenset = frozenset()) -> None:
+    """Link wiki names (and the phrases in data/described-places.yaml) in posts and wiki pages, and record
+    which posts mention each page."""
+    linker = wiki.Linker(pages, phrases, exact)
     by_slug = {w.slug: w for w in pages}
     narrators = {w.slug for w in pages if w.narrator}
     for post in posts:  # newest first, so mentioned_in comes out newest first too
@@ -256,7 +258,8 @@ def number_sessions(posts: list[Post]) -> None:
 
 def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
     """On wiki pages, turn "(Session Title)" links into small session numbers that open the post, and
-    count a cited session as one the page appears in. page.html keeps the titles for search."""
+    count a cited session as one the page appears in, unless the page lists it under heard_of_in
+    (we were only told of the place or thing there). page.html keeps the titles for search."""
     by_slug = {p.slug: p for p in posts}
 
     def marker(slug: str, title: str) -> str:
@@ -269,10 +272,16 @@ def cite_sessions(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
 
     for page in pages:
         page.cited_html, cited = wiki.cite_sessions(page.html, marker)
+        stray = [s for s in page.heard_of_in if s not in cited]
+        if stray:
+            raise ValueError(f"wiki/{page.slug}: heard_of_in names {', '.join(stray)}, which the page never cites")
+        heard = set(page.heard_of_in)
         known = {p.slug for p in page.mentioned_in}
         extra = [by_slug[s] for s in cited if s in by_slug and s not in known]
         if extra:
             page.mentioned_in = sorted([*page.mentioned_in, *extra], key=lambda p: (p.date, p.slug), reverse=True)
+        if heard:
+            page.mentioned_in = [p for p in page.mentioned_in if p.slug not in heard]
 
 
 def apply_wiki_style(pages: list[wiki.WikiPage], style: dict) -> None:
@@ -282,6 +291,34 @@ def apply_wiki_style(pages: list[wiki.WikiPage], style: dict) -> None:
         page.cited_html, page.top_picture = styled.html, styled.picture
         page.facts = wikistyle.facts(page) if style["top"] == "infobox" and (
             style["kinds"] == "all" or page.type in wikistyle.PEOPLE) else []
+
+
+def add_place_facts(pages: list[wiki.WikiPage], parent: dict[str, str], nearby_file: Path) -> None:
+    """Place pages' facts boxes link the places around them (Chris, 2026-11-02): "Part of" and "Places
+    inside" from data/map.yaml's within list, and "Nearby" from data/nearby.yaml."""
+    by_slug = {p.slug: p for p in pages}
+    nearby = (yaml.safe_load(nearby_file.read_text(encoding="utf-8")) or {}).get("nearby", {}) \
+        if nearby_file.exists() else {}
+    inside: dict[str, list[str]] = {}
+    for child, home in parent.items():
+        if child != home and child in by_slug:
+            inside.setdefault(home, []).append(child)
+
+    def links(slugs) -> dict:
+        return {"links": [(by_slug[s].title, by_slug[s].path) for s in slugs if s in by_slug]}
+
+    for page in pages:
+        if page.type != "place":
+            continue
+        rows = []
+        if parent.get(page.slug, page.slug) != page.slug:
+            rows.append(("Part of", links([parent[page.slug]])))
+        if inside.get(page.slug):
+            rows.append(("Places inside", links(sorted(inside[page.slug], key=lambda s: by_slug[s].title))))
+        if nearby.get(page.slug):
+            rows.append(("Nearby", links(nearby[page.slug])))
+        at = 1 if page.facts and page.facts[0][0] == "Also known as" else 0
+        page.facts[at:at] = rows
 
 
 def find_slides(posts: list[Post], static_dir: Path) -> None:
@@ -498,7 +535,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     style = poststyle.load_style(style_file or data_dir / "post-style.yaml")
     apply_style(posts, style, poststyle.load_scenes(data_dir / "scene-headings.yaml"))
     number_sessions(posts)
-    link_wiki(posts, pages, style["relink"])
+    link_wiki(posts, pages, style["relink"], wiki.load_phrases(data_dir / "described-places.yaml", pages),
+              wiki.load_exact_names(data_dir / "name-case.yaml"))
     cite_sessions(posts, pages)
     wiki_style = wikistyle.load_style(wiki_style_file or data_dir / "wiki-style.yaml")
     apply_wiki_style(pages, wiki_style)
@@ -506,6 +544,8 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")
     add_reading_aids(posts, pages)
     places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
+    if wiki_style["top"] == "infobox" and wiki_style["kinds"] == "all":
+        add_place_facts(pages, parent, data_dir / "nearby.yaml")
     map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
     spots = barovia_map.load_spots(map_file or content_dir.parent.parent / "data" / "map.yaml", places) if places else {}
     landmarks = barovia_map.load_landmarks(map_file or content_dir.parent.parent / "data" / "map.yaml", pages, places) if places else {}
@@ -618,10 +658,8 @@ def forwarding_page(title: str, target: str, what: str) -> str:
 
 def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post], base: str,
                     wiki_redirects: dict[str, str] | None = None, pages: list[wiki.WikiPage] = ()) -> None:
-    """Keep old post and wiki addresses working: a forwarding page at each (GitHub Pages) and a
-    Netlify _redirects rule (Netlify serves the site at /)."""
+    """Keep old post and wiki addresses working: a forwarding page at each old address."""
     by_stem = {p.source.stem: p for p in posts if p.source}
-    rules = []
     by_slug = {w.slug: w for w in pages}
     for old, new in sorted((wiki_redirects or {}).items()):
         if new not in by_slug:
@@ -630,15 +668,11 @@ def write_redirects(out_dir: Path, redirects: dict[str, str], posts: list[Post],
             raise ValueError(f"data/redirects.yaml: wiki {old} is still a page; remove it or the redirect")
         page = by_slug[new]
         write(out_dir / "wiki" / old / "index.html", forwarding_page(page.title, base + page.path, "page"))
-        rules += [f"/wiki/{old}/ /{page.path} 301", f"/wiki/{old} /{page.path} 301"]
     for old_stem, new_stem in sorted(redirects.items()):
         if new_stem not in by_stem:
             raise ValueError(f"data/redirects.yaml: {old_stem} points at unknown post {new_stem}")
         old, new = slug_from_filename(Path(old_stem)), by_stem[new_stem]
         write(out_dir / "posts" / old / "index.html", forwarding_page(new.title, base + new.path, "session"))
-        rules += [f"/posts/{old}/ /{new.path} 301", f"/posts/{old} /{new.path} 301"]
-    if rules:
-        write(out_dir / "_redirects", "\n".join(rules) + "\n")
 
 
 def serve(out_dir: Path, port: int) -> None:

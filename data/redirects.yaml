@@ -1,5 +1,5 @@
 # Posts that were folded into another post. The old address keeps working: the build writes a
-# small page there that forwards to the new one (for GitHub Pages) and a Netlify _redirects rule.
+# small page there that forwards to the new one.
 # Wiki facts that cited the old post cite the new one.
 #
 # posts: old post file stem -> post file stem it was folded into
@@ -46,3 +46,5 @@ wiki:
   zoldar: szoldar
   zurika: zuleika
   wachter-haus: wachterhaus
+  # "Sarepool" was the Tser Pool crossroads misheard (Chris, 2026-11-02).
+  sarepool: tser-crossroads

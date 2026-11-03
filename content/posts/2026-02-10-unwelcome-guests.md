@@ -16,15 +16,15 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-As the sun sank behind the jagged peaks of the Balinoks, we stood at a turning point. We were leaving the safety of the Bluewater Inn for the heights of the Count’s domain. Everything hung on a rare chance, the master of the house away from home, and so we would no longer wander and ask questions. We would strike.
+As the sun sank behind the jagged peaks of the Balinoks, we stood at a turning point. We were leaving the safety of the Blue Water Inn for the heights of the Count’s domain. Everything hung on a rare chance, the master of the house away from home, and so we would no longer wander and ask questions. We would strike.
 
-We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Sarepool crossroads we met a Vistani caravan, with the elder Stanimir, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimir knew what we had done, laying Varushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
+We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Tser Pool Crossroads we met a Vistani caravan, with the elder Stanimir, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimir knew what we had done, laying Varushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside.
 
 Note: The party briefly debated a "Trojan Bunny" strategy, or stealing the Vistani crest, before settling on diplomatic neutrality.
 
 At the edge of the precipice we watched Strahd von Zarovich ride out of the castle on his nightmare, Beucephalus. With the master gone, Aera made herself invisible and Crusty gave her the power to fly. She soared across the chasm and came up behind the wights on the ramparts. With a conjured hand she picked the alarm horn from the first wight’s pocket, then took the second wight’s horn as well. It nearly went very wrong when she tried a running somersault dropkick to send one of them off the edge. She stumbled and bounced off the guard, and the kick undid her invisibility. The fight broke out, and we destroyed the wights. Aera poured oil on the drawbridge chains to quiet them, and we lowered the drawbridge and reached the servants’ entrance.
 
-![Strahd riding Beucephalus, a fiery black nightmare, out of the castle gate](/images/beucephalus-ai.jpg)
+![Strahd on Beucephalus, a black nightmare with a burning mane, flying at night over the narrow chasm before Castle Ravenloft, its drawbridge raised in the outer wall at the end of the road](/images/beucephalus-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 
@@ -32,9 +32,9 @@ Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point after
 
 ## Key Locations:
 
-**The Bluewater Inn**: Our base, and the last place of any safety in Vallaki.
+**The Blue Water Inn**: Our base, and the last place of any safety in Vallaki.
 
-**Sarepool**: The Vistani camp, where we met the caravan at the crossroads.
+**Tser Pool**: The Vistani camp, where we met the caravan at the crossroads.
 
 **The Chasm and Drawbridge**: A thousand-foot drop and a fifty-foot gap, Ravenloft’s first defense.
 

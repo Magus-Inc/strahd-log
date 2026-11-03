@@ -169,7 +169,7 @@ def test_real_party_file_names_real_posts_and_player_characters():
 
 def test_chris_confirmed_list():
     """What Chris picked on 2 November 2026: four deaths, Olfin brought back twice, no skull for Aera
-    on 2 June (she was knocked out) or for Zorpheus (no record of how he died)."""
+    on 2 June (she was knocked out) or for Zorpheus (he never died; Grant swapped him for Shabasta)."""
     data = yaml.safe_load((ROOT / "data" / "party.yaml").read_text(encoding="utf-8"))
     died = sorted((slug, name) for slug, e in data.items() for name in e.get("died", []))
     assert died == [("entering-the-spirit-realm", "shabasta"),
@@ -185,3 +185,14 @@ def test_chris_confirmed_list():
 def test_aera_was_knocked_out_not_revived_on_2_june():
     post = read(ROOT / "content" / "posts" / "2026-06-02-the-shard-s-warning-and-the-abbot-s-madness.md")
     assert "fell but was revived" not in post and "knocked unconscious but awakened" in post
+
+
+
+def test_zorpheus_never_died():
+    """Chris, 2 November 2026: the table decided Zorpheus never really died; over the 2025 holidays the DM
+    let Grant set him aside and bring Shabasta back."""
+    data = yaml.safe_load((ROOT / "data" / "party.yaml").read_text(encoding="utf-8"))
+    assert all("zorpheus" not in e.get("died", []) + e.get("revived", []) for e in data.values())
+    for name in ("zorpheus", "shabasta", "veyren"):
+        page = read(ROOT / "content" / "wiki" / f"{name}.md")
+        assert "never died" in page and "Zorpheus died" not in page and "his death" not in page, name

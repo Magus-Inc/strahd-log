@@ -17,9 +17,9 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-Kiril Stoyanovich, called the Black Terror, the ruthless leader of the werewolf pack in the cave by Lake Baratok, made stronger by Baba Lysaga. Ezmerelda has a vendetta against him ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). While we waited for nightfall in a hidden hollow near his den, she told us how she lost her leg to him ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/)).
+Kiril Stoyanovich, called the Black Terror, the ruthless leader of the werewolf pack in the [cave](/wiki/lake-baratok-cave/) by Lake Baratok, made stronger by Baba Lysaga. Ezmerelda has a vendetta against him ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). While we waited for nightfall in a hidden hollow near his den, she told us how she lost her leg to him ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/)).
 
-We raided the den and freed his prisoners, and learned from Ilya that Strahd and Baba Lysaga had helped Kiril capture Emil, the pack's missing leader, and lock him in the dungeons of Castle Ravenloft. Strahd himself came to our camp that night, angry that we had raided the den of his ally Kiril, and made us play his game of sacrifices ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We have not yet faced Kiril himself.
+We raided the den and freed his prisoners, and learned from Ilya that Strahd and Baba Lysaga had helped Kiril capture Emil, the pack's missing leader, and lock him in the dungeons of Castle Ravenloft. Strahd himself came to our camp that night, angry that we had raided the den of his ally Kiril, and made us play his game of sacrifices ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). We have not yet faced Kiril himself.
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -27,5 +27,5 @@ We raided the den and freed his prisoners, and learned from Ilya that Strahd and
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Leads the werewolf pack. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
-* Took Ezmerelda's leg. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
-* Captured Emil with help from Strahd and Baba Lysaga. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Took Ezmerelda's leg. ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/))
+* Captured Emil with help from Strahd and Baba Lysaga. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))

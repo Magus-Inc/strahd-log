@@ -2,6 +2,7 @@
 title: Schlopkht
 type: character
 summary: Tabaxi Monk
+player: Ed Bond
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/schlopkht
 ---

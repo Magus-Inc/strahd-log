@@ -10,4 +10,4 @@ runs east to Vallaki and west toward the Raven River crossroads and Krezk, passi
 Argynvostholt; a trail leads north-west to Lake Baratok, and another south along the river to Berez.
 
 * Two ominous scarecrows and a broken signpost stood here. ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/))
-* The party crossed a bridge to a four-way crossroads on the way to the vineyard. ([Act 3: The Broken Land](/posts/act-3-the-broken-land/))
+* The party crossed a bridge to a four-way crossroads on the way to the [vineyard](/wiki/wizard-of-wines/). ([Act 3: The Broken Land](/posts/act-3-the-broken-land/))

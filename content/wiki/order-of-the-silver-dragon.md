@@ -13,9 +13,9 @@ source: Compiled from the adventure log, with a description written for the site
 
 *AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
 
-*Written from the session logs, in Malron's words.*
+*Written from the session logs and the texts shared at the table, in Malron's words.*
 
-Argynvost's knights, who stayed on as revenants at Argynvostholt under Vladimir Horngaard ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/)). We found their vow carved on a table and their relics behind a painting ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). When Argynvost's skull came home, the knights were freed, and we swore their oath and took up their legacy ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
+Argynvost's knights, who stayed on as revenants at Argynvostholt under Vladimir Horngaard ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). We found their vow carved on a table: each knight swore to keep the Order's virtues with honor as a shield and truth as a guide, to be a light in the shadow of evil and a beacon of hope in despair, and to stand against darkness "from this to the end of days". Their relics lay hidden behind a painting, and with them Andral's letter begging Argynvost to make peace, warning that Markovia's counsel would lead the Order to ruin ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/)). When Argynvost's skull came home, the knights were freed, and we swore their oath and took up their legacy ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -23,7 +23,7 @@ Argynvost's knights, who stayed on as revenants at Argynvostholt under Vladimir 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Sir Godfrey Gwilym claims to be one of its knights. ([Dream Pies](/posts/dream-pies/))
-* Its commander Horngaard was slain by Rahadin. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Its commander Horngaard was slain by Rahadin. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Its knightly vow was found inscribed on a table at Argynvostholt. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * Recovering Argynvost's skull is part of the party's quest to restore it. ([Retrieval of the Dragon Skull](/posts/retrieval-of-the-dragon-skull/))
 * Its knights were freed when Vladimir Horngaard accepted his rest. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

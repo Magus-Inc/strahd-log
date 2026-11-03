@@ -28,7 +28,7 @@ The winery depends on three green gemstones whose magic makes the vines grow. On
 
 He suspects the druids mean to summon Winter Splinter, and urged us to reach Yester Hill before dawn to recover the gem.
 
-After a long rest we were woken two hours before dawn and set out. Maren has secretly arranged to meet a contact named Kavan, whose reputation Davian does not like. Swarms of ravens flew with us, and Olfin tied a token to one of them.
+After a long rest we were woken two hours before dawn and set out. Mira has secretly arranged to meet a contact named Kavan, whose reputation Davian does not like. Swarms of ravens flew with us, and Olfin tied a token to one of them.
 
 ![Kavan the Blood Drinker's spirit rising from his cairn, holding a long wooden spear](/images/kavan-the-blood-drinker-ai.jpg)
 

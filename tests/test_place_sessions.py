@@ -120,3 +120,13 @@ def test_map_card_shows_numbers_and_how_each_session_relates(tmp_path):
     assert html.index('id="place-sessions"') < html.index('class="place-key')
     css = build.ROOT.joinpath("static", "style.css").read_text(encoding="utf-8")
     assert re.search(r"\.place-num\.here \{[^}]*background", css)
+
+
+def test_map_card_numbers_link_to_their_post():
+    """Chris, 2026-11-03: the numbers on a place's map card open the session like its title does."""
+    js = build.ROOT.joinpath("templates", "map.html").read_text(encoding="utf-8")
+    row = js[js.index("place.sessions.map("):js.index('No session has stopped here yet.')]
+    link = re.search(r'<a class="place-num (.*?)</a>', row, re.S)
+    assert link, "the number on the map card is not a link"
+    assert "href=\"' + base + s.u + '\"" in link.group(1) and 'tabindex="-1"' in link.group(1)
+    assert "<span class=\"place-num" not in row

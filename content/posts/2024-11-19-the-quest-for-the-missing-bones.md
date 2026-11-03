@@ -14,13 +14,13 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 - **Shabasta** Porcupine Bard
 
 **Summary:**  
-Father Lucian helped us find the home of Milivoj, a leaning, decrepit house with a door hanging askew. The father believes Milivoj is innocent of the theft. A woman answered our knock with three children behind her. Shabasta played music for the children, but the older boy said Milivoj was too ill to see anyone. His sister talked him round, and Milivoj came out with more children on his shoulders.
+Father Lucian helped us find the home of Milivoj, a leaning, decrepit house with a door hanging askew. Father Lucian believes Milivoj is innocent of the theft. A woman answered our knock with three children behind her. Shabasta played music for the children, but the older boy said Milivoj was too ill to see anyone. The sister talked him round, and Milivoj came out with more children on his shoulders.
 
 Liren saw through him and frightened him into confessing. His parents are lost to dream pastries, and he must keep his brothers and sisters fed. He sold the bones to Henrik the day before.
 
-![The Church of Saint Andral at night, its crypt door open on an empty ossuary](/images/church-of-saint-andral-ai.jpg)
+![The Church of Saint Andral the morning we brought Ireena, its doors open on the pews and a bare altar, as Milivoj mends a broken window and Henrik unloads planks](/images/church-of-saint-andral-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 On the way to Henrik’s, Shabasta, disguised as Father Lucian, persuaded the guards to arrest Milivoj for theft. At Henrik’s door he talked four guards into breaking in and arresting Henrik, who would not say where the bones were. We searched the shop and found a room with thirteen coffins, then went up to the second floor, where there was a kitchen and a bedroom.
 

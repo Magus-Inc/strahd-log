@@ -18,7 +18,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 A porcupine bard with a flair for the dramatic, Shabasta combines enchanting music with prickly wit. Their spiny nature extends beyond appearance, as they excel at weaving biting satire into their performances. Shabasta’s unusual form surprises friend and foe alike, and their sharp melodies inspire courage in allies while disheartening enemies.
 
-Shabasta died in the battle with the spirits at the gallows ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/), February 2025). Grant went on to play Shabasta's brother Veyren, then Zorpheus. When Zorpheus died, the table agreed Grant could bring Shabasta back, though Shabasta had died long before; Shabasta returned in February 2026.
+Shabasta died in the battle with the spirits at the gallows ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/), February 2025). Grant went on to play Shabasta's brother Veyren, then Zorpheus. Zorpheus never died: over the 2025 holidays the DM let Grant set Zorpheus aside and bring Shabasta back. Shabasta, who had died a year before, returned in February 2026.
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -40,6 +40,6 @@ Shabasta died in the battle with the spirits at the gallows ([Entering the Spiri
 * Lied to the Belviews that Cyrus had been "perfected" and cast Heat Metal on the Abbot's gauntlets. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * Was polymorphed into a giant ape that soaked about 124 damage from the Fallen Star. ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/))
 * Was a druid's sheep for a time, died, and was reincarnated as Shabasta again. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
-* Is the brother of Doru, whose voice spoke from the Abbot's first vessel. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
+* Heard his dead brother Veyren's voice among those speaking from the Abbot's first vessel. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))
 * Opened a door through the air to carry himself and Aera into the cemetery mausoleum. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))
 * His words persuaded Vladimir Horngaard to take Argynvost's hand and accept his rest. ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/))

@@ -16,7 +16,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-A monster hunter, van Richten's former apprentice. Her trapped wagon stood at the Tower of Khazan ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/), [The Staff is a lie](/posts/the-staff-is-a-lie/)). We found her near the Abbey, where her séance told us of a statuette in the castle that could cure the Abbot ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). She led us to the werewolf den, lit us a fire that gave no smoke, and told us how she lost her leg to the Black Terror, and that her own family had a hand in taking van Richten's son ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/)). She left the castle with us and travels with us as an adviser ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/)). She told us the Abbot could only be cleansed by defeating him and using the Icon of Dawn's Grace ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
+A monster hunter, van Richten's former apprentice. Her trapped wagon stood at the Tower of Khazan ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/), [The Staff is a lie](/posts/the-staff-is-a-lie/)). We found her near the [Abbey](/wiki/abbey-of-saint-markovia/), where her séance told us of a statuette in the [castle](/wiki/castle-ravenloft/) that could cure the Abbot ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). She led us to the [werewolf den](/wiki/lake-baratok-cave/), lit us a fire that gave no smoke, and told us how she lost her leg to the Black Terror, and that her own family had a hand in taking van Richten's son ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/)). She left the castle with us and travels with us as an adviser ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/)). She told us the Abbot could only be cleansed by defeating him and using the Icon of Dawn's Grace ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)).
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -27,7 +27,7 @@ A monster hunter, van Richten's former apprentice. Her trapped wagon stood at th
 * Her trapped wagon held weapons, kits and spell scrolls. ([The Staff is a lie](/posts/the-staff-is-a-lie/))
 * Van Richten's former apprentice; her amulet went to Arabelle. ([Finding Arabelle!](/posts/finding-arabelle/))
 * Held a séance with the party at the abbey. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
-* Led the party to the werewolf den and gave Malron Darkvision. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
+* Led the party to the werewolf den and gave Malron Darkvision. ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/))
 * Stays in Vallaki as part of the party's reserve force. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Left Castle Ravenloft with the party by carriage. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
 * Told the party the Abbot can be cleansed by defeating him and using the Icon of Dawn's Grace. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))

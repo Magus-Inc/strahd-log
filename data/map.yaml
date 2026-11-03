@@ -68,13 +68,16 @@ spots:
   vallaki-east-road: {xy: [442, 259], label: the road an hour east of Vallaki}
 
 within:
+  # Father Donavich's church (Rest for the Wicked).
+  barovia-village-church: barovia
   durst-mill: barovia
+  # The tavern in the village where the party met Ismark (Barovia, Barovia).
+  blood-on-the-vine-tavern: barovia
   blue-water-inn: vallaki
   wachterhaus: vallaki
   blinsky-s-toy-store: vallaki
   baron-s-mansion: vallaki
   church-of-saint-andral: vallaki
-  blood-on-the-vine-tavern: vallaki
   refugee-camp: vallaki
   hill-of-ravenloft: castle-ravenloft
   kings-bedchamber: castle-ravenloft
@@ -94,22 +97,21 @@ within:
   zarovich-gate: vallaki
   # The cursed altar in the werewolf den (Blood and Oaths Under Moonlight).
   shrine-of-mother-night: lake-baratok-cave
-  # Chris: the Sarepool crossroads is the Tser Pool crossroads (Unwelcome Guests).
-  sarepool: tser-crossroads
 
 # landmarks: wiki pages for things drawn on the map that are not places to stop (rivers, woods, mountains,
 #            a lone tree): wiki page slug -> {xy, anchor, label}. Only the page's own map shows one, opening
 #            on it with a red dot and its name; the map page has no pin, label or card for it. Each sits
 #            where the party first met it. Forest Fane, Kavan's Cairn and Zoldoph wait until the party goes there.
 landmarks:
-  # The clearing by the river with the tall ancient oak (Leaving Village Barovia): the old oak spot.
-  ancient-oak: {xy: [712, 486], anchor: end}
+  # The "K & V" oak with Katarina's letter, on the Old Windmill Road east of Vallaki on the way to the
+  # gates (The Oath, the Spy and the Silver Moon). Not the oak by the Ivlis (the-old-oak spot).
+  ancient-oak: {xy: [530, 286], anchor: start}
   # On the river where it runs south past Vallaki toward Berez.
   luna-river: {xy: [366, 350], anchor: start}
   # The woods the party first walked, around Durst Manor and the Village of Barovia.
   svalich-woods: {xy: [880, 280], anchor: end}
-  # The peaks between Old Bonegrinder and the castle, which the sun sank behind (Unwelcome Guests).
-  balinoks: {xy: [640, 280]}
+  # The sun sank behind the Balinoks as the party left Vallaki (Unwelcome Guests): the western peaks.
+  balinoks: {xy: [250, 470]}
 
 # Hand-drawn pictures laid on the map (static/images/map/sprites/<image>.webp, cut by tools/make_sprites.py).
 # name: {image: file stem, xy: [x, y] centre of the picture, width: in map units; the height

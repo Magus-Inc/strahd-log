@@ -2,19 +2,20 @@
 title: Oogway
 type: character
 summary: Wizard Bladesinger Turtle
+player: Aaron Kuiper
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/oogway
 ---
 
 ## Description
 
-![Oogway, a turtle wizard bladesinger, with his sword raised on a misty lakeshore](/images/oogway-ai.jpg)
+![Oogway, a turtle wizard bladesinger, on a misty lakeshore with his rapier drawn from his walking stick and the empty stick in his other hand](/images/oogway-ai-3.jpg)
 
-![Oogway, a turtle wizard bladesinger, with his sword raised on a misty lakeshore](/images/oogway-ai-2.jpg)
-
-*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the picture his player picked. Not player art.*
 
 A Wizard Bladesinger, Oogway is a turtle who emerged mysteriously from a serene lake. Known for their serene wisdom and formidable combat magic, Oogway wields their blade with grace and precision. Despite their slow movements on land, Oogway’s mind is lightning-fast, and they have a penchant for philosophizing at the most unexpected moments.
+
+The old walking stick he leans on is the sheath of his rapier, and he draws the blade straight out of it. His shell has a couple of holes worn right through it, so when he fights, it whistles.
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -24,7 +25,7 @@ A Wizard Bladesinger, Oogway is a turtle who emerged mysteriously from a serene 
 * Interrogated Izek's head about his arm and the Order of the Feather. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Learned from Erasmus that the gallows speaker had no weaknesses. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))
 * Bought potions of healing from the wandering merchant. ([Welcome to Krezk](/posts/welcome-to-krezk/))
-* Killed the last werewolf with a delayed Booming Blade. ([Echoes of the Black Terro](/posts/echoes-of-the-black-terro/))
-* Gave up his name in Strahd's game. ([Blood and Oaths Under Moonligh](/posts/blood-and-oaths-under-moonligh/))
+* Killed the last werewolf with a delayed Booming Blade. ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/))
+* Gave up his name in Strahd's game. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Was part of the party at Argynvostholt and on the road east. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Arrived at Castle Ravenloft with the party. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))

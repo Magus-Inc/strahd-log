@@ -118,6 +118,25 @@ fix:
   Valokovitch: Vallakovich
   St. Markova: St. Markovia
   Aargenvolstholt: Argynvostholt
+  # Misheard names whose wiki link was right but whose words were wrong (Chris, 2026-11-02:
+  # "Near the Sarepool crossroads" is the Tser Pool crossroads).
+  Sarepool: Tser Pool
+  Test Pool: Tser Pool
+  Velaki: Vallaki
+  Forest Fand: Forest Fane
+  Bluewater: Blue Water
+  St. Andrals: St. Andral's
+  Ric Tavio: Rictavio
+  Raven Kind: Ravenkind
+  Anna Krezkov: Anna Krezkova
+  Vistano: Vistana
+  Latander: Lathander
+  Tser pool: Tser Pool
+  # Chris's picks on the review page (2026-11-02). Neither Mira nor Maren is in the book; the post
+  # and wiki say Mira. "Spear of the Ladies" was Chris's shorthand in his notes.
+  Vlahd: Strahd
+  Maren: Mira
+  Spear of the Ladies: Spear of the Huntress
   # Not from the book: Aera's pseudodragon is Zorya, by Ryan's stat block (Chris, 2026-10-28).
   Zora: Zorya
   # Player characters, spelled as their wiki pages spell them (Chris, 2026-11-02). Nicknames the table
@@ -129,3 +148,14 @@ fix:
   Malon: Malron
   Schloptk: Schlopkht
   Scholpkht: Schlopkht
+
+# Near-spellings the table means. tests/test_spellings.py fails on a wiki alias spelled a letter or
+# two off its page's name ("Velaki" for Vallaki) unless it is fixed above or listed here, with why.
+keep:
+  Chest of Holden: the party's pun on the Chest of Holding (Depths of Ravenloft)
+  Blood of the Vine Tavern: the tavern's old name; the post says it was lately renamed Blood on the Vine
+  Vistana: the book's word for one of the Vistani
+  Lysa: the table's short name for Baba Lysaga
+  Vallakovich: the Baron of Vallaki's family name
+  Morning Lord: Malron writes both Morninglord and Morning Lord on purpose
+  Sun Sword: two-word form of Sunsword some posts use

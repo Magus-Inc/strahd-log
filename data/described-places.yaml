@@ -1,0 +1,35 @@
+# Words that name a place (or one creature) without its name, linked like a wiki name in posts, log notes and wiki pages
+# (Chris, 2026-11-02: from Mother Night the werewolves' cave should be one tap away). wiki.Linker links
+# the words in [brackets] (all of them when there are none), only after the words around them; a phrase
+# also matches with a capital first letter. List only words that mean this one place in every post:
+# "the Vistani camp" (Tser Pool or Vallaki) and "the church" (Barovia or Vallaki) are left out.
+# tests/test_place_links.py checks the slugs and that no phrase is already a page's name.
+phrases:
+  lake-baratok-cave:
+    - werewolf den
+    - werewolf cave
+    - werewolves' cave
+    - werewolves' den
+    - "[cave] at Lake Baratok"
+    - "[cave] by Lake Baratok"
+  tower-of-khazan:
+    - "[tower] at Lake Baratok"
+    - "[tower] by Lake Baratok"
+  abbey-of-saint-markovia:
+    - "the [Abbey]"
+    - "the [abbey]"
+  refugee-camp:
+    - refugee camp
+  wizard-of-wines:
+    - "the [winery]"
+    - "the [vineyard]"
+  # Every "the castle" in the posts is Castle Ravenloft (checked 2026-11-02).
+  castle-ravenloft:
+    - "the [castle]"
+  barovia-village-church:
+    - "the [village church]"
+  # The Abbot's servant (Chris, 2026-11-03). Only "the" golem: in Welcome to Krezk "a flesh golem out of
+  # corpses" is the bride the Abbot is building, hand-linked to Vasilka, so "flesh golem" is not an alias.
+  the-flesh-golem:
+    - "the [flesh golem]"
+    - "the [golem]"

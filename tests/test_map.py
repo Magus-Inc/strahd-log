@@ -122,7 +122,7 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     # A place's picture is its link: it opens the place like its pin, and glows red on hover.
     assert re.search(r'<a class="sprite js-pin" href="/strahd-log/wiki/vallaki/" data-place="vallaki">\s*<title>Vallaki</title>\s*'
                      r'<image href="/strahd-log/images/map/sprites/vallaki.webp"', page_html)
-    assert re.search(r"\.map \.sprite:hover image[^{]*\{[^}]*drop-shadow\([^)]*var\(--glow", css)
+    assert re.search(r"\.map \.sprite:hover image[^{]*\{[^}]*filter: url\(#place-glow\)", css)
     assert 'data-zoom="in"' in page_html and 'href="/strahd-log/posts/second/"' in page_html
     assert 'href="/strahd-log/wiki/vallaki/"' in page_html and 'id="show-trail"' in page_html
     assert 'id="faint-markers"' in page_html and "See-through numbers" in page_html  # the see-through toggle
@@ -158,7 +158,11 @@ def test_build_writes_map_page_and_post_maps(tmp_path):
     # Chris: no red ring when a place is clicked, and a red glow (gold was lost on the parchment) strong enough to see: a solid red
     # edge (zero-blur shadows) plus a wide halo, also kept on the place whose card is open.
     assert ".pin:focus .pin-dot" not in css and "stroke: var(--accent)" not in css.split(".map .pin-dot")[1].split("/* Crumb")[0]
-    assert re.search(r"\.map \.sprite\.chosen image[^{]*\{[^}]*drop-shadow\(1px 0 0 var\(--glow\)\)[^}]*drop-shadow\(0 0 6px", css)
+    # The glow is an SVG filter in the map itself: iPhone Safari ignores CSS drop-shadow() on SVG
+    # pictures, so Chris saw no glow there (2026-11-02). A solid edge (dilate) plus a blurred halo.
+    assert re.search(r"\.map \.sprite\.chosen image[^{]*\{[^}]*filter: url\(#place-glow\)", css) and "drop-shadow(" not in css.split("/* Map:")[1].split("/* Crumb")[0]
+    glow = re.search(r'<filter id="place-glow".*?</filter>', page_html, re.S).group(0)
+    assert 'operator="dilate"' in glow and "feGaussianBlur" in glow and 'flood-color="#c8213f"' in glow
     assert re.search(r"\.map \.pin\.under-sprite \{ pointer-events: none", css)
     assert "classList.add(\"chosen\")" in page_html and "--glow: #c8213f" in css
     # Dragging the map never selects (highlights) place names.
@@ -206,7 +210,10 @@ def test_wiki_page_map_opens_on_its_place_and_marks_it(tmp_path):
         assert 'class="here-dot"' not in html  # the glowing picture marks it
     assert 'data-focus="780.0 450.0"' in barovia and 'class="here-dot"' in barovia
     # The glow is the map page's chosen-place glow; names and dots are the same red.
-    assert re.search(r"\.map \.sprite\.here image[^{]*\{[^}]*drop-shadow\(1px 0 0 var\(--glow\)\)[^}]*drop-shadow\(0 0 6px", css)
+    assert re.search(r"\.map \.sprite\.here image[^{]*\{[^}]*filter: url\(#place-glow\)", css)
+    # The wiki page's own place carries the filter in its markup too, so it glows even without the CSS.
+    for html in (vallaki, inn):
+        assert '<filter id="place-glow"' in html and re.search(r'class="sprite here"[^>]*>\s*<title>[^<]*</title>\s*<image filter="url\(#place-glow\)"', html)
     assert re.search(r"\.map \.labels \.here text \{[^}]*fill: #b3122e", css)
     assert re.search(r"\.map \.here-dot \{[^}]*fill: #b3122e", css)
     # The zoom script starts from the focus, and the whole-map button still shows the whole map.
@@ -262,8 +269,16 @@ def test_every_barovian_place_page_has_a_map():
     # Pool crossroads (Chris), the ancient oak is the old oak by the Ivlis.
     within = data["within"]
     assert within["eastern-gate"] == within["zarovich-gate"] == "vallaki"
-    assert within["shrine-of-mother-night"] == "lake-baratok-cave" and within["sarepool"] == "tser-crossroads"
-    assert data["landmarks"]["ancient-oak"]["xy"] == data["spots"]["the-old-oak"]["xy"]
+    assert within["shrine-of-mother-night"] == "lake-baratok-cave"
+    assert "sarepool" not in within  # folded into tser-crossroads (data/redirects.yaml)
+    # The Blood on the Vine is the tavern in the Village of Barovia where the party met Ismark (Barovia,
+    # Barovia); it was wrongly in Vallaki (Chris, 2026-11-02).
+    assert within["blood-on-the-vine-tavern"] == "barovia"
+    # The Ancient Oak page is the "K & V" tree on the Old Windmill Road east of Vallaki (The Oath, the Spy
+    # and the Silver Moon), not the oak by the Ivlis (independent review, 2026-11-02).
+    assert data["landmarks"]["ancient-oak"]["xy"] == data["spots"]["bonegrinder-road"]["xy"]
+    # The Balinoks: the sun sank behind them seen from Vallaki, so the western peaks (Unwelcome Guests).
+    assert data["landmarks"]["balinoks"]["xy"][0] < data["places"]["vallaki"]["xy"][0]
     assert {"luna-river", "svalich-woods", "balinoks"} <= set(data["landmarks"])
 
 

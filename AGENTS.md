@@ -22,6 +22,9 @@
   rewording a post, unless Chris asks.
 - Names are spelled as the Curse of Strahd book spells them (`data/spellings.yaml`; `just spellings`
   fixes new text). The book fixes spellings only: what happened comes from the posts and Chris.
+  A wiki alias links a name wherever it appears, so a misspelled alias hides a wrong word behind a
+  right link ("Sarepool crossroads" for Tser Pool Crossroads). `tests/test_spellings.py` fails on an
+  alias spelled a letter or two off its page's name: fix it in `fix:`, or list it under `keep:` with why.
 - One look for every post: `data/post-style.yaml` (Chris's picks) and `poststyle.py` restyle the
   rendered HTML at build time (PC pills, real headings, bulleted recap entries...), so old posts are
   never reworded to match. Change the look there, not in the posts.
