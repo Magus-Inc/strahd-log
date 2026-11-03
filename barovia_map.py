@@ -17,6 +17,7 @@ import heapq
 import math
 import random
 import re
+import zlib
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -43,167 +44,91 @@ ROCK = "#7a6a55"
 
 # --- geography (drawing space 1000 x 750, x east, y south) -------------------------------------
 
-# Roads, as polylines. A vertex shared by two roads is a junction, and every place on the map
-# sits on a vertex, so the roads double as the graph the trail is routed over. Tracks are drawn
-# dotted but are routed over like roads. Where the roads run and where they meet follows the
-# official map of Barovia; the hours in data/travel-times.yaml only set the scale bar.
-ROADS = {
-    "Old Svalich Road (east)": [(998, 390), (960, 394), (930, 398)],
-    "Manor lane": [(960, 394), (964, 370), (968, 345)],
-    # The east, traced from the official map (Chris, 2026-11-02): the road drops south from the gates
-    # and runs straight west into the village, heads south over the Ivlis to its crossroads, loops
-    # far west past Tser Falls, and climbs over a rise to the castle.
-    "Gates to the village": [(930, 398), (922, 399), (913, 406), (907, 414), (902, 424), (896, 436), (889, 444),
-                             (881, 448), (873, 450), (834, 450), (809, 450), (780, 450)],
-    "Village to the Ivlis crossroads": [(780, 450), (769, 454), (767, 458), (765, 469), (764, 481), (763, 492),
-                                        (761, 504), (760, 519), (758, 528), (749, 535), (737, 539), (726, 538),
-                                        (713, 534), (693, 540), (685, 547), (680, 555)],
-    "The loop past Tser Falls": [(680, 555), (667, 566), (649, 567), (630, 565), (620, 559), (614, 547), (615, 533),
-                                 (620, 525), (624, 511), (622, 493), (620, 474), (614, 465), (604, 462), (595, 468),
-                                 (585, 481), (573, 494), (559, 502), (543, 502), (532, 495), (528, 484), (534, 474),
-                                 (546, 465), (560, 454), (575, 444), (586, 436), (592, 425), (595, 414), (600, 405),
-                                 (607, 404), (611, 399), (614, 394), (615, 389), (608, 387), (601, 383), (597, 378),
-                                 (598, 372), (603, 365), (610, 360)],
-    "Road to the castle": [(610, 360), (619, 357), (623, 352), (628, 347), (636, 346), (643, 349), (648, 356),
-                           (655, 359), (668, 358), (671, 362), (672, 368), (677, 375), (682, 380), (689, 384),
-                           (696, 385), (704, 387), (720, 398)],
-    # Traced from the official map (Chris, 2026-11-02): switchbacks down from the Tser Pool
-    # crossroads past the West Gates to the Old Bonegrinder turnoff, then a wide loop north-east
-    # round a wooded hill to a hairpin, and back west toward the lake and Vallaki.
-    "Old Svalich Road (the switchbacks)": [(610, 360), (604, 348), (600, 334), (593, 328), (581, 327), (570, 324),
-                                           (562, 316), (559, 310), (551, 308), (541, 312), (532, 320), (524, 330),
-                                           (517, 337), (509, 338), (503, 334), (502, 326), (505, 316), (506, 308),
-                                           (502, 302), (496, 301), (490, 305)],
-    "Old Svalich Road (the hairpin)": [(490, 305), (488, 296), (490, 284), (498, 278), (507, 277), (515, 282),
-                                       (522, 287), (530, 286), (538, 280), (545, 270), (555, 262), (561, 256),
-                                       (562, 246), (559, 239), (553, 237), (543, 239), (534, 244), (524, 246),
-                                       (515, 247), (499, 252), (480, 258), (463, 263), (442, 259)],
-    "Old Svalich Road (the lake shore)": [(442, 259), (420, 262), (400, 268), (380, 270), (350, 278)],
-    "Vallaki lane": [(400, 268), (400, 250)],
-    # From the Luna River crossroads (P) the Old Svalich Road bends south-west past the fork to
-    # Argynvostholt, then north-west to the Raven River crossroads (R); there is no straight road
-    # between the two crossroads.
-    "Old Svalich Road (P to R)": [(350, 278), (344, 284), (336, 293), (326, 303), (316, 311), (306, 316), (292, 318),
-                                  (279, 314), (269, 310), (263, 307), (258, 300), (251, 291), (243, 282), (236, 273),
-                                  (229, 267), (220, 262)],
-    "Old Svalich Road (west)": [(220, 262), (195, 256), (160, 244), (120, 232), (60, 222), (2, 215)],
-    # The lane to Old Bonegrinder leaves the foot of the last bend and runs west to the windmill.
-    "Bonegrinder lane": [(490, 305), (487, 319), (473, 314)],
-    "Abbey road": [(120, 232), (125, 220), (133, 208)],
-    "Argynvostholt road": [(263, 307), (264, 317), (267, 327), (276, 335), (286, 338), (299, 340), (309, 341),
-                           (314, 348), (315, 358), (315, 370), (316, 384)],
-    "Road to Tsolenka Pass": [(220, 262), (219, 269), (217, 280), (214, 296), (203, 318), (186, 337), (176, 348),
-                              (175, 359), (179, 371), (182, 384), (179, 398), (167, 409), (150, 417), (139, 428),
-                              (134, 442), (137, 450), (144, 439), (155, 432), (169, 434), (183, 442), (197, 440),
-                              (208, 437), (219, 440), (225, 451), (227, 467), (221, 484), (207, 492), (202, 506),
-                              (202, 523), (210, 534), (221, 542), (232, 550), (237, 561), (240, 578)],
-    "Vineyard road": [(195, 256), (184, 292), (165, 322), (150, 340)],
-    "Amber Temple road": [(240, 578), (256, 590), (272, 596), (282, 604), (285, 617), (289, 630), (297, 640), (306, 649), (317, 650), (325, 649), (333, 654),
-                          (343, 661), (351, 667), (352, 672), (362, 705), (366, 748)],
-}
-TRACKS = {
-    # Down the west bank of the Luna River to Berez: the trail keeps to the bank, never the water.
-    "Berez trail": [(350, 278), (345, 310), (350, 350), (348, 400), (330, 450)],
-    "Lake Baratok trail": [(350, 278), (345, 272), (341, 261), (338, 250), (332, 237), (322, 229), (309, 224),
-                           (292, 221), (274, 220), (260, 221), (249, 224), (242, 225)],
-    # The spur leaves the lake trail heading north, so it never doubles back along it (2026-11-03).
-    "Tower of Kazan spur": [(260, 221), (258, 214), (250, 202)],
-    # Up from the abbey into the hills on the west side of Lake Baratok, to the werewolf den. The
-    # official map shows no road there; this is a track, drawn dotted.
-    "Werewolf den trail": [(133, 208), (150, 196), (170, 186), (192, 172)],
-    "Lake Baratok to the Raven River crossroads": [(242, 225), (231, 244), (220, 262)],
-    "Wizard of Wines trail": [(150, 340), (130, 352), (110, 360)],
-    "Yester Hill trail": [(150, 340), (130, 400), (100, 452), (70, 488)],
-    # The trail climbs about an hour and a half up into the peaks to the Amber Temple.
-    "Amber Temple trail": [(352, 672), (366, 662), (362, 648), (380, 640)],
-    # The Vistani camp by Vallaki, a short walk south of the lake road toward the Luna River.
-    "Vallaki Vistani camp trail": [(380, 270), (378, 300)],
-    # Session 8: the party left the road just before the Ivlis bridge and followed the river's north
-    # bank west, through the woods, to the old oak (Chris: "we hit the river before the bridge").
-    "Ivlis north bank to the old oak": [(761, 504), (746, 503), (731, 494), (718, 488), (712, 486)],
-    # The Vistani camp sits on the west shore of Tser Pool, as on the official map (Chris, 2026-11-03:
-    # "where we will place the camp ... should be by the lake"). The trail leaves the crossroads
-    # northward, clear of the road to the village.
-    "Tser Pool trail (to the camp)": [(680, 555), (674, 535), (670, 510), (668, 486)],
-}
-# Drawn like tracks but never walked by the trail: the party never took them.
-UNUSED_TRACKS = {
-    # As on the official map (Chris, 2026-11-03): from the camp on the shore the trail runs up between
-    # the loop road and the stream to the falls bridge; it never crosses the road.
-    "Tser Pool trail (past the pool)": [(668, 486), (652, 474), (632, 460), (605, 432), (600, 405)],
-}
+# The geography lives in data/geography.yaml (`just map-edit` drags it): roads, tracks and the
+# tracks the party never took, as points along each way; lakes as shores; rivers downstream last;
+# forest outlines, mountain clusters and labels. A point two ways share is a junction, and every place
+# on the map sits on a point, so the ways double as the graph the trail is routed over. Where the
+# roads run and where they meet follows the official map of Barovia; nothing is traced, and the hours
+# in data/travel-times.yaml only set the scale bar.
+GEOGRAPHY = Path(__file__).resolve().parent / "data" / "geography.yaml"
+WAY_SECTIONS = ("roads", "tracks", "unused_tracks", "rivers")
+WIGGLE_EVERY = 10  # map units between the kinks of a wiggled stretch
 
-LAKES = {
-    "Lake Zarovich": [(322, 195), (335, 160), (370, 130), (420, 115), (480, 115), (530, 135), (550, 170),
-                      (540, 205), (500, 222), (450, 230), (400, 234), (355, 224)],
-    "Lake Baratok": [(200, 152), (222, 140), (246, 144), (258, 160), (256, 184), (244, 198), (222, 203), (204, 192), (197, 172)],
-    "Luna Lake": [(180, 588), (200, 576), (226, 578), (232, 596), (218, 612), (190, 612)],
-    "Tser Pool": [(676, 455), (692, 450), (702, 466), (700, 494), (690, 508), (678, 496), (674, 478)],
-    "": [(350, 462), (366, 456), (378, 466), (372, 480), (356, 480)],  # the marsh by Berez
-    # Two ponds in the hills along the branch of the Luna that feeds Tser Falls, as on the official
-    # map and the old Obsidian Portal map.
-    "Hill pond (west)": [(418, 372), (432, 364), (446, 370), (444, 386), (428, 390), (416, 384)],
-    "Hill pond (east)": [(478, 380), (492, 372), (504, 382), (502, 410), (494, 428), (484, 418), (480, 398)],
-    "Falls pond": [(550, 368), (566, 360), (582, 366), (580, 378), (562, 382)],
-}
 
-RIVERS = {
-    "Raven River": [(212, 192), (196, 224), (178, 262), (150, 272), (100, 272), (50, 268), (2, 265)],
-    "Luna River": [(338, 224), (352, 262), (362, 300), (366, 350), (360, 400), (345, 445), (330, 500),
-                   (290, 560), (232, 588)],
-    "Luna River (west)": [(180, 596), (130, 560), (70, 530), (2, 525)],
-    # Traced from the official map with the east roads: out of Tser Pool, south of the village, then
-    # north-east toward the gates and off the map.
-    "Ivlis River": [(700, 494), (725, 500), (745, 515), (768, 531), (783, 539), (798, 540), (813, 535), (828, 530),
-                    (843, 529), (859, 526), (874, 515), (889, 503), (904, 494), (919, 489), (934, 488), (949, 484),
-                    (969, 482), (998, 478)],
-    # The water: Lake Zarovich drains south as the Luna; a branch of the Luna runs east through
-    # the hill ponds and over Tser Falls into Tser Pool, which drains east as the Ivlis.
-    "Tser Falls": [(366, 350), (400, 352), (432, 356), (470, 362), (520, 368), (566, 372), (582, 400),
-                   (600, 405)],
-    "To the west hill pond": [(432, 356), (431, 370)],
-    "To the east hill pond": [(470, 362), (490, 382)],
-    "Below the falls": [(600, 405), (630, 440), (674, 470)],
-    "Northern streams": [(392, 116), (388, 80), (380, 45), (378, 14)],
-    "Northern streams 2": [(500, 116), (510, 80), (522, 45), (530, 14)],
-}
+def shape_points(a, b, shape: dict, seed: str) -> list[tuple[float, float]]:
+    """The points a shaped stretch adds between a and b (not a or b themselves).
 
-FORESTS = [
-    [(150, 14), (700, 14), (700, 100), (560, 112), (420, 104), (300, 112), (150, 100)],    # the north band
-    [(14, 75), (250, 75), (250, 140), (260, 300), (150, 300), (14, 300)],                 # around Krezk
-    # Old Bonegrinder's wood: the reason the road climbs north round the hairpin instead of
-    # cutting straight across to Vallaki.
-    [(428, 270), (476, 266), (492, 284), (470, 316), (432, 322), (418, 296)],
-    [(250, 290), (330, 296), (440, 300), (450, 410), (360, 412), (260, 400)],             # south of Vallaki
-    [(552, 420), (650, 420), (660, 560), (640, 712), (560, 712), (540, 560)],             # the ridge below the falls
-    [(750, 38), (986, 38), (986, 338), (900, 370), (800, 400), (750, 300)],               # north of the village
-    [(650, 580), (986, 562), (986, 736), (650, 736)],                                     # southeast
-    [(14, 600), (180, 630), (300, 650), (300, 736), (280, 736), (280, 680), (14, 680)],   # southwest
-]
+    {bends: n, width: w}: switchbacks, n points swinging w/2 to either side of the line in turn, which
+    the drawn curve turns into S-bends. {wiggle: r}: a kink every WIGGLE_EVERY units, up to r off the
+    line, from a seed made of the way's name, so every build draws the same road.
+    """
+    (ax, ay), (bx, by) = a, b
+    length = math.dist(a, b) or 1.0
+    px, py = (by - ay) / length, -(bx - ax) / length  # a unit step to the right of a -> b
 
-MOUNTAINS = [  # (centre, radius, count, size)
-    ((520, 610), 150, 60, 26),   # the southern massif
-    ((440, 688), 60, 14, 32),    # Mount Ghakis
-    ((250, 480), 95, 28, 20),    # the western mountains the Tsolenka road climbs through
-    ((630, 270), 110, 26, 11),   # the highlands between Old Bonegrinder and the castle
-    ((530, 262), 14, 8, 13),     # the wooded hill inside the hairpin loop, north-east of Old Bonegrinder
-    ((700, 26), 60, 10, 22),     # Mount Baratok
-    ((394, 632), 34, 10, 16),    # the peaks the Amber Temple trail climbs into
-]
+    def at(t: float, off: float) -> tuple[float, float]:
+        x, y = ax + (bx - ax) * t + px * off, ay + (by - ay) * t + py * off
+        return (round(x, 1) + 0.0, round(y, 1) + 0.0)
 
-LABELS = [  # (text, (x, y), size, angle)
-    ("Lake Zarovich", (426, 188), 16, 0),
-    ("Svalich Woods", (560, 60), 15, -4),
-    ("Svalich Woods", (870, 200), 15, 62),
-    ("Svalich Woods", (850, 660), 15, -8),
-    ("Svalich Woods", (90, 160), 13, 0),
-    ("Luna River", (378, 400), 11, 84),   # clear of the Vistani camp by Vallaki
-    ("Raven River", (70, 252), 10, 0),
-    ("Ivlis River", (850, 516), 11, 0),
-    ("Mount Ghakis", (440, 714), 15, 0),
-    ("Old Svalich Road", (872, 440), 10, -21),
-    ("Tser Falls", (560, 420), 10, 0),
-]
+    if set(shape) <= {"bends", "width"} and "bends" in shape:
+        n, half = int(shape["bends"]), float(shape.get("width", 12)) / 2
+        return [at(i / (n + 1), half if i % 2 else -half) for i in range(1, n + 1)]
+    if set(shape) <= {"wiggle"} and "wiggle" in shape:
+        rng = random.Random(zlib.crc32(seed.encode("utf-8")))
+        r, k = float(shape["wiggle"]), max(2, round(length / WIGGLE_EVERY))
+        return [at(i / k, rng.uniform(-r, r)) for i in range(1, k)]
+    raise ValueError(f"unknown shape {shape}")
+
+
+def expand_way(name: str, spec) -> list[tuple[float, float]]:
+    """A way from data/geography.yaml as the points it is drawn and routed through."""
+    if not isinstance(spec, dict):
+        return [tuple(p) for p in spec]
+    points = [tuple(p) for p in spec["points"]]
+    shapes = {int(i): s for i, s in (spec.get("shapes") or {}).items()}
+    out = []
+    for i, p in enumerate(points):
+        out.append(p)
+        if i in shapes and i + 1 < len(points):
+            try:
+                out += shape_points(p, points[i + 1], shapes[i], f"{name}/{i}")
+            except ValueError as err:
+                raise ValueError(f"{name}: {err}") from None
+    bad = [i for i in shapes if not 0 <= i < len(points) - 1]
+    if bad:
+        raise ValueError(f"{name}: a shape on stretch {bad[0]}, but the way has {len(points) - 1} stretches")
+    return out
+
+
+def load_geography(path: Path = GEOGRAPHY) -> dict:
+    """data/geography.yaml, with every way expanded into the points it is drawn through."""
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    geo = {sec: {name: expand_way(name, spec) for name, spec in (data.get(sec) or {}).items()}
+           for sec in WAY_SECTIONS}
+    geo["lakes"] = {name: [tuple(p) for p in pts] for name, pts in (data.get("lakes") or {}).items()}
+    geo["forests"] = [[tuple(p) for p in pts] for pts in data.get("forests") or []]
+    geo["mountains"] = [(tuple(m["at"]), m["radius"], m["count"], m["size"]) for m in data.get("mountains") or []]
+    geo["labels"] = [(lab["text"], tuple(lab["at"]), lab["size"], lab.get("angle", 0)) for lab in data.get("labels") or []]
+    return geo
+
+
+def use_geography(path: Path = GEOGRAPHY) -> None:
+    """Draw and route over the geography in `path` from now on (the map editor reloads after each change)."""
+    global ROADS, TRACKS, UNUSED_TRACKS, LAKES, RIVERS, FORESTS, MOUNTAINS, LABELS
+    geo = load_geography(path)
+    ROADS, TRACKS, UNUSED_TRACKS, RIVERS = geo["roads"], geo["tracks"], geo["unused_tracks"], geo["rivers"]
+    LAKES, FORESTS, MOUNTAINS, LABELS = geo["lakes"], geo["forests"], geo["mountains"], geo["labels"]
+
+
+ROADS: dict[str, list] = {}
+TRACKS: dict[str, list] = {}
+UNUSED_TRACKS: dict[str, list] = {}  # drawn like tracks but never walked by the trail: the party never took them
+LAKES: dict[str, list] = {}
+RIVERS: dict[str, list] = {}
+FORESTS: list[list] = []
+MOUNTAINS: list[tuple] = []
+LABELS: list[tuple] = []
+use_geography()
 
 
 # --- drawing helpers ----------------------------------------------------------------------------
