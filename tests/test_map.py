@@ -417,7 +417,8 @@ def test_the_trail_past_tser_pool_is_drawn_but_never_walked():
         assert inner and not any(p in graph for p in inner)
     assert "stroke-dasharray" in barovia_map.draw_base()
     # From the Tser Pool camp to the fork below the falls, the party goes back round by the road.
-    path = barovia_map.route(graph, (690, 530), (600, 405))
+    camp = barovia_map.TRACKS["Tser Pool trail (to the camp)"][-1]
+    path = barovia_map.route(graph, camp, (600, 405))
     assert (680, 555) in path
 
 
@@ -474,12 +475,17 @@ def test_roads_and_trails_only_cross_water_never_run_along_it():
             assert not any(barovia_map.inside(p, shore) for p in line), f"{road} goes into {lake or 'a pond'}"
 
 
-def test_tser_pool_camp_sits_south_of_the_pool_on_dry_land():
-    import yaml
-    xy = yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["places"]["tser-pool"]["xy"]
+def test_tser_pool_camp_sits_on_the_west_shore_of_the_pool():
+    # Chris, 2026-11-03: the camp belongs by the lake, as on the official map (west shore, mid-pool),
+    # with the trail past the pool running through it.
+    xy = tuple(yaml.safe_load((ROOT / "data" / "map.yaml").read_text(encoding="utf-8"))["places"]["tser-pool"]["xy"])
     pool = barovia_map.LAKES["Tser Pool"]
-    assert not barovia_map.inside(tuple(xy), pool)
-    assert xy[1] > max(y for _, y in pool)
+    assert not barovia_map.inside(xy, pool)
+    assert barovia_map.near_line(xy, pool + pool[:1], 14)                  # on the shore
+    assert xy[0] < min(x for x, _ in pool)                                 # west of the water
+    assert min(y for _, y in pool) < xy[1] < max(y for _, y in pool)       # beside it, not below it
+    assert xy == barovia_map.UNUSED_TRACKS["Tser Pool trail (past the pool)"][0]
+    assert xy == barovia_map.TRACKS["Tser Pool trail (to the camp)"][-1]
 
 
 def test_amber_temple_trail_climbs_into_the_mountains_for_about_an_hour_and_a_half():

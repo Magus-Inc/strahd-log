@@ -121,15 +121,16 @@ TRACKS = {
     # Session 8: the party left the road just before the Ivlis bridge and followed the river's north
     # bank west, through the woods, to the old oak (Chris: "we hit the river before the bridge").
     "Ivlis north bank to the old oak": [(761, 504), (746, 503), (731, 494), (718, 488), (712, 486)],
-    # The Vistani camp sits on dry land just south of Tser Pool.
-    # It leaves the crossroads northward, clear of the road to the village (2026-11-03).
-    "Tser Pool trail (to the camp)": [(680, 555), (676, 540), (690, 530)],
+    # The Vistani camp sits on the west shore of Tser Pool, as on the official map (Chris, 2026-11-03:
+    # "where we will place the camp ... should be by the lake"). The trail leaves the crossroads
+    # northward, clear of the road to the village.
+    "Tser Pool trail (to the camp)": [(680, 555), (674, 535), (670, 510), (668, 486)],
 }
 # Drawn like tracks but never walked by the trail: the party never took them.
 UNUSED_TRACKS = {
-    # As on the official map (Chris, 2026-11-03): from the camp the trail runs west of the pool and up
-    # between the loop road and the stream to the falls bridge; it never crosses the road.
-    "Tser Pool trail (past the pool)": [(690, 530), (660, 518), (642, 495), (630, 465), (605, 432), (600, 405)],
+    # As on the official map (Chris, 2026-11-03): from the camp on the shore the trail runs up between
+    # the loop road and the stream to the falls bridge; it never crosses the road.
+    "Tser Pool trail (past the pool)": [(668, 486), (652, 474), (632, 460), (605, 432), (600, 405)],
 }
 
 LAKES = {
