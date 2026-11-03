@@ -3,6 +3,8 @@ title: Mother Night
 type: deity
 summary: A power named in Madam Eva's reading.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ocbqgi
 ---
 
 ## Description

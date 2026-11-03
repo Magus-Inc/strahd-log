@@ -3,6 +3,9 @@ title: Drusilla
 type: creature
 summary: Van Richten's horse.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-vmm5cm
+- discord-gayizv
 ---
 
 ## Description

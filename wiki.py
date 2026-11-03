@@ -1,7 +1,7 @@
 """The campaign wiki: characters, NPCs, places, items and factions, one Markdown file each.
 
 content/wiki/<slug>.md has YAML front matter (title, type, aliases, summary, player, people, narrator, dm, source,
-obsidian_portal_url) and a Markdown body. The build links the first mention of any page's title or
+obsidian_portal_url, sources, link_by_hand) and a Markdown body. The build links the first mention of any page's title or
 alias in each post and wiki page, and lists on every wiki page the posts that mention it.
 """
 
@@ -14,6 +14,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import yaml
+
+import sources as source_list
 
 # Display order and headings for the wiki index.
 TYPES = {
@@ -63,6 +65,12 @@ class WikiPage:
     dm: bool = False  # the Dungeon Master: listed with the player characters, never in a post's cast or party
     source: str = ""
     obsidian_portal_url: str = ""
+    # What the page was written from, as reference ids or public links (sources.py); never shown.
+    sources: list[str] = field(default_factory=list)
+    # The title is never linked automatically, and posts link this page by hand; its aliases still
+    # link as usual. For a title another page shares (two people named Bianca), or one a recap list
+    # names in passing ("Arabelle's prophecy") where the story never does.
+    link_by_hand: bool = False
     body_md: str = ""
     html: str = ""
     mentioned_in: list = field(default_factory=list)  # posts, newest first
@@ -90,7 +98,8 @@ class WikiPage:
 
     @property
     def names(self) -> list[str]:
-        return [self.title, *self.aliases]
+        """The names the build links automatically (and that no two pages may share)."""
+        return list(self.aliases) if self.link_by_hand else [self.title, *self.aliases]
 
 
 def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
@@ -127,6 +136,8 @@ def parse_wiki_page(path: Path, split_front_matter) -> WikiPage:
         people=people,
         source=str(meta.get("source") or ""),
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
+        sources=source_list.parse_sources(meta.get("sources"), path.name),
+        link_by_hand=bool(meta.get("link_by_hand")),
         heard_of_in=[str(h) for h in heard],
         body_md=body,
     )

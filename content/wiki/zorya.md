@@ -5,6 +5,8 @@ aliases:
 - Zorya, Pseudodragon Spirit
 summary: Aera's pseudodragon companion, a tiny undead spirit she found at Argynvostholt.
 source: Added from Ryan's stat block (27 May 2025)
+sources:
+- discord-0ydmvo
 ---
 
 ## What she is
@@ -16,7 +18,7 @@ source: Added from Ryan's stat block (27 May 2025)
 * **A ghost.** She drifts through creatures and objects, and once a day, instead of dropping to 0 hit points, she slips into the Ethereal Plane and returns a minute later.
 * **Senses and speech.** Keen senses (Perception +3, Stealth +4, darkvision, short blindsight). She understands Common and Draconic but can't speak; she sends simple ideas, feelings and images telepathically within 100 feet.
 * **Silver fire.** Her breath is a 10-foot cone of icy silver fire (2d4 cold, Constitution save halves) that even works on cold-immune incorporeal creatures.
-* **Misty Step** (reaction): when she or someone beside her is attacked, she teleports, taking one willing creature along, who takes half damage from that attack.
+* **Misty Step.** As a reaction, when she or someone beside her is attacked, she teleports, taking one willing creature along, who takes half damage from that attack.
 
 ## Description
 

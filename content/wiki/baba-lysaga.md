@@ -5,6 +5,9 @@ aliases:
 - Lysa
 summary: A woods-witch of Berez who was Lady Fiona's mentor.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ocbqgi
+- discord-wqay9e
 ---
 
 ## Description
