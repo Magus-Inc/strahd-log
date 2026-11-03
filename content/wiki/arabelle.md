@@ -20,6 +20,8 @@ Madam Eva's granddaughter, a Vistani girl with dark hair, olive skin and lavende
 
 We found her safe with Rictavio, who is van Richten. He had seen a Vistana hand a wriggling sack to the vampire spawn Escher on the bank of the Luna River, killed the Vistana, scarred Escher and found Arabelle inside. She did not know why she had been taken. Van Richten questioned the dead Vistana's head with his Talisman of Echoes and learned that Strahd has put a bounty on girls who look exactly like her, so van Richten hid her in his painted wagon and gave her a spare amulet that keeps her from being found by magic. Aera gave her the bracelet, and when Aera asked whether she had anything to tell us, she spoke a prophecy: "At castle's peak, a heart beats red." We suggested she stay hidden in the enchanted wagon at the Vistani camp ([Finding Arabelle!](/posts/finding-arabelle/)). Long after, in Strahd's bedchamber, we saw the same silver bracelet of moon and stars on Tatyana's wrist in her portrait ([The Slipper and the Shadow of the Bat](/posts/the-slipper-and-the-shadow-of-the-bat/)).
 
+When Aera asked whether she had anything to tell us, she spoke a prophecy, written down on its own page as [Arabelle’s Prophecy](/wiki/arabelles-prophecy/) ([Finding Arabelle!](/posts/finding-arabelle/)).
+
 <!-- from-the-log -->
 ## From the adventure log
 

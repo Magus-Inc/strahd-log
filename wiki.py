@@ -67,8 +67,9 @@ class WikiPage:
     obsidian_portal_url: str = ""
     # What the page was written from, as reference ids or public links (sources.py); never shown.
     sources: list[str] = field(default_factory=list)
-    # Shares its title with another page (two people named Bianca), so the title is never linked
-    # automatically: posts link this page by hand, and its aliases still link as usual.
+    # The title is never linked automatically, and posts link this page by hand; its aliases still
+    # link as usual. For a title another page shares (two people named Bianca), or one a recap list
+    # names in passing ("Arabelle's prophecy") where the story never does.
     link_by_hand: bool = False
     body_md: str = ""
     html: str = ""
