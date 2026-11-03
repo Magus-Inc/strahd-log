@@ -10,9 +10,12 @@ import re
 from pathlib import Path
 
 import pytest
+import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "content" / "posts"
+WIKI = ROOT / "content" / "wiki"
+CORRECTIONS = ROOT / "data" / "log-extract" / "corrections.yaml"
 ROOM_CODE = re.compile(r"\b(?:[Rr]ooms? )?[A-Z]-?\d{1,3}[a-z]?\b")
 
 
@@ -43,3 +46,32 @@ def test_margin_notes_may_keep_the_codes():
 @pytest.mark.parametrize("post", sorted(POSTS.glob("*.md")), ids=lambda p: p.stem)
 def test_posts_keep_room_codes_to_the_margin(post):
     assert room_codes(post.read_text(encoding="utf-8")) == []
+
+
+# The wiki (Chris, 2026-11-03): the same in Malron's Account and the adventure-log lines under it.
+# A page that is a room in the book keeps its code in `book_room:`, shown in the facts box.
+
+def wiki_page(path: Path) -> tuple[dict, str]:
+    m = re.match(r"\A---\n(.*?)\n---\n(.*)\Z", path.read_text(encoding="utf-8"), re.S)
+    return yaml.safe_load(m.group(1)), m.group(2)
+
+
+@pytest.mark.parametrize("page", sorted(WIKI.glob("*.md")), ids=lambda p: p.stem)
+def test_wiki_pages_keep_room_codes_to_the_facts_box(page):
+    meta, body = wiki_page(page)
+    assert ROOM_CODE.findall(body) == []
+    assert [a for a in meta.get("aliases") or [] if ROOM_CODE.fullmatch(str(a))] == []
+
+
+def test_book_rooms_are_in_the_facts_box():
+    rooms = {p.stem: wiki_page(p)[0].get("book_room") for p in WIKI.glob("*.md")}
+    assert rooms["hall-of-bones"] == "K67" and rooms["strahds-tomb"] == "K86"
+
+
+def test_log_corrections_do_not_put_codes_back():
+    """tools/wiki_from_extract.py rebuilds the log lines from the extracts and these corrections."""
+    fixes = yaml.safe_load(CORRECTIONS.read_text(encoding="utf-8"))
+    assert [v for v in (fixes.get("facts") or {}).values() if v and ROOM_CODE.search(v)] == []
+    extracts = "".join(p.read_text(encoding="utf-8") for p in CORRECTIONS.parent.glob("posts-part*.json"))
+    codes = {c.strip('"') for c in re.findall(r'"[A-Z]-?\d{1,3}"', extracts)}
+    assert codes <= set(fixes.get("not_alias") or [])

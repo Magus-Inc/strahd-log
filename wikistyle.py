@@ -138,6 +138,8 @@ def facts(page) -> list[tuple[str, object]]:
         out += [(role, held(person, seen, page.slug)) for person in people]
     elif getattr(page, "player", ""):
         out.append((role, page.player))
+    if getattr(page, "book_room", ""):
+        out.append(("In the book", page.book_room))
     if seen:
         first, last = seen[-1], seen[0]
         out.append(("First seen", (first.number, first.title, first.path)))

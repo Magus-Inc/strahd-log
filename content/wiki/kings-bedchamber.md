@@ -1,8 +1,7 @@
 ---
 title: King’s Bedchamber
 type: place
-aliases:
-- K56
+book_room: K56
 summary: A lavish room in the Rooms of Weeping at Castle Ravenloft.
 source: Compiled from the adventure log
 ---
