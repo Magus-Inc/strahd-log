@@ -15,7 +15,13 @@ Note: Written from the session notes; there is no recording.
 
 ## Summary:
 
-Our night in the guest tower of Castle Ravenloft became a nightmare that loops. Every time we went through the trap door or the front door, we came back to the guest room. We fought off the things in the room that came alive and attacked us, then went into the third loop.
+We woke in the guest room at ten at night, each of us feeling two cold, sharp pressures against our necks. In the closet a woman’s corpse hung from a trap door. We climbed up through it and came out through a portrait of Strahd, outside what looked like the very room we had left, which makes no sense: it cannot be the same floor and yet be higher.
+
+Then a man with a raven on his shoulder stepped out of the wall. He looked like Ismark the Great, the statue in the center of the village of Barovia. We think the raven may be a Martikov. He spoke of a woman he had been parted from, Ludana or some such, and he searches for a sigil shaped like the sun with a large ruby at its center. He knew the Symbol of Ravenkind when he saw it, and he let us into the room, opening the door with the golden lock. I opened the closet to see whether the dead woman was still there, and the things in the room came alive and attacked us.
+
+Note: These first scenes are from the 9/2 session, which had no post of its own.
+
+Our night in the guest tower of Castle Ravenloft had become a nightmare that loops. Every time we went through the trap door or the front door, we came back to the guest room. We fought off the things in the room that came alive and attacked us, then went into the third loop.
 
 Zorpheus came in through the front door and heard a ticking, beating sound under the bed. Hiding there was a little man with a face painted like a jack-o’-lantern: **Pidlwick**. I made my eyes burn red with a small prayer and tried to frighten him. It did not work. Pidlwick tried to throw me down a hundred-foot drop, then vanished.
 

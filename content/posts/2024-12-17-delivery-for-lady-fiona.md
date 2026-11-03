@@ -18,13 +18,29 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 **Summary:**  
 I used the Talisman of Echoes to speak with Izek’s head. Oogway did the questioning and learned the powers of his arm, a hurled flame and a volley of fire. Izek also told us that the “Order of the Feather” opposes Strahd.
 
-Outside Wachterhaus we passed some cultish-looking folk, and Lady Fiona welcomed us in. We gave her Izek’s head, and she led us to her armory for our reward. She read to us from her family history about the wedding of Prince Sergei and Tatyana.
+Outside Wachterhaus we passed some cultish-looking folk, and Lady Fiona welcomed us in. We gave her Izek’s head, and she told us to follow her to the armory for our just reward: thirty silver crossbow bolts, silver arrows, four silver spears, two sets of armor worth a hundred gold, a set worth four hundred, and the materials to silver more of our weapons. Liren found a strange locket that gives off a child’s laughter, a Locket of the Last Laugh.
+
+Gumbo asked Lady Fiona whether she has any natural-born enemies. She took us to her library and brought out a book of her family’s history. Her ancestor came to Barovia after Strahd and was rewarded for her loyalty. She read to us from it:
+
+> The wedding of Prince Sergei von Zarovich and Tatyana Federovna began with good cheer, but ended in madness and blood. Prince Sergei was found dead in his chambers, his bride-to-be rumored to have cast herself from the overlook in despair.
+
+> Though no suspect was confirmed, Leo Dilisnya—my own kin—led a treacherous uprising against Lord von Zarovich, abetted by a score of castle guards. When I sought to mediate, they turned upon us, slaughtering Vladislav and his mother and confining us within the confines of the kitchens.
+
+> It was only by some miracle that Lord von Zarovich emerged unscathed from their assault. Now possessed with an unearthly power, he smote the traitors and drove Leo himself from the castle.
+
+> In his escape, I saw Leo's face contort with hatred and disgust. "Blood-traitor, I name you, Lovina," he swore, "for your allegiance to the beast who abandoned Reinhold to his fate." He renounced our bond, proclaimed I was no longer of House Dilisnya, and vowed that he would one day expunge the Wachter blight from the valley—once and forevermore.
+
+> I know not what has become of him. He is gone from the Pillarstone now, and though more of the treacherous guards return in caskets to the castle each day, his face is not among them. But each night I hear his voice in my nightmares, I know he yet lives—and dread the occasion of his return.
 
 ![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 
-At the inn, words appeared on a frosted window, “Help Victor” and “Erasmus”, and the spirit of Erasmus reached out to us. We agreed to help at the Vallakovich manor. Then Rahadin, the elf, arrived on a phantom steed with an invitation to dinner at Castle Ravenloft, and asked that Ireena come. In the town square, Father Lucian argued with the guards as Milivoj and Henrik were condemned to hang.
+We went back to the inn to rest. In the night we woke to a window gone cold with frost, and a message spelled out on it: “Help Victor” and “Erasmus.” We remembered that van Richten’s son had that same name. When we asked where, the answer came: Vallakovich Manor. We agreed to help, and the spirit left. We think the ghostly presence of Erasmus was with Arabelle in the wagon too.
+
+At breakfast an elf rode past the inn’s window on a phantom steed. A powerful aura hung about him, a strong sense of fear, and screams. He brought us an invitation from his master, sealed with the von Zarovich crest: dinner at the castle in seven days, at dusk. The elf is Rahadin, and he asked that we bring Ireena as a special guest.
+
+He had us follow him to the town square, where two gallows stood in the center. Father Lucian was at their foot, arguing with the guards. They brought out Milivoj and Henrik, and both were condemned to death by hanging.
 
 **Key Locations:**  
 - **Wachterhaus:** Lady Fiona and our reward.  

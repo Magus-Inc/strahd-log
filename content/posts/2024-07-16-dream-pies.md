@@ -16,7 +16,7 @@ We came upon a ruined watch tower, three stories tall and covered in moss and iv
 
 ### Tser Falls Bridge
 
-A revenant guarded the bridge and asked whether we served *him*. He named himself [Sir Godfrey Gwilym](/wiki/sir-godfrey-gwilym/), a knight of the Order of the Silver Dragon, banished by his commander, Vladimir Horngaard.
+A revenant guarded the bridge and asked whether we served *him*. He named himself [Sir Godfrey Gwilym](/wiki/sir-godfrey-gwilym/), a knight of the Order of the Silver Dragon from Argynvostholt, to the west. He raised his voice against his commander, Vladimir Horngaard, and was banished here to await an order that will never come.
 
 ![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
 
@@ -40,7 +40,7 @@ Ravens began to follow us, and soon there were hundreds in tow. Ireena, in a stu
 
 ### Wolves
 
-Eight wolves attacked us, one of them perhaps a werewolf. The ravens swarmed that one. [Schlopkht](/wiki/schlopkht/) nearly died but came to in time to rejoin the fight. Aera floated a dream pie to one of the wolves with a conjured hand, and it took that wolf out of the fight.
+Eight wolves attacked us, one of them perhaps a werewolf. The ravens swarmed that one. [Schlopkht](/wiki/schlopkht/), asleep on the cart, nearly died when a wolf bit him, but it woke him in time to rejoin the fight. Aera floated a dream pie to one of the wolves with a conjured hand, and it took that wolf out of the fight.
 
 ## Key Locations:
 

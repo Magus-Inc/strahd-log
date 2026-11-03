@@ -39,7 +39,7 @@ We escaped the cave and made camp in the forest, and **Strahd himself appeared.*
 
 When Strahd’s game was done we pressed on to **Argynvostholt**, the ruined mansion of the **Order of the Silver Dragon**. There we met **Sir Godfrey Gwilym**, who told us the tragedy of his once-great order.
 
-Strahd **stole the skull of Argynvost**, desecrating their memory, and **Rahadin slew their commander, Horngaard.** Sir Godfrey warned us to keep out of Horngaard’s chamber, **to avoid the fourth floor**, and **to beware the phase spiders** in the ruins.
+Strahd **stole the skull of Argynvost**, desecrating their memory, and **Rahadin slew their commander, Horngaard.** Sir Godfrey warned us to keep out of Horngaard’s chamber, **to avoid the fourth floor**, and **to beware the phase spiders** in the ruins. Horngaard is very powerful and does not want anyone moving against Strahd. A mass grave north of Berez bears the symbol of the Silver Dragon, which will protect us.
 
 A cryptic prophecy stays with me:
 
@@ -81,7 +81,7 @@ A cryptic prophecy stays with me:
 
 ## Session Highlights:
 
-* **“Strahd doesn’t force pain—he makes you choose it.”**
+* Strahd’s hourglass of blood, and the price each of us chose to pay.
 * Aera’s shocking change: curse or fate?
 * Oogway’s sacrifice, a name given up to survive.
 * The ghostly prophecy: twin dragons, a silver flame, and a memory to rekindle.

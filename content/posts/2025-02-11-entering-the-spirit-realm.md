@@ -33,6 +33,8 @@ Note: Its resistances, per Erasmus: spells, necrotic damage, poison, grapple, st
 
 Victor’s spell acted as a beacon, attracting spirits intent on stealing Stella’s body. Erasmus told us to strike any spirit that came near Stella.
 
+Then the gallows speaker came for us. “I am Leo Dilisnya,” he said. He carried a tome marked with the symbol of Ravenloft, and he pointed at Stella Wachter. He means to take what is his, he said, pointing at Stella and Lady Fiona. He looked at us and made it plain he bore us no ill will, and would let us go if we let him take the Wachters. He told us he was once a guard of Castle Ravenloft, and that he gave the order to kill Strahd after Strahd assaulted his brother’s bride. We would not give them up.
+
 A great fight followed, and we won it, at a heavy cost. Shabasta died in the battle, and none of us could bring him back. Stella was rescued for which Lady Fiona was grateful.
 
 ## Key Locations:

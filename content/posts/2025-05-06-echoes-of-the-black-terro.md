@@ -61,6 +61,6 @@ Note: Booming Blade plus Suggestion. The werewolf walked into its own death.
 ## Session Highlights:
 
 * Ezmerelda’s smokeless fire, a simple thing and a great help in staying hidden.
-* “I never expected fire to be our greatest ally tonight!” I said, after the flames had done their work.
+* Oogway’s fire and mine, which cleared out the wolves in one stroke.
 * Zorpheus’ clever suggestion, turning the beast’s own steps against it.
 * The last werewolf sealing its own fate with a single step.
