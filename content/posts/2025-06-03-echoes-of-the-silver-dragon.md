@@ -29,7 +29,7 @@ We found a table inscribed with the **knightly vow** of the Silver Dragon:
 
 **“I solemnly vow to uphold the virtues of the Order of the Silver Dragon, with honor as my shield and truth as my guide… In the shadow of evil, I shall be the light; in the face of despair, the beacon of hope…”**
 
-A journal page held the last thoughts of **Lord Argynvost** before he died in battle. In his last stand he vowed to take his true dragon form and defend the valley with his life. He left his belongings beneath the tower’s watchful gaze, hoping others would carry on his legacy.
+A journal page held the last thoughts of **Lord Argynvost** before he died in battle. In his last stand he vowed to take his true dragon form and defend the valley with his life. He left his belongings beneath the tower’s watchful gaze, hoping others would carry on his legacy. His body would die, he wrote, but his spirit would live on wherever the oath and fire of the Silver Dragon survive.
 
 Behind a painting Aera found **a hidden stone shelf** holding several treasures: a rapier that glows faintly in the dark, an amulet that opens the way through Tsolenka Pass, a bracelet of warding, a silver tablet and banner from the Order’s history, and a parchment scroll.
 

@@ -33,11 +33,11 @@ Nine strong now, we traveled southwest. We crossed a bridge to a four-way crossr
 
 Further south we met a mountain woman with a stone axe, who warned us to keep clear of the forest folk at Yester Hill.
 
-At another crossroads a revenant guarded a bridge to the west. He urged us to visit Argynvostholt and warned of blights at the vineyard, which can be neither blinded nor deafened.
+At another crossroads a revenant guarded a bridge to the west. He urged us to visit Argynvostholt and warned of blights at the vineyard, which can be neither blinded nor deafened. The mountain folk, he told us, worship the ancient goddesses of the valley, not Strahd as the forest folk do.
 
 As we neared the vineyard, Muriel stumbled into a trap. We found an ancient monument to the Huntress, a slab bearing a pristine three-pointed star.
 
-A dark-cloaked figure appeared and beckoned. Muriel knew him: Davian. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
+A dark-cloaked figure appeared and beckoned, and dozens of ravens watched in silence as we came near. Muriel knew him: Davian. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
 
 ## Key Locations:
 

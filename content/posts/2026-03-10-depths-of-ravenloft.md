@@ -35,7 +35,11 @@ Note: [Meta details] The DM was genuinely shocked that this worked, given the ma
 
 Note: Olfin's spells were Sanctuary and Protection from Evil and Good; Malron's pull was Mage Hand plus Telekinetic.
 
+As thanks for the spoon, Cyrus drew us a map in simple boxes and lines. We were in the Serpent’s Wing, which joins the garrison, the Hall of Bones and, by the South Tower Stair, the main entry. That stair climbs to the top of the castle, past the main entry, the accountant’s office, the royal apartments, the guest suite where we once slept and, on the fifth floor, the witches’ coven, and it goes down to the dungeons too. What lies in or beyond those rooms, Cyrus does not know.
+
 We went on down into the Drowning Cells, wading through three to five feet of murky water, roped together to keep from losing one another. The rope was tested at once. Olfin stepped on a hidden plate, air and water burst around him, and the rope in my hands went slack. He had been carried off into an iron maiden in the torture chamber. The rest of us, swimming or treading water, followed Aera, who got us past the next traps to the cells, where we heard a prisoner’s teeth chattering.
+
+It was Emil Toranescu, the werewolf we came for. He has been locked in that cell for weeks and is worn to exhaustion. Around his neck is a collar of silver thorn that keeps him from changing. It is magically locked, and forcing it open drives great thorns into the neck of the one who wears it. Emil knows there is a key, and that Volenta holds it, the bride who escaped us at the coffin maker’s.
 
 ## Key Locations:
 

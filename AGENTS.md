@@ -54,6 +54,11 @@
   slides, "Malron’s Account" (all of the story, its opening lines and pictures too), the recap lists
   (Key Locations, Encounters, Loot, Notable NPCs, Plot Points, Session Highlights; every entry a
   bullet), then the map. No second title above the story. `tests/test_layout.py` checks every post.
+- Every Plot Points entry is told in Malron’s Account (Chris, 2026-11-03: "Feels odd if they list
+  something that wasn't already mentioned above"). `data/plot-points.yaml` names, for each entry, a
+  phrase from the account that tells it, and `tests/test_plot_points.py` checks every post. When the
+  story leaves a plot point out, add it to the story from the transcript, Chris's notes or Ryan's
+  texts; never invent it.
 - Wiki links: the first mention of a name links in every section of the On this page box, every
   scene and every recap list, so a reader who jumps to a section finds its links (Chris,
   2026-11-02). The build does this (`relink: each-heading`); don't hand-link repeats.

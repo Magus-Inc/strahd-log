@@ -25,7 +25,11 @@ The Icon is alive, and it spoke to me mind to mind. It named itself a shard of t
 
 Note: [The DM gave a long lore dump on the Icon's history, spanning 400 years, and its tie to the Abbot's fall into madness. The players briefly debated the merits of Fortnite, and the value of eating a dead gecko for $20 (a story Crusty shared from his past).]
 
-We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. With the wizard’s own brass-knobbed staff we worked a hidden mechanism, and the marble slab lifted on a leather case of potent spell scrolls: **Fireball**, **Lightning Bolt** and **Cone of Cold**. Nearby, in Crypt 31, I got past a pit hidden under a tarp and took a scroll of **Magic Circle**. Battered and low on magic, we decided to rest the night. Crusty conjured a small magic hut in a dark corner of the catacombs, and I called down Lathander’s aid to strengthen us all before we slept.
+We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. With the wizard’s own brass-knobbed staff we worked a hidden mechanism, and the marble slab lifted on a leather case of potent spell scrolls: **Fireball**, **Lightning Bolt** and **Cone of Cold**. Nearby, in Crypt 31, I got past a pit hidden under a tarp and took a scroll of **Magic Circle**.
+
+At the far end of the catacombs stands the greatest tomb of all. A heavy portcullis bars its archway, and beyond it black marble steps go down into a dark vault thirty feet high. We are all but sure it is Strahd’s own, the place where he sleeps. We left it alone; our business here is the relics and Gertruda.
+
+Battered and low on magic, we decided to rest the night. Crusty conjured a small magic hut in a dark corner of the catacombs, and I called down Lathander’s aid to strengthen us all before we slept.
 
 Note: [Malron upcast **Aid** to 4th level, giving everyone 15 extra maximum hit points. The players talked over which healing spells are most efficient, which led to the "Chicago" joke where Malron mixed up **Cure Wounds** and **Healing Word**.]
 
