@@ -4,13 +4,22 @@ date: '2024-02-13T21:00:00-06:00'
 tagline: Welcome to the Jungle
 slug: barovia-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/barovia-barovia
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
 ---
 
+## Story
+
+### Burying Rose and Thorn
+
 We spent the night in a nearby tower, and the next day Rose and Thorn asked us to bury their remains nearby. We found a shovel in the tower and went to work putting them to rest.
+
+### Driven by the Fog
 
 The road leading from the tower gave us two choices, go towards the thick mist and risk falling into a pit in this godless land, or take the path into a forest. We chose the forest path and kept walking for what felt like six or more hours. At that point I thought I saw a hunched figure in the forest. I asked the party if they saw the same thing, but no one did. [Schlopkht](/wiki/schlopkht/) climbed a tree to double check, but saw nothing. We kept walking, and this time the whole party saw some strange things. The shadow of a giant flying creature, the silhouette of what looked to be a giant bat, a shadowy figure holding an axe, a rider in the distance. All came and seemed to disappear as we blinked.
 
 The fog seemed to be following us, driving us forward. We reached some stonework and a closed gate. The gate opened on its own as we approached. Daring not to let the mist catch us, or to wander into the forest, we went past the gate, and it closed behind us.
+
+### “Seer Spoke True”
 
 Schlopkht caught the foul scent of death ahead on the path, but again we felt there was no better choice than to continue on the path. Following the trail a bit longer we came upon a corpse of young man. [Weeble Wobleston](/wiki/weeble-wobleston/) surmised he died of exhaustion and found a compass on his body. The compass needle was trembling a bit, and didn’t seem reliable. The body seemed to be pointing at a nearby tree, and it was discovered to have thirteen tally marks and an arrow pointing along a small footpath into the forest, and off the main road we had been following.
 
@@ -23,9 +32,13 @@ Examining the fourth tree more closely we saw the rough carving of a horse and r
 
 We followed this fourth arrow and came upon what looked like the road we had started from but arriving from the other side. It made no sense, and even more unnerving was that the corpse of the rider was now missing. We checked the nearby tree and saw it had the fifteen marks, two of which were fresh.
 
+### A Village Under the Castle
+
 We kept along the road, still driven by the fog, and crested a hill from which we could see a village in a valley and castle of stone high above the village. The fog rolled in and covered up the castle but left the village visible.
 
 We crossed a wooden bridge and came across some charred piles of who knows what. We entered a village with dilapidated buildings. There was the sound of flapping wings, and then a blue tipped raven flew overhead. It flew to the west, and circled back, almost beckoning us to follow it.
+
+### Blood on the Vine
 
 We ended up at the “Blood of the Vine Tavern”, which seemed to have been recently renamed to the “Blood on the Vine Tavern”. There was a chipped stone statue in the center with a plaque reading “ISMARK ANTONOVICH THE GREAT. Burgomaster of Barovia. Bane of Vampires. 618—662 B.C.”
 
@@ -41,21 +54,25 @@ Ismark warned us of spies for Strahd in the form of bats, wolves, humans, and ev
 
 Then a woman entered the Tavern, a face full of fright and dismay. Pale faced, she cried to Ismark speaking of a girl named Gertruda who had gone alone in the night to Vallaki. Ismark promised to send someone to look for her in the morning.
 
+### Ireena Behind Three Locks
+
 We walked to the mayors mansion at the south end of the village, and when Ismark knocked on the door, a young woman peeked out and then we heard three locks unlocking before the door swung open. It turns she is Ismark’s sister, Ireena. She was adopted and we learned that Ismark’s family found Ireena in the forest when she was a little girl.
 
 Ireena asks us to help the villagers that retreated to Vallaki. First they must bury their father, who died in the attack.
 
+### How to Kill a Vampire
+
 [Aera shan Ravanór](/wiki/aera-shan-ravanor/) found a guide to killing vampires which read as follows:
 
 > “In some shadowed corners of the world, the vampire reigns as a fearsome predator. Beyond mere bloodlust, these creatures are cursed with a range of abilities and weaknesses that make them as enigmatic as they are terrifying.
-
+>
 > Their bodies are resilient to mundane weapons, shrugging off blows that would fell most mortals and regenerating even grievous wounds in a matter of moments. They move with unnatural grace, their senses sharply attuned to the whispers of the night. But it is in their supernatural abilities that their true horror lies. They can bend the will of others to their own, ensnaring friend and foe with but a gaze and a whisper. They can shift form with the ease of thought, becoming bats, wolves, or even a sinister mist that creeps beneath doorways and through cracks. And those their fangs kill become vampire spawn—ravenous creatures with a vampire’s hunger for blood.
-
+>
 > These creatures are not wholly invincible, however, possessing a tapestry of strengths woven with fatal weaknesses. Sunlight and running water can end their cursed existence, and wooden stakes through the heart will paralyze them as they sleep. They recoil from the sight of holy symbols, and cannot enter a residence without an invitation. They bear neither shadow nor reflection, and must return to their coffins, crypts, or graves to rest by day.
-
+>
 > It is said that the bloodlust of these creatures is an unquenchable fire that burns within their undead hearts. The young and newly turned are slaves to this craving, often losing themselves in a frenzy at the mere scent of blood. But those who have walked the night for centuries, as well as those with indomitable focus and will, may learn to temper this fire. Those who do so possess the rare ability to conceal their monstrous nature, retracting and exposing their fangs at will—a sign that the monster within is held at bay, if only while the vampire allows.”
 
-## Key Locations:
+## Key Locations
 
 * **The forest road**: Driven on by the fog, past a gate that opened and closed on its own.
 * **The trees of thirteen marks**: Four trees with arrows, and a loop that brought us back to the road from the other side.
@@ -63,7 +80,7 @@ Ireena asks us to help the villagers that retreated to Vallaki. First they must 
 * **Blood on the Vine Tavern**: Lately renamed from Blood of the Vine, near the statue of Ismark Antonovich the Great.
 * **The burgomaster’s mansion**: At the south end of the village, behind three locks.
 
-## Encounters:
+## Encounters
 
 * **Visions in the forest**: A hunched figure, the shadow of a giant flying creature, a giant bat, a figure with an axe, a distant rider.
 * **The dead young man and his horse**: Both dead of exhaustion.
@@ -71,12 +88,12 @@ Ireena asks us to help the villagers that retreated to Vallaki. First they must 
 * **The blue-tipped raven**: It led us to the tavern.
 * **A frightened woman**: Crying to Ismark that Gertruda had gone alone in the night to Vallaki.
 
-## Loot:
+## Loot
 
 * **A compass**: From the dead young man. Its needle trembled, and later spun wildly.
 * **The guide to vampires**: Found by Aera.
 
-## Notable NPCs:
+## Notable NPCs
 
 * **Ismark**: Grandson of the man on the statue, who asked us to help his sister hide at a church in Vallaki.
 * **Ireena**: His sister, found by his family in the forest as a little girl.
@@ -85,7 +102,7 @@ Ireena asks us to help the villagers that retreated to Vallaki. First they must 
 * **Strahd**: The undead lord whose forces besieged the village.
 * **Gertruda**: Gone alone in the night to Vallaki.
 
-## Plot Points:
+## Plot Points
 
 * **Strahd is awake**: An elf proclaimed that Doru woke him, and that he would take vengeance.
 * **Spies**: Ismark warned of Strahd’s bats, wolves, humans and even Vistani.
@@ -93,7 +110,7 @@ Ireena asks us to help the villagers that retreated to Vallaki. First they must 
 * **Their father**: Died in the attack, and must be buried first.
 * **The vampire guide**: Sunlight, running water, stakes, holy symbols and invitations.
 
-## Session Highlights:
+## Session Highlights
 
 * Adding our own tally marks, and finding them again on the far side of the loop.
 * Schlopkht walking into the fog on a rope.

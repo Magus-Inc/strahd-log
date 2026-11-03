@@ -14,17 +14,32 @@ reviews and merges them, and every merge to `main` publishes the site.
    title: 'Into the Amber Temple'
    date: '2026-09-15T21:00:00-05:00'
    tagline: Cold, dark and whispering
-   tags: [Amber Temple, Vasilka]
+   cast: [Aera shan Ravanór, Crusty, Malron Lichtstrahl, Olfin Darning, Shabasta]
    ---
 
-   ## At a Glance:
+   ## At a Glance
 
-   * **The climb:** ...
+   * **The climb**: ...
+
+   ## Story
+
+   ### Up the Mountain
+
+   ...
+
+   ## Key Locations
+
+   * **Amber Temple**: ...
    ```
 
-   `title` and `date` are required. `date` is the session's start in Central time, with the
-   offset (`-05:00` in summer, `-06:00` in winter). Quote a title that contains a colon.
-   `slug` defaults to the file name without the date; `tagline` and `tags` are optional.
+   Every post follows one format (AGENTS.md, "One post format"; `tests/test_post_format.py`
+   checks it): `cast:` lists the player characters there by their wiki page titles, the story
+   sits under `## Story` with short `###` scene headings, and the recap lists follow in this
+   order: Key Locations, Encounters, Loot, Notable NPCs, Plot Points, Session Highlights, one
+   bullet per entry. `title`, `date` and `cast` are required. `date` is the session's start in
+   Central time, with the offset (`-05:00` in summer, `-06:00` in winter). Quote a title that
+   contains a colon. `slug` defaults to the file name without the date; `tagline` and `tags` are
+   optional.
 3. Check it locally (needs Python 3.13 and [just](https://github.com/casey/just)):
 
    ```

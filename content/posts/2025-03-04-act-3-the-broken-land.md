@@ -4,18 +4,12 @@ date: '2025-03-04T21:00:00-06:00'
 tagline: Shabasta's brother is a hare. We didn't ask.
 slug: act-3-the-broken-land
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/act-3-the-broken-land
+cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
 ---
 
-## Characters:
-* [Oogway](/wiki/oogway/)
-* [Olfin Darning](/wiki/olfin-darning/)
-* [Liren](/wiki/liren/)
-* [Gumbo](/wiki/gumbo/)
-* [Aera shan Ravanór](/wiki/aera-shan-ravanor/)
-* [Veyren](/wiki/veyren/)
-* [Malron Lichtstrahl](/wiki/malron-lichtstrahl/)
+## Story
 
-## Summary:
+### Urwin’s Worry
 
 We woke at the Blue Water Inn, and Urwin, the innkeeper, called each of us to the bar in turn to ask for help with a troubling matter.
 
@@ -27,7 +21,11 @@ First he introduced Veyren, a hare of a fellow and Shabasta’s brother. We gave
 
 Then Urwin told us his worry. The Wizard of Wines vineyard supplies the inn’s wine, and the latest shipment is sixteen days overdue. He fears something has happened to Davian Martikov, his father. He arranged for us to meet Muriel Vinshaw, who works at the vineyard, to guide us.
 
+### Ireena Joins Us
+
 Before we left, Ireena came to us and asked to join. She wants to become a warrior for her people and feels the Abbey cannot protect her from Strahd. She offered her skill as a trained healer and a capable swordswoman.
+
+### The Road Southwest
 
 Nine strong now, we traveled southwest. We crossed a bridge to a four-way crossroads and passed a valley holding a half-collapsed mansion, Argynvostholt, said to be tied to revenants. Muriel warned of strix in the area.
 
@@ -37,43 +35,45 @@ At another crossroads a revenant guarded a bridge to the west. He urged us to vi
 
 As we neared the vineyard, Muriel stumbled into a trap. We found an ancient monument to the Huntress, a slab bearing a pristine three-pointed star.
 
+### Down the Trapdoor
+
 A dark-cloaked figure appeared and beckoned, and dozens of ravens watched in silence as we came near. Muriel knew him: Davian. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
 
-## Key Locations:
+## Key Locations
 
-**Blue Water Inn**: Where this act began; Urwin’s tavern.  
-**Argynvostholt**: A mansion in the valley, linked to revenants and strix.  
-**Wizard of Wines Vineyard**: Our destination, full of mystery and danger.
+* **Blue Water Inn**: Where this act began; Urwin’s tavern.
+* **Argynvostholt**: A mansion in the valley, linked to revenants and strix.
+* **Wizard of Wines Vineyard**: Our destination, full of mystery and danger.
 
-## Encounters:
+## Encounters
 
-Meeting Veyren and giving him Shabasta’s letter.  
-The revenant at the bridge.  
-Muriel caught in a snare near the vineyard.
+* Meeting Veyren and giving him Shabasta’s letter.  
+    The revenant at the bridge.  
+    Muriel caught in a snare near the vineyard.
 
-## Loot:
+## Loot
 
-(None found yet.)
+* (None found yet.)
 
-## Notable NPCs:
+## Notable NPCs
 
-**Urwin**: Owner of the Blue Water Inn, asking help for the vineyard.  
-**Veyren**: Shabasta’s brother, now with us.  
-**Ireena**: A trained healer and swordswoman, set on helping us.  
-**Muriel Vinshaw**: Works at the vineyard; perhaps a raven in disguise.  
-**Davian**: The mysterious cloaked figure tied to the ravens.
+* **Urwin**: Owner of the Blue Water Inn, asking help for the vineyard.
+* **Veyren**: Shabasta’s brother, now with us.
+* **Ireena**: A trained healer and swordswoman, set on helping us.
+* **Muriel Vinshaw**: Works at the vineyard; perhaps a raven in disguise.
+* **Davian**: The mysterious cloaked figure tied to the ravens.
 
-## Plot Points:
+## Plot Points
 
-- The Wizard of Wines shipment is mysteriously overdue.  
-- The revenant’s cryptic warning about Argynvostholt and the blights.  
-- The mountain folk worship ancient goddesses; the forest folk worship dark powers.  
-- Strix and ravens around the vineyard, and Davian’s trapdoor.
+* The Wizard of Wines shipment is mysteriously overdue.
+* The revenant’s cryptic warning about Argynvostholt and the blights.
+* The mountain folk worship ancient goddesses; the forest folk worship dark powers.
+* Strix and ravens around the vineyard, and Davian’s trapdoor.
 
-## Session Highlights:
+## Session Highlights
 
-- Giving Veyren his brother’s letter.  
-- Ireena’s heartfelt plea to join us.  
-- Davian and the ravens appearing out of nowhere.  
-- The strix crying all around us.  
-- The leap down the trapdoor beneath the vineyard.
+* Giving Veyren his brother’s letter.
+* Ireena’s heartfelt plea to join us.
+* Davian and the ravens appearing out of nowhere.
+* The strix crying all around us.
+* The leap down the trapdoor beneath the vineyard.

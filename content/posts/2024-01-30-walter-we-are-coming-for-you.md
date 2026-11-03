@@ -4,19 +4,30 @@ date: '2024-01-30T21:00:00-06:00'
 tagline: Where did that Paladin get lost?
 slug: walter-we-are-coming-for-you
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/walter-we-are-coming-for-you
+cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
 ---
+
+## Story
+
+### Catching Our Breath
 
 After that last hard fight we needed a short rest. We secured the room and caught our breath. [Schlopkht](/wiki/schlopkht/) was especially grateful for the chance to tend his wounds.
 
-A dark, unexplored hallway led out of the room. It was the obvious way on, but there was no telling what waited in it. [Aera shan Ravanór](/wiki/aera-shan-ravanor/) picked up a rock and, with [Rose Durst](/wiki/rose-durst/)'s power, made it shine bright, then threw it down the hall. The light showed two ghouls, and they attacked. [Weeble Wobleston](/wiki/weeble-wobleston/) stood as a human shield in the narrow passage while Aera killed both ghouls with her bow.
+A dark, unexplored hallway led out of the room. It was the obvious way on, but there was no telling what waited in it. [Aera shan Ravanór](/wiki/aera-shan-ravanor/) picked up a rock and, with [Rose Durst](/wiki/rose-durst/)’s power, made it shine bright, then threw it down the hall. The light showed two ghouls, and they attacked. [Weeble Wobleston](/wiki/weeble-wobleston/) stood as a human shield in the narrow passage while Aera killed both ghouls with her bow.
 
-Further on we found a room with a statue, a wolf's head and an orb, or perhaps an eye. Five shadows of ash were spread around its walls. I made the orb glow with light, and when I touched it I heard voices: “Return me to the place I belong.” Schlopkht and I were still debating whether to move the orb, and if so where, when Weeble picked it up, and the five shadows slid off the walls toward him. Weeble put the orb back and the shadows withdrew. After a few more rounds of this I urged Weeble to leave the orb alone and leave the room.
+### The Eye That Speaks
+
+Further on we found a room with a statue, a wolf’s head and an orb, or perhaps an eye. Five shadows of ash were spread around its walls. I made the orb glow with light, and when I touched it I heard voices: “Return me to the place I belong.” Schlopkht and I were still debating whether to move the orb, and if so where, when Weeble picked it up, and the five shadows slid off the walls toward him. Weeble put the orb back and the shadows withdrew. After a few more rounds of this I urged Weeble to leave the orb alone and leave the room.
+
+### A Door With Teeth
 
 There was one door out, and Weeble volunteered to lead. When he touched it, the door turned into a most hideous beast. A mimic! Aera saved the day again, killing the thing and saving Weeble.
 
-In the next rooms Weeble opened a footlocker. Inside was a boneless creature that looked like [Gustav Durst](/wiki/gustav-durst/). It began wrapping itself around Weeble, and we all tried to fight it off him. It lashed at Weeble twice before it fell to Aera's blade.
+### The Boneless
 
-I offered to search the rest of the footlocker in Weeble's name, pledging that he would have first claim to anything in it, since he had just taken a beating from the boneless and his luck at exploring had been poor. Inside we found:
+In the next rooms Weeble opened a footlocker. Inside was a boneless creature that looked like [Gustav Durst](/wiki/gustav-durst/). It began wrapping itself around Weeble, and we all tried to fight it off him. It lashed at Weeble twice before it fell to Aera’s blade.
+
+I offered to search the rest of the footlocker in Weeble’s name, pledging that he would have first claim to anything in it, since he had just taken a beating from the boneless and his luck at exploring had been poor. Inside we found:
 
 * Cloak of Protection
 * Small Wooden object
@@ -40,6 +51,8 @@ Level 2
 3. Invisibility
 4. Magic Weapon
 
+### “He Is the Land”
+
 Schlopkht and Aera crept down one last set of stairs and found two hallways: one with water and a portcullis barring the way, the other dry. They explored the murky water and heard a voice:
 
 > He is the ancient.  
@@ -47,13 +60,17 @@ Schlopkht and Aera crept down one last set of stairs and found two hallways: one
 
 Aera and Rose mended a broken wheel, and with it Schlopkht raised the portcullis. He jammed the wheel to hold the way open, and we went into the next room.
 
+### The Altar and the Mound
+
 In the middle of the room stood an altar of sorts with a wrapped bundle on it. A tendril ran from the bundle to a pulsing mass on the far side of the room. Some of us realized this must be the bottom of the well we had found [earlier](/posts/finishing-the-manor/).
 
-The mass was a mound of flesh, and it began moving toward Aera at the altar. Weeble met it with his sword, and I laid Lathander's ward against evil on him. Aera shot at the mound and handed me the shard, to see whether I could work out how to use it in case the mound was [Walter Durst](/wiki/walter-durst/). I held the shard high and called “Walter!” It did nothing, but I kept at it for the rest of the fight while everyone else pounded on the flesh mound. At last its rib cage split open, and an undead Walter hovered inside. Aera cleaved Walter's head clean off, and the mound collapsed.
+The mass was a mound of flesh, and it began moving toward Aera at the altar. Weeble met it with his sword, and I laid Lathander’s ward against evil on him. Aera shot at the mound and handed me the shard, to see whether I could work out how to use it in case the mound was [Walter Durst](/wiki/walter-durst/). I held the shard high and called “Walter!” It did nothing, but I kept at it for the rest of the fight while everyone else pounded on the flesh mound. At last its rib cage split open, and an undead Walter hovered inside. Aera cleaved Walter’s head clean off, and the mound collapsed.
 
 ![A mound of rotting flesh and roots in the cult's cellar, a ghostly child glowing inside](/images/walter-durst-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
+
+### The House Comes Down
 
 The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and vowed to kill us for destroying her pet. The ground began to shake. As we raced for the stairs, the ghost of [Gustav Durst](/wiki/gustav-durst/) blocked the way and told us we must stay to appease Elisabeth. I reasoned with him: Rose and Thorn were with us, and this was his last chance to make things right, to be a good father and give his children the peace they deserved. Gustav let us pass and told us not to stop and fight anything. Just run!
 
@@ -61,13 +78,13 @@ Spectral things lashed at us on the way up, but we dodged them and the falling r
 
 When the dust settled we found ourselves in a forest beside a stone tower, with Rose and Thorn.
 
-## Key Locations:
+## Key Locations
 
 * **The tunnels below Durst Manor**: The room of the orb and the five ash shadows, the mimic’s door, and a flooded hall barred by a portcullis.
 * **The altar room**: Walter’s bundle on the altar, tied to a mound of flesh at the bottom of the well.
 * **A stone tower in a forest**: Where we found ourselves with Rose and Thorn when the dust settled.
 
-## Encounters:
+## Encounters
 
 * **Two ghouls**: Shown by Aera’s shining rock. Weeble held the passage while Aera shot them.
 * **The orb**: “Return me to the place I belong.” The five shadows came for Weeble whenever he took it up.
@@ -76,7 +93,7 @@ When the dust settled we found ourselves in a forest beside a stone tower, with 
 * **The flesh mound**: Its ribs split open on an undead Walter, and Aera cleaved off his head.
 * **The escape**: Gustav let us pass, and we ran from spectral things and falling rocks as the house sank into the ground.
 
-## Loot:
+## Loot
 
 * **Cloak of Protection**: From the footlocker, where Weeble had first claim.
 * **Chain Shirt**
@@ -85,20 +102,20 @@ When the dust settled we found ourselves in a forest beside a stone tower, with 
 * **Small wooden object**
 * **Spell book**: Disguise Self, Identify, Mage Armor, Magic Missile and Protection from Good and Evil; Darkvision, Hold Person, Invisibility and Magic Weapon.
 
-## Notable NPCs:
+## Notable NPCs
 
 * **Rose Durst**: Lent her power to light the way and to mend the wheel.
 * **Walter Durst**: The beast inside the flesh mound.
 * **Elisabeth Durst**: Vowed to kill us for destroying her pet.
 * **Gustav Durst**: Blocked the stairs, then let us go for his children’s sake. “Just run!”
 
-## Plot Points:
+## Plot Points
 
 * **“He is the ancient. He is the land.”**: A voice in the murky water.
 * **Walter is dead**: And Durst Manor is gone into the ground.
 * **Rose and Thorn**: Still with us in the forest.
 
-## Session Highlights:
+## Session Highlights
 
 * Reasoning with Gustav’s ghost: his last chance to be a good father.
 * Holding the shard high and calling “Walter!” for the whole fight, to no effect.

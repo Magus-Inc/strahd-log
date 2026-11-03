@@ -525,7 +525,7 @@ def test_places_are_not_first_seen_where_we_only_heard_of_them():
     posts = build.load_posts(build.ROOT / "content" / "posts")
     pages = wiki.load_wiki(build.ROOT / "content" / "wiki", build.split_front_matter)
     style = poststyle.load_style(build.ROOT / "data" / "post-style.yaml")
-    build.apply_style(posts, style, poststyle.load_scenes(build.ROOT / "data" / "scene-headings.yaml"))
+    build.apply_style(posts, style)
     build.number_sessions(posts)
     build.link_wiki(posts, pages, style["relink"])
     named = {p.slug: {x.slug for x in p.mentioned_in} for p in pages}

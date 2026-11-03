@@ -76,6 +76,7 @@ class Post:
     slides_at: str = "above-story"  # where the slides go (poststyle slides setting)
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
     party: dict = field(default_factory=dict)  # data/party.yaml: died/revived/joined/returned/left -> [wiki pages]
+    cast_names: list[str] | None = None  # front matter `cast:`: the player characters there (the post format)
 
     @property
     def path(self) -> str:
@@ -201,6 +202,7 @@ def parse_post(path: Path) -> Post:
         tags=[str(t) for t in tags],
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         source=path,
+        cast_names=[str(n) for n in meta["cast"] or []] if "cast" in meta else None,
     )
 
 
@@ -241,10 +243,14 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
 
 
 def apply_style(posts: list[Post], style: dict, scenes: dict | None = None) -> None:
-    """One look for every post (see poststyle.py, data/post-style.yaml and data/scene-headings.yaml)."""
+    """One look for every post (see poststyle.py and data/post-style.yaml)."""
     for post in posts:
-        styled = poststyle.apply(post.html, style, (scenes or {}).get(post.slug))
-        post.html, post.characters_html = styled.html, styled.characters
+        if post.cast_names is not None:  # the one post format
+            post.html = poststyle.apply_format(post.html, style).html
+            post.characters_html = f"<p>{', '.join(post.cast_names)}</p>" if post.cast_names else ""
+        else:
+            styled = poststyle.apply(post.html, style, (scenes or {}).get(post.slug))
+            post.html, post.characters_html = styled.html, styled.characters
         if style["tagline"] == "none":
             post.tagline = ""
         post.show_cast = style["cast"] != "list"
@@ -517,6 +523,7 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
         "site": root,
         "posts": [{"title": p.title, "date": p.date.date().isoformat(), "url": root + p.path,
                    "glance": [wiki.plain_text(g) for g in p.glance], "wiki": sorted(p.mentions),
+                   "cast": sorted(p.listed),
                    "text": p.body_md.strip()} for p in reversed(posts)],
         "wiki": [{"slug": w.slug, "title": w.title, "type": "dm" if w.dm else w.type, "aliases": w.aliases, "summary": w.summary,
                   "url": root + w.path, "text": w.body_md.strip()} for w in pages],

@@ -4,15 +4,21 @@ date: '2024-10-29T21:00:00-05:00'
 tagline: Can we keep her safe?
 slug: finding-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finding-arabelle
+cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
 ---
 
-**Healing Gumbo**  
+## Story
+
+### Gumbo’s Festering Bite
+
 After the battle we checked one another over and found a festering bite on Gumbo. I read the scroll of Remove Curse, though its magic was beyond my training. By Lathander’s grace it worked: Gumbo, our half-orc rogue, was cured of lycanthropy, and the scroll crumbled to nothing.
 
-**Reunions and New Friends**  
+### Reunions at the Inn
+
 Szoldar went back to his hut, and we found Ireena again at the gate. At the Blue Water Inn, Danika told us Rictavio was at his yellow wagon, the same wagon whose traces we had seen near the tower. Shabasta played at the inn for a bed and beer. We also met Liren, a golden dragonborn barbarian with a great axe.
 
-**Confronting Rictavio**  
+### Rictavio van Richten
+
 When Rictavio came into the inn we knocked at his door and named him Rictavio van Richten, and he let us in. We told him of our mission to save a girl and convinced him we were not Strahd’s agents. Then he told us his story.
 
 He had been lying low in the tower at Lake Baratok until he saw a Vistana bring a wriggling sack to a golden-haired vampire spawn on the bank of the Luna River. He knew the vampire: Escher, a bard from Barovia who had joined the villagers’ revolt. Van Richten attacked, killed the Vistana and scarred the vampire, who fled. In the sack was a young Vistana girl, Arabelle, who did not know why she had been taken. With his talisman of echoes he questioned the dead man’s severed head and learned that Strahd has put a bounty on girls who match Arabelle exactly: dark hair, olive skin, lavender eyes. Taking her back to the Vistani camp would leave her exposed, so they went to the tower, where he had hidden his horse, Drusilla, and the covered wagon he first brought into Barovia. Wearing the dead Vistana’s face by way of his hat of disguise, he stole three pots of paint from the camp by Vallaki and painted the wagon as “Rictavio’s Carnival of Wonders.” Then he came to Vallaki as Rictavio, hiding in plain sight, with Arabelle hidden in the wagon ever since.
@@ -25,41 +31,45 @@ The tower holds a permanent field that blocks magic, and so Strahd’s scrying, 
 
 He also told us how he first came to Barovia hoping to face Strahd alone and destroy him in his coffin while he slept. That plan failed when an undead dire wolf attacked three Barovian children, and in the fight Doru saw who he was. Doru blackmailed him into leading a revolt on the castle, threatening to bring an untrained mob to Ravenloft’s doors without him. Fearing such a mob would wake Strahd and ruin everything, van Richten agreed. Inside the castle they were betrayed: Escher, Doru’s lieutenant, slipped away in the catacombs, the mob found Strahd’s coffin empty, and soon Strahd fell upon them. Van Richten fled, knowing from long study that victory was impossible. He meant to ride and warn the villagers, but Madam Eva stopped him and warned that his message would be carried by another, and that if he returned to the village while light lingered in the valley he would surely meet his grave. Knowing her reputation, he went to Lake Baratok instead, weeping for the sons and daughters of Barovia.
 
-**Secrets Revealed**  
+### Arabelle Found
+
 Rictavio has enchanted his wagon to seem less inviting, and he confirmed he is protecting Arabelle. Aera gave Arabelle the bracelet and so revealed the clues she had left for us. Arrigal, who had been tailing us, showed himself.
 
 Rictavio handed me the Talisman of Echoes, which lets one ask questions of the dead a few times. We used it on Yann’s head, which van Richten had kept. From it we judged that Arrigal had no part in taking Arabelle. Arrigal and van Richten disagree on how best to keep her safe, so we suggested she stay in the enchanted wagon at the Vistani camp.
 
 Note: The Talisman of Echoes has four charges: one casts gentle repose, two cast speak with dead. It regains 1d4 each dawn, and spending the last one risks it crumbling to ash.
 
-**The Prophecy**  
+### Arabelle’s Prophecy
+
 Aera asked Arabelle whether she had anything to tell us, and she spoke a prophecy.
 
 > In darkest night, the light shall flee,
-
+>
 > No dawn to break, with no reprieve.
-
+>
 > From the grave, the dead shall climb,
-
+>
 > Their restless march a baleful sign.
-
+>
 > At castle’s peak, a heart beats red,
-
+>
 > Its hunger deep and ever-fed.
-
+>
 > Should silence fall, the skies shall crack,
-
+>
 > A thousand souls in torment black.
 
-**Back to Town**  
+### Ireena at St. Andral’s
+
 We spent the night at the Blue Water Inn and in the morning escorted Ireena to the Church of St. Andral. The town was making ready for the Festival of the Blazing Sun, two days off, and we met Henrik delivering materials to repair the church.
 
-**The Church**  
 A window in the chapel is broken, and a man named Milivoj was up a stepladder mending it.
 
 We asked the priest, Father Lucian, whether he could help us honor Ismark’s wish to protect Ireena. He offered her shelter for good.
 
 The church is hallowed ground and protected from the undead, which makes it a fine place to keep Ireena, and maybe Arabelle too, but only while the ward holds. It will not stop Strahd’s living agents, only the undead.
+
+### The Bones Are Gone
 
 The protection comes from bones kept in a crypt, and a ritual must be held at each feast to renew it. But the bones were stolen recently, so the wards cannot be renewed. Yeska, the boy who works at the church, knew of the bones and the ritual, so the priest suspects him.
 
@@ -67,14 +77,14 @@ We found a torn piece of gray wool and a rust-stained smear of dirt on a board, 
 
 We think the damage to the church was a way in to steal the bones. Milivoj has black hair and a gray cloak, which makes him our prime suspect.
 
-## Key Locations:
+## Key Locations
 
 * **Blue Water Inn**: Where we found Rictavio, and spent the night.
 * **Rictavio’s wagon**: Enchanted to seem less inviting, with Arabelle hidden inside.
 * **The tower at Lake Baratok**: Where van Richten hid, in a field that blocks magic.
 * **Church of St. Andral**: Hallowed ground, its broken window under repair and its bones stolen.
 
-## Encounters:
+## Encounters
 
 * **Healing Gumbo**: The scroll of Remove Curse worked, by Lathander’s grace, and crumbled to nothing.
 * **Confronting Rictavio**: We named him Rictavio van Richten, and he told us his story.
@@ -82,11 +92,11 @@ We think the damage to the church was a way in to steal the bones. Milivoj has b
 * **Arabelle’s prophecy**: Spoken when Aera asked if she had anything to tell us.
 * **The church**: A torn piece of gray wool, a rust-stained smear, boot prints with grass and white petals, and dark hair on the altar.
 
-## Loot:
+## Loot
 
 * **Talisman of Echoes**: From Rictavio, to ask questions of the dead.
 
-## Notable NPCs:
+## Notable NPCs
 
 * **Rictavio van Richten**: Hiding in plain sight as Rictavio, keeping Arabelle safe.
 * **Arabelle**: A Vistani girl with lavender eyes, rescued from Escher.
@@ -103,7 +113,7 @@ We think the damage to the church was a way in to steal the bones. Milivoj has b
 * **Yeska**: The boy who works at the church, suspected by the priest.
 * **Henrik**: Delivering materials to repair the church.
 
-## Plot Points:
+## Plot Points
 
 * **Strahd’s bounty**: On girls who match Arabelle exactly: dark hair, olive skin, lavender eyes.
 * **The amulet**: Arabelle wears van Richten’s spare, which guards against detection and location.
@@ -111,7 +121,7 @@ We think the damage to the church was a way in to steal the bones. Milivoj has b
 * **The church’s ward**: Bones in the crypt protect it from the undead, but they were stolen, so it cannot be renewed at the next feast.
 * **The Festival of the Blazing Sun**: Two days off.
 
-## Session Highlights:
+## Session Highlights
 
 * Gumbo cured of lycanthropy.
 * Van Richten’s story of the revolt on the castle.
