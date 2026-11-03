@@ -59,6 +59,15 @@ def test_hand_made_wiki_links_look_like_the_others():
     assert '<a class="wiki-link" href="/wiki/ireena/">Ireena</a>' in html
 
 
+# --- cast -----------------------------------------------------------------------------------
+
+def test_cast_list_shows_the_characters_above_the_story():
+    for pick in ("list", "pills+list"):
+        html = poststyle.apply(md(POST), {"cast": pick, "story": "titled"}, ["Crusty", "Aera shan Ravanór"])
+        assert html.startswith("<h2>Characters</h2>\n<ul>\n<li>Crusty</li>\n<li>Aera shan Ravanór</li>\n</ul>\n" + poststyle.STORY)
+    assert "Characters" not in poststyle.apply(md(POST), {"cast": "pills"}, ["Crusty"])
+
+
 # --- glance, picture ------------------------------------------------------------------------
 
 def test_glance_none_removes_the_box():

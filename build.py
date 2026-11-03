@@ -245,7 +245,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
 def apply_style(posts: list[Post], style: dict) -> None:
     """The look settings (data/post-style.yaml, poststyle.py) on every post in the one post format."""
     for post in posts:
-        post.html = poststyle.apply(post.html, style)
+        post.html = poststyle.apply(post.html, style, post.cast_names)
         # Who the front matter's `cast:` names; link_wiki finds their pages, shown or not.
         post.characters_html = f"<p>{', '.join(post.cast_names)}</p>" if post.cast_names else ""
         if style["tagline"] == "none":

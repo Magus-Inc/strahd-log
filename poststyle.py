@@ -63,8 +63,8 @@ def load_style(path: Path) -> dict:
     return style
 
 
-def apply(html: str, style: dict) -> str:
-    """A post's rendered Markdown, with the look settings applied."""
+def apply(html: str, style: dict, cast: list[str] | None = None) -> str:
+    """A post's rendered Markdown, with the look settings applied; cast is its `cast:` names."""
     style = {**AS_WRITTEN, **style}
     heading = {"titled": style["story-title"], "as-written": "Story"}.get(style["story"])
     m = STORY_HEADING.search(html)
@@ -81,6 +81,9 @@ def apply(html: str, style: dict) -> str:
         html = html[:start] + re.sub(r"<h3[^>]*>.*?</h3>\s*", "", html[start:end], flags=re.S) + html[end:]
     if heading:
         html = html.replace(STORY + "\n", f"{STORY}\n<h2>{htmllib.escape(heading, quote=False)}</h2>\n", 1)
+    if style["cast"] != "pills" and cast:  # a Characters list above the story (link_wiki links the names)
+        items = "".join(f"<li>{htmllib.escape(name, quote=False)}</li>\n" for name in cast)
+        html = html.replace(STORY, f"<h2>Characters</h2>\n<ul>\n{items}</ul>\n{STORY}", 1)
     html = mark_story_end(html)
     html = gold_links(html)
     if style["picture"] == "top":
