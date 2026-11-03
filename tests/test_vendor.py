@@ -9,7 +9,6 @@ from pathlib import Path
 import pytest
 import yaml
 
-import build
 import vendor_check
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -98,10 +97,8 @@ def test_advisories_are_looked_up_per_listed_version(tmp_path):
 # The built site: every script, stylesheet and font is ours.
 
 @pytest.fixture(scope="module")
-def site(tmp_path_factory):
-    out = tmp_path_factory.mktemp("site") / "public"
-    build.build(out_dir=out, site_url="https://owlbear.dicelore.quest", base_path="/")
-    return out
+def site(real_build):
+    return real_build.out  # the one real build per run (tests/test_conftest.py)
 
 
 def outside(url: str) -> bool:
