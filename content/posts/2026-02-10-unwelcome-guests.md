@@ -19,6 +19,10 @@ We still had twelve hours left of the ward against the touch of death that Strah
 
 Note: The party briefly debated a “Trojan Bunny” strategy, or stealing the Vistani crest, before settling on diplomatic neutrality.
 
+![A Vistani camp by a misty pool at night, painted wagons and dancers around a fire](/images/vistani-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Strahd Rides Out
 
 At the edge of the precipice we watched Strahd von Zarovich ride out of the castle on his nightmare, Beucephalus. With the master gone, Aera made herself invisible and Crusty gave her the power to fly. She soared across the chasm and came up behind the wights on the ramparts. With a conjured hand she picked the alarm horn from the first wight’s pocket, then took the second wight’s horn as well. It nearly went very wrong when she tried a running somersault dropkick to send one of them off the edge. She stumbled and bounced off the guard, and the kick undid her invisibility. The fight broke out, and we destroyed the wights. Aera poured oil on the drawbridge chains to quiet them, and we lowered the drawbridge and reached the servants’ entrance.

@@ -29,6 +29,10 @@ The guards mentioned a strange man with long ears who had come to town on a carn
 
 The streets were empty but for one cloaked figure walking away from us. Several ravens sat on the roof of the inn, whose sign shows a blue waterfall. Inside was a colorfully dressed half-elf in a big hat, surely the man the guards meant. Urwin at the bar welcomed us. He is married to Danika, who runs the inn. We ordered wine and a meat pie.
 
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 The bard was almost a ringmaster, and very entertaining. His name is Rictavio, and he went upstairs. There was some unease when talk turned to the Baron and anyone criticizing him.
 
 Two boys crouched on the balcony in front of a door, dangling a stuffed bat over the bar to tease Karl and Nikolai. Karl and Nikolai are against the Baron, and their mother is a sensitive subject. The boys, Brom and Bray, have good masks.
@@ -46,6 +50,10 @@ The barkeep passed a parcel from under the bar to Rictavio, who tucked it under 
 A procession silenced the whole town, led by the Baron and Izek. We think Izek pushed an old woman into the mud. Her son Udo has been imprisoned, and she too was taken to the stocks. The Festival of the Sun, we now hear, is in four days.
 
 Note: LEVEL 4!!!
+
+![The Baron of Vallaki in a fur-trimmed coat and chain of office, leading a procession with Izek through the silent town square](/images/baron-of-vallaki-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ## Key Locations
 

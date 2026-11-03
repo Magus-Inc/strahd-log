@@ -17,9 +17,17 @@ A row of stocks stands in the square, and every soul in them wears a crude donke
 
 Among the cluttered shelves of Blinsky’s Toy Store was a doll that looked eerily like Ireena, and Aera stole it. A thread to her fate, perhaps? Blinsky also whispered of a clockwork man inside Castle Ravenloft, which only made us more curious.
 
+![Blinsky the toymaker grinning in his shop full of creepy toys](/images/blinsky-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Arabelle Is Missing
 
 At the encampment we met Shabasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
+
+![The Vistani camp by Vallaki at dusk: painted wagons round a fire, broken pots, a whip cracking, dusk elves sitting apart, the Luna River to the west, the main road, and Vallaki's palisade with refugee tents beyond](/images/vallaki-vistani-camp-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Alexi claimed Yann drugged him and took her. Yann had met a grisly end: a dusk elf found his severed head nearby, toward the Luna River.
 

@@ -55,11 +55,19 @@ Note: The table named Malron’s rule “the Shabasta clause.” Under the table
 
 The Icon of Dawn’s Grace stirred. Motes of golden light gathered over the fallen beast into an orb of golden flame above the Abbot’s chest, and the shard of divinity asked each of us to touch the icon to it, ape hand included. We found ourselves in a dark, endless void of rolling mist, drawn toward the sound of sobbing. There sat the Abbot as a gaunt young man in threadbare robes, a blindfold of mist over his eyes and his frayed wings shackled to the ground, muttering “I’ve failed you.” I told him he hasn’t failed: this is his chance to be reborn. A Tarokka card drifted down, the Four of Glyphs, the Shepherd, drawn as an older woman under a rising sun: a message from St. Markovia. Shabasta’s words could not reach him, so I called on her by name.
 
+![The Abbot as a young man, weeping in the void inside the Icon of Dawn's Grace, his wings chained down with mist](/images/the-void-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### Saint Markovia Returns
 
 St. Markovia appeared in a simple white robe, her eyes kind and strong. She knew the Abbot by his name, Ethereal, and asked to approach him. The Abbot confessed that he threatened her friends, separated parents from children and abused the faith of those who trusted him, and asked how she could forgive him. I answered: “Because that’s what the Morning Lord would want. Second chances, rebirth, a new dawn. This could be your new dawn.” The mist burned from the Abbot’s eyes, the void vanished in white light, and in the beast’s place a white-winged youth in plain white robes lay sleeping on the abbey floor. Ethereal is restored. I asked the golem to look after him.
 
 Note: Crusty took zero damage the entire fight. Inspiration for the session went to Olfin for the sacrifice. The party reached level 8, which sent everyone to their character sheets.
+
+![Saint Markovia as a glowing spirit in a simple white robe, holding out her hand](/images/saint-markovia-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

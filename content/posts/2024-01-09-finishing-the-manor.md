@@ -47,6 +47,10 @@ A chamber held a stove and a large trunk under a sheet. In the trunk was a corps
 
 Another bedroom held nothing of interest, so we unlocked the last door and found the spectral figures of Rose and Thorn. There was a bricked-up window, a toy chest with windmills painted on its side, and a dollhouse that is a perfect replica of the manor, with miniatures of everything in it. There were also two skeletons, one holding a doll. We concluded the children had been left there to starve. Rose mended a toy Thorn had broken with a little spell.
 
+![Rose and Thorn Durst, two ghost children side by side at the manor gate, Thorn hugging a stuffed toy](/images/rose-and-thorn-durst-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 From Rose we learned that the nursemaid who looked after Walter was not [Klara](/wiki/klara/), but we did conclude that Walter was Klara’s son. Rose asked [Weeble Wobleston](/wiki/weeble-wobleston/) to promise to bury their bones in the garden, and in return she showed us a secret stairway down to the basement. Then Thorn asked whether he and Rose could come with us as spirits joined to our bodies. Thorn joined with [Olfin Darning](/wiki/olfin-darning/), and Rose with Aera.
 
 ### Down Into the Chanting

@@ -21,6 +21,10 @@ In Barovia, Ismark the Lesser greeted us and offered us rest in the Burgomaster�
 
 Note: \[There was a meta-discussion about leveling up. The DM explained that while they had “leveled up in heart”, they would stay at their current levels until certain tasks, like delivering goods, were done.\]
 
+![Ismark, a tired young man in a cloak with a longsword, in a dim tavern](/images/ismark-kolyanovich-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### An Unkindness of Ravens
 
 As we left Barovia a flock of ravens joined us, an “unkindness”, I am told, rather than a murder, and stood watch over us as an honor guard. They had heard of our deeds from the Keepers of the Feather. An hour short of Vallaki’s gates, Aera found three corpses on the road. Two were Barovians. The third was a perfect copy of Aera herself, without her gear. As we looked closer the false corpse crumbled away, and six dire wolves and two scarecrows fell on us, sent by Strahd to punish Aera for her “sneaking and stealing” in his castle.
@@ -30,6 +34,10 @@ It was a wild fight. The scarecrows’ dreadful gaze froze Aera at once, and a w
 ### The Baron’s Plea
 
 In Vallaki, Baron Dmitri Krezkov was waiting for us at the Blue Water Inn. Desperate, and untouched by the inn’s merriment, he begged us to save his wife, Anna, from the Abbot’s gruesome demand. We agreed and set out for Krezk. We rested a short while near the Raven River crossroads, where a revenant warned us of “dark tidings” and of Vladimir Horngaard’s rage at our raid on Ravenloft.
+
+![Dmitri Krezkov at the snowy gate of Krezk](/images/dmitri-krezkov-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### The Abbot’s Sad History
 

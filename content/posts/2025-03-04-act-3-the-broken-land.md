@@ -31,6 +31,10 @@ Nine strong now, we traveled southwest. We crossed a bridge to a four-way crossr
 
 Further south we met a mountain woman with a stone axe, who warned us to keep clear of the forest folk at Yester Hill.
 
+![A woman of the mountain folk with a stone axe on a rocky mountain path, raising a hand in warning above a misty forested valley](/images/mountain-folk-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 At another crossroads a revenant guarded a bridge to the west. He urged us to visit Argynvostholt and warned of blights at the vineyard, which can be neither blinded nor deafened. The mountain folk, he told us, worship the ancient goddesses of the valley, not Strahd as the forest folk do.
 
 As we neared the vineyard, Muriel stumbled into a trap. We found an ancient monument to the Huntress, a slab bearing a pristine three-pointed star.
@@ -38,6 +42,10 @@ As we neared the vineyard, Muriel stumbled into a trap. We found an ancient monu
 ### Down the Trapdoor
 
 A dark-cloaked figure appeared and beckoned, and dozens of ravens watched in silence as we came near. Muriel knew him: Davian. He warned us of danger and vanished down a trapdoor. Strix cries echoed from every side, and we followed him down.
+
+![Davian Martikov in a dark hooded cloak at a trapdoor among the vines, ravens around him](/images/davian-martikov-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

@@ -19,7 +19,15 @@ The druids had caught ravens, believing them spies for the shadow lord. One drui
 
 Then the forest folk attacked, and their hatred for Davian showed. He belongs to the Keepers of the Feather, who oppose Strahd. The Keepers guide and shelter rather than fight openly, and the ravens are part of how they work. Urwin Martikov is one of them too.
 
+![Ravens of the Keepers of the Feather watching travellers from a vineyard fence at dusk](/images/keepers-of-the-feather-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Davian told us of his younger son, Elvir, who defied his father’s warning and joined Doru’s doomed assault on Castle Ravenloft.
+
+![Elvir Martikov with a torch among the rebels marching up a misty road to Castle Ravenloft, a raven above him](/images/elvir-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### Three Green Gems
 

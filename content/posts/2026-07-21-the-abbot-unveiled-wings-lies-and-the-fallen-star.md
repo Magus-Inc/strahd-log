@@ -31,6 +31,10 @@ Note: Olfin’s roll was a 23. Command word brainstorming followed. “I’m Bat
 
 We found the Abbot in the asylum, room S15, a lightless corridor of cells whose prisoners cackle and curse behind locked doors. A handsome young man in monk’s robes stood halfway down the hall with a prayer book under his arm, scolding Vasilka, the “perfect bride” he is building for Strahd, for tending the blighted mongrelfolk on the very day of her “operation.” Behind them loomed the flesh golem we once gave a crown of flowers. The Abbot soothed Vasilka with talk of the Morning Lord’s grace and of everyone’s proper place, then turned to us: “Visitors, welcome back to the Abbey of St. Markovia. What’s your reason for being here?”
 
+![Vasilka, a stitched bride in a white gown, tending a mongrelfolk in the asylum](/images/vasilka-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 Our reason was grim. In Vallaki, at the Blue Water Inn, Baron Dmitri Krezkov of Krezk had begged us to stop the Abbot, who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka. I remembered what Ezmerelda told us: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed and his mind restored. We talked of luring the Abbot away from the golem, but the corridor was tight and the cells might hold allies for either side. Aera took rope from her pack, used an illusion to make it look like a new crown of flowers, and walked up and gave it to the golem.
 
 Note: Long above-the-table debate about distractions, illusions and whether a construct counts as a creature. Crusty rolled a 17 on History and learned that flesh golems understand their creator’s language but cannot speak. Aera’s illusion was Silent Image.
@@ -38,6 +42,10 @@ Note: Long above-the-table debate about distractions, illusions and whether a co
 ### Olfin Ends the Talking
 
 Olfin ended the talking. He told the golem, “We’re here to destroy your master. Will you help us?” and struck at the Abbot with a shining blow. The holy light barely seemed to touch him. Light poured from the Abbot: towering white wings unfurled, his robes fell away to marble-white flesh, golden gauntlets and a golden sarong, and he rose to nearly seven feet. “If you will not obey, then I will make you.” The Abbot had become Ethereal. Vasilka fled in terror.
+
+![The Abbot, a handsome young monk, faint wings of fallen light behind him](/images/the-abbot-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 Aera opened with her moon-touched blade, struck deep where he was unguarded and slipped away. Ethereal flew at her and loosed a ray of light from his hands. Shabasta lifted Aera’s spirit with a song and set Ethereal’s golden gauntlets glowing hot. I spotted a lever that opens the cells, and Olfin later pulled it, freeing four weak, blighted mongrelfolk. I began to doubt that our tale of Cyrus had fooled the Belviews as well as it seemed. Ethereal smashed me in the face, though Lathander’s flare spoiled his aim, and Crusty answered with fire while his owl distracted the angel.
 

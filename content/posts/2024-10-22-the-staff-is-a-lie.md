@@ -37,9 +37,17 @@ Map of Barovia
 
 We rested a while before going in. Four statues stood around a central platform, which lifted us to the second floor, where the floor felt suspiciously weak. On the third floor was an old rotted crib, empty. The fourth floor had been lived in recently: a bed, a desk, a colorful beaded bracelet, a silver dagger, and a Hooded One card, the card of hidden identities. We also found a burned journal page and a singed sketch of Rictavio’s carnival.
 
+![A stone tower by a misty lake, a purple and gold Vistani wagon at its foot](/images/tower-of-khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Van Richten’s Journal
 
 The journal tells of a man haunted by his pursuit of darkness, which began when a vampire murdered his child. The lifelong hunt has left him weary and troubled. We knew the handwriting from a guide to hunting vampires, and so we are sure: Rictavio is van Richten, and he may be at the Blue Water Inn.
+
+![Van Richten as Rictavio, a colourful half-elf showman in a big hat beside his yellow wagon](/images/van-richten-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### Trappers Turn to Wolves
 

@@ -30,6 +30,10 @@ We began by going back over our last morning at Castle Ravenloft. After Aera’s
 
 On the road back to Vallaki each of us felt our strength grow. We gathered under the flickering lamps of the Blue Water Inn, the Count’s wine still bitter on our tongues, and the terror of that failed dinner hardened into cold resolve. The rest of the night went to planning and preparation.
 
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We will not wait for him. Using what we learned of the castle (not from Doru) and the castle maps of Rudolph van Richten, we mean to strike during Strahd’s fourteen-day hunting cycle, while he should be away from the castle, slip into the catacombs, and take the relics and free the allies we need.
 
 First of all comes Argynvost’s skull. The gargoyle at Argynvostholt promised: “When the dragon dreams its dream within its rightful tomb, the light of Argynvost will beam and rid this land of gloom.” That is the Shining Beacon of the prophecy. Then the Icon of Dawn’s Grace, the silver statuette the spirits told us of, the only cure for the madness of the Abbot, the tainted angel of the abbey above Krezk. Then the Spear of the Huntress, who is one of the Ladies Three, a token to win their favor before we face the Count. And two prisoners: Emil Toranescu, the werewolf leader, in the south dungeon, and Gertruda, Doru’s betrothed, in the King’s Bedchamber.

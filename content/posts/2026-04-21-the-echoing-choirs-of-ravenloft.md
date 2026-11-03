@@ -29,6 +29,10 @@ Note: \[The DM gave a long lore dump on the Icon’s history, spanning 400 years
 
 We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. With the wizard’s own brass-knobbed staff we worked a hidden mechanism, and the marble slab lifted. Under it was a leather case of potent spell scrolls: Fireball, Lightning Bolt and Cone of Cold. Nearby, in Crypt 31, I got past a pit hidden under a tarp and took a scroll of Magic Circle.
 
+![Growmor Nimblenobs on his marble slab, clutching his staff](/images/growmor-nimblenobs-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 At the far end of the catacombs stands the greatest tomb of all. A heavy portcullis bars its archway, and beyond it black marble steps go down into a dark vault thirty feet high. We are all but sure it is Strahd’s own, the place where he sleeps. We left it alone; our business here is the relics and Gertruda.
 
 Battered and low on magic, we decided to rest the night. Crusty conjured a small magic hut in a dark corner of the catacombs, and I called down Lathander’s aid to strengthen us all before we slept.
@@ -44,6 +48,10 @@ Note: \[Realizing they faced a CR 14 opponent while still worn down, the players
 ### Rahadin Driven Off
 
 The battle was brutal. Rahadin’s very presence is agony to the mind, and his saber nearly felled me more than once. Crusty and Aera worked together, and in the end Crusty sped Aera up so she could pepper the chamberlain with arrows from her “turbo bow.” For all we did, and though I called up a guardian of faith, Rahadin stayed a ghostly, deadly threat, zigzagging through our defenses. He called up skeletons from the crypts we had opened. Then, wounded, he healed himself with an amulet and ran, though he had the upper hand.
+
+![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

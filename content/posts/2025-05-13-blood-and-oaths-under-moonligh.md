@@ -23,6 +23,10 @@ Ilya’s story laid bare a conspiracy. The Abbot deceived him, and Strahd and Ba
 
 We took the oath, and in return Zuleika gave Olfin the Symbol of Ravenkind.
 
+![The Symbol of Ravenkind, a silver sunburst amulet with a red crystal at its heart, on dark velvet beside a candle](/images/symbol-of-ravenkind-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Strahd’s Hourglass of Blood
 
 We escaped the cave and made camp in the forest, and Strahd himself appeared. His mood was unsettlingly playful. Angry that we had raided the den of his ally Kiril, he conjured an hourglass full of blood and forced us into a cruel game of sacrifices.
@@ -36,6 +40,10 @@ We escaped the cave and made camp in the forest, and Strahd himself appeared. Hi
 ### Sir Godfrey’s Tale
 
 When Strahd’s game was done we pressed on to Argynvostholt, the ruined mansion of the Order of the Silver Dragon. There we met Sir Godfrey Gwilym, who told us the tragedy of his once-great order.
+
+![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Strahd stole the skull of Argynvost, desecrating their memory, and Rahadin slew their commander, Horngaard. Sir Godfrey warned us to keep out of Horngaard’s chamber, to avoid the fourth floor, and to beware the phase spiders in the ruins. Horngaard is very powerful and does not want anyone moving against Strahd. A mass grave north of Berez bears the symbol of the Silver Dragon, which will protect us.
 

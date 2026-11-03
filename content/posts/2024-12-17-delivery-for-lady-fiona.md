@@ -39,9 +39,17 @@ Gumbo asked Lady Fiona whether she has any natural-born enemies. She took us to 
 
 We went back to the inn to rest. In the night we woke to a window gone cold with frost, and a message spelled out on it: “Help Victor” and “Erasmus.” We remembered that van Richten’s son had that same name. When we asked where, the answer came: Vallakovich Manor. We agreed to help, and the spirit left. We think the ghostly presence of Erasmus was with Arabelle in the wagon too.
 
+![The faint spirit of a boy at a frosted inn window in Vallaki](/images/erasmus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### Rahadin’s Invitation
 
 At breakfast an elf rode past the inn’s window on a phantom steed. A powerful aura hung about him, a strong sense of fear, and screams. He brought us an invitation from his master, sealed with the von Zarovich crest: dinner at the castle in seven days, at dusk. The elf is Rahadin, and he asked that we bring Ireena as a special guest.
+
+![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### The Gallows
 

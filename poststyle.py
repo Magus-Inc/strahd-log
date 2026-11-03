@@ -130,13 +130,22 @@ def picture_first(html: str) -> str:
 # --- pictures in the story (a format rule, not a look setting) --------------------------------
 
 MAX_PICTURES = 3  # Chris (2026-11-03): "a cap of 3 images per article", the feature picture included
+MOST_PICTURES = 4  # a post Chris names may say `picture-cap: 4` in its front matter ("show a fourth image")
 PICTURE_LINE = re.compile(r"^!\[[^\]]*\]\(([^)\s]+)[^)]*\)\s*$")
 CREDIT_LINE = re.compile(r"^\*AI-generated .*\*\s*$")
 AI_NAME = re.compile(r"-ai(?:-[a-z0-9]+)?\.(?:jpe?g|png|webp)$")
 
 
-def picture_problems(body: str) -> list[str]:
-    """What breaks the picture rules in a post's Markdown body: at most MAX_PICTURES pictures, the
+def picture_cap(meta: dict) -> int:
+    """How many pictures a post may hold: MAX_PICTURES unless its front matter raises it (at most 4)."""
+    cap = int(meta.get("picture-cap", MAX_PICTURES))
+    if not MAX_PICTURES <= cap <= MOST_PICTURES:
+        raise ValueError(f"picture-cap must be {MAX_PICTURES} to {MOST_PICTURES}, not {cap}")
+    return cap
+
+
+def picture_problems(body: str, cap: int = MAX_PICTURES) -> list[str]:
+    """What breaks the picture rules in a post's Markdown body: at most `cap` pictures, the
     first one being the feature picture; each on its own line in the story with words between it and
     the next (two in a row would become a vote between takes); none twice; an AI picture over its
     "AI-generated ..." credit line."""
@@ -160,6 +169,6 @@ def picture_problems(body: str) -> list[str]:
         if AI_NAME.search(name) and not (i + 1 < len(blocks) and CREDIT_LINE.match(blocks[i + 1])):
             problems.append(f"{name} has no AI-generated credit line under it")
     count = len(re.findall(r"!\[[^\]]*\]\(", body))  # a picture inside a paragraph counts too
-    if count > MAX_PICTURES:
-        problems.append(f"{count} pictures: a post holds at most {MAX_PICTURES}")
+    if count > cap:
+        problems.append(f"{count} pictures: a post holds at most {cap}")
     return problems

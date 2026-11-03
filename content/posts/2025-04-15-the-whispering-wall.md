@@ -15,11 +15,19 @@ We hesitated a moment too long on Yester Hill, and Ludmilla called up the mists 
 
 Note: The fight on Yester Hill ran over two nights, 4/8 and 4/15; the 4/8 session had no post of its own. The party reached level 6.
 
+![Winter Splinter, a giant tree blight, striding out of a burning forest toward the vineyard](/images/winter-splinter-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We destroyed Winter Splinter and took the gemheart from it, but at a heavy cost: it burst apart as it died, and nothing was left of Veyren’s body.
 
 ### Muriel’s Secret
 
 Then Muriel confessed. She is a wereraven, and it was Elvir Martikov, her betrothed, who gave her the curse. It lets her heal and fly, but dark magic and silver can kill her. Elvir never came back to her after the attack on the castle. She did not lose control and attack Ludmilla, and she cannot pass the curse to us.
+
+![Muriel Vinshaw leading the way with a lantern on a misty road toward the vineyard](/images/muriel-vinshaw-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### “The Way Back Comes but Once”
 

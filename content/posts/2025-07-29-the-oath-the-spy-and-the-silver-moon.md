@@ -21,6 +21,10 @@ If I read it rightly, bringing Argynvost’s skull out of Castle Ravenloft could
 
 At the Blue Water Inn, Aera was slipped a secret note from Arrigal:
 
+![Arrigal, a Vistani man in a tavern corner, folding a secret note](/images/arrigal-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 > **“Spy in castle. Seek a meeting to discuss an opportunity. Find the victim amidst the court. Burn this — A”**
 
 We take it as a lead to a spy inside Castle Ravenloft.
@@ -86,6 +90,10 @@ Rat, Butterfly, Bat
 Bear, Blank, Elk
 
 The chest opened, and inside it holds far more than it should, like a bag of holding, though it only opens when the puzzle is solved.
+
+![The Chest of Holding open on a carriage seat, a starry space inside](/images/chest-of-holding-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

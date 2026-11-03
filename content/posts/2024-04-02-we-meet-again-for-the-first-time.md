@@ -46,6 +46,10 @@ After the battle Olfin attempted to place a lock of hair on the bird but it esca
 
 We continued along the wagon path until we found a clearing by a lake. There were five tents there with wagons and horses, along with a large tent. Perhaps this is the Vistani encampment with [Madam Eva](/wiki/madam-eva/)
 
+![Tser Pool at dusk: a dark lake with a Vistani camp and a glowing tent on the shore](/images/tser-pool-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Key Locations
 
 * **The great oak**: A locked chest nestled at its foot.

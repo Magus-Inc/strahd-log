@@ -198,6 +198,23 @@ def test_an_ai_picture_carries_its_credit():
     assert poststyle.picture_problems("## Story\n\n![map](/images/manor-1.jpg)\n\nWe ran.\n") == []
 
 
+def test_chris_can_raise_one_post_to_four_pictures():
+    # Chris (2026-11-03) broke the rule for two big sessions: "show a fourth image". A post says so in
+    # its front matter (picture-cap: 4); nothing goes past four.
+    four = "## Story\n\n" + "".join(pic(n) + "We walked.\n\n" for n in ("a", "b", "c", "d"))
+    assert poststyle.picture_problems(four, cap=4) == []
+    assert poststyle.picture_cap({}) == 3
+    assert poststyle.picture_cap({"picture-cap": 4}) == 4
+    with pytest.raises(ValueError):
+        poststyle.picture_cap({"picture-cap": 5})
+
+
+def test_only_the_posts_chris_named_have_four():
+    raised = sorted(p.stem for p in POSTS if poststyle.picture_cap(parts(p)[0]) != poststyle.MAX_PICTURES)
+    assert raised == ["2026-09-01-the-red-door-a-reunion-beneath-the-abbey", "2026-09-29-the-beacon-of-argynvostholt"]
+
+
 @pytest.mark.parametrize("path", POSTS, ids=lambda p: p.stem)
 def test_post_pictures(path):
-    assert poststyle.picture_problems(parts(path)[1]) == []
+    meta, body = parts(path)
+    assert poststyle.picture_problems(body, cap=poststyle.picture_cap(meta)) == []

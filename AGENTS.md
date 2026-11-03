@@ -58,6 +58,7 @@
   each on its own line after the paragraph it shows, the first being the feature picture. Words
   come between two pictures (two in a row become a vote between takes), no picture twice, and an
   AI picture keeps its `*AI-generated ...*` credit line. Reuse a wiki picture before making one.
+  A post Chris names may hold 4 (`picture-cap: 4` in its front matter, never more).
   `tests/test_post_format.py` checks it.
 - The look settings in `data/post-style.yaml` (Chris's picks) decide how that format becomes a page
   (`poststyle.apply_format`): pills, "Malron’s Account" over the story, gold links, scene headings

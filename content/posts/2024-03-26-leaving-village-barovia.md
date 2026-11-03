@@ -13,6 +13,10 @@ cast: ["Aera shan Ravanór", "Grom Shield-Breaker", "Malron Lichtstrahl", "Olfin
 
 [Grom Shield-Breaker](/wiki/grom-shield-breaker/), that’s the Dwarf’s name. He’s always been with our party, or so I’m told, but maybe I never noticed since he’s so short. Maybe he can help carry the corpse of [Doru](/wiki/doru/) up the ladder and out to a stream. Truth be told I’m not sure if a vampire with a stake through the heart can really be considered a corpse, but that’s what I’ll call the poor wretch until we can figure out if the advice Aera read about running water will truly keep us safe from the abomination.
 
+![Grom Shield-Breaker, a hill dwarf fighter with shield and axe, holding up his family tooth](/images/grom-shield-breaker-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 Schlopkht volunteered to bring the sunburst relic back to [Father Donavich](/wiki/father-donavich/) and side-step the part where we killed his undead son, and that we plan to kill him for good so that we may learn how to be rid of vampires.
 
 Father Donavich agreed to perform the burial rites for Ismark’s father by praying to the “Morninglord”. I wonder if he’s any relation to Lathander, the “Lord of Birth and Renewal”, but decided this wasn’t the time to ask academic questions.

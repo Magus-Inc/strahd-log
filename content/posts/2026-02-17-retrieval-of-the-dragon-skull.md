@@ -33,6 +33,10 @@ On the larder level, room K-62, we met the misshapen Cyrus Belview, kin to the p
 
 Note: Meta details: rules questions came up about Misty Step as a bonus action under the 2024 and 2014 rules, and about keeping a grapple while being dragged into an elevator shaft.
 
+![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Argynvost’s Skull
 
 With the spawn destroyed, we went into K-67, the Hall of Bones, where human remains serve as both ornament and furniture. Over the eastern doors hung the skull of Argynvost. Aera took the spoon from the hand of a bone chair, and Crusty shrank the skull, which weighs some two hundred and fifty pounds. Four conjured hands together lowered it into our Chest of Holding. Taking it sprang a trap that sealed the room, and the mounds of bones in the corners began to knit themselves into skeletal sentries.

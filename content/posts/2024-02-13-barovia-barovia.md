@@ -38,6 +38,10 @@ We kept along the road, still driven by the fog, and crested a hill from which w
 
 We crossed a wooden bridge and came across some charred piles of who knows what. We entered a village with dilapidated buildings. There was the sound of flapping wings, and then a blue tipped raven flew overhead. It flew to the west, and circled back, almost beckoning us to follow it.
 
+![The village of Barovia in fog, a raven flying over the bridge, the castle on the cliff above](/images/barovia-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Blood on the Vine
 
 We ended up at the “Blood of the Vine Tavern”, which seemed to have been recently renamed to the “Blood on the Vine Tavern”. There was a chipped stone statue in the center with a plaque reading “ISMARK ANTONOVICH THE GREAT. Burgomaster of Barovia. Bane of Vampires. 618—662 B.C.”
@@ -57,6 +61,10 @@ Then a woman entered the Tavern, a face full of fright and dismay. Pale faced, s
 ### Ireena Behind Three Locks
 
 We walked to the mayors mansion at the south end of the village, and when Ismark knocked on the door, a young woman peeked out and then we heard three locks unlocking before the door swung open. It turns she is Ismark’s sister, Ireena. She was adopted and we learned that Ismark’s family found Ireena in the forest when she was a little girl.
+
+![Ireena, red-haired, in a breastplate and crimson scarf, a rapier in hand on a misty forest road](/images/ireena-kolyana-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Ireena asks us to help the villagers that retreated to Vallaki. First they must bury their father, who died in the attack.
 

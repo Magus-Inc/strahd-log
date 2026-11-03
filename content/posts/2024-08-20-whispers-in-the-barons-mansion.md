@@ -13,6 +13,10 @@ cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht",
 
 We were shown into the Baron’s den, all padded chairs, and told to wait for him. I did not wait. I walked out past the Baron himself as though I knew exactly what I was doing and was there on official business, and so went upstairs, though the Burgomaster had never seen me before. Meanwhile Schlopkht tried to jam the den door shut, to buy the others time to search the room.
 
+![The Baron of Vallaki in a fur-trimmed coat and chain of office, leading a procession with Izek through the silent town square](/images/baron-of-vallaki-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 The Baron, it turned out, walked straight past me and into the den. He cannot be a very busy man. That left the others no time to look around on their own, but it gave us a chance to talk him into letting us see the rest of the mansion, and with luck the library.
 
 ### A Spirit in the Mansion
@@ -42,6 +46,10 @@ Victor claimed that he is the cause of the hauntings driving off the staff, and 
 ### The Circle Under the Rug
 
 Under the rug, etched into the floor, was a circle with sequences of sigils: a teleportation circle. Victor tested it on two unwilling servants, who were torn apart before they were sucked away. He means to use it to reach the plane where the spirit in the mirror is.
+
+![Victor drawing a glowing teleportation circle on his attic floor](/images/victor-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### Khazan’s Staff
 

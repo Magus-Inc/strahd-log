@@ -58,6 +58,10 @@ We woke to see Varushka’s shadow on the wall with no one there to cast it. The
 
 Aera climbed higher still and saw a hovering, misshapen red thing: a crystal heart some ten feet across. She nearly fell from the stairs, and Strahd caught her. He was not pleased that a guest had left her suite before dawn, but he let her live, and she ran back to us. Strahd sent us out of the castle in his carriage, and as we left we saw his three brides watching from a window.
 
+![The Heart of Sorrow, a giant red crystal heart hanging in a tower above a spiral stair](/images/heart-of-sorrow-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 The carriage will take us to one place of our choosing. We need only say where.
 
 Note: The party reached Level 7!

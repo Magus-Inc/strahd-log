@@ -23,6 +23,10 @@ We met Escher, a blond man with a doubtful past, once a friend of Doru and now t
 
 A masked servant came in, shaking, his fingers cut off at the first knuckle. He offered us a purple drink while the vampires drank red wine. Then he spilled red wine on Volenta’s white dress, and there was a stir.
 
+![Strahd's three brides at his reception: Volenta in a wine-stained white dress, Anastrasya and Ludmilla](/images/brides-of-strahd-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 Zorpheus and Sasha offered to clean it up and fetched mops from the depths of the castle. In the kitchen they saw a man who looked like Cyrus, and in the wine cellar they found a woman hanging upside down, being drained of her blood.
 
 ![Sasha, a castle servant with a candle, whispering by the great organ](/images/sasha-ai.jpg)

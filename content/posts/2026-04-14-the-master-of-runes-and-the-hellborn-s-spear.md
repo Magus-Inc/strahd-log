@@ -33,6 +33,10 @@ At last we reached the ancient catacombs of Ravenloft and began a careful search
 
 Note: The party held a long “Above the Table” debate on whether a hot dog is a sandwich, whether a calzone is a dumpling, and whether everything is just “soup or sandwich”.
 
+![The Staff of Khazan, a plain platinum staff wrapped in blue-white lightning, hovering above the skeleton on the slab in Khazan's tomb](/images/staff-of-khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 In the row beside Khazan’s tomb, Crypt 18 is marked “Ireena Kolyana, wife.” Its door had been carefully laid to one side, and the crypt stood empty and swept clean, as though it waits for her.
 
 ### The Spear of the Huntress

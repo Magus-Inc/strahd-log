@@ -15,6 +15,10 @@ We gave the bones to Father Lucian so he could bless them and renew the ward, an
 
 Back at the Blue Water Inn we found the doors shut, the shutters closed and a window broken. Gumbo worked the latch open from inside with a conjured hand, and there was Urwin sweeping up glass. Izek Strazni, the Baron’s enforcer, had ransacked the inn when he learned Ireena was in town, and stolen some coins. Urwin was only relieved we were safe. We offered gold to help put things right.
 
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 A messenger came from Fiona Wachter with an invitation for Aera to dine the next night, the same night as the blessing.
 
 We had a choice to make: go to the dinner, look into Izek, or see to the trouble at Blinsky’s. Olfin sent a lock of his hair to Ireena so he could speak with her and warn her about Izek. Overnight bats wheeled about as the full moon drew near, and Aera shot some of them outside the window.
@@ -32,6 +36,10 @@ We went on to the mansion, and Shabasta disguised himself as Blinsky to send the
 ### Dinner at Wachterhaus
 
 Then we went to Wachterhaus, where the invitation got us in. We were shown to a dining room and offered wine or water as we liked.
+
+![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ## Key Locations
 
