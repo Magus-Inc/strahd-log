@@ -45,5 +45,11 @@ def test_no_eliza_left():
     left = [f.relative_to(ROOT).as_posix()
             for d in ("content", "data") for f in (ROOT / d).rglob("*")
             if f.suffix in {".md", ".yaml", ".json"} and f.name != "spellings.yaml"
-            and re.search(r"\bEliza\b", f.read_text(encoding="utf-8"))]
+            and re.search(r"\b(Eliza|Elisabetta)\b|/wiki/eliza/", f.read_text(encoding="utf-8"))]
     assert left == []
+
+
+def test_no_invented_details():
+    """Malron's account keeps to the posts: neither says ghost stories."""
+    text = (ROOT / "content" / "wiki" / "elizabella.md").read_text(encoding="utf-8")
+    assert "ghost" not in text
