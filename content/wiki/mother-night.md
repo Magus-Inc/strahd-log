@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 
-A goddess of darkness, trickery and the occult. Madam Eva's reading said the treasure of the Myrmidon card belongs to her ([Tser Pool](/posts/tser-pool/)). Lysa, the woods-witch of Berez, worships her and speaks of hearing her "voice". Lady Wachter, once Lysa's student, never heard it, and turned to Ezra instead ([The Hunt for the Heart Stone](/posts/the-hunt-for-the-heart-stone/)). In the werewolves' cave by Lake Baratok we found her shrine, its ruby medallion, gems and gold all under a terrible curse ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)).
+A goddess of darkness, trickery and the occult. Madam Eva's reading said the treasure of the Myrmidon card belongs to her ([Tser Pool](/posts/tser-pool/)). Lysa, the woods-witch of Berez, worships her and speaks of hearing her "voice". Lady Wachter, once Lysa's student, never heard it, and turned to Ezra instead ([The Hunt for the Heart Stone](/posts/the-hunt-for-the-heart-stone/)). In the [werewolves' cave](/wiki/lake-baratok-cave/) by Lake Baratok we found her shrine, its ruby medallion, gems and gold all under a terrible curse ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)).
 
 <!-- from-the-log -->
 ## From the adventure log

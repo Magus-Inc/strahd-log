@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-Van Richten's wagon. It began as the covered Vistani wagon he first drove into Barovia, hidden with his horse Drusilla at the tower at Lake Baratok. After he saved Arabelle, he put on a dead Vistana's guise with his hat of disguise, slipped into the Vistani camp by Vallaki and stole three pots of paint, and painted the wagon as "Rictavio's Carnival of Wonders". He drove it into Vallaki as Rictavio to hide in plain sight, and Arabelle has stayed hidden inside it ever since. He enchanted it to seem less inviting ([Finding Arabelle!](/posts/finding-arabelle/)).
+Van Richten's wagon. It began as the covered Vistani wagon he first drove into Barovia, hidden with his horse Drusilla at the [tower](/wiki/tower-of-khazan/) at Lake Baratok. After he saved Arabelle, he put on a dead Vistana's guise with his hat of disguise, slipped into the Vistani camp by Vallaki and stole three pots of paint, and painted the wagon as "Rictavio's Carnival of Wonders". He drove it into Vallaki as Rictavio to hide in plain sight, and Arabelle has stayed hidden inside it ever since. He enchanted it to seem less inviting ([Finding Arabelle!](/posts/finding-arabelle/)).
 
 <!-- from-the-log -->
 ## From the adventure log

@@ -15,7 +15,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 The son of Baron Dmitri Krezkov and Anna Krezkova of Krezk. A wolf's curse runs in his father's family, held back with wolfsbane, until the Abbot, in the shape of Dmitri's aunt, talked Ilya out of taking it. He turned that night, killed his little sister and ran off into the woods ([Welcome to Krezk](/posts/welcome-to-krezk/)).
 
-He ended up a prisoner of the werewolf pack at Lake Baratok. Ezmerelda planned to break into the werewolves' cave within twelve hours to rescue him ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). We found him beside Zuleika near the Shrine of Mother Night, both in collars of silver thorn made by Baba Lysaga that keep them from turning into wolves. His story laid bare a conspiracy: the Abbot had deceived him, and Strahd and Baba Lysaga had helped Kiril capture Emil, the pack's leader, and lock him in the dungeons of Castle Ravenloft ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)).
+He ended up a prisoner of the werewolf pack at Lake Baratok. Ezmerelda planned to break into the [werewolves' cave](/wiki/lake-baratok-cave/) within twelve hours to rescue him ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). We found him beside Zuleika near the Shrine of Mother Night, both in collars of silver thorn made by Baba Lysaga that keep them from turning into wolves. His story laid bare a conspiracy: the Abbot had deceived him, and Strahd and Baba Lysaga had helped Kiril capture Emil, the pack's leader, and lock him in the dungeons of Castle Ravenloft ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)).
 
 <!-- from-the-log -->
 ## From the adventure log

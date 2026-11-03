@@ -13,7 +13,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-Urwin's wife, who runs the Blue Water Inn in Vallaki with him ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/)). When we came back to town looking for Rictavio, she told us he was at his yellow wagon, the same one whose tracks we had seen near the tower at Lake Baratok ([Finding Arabelle!](/posts/finding-arabelle/)).
+Urwin's wife, who runs the Blue Water Inn in Vallaki with him ([Welcome to Vallaki*](/posts/welcome-to-vellaki-/)). When we came back to town looking for Rictavio, she told us he was at his yellow wagon, the same one whose tracks we had seen near the [tower](/wiki/tower-of-khazan/) at Lake Baratok ([Finding Arabelle!](/posts/finding-arabelle/)).
 
 <!-- from-the-log -->
 ## From the adventure log

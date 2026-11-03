@@ -68,6 +68,8 @@ spots:
   vallaki-east-road: {xy: [442, 259], label: the road an hour east of Vallaki}
 
 within:
+  # Father Donavich's church (Rest for the Wicked).
+  barovia-village-church: barovia
   durst-mill: barovia
   # The tavern in the village where the party met Ismark (Barovia, Barovia).
   blood-on-the-vine-tavern: barovia

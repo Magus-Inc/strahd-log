@@ -32,7 +32,7 @@
         <dl>
 {% for label, value in page.facts %}
           <div><dt>{{ label }}</dt>
-          <dd>{% if value is sequence and value is not string %}<a href="{{ base }}{{ value[2] }}"><span class="num">{{ value[0] }}</span>{{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd></div>
+          <dd>{% if value is mapping %}{% for title, path in value.links %}<a href="{{ base }}{{ path }}">{{ title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% elif value is sequence and value is not string %}<a href="{{ base }}{{ value[2] }}"><span class="num">{{ value[0] }}</span>{{ value[1] }}</a>{% else %}{{ value }}{% endif %}</dd></div>
 {% endfor %}
         </dl>
 {% endif %}
