@@ -34,6 +34,10 @@ On the road back to **Vallaki** each of us felt our strength grow. We gathered u
 
 We will not wait for him. Using what we learned of the castle (not from Doru) and the castle maps of **Rudolph van Richten**, we mean to strike during Strahd’s fourteen-day hunting cycle, while he should be away from the castle, slip into the catacombs, and take the relics and free the allies we need.
 
+First of all comes Argynvost’s skull. The gargoyle at Argynvostholt promised: “When the dragon dreams its dream within its rightful tomb, the light of Argynvost will beam and rid this land of gloom.” That is the Shining Beacon of the prophecy. Then the Icon of Dawn’s Grace, the silver statuette the spirits told us of, the only cure for the madness of the Abbot, the tainted angel of the abbey above Krezk. Then the Spear of the Huntress, who is one of the Ladies Three, a token to win their favor before we face the Count. And two prisoners: Emil Toranescu, the werewolf leader, in the south dungeon, and Gertruda, Doru’s betrothed, in the King’s Bedchamber.
+
+The Heart of Sorrow is the greatest thing we have learned. Inside his castle it lets Strahd regain his strength and makes him nearly indestructible. But we will not try to destroy it while we are still robbing him, and not without the Sunsword.
+
 Note: Much of the evening was "meta talk" about Level 7. The players discussed the mechanical impact of **Evasion** and the ethics of **Silvery Barbs**, which the DM noted is often treated as a higher-level spell because of its potency. A lighthearted sidebar compared the Canadian game **Crokinole** to curling.
 
 ## Key Locations:

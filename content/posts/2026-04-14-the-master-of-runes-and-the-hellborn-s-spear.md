@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 * [Crusty](/wiki/crusty/)
 
 ## Summary:
-We began on a balcony with two great wooden thrones and a red velvet curtain thirty feet long. Beyond the curtain was a room ruled by a stone brazier burning with a white flame that gave no heat. Above it hung a huge hourglass, its sand frozen in the upper bulb. Seven colored crystal stones are set into the rim of the brazier, and an inscription on the base of the hourglass gives a riddling guide to using them to travel from place to place.
+We began on a balcony with two great wooden thrones and a red velvet curtain thirty feet long. Beyond the curtain was a room ruled by a stone brazier burning with a white flame that gave no heat. Above it hung a huge hourglass, its sand frozen in the upper bulb. Seven colored crystal stones are set into the rim of the brazier, and an inscription on the base of the hourglass gives a riddling guide to using them to travel from place to place. This, we think, is how Strahd and his brides cross Barovia in a breath, and he may well know whenever one of them uses it.
 
 Note: The players worked through the places named in the verse, matching the green stone to a coffin maker in Vallaki and the yellow stone to a mountain keep near the Amber Temple. They also joked that the hourglass is a "timer" for Strahd's travels.
 
@@ -30,7 +30,9 @@ At last we reached the ancient catacombs of Ravenloft and began a careful search
 
 Note: The party held a long "Above the Table" debate on whether a hot dog is a sandwich, whether a calzone is a dumpling, and whether everything is just "soup or sandwich".
 
-Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectral voice warned us to stop. We did not. Olfin and I pried open the lead sarcophagus cased in gold, and inside was the Spear of the Huntress, a blood spear of great power. Now we make ready to find the Icon of Dawn’s Grace in the last crypts nearby.
+In the row beside Khazan’s tomb, Crypt 18 is marked “Ireena Kolyana, wife.” Its door had been carefully laid to one side, and the crypt stood empty and swept clean, as though it waits for her.
+
+Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectral voice warned us to stop. We did not. Olfin and I pried open the lead sarcophagus cased in gold, and inside was the Spear of the Huntress, a blood spear of great power. As best we could tell from it, its power is less than it was, for Kavan and the Devourer corrupted it long ago, but it can be made whole again by communing with the Spirit of the Huntress, or by consecrating anew the Forest Fane on Yester Hill. Now we make ready to find the Icon of Dawn’s Grace in the last crypts nearby.
 
 ![King Dostron's ghost rising red over his sarcophagus and the Spear of the Huntress](/images/king-dostron-the-hellborn-ai.jpg)
 

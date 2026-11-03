@@ -41,6 +41,8 @@ When Strahd’s game was done we pressed on to **Argynvostholt**, the ruined man
 
 Strahd **stole the skull of Argynvost**, desecrating their memory, and **Rahadin slew their commander, Horngaard.** Sir Godfrey warned us to keep out of Horngaard’s chamber, **to avoid the fourth floor**, and **to beware the phase spiders** in the ruins. Horngaard is very powerful and does not want anyone moving against Strahd. A mass grave north of Berez bears the symbol of the Silver Dragon, which will protect us.
 
+We talked too of the bright sword Strahd’s father once carried. We think it is the Sunsword, perhaps the only weapon that can kill Strahd. Madam Eva’s reading placed the sword beyond a set of amber doors, and there is said to be an Amber Temple on Mount Ghakis, home to a great evil. Perhaps the sword lies there.
+
 A cryptic prophecy stays with me:
 
 **“Seek out the younger of the twin dragons above. Reignite the silver flame it once wielded, and remind it of the oath it once served. Do this, and the memory of the Silver Dragon may return to fill it once more.”**

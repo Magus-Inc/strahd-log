@@ -1,0 +1,646 @@
+# Where Malron's Account tells each Plot Points entry (Chris, 2026-11-03: every plot point should
+# already be in the story above it). One list per post, in the order of its Plot Points: `point` is
+# the entry's opening words, `told` one or more phrases copied from the account (any case, straight
+# or curly quotes). tests/test_plot_points.py checks every post against this file. A plot point the
+# story does not tell is added to the story from the transcript, Chris's notes or Ryan's texts,
+# never invented.
+
+session-zero:
+  - point: The relics
+    told: the tooth necklace Aera wears began to float and pull toward a wall of the barn
+  - point: No way back
+    told: there was no path to show how we might return to Daggerford
+
+entering-durst-manor:
+  - point: The rhyme in blood
+    told:
+      - He sleeps until the midnight chime
+      - which might leave us six hours until midnight
+  - point: Gustav and Klara
+    told: One pair looked to be Gustav Durst and Klara
+  - point: The hidden door
+    told: sealed by some magical lock that needed a gem or key of a particular geometric shape
+  - point: Wood scraping
+    told: we heard what sounded like wood scraping, from the office or beyond it
+
+deeper-into-the-manor:
+  - point: The amber shard
+    told: present the shard and speak the Beast’s name to quiet its tantrums
+  - point: The beast
+    told: the beast might be the baby, Walter
+  - point: Stairs behind the mirror
+    told: We also found stairs behind the mirror leading up
+
+finishing-the-manor:
+  - point: Strahd’s letter
+    told:
+      - however many souls you have bled on your hidden altar
+      - sired a bastard son, and drove you to abandon love for madness
+  - point: The children
+    told:
+      - We concluded the children had been left there to starve
+      - promise to bury their bones in the garden
+  - point: Walter
+    told:
+      - we did conclude that Walter was Klara’s son
+      - By then we believed the monster’s name was Walter
+  - point: The chanting
+    told: The chanting grew louder as we went on
+
+walter-we-are-coming-for-you:
+  - point: “He is the ancient. He is the land.”
+    told: explored the murky water and heard a voice
+  - point: Walter is dead
+    told:
+      - Aera cleaved Walter’s head clean off
+      - Behind us it collapsed into the ground and was gone
+  - point: Rose and Thorn
+    told: we found ourselves in a forest beside a stone tower, with Rose and Thorn
+
+barovia-barovia:
+  - point: Strahd is awake
+    told: proclaimed that Doru had woken Strahd and that he would exact some vengeance
+  - point: Spies
+    told: spies for Strahd in the form of bats, wolves, humans, and even Vistani
+  - point: Ismark’s mission
+    told:
+      - to help his sister hide at a church in Vallaki
+      - It would be a full days journey
+  - point: Their father
+    told: First they must bury their father, who died in the attack
+  - point: The vampire guide
+    told:
+      - Sunlight and running water can end their cursed existence
+      - cannot enter a residence without an invitation
+
+rest-for-the-wicked:
+  - point: Seek out Madam Eva at Tser Pool
+    told:
+      - mentioned that time is running out
+      - She suggested I seek her out at Tser Pool
+  - point: The Bronze Sunburst
+    told: Doru took the holy symbol
+  - point: Running water
+    told: take the body to a stream or river to see if it will dissolve
+
+leaving-village-barovia:
+  - point: To Krezk
+    told: escort Ireena to the Abbey of Saint Markovia in Krezk, and that the Church of Saint Andral in Vallaki could be a sanctuary along the way
+  - point: Running water works
+    told: As the stream flowed over him he dissolved
+  - point: Ireena’s bite marks
+    told: she explained that Strahd bit her and controlled her in the past
+  - point: The bats
+    told: After the ritual a great swarm of bats flew from the church up to the west, perhaps towards the castle
+
+we-meet-again-for-the-first-time:
+  - point: Strahd’s vassal
+    told:
+      - he was talking about the Durst Manor and their supply of grain from the windmill
+      - the vineyard was not of concern to him
+  - point: Ireena stays with us
+    told: allow her to stay with us a bit longer, hopefully long enough to find some sanctuary for her
+  - point: Strahd’s warnings
+    told: he would not give many warnings if we disrespected him
+  - point: Olfin’s lock of hair
+    told:
+      - Olfin tied his lock of hair around the birds leg
+      - Hexblood sign of life debt
+
+tser-pool:
+  - point: Traitor
+    told: Look for a wealthy woman, a staunch ally of the devil. Lock and key with the bones of an ancient enemy.
+  - point: Myrmidon
+    told: Look for a den of wolves in the hills overlooking a mountain lake. The treasure belongs to Mother Night.
+  - point: Bishop
+    told:
+      - the sword of sunlight
+      - What you seek lies in a pile of treasure, beyond a set of amber doors
+  - point: Mists
+    told: A Vistana wanders alone, searching for a mentor
+  - point: Marionette
+    told: Look to great heights. Find the beating heart of the castle.
+  - point: Holy Symbol of Ravenkind
+    told: The key, I think, is a Holy Symbol of Ravenkind
+  - point: A toy for Arabelle
+    told:
+      - take the coins to Blinsky’s toy shop in Vallaki and buy something for her grandchild, Arabelle
+      - deliver it to the Vistani encampment southwest of Vallaki. It must be done within two days.
+
+skeletal-rider:
+  - point: The rider
+    told: he might be the skeleton of the poor soul we found along the road
+  - point: No one to question
+    told: So much for interrogating him
+
+dream-pies:
+  - point: The Order of the Silver Dragon
+    told: a knight of the Order of the Silver Dragon from Argynvostholt
+  - point: Silver in Vallaki
+    told: the Vallaki guards confiscate silver, so we hid our silver things in the cart
+  - point: The Seeker and the Ladies Three
+    told: an ancient monument to the Seeker and the Ladies Three
+  - point: The ravens
+    told:
+      - Ravens began to follow us
+      - The ravens swarmed that one
+
+welcome-to-vellaki-:
+  - point: The Keepers of the Feather
+    told: a secret society set against Strahd
+  - point: The Festival of the Blazing Sun
+    told:
+      - The Festival of the Blazing Sun is in three days
+      - is in four days
+  - point: The refugees
+    told:
+      - The refugees reached the gate some days ago but are not allowed in
+      - They believe a red-haired woman has cursed them
+  - point: Udo and his mother
+    told: Her son Udo has been imprisoned, and she too was taken to the stocks
+
+a-doll-for-arabelle:
+  - point: Arabelle is missing
+    told: Alexi offered us five hundred gold pieces if we bring Arabelle back alive
+  - point: The signet ring
+    told: The symbols on the signet ring may hold the answer
+  - point: The dusk elves
+    told: the Vistani have sheltered them from Strahd’s wrath ever since
+  - point: The clockwork man
+    told: a clockwork man inside Castle Ravenloft
+
+whispers-in-the-barons-mansion:
+  - point: Ireena Strazni
+    told: Ireena’s cause of death is marked unknown, presumed devoured by wolves
+  - point: The ring’s symbol
+    told:
+      - His spellbook bears the same symbol as the ring
+      - the book’s first owner was Khazan, and the ring bears his personal sigil
+  - point: Khazan’s tower
+    told: a protective field that stops anyone else casting spells there, and Victor is eager to know what is inside
+  - point: The teleportation circle
+    told: Victor tested it on two unwilling servants, who were torn apart
+
+looking-for-zoldars-tower:
+  - point: The Staff of Khazan
+    told: the tower that holds the legendary Staff of Khazan
+  - point: A werewolf pack
+    told: a werewolf pack prowls the area, led by a new and reckless alpha
+  - point: The way in
+    told: The way into the tower stands open
+
+the-staff-is-a-lie:
+  - point: Rictavio is van Richten
+    told: We knew the handwriting from a guide to hunting vampires, and so we are sure
+  - point: The journal
+    told: which began when a vampire murdered his child. The lifelong hunt has left him weary
+  - point: A bloodthirsty lady
+    told: a lady who slays with a blade that thirsts for the blood of innocents
+
+finding-arabelle:
+  - point: Strahd’s bounty
+    told: a bounty on girls who match Arabelle exactly
+  - point: The amulet
+    told: he gave Arabelle a spare amulet that guards against detection and location
+  - point: Where to keep her
+    told: we suggested she stay in the enchanted wagon at the Vistani camp
+  - point: The church’s ward
+    told:
+      - The protection comes from bones kept in a crypt, and a ritual must be held at each feast to renew it
+      - the bones were stolen recently, so the wards cannot be renewed
+  - point: The Festival of the Blazing Sun
+    told: the Festival of the Blazing Sun, two days off
+
+the-quest-for-the-missing-bones:
+  - point: We learned why Milivoj stole the bones
+    told: His parents are lost to dream pastries, and he must keep his brothers and sisters fed
+  - point: Henrik was arrested
+    told: talked four guards into breaking in and arresting Henrik
+  - point: Volenta escaped us
+    told: Volenta, a bride of Strahd, escaped
+
+consequences-in-vallaki:
+  - point: The ward is to be renewed
+    told: so he could bless them and renew the ward
+  - point: Izek ransacked the inn
+    told: had ransacked the inn when he learned Ireena was in town
+  - point: We had to choose
+    told: We had a choice to make
+  - point: Blinsky’s burned
+    told:
+      - we found the shop on fire
+      - demand justice from the Baron
+
+shadows-over-vallaki:
+  - point: We met Stella
+    told:
+      - Her name is Stella, and Nikolai, who once cursed the Baron, is her older brother
+      - their father, Nikolai, died of a wasting sickness
+  - point: A plan to weaken Izek
+    told: gave us a bottle of poisoned wine
+  - point: Lady Fiona’s revelations
+    told:
+      - Lady Fiona told us she follows Ezra
+      - until Lysa rescued Lady Fiona from the woods when she was young
+
+delivery-for-lady-fiona:
+  - point: I spoke with Izek
+    told: I used the Talisman of Echoes to speak with Izek’s head
+  - point: We learned the powers of Izek’s arm
+    told:
+      - learned the powers of his arm
+      - the “Order of the Feather” opposes Strahd
+  - point: Lady Fiona rewarded us
+    told: our just reward
+  - point: She read to us
+    told: The wedding of Prince Sergei von Zarovich and Tatyana Federovna
+  - point: Erasmus’ spirit came to us
+    told:
+      - “Help Victor” and “Erasmus.”
+      - We agreed to help
+  - point: An invitation to dine at Castle Ravenloft
+    told:
+      - dinner at the castle in seven days
+      - both were condemned to death by hanging
+
+helping-victor:
+  - point: Shabasta’s plea saved Milivoj and Henrik
+    told: Shabasta gave an impassioned speech that made him reconsider
+  - point: Victor’s teleportation experiments
+    told: With Stella it went wrong and trapped her in the spirit realm
+  - point: Erasmus’ insight
+    told: Erasmus believes a gallows speaker haunts Stella
+  - point: Franz’s story
+    told: When his money ran out he sold the children for endless pastries
+
+the-hunt-for-the-heart-stone:
+  - point: The Heart Stone
+    told: she gives it willingly, or we kill her
+  - point: Binding Circle
+    told:
+      - a hag can use her heart stone to escape into the ethereal realm before she dies
+      - A binding circle raised before the fight would stop them escaping
+  - point: Malevolent Spirit
+    told: the Gallows Speaker is most likely the malevolent spirit that killed Lady Fiona’s family
+  - point: The Children
+    told: Lady Fiona suggested we save the children before we take on the hags
+
+the-windmill-heist:
+  - point: We learned the hags’ true names
+    told:
+      - the true names on the contract are Morgantha Stormreaver, Belladonna Sunbane and Offalia Wormwiggle
+      - She raised the binding circle with her followers
+  - point: Morgantha’s dying words
+    told: As Morgantha died she told us Strahd’s most carefully guarded secret
+  - point: The heart stone, a full moon
+    told: To use the heart stone with Victor we need a night of the full moon, and Victor needs a ley line for the ritual
+
+entering-the-spirit-realm:
+  - point: Victor’s teleportation circle attracted hostile spirits
+    told: Victor’s spell acted as a beacon, attracting spirits
+  - point: Erasmus warned of the gallows speaker
+    told: Erasmus warned us of the spirits aware of our presence and described the gallows speaker
+  - point: Leo Dilisnya claimed connections
+    told: he was once a guard of Castle Ravenloft
+  - point: We defeated the gallows speaker
+    told:
+      - A great fight followed, and we won it
+      - Stella was rescued
+  - point: Shabasta fell in battle
+    told: Shabasta died in the battle, and none of us could bring him back
+
+act-3-the-broken-land:
+  - point: The Wizard of Wines shipment
+    told: the latest shipment is sixteen days overdue
+  - point: The revenant’s cryptic warning
+    told: He urged us to visit Argynvostholt and warned of blights at the vineyard
+  - point: The mountain folk worship ancient goddesses
+    told: worship the ancient goddesses of the valley, not Strahd as the forest folk do
+  - point: Strix and ravens around the vineyard
+    told:
+      - dozens of ravens watched in silence as we came near
+      - Strix cries echoed from every side
+      - vanished down a trapdoor
+
+wizard-of-wines-vineyard:
+  - point: Baba Lysaga, called Lysa
+    told: That Lysa was Lady Fiona Wachter’s mentor
+  - point: The druids’ leader holds a staff
+    told: The druids’ leader carries a magical staff that commands these creatures, and it must be destroyed or stolen
+  - point: Elvir’s death
+    told: died in the castle, and his death shattered the family
+  - point: The winter wolf teeth
+    told: three winter wolf teeth, enchanted by the mountain folk
+  - point: The druid torturing the raven
+    told: a druid torturing a raven for word of something lost
+
+finishing-up-at-the-vineyard:
+  - point: The druids worship Lorgoth
+    told:
+      - The druids worship Lorgoth
+      - the druids mean to summon Winter Splinter
+  - point: The winery’s three gems
+    told: Baba Lysaga stole the second three weeks ago, and the druids took the third
+  - point: The Keepers of the Feather oppose Strahd
+    told: The Keepers guide and shelter rather than fight openly
+  - point: Kavan’s motives
+    told:
+      - Mira has secretly arranged to meet a contact named Kavan
+      - if we bring it to him he will give us a weapon of great strength
+  - point: Strahd’s arrival
+    told: Strahd rode up on his fiery steed and greeted us ominously
+
+stop-winter-splinter:
+  - point: Winter Splinter is a giant twig blight
+    told: Strahd told us Winter Splinter is a giant twig blight
+  - point: Strahd promises a gift and a secret
+    told: for a gift and a secret
+  - point: Ludmilla let slip the rivalry
+    told: Ludmilla made no secret of her contempt for Volenta
+  - point: The wereraven who fought at Castle Ravenloft
+    told: able to heal any wound save from silver or the touch of death
+  - point: We chose to avoid Ludmilla
+    told: We chose the second, unwilling to anger Strahd further
+
+the-whispering-wall:
+  - point: The Whispering Wall is the tomb of a god
+    told: the ancient tomb of a god, and it made the mist
+  - point: The gemstones Strahd gave us
+    told: gray stones that lead to what we desire
+  - point: Kavan told of old allegiances
+    told: The mountain folk and the forest folk came from a split in the first folk, when their loyalties divided
+  - point: To reach Zoldoph
+    told:
+      - for that we need the mountain folk’s help
+      - we need a token of the Ladies to enter
+  - point: Minofaustus offered an unexpected trade
+    told:
+      - His strangest offer was a discount if we would take Zorpheus off his hands
+      - must repay Minofaustus with ten percent interest
+
+welcome-to-krezk:
+  - point: We learned the history of the holy symbol
+    told:
+      - Hundreds of years ago they used the holy symbol of Ravenkind
+      - Davian gave us an obsidian whistle shaped like a raven
+      - Three vampire spawn sprang out at us
+      - Dmitri Krezkov is a werewolf, a curse passed down the generations
+      - Someone has taken over the abbey and is building a creature from corpses
+      - he talked their son into giving up the wolfsbane potion
+
+shadows-over-st-markovia:
+  - point: Ezmerelda plans to break into the werewolf den
+    told: She has a twelve-hour window to rescue him
+  - point: The Abbot believes Strahd lacks love
+    told: He believes Strahd lacks love and companionship
+  - point: The spirits hint at a silver statuette
+    told: a silver statuette hidden in Castle Ravenloft can cure the Abbot
+  - point: Cyrus Belview may hold the key to a reward
+    told: if we bring him back to the abbey we will be well rewarded
+
+echoes-of-the-black-terro:
+  - point: Ezmerelda told us painful truths
+    told: her own family had a hand in taking van Richten’s son
+  - point: The den is well built and well defended
+    told:
+      - the guards’ keen senses found her
+      - Soon the whole cave was roused
+  - point: Magic turned the battle
+    told:
+      - Oogway and I each loosed a burst of fire
+      - Zorpheus bent its will with a spoken suggestion
+
+blood-and-oaths-under-moonligh:
+  - point: Rescue Emil
+    told:
+      - Zuleika swore to free Emil and asked for our help
+      - We took the oath
+  - point: The Skull of Argynvost
+    told: Strahd stole the skull of Argynvost, desecrating their memory
+  - point: The Sunsword
+    told:
+      - the bright sword Strahd’s father once carried
+      - Perhaps the sword lies there
+  - point: Aera’s Curse
+    told:
+      - Aera drank the blood and turned fully into a werewolf
+      - something stronger was at work
+
+echoes-of-the-silver-dragon:
+  - point: Brother Merik’s Book
+    told: find his book in the west bedchambers. Read aloud the prayer.
+  - point: Argynvost’s Final Stand
+    told:
+      - In his last stand he vowed to take his true dragon form and defend the valley with his life
+      - his spirit would live on wherever the oath and fire of the Silver Dragon survive
+  - point: Tsolenka Pass
+    told: an amulet that opens the way through Tsolenka Pass
+  - point: Strahd’s Rule, Stability or Oppression?
+    told: paints Strahd’s rule, for all his flaws, as what holds the valley steady
+
+the-oath-the-spy-and-the-silver-moon:
+  - point: Prophecy of Argynvost
+    told: bringing Argynvost’s skull out of Castle Ravenloft could weaken Strahd’s hold on Barovia
+  - point: Spy in Castle Ravenloft
+    told: We take it as a lead to a spy inside Castle Ravenloft
+  - point: Strahd’s Curse
+    told:
+      - Tatyana took her own life, which set Strahd’s curse in motion
+      - Now Strahd seeks Ireena, believing she is Tatyana reborn
+  - point: Madam Eva’s Past
+    told: he killed nearly everyone but Katarina, who is Madam Eva
+
+velvet-vintages-and-veiled-intentions:
+  - point: Sasha’s Clue
+    told: Sixth pedal from the left on the organ
+  - point: Spy in the Castle
+    told: she might be willing to inform for us, perhaps even to spy
+  - point: Amber Temple
+    told: recommended we visit the Amber Temple
+  - point: Escher’s Betrayal
+    told: once a friend of Doru and now thought to have betrayed him
+  - point: Blood Rituals
+    told: in the wine cellar they found a woman hanging upside down, being drained of her blood
+
+the-boon-the-bride-and-the-beating-heart:
+  - point: Gertruda’s Rescue
+    told: Gertruda was Doru’s fiancée, the one Ismark sent us to recover
+  - point: Rear Entrance & Password
+    told:
+      - of a rear servants’ entrance at the side of the castle
+      - Sasha says this is Strahd’s oldest password
+  - point: The Prisoner’s Fate
+    told: We were made to judge him
+  - point: The Beating Heart
+    told: the beating heart of the castle lies in the north tower
+  - point: Forced Sleep
+    told: one by one we were all pulled into unconsciousness
+
+varushkas-key:
+  - point: The Crystal Heart
+    told: a crystal heart some ten feet across
+  - point: Katarina and Varushka
+    told:
+      - Her half-locket was a gift from Katarina
+      - Olfin showed her the half pendant from the oak tree
+      - a copy of the Seer Tarokka card
+  - point: Valysnia
+    told: someone called out that Valysnia is a traitor
+  - point: A free ride
+    told: The carriage will take us to one place of our choosing
+
+welcome-back-to-vellanki:
+  - point: Argynvost’s Skull (first of all)
+    told:
+      - First of all comes Argynvost’s skull
+      - the light of Argynvost will beam and rid this land of gloom
+  - point: The Icon of Dawn’s Grace
+    told: the only cure for the madness of the Abbot
+  - point: The Spear of the Huntress
+    told: who is one of the Ladies Three, a token to win their favor before we face the Count
+  - point: Emil Toranescu and Gertruda
+    told: Emil Toranescu, the werewolf leader, in the south dungeon, and Gertruda, Doru’s betrothed, in the King’s Bedchamber
+  - point: The Heart’s Pulse
+    told:
+      - The Heart of Sorrow is the greatest thing we have learned
+      - we will not try to destroy it while we are still robbing him
+
+unwelcome-guests:
+  - point: The Three-Pointed Star
+    told:
+      - a gift he must deliver himself to Lady Fiona Wachter
+      - a flat, round stone crest engraved with a three-pointed star
+  - point: The Servants’ Register
+    told:
+      - register for your own convenience and that of your next of kin
+      - a withered corpse with four punctures in its neck
+
+retrieval-of-the-dragon-skull:
+  - point: The Heart is exposed
+    told: The Heart may be the castle’s one weak point, but the climb was too great a risk
+  - point: The Silver Order desecrated
+    told:
+      - human remains serve as both ornament and furniture
+      - Over the eastern doors hung the skull of Argynvost
+
+depths-of-ravenloft:
+  - point: A new chapter begins
+    told:
+      - We are at a turning point
+      - it lies hidden in the Amber Temple
+  - point: The silver thorn collar sets a clock running
+    told:
+      - is worn to exhaustion
+      - a collar of silver thorn that keeps him from changing
+      - Emil knows there is a key, and that Volenta holds it
+  - point: The South Tower Stair
+    told:
+      - That stair climbs to the top of the castle
+      - on the fifth floor, the witches’ coven
+
+the-fall-of-volenta-popofsky:
+  - point: One of Strahd’s chief wives is destroyed
+    told: her reign of terror was over
+  - point: Now we must choose
+    told: climb up and go beyond it, or turn back and explore elsewhere
+
+the-master-of-runes-and-the-hellborn-s-spear:
+  - point: Strahd’s Roads
+    told: how Strahd and his brides cross Barovia in a breath
+  - point: The Spear Restored
+    told: made whole again by communing with the Spirit of the Huntress, or by consecrating anew the Forest Fane
+  - point: The Empty Crypt
+    told:
+      - Crypt 18 is marked “Ireena Kolyana, wife.”
+      - stood empty and swept clean
+
+the-echoing-choirs-of-ravenloft:
+  - point: The Abbot’s Cure
+    told: to cleanse the Abbot of his corruption and madness
+  - point: Rahadin’s Watch
+    told: demanded we give up the treasures we had “stolen” from the crypts
+  - point: Strahd’s Resting Place
+    told:
+      - We are all but sure it is Strahd’s own, the place where he sleeps
+      - We left it alone
+
+the-slipper-and-the-shadow-of-the-bat:
+  - point: The Face of Tatyana
+    told: a striking portrait of Tatyana, so like Ireena Kolyana that we all stopped short
+  - point: The Silver Bracelet
+    told: the very heirloom Olfin once recovered
+  - point: The Brides’ Fate
+    told: burning it from the inside out until it fell to ash
+
+the-shard-s-warning-and-the-abbot-s-madness:
+  - point: The Abbot’s Demand
+    told: the Abbot means to collect Anna Krezkova’s heart at dusk the next day
+  - point: Strahd’s Vengeance
+    told: sent by Strahd to punish Aera for her “sneaking and stealing” in his castle
+  - point: Vladimir Horngaard’s Rage
+    told: a revenant warned us of “dark tidings” and of Vladimir Horngaard’s rage at our raid on Ravenloft
+
+the-abbot-unveiled-wings-lies-and-the-fallen-star:
+  - point: The Abbot means to kill Anna Krezkova tonight
+    told: who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka
+  - point: As Ezmerelda said
+    told: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed
+  - point: The icon’s warning came true
+    told:
+      - the Morning Lord’s rays flare only brighter when they perceive darkness before them
+      - Light poured from the Abbot
+  - point: The flesh golem is our ally now
+    told:
+      - Then the flesh golem joined the fight on our side
+      - taking it with us for the rest of Barovia
+  - point: The freed mongrelfolk may not trust us
+    told: our tale of Cyrus had fooled the Belviews as well as it seemed
+  - point: Ethereal’s second form
+    told:
+      - the head of a lion, the body of a ram, the wings of a bat and the tail of a crocodile
+      - His second form stands ready, at full strength
+
+the-fallen-star-ape-sacrifice-and-redemption:
+  - point: The Abbot’s corruption is cleansed
+    told:
+      - a white-winged youth in plain white robes lay sleeping on the abbey floor
+      - Ethereal is restored
+  - point: The Shepherd card (Four of Glyphs)
+    told:
+      - the Four of Glyphs, the Shepherd
+      - a message from St. Markovia
+  - point: The Abbot admitted separating parents
+    told: separated parents from children and abused the faith of those who trusted him
+  - point: My rule of keeping one last great prayer
+    told: I had sworn never to spend my last great prayer until someone died
+
+the-red-door-a-reunion-beneath-the-abbey:
+  - point: The Abbot had been collecting something lost
+    told: the Abbot had collected something from each of us
+  - point: The vessel held hundreds of trapped souls
+    told:
+      - hundreds of trapped fragments of souls had flooded into it
+      - Hundreds of spirits streamed up through the ceiling
+  - point: Strahd is watching
+    told: There are so few left to come back
+  - point: My icon of St. Markovia has gone silent
+    told: it has not answered since the fight with the Abbot
+
+the-beacon-of-argynvostholt:
+  - point: Vladimir Horngaard is at rest
+    told:
+      - Vladimir crumbled away like fine ash
+      - the spirits of the Order’s knights were freed from their corpses
+  - point: We have sworn the oath of the Order
+    told: He asked us to bear the legacy of the Order of the Silver Dragon, and we swore its oath
+  - point: Argynvost's beacon may last about seven days
+    told: about seven days, before it is consumed. We must make haste.
+  - point: A grand alignment approaches
+    told: He was woken weeks ago by distant dragon song from beyond Barovia, and he senses a grand alignment approaching
+  - point: Argynvost warns Aera about the amber shard
+    told: he warned her to beware how fiercely she gazes into its abyss
+  - point: Next
+    told:
+      - The temple lies near the peak of Mount Ghakis
+      - Kasimir may have found it again, and may guide us there
+      - until we find the Sunsword

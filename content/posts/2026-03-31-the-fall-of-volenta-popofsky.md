@@ -30,6 +30,8 @@ At the height of it Volenta seized Shabasta and dragged him ten feet up the dung
 
 Note: After the fight the players talked about Revivify as a "free heal": it is often mechanically better to let a character die and bring them back than to heal them up from below zero.
 
+Above us, past the balcony where Volenta first stood, a velvet curtain hangs. Now we must choose: climb up and go beyond it, or turn back and explore elsewhere.
+
 ## Key Locations:
 
 **The Flooded Dungeon**: A dark chamber with three feet of water, a balcony ten feet up and a velvet curtain leading deeper into the castle.

@@ -17,7 +17,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-l
 
 ## Summary:
 
-It was evening when we entered the cloaked figure’s hiding place and found Davian Martikov, father of Urwin Martikov. Davian told us the forest folk, druids, and their blights, along with Baba Lysaga, whom some call Lysa, have driven his family from the Wizard of Wines vineyard.
+It was evening when we entered the cloaked figure’s hiding place and found Davian Martikov, father of Urwin Martikov. Davian told us the forest folk, druids, and their blights, along with Baba Lysaga, whom some call Lysa, have driven his family from the Wizard of Wines vineyard. That Lysa was Lady Fiona Wachter’s mentor, the one Lady Fiona angered when she left her teaching.
 
 ![The Wizard of Wines winery among misty vineyards, blights lurking at the edge](/images/wizard-of-wines-ai.jpg)
 
