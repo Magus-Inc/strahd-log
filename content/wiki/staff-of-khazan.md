@@ -17,7 +17,7 @@ sources:
 
 *Written from the session logs, in Malron's words.*
 
-An elegant staff of platinum, sparkling with arcane energy. Victor first told us of it: a powerful wizard's staff, magically bound so that Khazan could call it to him by speaking his own name, and he wanted us to fetch it from Khazan's tower ([Whispers in the Baron's Mansion](/posts/whispers-in-the-barons-mansion/)). We set out to find Szoldar to guide us to the tower that held it ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/)). In the end it waited in Khazan's tomb in the catacombs of Ravenloft. When we solved the puzzle of runes for the eight schools of magic, the staff appeared, and Crusty bound himself to it, though arcane lightning surged through his veins ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/)).
+An elegant staff of platinum, sparkling with arcane energy. Victor first told us of it: a powerful wizard's staff, magically bound so that Khazan could call it to him by speaking his own name, and he wanted us to fetch it from Khazan's tower ([Whispers in the Baron's Mansion](/posts/whispers-in-the-barons-mansion/)). We set out to find Szoldar to guide us to the tower that held it ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/)). In the end it turned out to be in Khazan's tomb in the catacombs of Ravenloft. When we solved the puzzle of runes for the eight schools of magic, the staff appeared, and Crusty bound himself to it, though arcane lightning surged through his veins ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/)).
 
 ## What it does
 

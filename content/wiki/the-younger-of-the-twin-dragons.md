@@ -11,7 +11,7 @@ sources:
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 
-A cryptic prophecy that stayed with me after [Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/): we came upon these words, telling us to seek out the younger of the twin dragons and reignite its silver flame. Where they came from, I did not set down.
+A cryptic prophecy that stayed with me after [Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/): we came upon these words, telling us to seek out the younger of the twin dragons and reignite its silver flame. I did not write down where they came from.
 
 ## The words
 
