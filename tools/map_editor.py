@@ -12,7 +12,10 @@ Builds the site, serves public/ on localhost, and adds /edit/, the map with two 
 
 Every change is written straight to the files (only the changed entries; comments stay), read back
 to make sure it holds, and the page says "Saved" only then. Undo (Ctrl+Z) steps back through the
-last 50 changes. Rebuild (or `just serve`) to see the result on the site.
+last 50 changes. After every change the page marks anything that breaks the map's rules (a place
+off its road, a crossing with no bridge, a road along a river or into a lake, ways drawn over each
+other, a crossroads page naming a different number of ways) and lists the official travel hours
+beside the hours our roads take. Rebuild (or `just serve`) to see the result on the site.
 """
 
 from __future__ import annotations
@@ -37,6 +40,7 @@ MAP_FILE = ROOT / "data" / "map.yaml"
 GEO_FILE = ROOT / "data" / "geography.yaml"
 TRAVEL_FILE = ROOT / "data" / "travel-times.yaml"
 SPRITE_DIR = ROOT / "static" / "images" / "map" / "sprites"
+WIKI_DIR = ROOT / "content" / "wiki"
 PUBLIC = ROOT / "public"
 EDIT_PAGE = Path(__file__).resolve().parent / "map_editor.html"
 UNDO = 50
@@ -60,9 +64,10 @@ class Editor:
     """The three files the editor changes; every change checked, written, read back, and undoable."""
 
     def __init__(self, geo: Path = GEO_FILE, map_file: Path = MAP_FILE, travel: Path = TRAVEL_FILE,
-                 sprite_dir: Path = SPRITE_DIR):
+                 sprite_dir: Path = SPRITE_DIR, wiki_dir: Path | None = WIKI_DIR):
         self.files = (geo, map_file, travel)
         self.sprite_dir = sprite_dir
+        self.wiki_dir = wiki_dir
         self.history: list[tuple[str, str, str]] = []
         self.lock = threading.RLock()
 
@@ -115,9 +120,25 @@ class Editor:
             return True
 
     def state(self) -> dict:
+        """What the page draws, plus what breaks the map's rules and how long each official leg is."""
+        import barovia_map
+        import yaml
         with self.lock:
-            out = geo_edit.state(*self.texts())
+            texts = self.texts()
+            out = geo_edit.state(*texts)
             out["undo"] = len(self.history)
+            data = yaml.safe_load(texts[1]) or {}
+            try:
+                barovia_map.use_geography(self.files[0])
+                sprites = barovia_map.load_sprites(self.files[1], self.sprite_dir)
+                out["problems"] = barovia_map.map_problems(data, sprites, self.wiki_dir)
+                try:
+                    out["hours"] = barovia_map.travel_report(self.files[2], data)
+                except ValueError as err:  # a leg's end came off the roads: that is a problem too
+                    out["hours"] = []
+                    out["problems"].append({"at": None, "text": str(err)})
+            finally:
+                barovia_map.use_geography()
         return out
 
     def base_svg(self) -> str:

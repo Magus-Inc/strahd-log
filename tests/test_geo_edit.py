@@ -148,7 +148,7 @@ def editor_files(tmp_path):
         f.write_text(text, encoding="utf-8")
     from PIL import Image
     Image.new("RGBA", (20, 10)).save(tmp_path / "town.webp")
-    return map_editor.Editor(*files, sprite_dir=tmp_path), files
+    return map_editor.Editor(*files, sprite_dir=tmp_path, wiki_dir=None), files
 
 
 def test_the_editor_writes_checks_and_undoes(tmp_path):
@@ -196,3 +196,18 @@ def test_the_editor_server_saves_and_says_so(tmp_path):
         assert post("/undo", {})["undo"] == 0 and geo.read_text(encoding="utf-8") == GEO
     finally:
         server.shutdown()
+
+
+def test_the_editor_reports_problems_and_hours(tmp_path):
+    editor, _ = editor_files(tmp_path)
+    st = editor.state()
+    assert st["problems"] == [] and st["hours"] == []
+    editor.apply({"op": "insert", "section": "roads", "key": "North", "after": 0, "xy": [52, -10]})
+    editor.apply({"op": "move", "from": [52, -10], "to": [80, 0]})  # now lies along the east road
+    assert any("drawn over each other" in p["text"] for p in editor.state()["problems"])
+
+
+def test_the_real_editor_state_has_no_problems_and_every_leg():
+    import map_editor
+    st = map_editor.Editor().state()
+    assert st["problems"] == [] and len(st["hours"]) > 20

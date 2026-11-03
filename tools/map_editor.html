@@ -15,6 +15,10 @@ text.n{font-size:7px;fill:#000;paint-order:stroke;stroke:#fff;stroke-width:2px;p
 .h{cursor:grab;stroke:#1d160f}.h.sel{stroke:#ff2d2d}
 .shaped{fill:none;stroke:#a03cc8;stroke-dasharray:3 2;pointer-events:none}
 .sel-way{fill:none;stroke:#ff2d2d;pointer-events:none}
+.problem{fill:none;stroke:#ff2d2d;cursor:pointer}.leg{fill:none;stroke:#ff8c1a;stroke-opacity:.8;pointer-events:none}
+#probs.bad{background:#a8322a;border-color:#ff8a7a}#probs.ok{background:#3d5a2a}
+#panel ul{margin:4px 0;padding-left:18px;max-height:45vh;overflow:auto;font-size:13px}#panel li{cursor:pointer;margin:3px 0}
+#panel li.off{color:#ffb070}#panel li:hover{text-decoration:underline}
 #panel{position:fixed;right:10px;bottom:10px;max-width:340px;background:#3a2c1e;border:1px solid #c9a35b;border-radius:10px;
   padding:10px 12px;display:none;box-shadow:0 4px 18px #000a;z-index:3}
 #panel h3{margin:0 0 6px;font-size:16px}#panel p{margin:4px 0;font-size:13px;color:#ddd}
@@ -23,6 +27,7 @@ text.n{font-size:7px;fill:#000;paint-order:stroke;stroke:#fff;stroke-width:2px;p
 <div id="bar">
   <button id="m-pics">Pictures</button><button id="m-roads">Roads &amp; water</button>
   <button id="undo" title="Ctrl+Z">Undo</button>
+  <button id="probs">Problems</button><button id="hrs">Hours</button>
   <button id="zin">+</button><button id="zout">−</button><button id="zfit">Whole map</button>
   <span id="layers"><label><input type="checkbox" data-l="roads" checked> Roads</label>
   <label><input type="checkbox" data-l="water" checked> Water</label>
@@ -71,8 +76,9 @@ async function send(url, body) {
   state = await r.json();
   $("base").setAttribute("href", "/edit/base.svg?v=" + (++version));
   say(url === "/undo" ? "Undone, and saved" : "Saved to the map files");
-  $("undo").disabled = !state.undo;
+  updateBar();
   if (mode === "roads") drawRoads();
+  if (sel && (sel.kind === "problems" || sel.kind === "hours")) showPanel();
   return true;
 }
 
@@ -90,6 +96,21 @@ for (const s of SPRITES) {
 }
 
 // --- Roads & water mode -------------------------------------------------------------------------
+function updateBar() {
+  $("undo").disabled = !state.undo;
+  const n = state.problems.length, b = $("probs");
+  b.textContent = n ? `${n} problem${n > 1 ? "s" : ""}` : "No problems"; b.className = n ? "bad" : "ok";
+  const off = state.hours.filter(offHours).length;
+  $("hrs").textContent = off ? `Hours (${off} off)` : "Hours";
+}
+function offHours(h) { const r = h.drawn / h.hours; return r < 0.7 || r > 1.3; }
+function nice(slug) { return slug.replace(/-/g, " "); }
+function zoomTo(points, pad) {
+  const xs = points.map(p => p[0]), ys = points.map(p => p[1]);
+  const w = Math.max(80, (Math.max(...xs) - Math.min(...xs)) + 2 * pad, ((Math.max(...ys) - Math.min(...ys)) + 2 * pad) / 0.75);
+  const cx = (Math.max(...xs) + Math.min(...xs)) / 2, cy = (Math.max(...ys) + Math.min(...ys)) / 2;
+  vb = {x: cx - w / 2, y: cy - w * 0.375, w: Math.min(1000, w), h: Math.min(750, w * 0.75)}; setVB();
+}
 function key(p) { return r1(p[0]) + "," + r1(p[1]); }
 function wayName(w) { return typeof w.key === "number" ? "Forest #" + (w.key + 1) : (w.key || "the marsh"); }
 function visible(w) { return show[LAYER[w.section]]; }
@@ -111,6 +132,13 @@ function drawRoads() {
     for (const i in w.shapes) el("polyline", {points: pts([w.points[+i], w.points[+i + 1]]), class: "shaped", "stroke-width": 1.6 * u}, ways);
     w.points.forEach((p, i) => { const k = key(p); if (!seen.has(k)) seen.set(k, {xy: p, refs: []}); seen.get(k).refs.push({wi, i}); });
   });
+  for (const pr of state.problems) {
+    if (!pr.at) continue;
+    const c = el("circle", {cx: pr.at[0], cy: pr.at[1], r: 10 * u, class: "problem", "stroke-width": 2.5 * u}, ways);
+    el("title", {}, c).textContent = pr.text;
+    c.addEventListener("pointerdown", e => { e.stopPropagation(); sel = {kind: "problems"}; showPanel(); });
+  }
+  if (sel && sel.kind === "hours" && sel.leg != null) el("polyline", {points: pts(state.hours[sel.leg].points), class: "leg", "stroke-width": 5 * u}, ways);
   if (sel && sel.kind === "stretch") {
     const w = state.ways[sel.wi], a = w.points[sel.i], b = w.points[(sel.i + 1) % w.points.length];
     el("polyline", {points: pts([a, b]), class: "sel-way", "stroke-width": 2.5 * u}, ways);
@@ -191,7 +219,19 @@ function pickStretch(wi, q) {
 function showPanel() {
   if (!sel || mode !== "roads") { panel.style.display = "none"; return; }
   panel.style.display = "block";
-  if (sel.kind === "point") {
+  if (sel.kind === "problems") {
+    const list = state.problems;
+    panel.innerHTML = `<h3>${list.length ? list.length + " problem" + (list.length > 1 ? "s" : "") : "No problems"}</h3>` +
+      (list.length ? `<p>Saved anyway, so you can keep going; tap one to see it. The tests fail until they are fixed.</p><ul>` +
+        list.map((p, i) => `<li data-i="${i}">${esc(p.text)}</li>`).join("") + "</ul>" : "<p>Every rule the tests check holds.</p>") +
+      `<div class="row"><button id="p-close">Close</button></div>`;
+    panel.querySelectorAll("li").forEach(li => li.onclick = () => { const p = list[+li.dataset.i]; if (p.at) zoomTo([p.at], 40); });
+  } else if (sel.kind === "hours") {
+    panel.innerHTML = `<h3>Hours on foot</h3><p>The official map's hours beside what our road takes (at the scale bar's pace). Orange is more than 30% off. Tap a leg to see its road.</p><ul>` +
+      state.hours.map((h, i) => `<li data-i="${i}" class="${offHours(h) ? "off" : ""}">${esc(nice(h.from))} to ${esc(nice(h.to))}: ${h.hours} h official, ${h.drawn} h ours</li>`).join("") +
+      `</ul><div class="row"><button id="p-close">Close</button></div>`;
+    panel.querySelectorAll("li").forEach(li => li.onclick = () => { sel.leg = +li.dataset.i; zoomTo(state.hours[sel.leg].points, 20); });
+  } else if (sel.kind === "point") {
     const pin = state.pins.find(p => key(p.xy) === sel.k), r = sel.h.refs[0], w = state.ways[r.wi];
     const on = pin ? pin.users : sel.h.refs.map(r => wayName(state.ways[r.wi]));
     panel.innerHTML = `<h3>Point ${sel.k.replace(",", ", ")}</h3><p>On: ${on.map(esc).join(", ")}</p>
@@ -230,6 +270,8 @@ svg.addEventListener("pointerup", e => { if (pan && pan.moved && mode === "roads
 svg.addEventListener("wheel", e => { e.preventDefault(); const q = pt(e); zoom(e.deltaY < 0 ? 1 / 1.15 : 1.15, q.x, q.y); }, {passive: false});
 $("zin").onclick = () => zoom(1 / 1.5); $("zout").onclick = () => zoom(1.5); $("zfit").onclick = () => { vb = {x: 0, y: 0, w: 1000, h: 750}; setVB(); };
 $("undo").onclick = () => send("/undo");
+$("probs").onclick = () => { if (mode !== "roads") setMode("roads"); sel = {kind: "problems"}; drawRoads(); showPanel(); };
+$("hrs").onclick = () => { if (mode !== "roads") setMode("roads"); sel = {kind: "hours", leg: null}; drawRoads(); showPanel(); };
 document.querySelectorAll("#layers input").forEach(i => { i.checked = show[i.dataset.l]; i.onchange = () => { show[i.dataset.l] = i.checked; drawRoads(); }; });
 
 function setMode(m) {
@@ -251,7 +293,7 @@ document.addEventListener("keydown", e => {
 });
 window.addEventListener("resize", () => { if (mode === "roads") drawRoads(); });
 
-fetch("/edit/state").then(r => r.json()).then(s => { state = s; $("undo").disabled = !s.undo;
+fetch("/edit/state").then(r => r.json()).then(s => { state = s; updateBar();
   let m = "pics"; try { m = localStorage.getItem("map-edit-mode") || "pics"; } catch (err) {}
   setMode(new URLSearchParams(location.search).get("mode") || m); });
 </script>
