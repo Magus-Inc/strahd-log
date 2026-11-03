@@ -15,7 +15,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-An ossuary deep in Castle Ravenloft, past the servants' quarters. Varushka told us Rahadin's office lies beyond it, and when we passed through the castle that first time we saw a dragon's head hanging on its wall ([Varushka's Key](/posts/varushkas-key/)). When we planned our return, it was there we believed Argynvost's skull rests ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/)).
+An ossuary deep in Castle Ravenloft, past the servants' quarters. Varushka told us Rahadin's office lies beyond it, and when we passed through the castle that first time we saw a dragon's head hanging on its wall ([Varushka's Key](/posts/varushkas-key/)). When we planned our return, we believed Argynvost's skull was there ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/)).
 
 It is a cathedral of the dead. The floor is darkly stained, and the old oak tables lie smashed and scattered like toys, replaced with furniture made of human bone. The walls and the high vaulted ceiling are yellow with bones and skulls set in grim patterns. Great mounds of bones fill the four corners, and garlands of skulls run from them to a chandelier of bones above a long bone table in the middle of the room, with ten bone chairs set around it and a bowl of yet more bone on top. The doors to the north and south are sheathed in bone, but the steel-banded double doors in the east wall are not, and above them hung the dragon's skull.
 

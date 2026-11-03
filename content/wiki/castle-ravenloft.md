@@ -17,7 +17,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-Strahd's castle of stone stands high above the village of Barovia. The first time we saw it, from a hill on the road, the fog rolled in and hid it while leaving the village plain to see ([Barovia, Barovia](/posts/barovia-barovia/)). Later, from the village, we watched a procession of souls climb from the graveyard and sink into the castle from the top ([Rest for the Wicked](/posts/rest-for-the-wicked/)). Its front is guarded by a thousand-foot chasm, crossed only by a drawbridge, and by dragon and gargoyle statues we take for sentries ([Unwelcome Guests](/posts/unwelcome-guests/), [Shadows and Steel](/posts/welcome-back-to-vellanki/)).
+Strahd's castle of stone stands high above the village of Barovia. The first time we saw it, from a hill on the road, the fog rolled in and hid it while leaving the village plain to see ([Barovia, Barovia](/posts/barovia-barovia/)). Later, from the village, we watched a procession of souls climb from the graveyard and sink into the castle from the top ([Rest for the Wicked](/posts/rest-for-the-wicked/)). Its front is guarded by a thousand-foot chasm, crossed only by a drawbridge, and by dragon and gargoyle statues that we think are sentries ([Unwelcome Guests](/posts/unwelcome-guests/), [Shadows and Steel](/posts/welcome-back-to-vellanki/)).
 
 ### As Strahd's guests
 

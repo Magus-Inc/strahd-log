@@ -15,7 +15,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-A wizard of old, laid in Crypt 37 of the catacombs beneath Castle Ravenloft. His corpse lies on a marble slab in the middle of the tomb: a man with a long black beard, his skin drawn tight over skull and bones, still in dusty red robes, with a wooden staff clutched to his chest, a brass knob at one end and a marble knob at the other. At one end of the slab is a shallow, rounded recess. With the wizard's own staff we worked the hidden mechanism that lifted the slab on a leather case of spell scrolls of fire, lightning and cold ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).
+A wizard of old, laid in Crypt 37 of the catacombs beneath Castle Ravenloft. His corpse lies on a marble slab in the middle of the tomb: a man with a long black beard, his skin drawn tight over skull and bones, still in dusty red robes, with a wooden staff clutched to his chest, a brass knob at one end and a marble knob at the other. At one end of the slab is a shallow, rounded recess. With the wizard's own staff we worked a hidden mechanism. The slab lifted, and under it was a leather case of spell scrolls of fire, lightning and cold ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).
 
 <!-- from-the-log -->
 ## From the adventure log
