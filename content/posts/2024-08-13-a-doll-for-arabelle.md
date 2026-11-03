@@ -18,9 +18,9 @@ Among the cluttered shelves of Blinsky’s shop was a doll that looked eerily li
 
 At the encampment we met Shabasta the Great, a porcupine of a bard, whose lute carried old melodies and whose tales carried secrets.
 
-But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Alexi claims Yann drugged him and took her. Yann had met a grisly end: a dusk elf found his severed head nearby, toward the Luna River.
+But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Alexi claimed Yann drugged him and took her. Yann had met a grisly end: a dusk elf found his severed head nearby, toward the Luna River.
 
-Kasimir held a signet ring found with it, bearing a sigil of connected symbols and lines, its design woven from necromancy and evocation. We might be able to research it in the Baron’s library.
+Kasimir held a signet ring bearing a sigil of connected symbols and lines, its design woven from necromancy and evocation. We might be able to research it in the Baron’s library.
 
 ![Kasimir Velikov, a grey-skinned dusk elf, clutching a glowing signet ring in the Vistani camp](/images/kasimir-ai.jpg)
 

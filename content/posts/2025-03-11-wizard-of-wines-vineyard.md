@@ -27,7 +27,7 @@ He laid out what waits ahead: four druids, eight needle blights, three greater s
 
 The tunnel to the cellar runs through a cavern full of brown mold. Fire only feeds it, but cold kills it, and we must keep to the middle of the dirt path to come through unharmed.
 
-Davian told us of his family’s grief. Ten years ago, while Urwin was on watch, something valuable was stolen from the winery: a gemstone, a prized heirloom. Then three months ago Davian’s younger son, Elvir, joined a march on Castle Ravenloft from Barovia and died in the castle, and his death shattered the family. If we need them, there is an emergency cache of healing supplies in a barrel in the northwest corner of a storeroom on the winery’s main floor. And the cellar is made of wood, so please, he asked, do not burn it down.
+Davian told us of his family’s grief. Ten years ago, while Urwin was on watch, something valuable was stolen from the winery: a gemstone, a prized heirloom. Then three months ago Davian’s younger son, Elvir, joined a march on Castle Ravenloft from Barovia and died in the castle, and his death shattered the family. We were told of an emergency cache of healing supplies in a barrel in the northwest corner of a storeroom on the winery’s main floor. And the cellar is made of wood, so we must not burn it down.
 
 Muriel stayed behind to guard our way out while we went through the tunnel. We found a box marked with a snowflake, hanging from a rusted iron hook. Inside were three winter wolf teeth, enchanted by the mountain folk, that can loose a freezing blast or shield the bearer from cold.
 

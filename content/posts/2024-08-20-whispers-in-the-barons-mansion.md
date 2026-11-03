@@ -30,7 +30,7 @@ Under the rug, etched into the floor, was a circle with sequences of sigils: a t
 
 He wants us to fetch something from Khazan’s tower: a powerful wizard’s staff, magically bound so that Khazan could call it to him by speaking his own name, “Khazan.” Victor thinks whoever had the ring may be using the tower. It lies to the west on Lake Baratok. Szoldar Szoldarovich, one of the town’s most skilled hunters, would make a good guide to the lake. He should be at the mouth of a river to the west, so we are to go out the north gate and then west along the lake to find him and his partner.
 
-On our way out Aera looked into a few of the second-floor rooms for anything worth pilfering. One room was full of dolls, so many dolls, and oddest of all, every one of them looks like Ireena Kolyana. A chest there held a silvered +1 shortsword and some clothes for a large man. There is a mirror too, with a verse: “Magic mirror on the wall, summon for your knight’s shade and wield your murderous blade.”
+On our way out Aera looked into a few of the second-floor rooms for anything worth pilfering. One room was full of dolls, so many dolls, and oddest of all, every one of them looks like Ireena Kolyana. A chest there held a silvered +1 shortsword and some clothes for a large man. Somewhere on that floor there is a mirror, too, with a verse: “Magic mirror on the wall, summon for your knight’s shade and wield your murderous blade.”
 
 We left the mansion and headed north and west to find Szoldar. Ireena chose to stay at the Blue Water Inn rather than come with us. At dusk we found a small, crudely built shack at the water’s edge, and the raven joined Olfin again.
 
@@ -40,7 +40,7 @@ We left the mansion and headed north and west to find Szoldar. Ireena chose to s
 
 ## Key Locations:
 
-* **The Baron’s den**: Padded chairs, and stairs I slipped up unnoticed.
+* **The Baron’s den**: Padded chairs, and the stairs I bluffed my way up.
 * **The kitchen**: Where a distorted silhouette hinted at the spirit.
 * **The library**: The record of Vallaki’s births and deaths.
 * **The attic**: “All is not well” on the door, glyphs of warding, and a teleportation circle under a rug.
@@ -68,7 +68,7 @@ We left the mansion and headed north and west to find Szoldar. Ireena chose to s
 
 * **Ireena Strazni**: Cause of death unknown, presumed devoured by wolves. A familiar name.
 * **The ring’s symbol**: In Victor’s spellbook, tying it to Khazan.
-* **Khazan’s tower**: Where Victor’s curiosity lies, a place barred to outsiders.
+* **Khazan’s tower**: Where Victor’s curiosity lies. Its field stops anyone else casting spells there.
 * **The teleportation circle**: Victor has tested it, with gruesome results.
 
 ## Session Highlights:
