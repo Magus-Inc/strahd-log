@@ -875,18 +875,27 @@ def ways_touching(ways: dict[str, list[Point]]) -> list[tuple[str, str, Point]]:
     they seemed to cross where the official map has them apart. Ways may meet only at a junction,
     a vertex both lines list. Returns (way, other way, where), one entry per pair, closest spot."""
     drawn = {name: [p for b in curves_of(pts) for p in bezier_points(b)] for name, pts in ways.items()}
-    names = list(ways)
+    boxes = {name: (min(x for x, _ in pts), min(y for _, y in pts), max(x for x, _ in pts), max(y for _, y in pts))
+             for name, pts in drawn.items() if pts}
+    names = [name for name in ways if name in boxes]
     found = []
     for i, a in enumerate(names):
         for b in names[i + 1:]:
+            (ax0, ay0, ax1, ay1), (bx0, by0, bx1, by1) = boxes[a], boxes[b]
+            if ax0 > bx1 + TOUCH or bx0 > ax1 + TOUCH or ay0 > by1 + TOUCH or by0 > ay1 + TOUCH:
+                continue  # too far apart to touch anywhere (the map editor runs this after every drag)
             shared = set(ways[a]) & set(ways[b])
 
             def free(points):
                 return [p for p in points if all(math.dist(p, j) >= JUNCTION for j in shared)]
 
+            cells: dict[tuple[int, int], list[Point]] = {}
+            for q in free(drawn[b]):
+                cells.setdefault((int(q[0] // TOUCH), int(q[1] // TOUCH)), []).append(q)
             best = None
             for p in free(drawn[a]):
-                for q in free(drawn[b]):
+                cx, cy = int(p[0] // TOUCH), int(p[1] // TOUCH)
+                for q in (q for dx in (-1, 0, 1) for dy in (-1, 0, 1) for q in cells.get((cx + dx, cy + dy), ())):
                     d = math.dist(p, q)
                     if d < TOUCH and (best is None or d < best[0]):
                         best = (d, ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2))
@@ -970,3 +979,89 @@ def load_travel(path: Path, places: dict[str, Place]) -> list[dict]:
 
 def path_length(points: list[Point]) -> float:
     return sum(math.dist(a, b) for a, b in zip(points, points[1:]))
+
+
+# --- checks the map editor runs after every change (tests run them on the real map too) ------------
+
+BRIDGE_REACH = 10   # a crossing needs a bridge sprite this close
+ALONG_WATER = 16    # a road this many units within 7 of a river runs along it, not across
+WAY_WORDS = {"three": 3, "four": 4, "five": 5, "six": 6}
+
+
+def crossings(line, water) -> list[Point]:
+    """Where two polylines cross."""
+    found = []
+    for p1, p2 in zip(line, line[1:]):
+        for p3, p4 in zip(water, water[1:]):
+            d = (p2[0] - p1[0]) * (p4[1] - p3[1]) - (p2[1] - p1[1]) * (p4[0] - p3[0])
+            if not d:
+                continue
+            t = ((p3[0] - p1[0]) * (p4[1] - p3[1]) - (p3[1] - p1[1]) * (p4[0] - p3[0])) / d
+            u = ((p3[0] - p1[0]) * (p2[1] - p1[1]) - (p3[1] - p1[1]) * (p2[0] - p1[0])) / d
+            if 0 <= t <= 1 and 0 <= u <= 1:
+                found.append((p1[0] + t * (p2[0] - p1[0]), p1[1] + t * (p2[1] - p1[1])))
+    return found
+
+
+def map_problems(map_data: dict, sprites: list[Sprite], wiki_dir: Path | None = None) -> list[dict]:
+    """What breaks the map's rules, each as {at: [x, y], text}: a place off its road, ways drawn over
+    each other away from a junction, water crossed with no bridge, a road running along a river or
+    into a lake, and (given the wiki) a crossroads page naming a different number of ways."""
+    out = []
+
+    def problem(at, text):
+        out.append({"at": [round(at[0], 1), round(at[1], 1)], "text": text})
+
+    graph = road_graph()
+    for section in ("places", "spots"):
+        for slug, item in (map_data.get(section) or {}).items():
+            xy = tuple(item["xy"])
+            if item.get("offroad"):
+                if nearest_vertex(graph, *xy) is not None:
+                    problem(xy, f"{slug} is marked off the roads but sits right by one")
+            elif xy not in graph:
+                problem(xy, f"{slug} is not on a road point any more")
+    ways = {**ROADS, **TRACKS, **UNUSED_TRACKS}
+    for a, b, at in ways_touching(ways):
+        problem(at, f"{a} and {b} are drawn over each other here")
+    bridges = [(s.x, s.y) for s in sprites if s.image == "bridge"]
+    for road, line in ways.items():
+        for river, water in RIVERS.items():
+            for at in crossings(line, water):
+                if not any(math.dist(at, b) < BRIDGE_REACH for b in bridges):
+                    problem(at, f"{road} crosses {river} with no bridge")
+            close, first = 0.0, None
+            for a, b in zip(line, line[1:]):
+                steps = max(int(math.dist(a, b)), 1)
+                for k in range(steps):
+                    p = (a[0] + (b[0] - a[0]) * k / steps, a[1] + (b[1] - a[1]) * k / steps)
+                    if near_line(p, water, 7):
+                        close += 1
+                        first = first or p
+            if close >= ALONG_WATER:
+                problem(first, f"{road} runs along {river} for about {close:.0f} units")
+        for lake, shore in LAKES.items():
+            wet = next((p for p in line if inside(p, shore)), None)
+            if wet:
+                problem(wet, f"{road} goes into {lake or 'the marsh'}")
+    if wiki_dir:
+        for slug, item in (map_data.get("places") or {}).items():
+            page = wiki_dir / f"{slug}.md"
+            if not page.exists() or tuple(item["xy"]) not in graph:
+                continue
+            for word in re.findall(r"\b(three|four|five|six)-way\b", page.read_text(encoding="utf-8").lower()):
+                drawn = len(graph[tuple(item["xy"])])
+                if drawn != WAY_WORDS[word]:
+                    problem(item["xy"], f"{slug}'s wiki page says {word}-way, the map draws {drawn} ways")
+    return out
+
+
+def travel_report(travel_path: Path, map_data: dict) -> list[dict]:
+    """Each leg of data/travel-times.yaml: the official hours beside the hours our road takes at HOUR."""
+    from types import SimpleNamespace
+    places = {slug: SimpleNamespace(x=item["xy"][0], y=item["xy"][1]) for slug, item in (map_data.get("places") or {}).items()}
+    out = []
+    for leg in load_travel(travel_path, places):
+        out.append({"from": leg["from"], "to": leg["to"], "hours": leg["hours"],
+                    "drawn": round(path_length(leg["points"]) / HOUR, 1), "points": [list(p) for p in leg["points"]]})
+    return out
