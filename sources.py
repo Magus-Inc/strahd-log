@@ -17,12 +17,21 @@ import re
 
 KINDS = ("notes", "transcript", "recording", "discord")
 REFERENCE_ID = re.compile(rf"^(?:{'|'.join(KINDS)})-[a-z0-9]{{6}}$")
-PUBLIC_LINK = re.compile(r"^https://[A-Za-z0-9.-]+\.[A-Za-z]{2,}(?:/[^\s]*)?$")
+PUBLIC_LINK = re.compile(r"^https://([A-Za-z0-9.-]+\.[A-Za-z]{2,})(?:/[^\s]*)?$")
+# Share links to private files and chat look public but aren't: never a source.
+PRIVATE_HOSTS = ("1drv.ms", "onedrive.live.com", "sharepoint.com", "drive.google.com", "docs.google.com",
+                 "discord.com", "discordapp.com", "discord.gg")
 
 
 def is_valid_source(entry) -> bool:
     """One entry: a reference id or a public https link."""
-    return isinstance(entry, str) and bool(REFERENCE_ID.match(entry) or PUBLIC_LINK.match(entry))
+    if not isinstance(entry, str):
+        return False
+    if REFERENCE_ID.match(entry):
+        return True
+    link = PUBLIC_LINK.match(entry)
+    host = link.group(1).lower() if link else ""
+    return bool(link) and not any(host == h or host.endswith("." + h) for h in PRIVATE_HOSTS)
 
 
 def parse_sources(value, where: str) -> list[str]:

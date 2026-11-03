@@ -30,6 +30,7 @@ sources:
 - discord-4kqb2j
 - discord-ao3a4y
 - discord-iza4yv
+- discord-x2m8qd
 ---
 
 ## At the table
@@ -49,4 +50,4 @@ Besides running the sessions, Ryan posted texts on the group's Discord for the p
 * **22 April 2025**, [Welcome to Krezk](/posts/welcome-to-krezk/): a card reading, and the rules for the Obsidian Whistle.
 * **3 June 2025**, [Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/): the knightly vow of the Order of the Silver Dragon, Argynvost's last letter, Andral's letter, and the items on the hidden shelf.
 
-He also shared the rules for items and companions as the party found them: Zorya's stat block, the Clairvoyance Stone, the Symbol of Ravenkind, the Staff of Khazan and Olfin's Longsword. Many wiki pages, from the Dusk Elves to the Order of the Silver Dragon, were filled in from his texts.
+He also shared the rules for items and companions as the party found them: the Talisman of Echoes, Zorya's stat block, the Clairvoyance Stone, the Symbol of Ravenkind, the Staff of Khazan and Olfin's Longsword. Many wiki pages, from the Dusk Elves to the Order of the Silver Dragon, were filled in from his texts.

@@ -86,7 +86,7 @@ def test_heart_stone_post_has_ryans_second_paragraph():
 import build  # noqa: E402
 import wiki  # noqa: E402
 
-FROM_RYAN = ("texts shared at the table", "Ryan shared", "Ryan's Discord post")
+FROM_RYAN = ("shared at the table", "Ryan shared", "Ryan's Discord post", "notes from the table")
 
 
 def _page(path):

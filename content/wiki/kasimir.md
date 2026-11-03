@@ -7,6 +7,7 @@ summary: A Dusk Elf mage and scribe who held a sigil-bearing signet ring.
 source: Compiled from the adventure log, with a description written for the site
 sources:
 - discord-ktsn7s
+- discord-e7o9ho
 ---
 
 ## Description

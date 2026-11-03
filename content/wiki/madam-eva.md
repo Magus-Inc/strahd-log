@@ -9,6 +9,7 @@ source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/madam-eva
 sources:
 - discord-bs524v
+- discord-ca1rve
 ---
 
 ## Description
