@@ -331,7 +331,11 @@ def test_players_real_names_stay_on_their_pc_pages():
     # Chris: real player names appear only on the PC wiki pages, never in a session post.
     root = Path(__file__).resolve().parent.parent
     pages = wiki.load_wiki(root / "content" / "wiki", build.split_front_matter)
-    names = {part for p in pages if p.player for part in [p.player, *p.player.split()] if len(part) > 3}
+    # A surname that is also a game word is checked only as part of the full name ("Warding Bond" is a spell).
+    game_words = {"Bond"}
+    names = {part for p in pages if p.player for part in [p.player, *p.player.split()]
+             if len(part) > 3 and part not in game_words}
+    assert "Ed Bond" in names and "Bond" not in names
     for post in (root / "content" / "posts").glob("*.md"):
         text = post.read_text(encoding="utf-8")
         found = sorted(n for n in names if re.search(rf"(?<!\w){re.escape(n)}(?!\w)", text))
