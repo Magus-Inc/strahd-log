@@ -67,8 +67,8 @@ class Post:
     glance: list[str] = field(default_factory=list)
     teaser: str = ""
     cast: list = field(default_factory=list)
-    characters_html: str = ""  # its Characters section (poststyle), shown or not
-    listed: list[str] = field(default_factory=list)  # player characters that section names
+    characters_html: str = ""  # the cast as HTML, for link_wiki to find their pages
+    listed: list[str] = field(default_factory=list)  # wiki slugs of the cast
     slides: list[str] = field(default_factory=list)  # static/slides/<file stem>/*.webp, in page order
     slides_pdf: str = ""
     decks: list = field(default_factory=list)  # article.Deck, the one above first, then any in subfolders
@@ -76,7 +76,7 @@ class Post:
     slides_at: str = "above-story"  # where the slides go (poststyle slides setting)
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
     party: dict = field(default_factory=dict)  # data/party.yaml: died/revived/joined/returned/left -> [wiki pages]
-    cast_names: list[str] | None = None  # front matter `cast:`: the player characters there (the post format)
+    cast_names: list[str] = field(default_factory=list)  # front matter `cast:`: the player characters there
 
     @property
     def path(self) -> str:
@@ -202,7 +202,7 @@ def parse_post(path: Path) -> Post:
         tags=[str(t) for t in tags],
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         source=path,
-        cast_names=[str(n) for n in meta["cast"] or []] if "cast" in meta else None,
+        cast_names=[str(n) for n in meta.get("cast") or []],
     )
 
 
@@ -231,7 +231,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
     for post in posts:  # newest first, so mentioned_in comes out newest first too
         post.html, post.mentions = linker.link(post.html, each_section=SECTION_START.get(relink))
         post.html = wiki.link_npc_names(post.html, linker)
-        if post.characters_html:  # who the Characters section names, even when the style hides it
+        if post.characters_html:  # who the cast names, even when the style shows no pills
             _, named = linker.link(post.characters_html)
             post.listed = sorted(s for s in named if by_slug[s].type == "character" and not by_slug[s].dm)
         post.mentions |= narrators | set(post.listed)
@@ -242,15 +242,12 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
             article.full_size(render_markdown(page.body_md), ROOT / "static"))), self_slug=page.slug)
 
 
-def apply_style(posts: list[Post], style: dict, scenes: dict | None = None) -> None:
-    """One look for every post (see poststyle.py and data/post-style.yaml)."""
+def apply_style(posts: list[Post], style: dict) -> None:
+    """The look settings (data/post-style.yaml, poststyle.py) on every post in the one post format."""
     for post in posts:
-        if post.cast_names is not None:  # the one post format
-            post.html = poststyle.apply_format(post.html, style).html
-            post.characters_html = f"<p>{', '.join(post.cast_names)}</p>" if post.cast_names else ""
-        else:
-            styled = poststyle.apply(post.html, style, (scenes or {}).get(post.slug))
-            post.html, post.characters_html = styled.html, styled.characters
+        post.html = poststyle.apply(post.html, style)
+        # Who the front matter's `cast:` names; link_wiki finds their pages, shown or not.
+        post.characters_html = f"<p>{', '.join(post.cast_names)}</p>" if post.cast_names else ""
         if style["tagline"] == "none":
             post.tagline = ""
         post.show_cast = style["cast"] != "list"
@@ -553,7 +550,7 @@ class Site:
 
 def style_posts(site: Site) -> None:
     """One look for every post. Runs first: wiki linking reads the restyled headings and sections."""
-    apply_style(site.posts, site.style, poststyle.load_scenes(site.data_dir / "scene-headings.yaml"))
+    apply_style(site.posts, site.style)
 
 
 def number_posts(site: Site) -> None:
