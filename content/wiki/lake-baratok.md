@@ -3,6 +3,9 @@ title: Lake Baratok
 type: place
 summary: A lake with the tower where Van Richten hid.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-vmm5cm
+- discord-gayizv
 ---
 
 ## Description

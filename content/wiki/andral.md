@@ -3,6 +3,8 @@ title: Andral
 type: npc
 summary: The writer of a letter urging Argynvost to make peace with Strahd.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-9ekp17
 ---
 
 ## Description

@@ -7,6 +7,8 @@ aliases:
 summary: An old Vistani seer at Tser Pool who reads fortunes.
 source: Written on Obsidian Portal, combined with the session logs
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/madam-eva
+sources:
+- discord-bs524v
 ---
 
 ## Description

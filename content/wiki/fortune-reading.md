@@ -3,6 +3,8 @@ title: Fortune Reading
 type: other
 source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/fortune-reading
+sources:
+- discord-q4322i
 ---
 
 **Traitor**: Look for a wealthy woman, a staunch ally of the devil. Lock and key with the bones of an ancient enemy.

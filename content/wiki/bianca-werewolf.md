@@ -1,5 +1,6 @@
 ---
-title: Bianca (werewolf)
+title: Bianca
+link_by_hand: true
 type: npc
 summary: A werewolf with ties to Kiril, torn between love and survival.
 source: Compiled from the adventure log

@@ -8,6 +8,11 @@ aliases:
 - Rictavio van Richten
 summary: A vampire hunter and scholar disguised in Vallaki as the carnival showman Rictavio.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-vmm5cm
+- discord-gayizv
+- discord-bs524v
+- discord-ca1rve
 ---
 
 ## Description

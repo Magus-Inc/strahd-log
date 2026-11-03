@@ -7,6 +7,8 @@ summary: A Vistani camp just southwest of Vallaki, toward the Luna River, where 
 source: Compiled from the adventure log, with a description written for the site
 heard_of_in:
 - tser-pool
+sources:
+- discord-vmm5cm
 ---
 
 ## Description

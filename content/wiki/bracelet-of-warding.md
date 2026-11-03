@@ -3,6 +3,8 @@ title: Bracelet of Warding
 type: item
 summary: A bracelet that casts Sanctuary and Warding Bond.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-p377c9
 ---
 
 ## Description

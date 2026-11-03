@@ -3,6 +3,8 @@ title: Amulet of proof against detection and location
 type: item
 summary: An amulet that hides its wearer, once Ezmerelda's.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-gayizv
 ---
 
 ## Description

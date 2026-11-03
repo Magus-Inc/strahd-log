@@ -5,6 +5,8 @@ aliases:
 - Forest of Twilight
 summary: The former home of the Dusk Elves.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ktsn7s
 ---
 
 ## Description

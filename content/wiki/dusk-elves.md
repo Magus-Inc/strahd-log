@@ -3,6 +3,9 @@ title: Dusk Elves
 type: faction
 summary: Elves who have lived in Barovia for five centuries under Vistani protection.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ktsn7s
+- discord-e7o9ho
 ---
 
 ## Description
