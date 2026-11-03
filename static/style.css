@@ -327,6 +327,7 @@ html.map-full-open, html.map-full-open body { overflow: hidden; }
 .place-num { display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; font-size: 0.78rem; font-weight: 700;
   border: 1.5px solid rgba(224, 74, 99, 0.7); color: #f2c6ce; background: transparent; }
 .place-num.here { background: var(--accent); border-color: var(--accent); color: #fff; }
+a.place-num { text-decoration: none; } a.place-num:hover { background: var(--accent-hi); border-color: var(--accent-hi); color: #fff; }
 .place-sessions .place-why { display: block; color: var(--muted); font-size: 0.82rem; font-style: italic; }
 .place-sessions li.muted { display: block; }
 .place-sessions time { margin-left: 0; }
