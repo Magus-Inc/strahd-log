@@ -19,8 +19,18 @@
   page), loaded only on the pages that use it, the unminified build when it fits, no cookies,
   storage or network calls of its own, and listed in `data/vendor.yaml` with version, download URL,
   sha256 and why. `tests/test_vendor.py` enforces this, and a monthly workflow opens an issue when
-  osv.dev reports a security problem in a listed version. Every page must stay readable on a phone,
-  even if a script fails.
+  osv.dev reports a security problem in a listed version (or a pinned Python package). Every page
+  must stay readable on a phone, even if a script fails.
+- Libraries, JS or Python (Chris, 2026-11-03): before adding one, also weigh how well it is kept up,
+  and write it down in its entry (`data/vendor.yaml`, or `data/python-libraries.yaml` for every
+  package in `requirements*.txt`): first and last release, weekly downloads (how popular it is),
+  whether bug and security fixes are landing, `maintenance` (active, stable, new or unmaintained) and
+  its `risks`. Very new (under a year) is not a reason to refuse it, but it gets extra scrutiny and
+  its risk is listed. No release for two years can mean finished and stable or abandoned: decide
+  which from whether reports still get answered and fixed, and say so. Bug and security fixes that
+  have stopped, or few users, are risks to list. Weigh all of it in the decision and write the
+  reasoning in the PR. `tests/test_library_upkeep.py` enforces the entries, and the monthly workflow
+  re-checks them against npm and PyPI and opens an issue when one changes or is a year old.
 - Wiki text above `<!-- from-the-log -->` is ours; only the section after it is generated. Tools
   add facts there, each citing the post it came from. Above it, agents may write and extend a
   `## Description` in Malron's words from the posts, and for new people and places the DM's

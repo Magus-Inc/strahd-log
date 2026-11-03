@@ -1,0 +1,119 @@
+# Every Python package in requirements*.txt (the library rules in AGENTS.md).
+# Each entry: name, why, and how well it is kept up: first_release and last_release (from PyPI),
+# weekly_downloads (pypistats.org, popularity), maintenance (active, stable, new or unmaintained),
+# fixes (whether bug and security fixes are landing), risks (a list, may be empty) and checked (the
+# day someone looked). tools/vendor_check.py and tests/test_library_upkeep.py check every entry, and
+# the monthly Library security check workflow runs `--recheck` against today's PyPI facts.
+# Popularity is downloads a week; GitHub stars and open issues, where looked up, are in the notes.
+libraries:
+  # The site build (requirements.txt)
+  - name: Jinja2
+    why: The page templates.
+    first_release: 2008-06-09
+    last_release: 2025-03-05
+    weekly_downloads: 170882138
+    maintenance: stable
+    fixes: Pallets (Flask's team). 3.1.x has had only fix releases since 2023, the last a security fix
+      (sandbox escape, 3.1.6). No known advisory against 3.1.6. GitHub 11.8k stars, 105 open issues,
+      commits until 2025-06.
+    risks:
+      - No release for 20 months. It reads as finished rather than abandoned (Pallets ships Flask and
+        Werkzeug fixes), but the monthly recheck will flag it if it passes two years.
+    checked: 2026-11-03
+  - name: Markdown
+    why: Turns posts and wiki pages into HTML.
+    first_release: 2008-02-18
+    last_release: 2026-10-19
+    weekly_downloads: 29279451
+    maintenance: active
+    fixes: Python-Markdown team, releases every few months. 26 open issues, commits in 2026-10. No
+      known advisory against 3.11.2.
+    risks: []
+    checked: 2026-11-03
+  - name: PyYAML
+    why: Reads every data/*.yaml file and the posts' front matter.
+    first_release: 2011-07-01
+    last_release: 2025-09-29
+    weekly_downloads: 281446533
+    maintenance: stable
+    fixes: A small volunteer team; releases mostly add new Python versions. 392 open issues, but
+      commits continue (2026-10). No known advisory against 6.0.3. We only use safe_load.
+    risks:
+      - Slow to fix bugs (hundreds of open issues). Fine for reading our own files with safe_load;
+        would matter if we parsed YAML from strangers.
+    checked: 2026-11-03
+  - name: Pillow
+    why: Resizes pictures and makes share cards and the map's sprites.
+    first_release: 2010-07-31
+    last_release: 2026-10-16
+    weekly_downloads: 160846269
+    maintenance: active
+    fixes: Releases every quarter with security fixes. The 11.3.0 we pinned had about 90 known advisories
+      (osv.dev, 2026-11-03), all fixed by 13.0.0, so the pin moved to 13.0.0 in the same change.
+    risks:
+      - Reads many image formats in C, so security fixes come often; we only open our own pictures,
+        and the monthly osv.dev check keeps the pin current.
+    checked: 2026-11-03
+  # The Obsidian Portal importer and tests (requirements-dev.txt)
+  - name: textile
+    why: The Obsidian Portal importer reads the old posts' Textile markup (tools/import_op.py).
+    first_release: 2006-10-03
+    last_release: 2026-05-10
+    weekly_downloads: 70766
+    maintenance: stable
+    fixes: A small project with a release every year or two (2021, 2024, 2026) and 3 open issues. No
+      known advisory against 4.0.4.
+    risks:
+      - Few maintainers and far fewer users than the others here. Only the one-time importer uses it,
+        never the site build, so if it stopped working we would lose nothing on the live blog.
+    checked: 2026-11-03
+  - name: markdownify
+    why: The Obsidian Portal importer turns the old posts' HTML into Markdown.
+    first_release: 2013-07-31
+    last_release: 2026-06-30
+    weekly_downloads: 13476254
+    maintenance: active
+    fixes: One main maintainer with regular releases; GitHub 2.3k stars, 63 open issues. No known
+      advisory against 1.2.3.
+    risks:
+      - Mostly one maintainer. Only the importer uses it.
+    checked: 2026-11-03
+  - name: beautifulsoup4
+    why: The importer reads the old posts' HTML.
+    first_release: 2013-10-02
+    last_release: 2026-06-07
+    weekly_downloads: 73995599
+    maintenance: active
+    fixes: Leonard Richardson, its author, still releases a few times a year. No known advisory against
+      4.15.0.
+    risks:
+      - One maintainer, though very widely used. Only the importer uses it.
+    checked: 2026-11-03
+  - name: tzdata
+    why: The importer dates old posts in Central time; Windows has no zone database of its own.
+    first_release: 2020-05-08
+    last_release: 2026-10-28
+    weekly_downloads: 180545622
+    maintenance: active
+    fixes: Python core developers; a release follows each IANA time zone update. Not pinned on purpose,
+      so it is always current.
+    risks: []
+    checked: 2026-11-03
+  - name: pytest
+    why: Runs the tests.
+    first_release: 2010-11-25
+    last_release: 2026-10-27
+    weekly_downloads: 219331234
+    maintenance: active
+    fixes: pytest-dev team, releases every month or two. No known advisory against 9.1.1.
+    risks: []
+    checked: 2026-11-03
+  - name: numpy
+    why: The map's sprite tool cuts sprites out of pictures (tools/make_sprites.py) and its tests.
+    first_release: 2006-12-02
+    last_release: 2026-10-10
+    weekly_downloads: 250936541
+    maintenance: active
+    fixes: A large funded team with regular releases and security fixes. No known advisory against 2.5.4.
+    risks: []
+    checked: 2026-11-03
