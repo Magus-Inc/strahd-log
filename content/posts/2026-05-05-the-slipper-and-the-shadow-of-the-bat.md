@@ -45,9 +45,9 @@ Note: Malron’s rays were Scorching Ray; the scroll was Revivify.
 
 ## Key Locations
 
-* **The Catacombs**: Rooms K21 and K83, where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
+* **The Catacombs**: Where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
 * **The Rooms of Weeping**: On map 5, a desolate, brooding part of the castle that holds the King’s Bedchamber.
-* **King’s Bedchamber**: Room K56, a lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
+* **King’s Bedchamber**: A lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
 
 ## Encounters
 

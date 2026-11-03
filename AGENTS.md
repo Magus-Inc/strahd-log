@@ -71,6 +71,9 @@
 - Posts read as Malron's journal: first person, in-world, no dice or rules talk, no DM or player
   names. Table talk goes only in a `Note:` paragraph, which renders as a handwritten margin note,
   and only notes Chris picks. Real player names appear only on each PC's own wiki page.
+- No room codes from the book (K20, K-62, room S15) in Malron's words (Chris, 2026-11-03): name or
+  describe the room instead. A code worth keeping for readers goes in a `Note:` margin paragraph.
+  `tests/test_room_codes.py` checks every post.
 - The map (`barovia_map.py`) is our own drawing. Never trace or embed a published Curse of Strahd
   map in the repo; a licensed background, if we ever get one, is an overlay swap, not a commit here.
 - The map's roads, tracks, rivers, lakes, forests, mountains and labels are data in

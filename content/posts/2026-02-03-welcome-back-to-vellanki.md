@@ -40,33 +40,33 @@ Note: Much of the evening was “meta talk” about Level 7. The players discuss
 
 ## Key Locations
 
-Note: The numbers are those on van Richten’s maps.
+Note: Room numbers on van Richten’s maps (the book’s): front courtyard K1, entryways K7 and K8, Hall of Faith K14, chapel K15, stairs up K16, south chapel K17, high tower K18 and K57, catacombs K84 (King Dostron in crypt 34, Saint Markovia in crypt 40), Sergei’s tomb K85, Strahd’s tomb K86, the tomb of King Barov and Queen Ravenovia K88.
 
-* **Front Courtyard**: Room K1. The thirty-five-foot chasm is the first gatekeeper. Without some device or flight we are stuck at the entrance, and if the drawbridge is up we need another way in.
-* **Entryways**: Rooms K7 and K8. The dragon and gargoyle statues are surely living sentries, likely a silent alarm for the castle’s dwellers. We must go unseen.
-* **Hall of Faith and Chapel**: Rooms K14 and K15. The Hall of Faith is creepy. The chapel, once holy and now defiled, is worth looking into.
-* **K16/K17**: K16 may lead up toward the spires; the south chapel at K17 goes down.
-* **The High Tower**: Rooms K18 and K57, where the **Heart of Sorrow** hangs. The high tower staircase at K18 goes down to the crypts, though it is heavily guarded.
+* **Front Courtyard**: The thirty-five-foot chasm is the first gatekeeper. Without some device or flight we are stuck at the entrance, and if the drawbridge is up we need another way in.
+* **Entryways**: The dragon and gargoyle statues are surely living sentries, likely a silent alarm for the castle’s dwellers. We must go unseen.
+* **Hall of Faith and Chapel**: The Hall of Faith is creepy. The chapel, once holy and now defiled, is worth looking into.
+* **The Stairs Beyond the Hall**: One stair may lead up toward the spires; the one by the south chapel goes down.
+* **The High Tower**: Where the **Heart of Sorrow** hangs. The high tower staircase goes down to the crypts, though it is heavily guarded.
 * **The Hall of Bones**: In the basement, where we believe **Argynvost’s Skull** rests.
-* **Catacombs**: Room K84, our main goal. Among its crypts are those of **King Dostron** in Crypt 34 and **Saint Markovia** in Crypt 40, which hold things we need to break the land’s curse. Anything else down there is a distraction.
-* **Tombs of Sergei and Strahd**: Rooms K85 and K86. Sergei’s tomb is well lit, barred by a portcullis, and glows like an unnatural beacon. Strahd’s is the final target, and should be empty at the new moon, though the crypts’ magic may hold him if we linger.
-* **Tomb of King Barov and Queen Ravenovia**: Room K88, Rahadin’s sanctuary. Going in there means facing Strahd’s chamberlain and turning a quiet theft into a bloodbath.
+* **Catacombs**: Our main goal. Among its crypts are those of **King Dostron** in Crypt 34 and **Saint Markovia** in Crypt 40, which hold things we need to break the land’s curse. Anything else down there is a distraction.
+* **Tombs of Sergei and Strahd**: Sergei’s tomb is well lit, barred by a portcullis, and glows like an unnatural beacon. Strahd’s is the final target, and should be empty at the new moon, though the crypts’ magic may hold him if we linger.
+* **Tomb of King Barov and Queen Ravenovia**: Rahadin’s sanctuary. Going in there means facing Strahd’s chamberlain and turning a quiet theft into a bloodbath.
 * **Vallaki and the Blue Water Inn**: Our base, where we rehearsed the plan.
 
 ## What We Learned (Not from Doru)
 
-* My notes from the night, by the numbers on the map:
+* My notes from the night, room by room on the map:
 * **Find**: a key.
-* **K1, courtyard**: the drawbridge might not be down, so we need a way in if it is up.
-* **K7, entry**: the dragon statues may be guards.
-* **K8, great entry**: the gargoyles are almost certainly guards.
-* **K14, Hall of Faith**: creepy.
-* **K15, chapel**: worth looking into.
-* **K16**: could lead up.
-* **K17, south chapel**: goes down.
-* **K18, high tower staircase**: goes to the crypts.
-* **K84, catacombs**: King Dostron and St. Markovia, crypts 34 and 40.
-* **K85, Sergei’s tomb**: a portcullis in the way, but well lit.
+* **Courtyard**: the drawbridge might not be down, so we need a way in if it is up.
+* **Entry**: the dragon statues may be guards.
+* **Great entry**: the gargoyles are almost certainly guards.
+* **Hall of Faith**: creepy.
+* **Chapel**: worth looking into.
+* **The stair past the Hall of Faith**: could lead up.
+* **South chapel**: goes down.
+* **High tower staircase**: goes to the crypts.
+* **Catacombs**: King Dostron and St. Markovia, crypts 34 and 40.
+* **Sergei’s tomb**: a portcullis in the way, but well lit.
 
 ## Encounters
 
