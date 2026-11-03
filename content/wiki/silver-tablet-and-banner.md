@@ -3,6 +3,8 @@ title: Silver Tablet and Banner
 type: item
 summary: Historical relics of the Order of the Silver Dragon.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-bncbz7
 ---
 
 ## Description

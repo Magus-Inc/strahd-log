@@ -3,6 +3,8 @@ title: Leo Dilisnya
 type: npc
 summary: A spirit and former guard of Castle Ravenloft.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-wqay9e
 ---
 
 ## Description

@@ -5,6 +5,8 @@ aliases:
 - Lord Argynvost
 summary: The Silver Dragon honored by the Order of the Silver Dragon.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-phtkme
 ---
 
 ## Description

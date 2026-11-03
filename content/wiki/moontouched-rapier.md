@@ -3,6 +3,8 @@ title: Moontouched Rapier
 type: item
 summary: A +1 rapier that glows faintly in darkness.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-bncbz7
 ---
 
 ## Description

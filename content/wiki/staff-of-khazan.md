@@ -5,6 +5,8 @@ aliases:
 - Khazan’s Staff
 summary: A legendary staff the party sought in the Tower of Khazan.
 source: Compiled from the adventure log, with notes from the table
+sources:
+- discord-ao3a4y
 ---
 
 ## Description

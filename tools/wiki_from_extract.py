@@ -59,6 +59,8 @@ def load_corrections(path: Path) -> dict:
     summaries: {Name: "summary"}
     players: {Name: "Player Name"}                         # who played a player character
     former: [Name, ...]                                    # player characters no longer played
+    titles: {Name: "Shown title"}  # a page that shares its shown title with another (two Biancas):
+                                   # the page file keeps Name's slug, and posts link it by hand
     """
     if not path.exists():
         return {}
@@ -159,6 +161,7 @@ def apply(extract_files: list[Path], wiki_dir: Path, posts_dir: Path,
     summaries = {k.lower(): v for k, v in (fixes.get("summaries") or {}).items()}
     players = {k.lower(): v for k, v in (fixes.get("players") or {}).items()}
     former = {n.lower() for n in fixes.get("former") or []}
+    shown = {k.lower(): str(v) for k, v in (fixes.get("titles") or {}).items()}
     posts = load_posts(posts_dir)
     # A fact citing a post that was folded into another (data/redirects.yaml) cites the new one.
     redirects_file = posts_dir.parent.parent / "data" / "redirects.yaml"
@@ -177,8 +180,13 @@ def apply(extract_files: list[Path], wiki_dir: Path, posts_dir: Path,
     existing: dict[str, Path] = {}  # lower-case name -> page file
     for path in sorted(wiki_dir.glob("*.md")):
         meta, _ = split_front_matter(path.read_text(encoding="utf-8"))
-        for name in [meta.get("title", ""), *(meta.get("aliases") or [])]:
+        # A page linked by hand shares its title with another page, so its title finds nothing.
+        own = [] if meta.get("link_by_hand") else [meta.get("title", "")]
+        for name in [*own, *(meta.get("aliases") or [])]:
             existing.setdefault(str(name).lower(), path)
+    for name in shown:  # a kept page linked by hand is found by the name its file is named after
+        if (wiki_dir / f"{slugify(name)}.md").exists():
+            existing.setdefault(name, wiki_dir / f"{slugify(name)}.md")
     taken = set(existing)  # names already claimed, so no two pages share an alias
 
     # Resolve every group to one page first, so two groups that land on the same page (say
@@ -245,8 +253,10 @@ def apply(extract_files: list[Path], wiki_dir: Path, posts_dir: Path,
             meta["former"] = True
         if target["new"]:
             meta["source"] = COMPILED
+            if meta["title"].lower() in shown:
+                meta["title"], meta["link_by_hand"] = shown[meta["title"].lower()], True
         if front is None or meta != original:
-            order = ["title", "type", "aliases", "summary", "player", "former", "source", "obsidian_portal_url"]
+            order = ["title", "link_by_hand", "type", "aliases", "summary", "player", "former", "source", "obsidian_portal_url"]
             meta = {k: meta[k] for k in order if k in meta} | {k: v for k, v in meta.items() if k not in order}
             front = "---\n" + yaml.safe_dump(meta, sort_keys=False, allow_unicode=True, width=1000) + "---\n"
         body = (body_prefix + "\n\n" if body_prefix.strip() else "") + log_section(fact_lines(group, posts))

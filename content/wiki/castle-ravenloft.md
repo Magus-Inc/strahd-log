@@ -35,7 +35,7 @@ We drove Rahadin off, climbed to the Rooms of Weeping and found Gertruda in the 
 
 ### Still in the castle
 
-Strahd, Rahadin (wounded, not destroyed) and Ludmilla, the last of the three brides we met. Sasha, who wants Strahd to fall and gave us the servants' password. Cyrus in his kitchen. The Heart of Sorrow, still beating. And Sasha's whisper, "Sixth pedal from the left on the organ," and we have yet to learn what it opens.
+Strahd. Rahadin, whom we wounded but did not destroy. Ludmilla, the last of the three brides we met. Sasha, who wants Strahd to fall and gave us the servants' password. Cyrus in his kitchen. The Heart of Sorrow, still beating. And Sasha's whisper, "Sixth pedal from the left on the organ," and we have yet to learn what it opens.
 
 <!-- from-the-log -->
 ## From the adventure log
