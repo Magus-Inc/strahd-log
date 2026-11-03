@@ -4,6 +4,7 @@ date: '2026-09-29T17:00:00-05:00'
 tagline: Your watch has ended
 slug: the-beacon-of-argynvostholt
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["transcript-f2xwqh", "transcript-ft3g0y", "recording-sw8i0i", "discord-iza4yv"]
 picture-cap: 4  # Chris, 2026-11-03: "show a fourth image"
 feature: vladimir-horngaard-ai.jpg
 ---

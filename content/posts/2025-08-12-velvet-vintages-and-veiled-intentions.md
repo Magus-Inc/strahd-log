@@ -5,6 +5,7 @@ tagline: Never spill red wine on a vampire's white dress
 slug: velvet-vintages-and-veiled-intentions
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/velvet-vintages-and-veiled-intentions
 cast: ["Aera shan Ravanór", "Gumbo", "Malron Lichtstrahl", "Oogway", "Zorpheus"]
+sources: ["notes-880cdr"]
 feature: sasha-ai.jpg
 ---
 

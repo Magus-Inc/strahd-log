@@ -5,6 +5,7 @@ tagline: Even the broom wanted us dead
 slug: deeper-into-the-manor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/deeper-into-the-manor
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Weeble Wobleston"]
+sources: []
 feature: klara-ai.jpg
 ---
 

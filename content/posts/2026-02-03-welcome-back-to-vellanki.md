@@ -5,6 +5,7 @@ tagline: A recap after our first dinner with Strahd
 slug: welcome-back-to-vellanki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-back-to-vellanki
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["notes-15w78b", "notes-p72csq", "transcript-529b59", "recording-2ky28j"]
 feature: rahadin-ai.jpg
 ---
 

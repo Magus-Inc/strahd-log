@@ -5,6 +5,7 @@ tagline: Shoot first, loot later
 slug: looking-for-zoldars-tower
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/looking-for-zoldars-tower
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+sources: ["notes-qtc698"]
 feature: tower-of-khazan-ai.jpg
 ---
 

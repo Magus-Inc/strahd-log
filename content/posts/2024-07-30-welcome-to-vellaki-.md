@@ -5,6 +5,7 @@ tagline: '*Only welcome if you hand us 1 gold and all your silver'
 slug: welcome-to-vellaki-
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-to-vellaki-
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht"]
+sources: ["notes-zwz7xs"]
 feature: vallaki-ai.jpg
 ---
 

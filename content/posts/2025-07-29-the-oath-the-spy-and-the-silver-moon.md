@@ -5,6 +5,7 @@ tagline: A skeleton, a love letter and a puzzle box
 slug: the-oath-the-spy-and-the-silver-moon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-oath-the-spy-and-the-silver-moon
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Zorpheus"]
+sources: ["notes-f9x2i1"]
 feature: sergei-von-zarovich-ai.jpg
 ---
 

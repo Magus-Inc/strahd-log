@@ -5,6 +5,7 @@ tagline: The druid would like a word with the mouse
 slug: wizard-of-wines-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/wizard-of-wines-vineyard
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+sources: ["notes-2t4keb"]
 feature: wizard-of-wines-ai.jpg
 ---
 

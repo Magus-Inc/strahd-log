@@ -5,6 +5,7 @@ tagline: Where did that Paladin get lost?
 slug: walter-we-are-coming-for-you
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/walter-we-are-coming-for-you
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
+sources: []
 feature: walter-durst-ai.jpg
 ---
 

@@ -5,6 +5,7 @@ tagline: Stella came home. Shabasta did not.
 slug: entering-the-spirit-realm
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-the-spirit-realm
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+sources: ["notes-sh6fu8"]
 feature: wachter-cellar-crossing-ai.jpg
 ---
 

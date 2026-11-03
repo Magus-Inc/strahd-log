@@ -5,6 +5,7 @@ tagline: Taking Down Izek
 slug: shadows-over-vallaki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/shadows-over-vallaki
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
+sources: ["notes-62bsbe"]
 feature: stella-ai.jpg
 ---
 

@@ -5,6 +5,7 @@ tagline: Never follow a floating tooth into the fog
 slug: session-zero
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/session-zero
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Weeble Wobleston"]  # Chris, 2026-11-03: all five were in the barn
+sources: []
 feature: durst-manor-ai.jpg
 ---
 

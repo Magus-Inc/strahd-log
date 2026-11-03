@@ -5,6 +5,7 @@ tagline: Look who rode in on a burning horse
 slug: finishing-up-at-the-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finishing-up-at-the-vineyard
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+sources: ["notes-0s9bwj"]
 feature: kavan-the-blood-drinker-ai.jpg
 ---
 

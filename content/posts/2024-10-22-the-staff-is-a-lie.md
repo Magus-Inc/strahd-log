@@ -5,6 +5,7 @@ tagline: There are just traps
 slug: the-staff-is-a-lie
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-staff-is-a-lie
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Shabasta"]
+sources: ["notes-llyi99"]
 feature: ezmerelda-d-avenir-ai.jpg
 ---
 

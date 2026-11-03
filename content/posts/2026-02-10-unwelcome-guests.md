@@ -5,6 +5,7 @@ tagline: Strahd rode out. We snuck in.
 slug: unwelcome-guests
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/unwelcome-guests
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
+sources: ["notes-mxsyvy", "transcript-ulvrel", "recording-7rew17", "discord-fbwui6"]
 feature: beucephalus-ai.jpg
 ---
 

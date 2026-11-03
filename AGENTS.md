@@ -48,7 +48,9 @@
   right link ("Sarepool crossroads" for Tser Pool Crossroads). `tests/test_spellings.py` fails on an
   alias spelled a letter or two off its page's name: fix it in `fix:`, or list it under `keep:` with why.
 - One post format (Chris, 2026-11-03): every post file is written one way. Front matter has
-  `cast:` (the player characters there, by wiki page title); then an optional `## At a Glance`,
+  `cast:` (the player characters there, by wiki page title) and `sources:` (hidden reference ids
+  for the notes, transcripts, recordings and Discord posts it came from, `[]` when none; the table
+  of ids is private, in dnd-scribe `campaign/sources.yaml`); then an optional `## At a Glance`,
   one `## Story` with its `###` scene headings (short, in Malron's voice, at natural breaks), then
   `## Key Locations`, `## Encounters`, `## Loot`, `## Notable NPCs`, `## Plot Points`,
   `## Session Highlights`, one bullet per entry (`* **Name**: text`). `tests/test_post_format.py`

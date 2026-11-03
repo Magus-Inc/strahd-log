@@ -5,6 +5,7 @@ tagline: Oh, and also saving Milivoj and Henrik
 slug: helping-victor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/helping-victor
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Oogway", "Shabasta"]
+sources: ["notes-pkcvrv"]
 feature: victor-ai.jpg
 ---
 
