@@ -7,6 +7,12 @@ summary: A misty spirit realm full of restless spirits.
 source: Compiled from the adventure log
 ---
 
+## Description
+
+![The Ethereal Plane, pale translucent spirits drifting through green-grey mist as the stone walls of a cellar fade away](/images/ethereal-plane-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 <!-- from-the-log -->
 ## From the adventure log
 

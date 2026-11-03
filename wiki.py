@@ -162,6 +162,13 @@ def load_phrases(path: Path, pages: list[WikiPage]) -> dict[str, list[str]]:
     return {slug: [str(t) for t in texts] for slug, texts in phrases.items()}
 
 
+def load_exact_names(path: Path) -> set[str]:
+    """data/name-case.yaml `exact:`: names that link only as written, never in small letters."""
+    if not path.exists():
+        return set()
+    return {str(n) for n in (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("exact") or []}
+
+
 def name_pattern(name: str) -> str:
     parts = []
     for ch in name:
@@ -169,14 +176,44 @@ def name_pattern(name: str) -> str:
     return "".join(parts)
 
 
+def loose_name(name: str) -> bool:
+    """A name that links in small letters too: two or more words ("dream pastries"; "The Windmill" counts "The",
+    so it links as "the windmill" but never as a bare "windmill"). A lone word ("Rose", "Thorn", "Manor") is
+    an ordinary word in small letters, so it links only as written."""
+    words = re.findall(r"[^\W\d_]+", name)
+    return len(words) >= 2 and any(w[:1].isupper() for w in words)
+
+
+def loose_pattern(name: str) -> str:
+    """name_pattern with every word's first letter in either case."""
+    out, start = [], True
+    for ch in name:
+        if start and ch.isalpha() and ch.lower() != ch.upper():
+            out.append(f"[{ch.upper()}{ch.lower()}]")
+        else:
+            out.append(name_pattern(ch))
+        start = not ch.isalnum() and ch not in "'’"
+    return "".join(out)
+
+
 class Linker:
     """Finds wiki names in rendered HTML and links the first mention of each page."""
 
-    def __init__(self, pages: list[WikiPage], phrases: dict[str, list[str]] | None = None):
+    def __init__(self, pages: list[WikiPage], phrases: dict[str, list[str]] | None = None,
+                 exact: set[str] | frozenset = frozenset()):
         self.by_name = {fold(name): page for page in pages for name in page.names}
         by_slug = {p.slug: p for p in pages}
+        # Names that also link in small letters (Chris, 2026-11-03: "the flesh golem", "dream pastries"):
+        # see loose_name. Two pages whose names differ only in case keep to the case they are written in.
+        exact = {fold(e) for e in exact}
+        lowered: dict[str, set[str]] = {}
+        for name in self.by_name:
+            lowered.setdefault(name.lower(), set()).add(name)
+        # A name links loosely only if it may, and no other name (exact or not) differs from it only in case.
+        loose = {n for n in self.by_name if loose_name(n) and n not in exact and len(lowered[n.lower()]) == 1}
+        self.by_lower = {n.lower(): self.by_name[n] for n in loose}
         names = sorted(self.by_name, key=len, reverse=True)  # longest first: "Rose Durst" before "Rose"
-        groups = [f"(?P<n>{'|'.join(name_pattern(n) for n in names)})"] if names else []
+        groups = [f"(?P<n>{'|'.join(loose_pattern(n) if n in loose else name_pattern(n) for n in names)})"] if names else []
         # Phrases (data/described-places.yaml) name a place without its name: "the [castle]" links "castle"
         # where it follows "the". The words around the brackets are only looked at, never matched, so a
         # name that starts there still wins ("the Abbey of St. Markovia") and a name inside them still
@@ -201,7 +238,8 @@ class Linker:
     def page_of(self, match: re.Match) -> WikiPage:
         """The page a matched name or phrase names."""
         if match.lastgroup == "n":
-            return self.by_name[fold(match.group(0))]
+            name = fold(match.group(0))
+            return self.by_name.get(name) or self.by_lower[name.lower()]
         return self.phrase_pages[int(match.lastgroup[1:])]
 
     def link(self, html: str, self_slug: str | None = None, each_section: str | None = None) -> tuple[str, set[str]]:

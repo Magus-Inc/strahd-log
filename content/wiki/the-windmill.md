@@ -9,6 +9,10 @@ heard_of_in:
 
 ## Description
 
+![A decrepit wooden windmill with broken sails on a forest road at dusk, a rope hanging from its tower, a hand cart and a stone well by the door](/images/the-windmill-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+
 *Written from the session logs, in Malron's words.*
 
 Morgantha sold us dream pastries at the windmill, where she lives with her daughters Bella and Offalia ([Dream Pies](/posts/dream-pies/)). At the [refugee camp](/wiki/refugee-camp/) Franz told us he had sold his children for her pies, and hears the windmill's blades in his nightmares. A clue said three black hearts beat as one in the millstone under the windmill ([Helping Victor](/posts/helping-victor/)).

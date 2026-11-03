@@ -55,7 +55,7 @@ We found a **massive oak tree** with “K & V” carved into the trunk. A scroll
 
 At the top of the tree was a **silver box** holding half of a tarnished locket, which Olfin took.
 
-Fog rolled in as we neared the **gates of Barovia**, flanked by headless statues. A **black carriage** waited for us. Inside was a scroll:
+Fog rolled in as we neared the **[gates of Barovia](/wiki/west-gates-of-barovia/)**, flanked by headless statues. A **black carriage** waited for us. Inside was a scroll:
 
 > **“It is customary for a lord to provide safe escort and a gift to guests for his home. Please accept both with my sincerest compliments.”**
 
@@ -86,7 +86,7 @@ The chest opened, and inside it holds far more than it should, like a bag of hol
 * **Argynvostholt – Fourth Floor**
 * **Blue Water Inn (Vallaki)**
 * **Old Windmill Road & Ancient Oak**
-* **Gates of Barovia**
+* **[Gates of Barovia](/wiki/west-gates-of-barovia/)**
 
 ## Encounters:
 
