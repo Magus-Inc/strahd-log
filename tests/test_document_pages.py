@@ -88,3 +88,13 @@ def test_pages_a_recap_names_in_passing_are_linked_by_hand():
     # The Finding Arabelle! recap names "Arabelle's prophecy" and "Van Richten's story", which its story never does.
     for slug in ["arabelles-prophecy", "van-richtens-story"]:
         assert wiki.parse_wiki_page(WIKI / f"{slug}.md", build.split_front_matter).link_by_hand
+
+
+def test_kasimirs_story_matches_the_post_that_quotes_it():
+    # A doll for Arabelle quotes the whole of Ryan's 8/13/2024 text too; only the quote marks differ.
+    def plain(text):
+        return words(text).translate(str.maketrans("“”‘’", "\"\"''"))
+    post = (POSTS / "2024-08-13-a-doll-for-arabelle.md").read_text(encoding="utf-8")
+    story = post.split("Kasimir told us his story:")[1].split("\n## ")[0]
+    ours = plain(quoted(page_text("fall-of-the-dusk-elves")))
+    assert ours == plain(" ".join(p.strip() for p in story.split("\n") if p.strip() and not p.startswith("!")))

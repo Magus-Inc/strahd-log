@@ -19,7 +19,7 @@ When we named him Rictavio van Richten at the Blue Water Inn and convinced him w
 
 ## His story
 
-*As it was shared at the table after the session:*
+*As it was written down for us:*
 
 > Until recently, he had been laying low in the tower at Lake Baratok. However, that changed when he saw a Vistana man bringing a wriggling sack to a golden-haired vampire spawn on the banks of the Luna River. (Van Richten recognized the vampire as a man named Escher, a bard from Barovia who had joined the Barovians’ revolt.)
 

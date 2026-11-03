@@ -9,7 +9,7 @@ source: Written for the blog, November 2026
 
 *Written from the session logs, in Malron's words.*
 
-Aera found this guide in the village of Barovia, the day Ireena asked us to help the villagers who had fled to Vallaki ([Barovia, Barovia](/posts/barovia-barovia/)). It sets out what a vampire can do, and what can end one: sunlight, running water, a stake through the heart while it sleeps.
+Aera found this guide in the village of Barovia, the day Ireena asked us to help the villagers who had fled to Vallaki ([Barovia, Barovia](/posts/barovia-barovia/)). It sets out what a vampire can do, and what can end one: sunlight and running water. A wooden stake through the heart only holds one still while it sleeps.
 
 ## The guide
 
