@@ -45,9 +45,9 @@ Note: Malron’s rays were Scorching Ray; the scroll was Revivify.
 
 ## Key Locations
 
-* **The Catacombs (K21/K83)**: Where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
-* **The Rooms of Weeping (Map 5)**: A desolate, brooding part of the castle that holds the King’s Bedchamber.
-* **King’s Bedchamber (K56)**: A lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
+* **The Catacombs**: Rooms K21 and K83, where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
+* **The Rooms of Weeping**: On map 5, a desolate, brooding part of the castle that holds the King’s Bedchamber.
+* **King’s Bedchamber**: Room K56, a lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
 
 ## Encounters
 
@@ -63,7 +63,7 @@ Note: Malron’s rays were Scorching Ray; the scroll was Revivify.
 
 * **Gertruda**: The daughter of Mary of Barovia village. Naive but brave; Strahd lured her to the castle with talk of making amends to her village.
 * **Anastrasya**: A vampire bride of Strahd. Elegant and mocking until she was driven to her monstrous bat form. I burned her to ash.
-* **Rahadin**: (Mentioned) Strahd’s chamberlain, who fled our last fight.
+* **Rahadin**: Not seen this time. Strahd’s chamberlain, who fled our last fight.
 
 ## Plot Points
 

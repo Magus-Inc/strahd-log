@@ -19,7 +19,7 @@ cast: ["Aera shan Ravanór", "Crusty", "Gumbo", "Liren", "Malron Lichtstrahl", "
 
 ### Fog from the Well
 
-With the Abbot restored, we slept in the Abbey of St. Markovia. In the night the abbey bell woke us. Fog was pouring upward out of the courtyard well, and beside it stood two still figures we first took for more of the Abbot’s creations, until one looked up. It was Liren and Gumbo, companions we thought long lost. For us it has been months; for them, only hours.
+With the Abbot restored, we slept in the Abbey of St. Markovia. In the night the abbey bell woke us. Fog was pouring upward out of the courtyard well, and beside it stood two still figures we first thought were more of the Abbot’s creations, until one looked up. It was Liren and Gumbo, companions we thought long lost. For us it has been months; for them, only hours.
 
 Note: Liren’s and Gumbo’s players surprised the table after waiting outside for an hour and a half. The DM ran it as an in-theme one-shot so everyone could play together, and caught them up: the party had broken into Castle Ravenloft, stolen from Strahd, nearly been caught, and killed two of his three brides. Shabasta’s player explained that Shabasta had been a druid’s sheep in the meantime, died, and is now Shabasta again, reincarnated.
 
@@ -31,7 +31,7 @@ The walls of the chamber below are lined with niches full of small things: a chi
 
 ### Six Shadows
 
-Six shadows came at us, and their touch drained the strength from our limbs. Shabasta, quick for once, mocked one for being “a little lighter than all those shadows.” Olfin, more watchful now than ever, smote one apart. Crusty slowed five of the six. Aera’s blade found one’s heart and Liren cut down another. Lathander’s flame through me, stronger now, dropped a third, and Gumbo dispatched another: “So long, shadow.” Shabasta tried to finish the last with his special spear and stabbed Olfin instead. Olfin finished it anyway.
+Six shadows came at us, and their touch drained the strength from our limbs. Shabasta, quick for once, mocked one for being “a little lighter than all those shadows.” Olfin, more watchful now than ever, destroyed one. Crusty slowed five of the six. Aera’s blade found one’s heart and Liren cut down another. Lathander’s flame through me, stronger now, dropped a third, and Gumbo dispatched another: “So long, shadow.” Shabasta tried to finish the last with his special spear and stabbed Olfin instead. Olfin finished it anyway.
 
 Note: The shadows hit for 9 necrotic and drained 4 Strength. Shabasta rolled a 16 and went first for once. Olfin now has the Sentinel feat. Crusty’s Slow caught five of the six; Aera’s was a crit; Malron’s Sacred Flame hits harder since his level-up. Shabasta rolled a 1 with the spear and stabbed Olfin for 6, and Olfin finished the last shadow at disadvantage.
 
@@ -78,7 +78,7 @@ Outside, a black carriage waited on the road, its door open and no driver in sig
 
 ## Loot
 
-* **Reliquary of Two Flames** (Aera): A palm-sized silver reliquary shaped like a gothic chapel, holding two silver flames, the lingering echoes of Liren and Gumbo. Two charges, regained on a long rest: when a creature you can see within 30 feet fails an attack roll, ability check or saving throw, spend your reaction and a charge to help it (the DM’s exact wording on the bonus was hard to hear; confirm with him). Once ever: when a character dies, crush it as an action and sacrifice one flame to return a companion to life.
+* **Reliquary of Two Flames**: Aera’s. A palm-sized silver reliquary shaped like a gothic chapel, holding two silver flames, the lingering echoes of Liren and Gumbo. Two charges, regained on a long rest: when a creature you can see within 30 feet fails an attack roll, ability check or saving throw, spend your reaction and a charge to help it (the DM’s exact wording on the bonus was hard to hear; confirm with him). Once ever: when a character dies, crush it as an action and sacrifice one flame to return a companion to life.
 * **Strahd’s letter**, left in a black carriage.
 
 Note: Aera’s search for the reliquary was a 24.
@@ -86,9 +86,9 @@ Note: Aera’s search for the reliquary was a 24.
 ## Notable NPCs
 
 * **Liren and Gumbo**: Old companions, briefly returned through the abbey’s well. They saw their lives go on without us, chose to fight anyway, and faded into the reliquary.
-* **St. Markovia (illusion)**: Appeared in the meadow to offer a way out of Barovia. The door was a trap.
+* **St. Markovia**: An illusion of her appeared in the meadow to offer a way out of Barovia. The door was a trap.
 * **The Abbot’s First Vessel**: A failed, forgotten body made to hold a pure soul. Filled with trapped soul fragments, it spoke in the voices of the dead, Doru among them.
-* **Strahd von Zarovich** (by letter): “Even the dead return for an encore.”
+* **Strahd von Zarovich**: Only by letter, which said “Even the dead return for an encore.”
 
 ## Plot Points
 

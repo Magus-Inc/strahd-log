@@ -90,7 +90,7 @@ The chest opened, and inside it holds far more than it should, like a bag of hol
 ## Key Locations
 
 * **Argynvostholt – Fourth Floor**
-* **Blue Water Inn (Vallaki)**
+* **Blue Water Inn**: In Vallaki.
 * **Old Windmill Road & Ancient Oak**
 * **[Gates of Barovia](/wiki/west-gates-of-barovia/)**
 
@@ -113,7 +113,7 @@ The chest opened, and inside it holds far more than it should, like a bag of hol
 * **Horngaard** – Believes Barovia’s suffering is penance.
 * **Arrigal** – Delivers note about spy.
 * **Sergei von Zarovich** – Strahd’s murdered brother.
-* **Katarina (Madam Eva)** – Survivor of Strahd’s wrath.
+* **Katarina**: Madam Eva, who survived Strahd’s wrath.
 
 ## Plot Points
 

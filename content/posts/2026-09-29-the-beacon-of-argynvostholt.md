@@ -19,7 +19,7 @@ cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "S
 
 ### Called Before Noon
 
-As we woke, a revenant found us: Harkus Grishenko, a guard of the Order, sent to summon us. He carried word from a phantom warrior. Commander Vladimir Horngaard has called every knight of the Order of the Silver Dragon back to Argynvostholt by noon tomorrow. Horngaard is enraged that we broke into Castle Ravenloft, he counts Strahd a necessary evil, and he is expected to command his knights to destroy us at any cost. Harkus apologized for the harm he may be made to do us if we meet again. Had we spoken with Sir Godfrey Gwilym and learned of his mission? We had. Then, he urged, if we held the skull, we must fulfill the dragon’s prophecy and return it to the cemetery before Horngaard’s full wrath fell.
+As we woke, a revenant found us: Harkus Grishenko, a guard of the Order, sent to summon us. He carried word from a phantom warrior. Commander Vladimir Horngaard has called every knight of the Order of the Silver Dragon back to Argynvostholt by noon tomorrow. Horngaard is enraged that we broke into Castle Ravenloft, he sees Strahd as a necessary evil, and he is expected to command his knights to destroy us at any cost. Harkus apologized for the harm he may be made to do us if we meet again. Had we spoken with Sir Godfrey Gwilym and learned of his mission? We had. Then, he urged, if we held the skull, we must fulfill the dragon’s prophecy and return it to the cemetery before Horngaard’s full wrath fell.
 
 ![Vladimir Horngaard, an undead knight, waiting in the mausoleum at dusk](/images/vladimir-horngaard-ai.jpg)
 
@@ -39,7 +39,7 @@ Thick fog covered the floor of Argynvostholt’s foyer. At the foot of the once-
 
 Note: The party’s initiative rolls were bad enough that the DM, who had planned to let them dispatch it quickly, made them fight it out.
 
-It moved before any of us. Its glare locked Aera rigid where she stood, and the fear stayed on her after the paralysis passed. Its blade bit into Olfin. Crusty’s Scorching Ray, his owl harrying the thing, burned it twice. I laid my hand on Aera and set Lathander’s ward against evil upon her. Shabasta’s frost struck it, and Olfin cut it twice; when it tried to step past him toward Shabasta, Olfin’s blade caught it again and held it there, made to keep fighting him. Free of the paralysis, Aera put an arrow deep into it from where it could not see her. Crusty’s Fire Bolt scorched it; my Sacred Flame washed off it; Shabasta’s Chromatic Orb burned. It struck Olfin again as one of his swings went wide, Aera hit once more, and Crusty finished it with one last Fire Bolt. “Just like Kamehameha,” it took the revenant’s head off. Before it fell, the revenant warned us that Commander Horngaard waits in the cemetery: “May the Morning Lord protect you.”
+It moved before any of us. Its glare locked Aera rigid where she stood, and the fear stayed on her after the paralysis passed. Its blade bit into Olfin. Crusty’s Scorching Ray, his owl harrying the thing, burned it twice. I laid my hand on Aera and set Lathander’s ward against evil upon her. Shabasta’s frost struck it, and Olfin cut it twice; when it tried to step past him toward Shabasta, Olfin’s blade caught it again and held it there, forcing it to keep fighting him. Free of the paralysis, Aera put an arrow deep into it from where it could not see her. Crusty’s Fire Bolt scorched it; my Sacred Flame washed off it; Shabasta’s Chromatic Orb burned. It struck Olfin again as one of his swings went wide, Aera hit once more, and Crusty finished it with one last Fire Bolt that took the revenant’s head off: “Just like Kamehameha.” Before it fell, the revenant warned us that Commander Horngaard waits in the cemetery: “May the Morning Lord protect you.”
 
 Note: The DM pointed out afterward that the black wire was the clue. Catching that, the party could have cut the strings and freed the revenant instead of killing it.
 
@@ -96,7 +96,7 @@ Note: The DM: “We’re now in the final act.” The Amber Temple, the Sunsword
 
 ## Loot
 
-* **Olfin’s longsword, blessed by Argynvost** (its powers, as the DM wrote them down for us afterward): a +1 magic weapon with 3 charges, all regained at dawn.
+* **Olfin’s longsword, blessed by Argynvost**: Its powers, as the DM wrote them down for us afterward: a +1 magic weapon with 3 charges, all regained at dawn.
     * **1 charge, bonus action**: silver flames wreathe the blade for 1 minute. Each attack deals an extra 1d4 cold damage, and on a critical hit the target must succeed on a DC 20 Constitution save or be paralyzed until the start of the wielder’s next turn.
     * **2 charges, bonus action**: cast *beacon of hope*.
     * **3 charges, action**: a blast of silver flame, a 15-foot cone for a melee weapon or a 30-foot line for a ranged one. Each hostile creature in it makes a DC 20 Constitution save, taking 58 (13d8) cold damage on a failure or half as much on a success. Once used, it can’t be used again for one year.
@@ -110,8 +110,8 @@ Note: The DM: “We’re now in the final act.” The Amber Temple, the Sunsword
 * **Argynvost**: The silver dragon, restored as a spirit by the return of his skull. He frees his knights, blesses Olfin’s longsword and burns himself into a beacon. “Your watch has ended.”
 * **Sir Godfrey Gwilym**: Freed from his revenant body and restored to the knight he was. He shared what he knows of Kasimir and the Amber Temple.
 * **Zorya**: Aera’s pseudodragon, whose distraction let us mount the skull without a fight.
-* **Kasimir Velikov** (mentioned): A dusk elf who sought the Amber Temple and may be able to guide us there.
-* **Sasha, Kavan and Lady Fiona Wachter** (glimpsed): Touched by the beacon’s light across Barovia.
+* **Kasimir Velikov**: Not seen this time. A dusk elf who sought the Amber Temple and may be able to guide us there.
+* **Sasha, Kavan and Lady Fiona Wachter**: Glimpsed only, touched by the beacon’s light across Barovia.
 
 ## Plot Points
 

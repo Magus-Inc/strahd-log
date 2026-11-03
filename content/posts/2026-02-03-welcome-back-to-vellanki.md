@@ -42,15 +42,15 @@ Note: Much of the evening was “meta talk” about Level 7. The players discuss
 
 Note: The numbers are those on van Richten’s maps.
 
-* **K1 (Front Courtyard)**: The thirty-five-foot chasm is the first gatekeeper. Without some device or flight we are stuck at the entrance, and if the drawbridge is up we need another way in.
-* **K7/K8 (Entryways)**: The dragon and gargoyle statues are surely living sentries, likely a silent alarm for the castle’s dwellers. We must go unseen.
-* **K14/K15 (Hall of Faith and Chapel)**: The Hall of Faith is creepy. The chapel, once holy and now defiled, is worth looking into.
+* **Front Courtyard**: Room K1. The thirty-five-foot chasm is the first gatekeeper. Without some device or flight we are stuck at the entrance, and if the drawbridge is up we need another way in.
+* **Entryways**: Rooms K7 and K8. The dragon and gargoyle statues are surely living sentries, likely a silent alarm for the castle’s dwellers. We must go unseen.
+* **Hall of Faith and Chapel**: Rooms K14 and K15. The Hall of Faith is creepy. The chapel, once holy and now defiled, is worth looking into.
 * **K16/K17**: K16 may lead up toward the spires; the south chapel at K17 goes down.
-* **The High Tower (K18/K57)**: Where the **Heart of Sorrow** hangs. The high tower staircase at K18 goes down to the crypts, though it is heavily guarded.
+* **The High Tower**: Rooms K18 and K57, where the **Heart of Sorrow** hangs. The high tower staircase at K18 goes down to the crypts, though it is heavily guarded.
 * **The Hall of Bones**: In the basement, where we believe **Argynvost’s Skull** rests.
-* **K84 (Catacombs)**: Our main goal. Among its crypts are those of **King Dostron** (Crypt 34) and **Saint Markovia** (Crypt 40), which hold things we need to break the land’s curse. Anything else down there is a distraction.
-* **K85/K86 (Tombs of Sergei and Strahd)**: Sergei’s tomb is well lit, barred by a portcullis, and glows like an unnatural beacon. Strahd’s is the final target, and should be empty at the new moon, though the crypts’ magic may hold him if we linger.
-* **K88 (Tomb of King Barov and Queen Ravenovia)**: Rahadin’s sanctuary. Going in there means facing Strahd’s chamberlain and turning a quiet theft into a bloodbath.
+* **Catacombs**: Room K84, our main goal. Among its crypts are those of **King Dostron** in Crypt 34 and **Saint Markovia** in Crypt 40, which hold things we need to break the land’s curse. Anything else down there is a distraction.
+* **Tombs of Sergei and Strahd**: Rooms K85 and K86. Sergei’s tomb is well lit, barred by a portcullis, and glows like an unnatural beacon. Strahd’s is the final target, and should be empty at the new moon, though the crypts’ magic may hold him if we linger.
+* **Tomb of King Barov and Queen Ravenovia**: Room K88, Rahadin’s sanctuary. Going in there means facing Strahd’s chamberlain and turning a quiet theft into a bloodbath.
 * **Vallaki and the Blue Water Inn**: Our base, where we rehearsed the plan.
 
 ## What We Learned (Not from Doru)
@@ -81,11 +81,11 @@ Note: Rahadin, phonetically “Rod Dean”. The way-in plan was Greater Invisibi
 ## Loot
 
 * No new loot this time. We took stock of what we carry and what we mean to take:
-* **Symbol of Ravenkind** (Olfin): A legendary relic, essential to his Aura of Devotion and to fighting vampires.
+* **Symbol of Ravenkind**: Olfin’s, a legendary relic, essential to his Aura of Devotion and to fighting vampires.
 * **Chest of Holding**: A dimensional vessel with a 500-pound capacity, our way to carry large relics out of the castle.
 * **Van Richten’s Maps**: They strip Ravenloft of its greatest defense, its power to swallow the lost in its corridors.
 * **Strahd’s Gemstones**: Stones from earlier, to cast **Locate Object** during the heist.
-* **Heist objectives**: **Argynvost’s Skull** (Hall of Bones), the **Icon of Dawn’s Grace** (believed to be in the crypts) and the **Spear of the Huntress** (in the south crypts).
+* **Heist objectives**: **Argynvost’s Skull** in the Hall of Bones, the **Icon of Dawn’s Grace**, believed to be in the crypts, and the **Spear of the Huntress** in the south crypts.
 
 ## Notable NPCs
 
@@ -99,7 +99,7 @@ Note: Rahadin, phonetically “Rod Dean”. The way-in plan was Greater Invisibi
 
 ## Plot Points
 
-* **Argynvost’s Skull (first of all)**: Returning it to the “Shining Beacon” at Argynvostholt will light a beacon through the Barovian gloom and grant a lasting boon to the resistance.
+* **Argynvost’s Skull**: First of all. Returning it to the “Shining Beacon” at Argynvostholt will light a beacon through the Barovian gloom and grant a lasting boon to the resistance.
 * **The Icon of Dawn’s Grace**: A silver statuette, the only cure for the Abbot’s madness. Without it, Krezk stays under a fallen celestial’s rule.
 * **The Spear of the Huntress**: A shard of the ancient power of the Ladies Three, needed before we face the Count.
 * **Emil Toranescu and Gertruda**: Freeing the werewolf leader could break Strahd’s alliance with the wolves. Saving Gertruda from the King’s Bedchamber is simply right.
