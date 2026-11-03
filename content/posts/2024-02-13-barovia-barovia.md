@@ -6,6 +6,7 @@ slug: barovia-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/barovia-barovia
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
 sources: []
+feature: ismark-kolyanovich-ai.jpg
 ---
 
 ## Story
@@ -18,7 +19,7 @@ We spent the night in a nearby tower, and the next day Rose and Thorn asked us t
 
 The road leading from the tower gave us two choices, go towards the thick mist and risk falling into a pit in this godless land, or take the path into a forest. We chose the forest path and kept walking for what felt like six or more hours. At that point I thought I saw a hunched figure in the forest. I asked the party if they saw the same thing, but no one did. [Schlopkht](/wiki/schlopkht/) climbed a tree to double check, but saw nothing. We kept walking, and this time the whole party saw some strange things. The shadow of a giant flying creature, the silhouette of what looked to be a giant bat, a shadowy figure holding an axe, a rider in the distance. All came and seemed to disappear as we blinked.
 
-The fog seemed to be following us, driving us forward. We reached some stonework and a closed gate. The gate opened on its own as we approached. Daring not to let the mist catch us, or to wander into the forest, we went past the gate, and it closed behind us.
+The fog seemed to be following us, driving us forward. We reached some stonework and a closed gate. The gate opened on its own as we approached. Not daring to let the mist catch us, or to wander into the forest, we went past the gate, and it closed behind us.
 
 ### “Seer Spoke True”
 
@@ -39,6 +40,10 @@ We kept along the road, still driven by the fog, and crested a hill from which w
 
 We crossed a wooden bridge and came across some charred piles of who knows what. We entered a village with dilapidated buildings. There was the sound of flapping wings, and then a blue tipped raven flew overhead. It flew to the west, and circled back, almost beckoning us to follow it.
 
+![The village of Barovia in fog, a raven flying over the bridge, the castle on the cliff above](/images/barovia-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Blood on the Vine
 
 We ended up at the “Blood of the Vine Tavern”, which seemed to have been recently renamed to the “Blood on the Vine Tavern”. There was a chipped stone statue in the center with a plaque reading “ISMARK ANTONOVICH THE GREAT. Burgomaster of Barovia. Bane of Vampires. 618—662 B.C.”
@@ -58,6 +63,10 @@ Then a woman entered the Tavern, a face full of fright and dismay. Pale faced, s
 ### Ireena Behind Three Locks
 
 We walked to the mayors mansion at the south end of the village, and when Ismark knocked on the door, a young woman peeked out and then we heard three locks unlocking before the door swung open. It turns she is Ismark’s sister, Ireena. She was adopted and we learned that Ismark’s family found Ireena in the forest when she was a little girl.
+
+![Ireena, red-haired, in a breastplate and crimson scarf, a rapier in hand on a misty forest road](/images/ireena-kolyana-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Ireena asks us to help the villagers that retreated to Vallaki. First they must bury their father, who died in the attack.
 

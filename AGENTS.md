@@ -55,6 +55,15 @@
   `## Key Locations`, `## Encounters`, `## Loot`, `## Notable NPCs`, `## Plot Points`,
   `## Session Highlights`, one bullet per entry (`* **Name**: text`). `tests/test_post_format.py`
   checks every post: a post that drifts is fixed in the file, never with a new style rule.
+- Pictures in a post (Chris, 2026-11-03): at most 3 in all (`poststyle.MAX_PICTURES`), the feature
+  picture and any maps included; the slides are a deck and do not count. A post Chris names may hold 4
+  (`picture-cap: 4` in its front matter, never more). They go only in the story, each on a line of its
+  own after the paragraph it shows (after that paragraph's `Note:` margin notes), with words between
+  two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line (a PC's
+  portrait says "Not player art."). A post with more than one picture names its feature picture in
+  the front matter (`feature: name.jpg`): it gives the link preview and goes first under `picture: top`.
+  Check pictures against the story for spoilers: no form, identity or outcome before the story reveals
+  it. Reuse a wiki picture before making one. `tests/test_post_format.py` checks the rules.
 - The look settings in `data/post-style.yaml` (Chris's picks) decide how that format becomes a page
   (`poststyle.apply_format`): pills, "Malron’s Account" over the story, gold links, scene headings
   shown or not. Change the look there, not in the posts.

@@ -6,6 +6,7 @@ slug: the-echoing-choirs-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-echoing-choirs-of-ravenloft
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
 sources: ["notes-frc6vn", "transcript-bp1csv", "transcript-q95hre", "transcript-t7h0ov", "recording-1v30rz", "recording-one1ar", "recording-zscyal"]
+feature: icon-of-dawns-grace-ai.jpg
 ---
 
 ## Story
@@ -28,7 +29,11 @@ Note: \[The DM gave a long lore dump on the Icon’s history, spanning 400 years
 
 ### Growmor’s Scrolls
 
-We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. With the wizard’s own brass-knobbed staff we worked a hidden mechanism, and the marble slab lifted on a leather case of potent spell scrolls: Fireball, Lightning Bolt and Cone of Cold. Nearby, in Crypt 31, I got past a pit hidden under a tarp and took a scroll of Magic Circle.
+We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. With the wizard’s own brass-knobbed staff we worked a hidden mechanism, and the marble slab lifted. Under it was a leather case of potent spell scrolls: Fireball, Lightning Bolt and Cone of Cold. Nearby, in Crypt 31, I got past a pit hidden under a tarp and took a scroll of Magic Circle.
+
+![Growmor Nimblenobs on his marble slab, clutching his staff](/images/growmor-nimblenobs-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 At the far end of the catacombs stands the greatest tomb of all. A heavy portcullis bars its archway, and beyond it black marble steps go down into a dark vault thirty feet high. We are all but sure it is Strahd’s own, the place where he sleeps. We left it alone; our business here is the relics and Gertruda.
 
@@ -44,25 +49,29 @@ Note: \[Realizing they faced a CR 14 opponent while still worn down, the players
 
 ### Rahadin Driven Off
 
-The battle was brutal. Rahadin’s very presence is agony to the mind, and his saber nearly felled me more than once. Crusty and Aera worked together, and in the end Crusty quickened Aera so she could pepper the chamberlain with arrows from her “turbo bow.” For all we did, and though I called up a guardian of faith, Rahadin stayed a ghostly, deadly threat, zigzagging through our defenses. He called up skeletons from the crypts we had opened. Then, wounded, he healed himself with an amulet and ran, though he had the upper hand.
+The battle was brutal. Rahadin’s very presence is agony to the mind, and his saber nearly felled me more than once. Crusty and Aera worked together, and in the end Crusty sped Aera up so she could pepper the chamberlain with arrows from her “turbo bow.” For all we did, and though I called up a guardian of faith, Rahadin stayed a ghostly, deadly threat, zigzagging through our defenses. He called up skeletons from the crypts we had opened. Then, wounded, he healed himself with an amulet and ran, though he had the upper hand.
+
+![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 
-* **Crypt 40 (Saint Markovia)**: The Saint’s resting place, guarded by a poison dart trap. It held the Icon of Dawn’s Grace.
-* **Crypt 37 (Growmor Nimblenobs)**: The tomb of a wizard extraordinaire. A hidden space beneath the slab held three powerful spell scrolls of war.
+* **Saint Markovia’s Tomb**: Crypt 40, the Saint’s resting place, guarded by a poison dart trap. It held the Icon of Dawn’s Grace.
+* **Tomb of Growmor Nimblenobs**: Crypt 37, resting place of a wizard extraordinaire. A hidden space beneath the slab held three powerful spell scrolls of war.
 * **Crypt 31**: A crypt with gold-painted walls and a pit trap, where a skeleton held a **Magic Circle** scroll.
 * **Strahd’s Tomb**: A grand, bloodstained tomb we found but wisely did not enter.
 
 ## Encounters
 
-* **Poison Dart Trap (Crypt 40)**: The darts fell as we opened the door. Most of us dodged the worst, but the poison still did us real harm.
-* **Rahadin (The Chamberlain)**: A desperate battle against Strahd’s right hand. With his deathly choir and his speed he strikes several of us in a single breath. He called up skeletons, healed himself with an amulet, and fled though he had the upper hand.
+* **Poison Dart Trap**: In Crypt 40. The darts fell as we opened the door. Most of us dodged the worst, but the poison still did us real harm.
+* **Rahadin**: The chamberlain. A desperate battle against Strahd’s right hand. With his deathly choir and his speed he strikes several of us in a single breath. He called up skeletons, healed himself with an amulet, and fled though he had the upper hand.
 
 ## Loot
 
 * **Icon of Dawn’s Grace**: Sentient lawful good statuette. Grants **Protection from Evil and Good** once per day. Held by **Malron**.
 * **Growmor’s Staff**: Wooden staff with brass and marble knobs. Used to open the secret compartment in Crypt 37.
-* **Scroll of Fireball**: Taken by **Aera** (for one-time use).
+* **Scroll of Fireball**: Taken by **Aera**, to use once.
 * **Scroll of Cone of Cold**: Held by the party.
 * **Scroll of Lightning Bolt**: Held by the party.
 * **Scroll of Magic Circle**: Recovered from Crypt 31 via **Mage Hand**.

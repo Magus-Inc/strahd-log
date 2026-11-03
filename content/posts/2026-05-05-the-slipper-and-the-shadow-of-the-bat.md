@@ -6,6 +6,7 @@ slug: the-slipper-and-the-shadow-of-the-bat
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-slipper-and-the-shadow-of-the-bat
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning"]
 sources: ["transcript-oh55mi", "recording-voth0u"]
+feature: gertruda-ai.jpg
 ---
 
 ## Story
@@ -21,6 +22,10 @@ Note: \[The group talked about sourdough discard snacks and classic books like �
 Following the slipper we had found on the stairs, we climbed into the Rooms of Weeping. Aera’s sharp eyes and picks got us into the King’s Bedchamber, a room of preserved luxury. Above a blazing hearth hung a striking portrait of Tatyana, so like Ireena Kolyana that we all stopped short. In the painting she wears a silver bracelet of the moon and stars, the very heirloom Olfin once recovered and that went to the Vistani girl, Arabelle.
 
 Note: \[Players debated what the bracelet means, and the lore of Strahd’s brother, Sergei.\]
+
+![A portrait of Tatyana, red-haired, wearing a silver moon-and-stars bracelet](/images/tatyana-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### Gertruda, Found
 
@@ -38,6 +43,10 @@ The rescue was cut short by Anastrasya, one of Strahd’s brides, who swept in w
 
 Note: \[The table talked about the “two-part” nature of the fight and how deadly the “Phase 2” transformation was. Anastrasya’s bite was a crit.\]
 
+![Anastrasya, a sharp-featured vampire bride in a dark gown, Sasha cowering behind her](/images/anastrasya-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### Calling Olfin Back
 
 For vengeance and for our lives I loosed ray after ray of fire into the monster, burning it from the inside out until it fell to ash. The moment it was over I read a scroll to call Olfin back, with amber teeth from Aera as the offering, and pulled his soul back from the brink. Battered but victorious, we now make ready to use a traveling stone to escape the castle with Gertruda and the relics we have gathered.
@@ -46,9 +55,9 @@ Note: Malron’s rays were Scorching Ray; the scroll was Revivify.
 
 ## Key Locations
 
-* **The Catacombs (K21/K83)**: Where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
-* **The Rooms of Weeping (Map 5)**: A desolate, brooding part of the castle that holds the King’s Bedchamber.
-* **King’s Bedchamber (K56)**: A lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
+* **The Catacombs**: Rooms K21 and K83, where we fought Rahadin. We avoided thirty skeletons by leaving some tombs unexplored.
+* **The Rooms of Weeping**: On map 5, a desolate, brooding part of the castle that holds the King’s Bedchamber.
+* **King’s Bedchamber**: Room K56, a lavish room with a blazing fireplace, a great library of military strategy, and the portrait of Tatyana.
 
 ## Encounters
 
@@ -64,7 +73,7 @@ Note: Malron’s rays were Scorching Ray; the scroll was Revivify.
 
 * **Gertruda**: The daughter of Mary of Barovia village. Naive but brave; Strahd lured her to the castle with talk of making amends to her village.
 * **Anastrasya**: A vampire bride of Strahd. Elegant and mocking until she was driven to her monstrous bat form. I burned her to ash.
-* **Rahadin**: (Mentioned) Strahd’s chamberlain, who fled our last fight.
+* **Rahadin**: Not seen this time. Strahd’s chamberlain, who fled our last fight.
 
 ## Plot Points
 

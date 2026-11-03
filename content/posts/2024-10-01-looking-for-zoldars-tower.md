@@ -6,6 +6,7 @@ slug: looking-for-zoldars-tower
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/looking-for-zoldars-tower
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 sources: ["notes-qtc698"]
+feature: tower-of-khazan-ai.jpg
 ---
 
 ## Story
@@ -17,6 +18,10 @@ We set out to find Szoldar, who could guide us to the tower that holds the legen
 ### A Pelt of Glamour Weave
 
 In the shack we met Szoldar and his brother, Yevgeni. Aera bought Shabasta a wolf pelt from them for fifty gold pieces and found it was glamour weave, a rare and magical cloth.
+
+![Szoldar the hunter at the door of his small shack by a misty lake at dusk, wolf pelts drying beside it](/images/szoldar-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Before we left, we looked over the stone slab, an ancient monument to the Dreamer and the Ladies Three. The brothers warned us that a werewolf pack prowls the area, led by a new and reckless alpha.
 

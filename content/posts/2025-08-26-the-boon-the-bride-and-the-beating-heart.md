@@ -6,6 +6,7 @@ slug: the-boon-the-bride-and-the-beating-heart
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-boon-the-bride-and-the-beating-heart
 cast: ["Aera shan Ravanór", "Gumbo", "Malron Lichtstrahl", "Olfin Darning", "Zorpheus"]
 sources: ["notes-6ud00l"]
+feature: heart-of-sorrow-ai.jpg
 ---
 
 ## Story
@@ -38,6 +39,10 @@ She is sure we will have to face Rahadin if we sneak in while Strahd is out.
 
 Later, Escher brought Zorpheus upstairs to the rest of us. Rahadin entered with a chained prisoner, a collar at his throat and a sack over his head.
 
+![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 > **“The prisoner waits your judgment, my lord.”**
 
 We were made to judge him, and Gumbo was handed a sword to carry out the punishment, though we never learned the crime or who the prisoner was.
@@ -53,6 +58,10 @@ We were offered guest quarters, with the promise that no servant would lay hands
 **Rahadin warned us** again not to leave our chambers until morning, for dark fiends roam the castle at night.
 
 **Escher was set to guard the door**, and Rahadin locked us in and kept the key.
+
+![Escher, a golden-haired vampire spawn, guarding a guest room in the castle](/images/escher-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Inside, Gumbo searched a clock and found a map showing that the beating heart of the castle lies in the north tower.
 

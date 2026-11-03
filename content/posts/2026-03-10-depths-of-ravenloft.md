@@ -6,6 +6,7 @@ slug: depths-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/depths-of-ravenloft
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 sources: ["notes-43jrf8", "transcript-rcznh0", "recording-vybfou", "discord-4kqb2j"]
+feature: larders-of-ill-omen-ai.jpg
 ---
 
 ## Story
@@ -26,6 +27,10 @@ Our first steps in the Larders were a comedy of errors with the strange servant 
 
 Note: \[Meta details\] The “Spoon Comedy” was a moment of levity at the table. The DM clarified that the item from the bone hole was the “wrong spoon”, and the players had a self-deprecating laugh about their “fool’s errand” of treating random kitchenware as vital quest items.
 
+![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Forty Zombies and a Spoon
 
 The right spoon lay at the far end of a corridor packed with forty motionless zombies. Olfin made a desperate dash for it. Disguised as one of the plague-spreading dead, he wrapped himself in Lathander’s sanctuary and a ward against evil and charged into the horde. It worked beautifully: as Olfin snatched the “lonely” spoon, I took hold of him with an invisible conjured hand and the power of my mind and yanked him back through the doorway, and we slammed the steel-banded door just as the zombies began to stir.
@@ -42,9 +47,13 @@ We went on down into the Drowning Cells, wading through three to five feet of mu
 
 It was Emil Toranescu, the werewolf we came for. He has been locked in that cell for weeks and is worn to exhaustion. Around his neck is a collar of silver thorn that keeps him from changing. It is magically locked, and forcing it open drives great thorns into the neck of the one who wears it. Emil knows there is a key, and that Volenta holds it, the bride who escaped us at the coffin maker’s.
 
+![Emil in a silver thorn collar, chained in the flooded Drowning Cells](/images/emil-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ## Key Locations
 
-* **Larders of Ill Omen (Map 11)**: A cold, damp foyer of rotting debris and “blinded beans.” It holds the elevator trap and is the doorway to the depths.
+* **Larders of Ill Omen**: On map 11, a cold, damp foyer of rotting debris and “blinded beans.” It holds the elevator trap and is the doorway to the depths.
 * **The Serpent’s Wing / South Tower Stair**: A vital way up and down. Cyrus’s map, a few simple boxes and lines, shows that this stair joins the Dungeons to the Garrison, the Main Entry, the Royal Apartments, and the Witch’s Coven on the fifth floor.
 * **The Drowning Cells**: A hallway where the water lies like black mirrored glass, broken only by the steady chattering of teeth. With iron bars under the water and water five feet deep, every step wears you down.
 * **The Torture Chamber**: A fifty-foot square stage of horrors. Chains hang like thick black web over racks and iron maidens. A balcony draped in red velvet looks down on it all, with two thrones beneath a mocking lamp.
@@ -61,7 +70,7 @@ Note: Aera’s Sleight of Hand had rolled a 26 earlier. Emil has three levels of
 ## Loot
 
 * **Skull of Argynvost**: The party successfully shrunk the 20-ton skull and secured it within the “Chest of Holden” (a pun on the standard Chest of Holding), a strategic victory for their long-term quest.
-* **Candle of Long Resting (Homebrew)**: Given by the DM to counter Ravenloft’s “crunchy” difficulty. Lighting this candle grants the benefits of a long rest during the duration of a short rest (one-time use).
+* **Candle of Long Resting**: A homebrew item, given by the DM to counter Ravenloft’s “crunchy” difficulty. Lighting this candle grants the benefits of a long rest during the duration of a short rest. It can be used once.
 * **The Heirloom Spoon**: The “lonely,” oversized spoon returned to Cyrus.
 * **The “Wrong” Spoon**: An ordinary kitchen spoon from the bone hole, kept now as a funny reminder of our mistake.
 * **Holy Symbol of Ravenkind**: The DM shared the item’s full rules this session (charges, Dawn’s Embrace, Light of Hope, Sun’s Blessing). See [Symbol of Ravenkind](/wiki/symbol-of-ravenkind/).
@@ -70,7 +79,7 @@ Note: Aera’s Sleight of Hand had rolled a 26 earlier. Emil has three levels of
 
 * **Cyrus Belview**: The deformed, eccentric servant who cares most for his missing heirloom. A pitiful but dangerous fixture of the castle’s service halls.
 * **Emil Toranescu**: A werewolf prisoner of Strahd, kept for weeks in the flooded cells. He could be an ally, if we survive the fight for his key.
-* **Volenta (The Bride)**: A cruel dweller in the castle, who appeared on the balcony of the torture chamber. She mocked us for coming uninvited, and stands beside a twenty-gallon jar of oil, threatening to set the water alight and turn the chamber into a fiery trap.
+* **Volenta**: Strahd’s bride, a cruel dweller in the castle, who appeared on the balcony of the torture chamber. She mocked us for coming uninvited, and stands beside a twenty-gallon jar of oil, threatening to set the water alight and turn the chamber into a fiery trap.
 
 ## Plot Points
 

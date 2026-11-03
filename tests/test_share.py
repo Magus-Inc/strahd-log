@@ -91,6 +91,9 @@ def test_first_picture_prefers_a_local_file_then_an_outside_link(tmp_path):
     assert share.first_picture(md, tmp_path) == (tmp_path / "images" / "here.jpg", "Ireena with two swords")
     assert share.first_picture("![Victor](https://old.example/v.png)", tmp_path) == ("https://old.example/v.png", "Victor")
     assert share.first_picture("No pictures.", tmp_path) is None
+    (tmp_path / "images" / "there.jpg").write_bytes(b"x")
+    two = "![Ireena](/images/here.jpg) and ![Ismark](/images/there.jpg)"
+    assert share.first_picture(two, tmp_path, prefer="there.jpg") == (tmp_path / "images" / "there.jpg", "Ismark")
     (tmp_path / "icon.svg").write_text("<svg/>", encoding="utf-8")
     assert share.first_picture("![Icon](/icon.svg)", tmp_path) is None  # no card can be made from it
 
@@ -271,3 +274,17 @@ def test_every_real_post_shares_its_own_feature_picture(real_site):
 def test_real_cards_stay_small(real_site):
     big = [p.name for p in (real_site / "images" / "share").glob("*.jpg") if p.stat().st_size > 400_000]
     assert not big, big
+
+
+def test_a_post_with_several_pictures_shares_its_feature_picture(real_site):
+    # Extra pictures sprinkled through a post (2026-11-03) must not change its link preview.
+    wrong = []
+    for path in sorted((build.ROOT / "content" / "posts").glob("*.md")):
+        front, body = build.split_front_matter(path.read_text(encoding="utf-8"))
+        if not front.get("feature"):
+            continue
+        alt = re.search(r"!\[([^\]]*)\]\(/images/" + re.escape(front["feature"]) + r"\)", body).group(1)
+        page = real_site / "posts" / str(front["slug"]) / "index.html"
+        if htmllib.unescape(meta(page.read_text(encoding="utf-8")).get("og:image:alt", "")) != alt.strip():
+            wrong.append(path.stem)
+    assert wrong == []

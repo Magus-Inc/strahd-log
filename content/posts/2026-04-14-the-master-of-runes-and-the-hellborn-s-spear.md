@@ -6,6 +6,7 @@ slug: the-master-of-runes-and-the-hellborn-s-spear
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-master-of-runes-and-the-hellborn-s-spear
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 sources: ["transcript-gzcopu", "recording-vxdqnm", "discord-ao3a4y"]
+feature: king-dostron-the-hellborn-ai.jpg
 ---
 
 ## Story
@@ -18,7 +19,7 @@ Note: The players worked through the places named in the verse, matching the gre
 
 ### Three Doors
 
-We left the brazier for now and tried the three doors nearby. The first opened on a steep staircase, where Aera saw a figure’s silhouette that quickly ducked away. Behind the third was a spiral stair and a woman’s slipper, which I knew for Gertruda’s. We chose the middle way and went down a slick, foggy corridor.
+We left the brazier for now and tried the three doors nearby. The first opened on a steep staircase, where Aera saw a figure’s silhouette that quickly ducked away. Behind the third was a spiral stair and a woman’s slipper, which I recognized as Gertruda’s. We chose the middle way and went down a slick, foggy corridor.
 
 Note: Before moving, the party talked over its “healing philosophy”, Malron pointing out that unconscious is not dead. Crusty reminded everyone he had “13 important dice” (Portent) ready.
 
@@ -34,11 +35,15 @@ At last we reached the ancient catacombs of Ravenloft and began a careful search
 
 Note: The party held a long “Above the Table” debate on whether a hot dog is a sandwich, whether a calzone is a dumpling, and whether everything is just “soup or sandwich”.
 
+![The Staff of Khazan, a plain platinum staff wrapped in blue-white lightning, hovering above the skeleton on the slab in Khazan's tomb](/images/staff-of-khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 In the row beside Khazan’s tomb, Crypt 18 is marked “Ireena Kolyana, wife.” Its door had been carefully laid to one side, and the crypt stood empty and swept clean, as though it waits for her.
 
 ### The Spear of the Huntress
 
-Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectral voice warned us to stop. We did not. Olfin and I pried open the lead sarcophagus cased in gold, and inside was the Spear of the Huntress, a blood spear of great power. As best we could tell from it, its power is less than it was, for Kavan and the Devourer corrupted it long ago, but it can be made whole again by communing with the Spirit of the Huntress, or by consecrating anew the Forest Fane on Yester Hill. Now we make ready to find the Icon of Dawn’s Grace in the last crypts nearby.
+Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectral voice warned us to stop. We did not. Olfin and I pried open the lead sarcophagus cased in gold, and inside was the Spear of the Huntress, a blood spear of great power. As best we could tell from it, its power is less than it was, for Kavan and the Devourer corrupted it long ago, but it can be made whole again by communing with the Spirit of the Huntress, or by consecrating the Forest Fane on Yester Hill again. Now we make ready to find the Icon of Dawn’s Grace in the last crypts nearby.
 
 ![King Dostron's ghost rising red over his sarcophagus and the Spear of the Huntress](/images/king-dostron-the-hellborn-ai.jpg)
 
@@ -51,8 +56,8 @@ Note: Shabasta said they would “draw their own version” of the new staff, wi
 * **The Brazier Room**: A square chamber with a magical hourglass and a brazier of seven stones for traveling.
 * **The Slide Trap**: A slick marble hall that drops the unwary into the cells below.
 * **The Catacombs**: A vast warren of columns and crypts beneath the castle, full of fog and filth.
-* **Crypt 15 (Khazan’s Tomb)**: The resting place of a powerful wizard, guarded by a portcullis and a puzzle of runes.
-* **Crypt 34 (King Dostron’s Tomb)**: A chamber with a gilded sarcophagus and a harmless but fearsome stuffed owlbear.
+* **Khazan’s Tomb**: Crypt 15, the resting place of a powerful wizard, guarded by a portcullis and a puzzle of runes.
+* **King Dostron’s Tomb**: Crypt 34, a chamber with a gilded sarcophagus and a harmless but fearsome stuffed owlbear.
 
 ## Encounters
 
@@ -70,8 +75,8 @@ Note: Shabasta said they would “draw their own version” of the new staff, wi
 ## Notable NPCs
 
 * **King Dostron the Hellborn**: An ancient ruler whose ghostly voice warned us off his sarcophagus.
-* **Khazan (Deceased)**: An archmage whose magic lives on in his trapped and puzzling tomb.
-* **Gertruda (Mentioned)**: Her slipper on the spiral stair says she was taken higher into the castle.
+* **Khazan**: A dead archmage whose magic lives on in his trapped and puzzling tomb.
+* **Gertruda**: Not seen this time. Her slipper on the spiral stair says she was taken higher into the castle.
 
 ## Plot Points
 

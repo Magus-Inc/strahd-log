@@ -6,6 +6,7 @@ slug: the-whispering-wall
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-whispering-wall
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Zorpheus"]
 sources: ["notes-a3re9b", "notes-g74ycc"]
+feature: whispering-wall-ai.jpg
 ---
 
 ## Story
@@ -16,11 +17,19 @@ We hesitated a moment too long on Yester Hill, and Ludmilla called up the mists 
 
 Note: The fight on Yester Hill ran over two nights, 4/8 and 4/15; the 4/8 session had no post of its own. The party reached level 6.
 
+![Winter Splinter, a giant tree blight, striding out of a burning forest toward the vineyard](/images/winter-splinter-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 We destroyed Winter Splinter and took the gemheart from it, but at a heavy cost: it burst apart as it died, and nothing was left of Veyren’s body.
 
 ### Muriel’s Secret
 
 Then Muriel confessed. She is a wereraven, and it was Elvir Martikov, her betrothed, who gave her the curse. It lets her heal and fly, but dark magic and silver can kill her. Elvir never came back to her after the attack on the castle. She did not lose control and attack Ludmilla, and she cannot pass the curse to us.
+
+![Muriel Vinshaw leading the way with a lantern on a misty road toward the vineyard](/images/muriel-vinshaw-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### “The Way Back Comes but Once”
 
@@ -68,7 +77,7 @@ Deals were struck:
 
 * **Strahd’s Challenge**: An eerie invitation to enter the wall and be enlightened, or be lost to it forever.
 * **The Wall’s Test**: – Zorpheus heard that the prophecy is real. – I learned that my reborn nature ties me to a line of elven kings. – Gumbo was cheered on by an unseen crowd. – Each of us heard a woman whisper: **“The way back comes but once.”** – Zorpheus nearly stayed trapped, but came to himself and escaped just in time.
-* **Minofaustus’ Market**: – Gumbo bargained away his gold for a servant (Zorpheus) and a **Cloak of Elvenkind**. – Aera took on a debt for a **Shades Ring**. – Liren and I bought **Half Plate** armor.
+* **Minofaustus’ Market**: – Gumbo bargained away his gold for a servant, Zorpheus, and a **Cloak of Elvenkind**. – Aera took on a debt for a **Shades Ring**. – Liren and I bought **Half Plate** armor.
 
 ## Loot
 
@@ -81,18 +90,18 @@ Deals were struck:
 * **Twilight Crest**:
     * 3 charges, regenerates one at dawn.
     * **Day**: Cast **Aid**.
-    * **Night**: Cast **Spirit Guardians** (necrotic).
+    * **Night**: Cast **Spirit Guardians**, necrotic.
     * **Full Charge**: Cast **Innervation**, prevents recharging for three days.
 * **Merchant’s Wares**:
-* **Cloak of Elvenkind** (Gumbo)
-* **Half Plate** (Liren, Malron)
-* **Shades Ring** (Aera, pending debt repayment)
+* **Cloak of Elvenkind**: Gumbo’s.
+* **Half Plate**: Bought by Liren and Malron.
+* **Shades Ring**: Aera’s, with her debt still to repay.
 
 ## Notable NPCs
 
 * **Strahd von Zarovich**: Gave us the gems as our reward and led us through the Wall’s challenge.
 * **Kavan**: Told the old legends of his people’s split and of the need to recover the Spear of the Huntress.
-* **Minofaustus (Merchant)**: A traveling trader with a magical market, whose deals come with interest.
+* **Minofaustus**: A traveling merchant with a magical market, whose deals come with interest.
 
 ## Plot Points
 

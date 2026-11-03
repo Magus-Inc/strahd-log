@@ -6,6 +6,7 @@ slug: leaving-village-barovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/leaving-village-barovia
 cast: ["Aera shan Ravanór", "Grom Shield-Breaker", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht"]
 sources: []
+feature: ireena-kolyana-ai.jpg
 ---
 
 ## Story
@@ -13,6 +14,10 @@ sources: []
 ### Burial Rites
 
 [Grom Shield-Breaker](/wiki/grom-shield-breaker/), that’s the Dwarf’s name. He’s always been with our party, or so I’m told, but maybe I never noticed since he’s so short. Maybe he can help carry the corpse of [Doru](/wiki/doru/) up the ladder and out to a stream. Truth be told I’m not sure if a vampire with a stake through the heart can really be considered a corpse, but that’s what I’ll call the poor wretch until we can figure out if the advice Aera read about running water will truly keep us safe from the abomination.
+
+![Grom Shield-Breaker, a hill dwarf fighter with shield and axe, holding up his family tooth](/images/grom-shield-breaker-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not player art.*
 
 Schlopkht volunteered to bring the sunburst relic back to [Father Donavich](/wiki/father-donavich/) and side-step the part where we killed his undead son, and that we plan to kill him for good so that we may learn how to be rid of vampires.
 
@@ -52,7 +57,7 @@ Meanwhile the rest of the party went shopping, but found that the prices were mo
 
 At noon we gathered the party and ventured forth towards Tser Pool. Ireena joined us in her full armor, but we surrounded her as we took our charge to protect her most seriously.
 
-After some time on the trail we were met with a voice from the thicket which asked who we were. Grom was most confrontational and challenged the hidden party. A woman walked out of the mists, and Ireena knew her for a scout of the village. Kreza and Conga were the scouts’ names. They were searching for the Landston family, two parents and five children who had gone missing from the village.
+After some time on the trail we were met with a voice from the thicket which asked who we were. Grom was most confrontational and challenged the hidden party. A woman walked out of the mists, and Ireena recognized her as a scout of the village. Kreza and Conga were the scouts’ names. They were searching for the Landston family, two parents and five children who had gone missing from the village.
 
 We consulted the map Ismark gave us (I’ve made a crude copy), and decided it would be faster to leave the path and enter the woods to follow the river towards the pool. We came into a clearing with a tall ancient oak in the middle. There were seven figures, two larger than the others, surrounding an eighth figure and looking up into the tree. Red mist was coming from the final figure’s mouth and pooling onto the ground. His eyes were white and he was wearing armor. We engaged in combat and slaughtered everyone. Most certainly this was the Landston family, but we believe they were already long gone, and we spared them from a fate worse than death.
 

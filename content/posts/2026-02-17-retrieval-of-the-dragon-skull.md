@@ -6,6 +6,7 @@ slug: retrieval-of-the-dragon-skull
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/retrieval-of-the-dragon-skull
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
 sources: ["notes-042xl1", "notes-212b82", "notes-98i7ex", "notes-ikjjqp", "notes-njb3rt", "notes-tcn45v", "notes-udbehj", "notes-upk4ec", "transcript-f48mm1", "recording-e4erha"]
+feature: argynvosts-skull-ai.jpg
 ---
 
 ## Story
@@ -30,9 +31,13 @@ The ladder brought us to K-20, a landing with a dizzying view of the Heart of So
 
 ### Cyrus and the Spawn
 
-On the larder level (K-62) we met the misshapen Cyrus Belview, kin to the poor souls at the Abbey of Saint Markovia. He greeted us with a weary, eerie familiarity and asked us to fetch his favorite cooking spoon from the ossuary nearby. But as we moved, a crystal dinner bell rang by the elevator shaft, the signal that dinner was served, and two vampire spawn dropped from the ten-foot ceiling on us. In the fight Aera and I were forced onto the elevator’s moving counterweights and had to leap again and again to keep our footing.
+On the larder level, room K-62, we met the misshapen Cyrus Belview, kin to the poor souls at the Abbey of Saint Markovia. He greeted us with a weary, eerie familiarity and asked us to fetch his favorite cooking spoon from the ossuary nearby. But as we moved, a crystal dinner bell rang by the elevator shaft, the signal that dinner was served, and two vampire spawn dropped from the ten-foot ceiling on us. In the fight Aera and I were forced onto the elevator’s moving counterweights and had to leap again and again to keep our footing.
 
 Note: Meta details: rules questions came up about Misty Step as a bonus action under the 2024 and 2014 rules, and about keeping a grapple while being dragged into an elevator shaft.
+
+![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### Argynvost’s Skull
 
@@ -46,8 +51,8 @@ With the spawn destroyed, we went into K-67, the Hall of Bones, where human rema
 
 * **K-24 Servants’ Quarters**: Beyond its filthy windows lies a valuable back door. The secret door behind the mirror lets us avoid the well-patrolled main halls of the Count’s home.
 * **The Heart of Sorrow Tower**: The heart of the castle’s power, and surely its weak point, though with no railing and the storm shaking the stair, a fall there is as deadly as any undead.
-* **The Kitchens and Larder (K-62/63)**: A rare place to talk rather than fight. Cyrus Belview gives us a small foothold among the castle’s household, though his loyalties are as twisted as his body.
-* **K-67 The Hall of Bones (Ossuary)**: It was a blow to the heart to see the noble Argynvost’s remains used as common furnishing, so deep is the Count’s desecration. And the room is a trap, built to seal in anyone who disturbs what it holds.
+* **The Kitchens and Larder**: Rooms K-62 and K-63, a rare place to talk rather than fight. Cyrus Belview gives us a small foothold among the castle’s household, though his loyalties are as twisted as his body.
+* **The Hall of Bones**: Room K-67, the ossuary. It was a blow to the heart to see the noble Argynvost’s remains used as common furnishing, so deep is the Count’s desecration. And the room is a trap, built to seal in anyone who disturbs what it holds.
 
 ## Encounters
 
@@ -56,7 +61,7 @@ With the spawn destroyed, we went into K-67, the Hall of Bones, where human rema
 
 ## Loot
 
-* **The Dragon Skull (Argynvost’s Skull)**: An artifact of great spiritual and physical weight (250 lbs). Shrunk by magic and stored in the Chest of Holding. Returning it to Argynvostholt is one of our chief goals.
+* **The Dragon Skull**: Argynvost’s skull, an artifact of great spiritual and physical weight: 250 pounds. Shrunk by magic and stored in the Chest of Holding. Returning it to Argynvostholt is one of our chief goals.
 * **Cyrus’s Favorite Cooking Spoon**: A small household thing, taken from the “hand” of a bone chair. Its worth is in keeping Cyrus Belview friendly.
 * **Inspiration Coin**: Awarded to Aera for flawless stealth that kept the castle guards from sounding an early alarm.
 

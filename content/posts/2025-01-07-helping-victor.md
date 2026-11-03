@@ -6,6 +6,7 @@ slug: helping-victor
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/helping-victor
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Oogway", "Shabasta"]
 sources: ["notes-pkcvrv"]
+feature: victor-ai.jpg
 ---
 
 ## Story
@@ -25,6 +26,10 @@ Lady Fiona now holds the town, but Victor and his father still occupy the Burgom
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 
 Erasmus believes a gallows speaker haunts Stella in the Ethereal Plane near Vallaki, and he told us what van Richten’s guide says of the creature. Victor trusts neither his father nor Lady Fiona. He needs to reach the Ethereal Plane to cast a spell that will help Fiona escape, and he has a book from Mordenkainen that can carry up to nine creatures there on a night of the full moon, with a hag’s heart stone. Stella says she has seen a night hag near the refugee camp, perhaps the same one who sold the dream pies.
+
+![The gallows speaker, a shrouded spectre trailing nooses in the ethereal mist](/images/gallows-speaker-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### Notes on Night Hags
 

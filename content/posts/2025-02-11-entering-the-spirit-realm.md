@@ -6,13 +6,14 @@ slug: entering-the-spirit-realm
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-the-spirit-realm
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
 sources: ["notes-sh6fu8"]
+feature: wachter-cellar-crossing-ai.jpg
 ---
 
 ## Story
 
 ### Into the Ethereal
 
-Lady Fiona had to drop her wards to allow us entry into the ethereal realm. We ventured into the cellar with her, where we encountered peculiar sights: four skeletons lying in beds, a pentagram on the floor, and a curved dagger inscribed with the phrase “in death.” Scratches reading “traitor” were visible, remnants of a previous dweller. Fiona deemed the cellar a secure location despite her inability to remove the markings.
+Lady Fiona had to drop her wards to allow us entry into the ethereal realm. We ventured into the cellar with her, where we encountered peculiar sights: four skeletons lying in beds, a pentagram on the floor, and a curved dagger inscribed with the phrase “in death.” Scratches reading “traitor” were visible, remnants of a previous dweller. Fiona could not remove the markings, but she judged the cellar safe.
 
 Victor used the hag’s heart stone to transport us to the ethereal realm. A teenage voice exclaimed “Victor!” behind us, revealing a fading figure with legs disappearing below the knees into the mist.
 
@@ -29,6 +30,10 @@ Oogway asked Erasmus about the gallows speaker’s weaknesses. It has none, and 
 Note: Its resistances, per Erasmus: spells, necrotic damage, poison, grapple, stun and prone.
 
 Victor’s spell acted as a beacon, attracting spirits intent on stealing Stella’s body. Erasmus told us to strike any spirit that came near Stella.
+
+![The Ethereal Plane, pale translucent spirits drifting through green-grey mist as the stone walls of a cellar fade away](/images/ethereal-plane-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Then the gallows speaker came for us. “I am Leo Dilisnya,” he said. He carried a tome marked with the symbol of Ravenloft, and he pointed at Stella Wachter. He means to take what is his, he said, pointing at Stella and Lady Fiona. He looked at us and made it plain he bore us no ill will, and would let us go if we let him take the Wachters. He told us he was once a guard of Castle Ravenloft, and that he gave the order to kill Strahd after Strahd assaulted Tatyana, the bride of his brother Sergei. We would not give them up.
 

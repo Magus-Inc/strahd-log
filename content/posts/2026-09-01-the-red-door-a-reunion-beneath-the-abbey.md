@@ -6,6 +6,8 @@ slug: the-red-door-a-reunion-beneath-the-abbey
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-red-door-a-reunion-beneath-the-abbey
 cast: ["Aera shan Ravanór", "Crusty", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 sources: ["transcript-dvrukt", "transcript-smlkbi", "recording-lyy62g"]
+picture-cap: 4  # Chris, 2026-11-03: "show a fourth image"
+feature: the-abbots-first-vessel-ai.jpg
 ---
 
 ## At a Glance
@@ -20,7 +22,7 @@ sources: ["transcript-dvrukt", "transcript-smlkbi", "recording-lyy62g"]
 
 ### Fog from the Well
 
-With the Abbot restored, we slept in the Abbey of St. Markovia. In the night the abbey bell woke us. Fog was pouring upward out of the courtyard well, and beside it stood two still figures we first took for more of the Abbot’s creations, until one looked up. It was Liren and Gumbo, companions we thought long lost. For us it has been months; for them, only hours.
+With the Abbot restored, we slept in the Abbey of St. Markovia. In the night the abbey bell woke us. Fog was pouring upward out of the courtyard well, and beside it stood two still figures we first thought were more of the Abbot’s creations, until one looked up. It was Liren and Gumbo, companions we thought long lost. For us it has been months; for them, only hours.
 
 Note: Liren’s and Gumbo’s players surprised the table after waiting outside for an hour and a half. The DM ran it as an in-theme one-shot so everyone could play together, and caught them up: the party had broken into Castle Ravenloft, stolen from Strahd, nearly been caught, and killed two of his three brides. Shabasta’s player explained that Shabasta had been a druid’s sheep in the meantime, died, and is now Shabasta again, reincarnated.
 
@@ -30,15 +32,23 @@ A pounding began beneath the abbey, keeping time with the bell, and a mongrelfol
 
 The walls of the chamber below are lined with niches full of small things: a child’s shoe, a wedding ring, a soldier’s medal, a wooden toy, a broken holy symbol, each belonging to someone whose soul passed through the abbey. Liren spotted something she lost on the roads of Barovia, and we understood that the Abbot had collected something from each of us. Shabasta found his second glamour weave. Then the shadows peeled off the walls and attacked.
 
+![The Hall of Niches beneath the abbey, full of lost keepsakes, as the shadows peel off its walls](/images/hall-of-niches-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### Six Shadows
 
-Six shadows came at us, and their touch drained the strength from our limbs. Shabasta, quick for once, mocked one for being “a little lighter than all those shadows.” Olfin, more watchful now than ever, smote one apart. Crusty slowed five of the six. Aera’s blade found one’s heart and Liren cut down another. Lathander’s flame through me, stronger now, dropped a third, and Gumbo dispatched another: “So long, shadow.” Shabasta tried to finish the last with his special spear and stabbed Olfin instead. Olfin finished it anyway.
+Six shadows came at us, and their touch drained the strength from our limbs. Shabasta, quick for once, mocked one for being “a little lighter than all those shadows.” Olfin, more watchful now than ever, destroyed one. Crusty slowed five of the six. Aera’s blade found one’s heart and Liren cut down another. Lathander’s flame through me, stronger now, dropped a third, and Gumbo dispatched another: “So long, shadow.” Shabasta tried to finish the last with his special spear and stabbed Olfin instead. Olfin finished it anyway.
 
 Note: The shadows hit for 9 necrotic and drained 4 Strength. Shabasta rolled a 16 and went first for once. Olfin now has the Sentinel feat. Crusty’s Slow caught five of the six; Aera’s was a crit; Malron’s Sacred Flame hits harder since his level-up. Shabasta rolled a 1 with the spear and stabbed Olfin for 6, and Olfin finished the last shadow at disadvantage.
 
 ### Light Beyond the Gate
 
 Beyond, a hallway ended in a spiked gate that lifted on its own. Olfin made sure it would not drop, darted under it and vanished. Light swallowed him and no sound came back. I tied off a rope and followed, the rope staying taut, and the rest came after. We stepped into a sunlit meadow full of birdsong, outside Barovia, and each of us saw the life we might have had if we had never entered the mists. Liren and Gumbo saw their families alive, their lives going on without us. Then St. Markovia appeared: “You’ve suffered enough. There’s no shame in leaving this place.” She snapped her fingers and a door appeared, a way out of the mists for any who wanted it.
+
+![The false meadow: a vision St. Markovia showed us, with a door out of Barovia standing in the grass](/images/false-meadow-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 I tried to ask the icon of St. Markovia, but it has not answered since the fight with the Abbot. One by one we refused. Shabasta has grown to love us (and his sweet arm), Olfin stayed, Liren likes to fight, Crusty has mysteries to uncover, and Gumbo loves his way of life too much to give it up. I warned Aera that it felt like a trap: “From everything you’ve told me about your family, this wouldn’t be your family.” Aera, whose husband and children were lost, walked through the door anyway.
 
@@ -60,6 +70,10 @@ Note: Aera’s trap was 9 psychic damage. The vessel hit Olfin for 17 bludgeonin
 
 Hundreds of spirits streamed up through the ceiling, and the abbey seemed to crumble around us. Liren and Gumbo began to fade. We said goodbye. I told them, “Thank you for joining us on this journey. Liren, I appreciate you protecting me.” The two became small flames and sank into the creature’s remains. Aera searched and found them inside a palm-sized silver reliquary shaped like a tiny gothic chapel, holding two silver flames that give off no heat.
 
+![The palm-sized silver reliquary holding the two flames of Liren and Gumbo, on a cloth beside two old copper coins](/images/reliquary-of-two-flames-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### An Encore from Strahd
 
 Outside, a black carriage waited on the road, its door open and no driver in sight. Inside was a letter, which I read aloud: “How delightful. Even the dead return for an encore. I do hope you enjoyed your reunion. There are so few left to come back.” It was signed by Strahd. The eye is ever watchful.
@@ -79,7 +93,7 @@ Outside, a black carriage waited on the road, its door open and no driver in sig
 
 ## Loot
 
-* **Reliquary of Two Flames** (Aera): A palm-sized silver reliquary shaped like a gothic chapel, holding two silver flames, the lingering echoes of Liren and Gumbo. Two charges, regained on a long rest: when a creature you can see within 30 feet fails an attack roll, ability check or saving throw, spend your reaction and a charge to help it (the DM’s exact wording on the bonus was hard to hear; confirm with him). Once ever: when a character dies, crush it as an action and sacrifice one flame to return a companion to life.
+* **Reliquary of Two Flames**: Aera’s. A palm-sized silver reliquary shaped like a gothic chapel, holding two silver flames, the lingering echoes of Liren and Gumbo. Two charges, regained on a long rest: when a creature you can see within 30 feet fails an attack roll, ability check or saving throw, spend your reaction and a charge to help it (the DM’s exact wording on the bonus was hard to hear; confirm with him). Once ever: when a character dies, crush it as an action and sacrifice one flame to return a companion to life.
 * **Strahd’s letter**, left in a black carriage.
 
 Note: Aera’s search for the reliquary was a 24.
@@ -87,9 +101,9 @@ Note: Aera’s search for the reliquary was a 24.
 ## Notable NPCs
 
 * **Liren and Gumbo**: Old companions, briefly returned through the abbey’s well. They saw their lives go on without us, chose to fight anyway, and faded into the reliquary.
-* **St. Markovia (illusion)**: Appeared in the meadow to offer a way out of Barovia. The door was a trap.
+* **St. Markovia**: An illusion of her appeared in the meadow to offer a way out of Barovia. The door was a trap.
 * **The Abbot’s First Vessel**: A failed, forgotten body made to hold a pure soul. Filled with trapped soul fragments, it spoke in the voices of the dead, Doru among them.
-* **Strahd von Zarovich** (by letter): “Even the dead return for an encore.”
+* **Strahd von Zarovich**: Only by letter, which said “Even the dead return for an encore.”
 
 ## Plot Points
 

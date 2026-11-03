@@ -28,7 +28,7 @@ The yellow book is titled “Blue blooded lips”, a romance about an affair wit
 
 Weeble pulled the sheet off the bed and found nothing beneath it but a bloodstained mattress and crude restraints for hands and feet.
 
-We put some questions to the apparition we took for Klara and learned that the gift for the beast should be on the third floor. We also found stairs behind the mirror leading up.
+We asked the apparition, which we believed was Klara, some questions and learned that the gift for the beast should be on the third floor. We also found stairs behind the mirror leading up.
 
 In the crib lay a finger with teeth marks, and the name Walter was carved into the headboard.
 

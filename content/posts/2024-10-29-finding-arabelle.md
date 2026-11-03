@@ -6,6 +6,7 @@ slug: finding-arabelle
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/finding-arabelle
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
 sources: ["notes-dzxdfx", "discord-bs524v", "discord-ca1rve", "discord-gayizv", "discord-vmm5cm", "discord-x2m8qd"]
+feature: arabelle-ai.jpg
 ---
 
 ## Story
@@ -17,6 +18,10 @@ After the battle we checked one another over and found a festering bite on Gumbo
 ### Reunions at the Inn
 
 Szoldar went back to his hut, and we found Ireena again at the gate. At the Blue Water Inn, Danika told us Rictavio was at his yellow wagon, the same wagon whose traces we had seen near the tower. Shabasta played at the inn for a bed and beer. We also met Liren, a golden dragonborn barbarian with a great axe.
+
+![Danika in the firelit common room of the Blue Water Inn, giving a hooded traveller directions, a raven on the beam above](/images/danika-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### Rictavio van Richten
 
@@ -65,6 +70,10 @@ Aera asked Arabelle whether she had anything to tell us, and she spoke a prophec
 We spent the night at the Blue Water Inn and in the morning escorted Ireena to the Church of St. Andral. The town was making ready for the Festival of the Blazing Sun, two days off, and we met Henrik delivering materials to repair the church.
 
 A window in the chapel is broken, and a man named Milivoj was up a stepladder mending it.
+
+![The Church of Saint Andral the morning we brought Ireena, its doors open on the pews and a bare altar, as Milivoj mends a broken window and Henrik unloads planks](/images/church-of-saint-andral-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 We asked the priest, Father Lucian, whether he could help us honor Ismark’s wish to protect Ireena. He offered her shelter for good.
 

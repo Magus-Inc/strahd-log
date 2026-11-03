@@ -6,11 +6,16 @@ slug: welcome-to-krezk
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-to-krezk
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Oogway", "Zorpheus"]
 sources: ["notes-8gnltf", "discord-29icc2", "discord-q4322i"]
+feature: dmitri-krezkov-ai.jpg
 ---
 
 ## Story
 
 Oogway tried to buy a cloak of invincibility from the wandering merchant, but could not, and settled for some healing potions.
+
+![Minofaustus, a smiling merchant, beside his wagon of a magical market on a misty road](/images/minofaustus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### Spies, Not an Army
 
@@ -25,6 +30,10 @@ Davian warned us that Krezk can be unwelcoming to strangers, but he sent wine al
 ### The Krezkovs’ Curse
 
 In Krezk we saw the abbey above the town and met the Krezkovs. Dmitri Krezkov is a werewolf, a curse passed down the generations. His wife harvests wolfsbane, which holds back the curse and makes him less violent. They have a daughter and a son, and we do not know which of them, if either, carries it. Someone has taken over the abbey and is building a creature from corpses, and it needs the heart of a willing victim. The Abbot has been spying on the Krezkovs in the shape of Dmitri’s aunt, and he talked their son into giving up the wolfsbane potion, though the boy did not know it was helping him. He took that advice, turned into a werewolf and killed his sister that night. The Abbot will bring the sister back to life if the girl’s mother, Anna, gives up her own heart in a month’s time. The son has run off into the woods.
+
+![Krezk, a walled village in snowy mountains below the abbey on its cliff](/images/krezk-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 We had heard of a Vistana here who could help us. The Krezkovs know of one at the abbey who could, if we are allowed in. Her name is Ezmerelda d’Avenir.
 

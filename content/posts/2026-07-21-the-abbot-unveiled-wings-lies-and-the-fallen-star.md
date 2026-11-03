@@ -6,6 +6,7 @@ slug: the-abbot-unveiled-wings-lies-and-the-fallen-star
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-abbot-unveiled-wings-lies-and-the-fallen-star
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 sources: ["transcript-fwwfuk", "transcript-tegn0i", "recording-kb3abr"]
+feature: the-flesh-golem-ai.jpg
 ---
 
 ## At a Glance
@@ -24,21 +25,29 @@ After a long rest at the Burgomaster’s house, and a running fight with scarecr
 
 Note: The table had not played in about two months. The DM posted a picture of the abbey on the Discord and showed off a box of normal-sized minis he had been given. The party is still seven players, “eight in heart.” Shabasta’s Deception was a 16.
 
-Before we went in, we remembered the warning of the shard in the icon we carry: “Tread carefully and ready your steel, for the Morning Lord’s rays flare only brighter when they perceive darkness before them.” We agreed to keep the icon hidden from the Abbot for now. In the courtyard (S12) we met Clovin Belview carrying bowls of cold porridge to the padlocked shed. Olfin told him the same tale of Cyrus, and the grateful Clovin kept his promise of a reward. He led us up into the tower (S17) and pulled a black cloth off a stand to show two sets of living bone wings, one feathered like a giant eagle’s and one like a bat’s. Olfin took the eagle wings and Aera the bat wings.
+Before we went in, we remembered the warning of the shard in the icon we carry: “Tread carefully and ready your steel, for the Morning Lord’s rays flare only brighter when they perceive darkness before them.” We agreed to keep the icon hidden from the Abbot for now. In the courtyard, room S12, we met Clovin Belview carrying bowls of cold porridge to the padlocked shed. Olfin told him the same tale of Cyrus, and the grateful Clovin kept his promise of a reward. He led us up into the tower, room S17, and pulled a black cloth off a stand to show two sets of living bone wings, one feathered like a giant eagle’s and one like a bat’s. Olfin took the eagle wings and Aera the bat wings.
 
 Note: Olfin’s roll was a 23. Command word brainstorming followed. “I’m Batman” was the early favorite, and Olfin’s “America!” carried the night. The table also briefly argued over whether a paladin or a rogue should be the one to fly.
 
 ### The Abbot in the Asylum
 
-We found the Abbot in the asylum (S15), a lightless corridor of cells whose prisoners cackle and curse behind locked doors. A handsome young man in monk’s robes stood halfway down the hall with a prayer book under his arm, scolding Vasilka, the “perfect bride” he is building for Strahd, for tending the blighted mongrelfolk on the very day of her “operation.” Behind them loomed the flesh golem we once gave a crown of flowers. The Abbot soothed Vasilka with talk of the Morning Lord’s grace and of everyone’s proper place, then turned to us: “Visitors, welcome back to the Abbey of St. Markovia. What’s your reason for being here?”
+We found the Abbot in the asylum, room S15, a lightless corridor of cells whose prisoners cackle and curse behind locked doors. A handsome young man in monk’s robes stood halfway down the hall with a prayer book under his arm, scolding Vasilka, the “perfect bride” he is building for Strahd, for tending the blighted mongrelfolk on the very day of her “operation.” Behind them loomed the flesh golem we once gave a crown of flowers. The Abbot soothed Vasilka with talk of the Morning Lord’s grace and of everyone’s proper place, then turned to us: “Visitors, welcome back to the Abbey of St. Markovia. What’s your reason for being here?”
 
-Our reason was grim. In Vallaki, at the Blue Water Inn, Baron Dmitri Krezkov of Krezk had begged us to stop the Abbot, who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka. I remembered what Ezmerelda told us: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed and his mind restored. We talked of luring the Abbot away from the golem, but the corridor was tight and the cells might hold allies for either side. Aera took rope from her pack, dressed it up by illusion as a new crown of flowers, and walked up and gave it to the golem.
+![Vasilka, a stitched bride in a white gown, tending a mongrelfolk in the asylum](/images/vasilka-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
+Our reason was grim. In Vallaki, at the Blue Water Inn, Baron Dmitri Krezkov of Krezk had begged us to stop the Abbot, who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka. I remembered what Ezmerelda told us: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed and his mind restored. We talked of luring the Abbot away from the golem, but the corridor was tight and the cells might hold allies for either side. Aera took rope from her pack, used an illusion to make it look like a new crown of flowers, and walked up and gave it to the golem.
 
 Note: Long above-the-table debate about distractions, illusions and whether a construct counts as a creature. Crusty rolled a 17 on History and learned that flesh golems understand their creator’s language but cannot speak. Aera’s illusion was Silent Image.
 
 ### Olfin Ends the Talking
 
 Olfin ended the talking. He told the golem, “We’re here to destroy your master. Will you help us?” and struck at the Abbot with a shining blow. The holy light barely seemed to touch him. Light poured from the Abbot: towering white wings unfurled, his robes fell away to marble-white flesh, golden gauntlets and a golden sarong, and he rose to nearly seven feet. “If you will not obey, then I will make you.” The Abbot had become Ethereal. Vasilka fled in terror.
+
+![The Abbot, a handsome young monk, faint wings of fallen light behind him](/images/the-abbot-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 Aera opened with her moon-touched blade, struck deep where he was unguarded and slipped away. Ethereal flew at her and loosed a ray of light from his hands. Shabasta lifted Aera’s spirit with a song and set Ethereal’s golden gauntlets glowing hot. I spotted a lever that opens the cells, and Olfin later pulled it, freeing four weak, blighted mongrelfolk. I began to doubt that our tale of Cyrus had fooled the Belviews as well as it seemed. Ethereal smashed me in the face, though Lathander’s flare spoiled his aim, and Crusty answered with fire while his owl distracted the angel.
 
@@ -67,10 +76,10 @@ Note: The first phase took about an hour, so the DM called it there rather than 
 ## Key Locations
 
 * **Krezk**: The walled village where we have been staying, with a long rest at the Burgomaster’s house.
-* **North Gate of the Abbey (S6)**: Where Otto and Zygfrek Belview asked about Cyrus and Shabasta convinced them he has been “perfected.”
-* **Abbey Courtyard (S12)**: Where Clovin Belview carries porridge to the padlocked shed.
-* **Tower and Belfry (S17)**: Above the asylum; Clovin’s hidden stand held the two sets of bone wings.
-* **The Asylum (S15)**: A lightless, foul-smelling corridor of cells holding the blighted mongrelfolk. A lever opens the cells. Where we fought Ethereal.
+* **North Gate of the Abbey**: Room S6, where Otto and Zygfrek Belview asked about Cyrus and Shabasta convinced them he has been “perfected.”
+* **Abbey Courtyard**: Room S12, where Clovin Belview carries porridge to the padlocked shed.
+* **Tower and Belfry**: Room S17, above the asylum; Clovin’s hidden stand held the two sets of bone wings.
+* **The Asylum**: Room S15, a lightless, foul-smelling corridor of cells holding the blighted mongrelfolk. A lever opens the cells. Where we fought Ethereal.
 
 ## Encounters
 
@@ -80,8 +89,8 @@ Note: The first phase took about an hour, so the DM called it there rather than 
 
 ## Loot
 
-* **Bone Wings of Flying (eagle)**: Olfin. Modified Wings of Flying: an action and a whispered command word (“America!”) unfurl animated bone-and-feather wings for one minute (60 ft fly speed). Usable once per day. Requires attunement.
-* **Bone Wings of Flying (bat)**: Aera. Same properties as the eagle set.
+* **Bone Wings of Flying**: The eagle set, Olfin’s. Modified Wings of Flying: an action and a whispered command word (“America!”) unfurl animated bone-and-feather wings for one minute (60 ft fly speed). Usable once per day. Requires attunement.
+* **Bone Wings of Flying**: The bat set, Aera’s. Same properties as the eagle set.
 * **Potion of Fire Breathing**: Olfin drank one he already carried during the fight.
 
 ## Notable NPCs
@@ -91,9 +100,9 @@ Note: The first phase took about an hour, so the DM called it there rather than 
 * **The Flesh Golem**: The Abbot’s hulking servant. Wears the crown we gave it long ago, took Aera’s new rope crown and turned on its master, throwing a chalice, candlesticks and a table.
 * **Otto and Zygfrek Belview**: Mongrelfolk at the north gate, eager for news of Cyrus. They believed Shabasta’s lie.
 * **Clovin Belview**: The mongrelfolk who carries the porridge; he gave us the bone wings for the news of Cyrus.
-* **Cyrus Belview** (mentioned): Sent to Castle Ravenloft to be “perfected,” and in truth serving Strahd.
-* **Baron Dmitri Krezkov and Anna Krezkova** (mentioned): The noble couple who lead Krezk. Dmitri found us at the Blue Water Inn in Vallaki and begged us to stop the Abbot from killing Anna and taking her heart.
-* **Ezmerelda** (mentioned): Told us the Abbot can only be cleansed by defeating him and unlocking his soul with the Icon of Dawn’s Grace.
+* **Cyrus Belview**: Not seen this time. Sent to Castle Ravenloft to be “perfected,” and in truth serving Strahd.
+* **Baron Dmitri Krezkov and Anna Krezkova**: Not seen this time. The noble couple who lead Krezk. Dmitri found us at the Blue Water Inn in Vallaki and begged us to stop the Abbot from killing Anna and taking her heart.
+* **Ezmerelda**: Not seen this time. She told us the Abbot can only be cleansed by defeating him and unlocking his soul with the Icon of Dawn’s Grace.
 
 ## Plot Points
 

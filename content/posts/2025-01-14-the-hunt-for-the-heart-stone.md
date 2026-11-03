@@ -6,6 +6,7 @@ slug: the-hunt-for-the-heart-stone
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-hunt-for-the-heart-stone
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
 sources: ["notes-1015ce", "discord-ocbqgi", "discord-wqay9e"]
+feature: heart-stone-ai.jpg
 ---
 
 ## Story
@@ -16,6 +17,10 @@ Victor told us there are two ways to get a heart stone from a hag: she gives it 
 
 Victor showed us a picture of a binding circle, though he was unclear how to make one. Just then Stella gestured from the mirror to get our attention: for the circle to work, the hags must be named by name. A binding circle around the Wachter estate keeps Stella out, and she suspects her mother knows how to make one. We talked Victor into letting us bring his mirror, and into coming with us.
 
+![Stella Wachter, a hollow-eyed young woman in a nightgown, in a dark hallway](/images/stella-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Lady Fiona Lowers the Circle
 
 At Wachterhaus Olfin drew Lady Fiona into conversation. She was cold toward Victor. We asked her to lower the circle. When she was young her parents were killed, and she decided a malevolent spirit was to blame, so she used magic learned from her mentor, Lysa, to raise the binding circle and keep that spirit out. A miniature scale model of the manor anchors the circle. She lowered the spell, and a flower floated down into her lap, Stella’s favorite flower. Then Stella drew a crescent, the shape of the birthmark on Luna, the cat. Lady Fiona seemed convinced that Stella was there, and that Victor may not be to blame. We realized the Gallows Speaker is most likely the malevolent spirit that killed Lady Fiona’s family.
@@ -25,6 +30,10 @@ A binding circle can keep the hags out or hold them in. We must catch all three 
 ### “Let Me In”
 
 We rested and made ready for the journey. In the night someone scratched words on the window: “Let me in.” When Lady Fiona joined us, her pet imp familiar showed itself, and she brought four fanatical companions to help her with the binding circle.
+
+![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### The Forest Folk
 
