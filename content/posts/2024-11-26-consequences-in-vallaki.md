@@ -5,6 +5,7 @@ tagline: Izek got there first
 slug: consequences-in-vallaki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/consequences-in-vallaki
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: blinsky-ai.jpg
 ---
 
 ## Story
@@ -14,6 +15,10 @@ cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darn
 We gave the bones to Father Lucian so he could bless them and renew the ward, and Ireena is to stay at the church under its protection.
 
 Back at the Blue Water Inn we found the doors shut, the shutters closed and a window broken. Gumbo worked the latch open from inside with a conjured hand, and there was Urwin sweeping up glass. Izek Strazni, the Baron’s enforcer, had ransacked the inn when he learned Ireena was in town, and stolen some coins. Urwin was only relieved we were safe. We offered gold to help put things right.
+
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 A messenger came from Fiona Wachter with an invitation for Aera to dine the next night, the same night as the blessing.
 
@@ -32,6 +37,10 @@ We went on to the mansion, and Shabasta disguised himself as Blinsky to send the
 ### Dinner at Wachterhaus
 
 Then we went to Wachterhaus, where the invitation got us in. We were shown to a dining room and offered wine or water as we liked.
+
+![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ## Key Locations
 

@@ -160,3 +160,91 @@ def test_no_scene_heading_list_outside_the_posts():
     # Scene headings live in the posts now; the old list matched paragraphs by their first words.
     assert not (ROOT / "data" / "scene-headings.yaml").exists()
     assert yaml.safe_load((ROOT / "data" / "post-style.yaml").read_text(encoding="utf-8"))["scenes"] == "written"
+
+
+# --- pictures in the story ---------------------------------------------------------------------
+
+CREDIT = "*AI-generated image (Google Gemini, November 2026). Not official art.*"
+
+
+def pic(name: str) -> str:
+    return f"![{name}](/images/{name}-ai.jpg)\n\n{CREDIT}\n\n"
+
+
+def test_a_post_holds_at_most_three_pictures():
+    # Chris (2026-11-03): extra pictures sprinkled through a post, "with a cap of 3 images per
+    # article". The feature picture counts, and so do maps; the slides are a deck, not pictures.
+    assert poststyle.MAX_PICTURES == 3
+    three = "## Story\n\n" + "".join(pic(n) + "We walked.\n\n" for n in ("a", "b", "c"))
+    assert poststyle.picture_problems(three) == []
+    four = three + pic("d")
+    assert poststyle.picture_problems(four) == ["4 pictures: a post holds at most 3"]
+
+
+def test_pictures_are_spread_through_the_story():
+    # Two pictures in a row read as a gallery and break the scene, so a story's pictures need words
+    # between them, and one picture is shown once.
+    assert poststyle.picture_problems("## Story\n\n" + pic("a") + pic("b")) == [
+        "b-ai.jpg comes right after another picture: put a paragraph between them"]
+    assert poststyle.picture_problems("## Story\n\n" + pic("a") + "### Later\n\n" + pic("b")) == [
+        "b-ai.jpg comes right after another picture: put a paragraph between them"]
+    assert poststyle.picture_problems("## Story\n\n" + pic("a") + "We ran.\n\n" + pic("a")) == [
+        "a-ai.jpg is shown twice"]
+
+
+def test_pictures_stand_alone_in_the_story():
+    # A picture glued to its credit or to another picture renders as one paragraph: no wiki link,
+    # no credit styling. A picture in a recap list is not in the story.
+    assert poststyle.picture_problems("## Story\n\n![a](/images/a-ai.jpg)\n" + CREDIT + "\n\nWe ran.\n") == [
+        "a picture shares its paragraph with other text: give it a line of its own"]
+    assert poststyle.picture_problems("## Story\n\nWe ran.\n\n## Loot\n\n" + pic("a")) == [
+        "a-ai.jpg is outside the story"]
+    assert poststyle.picture_problems("## Story\n\n![a](/images/A-AI.JPG)\n\nWe ran.\n") == [
+        "A-AI.JPG has no AI-generated credit line under it"]
+    assert poststyle.picture_problems("## Story\n\n<!-- ![a](/images/x.jpg) -->\n\n" + pic("a") + pic("b") + "x\n",
+                                      cap=3) == ["b-ai.jpg comes right after another picture: put a paragraph between them"]
+
+
+def test_a_post_with_more_than_one_picture_names_its_feature_picture():
+    # The feature picture gives the post's link preview (share card); once a story holds more than
+    # one picture, the front matter says which one it is (feature: name.jpg), wherever it sits.
+    two = "## Story\n\n" + pic("a") + "We ran.\n\n" + pic("b")
+    assert poststyle.feature_problems({}, "## Story\n\n" + pic("a")) == []
+    assert poststyle.feature_problems({}, two) == ["more than one picture: name the feature picture (feature: name.jpg)"]
+    assert poststyle.feature_problems({"feature": "b-ai.jpg"}, two) == []
+    assert poststyle.feature_problems({"feature": "c-ai.jpg"}, two) == ["feature c-ai.jpg is not a picture in the post"]
+
+
+def test_picture_top_moves_the_named_feature_picture():
+    text = "## Story\n\nOne.\n\n" + pic("a") + "Two.\n\n" + pic("b") + "Three.\n"
+    html = poststyle.apply(md(text), {"picture": "top"}, feature="b-ai.jpg")
+    assert html.startswith('<p><img alt="b" src="/images/b-ai.jpg"></p>')
+    assert html.index("One.") < html.index("a-ai.jpg") < html.index("Two.") < html.index("Three.")
+
+
+def test_an_ai_picture_carries_its_credit():
+    assert poststyle.picture_problems("## Story\n\n![a](/images/a-ai.jpg)\n\nWe ran.\n") == [
+        "a-ai.jpg has no AI-generated credit line under it"]
+    assert poststyle.picture_problems("## Story\n\n![map](/images/manor-1.jpg)\n\nWe ran.\n") == []
+
+
+def test_chris_can_raise_one_post_to_four_pictures():
+    # Chris (2026-11-03) broke the rule for two big sessions: "show a fourth image". A post says so in
+    # its front matter (picture-cap: 4); nothing goes past four.
+    four = "## Story\n\n" + "".join(pic(n) + "We walked.\n\n" for n in ("a", "b", "c", "d"))
+    assert poststyle.picture_problems(four, cap=4) == []
+    assert poststyle.picture_cap({}) == 3
+    assert poststyle.picture_cap({"picture-cap": 4}) == 4
+    with pytest.raises(ValueError):
+        poststyle.picture_cap({"picture-cap": 5})
+
+
+def test_only_the_posts_chris_named_have_four():
+    raised = sorted(p.stem for p in POSTS if poststyle.picture_cap(parts(p)[0]) != poststyle.MAX_PICTURES)
+    assert raised == ["2026-09-01-the-red-door-a-reunion-beneath-the-abbey", "2026-09-29-the-beacon-of-argynvostholt"]
+
+
+@pytest.mark.parametrize("path", POSTS, ids=lambda p: p.stem)
+def test_post_pictures(path):
+    meta, body = parts(path)
+    assert poststyle.picture_problems(body, cap=poststyle.picture_cap(meta)) + poststyle.feature_problems(meta, body) == []

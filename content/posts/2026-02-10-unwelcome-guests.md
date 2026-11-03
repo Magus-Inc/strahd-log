@@ -5,6 +5,7 @@ tagline: Strahd rode out. We snuck in.
 slug: unwelcome-guests
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/unwelcome-guests
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
+feature: beucephalus-ai.jpg
 ---
 
 ## Story
@@ -18,6 +19,10 @@ As the sun sank behind the jagged peaks of the Balinoks, we stood at a turning p
 We still had twelve hours left of the ward against the touch of death that Strahd had granted us. The road from Vallaki is eight and a half miles. Near the Tser Pool Crossroads we met a Vistani caravan, with the elder Stanimir, Radu and Elizabella telling stories. We were wary of each other, but civil. Stanimir knew what we had done, laying Varushka’s spirit to rest among other things, and he gave Aera a Clairvoyance Stone to help us get inside. He also showed us a gift he must deliver himself to Lady Fiona Wachter: a flat, round stone crest engraved with a three-pointed star, the sign of the Ladies Three. By Madam Eva’s telling, its three points stand for foresight, resilience and courage.
 
 Note: The party briefly debated a “Trojan Bunny” strategy, or stealing the Vistani crest, before settling on diplomatic neutrality.
+
+![A Vistani camp by a misty pool at night, painted wagons and dancers around a fire](/images/vistani-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### Strahd Rides Out
 

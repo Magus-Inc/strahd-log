@@ -5,6 +5,7 @@ tagline: Doru is grounded. Under the church.
 slug: rest-for-the-wicked
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/rest-for-the-wicked
 cast: ["Malron Lichtstrahl"]
+feature: doru-ai.jpg
 ---
 
 ## Story
@@ -20,6 +21,10 @@ We saw a procession of souls heading from the graveyard north up to the castle a
 In the morning we took Ismark’s father up to the church. The wizard was kind enough to make this task easier by levitating the casket and having it trail behind him. When we arrived at the church we saw that it was in terrible shape; it must have suffered badly when the town was under assault.
 
 Father Donavich was inside the church, but he looked out of sorts and depressed. He mentioned that he hasn’t been the same since he lost his Bronze Sunburst, a holy symbol of his god the Morning Lord.
+
+![Father Donavich praying in his church beside the latched trapdoor](/images/father-donavich-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Father Donavich said that his son Doru came back, as a vampire, and that Doru took the holy symbol, but that Father Donavich was able to trap him beneath the church.
 

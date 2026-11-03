@@ -5,6 +5,7 @@ tagline: The druid would like a word with the mouse
 slug: wizard-of-wines-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/wizard-of-wines-vineyard
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+feature: wizard-of-wines-ai.jpg
 ---
 
 ## Story
@@ -23,6 +24,10 @@ The tunnel to the cellar runs through a cavern full of brown mold. Fire only fee
 
 Davian told us of his family’s grief. Ten years ago, while Urwin was on watch, something valuable was stolen from the winery: a gemstone, a prized heirloom. Then three months ago Davian’s younger son, Elvir, joined a march on Castle Ravenloft from Barovia and died in the castle, and his death shattered the family. We were told of an emergency cache of healing supplies in a barrel in the northwest corner of a storeroom on the winery’s main floor. And the cellar is made of wood, so we must not burn it down.
 
+![Davian Martikov in a dark hooded cloak at a trapdoor among the vines, ravens around him](/images/davian-martikov-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Wolf Teeth and Brown Mold
 
 Muriel stayed behind to guard our way out while we went through the tunnel. We found a box marked with a snowflake, hanging from a rusted iron hook. Inside were three winter wolf teeth, enchanted by the mountain folk, that can loose a freezing blast or shield the bearer from cold.
@@ -32,6 +37,10 @@ With one of the teeth we blasted our way past the mold and reached the cellar. O
 ### A Mouse Among Druids
 
 Veyren became a mouse and overheard a druid torturing a raven for word of something lost. The druid sensed him, called out to the mouse and demanded to talk.
+
+![Veyren, a hare-folk druid with a staff, a mouse on his shoulder](/images/veyren-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not player art.*
 
 ## Key Locations
 

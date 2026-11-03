@@ -5,6 +5,7 @@ tagline: Came for a spoon, left with a dragon skull
 slug: retrieval-of-the-dragon-skull
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/retrieval-of-the-dragon-skull
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Shabasta"]
+feature: argynvosts-skull-ai.jpg
 ---
 
 ## Story
@@ -32,6 +33,10 @@ The ladder brought us to K-20, a landing with a dizzying view of the Heart of So
 On the larder level, room K-62, we met the misshapen Cyrus Belview, kin to the poor souls at the Abbey of Saint Markovia. He greeted us with a weary, eerie familiarity and asked us to fetch his favorite cooking spoon from the ossuary nearby. But as we moved, a crystal dinner bell rang by the elevator shaft, the signal that dinner was served, and two vampire spawn dropped from the ten-foot ceiling on us. In the fight Aera and I were forced onto the elevator’s moving counterweights and had to leap again and again to keep our footing.
 
 Note: Meta details: rules questions came up about Misty Step as a bonus action under the 2024 and 2014 rules, and about keeping a grapple while being dragged into an elevator shaft.
+
+![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### Argynvost’s Skull
 

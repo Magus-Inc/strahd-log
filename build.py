@@ -77,6 +77,7 @@ class Post:
     number: int = 0  # the session's number, oldest first; the map and wiki citations use it
     party: dict = field(default_factory=dict)  # data/party.yaml: died/revived/joined/returned/left -> [wiki pages]
     cast_names: list[str] = field(default_factory=list)  # front matter `cast:`: the player characters there
+    feature: str = ""  # front matter `feature:`: the feature picture's file name, when the story has several
 
     @property
     def path(self) -> str:
@@ -203,6 +204,7 @@ def parse_post(path: Path) -> Post:
         obsidian_portal_url=str(meta.get("obsidian_portal_url") or ""),
         source=path,
         cast_names=[str(n) for n in meta.get("cast") or []],
+        feature=str(meta.get("feature") or ""),
     )
 
 
@@ -245,7 +247,7 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
 def apply_style(posts: list[Post], style: dict) -> None:
     """The look settings (data/post-style.yaml, poststyle.py) on every post in the one post format."""
     for post in posts:
-        post.html = poststyle.apply(post.html, style, post.cast_names)
+        post.html = poststyle.apply(post.html, style, post.cast_names, post.feature)
         # Who the front matter's `cast:` names; link_wiki finds their pages, shown or not.
         post.characters_html = f"<p>{', '.join(post.cast_names)}</p>" if post.cast_names else ""
         if style["tagline"] == "none":
@@ -393,7 +395,7 @@ def share_cards(posts: list[Post], pages: list[wiki.WikiPage], static_dir: Path,
     site = {"image": share.card("site", default, out_dir), "alt": share.DEFAULT_ALT}
     cards: dict = {None: site}
     for post in posts:
-        picture = share.first_picture(post.body_md, static_dir)
+        picture = share.first_picture(post.body_md, static_dir, prefer=post.feature)
         cards[post.path] = {
             "path": post.path, "title": post.title, "type": "article", "published": post.date.isoformat(),
             "description": share.post_snippet(post.tagline, post.html) or post.title,

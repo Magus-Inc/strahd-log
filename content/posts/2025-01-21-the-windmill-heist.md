@@ -5,6 +5,7 @@ tagline: The hags offered a deal. We offered steel.
 slug: the-windmill-heist
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-windmill-heist
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+feature: the-windmill-heist-1.jpg
 ---
 
 ## Story
@@ -19,9 +20,17 @@ Lady Fiona warned us that once the binding circle is up, she and her people can 
 
 First, the greeting. Shabasta knocked on the windmill door, and he and Olfin were welcomed in after saying they would like to go into business together. The talks seemed to go well, and Morgantha called her daughters down to the first floor.
 
+![Two hag sisters, Bella and Offalia, coming down the stair beside the millstone in the windmill](/images/belladonna-sunbane-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 ### Up the Tower
 
 Then, the break-in. Our rogues used their conjured hands to fix a rope to the top of the tower and climbed up the outside. The window at the top was locked, so a conjured hand opened it from the inside. Aera unlocked the cage of the boy while Gumbo drew a key from the gnarled arm, then looked around for anything it might fit while Aera unlocked the second child. Gumbo found a tube in the millstone that seemed part of a lock, and the key opened it. Inside was the hags’ contract, along with six pieces of cheap jewelry worth twenty-five gold each and a charm of mass heroism. The contract is written on human skin, and the names on it are in a strange tongue, Abyssal. The rogues climbed deftly down the rope with the children and slipped them to Victor, and all but those still inside the mill went to Lady Fiona. Shabasta and Olfin excused themselves before Morgantha grew too suspicious.
+
+![A decrepit wooden windmill with broken sails on a forest road at dusk, a rope hanging from its tower, a hand cart and a stone well by the door](/images/the-windmill-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### The Takedown
 

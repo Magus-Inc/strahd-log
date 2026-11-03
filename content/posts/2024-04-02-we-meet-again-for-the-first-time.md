@@ -5,6 +5,7 @@ tagline: The Count says hello. So do his seven wolves.
 slug: we-meet-again-for-the-first-time
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/we-meet-again-for-the-first-time
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Schlopkht", "Weeble Wobleston"]
+feature: strahd-von-zarovich-ai.jpg
 ---
 
 ## Story
@@ -45,6 +46,10 @@ After the battle Olfin attempted to place a lock of hair on the bird but it esca
 ### Tents by the Lake
 
 We continued along the wagon path until we found a clearing by a lake. There were five tents there with wagons and horses, along with a large tent. Perhaps this is the Vistani encampment with [Madam Eva](/wiki/madam-eva/)
+
+![Tser Pool at dusk: a dark lake with a Vistani camp and a glowing tent on the shore](/images/tser-pool-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

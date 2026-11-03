@@ -5,6 +5,7 @@ tagline: Stella came home. Shabasta did not.
 slug: entering-the-spirit-realm
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/entering-the-spirit-realm
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
+feature: wachter-cellar-crossing-ai.jpg
 ---
 
 ## Story
@@ -28,6 +29,10 @@ Oogway asked Erasmus about the gallows speaker’s weaknesses. It has none, and 
 Note: Its resistances, per Erasmus: spells, necrotic damage, poison, grapple, stun and prone.
 
 Victor’s spell acted as a beacon, attracting spirits intent on stealing Stella’s body. Erasmus told us to strike any spirit that came near Stella.
+
+![The Ethereal Plane, pale translucent spirits drifting through green-grey mist as the stone walls of a cellar fade away](/images/ethereal-plane-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Then the gallows speaker came for us. “I am Leo Dilisnya,” he said. He carried a tome marked with the symbol of Ravenloft, and he pointed at Stella Wachter. He means to take what is his, he said, pointing at Stella and Lady Fiona. He looked at us and made it plain he bore us no ill will, and would let us go if we let him take the Wachters. He told us he was once a guard of Castle Ravenloft, and that he gave the order to kill Strahd after Strahd assaulted Tatyana, the bride of his brother Sergei. We would not give them up.
 

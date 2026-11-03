@@ -5,6 +5,7 @@ tagline: The tomb said stop
 slug: the-master-of-runes-and-the-hellborn-s-spear
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-master-of-runes-and-the-hellborn-s-spear
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: king-dostron-the-hellborn-ai.jpg
 ---
 
 ## Story
@@ -32,6 +33,10 @@ Note: The group swapped several “Above the Table” stories along the way, inc
 At last we reached the ancient catacombs of Ravenloft and began a careful search for the relics. At Crypt 15, the tomb of the archmage Khazan, Olfin hoisted a heavy portcullis by main strength. Inside lay a skeleton with black opal eyes and amber teeth. We solved a puzzle of runes for the eight schools of magic, the same order we met at Khazan’s Tower, and the legendary platinum Staff of Khazan appeared. Crusty bound himself to it, though arcane lightning surged through his veins.
 
 Note: The party held a long “Above the Table” debate on whether a hot dog is a sandwich, whether a calzone is a dumpling, and whether everything is just “soup or sandwich”.
+
+![The Staff of Khazan, a plain platinum staff wrapped in blue-white lightning, hovering above the skeleton on the slab in Khazan's tomb](/images/staff-of-khazan-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 In the row beside Khazan’s tomb, Crypt 18 is marked “Ireena Kolyana, wife.” Its door had been carefully laid to one side, and the crypt stood empty and swept clean, as though it waits for her.
 

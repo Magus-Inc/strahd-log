@@ -5,6 +5,7 @@ tagline: A skeleton, a love letter and a puzzle box
 slug: the-oath-the-spy-and-the-silver-moon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-oath-the-spy-and-the-silver-moon
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Zorpheus"]
+feature: sergei-von-zarovich-ai.jpg
 ---
 
 ## Story
@@ -20,6 +21,10 @@ If I read it rightly, bringing Argynvost’s skull out of Castle Ravenloft could
 ### Arrigal’s Note
 
 At the Blue Water Inn, Aera was slipped a secret note from Arrigal:
+
+![Arrigal, a Vistani man in a tavern corner, folding a secret note](/images/arrigal-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 > **“Spy in castle. Seek a meeting to discuss an opportunity. Find the victim amidst the court. Burn this — A”**
 
@@ -86,6 +91,10 @@ Rat, Butterfly, Bat
 Bear, Blank, Elk
 
 The chest opened, and inside it holds far more than it should, like a bag of holding, though it only opens when the puzzle is solved.
+
+![The Chest of Holding open on a carriage seat, a starry space inside](/images/chest-of-holding-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

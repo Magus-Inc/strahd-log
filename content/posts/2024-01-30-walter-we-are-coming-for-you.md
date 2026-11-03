@@ -5,6 +5,7 @@ tagline: Where did that Paladin get lost?
 slug: walter-we-are-coming-for-you
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/walter-we-are-coming-for-you
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Schlopkht", "Weeble Wobleston"]
+feature: walter-durst-ai.jpg
 ---
 
 ## Story
@@ -73,6 +74,10 @@ The mass was a mound of flesh, and it began moving toward Aera at the altar. Wee
 ### The House Comes Down
 
 The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and vowed to kill us for destroying her pet. The ground began to shake. As we raced for the stairs, the ghost of [Gustav Durst](/wiki/gustav-durst/) blocked the way and told us we must stay to appease Elisabeth. I reasoned with him: Rose and Thorn were with us, and this was his last chance to make things right, to be a good father and give his children the peace they deserved. Gustav let us pass and told us not to stop and fight anything. Just run!
+
+![Elisabeth Durst in a black gown, an amber shard glowing at her throat](/images/elisabeth-durst-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 Spectral things lashed at us on the way up, but we dodged them and the falling rocks and ran up a secret ladder into the room with the stuffed wolves. Schlopkht broke a window and we climbed out of the house. Behind us it collapsed into the ground and was gone.
 
