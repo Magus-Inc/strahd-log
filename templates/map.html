@@ -113,8 +113,8 @@
           document.getElementById("place-sessions").innerHTML = place.sessions.length
             ? place.sessions.map(function (s) {
               var why = s.k === "here" ? "" : '<span class="place-why">' + esc(s.k === "near" ? "near: " + s.w : WHY[s.k]) + "</span>";
-              return '<li class="rel-' + s.k + '"><span class="place-num ' + (s.k === "here" ? "here" : "") + '" title="' +
-                (s.k === "here" ? "Its number is here on the map" : "Its number is elsewhere on the map") + '">' + s.i + "</span>" +
+              return '<li class="rel-' + s.k + '"><a class="place-num ' + (s.k === "here" ? "here" : "") + '" href="' + base + s.u + '" tabindex="-1" aria-hidden="true" title="' +
+                (s.k === "here" ? "Its number is here on the map" : "Its number is elsewhere on the map") + '">' + s.i + "</a>" +
                 '<a href="' + base + s.u + '">' + esc(s.t) + "</a> <time>" + esc(s.d) + "</time>" +
                 (s.n ? ' <span class="slides-tag">' + SLIDES_ICON + s.n + (s.n === 1 ? " slide" : " slides") + "</span>" : "") + lifeTags(s) + why + "</li>"; }).join("")
             : '<li class="muted">No session has stopped here yet.</li>';
