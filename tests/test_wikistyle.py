@@ -1,4 +1,5 @@
 """The wiki page template: one layout for every wiki page (Chris, 2026-11-02, the Zorya page)."""
+import re
 from pathlib import Path
 
 import pytest
@@ -228,3 +229,32 @@ def test_the_wiki_writing_rules_live_in_dnd_scribe():
     """Chris, 2026-11-02: the writing rules are ours; this public repo keeps only the build."""
     assert not (ROOT / ".claude" / "skills" / "update-wiki").exists()
     assert "dnd-scribe's `update-wiki` skill" in (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+
+
+def test_facts_box_session_numbers_link_to_their_post(site):
+    """Chris, 2026-11-02: tapping the red session number in a facts box (Olfin's "First seen 2")
+    did nothing; only the title beside it was a link. The number and title are one link now."""
+    html = page(site, "olfin-darning")
+    box = html[html.index('class="infobox"'):html.index("</aside>")]
+    assert '<a href="/posts/entering-durst-manor/"><span class="num">2</span>Entering Durst Manor</a>' in box
+    for f in sorted((site / "wiki").glob("*/index.html")):
+        text = f.read_text(encoding="utf-8")
+        if 'class="infobox"' not in text:
+            continue
+        box = text[text.index('class="infobox"'):text.index("</aside>")]
+        loose = re.findall(r'(?<!">)<span class="num">', box)
+        assert not loose, f"{f.parent.name}: a session number in the facts box is not inside its link"
+
+
+def test_session_list_numbers_link_to_their_post(site):
+    """The same red numbers in "Appears in N sessions" and the map's "The road so far" open the post."""
+    pages = [site / "map" / "index.html", *sorted((site / "wiki").glob("*/index.html"))]
+    checked = 0
+    for f in pages:
+        text = f.read_text(encoding="utf-8")
+        for ol in re.findall(r'<ol class="session-list numbered">(.*?)</ol>', text, re.S):
+            for li in re.findall(r"<li>(.*?)</li>", ol, re.S):
+                num = re.match(r'<a class="num" href="([^"]+)"[^>]*>\d+</a><a href="([^"]+)">', li)
+                assert num and num.group(1) == num.group(2), f"{f.parent.name}: {li[:80]}"
+                checked += 1
+    assert checked > 500

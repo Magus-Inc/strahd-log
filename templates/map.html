@@ -34,7 +34,7 @@
       <h2>The road so far</h2>
       <ol class="session-list numbered">
 {% for leg in legs %}
-        <li><span class="num">{{ leg.n }}</span><a href="{{ base }}{{ leg.post.path }}">{{ leg.post.title }}</a> <time datetime="{{ leg.post.date.isoformat() }}">{{ leg.post.date | nice_date }}</time> {{ badges.row_tags(leg.post) }}
+        <li><a class="num" href="{{ base }}{{ leg.post.path }}" tabindex="-1" aria-hidden="true">{{ leg.n }}</a><a href="{{ base }}{{ leg.post.path }}">{{ leg.post.title }}</a> <time datetime="{{ leg.post.date.isoformat() }}">{{ leg.post.date | nice_date }}</time> {{ badges.row_tags(leg.post) }}
           <span class="route">{% for slug in leg.stops %}{{ all_places[slug].title }}{% if not loop.last %} &rarr; {% endif %}{% endfor %}</span></li>
 {% endfor %}
       </ol>
