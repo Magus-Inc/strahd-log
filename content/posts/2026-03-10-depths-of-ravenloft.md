@@ -5,6 +5,7 @@ tagline: The wrong spoon, the right spoon, and an iron maiden
 slug: depths-of-ravenloft
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/depths-of-ravenloft
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: larders-of-ill-omen-ai.jpg
 ---
 
 ## Story
@@ -25,6 +26,10 @@ Our first steps in the Larders were a comedy of errors with the strange servant 
 
 Note: \[Meta details\] The “Spoon Comedy” was a moment of levity at the table. The DM clarified that the item from the bone hole was the “wrong spoon”, and the players had a self-deprecating laugh about their “fool’s errand” of treating random kitchenware as vital quest items.
 
+![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
+
 ### Forty Zombies and a Spoon
 
 The right spoon lay at the far end of a corridor packed with forty motionless zombies. Olfin made a desperate dash for it. Disguised as one of the plague-spreading dead, he wrapped himself in Lathander’s sanctuary and a ward against evil and charged into the horde. It worked beautifully: as Olfin snatched the “lonely” spoon, I took hold of him with an invisible conjured hand and the power of my mind and yanked him back through the doorway, and we slammed the steel-banded door just as the zombies began to stir.
@@ -40,6 +45,10 @@ As thanks for the spoon, Cyrus drew us a map in simple boxes and lines. We were 
 We went on down into the Drowning Cells, wading through three to five feet of murky water, roped together to keep from losing one another. The rope was tested at once. Olfin stepped on a hidden plate, air and water burst around him, and the rope in my hands went slack. He had been carried off into an iron maiden in the torture chamber. The rest of us, swimming or treading water, followed Aera, who got us past the next traps to the cells, where we heard a prisoner’s teeth chattering.
 
 It was Emil Toranescu, the werewolf we came for. He has been locked in that cell for weeks and is worn to exhaustion. Around his neck is a collar of silver thorn that keeps him from changing. It is magically locked, and forcing it open drives great thorns into the neck of the one who wears it. Emil knows there is a key, and that Volenta holds it, the bride who escaped us at the coffin maker’s.
+
+![Emil in a silver thorn collar, chained in the flooded Drowning Cells](/images/emil-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ## Key Locations
 

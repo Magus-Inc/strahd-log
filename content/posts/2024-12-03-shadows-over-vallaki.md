@@ -5,6 +5,7 @@ tagline: Taking Down Izek
 slug: shadows-over-vallaki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/shadows-over-vallaki
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
+feature: stella-ai.jpg
 ---
 
 ## Story
@@ -12,6 +13,10 @@ cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
 ### Lady Fiona’s Table
 
 At Wachterhaus a young woman in a nightgown appeared in the hallway with a hollow stare. She looked like the woman we saw in the mirror in the Baron’s attic. Her name is Stella, and Nikolai, who once cursed the Baron, is her older brother. Nikolai took her for a walk around the grounds, and Lady Fiona apologized for the disturbance. Karl, the younger brother, told us their father, Nikolai, died of a wasting sickness.
+
+![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Lady Fiona told us she follows Ezra, goddess of the mists, who teaches endurance. Her older brother Frederick was meant to be the heir, until Lysa rescued Lady Fiona from the woods when she was young. She prays and hears Ezra answer, though I suspect the voice may be an imposter.
 

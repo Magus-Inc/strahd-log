@@ -5,6 +5,7 @@ tagline: Aera adopts a pseudodragon
 slug: echoes-of-the-silver-dragon
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/echoes-of-the-silver-dragon
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Zorpheus"]
+feature: argynvost-ai.jpg
 ---
 
 ## Story
@@ -18,6 +19,10 @@ We went on exploring Argynvostholt, finding lingering spirits and relics of the 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 
 Aera found [a pseudodragon](/wiki/zorya/), which now follows her, drawn to her somehow.
+
+![Zorya, a tiny ghostly pseudodragon, hovering in a ruined hall at Argynvostholt](/images/zorya-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### Minodora’s Plea
 

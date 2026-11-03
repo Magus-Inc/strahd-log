@@ -5,6 +5,7 @@ tagline: Strahd plays chess. Guess who the pawns are.
 slug: stop-winter-splinter
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/stop-winter-splinter
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Oogway", "Veyren"]
+feature: winter-splinter-ai.jpg
 ---
 
 ## Story
@@ -23,11 +24,19 @@ Strahd told us Winter Splinter is a giant twig blight. When Veyren asked why som
 
 At Yester Hill lightning struck the boulder-ringed summit. On top stood a fifty-foot statue of a cloaked man with fangs, inside two rings of stones, with thirteen druids chanting in a circle. Thorny vines bound the druids, and mist swirled above them. Further out stood four figures with axes, and one we thought was Ludmilla, a bride of Strahd.
 
+![Lightning over Yester Hill, druids bound in vines chanting around a giant statue in a ring of stones](/images/yester-hill-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
+
 Strahd hovered above the ground watching the ritual, turning a small thing in his hands. Ludmilla saw us and in a blink was close by. Strahd idly toyed with a pawn from a chess set. Ludmilla went cold at the sight of it, displeased that he was playing a game with her. Then he vanished into the ethereal plane.
 
 ### Ludmilla’s Warning
 
 Ludmilla made no secret of her contempt for Volenta and warned that she would not be nearly so easy to kill. She told us that a raven among those who attacked Castle Ravenloft was a wereraven, able to heal any wound save from silver or the touch of death. She had meant to cut it open while it lived.
+
+![Ludmilla, a vampire bride in a dark gown, on Yester Hill by firelight](/images/ludmilla-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 Muriel trembled at this. She fears the wereraven was one of Davian’s sons, her lover. Ludmilla also told us that Baba Lysaga helped her take the winery, and that Baba Lysaga lives in Berez.
 

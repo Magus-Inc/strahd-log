@@ -5,6 +5,7 @@ tagline: A recap after our first dinner with Strahd
 slug: welcome-back-to-vellanki
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/welcome-back-to-vellanki
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
+feature: rahadin-ai.jpg
 ---
 
 Note: This session was written up twice on Obsidian Portal: as “Welcome Back To Vallaki” and as “Shadows and Steel—The Ravenloft Infiltration Plan” (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both, checked against the session notes and the recording of the night.
@@ -29,6 +30,10 @@ We began by going back over our last morning at Castle Ravenloft. After Aera’s
 ### A Plan at the Blue Water
 
 On the road back to Vallaki each of us felt our strength grow. We gathered under the flickering lamps of the Blue Water Inn, the Count’s wine still bitter on our tongues, and the terror of that failed dinner hardened into cold resolve. The rest of the night went to planning and preparation.
+
+![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 We will not wait for him. Using what we learned of the castle (not from Doru) and the castle maps of Rudolph van Richten, we mean to strike during Strahd’s fourteen-day hunting cycle, while he should be away from the castle, slip into the catacombs, and take the relics and free the allies we need.
 

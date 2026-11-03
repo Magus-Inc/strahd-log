@@ -5,6 +5,7 @@ tagline: The Belviews are fine. Really.
 slug: shadows-over-st-markovia
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/shadows-over-st-markovia
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
+feature: abbey-of-saint-markovia-ai.jpg
 ---
 
 ## Story
@@ -18,6 +19,10 @@ The abbey sits on a wide ledge in the mountains. Iron gates barred the road but 
 ### The Belviews
 
 Inside we met Clovin, and learned that all three are Belviews, of one family. Lepers come to the abbey for help. The Belviews aged too fast and suffered, and Strahd tricked the Abbot into helping them by replacing their failing body parts with the parts of animals. It seems to have driven them a little mad. The Abbot sometimes abducts villagers for more experiments, hoping to cure their ailments. We found a disc engraved with a sun, perhaps the Morning Lord’s.
+
+![Clovin Belview carrying bowls of cold porridge to the padlocked shed](/images/clovin-belview-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ### A Bride for Strahd
 
@@ -34,6 +39,10 @@ The Abbot took us to the east wing, where a seven-foot flesh golem stood with no
 ### Ezmerelda
 
 Inside, a half-finished chalk circle lay in the middle of the floor, and a Vistani woman sat by it in two boots of different colors, one of them copper, perhaps not a boot or a leg at all. A magical rapier and a hand-axe lay on the table beside her. Ezmerelda left her studies with Van Richten three months ago; she alone could follow him through the mists to Barovia. She came to the abbey because Krezkov warned her of the Abbot, and she means to look into his growing madness. Three days ago she thinks she found Ilya, the Krezkovs’ son, in a cave by Lake Baratok, where a pack of wolves or werewolves lairs. She has a twelve-hour window to rescue him. The Abbot, we learned, is some kind of angelic being, tainted by Strahd, which is why he is not himself.
+
+![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
+
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 ### The Séance
 
