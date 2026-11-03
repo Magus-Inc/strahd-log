@@ -3,6 +3,8 @@ title: Hat of disguise
 type: item
 summary: Van Richten's disguise hat.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-vmm5cm
 ---
 
 ## Description

@@ -42,6 +42,16 @@ facts:
     "Bought a wolf pelt at Szoldar's shack that turned out to be glamour weave."
   "Lets certain people pass unchallenged through Strahd's domain.":
     "Gives Strahd information, which lets certain people pass unchallenged through his domain."
+  # No fact in brackets after a name (Chris, 2026-11-03): the castle and abbey room keys go in the sentence.
+  "Uses the tomb of King Barov and Queen Ravenovia (K88) as his sanctuary.":
+    "Uses the tomb of King Barov and Queen Ravenovia as his sanctuary; it is room K88 of the castle."
+  "His tomb with Queen Ravenovia (K88) is Rahadin's sanctuary.":
+    "His tomb with Queen Ravenovia is Rahadin's sanctuary; it is room K88 of the castle."
+  "Her tomb with King Barov (K88) is Rahadin's sanctuary.":
+    "Her tomb with King Barov is Rahadin's sanctuary; it is room K88 of the castle."
+  "His tomb (K85) is described as an unnatural beacon.": "His tomb, room K85 of the castle, is described as an unnatural beacon."
+  "The party fought the Abbot in its asylum (S15) and received bone wings in its tower (S17).":
+    "The party fought the Abbot in its asylum, room S15, and received bone wings in its tower, room S17."
   # A different Nikolai: Karl's father, not the Nikolai on that page.
   "Karl says a Nikolai, their father, died of a wasting sickness.": null
 
@@ -67,6 +77,11 @@ summaries:
   Vasilka: The flesh-built "perfect bride" the Abbot made for Strahd.
   Vladimir Horngaard: Slain commander of the Order of the Silver Dragon, now a vengeful presence at Argynvostholt.
   Dmitri Krezkov: The baron of Krezk, husband of Anna.
+
+# Two people named Bianca (Chris, 2026-11-03: no fact in brackets after a name). The werewolf's page keeps
+# its file name, bianca-werewolf, and shows plain "Bianca"; posts link it by hand.
+titles:
+  Bianca (werewolf): Bianca
 
 # Confirmed by Chris: Zorpheus was a player character Grant played for a while.
 players:

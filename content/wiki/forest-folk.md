@@ -5,6 +5,8 @@ aliases:
 - Druids
 summary: Druids and hermits of the Svalich Woods who worship Strahd.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ocbqgi
 ---
 
 ## Description

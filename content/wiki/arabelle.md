@@ -3,6 +3,9 @@ title: Arabelle
 type: npc
 summary: Madam Eva's young Vistani grandchild, kidnapped and then hidden by Van Richten.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-vmm5cm
+- discord-gayizv
 ---
 
 ## Description

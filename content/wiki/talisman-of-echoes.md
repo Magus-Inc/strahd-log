@@ -3,6 +3,8 @@ title: Talisman of Echoes
 type: item
 summary: A talisman with four charges for asking the dead questions.
 source: Compiled from the adventure log, with notes from the table
+sources:
+- discord-x2m8qd
 ---
 
 ## What it does

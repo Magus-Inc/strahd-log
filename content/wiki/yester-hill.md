@@ -3,6 +3,8 @@ title: Yester Hill
 type: place
 summary: A sacred hill at the southwest edge of the Barovian valley.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ocbqgi
 ---
 
 ## Description

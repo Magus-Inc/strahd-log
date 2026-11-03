@@ -3,6 +3,9 @@ title: Amulet of Knight’s Passage
 type: item
 summary: A carved white stone that opens the curtain at Tsolenka Pass.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-bncbz7
+- discord-jt7yh9
 ---
 
 ## Description

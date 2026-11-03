@@ -9,6 +9,9 @@ aliases:
 - Wachter
 summary: A noblewoman of Vallaki who opposes the Baron and later takes control of the town.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-ocbqgi
+- discord-wqay9e
 ---
 
 ## Description

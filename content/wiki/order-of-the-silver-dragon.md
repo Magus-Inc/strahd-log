@@ -5,6 +5,9 @@ aliases:
 - Silver Order
 summary: A knightly order.
 source: Compiled from the adventure log, with a description written for the site
+sources:
+- discord-zhfe39
+- discord-9ekp17
 ---
 
 ## Description

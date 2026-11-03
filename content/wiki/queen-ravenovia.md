@@ -10,4 +10,4 @@ source: Compiled from the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
-* Her tomb with King Barov (K88) is Rahadin's sanctuary. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
+* Her tomb with King Barov is Rahadin's sanctuary; it is room K88 of the castle. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
