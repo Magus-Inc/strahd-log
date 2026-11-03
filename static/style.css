@@ -214,12 +214,13 @@ a.chip:hover { background: rgba(200, 33, 63, 0.3); color: #fff; }
 .session-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
 /* Session titles in lists are gold, like wiki names, so they read as links (Chris, 2026-11-03: plain white
    looked like ordinary words). Their red number discs stay red. */
-.session-list a { color: var(--gold); text-decoration: none; font-weight: 500; }
-.session-list a:hover, .session-list a:focus-visible { color: #f0d48e; text-decoration: underline; text-underline-offset: 0.2em; }
+.session-list a { text-decoration: none; font-weight: 500; }
+.session-list a:not(.num):not(.place-num) { color: var(--gold); }
+.session-list a:not(.num):not(.place-num):hover, .session-list a:not(.num):not(.place-num):focus-visible { color: #f0d48e; text-decoration: underline; text-underline-offset: 0.2em; }
 .session-list time { color: var(--muted); font-size: 0.85rem; margin-left: 0.4rem; }
 .session-list.numbered li { display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 0.6rem; }
 .session-list .num { grid-row: span 2; align-self: start; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: grid; place-items: center; background: rgba(200, 33, 63, 0.16); color: #f2c6ce; font-size: 0.8rem; font-weight: 700; }
-.session-list a.num { color: #f2c6ce; font-weight: 700; } .session-list a.num:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.session-list a.num { color: #f2c6ce; font-weight: 700; } .session-list a.num:hover { background: var(--accent); color: #fff; }
 .session-list .route { grid-column: 2; color: var(--muted); font-size: 0.88rem; }
 
 /* Wiki and search */
