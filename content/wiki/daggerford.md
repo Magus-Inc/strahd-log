@@ -6,6 +6,10 @@ source: Written on Obsidian Portal
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/daggerford
 ---
 
+![Five strangers sheltering in a straw-covered barn loft in Daggerford, lit by a glowing beam](/images/session-zero-barn-ai.jpg)
+
+*AI-generated image (Google Gemini, November 2026), drawn from the Session Zero log and the characters' portraits. Not official art.*
+
 The adventure started here.
 
 This is a town on the Sword Coast.
