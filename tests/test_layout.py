@@ -13,51 +13,24 @@ import wiki
 
 ROOT = Path(build.__file__).parent
 md = build.render_markdown
-STYLE = {**poststyle.AS_WRITTEN, "headings": "real", "story": "titled", "cast": "pills", "entries": "bullets"}
+STYLE = {**poststyle.AS_WRITTEN, "story": "titled", "cast": "pills", "scenes": "written"}
 
 
 def styled(text: str, **picks) -> str:
-    return poststyle.apply(md(text), {**STYLE, **picks}).html
+    return poststyle.apply(md(text), {**STYLE, **picks})
 
 
-# --- the story's opening lines ----------------------------------------------------------------
-
-OPENING = ("**Chronicle of the Larder’s Ransom: The Sanctuary Sprint**  \nShadows of the Larder\n\n"
-           "The air of Castle Ravenloft has changed.\n\n"
+# A post in the one post format (tests/test_post_format.py); the story's opening lines and
+# pictures are all under "## Story".
+OPENING = ("## Story\n\nThe air of Castle Ravenloft has changed.\n\n"
            "![The flooded larders](/images/larders-ai.jpg)\n\n*AI-generated image (Google Gemini). Not official art.*\n\n"
-           "## Characters:\n* [Olfin Darning](/wiki/olfin-darning/)\n\n## Summary:\n\nWe are at a turning point.\n\n"
-           "## Key Locations:\n\n* **Larders**: Cold.\n")
-
-
-def test_opening_lines_join_the_story():
-    html = styled(OPENING, opening="in-story")
-    story = html.index("<h2>Malron’s Account</h2>")
-    assert story < html.index("The air of Castle Ravenloft") < html.index("larders-ai.jpg") < html.index("We are at a turning")
-
-
-def test_opening_lines_as_written_stay_above_the_story():
-    html = styled(OPENING)
-    assert html.index("The air of Castle Ravenloft") < html.index("<h2>Malron’s Account</h2>")
+           "### A Turning Point\n\nWe are at a turning point.\n\n"
+           "## Key Locations\n\n* **Larders**: Cold.\n")
 
 
 def test_a_note_about_the_post_stays_first():
-    html = styled("Note: Written from the session notes.\n\n## Characters:\n* [Aera](/wiki/aera/)\n\n"
-                  "Opening.\n\n## Summary:\n\nWe ran.\n", opening="in-story")
-    assert html.index("Note: Written") < html.index(poststyle.STORY) < html.index("Opening.")
-
-
-def test_extra_titles_before_the_story_are_hidden():
-    html = styled(OPENING, opening="in-story", **{"extra-titles": "hide"})
-    assert "Chronicle of the Larder" not in html and "Shadows of the Larder" not in html
-    assert "The air of Castle Ravenloft" in html
-    html = styled("## Shadow Over the Precipice: The Infiltration\n\n## Characters:\n* [Aera](/wiki/aera/)\n\n"
-                  "## Summary:\n\nWe rode.\n", **{"extra-titles": "hide"})
-    assert "Shadow Over" not in html and "We rode." in html
-
-
-def test_extra_titles_never_touch_the_story():
-    html = styled("## Summary:\n\n**The Secret Path**  \nIn K-24 we hid.\n", **{"extra-titles": "hide"})
-    assert "The Secret Path" in html
+    html = styled("Note: Written from the session notes.\n\n" + OPENING)
+    assert html.index("Note: Written") < html.index(poststyle.STORY) < html.index("The air of Castle")
 
 
 # --- slides -----------------------------------------------------------------------------------
@@ -67,68 +40,16 @@ def decks(html: str, at: str) -> str:
 
 
 def test_slides_sit_above_the_story_by_default():
-    html = decks(styled(OPENING, opening="in-story"), "above-story")
+    html = decks(styled(OPENING), "above-story")
     assert html.index('class="deck"') < html.index("Malron’s Account") < html.index("The air of Castle")
 
 
 def test_slides_can_follow_the_story_or_close_the_post():
-    html = decks(styled(OPENING, opening="in-story"), "after-story")
+    html = decks(styled(OPENING), "after-story")
     assert html.index("We are at a turning") < html.index('class="deck"') < html.index("Key Locations")
-    html = decks(styled(OPENING, opening="in-story"), "end")
+    html = decks(styled(OPENING), "end")
     assert html.index("Key Locations") < html.index('class="deck"')
     assert html.rstrip().endswith("</section>")
-
-
-# --- letters ----------------------------------------------------------------------------------
-
-LETTER = "We found a note.\n\n> Drasha,  \n> -  \n> I have selected you.  \n> -  \n> Elisabeth\n\nWe left.\n"
-
-
-def test_letters_are_written_as_markdown_headings_by_accident():
-    assert "<h2>Drasha,</h2>" in styled(LETTER)
-
-
-def test_letters_read_as_letters():
-    html = styled(LETTER, quotes="letters")
-    assert "<h2" not in html.split("<h2>Malron’s Account</h2>")[1]
-    assert "<blockquote>\n<p>Drasha,</p>\n<p>I have selected you.</p>" in html
-
-
-# --- recap lists ------------------------------------------------------------------------------
-
-def test_recap_paragraphs_and_numbered_lines_become_bullets():
-    text = ("## Summary:\n\nWe ran.\n\n**Key Locations:**  \n1. **Blue Water Inn:** Ransacked.  \n2. **Blinsky’s:** Burned.\n\n"
-            "## Encounters:\n\nHarkus warned us.\n\nA drained corpse on the road.\n\nNote: Table talk.\n")
-    html = styled(text, **{"recap-prose": "bullets"})
-    assert "<li><strong>Blue Water Inn:</strong> Ransacked.</li>\n<li><strong>Blinsky’s:</strong> Burned.</li>" in html
-    assert "<ul>\n<li>Harkus warned us.</li>\n<li>A drained corpse on the road.</li>\n</ul>" in html
-    assert "<p>Note: Table talk.</p>" in html and "<p>We ran.</p>" in html
-
-
-def test_dash_lines_under_an_entry_become_a_nested_list():
-    text = "## Loot:\n\n**Twilight Crest**:  \n- 3 charges.  \n- Day: Aid.\n\nSelections:  \n- Malron chose silver.\n"
-    html = styled(text, **{"recap-prose": "bullets"})
-    assert "<li><strong>Twilight Crest</strong>:<ul>\n<li>3 charges.</li>\n<li>Day: Aid.</li>\n</ul></li>" in html
-    assert "<li>Selections:<ul>\n<li>Malron chose silver.</li>\n</ul></li>" in html
-
-
-def test_spaced_out_lists_are_tightened():
-    html = styled("## Session Highlights:\n\n* One.\n\n* Two.\n", **{"recap-prose": "bullets"})
-    assert "<li>One.</li>\n<li>Two.</li>" in html
-
-
-def test_what_we_learned_becomes_plot_points():
-    html = styled("## Summary:\n\nWe ran.\n\n**What we learned:**\n\n* A thing.\n", sections="template")
-    assert "<h2>Plot Points</h2>" in html and "learned" not in html
-    assert "<h2>What we learned</h2>" in styled("## Summary:\n\nWe ran.\n\n**What we learned:**\n\n* A thing.\n")
-
-
-def test_a_picture_in_the_recap_moves_to_the_end_of_the_story():
-    text = ("## Summary:\n\nWe ran.\n\n## Encounters:\n\n* **Spirit**: Fought.\n\n"
-            "![A ghost](/images/ghost-ai.jpg)\n\n*AI-generated image. Not official art.*\n\n## Loot:\n\n* **Gold**: Some.\n")
-    html = styled(text, **{"recap-pictures": "story"})
-    assert html.index("We ran.") < html.index("ghost-ai.jpg") < html.index("Encounters")
-    assert html.index("Not official art") < html.index("Encounters")
 
 
 # --- links: the first mention in every section -------------------------------------------------

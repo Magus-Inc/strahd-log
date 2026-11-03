@@ -27,7 +27,7 @@ EXTRA = {"The Reading", "What We Learned (Not from Doru)"}
 # Places and people are named entries; encounters and loot may also be plain sentences ("None this time.").
 NAMED_ENTRIES = {"Key Locations", "Notable NPCs"}
 
-STYLE = {**poststyle.AS_WRITTEN, "story": "titled", "scenes": "written", "glance": "none", "links": "gold"}
+STYLE = {**poststyle.AS_WRITTEN, "story": "titled", "scenes": "written", "glance": "none"}
 POST = ("## At a Glance\n\n* **Run**: we ran.\n\n## Story\n\n### Into the Fog\n\nWe ran.\n\n"
         "### Out Again\n\nWe hid with [Ireena](/wiki/ireena/).\n\n## Key Locations\n\n* **Fog**: thick.\n")
 
@@ -35,28 +35,29 @@ POST = ("## At a Glance\n\n* **Run**: we ran.\n\n## Story\n\n### Into the Fog\n\
 # --- the look settings on a post in the format -------------------------------------------------
 
 def test_story_heading_becomes_the_story_title_with_its_scenes():
-    html = poststyle.apply_format(md(POST), STYLE).html
+    html = poststyle.apply(md(POST), STYLE)
     assert "<h2>Story</h2>" not in html
     assert f"{poststyle.STORY}\n<h2>Malron’s Account</h2>\n<h3>Into the Fog</h3>" in html
     assert html.index("<h3>Out Again</h3>") < html.index(poststyle.STORY_END) < html.index("<h2>Key Locations</h2>")
 
 
 def test_scene_headings_can_be_hidden():
-    html = poststyle.apply_format(md(POST), {**STYLE, "scenes": "as-written", "story": "titled"}).html
+    html = poststyle.apply(md(POST), {**STYLE, "scenes": "as-written", "story": "titled"})
     assert "<h3>" not in html and "We hid" in html
 
 
 def test_glance_none_hides_the_box_and_gold_links_apply():
-    html = poststyle.apply_format(md(POST), STYLE).html
+    html = poststyle.apply(md(POST), STYLE)
     assert "At a Glance" not in html
     assert '<a class="wiki-link" href="/wiki/ireena/">' in html
-    shown = poststyle.apply_format(md(POST), {**STYLE, "glance": "new-posts"}).html
+    shown = poststyle.apply(md(POST), {**STYLE, "glance": "new-posts"})
     assert "<h2>At a Glance</h2>" in shown
 
 
-def test_a_post_without_a_story_heading_is_refused():
-    with pytest.raises(ValueError, match="Story"):
-        poststyle.apply_format(md("We ran.\n"), STYLE)
+def test_a_post_without_a_story_heading_is_all_story():
+    # Only tiny test posts do this: every real post has "## Story" (test_post_follows_the_format).
+    html = poststyle.apply(md("We ran.\n\n## Loot\n\n* **Gold**: some.\n"), STYLE)
+    assert html.startswith(poststyle.STORY + "\n<h2>Malron’s Account</h2>\n<p>We ran.")
 
 
 # --- the build reads the format ----------------------------------------------------------------
@@ -75,7 +76,7 @@ def test_cast_in_the_front_matter_gives_the_pills(tmp_path):
     post = site.posts[0]
     assert post.cast_names == ["Crusty"]
     assert [c.slug for c in post.cast] == ["crusty"]  # the pills: the cast, not everyone mentioned
-    assert "Story" not in post.html and "We met" in post.html
+    assert ">Story</h2>" in post.html and "We met" in post.html  # the plainest look keeps the heading
 
 
 # --- every post follows the format -------------------------------------------------------------
