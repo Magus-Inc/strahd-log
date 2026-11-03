@@ -102,7 +102,11 @@ def expand_way(name: str, spec) -> list[tuple[float, float]]:
 
 def load_geography(path: Path = GEOGRAPHY) -> dict:
     """data/geography.yaml, with every way expanded into the points it is drawn through."""
-    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return geography_from(yaml.safe_load(path.read_text(encoding="utf-8")) or {})
+
+
+def geography_from(data: dict) -> dict:
+    """The geography in a loaded data/geography.yaml, with every way expanded."""
     geo = {sec: {name: expand_way(name, spec) for name, spec in (data.get(sec) or {}).items()}
            for sec in WAY_SECTIONS}
     geo["lakes"] = {name: [tuple(p) for p in pts] for name, pts in (data.get("lakes") or {}).items()}
