@@ -15,9 +15,9 @@ We came to Castle Ravenloft in the black carriage, having solved the puzzle ches
 
 **Rahadin** and Anastrasya greeted us and ushered us into the castle’s grand halls. The air was tense and theatrical, a strange mix of elegance and dread.
 
-We met Escher, a blond man with a doubtful past, once a friend of Doru and now thought to have betrayed him. Aera noticed that several women dressed as brides looked plainly uncomfortable, a sign of deeper unrest.
+We met Escher, a blond man who was once a friend of Doru and now thought to have betrayed him. We had already heard his story: he was a bard from Barovia who joined Doru’s revolt as his lieutenant, then slipped away from the mob in the catacombs not long before Strahd fell on them. Van Richten later caught him, a golden-haired vampire spawn by then, as a Vistana brought him a kidnapped girl, and left him scarred. Aera noticed that several women dressed as brides looked plainly uncomfortable, a sign of deeper unrest.
 
-**Volenta** and Ludmilla were there too, rounding out the eerie company. Anastrasya introduced Sasha and Escher with a biting remark. Sasha trembled at her words, and I sensed she might be willing to inform for us, perhaps even to spy.
+**Volenta** and Ludmilla were there too, rounding out the eerie company. Anastrasya introduced Sasha and Escher with a biting remark. Sasha trembled at her words, and I sensed she might be willing to inform for us, perhaps even to spy. Arrigal’s note had told us there was a spy in the castle, and I wondered if she was the one he meant.
 
 ### Red Wine on a White Dress
 
@@ -76,5 +76,4 @@ Later Strahd himself offered us a tour, and recommended we visit the Amber Templ
 * **“Sixth pedal from the left on the organ.”** — Sasha’s whisper to Zorpheus.
 * **“Spy in castle. Seek a meeting to discuss an opportunity. Find the victim amidst the court. Burn this — A”** — Arrigal’s note from before, now echoed in Sasha’s manner.
 * The masked servant’s trembling, maimed hands, an unforgettable picture of fear.
-* The wine on Volenta’s dress, an accident that nearly turned to violence.
-* Our careful restraint in the vampire court, getting through danger with good manners.
+* The red wine spilled on Volenta’s white dress.
