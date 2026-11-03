@@ -37,13 +37,13 @@ reviews and merges them, and every merge to `main` publishes the site.
    checks it): `cast:` lists the player characters there by their wiki page titles, the story
    sits under `## Story` with short `###` scene headings, and the recap lists follow in this
    order: Key Locations, Encounters, Loot, Notable NPCs, Plot Points, Session Highlights, one
-   bullet per entry. `title`, `date`, `cast` and `sources` are required. `sources:` lists what the
+   bullet per entry. `title`, `date`, `slug`, `cast` and `sources` are required. `sources:` lists what the
    post was written from, as hidden reference ids (`notes-`, `transcript-`, `recording-`,
    `discord-` plus 6 letters or digits) or public https links, and may be `[]`. Never put a file
    path, a quote or a private link there: this repo is public, and the private dnd-scribe repo
    keeps what each id stands for. `date` is the session's start in
    Central time, with the offset (`-05:00` in summer, `-06:00` in winter). Quote a title that
-   contains a colon. `slug` defaults to the file name without the date; `tagline` and `tags` are
+   contains a colon. `slug` is the file name without the date; `tagline` and `tags` are
    optional.
 3. Check it locally (needs Python 3.13 and [just](https://github.com/casey/just)):
 

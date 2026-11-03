@@ -4,7 +4,7 @@ date: '2025-09-16T22:00:00-05:00'
 tagline: Round and round the guest tower
 slug: varushkas-key
 cast: ["Aera shan Ravanór", "Malron Lichtstrahl", "Olfin Darning", "Zorpheus"]
-sources: ["notes-hw5ma8"]
+sources: ["notes-eiyw1l", "notes-hw5ma8"]
 ---
 
 Note: Written from the session notes; there is no recording.

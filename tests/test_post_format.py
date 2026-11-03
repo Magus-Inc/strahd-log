@@ -88,7 +88,6 @@ def test_sources_in_the_front_matter_are_read_and_never_shown(tmp_path):
         "## Story\n\nWe ran.\n", encoding="utf-8")
     post = build.prepare(posts).posts[0]
     assert post.sources == ["notes-7k2m9q", "transcript-p4x8tw"]
-    assert "7k2m9q" not in post.html
 
 
 def test_a_private_path_in_sources_is_refused(tmp_path):
@@ -102,10 +101,12 @@ def test_a_private_path_in_sources_is_refused(tmp_path):
 
 
 def test_the_built_site_shows_no_source_id(real_build):
-    ids = {ref for p in POSTS for ref in parts(p)[0].get("sources") or [] if not ref.startswith("https://")}
-    assert ids
-    shown = sorted({ref for page in real_build.out.rglob("*") if page.suffix in (".html", ".json", ".xml", ".txt") for ref in ids
-                    if ref in page.read_text(encoding="utf-8")})
+    # Every id a post or wiki page lists, searched for in every file the build writes.
+    pages = sorted((ROOT / "content").glob("*/*.md"))
+    ids = {ref for p in pages for ref in parts(p)[0].get("sources") or [] if not ref.startswith("https://")}
+    assert any(r.startswith("notes-") for r in ids) and any(r.startswith("discord-") for r in ids)
+    shown = sorted({ref for out in real_build.out.rglob("*") if out.is_file()
+                    for text in [out.read_bytes().decode("utf-8", "ignore")] for ref in ids if ref in text})
     assert shown == []
 
 
