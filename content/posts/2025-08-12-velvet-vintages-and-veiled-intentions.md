@@ -14,10 +14,6 @@ feature: sasha-ai.jpg
 
 We came to Castle Ravenloft in the black carriage, having solved the puzzle chest and claimed what it held: velvet-trimmed gloves, wolf-trimmed cloaks and a chest of holding.
 
-![Castle Ravenloft on its cliff, the drawbridge spanning the chasm from the road, the village in the valley below](/images/castle-ravenloft-ai.jpg)
-
-*AI-generated image (Google Gemini, October 2026). Not official art.*
-
 **Rahadin** and Anastrasya greeted us and ushered us into the castle’s grand halls. The air was tense and theatrical, a strange mix of elegance and dread.
 
 We met Escher, a blond man who was once a friend of Doru and now thought to have betrayed him. We had already heard his story: he was a bard from Barovia who joined Doru’s revolt as his lieutenant, then slipped away from the mob in the catacombs not long before Strahd fell on them. Van Richten later caught him, a golden-haired vampire spawn by then, as a Vistana brought him a kidnapped girl, and left him scarred. Aera noticed that several women dressed as brides looked plainly uncomfortable, a sign of deeper unrest.
