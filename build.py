@@ -523,38 +523,102 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
     }, ensure_ascii=False, separators=(",", ":"))
 
 
-def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
-          site_url: str | None = None, base_path: str | None = None,
-          wiki_dir: Path | None = None, map_file: Path | None = None,
-          slides_static: Path | None = None, style_file: Path | None = None,
-          party_file: Path | None = None, wiki_style_file: Path | None = None) -> list[Post]:
-    site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
-    base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
-    posts = load_posts(content_dir)
-    pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
+@dataclass
+class Site:
+    """Everything the stages read and fill in, in the order build() runs them (see STAGES)."""
+    posts: list[Post]
+    pages: list[wiki.WikiPage]
+    data_dir: Path
+    map_file: Path
+    static_dir: Path
+    party_file: Path
+    style: dict
+    wiki_style: dict
+    places: dict = field(default_factory=dict)
+    parent: dict = field(default_factory=dict)
+    spots: dict = field(default_factory=dict)
+    landmarks: dict = field(default_factory=dict)
+    legs: list = field(default_factory=list)
+    sprites: list = field(default_factory=list)
+
+
+# --- the stages: each takes the Site and changes it in place ------------------------------------
+
+def style_posts(site: Site) -> None:
+    """One look for every post. Runs first: wiki linking reads the restyled headings and sections."""
+    apply_style(site.posts, site.style, poststyle.load_scenes(site.data_dir / "scene-headings.yaml"))
+
+
+def number_posts(site: Site) -> None:
+    number_sessions(site.posts)
+
+
+def link_names(site: Site) -> None:
+    link_wiki(site.posts, site.pages, site.style["relink"],
+              wiki.load_phrases(site.data_dir / "described-places.yaml", site.pages),
+              wiki.load_exact_names(site.data_dir / "name-case.yaml"))
+
+
+def cite_wiki(site: Site) -> None:
+    """Session numbers on wiki pages; needs the numbers and the links."""
+    cite_sessions(site.posts, site.pages)
+
+
+def style_wiki(site: Site) -> None:
+    apply_wiki_style(site.pages, site.wiki_style)
+
+
+def attach_slides(site: Site) -> None:
+    find_slides(site.posts, site.static_dir)
+
+
+def attach_party(site: Site) -> None:
+    apply_party(site.posts, site.pages, site.party_file)
+
+
+def reading_aids(site: Site) -> None:
+    """Reading time, contents, decks, cast; needs links, slides and party."""
+    add_reading_aids(site.posts, site.pages)
+
+
+def lay_out_map(site: Site) -> None:
+    """Places, the trail and the sprites; the trail needs every post numbered and its party."""
+    site.places, site.parent = barovia_map.load_places(site.map_file, site.pages)
+    if site.wiki_style["top"] == "infobox" and site.wiki_style["kinds"] == "all":
+        add_place_facts(site.pages, site.parent, site.data_dir / "nearby.yaml")
+    if not site.places:
+        return
+    site.spots = barovia_map.load_spots(site.map_file, site.places)
+    site.landmarks = barovia_map.load_landmarks(site.map_file, site.pages, site.places)
+    visits = barovia_map.load_visits(site.map_file.parent / "trail.yaml", site.places, site.spots)
+    site.legs = barovia_map.trail(site.posts, site.places, site.parent, site.pages, visits, site.spots)
+    site.sprites = barovia_map.load_sprites(site.map_file, ROOT / "static" / "images" / "map" / "sprites")
+
+
+# The only place the order lives (tests/test_stages.py).
+STAGES = (style_posts, number_posts, link_names, cite_wiki, style_wiki, attach_slides, attach_party,
+          reading_aids, lay_out_map)
+
+
+def prepare(content_dir: Path = ROOT / "content" / "posts", wiki_dir: Path | None = None,
+            map_file: Path | None = None, slides_static: Path | None = None, style_file: Path | None = None,
+            party_file: Path | None = None, wiki_style_file: Path | None = None) -> Site:
+    """Load the posts and wiki and run every stage, without writing anything."""
     data_dir = content_dir.parent.parent / "data"
-    style = poststyle.load_style(style_file or data_dir / "post-style.yaml")
-    apply_style(posts, style, poststyle.load_scenes(data_dir / "scene-headings.yaml"))
-    number_sessions(posts)
-    link_wiki(posts, pages, style["relink"], wiki.load_phrases(data_dir / "described-places.yaml", pages),
-              wiki.load_exact_names(data_dir / "name-case.yaml"))
-    cite_sessions(posts, pages)
-    wiki_style = wikistyle.load_style(wiki_style_file or data_dir / "wiki-style.yaml")
-    apply_wiki_style(pages, wiki_style)
-    find_slides(posts, slides_static or ROOT / "static")
-    apply_party(posts, pages, party_file or content_dir.parent.parent / "data" / "party.yaml")
-    add_reading_aids(posts, pages)
-    places, parent = barovia_map.load_places(map_file or content_dir.parent.parent / "data" / "map.yaml", pages)
-    if wiki_style["top"] == "infobox" and wiki_style["kinds"] == "all":
-        add_place_facts(pages, parent, data_dir / "nearby.yaml")
-    map_dir = (map_file or content_dir.parent.parent / "data" / "map.yaml").parent
-    spots = barovia_map.load_spots(map_file or content_dir.parent.parent / "data" / "map.yaml", places) if places else {}
-    landmarks = barovia_map.load_landmarks(map_file or content_dir.parent.parent / "data" / "map.yaml", pages, places) if places else {}
-    visits = barovia_map.load_visits(map_dir / "trail.yaml", places, spots) if places else {}
-    legs = barovia_map.trail(posts, places, parent, pages, visits, spots) if places else []
-    sprites = barovia_map.load_sprites(map_file or content_dir.parent.parent / "data" / "map.yaml",
-                                       ROOT / "static" / "images" / "map" / "sprites") if places else []
-    leg_by_post = {leg["post"].slug: leg for leg in legs}
+    pages = wiki.load_wiki(wiki_dir or content_dir.parent / "wiki", split_front_matter)
+    site = Site(posts=load_posts(content_dir), pages=pages, data_dir=data_dir,
+                map_file=map_file or data_dir / "map.yaml", static_dir=slides_static or ROOT / "static",
+                party_file=party_file or data_dir / "party.yaml",
+                style=poststyle.load_style(style_file or data_dir / "post-style.yaml"),
+                wiki_style=wikistyle.load_style(wiki_style_file or data_dir / "wiki-style.yaml"))
+    for stage in STAGES:
+        stage(site)
+    return site
+
+
+# --- writing the site -----------------------------------------------------------------------------
+
+def make_env(site: Site, site_url: str, base: str) -> Environment:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["tag_slug"] = tag_slug
@@ -564,25 +628,27 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     if counter and not COUNTER_CODE.fullmatch(counter):
         raise ValueError(f"GOATCOUNTER must be a GoatCounter site code like 'owlbear', not {counter!r}")
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
-                       types=wiki.TYPES, all_places=places, counter=counter,
+                       types=wiki.TYPES, counter=counter,
                        css_version=hashlib.sha256((ROOT / "static" / "style.css").read_bytes()).hexdigest()[:10])
+    env.globals["has_tags"] = bool(tag_index(site.posts))
+    env.globals["post_style"] = site.style
+    env.globals["wiki_style"] = site.wiki_style
+    env.globals["map_sprites"] = site.sprites
+    env.globals["all_places"] = site.places
+    return env
+
+
+def tag_index(posts: list[Post]) -> dict[str, list[Post]]:
     tags: dict[str, list[Post]] = {}
     for post in posts:
         for tag in post.tags:
             tags.setdefault(tag, []).append(post)
-    env.globals["has_tags"] = bool(tags)
-    env.globals["post_style"] = style
-    env.globals["wiki_style"] = wiki_style
-    env.globals["map_sprites"] = sprites
-    env.globals["all_places"] = places
+    return tags
 
-    if out_dir.exists():
-        shutil.rmtree(out_dir)
-    shutil.copytree(ROOT / "static", out_dir)
-    make_thumbnails(pages, slides_static or ROOT / "static", out_dir)
-    shares = share_cards(posts, pages, slides_static or ROOT / "static", out_dir)
-    env.globals.update(site_card=shares.pop(None), card_size=(share.CARD_W, share.CARD_H))
 
+def write_posts(site: Site, env: Environment, out_dir: Path, shares: dict, base: str) -> None:
+    posts, places = site.posts, site.places
+    leg_by_post = {leg["post"].slug: leg for leg in site.legs}
     years: dict[int, list[Post]] = {}
     for post in posts:  # the newest leads the list, marked Latest (no separate box; Chris, 2026-11-02)
         years.setdefault(post.date.year, []).append(post)
@@ -594,14 +660,18 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         older = posts[i + 1] if i + 1 < len(posts) else None
         write(out_dir / "posts" / post.slug / "index.html",
               env.get_template("post.html").render(
-                  post=post, share_page=shares[post.path], body=rebase(post.html, base), newer=newer, older=older, legs=legs,
+                  post=post, share_page=shares[post.path], body=rebase(post.html, base), newer=newer, older=older, legs=site.legs,
                   leg=leg_by_post.get(post.slug),
                   stops=[places[s] for s in leg_by_post[post.slug]["stops"]] if post.slug in leg_by_post else []))
-
     # The tags page and its menu link only exist once some post has tags.
+    tags = tag_index(posts)
     if tags:
         write(out_dir / "tags" / "index.html",
               env.get_template("tags.html").render(share_page={"path": "tags/"}, tags=sorted(tags.items(), key=lambda kv: kv[0].lower())))
+
+
+def write_wiki(site: Site, env: Environment, out_dir: Path, shares: dict, base: str) -> None:
+    pages, places = site.pages, site.places
     groups = [(label, [w for w in pages if w.type == kind]) for kind, label in wiki.TYPES.items()]
     write(out_dir / "wiki" / "index.html",
           env.get_template("wiki_index.html").render(share_page={"path": "wiki/"}, groups=[g for g in groups if g[1]], count=len(pages)))
@@ -609,35 +679,69 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         write(out_dir / "wiki" / page.slug / "index.html",
               env.get_template("wiki_page.html").render(
                   page=page, share_page=shares[page.path], body=rebase(page.cited_html, base),
-                  place=(places.get(parent.get(page.slug, "")) or landmarks.get(page.slug)) if places else None))
+                  place=(places.get(site.parent.get(page.slug, "")) or site.landmarks.get(page.slug)) if places else None))
+
+
+def map_data(site: Site) -> dict:
+    """What the map page's script reads: every session by number, and each place's sessions."""
+    related = barovia_map.place_sessions(site.legs, site.places, site.spots)
+    summaries = {w.slug: w.summary for w in site.pages}
+    return {
+        # Every session by number (the slider's "Session N" line), including any off the map.
+        "legs": [{"t": p.title, "u": p.path} for p in sorted(site.posts, key=lambda p: p.number)],
+        "places": {p.slug: {"t": p.title, "u": p.path, "s": summaries.get(p.slug, ""),
+                            # Every session tied to the place, oldest first, with its map number (i) and how
+                            # it relates (k: here, ended, stop, near, from, past; w: the spot, for near), plus the
+                            # skull, revive, party and leaves badges (b).
+                            "sessions": [{"t": leg["post"].title, "u": leg["post"].path, "d": nice_date(leg["post"].date),
+                                          "n": leg["post"].slide_count, "i": leg["n"], "k": kind,
+                                          **({"b": leg["post"].life_badges} if leg["post"].party else {}),
+                                          **({"w": where} if where else {})}
+                                         for leg, kind, where in related.get(p.slug, [])]}
+                   for p in site.places.values()},
+    }
+
+
+def write_map(site: Site, env: Environment, out_dir: Path) -> None:
+    if not site.places:
+        return
+    write(out_dir / "map" / "barovia.svg", barovia_map.draw_base(site.sprites))
+    write(out_dir / "map" / "index.html",
+          env.get_template("map.html").render(share_page={"path": "map/"}, places=list(site.places.values()), legs=site.legs,
+                                              map_data=map_data(site)))
+
+
+def write_extras(site: Site, env: Environment, out_dir: Path, site_url: str, base: str) -> None:
+    """Search, the bot corpus, the 404 page, the feed and the forwarding pages."""
     write(out_dir / "search" / "index.html", env.get_template("search.html").render(share_page={"path": "search/"}))
-    if places:
-        write(out_dir / "map" / "barovia.svg",
-              barovia_map.draw_base(sprites))
-        related = barovia_map.place_sessions(legs, places, spots)
-        map_data = {
-            # Every session by number (the slider's "Session N" line), including any off the map.
-            "legs": [{"t": p.title, "u": p.path} for p in sorted(posts, key=lambda p: p.number)],
-            "places": {p.slug: {"t": p.title, "u": p.path, "s": next((w.summary for w in pages if w.slug == p.slug), ""),
-                                # Every session tied to the place, oldest first, with its map number (i) and how
-                                # it relates (k: here, ended, stop, near, from, past; w: the spot, for near), plus the
-                                # skull, revive, party and leaves badges (b).
-                                "sessions": [{"t": leg["post"].title, "u": leg["post"].path, "d": nice_date(leg["post"].date),
-                                              "n": leg["post"].slide_count, "i": leg["n"], "k": kind,
-                                              **({"b": leg["post"].life_badges} if leg["post"].party else {}),
-                                              **({"w": where} if where else {})}
-                                             for leg, kind, where in related.get(p.slug, [])]}
-                       for p in places.values()},
-        }
-        write(out_dir / "map" / "index.html",
-              env.get_template("map.html").render(share_page={"path": "map/"}, places=list(places.values()), legs=legs, map_data=map_data))
-    write(out_dir / "search-index.json", build_search_index(posts, pages))
-    write(out_dir / "bot" / "corpus.json", build_bot_corpus(posts, pages, site_url + base))
+    write(out_dir / "search-index.json", build_search_index(site.posts, site.pages))
+    write(out_dir / "bot" / "corpus.json", build_bot_corpus(site.posts, site.pages, site_url + base))
     write(out_dir / "404.html", env.get_template("404.html").render())
-    write(out_dir / "feed.xml", build_feed(posts, site_url + base))
-    write_redirects(out_dir, load_redirects(map_dir / "redirects.yaml"), posts, base,
-                    load_redirects(map_dir / "redirects.yaml", "wiki"), pages)
-    return posts
+    write(out_dir / "feed.xml", build_feed(site.posts, site_url + base))
+    redirects = site.map_file.parent / "redirects.yaml"
+    write_redirects(out_dir, load_redirects(redirects), site.posts, base, load_redirects(redirects, "wiki"), site.pages)
+
+
+def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT / "public",
+          site_url: str | None = None, base_path: str | None = None,
+          wiki_dir: Path | None = None, map_file: Path | None = None,
+          slides_static: Path | None = None, style_file: Path | None = None,
+          party_file: Path | None = None, wiki_style_file: Path | None = None) -> list[Post]:
+    site_url = (site_url or os.environ.get("URL") or DEFAULT_SITE_URL).rstrip("/")
+    base = normalize_base_path(base_path or os.environ.get("BASE_PATH") or DEFAULT_BASE_PATH)
+    site = prepare(content_dir, wiki_dir, map_file, slides_static, style_file, party_file, wiki_style_file)
+    env = make_env(site, site_url, base)
+    if out_dir.exists():
+        shutil.rmtree(out_dir)
+    shutil.copytree(ROOT / "static", out_dir)
+    make_thumbnails(site.pages, site.static_dir, out_dir)
+    shares = share_cards(site.posts, site.pages, site.static_dir, out_dir)
+    env.globals.update(site_card=shares.pop(None), card_size=(share.CARD_W, share.CARD_H))
+    write_posts(site, env, out_dir, shares, base)
+    write_wiki(site, env, out_dir, shares, base)
+    write_map(site, env, out_dir)
+    write_extras(site, env, out_dir, site_url, base)
+    return site.posts
 
 
 def load_redirects(path: Path, section: str = "posts") -> dict[str, str]:

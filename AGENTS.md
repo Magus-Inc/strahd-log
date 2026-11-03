@@ -4,6 +4,8 @@
 - Recipe lines must work in both pwsh and sh. Put logic in Python, not in shell.
 - Read and write text with `encoding="utf-8"`; tests must not depend on line endings or the OS.
 - Tests build their own fixtures in `tmp_path`; never depend on the Obsidian Portal export folder.
+- `build()` runs named stages; their order lives only in `build.STAGES` (tests/test_stages.py). A new
+  step on posts or wiki pages is a new stage there. `build.prepare()` runs them without writing files.
 - Tests that check the real blog use the `real_build` fixture (`tests/conftest.py`), built once per run.
 - A change that should not change the site (a refactor) must show "No changes" in `just site-diff`; the
   Checks workflow prints the site diff for every pull request.
