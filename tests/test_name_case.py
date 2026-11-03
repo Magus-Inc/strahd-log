@@ -79,3 +79,10 @@ def test_names_in_small_letters_link_on_the_site(site_pages, path, slug, words):
 def test_an_exact_name_keeps_a_page_that_differs_only_in_case_exact_too():
     linker = wiki.Linker([page("a", "Red Door"), page("b", "Red door")], exact={"Red Door"})
     assert linked(linker, "a red door") == []
+
+
+def test_the_durst_grain_windmill_is_the_durst_mill(site_pages):
+    """Chris, 2026-11-03: in We Meet Again, the Dursts' grain "from the windmill" is the Durst Mill."""
+    html = site_pages("posts/we-meet-again-for-the-first-time")
+    assert len(re.findall(r'href="/wiki/durst-mill/"[^>]*>windmill<', html)) == 2
+    assert 'class="wiki-link" href="/wiki/the-windmill/"' not in html

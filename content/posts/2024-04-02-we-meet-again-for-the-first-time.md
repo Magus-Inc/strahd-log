@@ -21,7 +21,7 @@ The man, or creature, was none other than Count Strahd von Zarovich and he calle
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 
-Strahd was upset about some vassal of his, which I first thought was some peasant and a case of mistaken identity, but later came to realize that he was talking about the Durst Manor and their supply of grain from the windmill. He indicated that he has plenty of wine and the vineyard was not of concern to him.
+Strahd was upset about some vassal of his, which I first thought was some peasant and a case of mistaken identity, but later came to realize that he was talking about the Durst Manor and their supply of grain from the [windmill](/wiki/durst-mill/). He indicated that he has plenty of wine and the vineyard was not of concern to him.
 
 Strahd demanded that Ismark follow his will, and it seemed he was going to take Ireena away with him. I’m still not sure how, but we convinced him to allow her to stay with us a bit longer, hopefully long enough to find some sanctuary for her. He also forgave us for our past transgressions, and he claimed to be no liar, but that he found us curious and would study us for a while. Weeble almost pushed his luck and nearly found out if it would be the wolves that tore him to shreds or the Longsword of Strahd. Strahd and his wolves then left us alone by the road.
 
@@ -58,7 +58,7 @@ We continued along the wagon path until we found a clearing by a lake. There wer
 
 ## Plot Points:
 
-* **Strahd’s vassal**: His anger is about the Durst Manor and its grain from the windmill. The vineyard is no concern of his.
+* **Strahd’s vassal**: His anger is about the Durst Manor and its grain from the [windmill](/wiki/durst-mill/). The vineyard is no concern of his.
 * **Ireena stays with us**: Long enough, we hope, to find her sanctuary.
 * **Strahd’s warnings**: He will not give many.
 * **Olfin’s lock of hair**: Tied around the bird’s leg, a sign of life debt.
