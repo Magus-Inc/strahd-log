@@ -75,3 +75,13 @@ def test_glamour_weave_pelt_has_the_book_rules_marked_standard():
     _, body = _parts("glamour-weave-pelt")
     rules = body.split("## What it does", 1)[1].split("<!-- from-the-log -->", 1)[0]
     assert "Standard rules from the book" in rules and "bonus action" in rules and "d4" in rules
+
+
+def test_ryans_march_18_loot_is_in_the_march_11_post():
+    # Ryan's #loot post of 3/18/2025 has no session post of its own; Chris: put it in the 3/11 post
+    post = (WIKI.parent / "posts" / "2025-03-11-wizard-of-wines-vineyard.md").read_text(encoding="utf-8")
+    meta = yaml.safe_load(post.split("---", 2)[1])
+    assert any(s.startswith("discord-") for s in meta["sources"])
+    loot = post.split("## Loot", 1)[1].split("\n## ", 1)[0]
+    for words in ("greater healing", "dust of disappearance", "75 gold"):
+        assert words in loot.lower()
