@@ -20,6 +20,12 @@ def test_preview_address_follows_the_site_base_path():
         "https://owlbear.dicelore.quest/pr-preview/pr-62/"
 
 
+def test_robots_keeps_the_sitemap_line_from_the_main_build():
+    main = "User-agent: *\nAllow: /\nSitemap: https://owlbear.dicelore.quest/sitemap.xml\n"
+    assert pr_previews.robots_txt("", main) == ("User-agent: *\nDisallow: /pr-preview/\n"
+                                                "Sitemap: https://owlbear.dicelore.quest/sitemap.xml\n")
+
+
 def test_robots_blocks_previews_only():
     assert pr_previews.robots_txt("") == "User-agent: *\nDisallow: /pr-preview/\n"
     assert pr_previews.robots_txt("/strahd-log/") == "User-agent: *\nDisallow: /strahd-log/pr-preview/\n"
@@ -34,7 +40,7 @@ def test_only_branches_of_this_repository_get_previews():
 
 def test_preview_build_never_sees_the_token_or_the_counter():
     env = pr_previews.preview_env({"PATH": "/bin", "GH_TOKEN": "x", "GITHUB_TOKEN": "y", "GOATCOUNTER": "owlbear",
-                                   "BASE_PATH": "/"}, "https://owlbear.dicelore.quest/", "", 62)
+                                   "GOOGLE_ANALYTICS": "G-TEST123AB", "BASE_PATH": "/"}, "https://owlbear.dicelore.quest/", "", 62)
     assert env == {"PATH": "/bin", "URL": "https://owlbear.dicelore.quest", "BASE_PATH": "/pr-preview/pr-62/"}
 
 
@@ -69,6 +75,7 @@ def test_real_site_built_as_a_preview_works_under_its_folder(tmp_path, monkeypat
     pr_previews.mark_preview(site, 62, REPO)
 
     assert not (site / "CNAME").exists()
+    assert not (site / "robots.txt").exists() and not (site / "sitemap.xml").exists()  # only the real site's count
     pages = list(site.rglob("*.html"))
     assert len(pages) > 20
     for page in pages:
@@ -117,11 +124,14 @@ def test_build_previews_builds_each_pull_request_and_survives_a_broken_one(repo_
     public = tmp_path / "public"
     public.mkdir()
     (public / "index.html").write_text("main", encoding="utf-8")
+    (public / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://owlbear.dicelore.quest/sitemap.xml\n",
+                                       encoding="utf-8")
     results = pr_previews.build_previews(public, "https://owlbear.dicelore.quest", "", REPO,
                                          [{"number": 1}, {"number": 2}], tmp_path / "work", repo_with_pulls)
     assert results["built"] == [1] and results["failed"] == [2]
     assert (public / "index.html").read_text(encoding="utf-8") == "main"
-    assert (public / "robots.txt").read_text(encoding="utf-8") == "User-agent: *\nDisallow: /pr-preview/\n"
+    assert (public / "robots.txt").read_text(encoding="utf-8") == (
+        "User-agent: *\nDisallow: /pr-preview/\nSitemap: https://owlbear.dicelore.quest/sitemap.xml\n")
     preview = (public / "pr-preview" / "pr-1" / "index.html").read_text(encoding="utf-8")
     assert "/pr-preview/pr-1/|</body>" in preview  # right base path; no counter, no token
     assert "noindex" in preview and "pull request #1" in preview
@@ -189,6 +199,8 @@ def test_workflow_deploys_main_and_previews_from_main_only():
     steps = {s.get("name") or s.get("id") or s["uses"]: s for s in jobs["build"]["steps"]}
     assert steps["Build"]["env"]["GOATCOUNTER"] == "owlbear"
     assert "GOATCOUNTER" not in steps["Build pull request previews"]["env"]
+    assert steps["Build"]["env"]["GOOGLE_ANALYTICS"] == "G-7CE3V3QTJ8"  # Chris's GA4 stream, 2026-11-04
+    assert "GOOGLE_ANALYTICS" not in steps["Build pull request previews"]["env"]
     assert "tools/pr_previews.py build" in steps["Build pull request previews"]["run"]
     assert jobs["deploy"]["permissions"] == {"pages": "write", "id-token": "write"}
     assert jobs["deploy"]["environment"]["name"] == "github-pages"

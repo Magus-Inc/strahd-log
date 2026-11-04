@@ -11,8 +11,12 @@
   Checks workflow prints the site diff for every pull request.
 - The site build needs only `requirements.txt`; keep importer and test packages in `requirements-dev.txt`.
 - Scripts (Chris, 2026-11-02): the site runs its own JavaScript plus libraries copied into
-  `static/vendor/`; it never loads a script, stylesheet or font from another site (no CDNs), so
-  readers' browsers talk only to the blog and GoatCounter. Reach for a library when our own code
+  `static/vendor/`; apart from Google Analytics' tag (below) it never loads a script, stylesheet or
+  font from another site (no CDNs), so
+  readers' browsers talk only to the blog, GoatCounter and Google Analytics. The one outside script
+  is Google Analytics 4's own tag (`googletagmanager.com/gtag/js`, Chris asked for it beside
+  GoatCounter, 2026-11-04), turned on only by `GOOGLE_ANALYTICS` in the publish workflow; it sets
+  Google's cookies, and every count still goes to GoatCounter too. Reach for a library when our own code
   would pass about 150 lines or the problem is a known hard one; small helpers stay hand-written,
   and working code is left alone. Each library: a permissive license (MIT, BSD, ISC, Apache-2.0; OFL
   for fonts) with its text beside the file, at most 30 KB zipped (60 KB for all libraries on one

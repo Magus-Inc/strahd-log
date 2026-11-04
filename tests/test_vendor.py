@@ -108,8 +108,11 @@ def site(real_build):
 
 
 def outside(url: str) -> bool:
-    """True for an address on another site (https://..., //...); the GoatCounter pixel is the one allowed."""
+    """True for an address on another site (https://..., //...). Allowed: the GoatCounter pixel, and
+    Google Analytics' own tag, which Chris asked for (2026-11-04)."""
     url = url.strip()
+    if re.match(r"^https://www\.googletagmanager\.com/gtag/js\?id=G-[A-Z0-9]+$", url):
+        return False
     return bool(re.match(r"(?i)^(?:[a-z][a-z0-9+.-]*:)?//", url)) and ".goatcounter.com/" not in url
 
 
@@ -117,6 +120,8 @@ def test_outside_tells_our_files_from_other_sites():
     assert outside("https://cdn.jsdelivr.net/npm/x@1/x.js") and outside("//unpkg.com/x")
     assert not outside("/vendor/minisearch-7.1.0.js") and not outside("./x.js") and not outside("data:,x")
     assert not outside("https://owlbear.goatcounter.com/count?p=")
+    assert not outside("https://www.googletagmanager.com/gtag/js?id=G-TEST123AB")
+    assert outside("https://www.googletagmanager.com/gtm.js?id=GTM-X")  # only the GA4 tag
 
 
 def test_the_site_loads_no_script_style_or_font_from_another_site(site):

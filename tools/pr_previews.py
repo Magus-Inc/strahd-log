@@ -8,7 +8,7 @@ request is simply not built again, so its preview disappears on the next deploy.
     python tools/pr_previews.py comment --pr 62 --url https://owlbear.dicelore.quest/pr-preview/pr-62/
 
 Previews stay out of search engines and page-view counts: robots.txt at the site root blocks
-/pr-preview/, every preview page gets a noindex tag, and the build runs without GOATCOUNTER. This is
+/pr-preview/, every preview page gets a noindex tag, and the build runs without GOATCOUNTER or GOOGLE_ANALYTICS. This is
 done here, not in the pull request's own build.py, so it holds for branches made before this file
 existed.
 """
@@ -27,8 +27,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PREVIEW_DIR = "pr-preview"
 MARKER = "<!-- pr-preview -->"
-# Variables a pull request's own build must not see: the token, and the page-view counter.
-HIDDEN_ENV = ("GH_TOKEN", "GITHUB_TOKEN", "GOATCOUNTER", "ACTIONS_RUNTIME_TOKEN", "ACTIONS_ID_TOKEN_REQUEST_TOKEN",
+# Variables a pull request's own build must not see: the token, and the page-view counters.
+HIDDEN_ENV = ("GH_TOKEN", "GITHUB_TOKEN", "GOATCOUNTER", "GOOGLE_ANALYTICS", "ACTIONS_RUNTIME_TOKEN", "ACTIONS_ID_TOKEN_REQUEST_TOKEN",
               "ACTIONS_ID_TOKEN_REQUEST_URL")
 
 
@@ -46,8 +46,10 @@ def preview_url(origin: str, base_path: str, number: int) -> str:
     return origin.rstrip("/") + preview_path(base_path, number)
 
 
-def robots_txt(base_path: str) -> str:
-    return f"User-agent: *\nDisallow: {normalize_base_path(base_path)}{PREVIEW_DIR}/\n"
+def robots_txt(base_path: str, main: str = "") -> str:
+    """Block the previews; keep the Sitemap line(s) of the main build's own robots.txt (`main`)."""
+    sitemaps = "".join(line + "\n" for line in main.splitlines() if line.startswith("Sitemap:"))
+    return f"User-agent: *\nDisallow: {normalize_base_path(base_path)}{PREVIEW_DIR}/\n" + sitemaps
 
 
 def previewable(pulls: list[dict], skip: int | None = None) -> list[dict]:
@@ -75,7 +77,7 @@ def mark_page(html: str, number: int, repo: str) -> str:
 
 def mark_preview(site: Path, number: int, repo: str) -> None:
     """Make a built pull request site safe to publish under the live one."""
-    for name in ("CNAME", "robots.txt"):
+    for name in ("CNAME", "robots.txt", "sitemap.xml"):
         (site / name).unlink(missing_ok=True)
     for page in site.rglob("*.html"):
         text = page.read_text(encoding="utf-8")
@@ -122,7 +124,9 @@ def build_one(pull: dict, public: Path, work: Path, origin: str, base_path: str,
 def build_previews(public: Path, origin: str, base_path: str, repo: str, pulls: list[dict],
                    work: Path, checkout: Path = ROOT) -> dict:
     """Build each pull request into public/pr-preview/; a failed one is reported, not fatal."""
-    public.joinpath("robots.txt").write_text(robots_txt(base_path), encoding="utf-8")
+    robots = public / "robots.txt"
+    main = robots.read_text(encoding="utf-8") if robots.is_file() else ""
+    robots.write_text(robots_txt(base_path, main), encoding="utf-8")
     (public / PREVIEW_DIR).mkdir(parents=True, exist_ok=True)
     work.mkdir(parents=True, exist_ok=True)
     results: dict = {"built": [], "failed": [], "shas": {}}

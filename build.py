@@ -49,6 +49,9 @@ DEFAULT_BASE_PATH = "/"
 # GoatCounter site code for page-view counts (https://CODE.goatcounter.com). The publish workflow sets
 # GOATCOUNTER, so local builds and previews never count visits.
 COUNTER_CODE = re.compile(r"[a-z0-9-]+")
+# Google Analytics 4 measurement id (Chris, 2026-11-04), beside GoatCounter. Like GOATCOUNTER it comes
+# only from the publish workflow's GOOGLE_ANALYTICS, so local builds and previews never count.
+GA_ID = re.compile(r"G-[A-Z0-9]+")
 
 
 @dataclass
@@ -666,8 +669,11 @@ def make_env(site: Site, site_url: str, base: str) -> Environment:
     counter = os.environ.get("GOATCOUNTER", "").strip().lower()
     if counter and not COUNTER_CODE.fullmatch(counter):
         raise ValueError(f"GOATCOUNTER must be a GoatCounter site code like 'owlbear', not {counter!r}")
+    ga = os.environ.get("GOOGLE_ANALYTICS", "").strip()
+    if ga and not GA_ID.fullmatch(ga):
+        raise ValueError(f"GOOGLE_ANALYTICS must be a GA4 measurement id like 'G-AB12CD34EF', not {ga!r}")
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
-                       types=wiki.TYPES, counter=counter,
+                       types=wiki.TYPES, counter=counter, ga=ga,
                        css_version=hashlib.sha256((ROOT / "static" / "style.css").read_bytes()).hexdigest()[:10])
     env.globals["has_tags"] = bool(tag_index(site.posts))
     env.globals["post_style"] = site.style
@@ -751,13 +757,41 @@ def write_map(site: Site, env: Environment, out_dir: Path) -> None:
                                               map_data=map_data(site)))
 
 
+def sitemap_paths(site: Site) -> list[str]:
+    """Every page worth finding in a search engine, relative to the site root: the home page, posts
+    (newest first), the wiki and its pages, the map and tags pages. Not search, 404 or forwarding pages."""
+    paths = [""] + [p.path for p in site.posts] + ["wiki/"] + [w.path for w in site.pages]
+    if site.places:
+        paths.append("map/")
+    if tag_index(site.posts):
+        paths.append("tags/")
+    return list(dict.fromkeys(paths))
+
+
+def build_sitemap(paths: list[str], root: str) -> str:
+    """sitemap.xml (sitemaps.org); root is the site's absolute address ending in '/'."""
+    ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
+    ET.register_namespace("", ns)
+    urlset = ET.Element(f"{{{ns}}}urlset")
+    for path in paths:
+        ET.SubElement(ET.SubElement(urlset, f"{{{ns}}}url"), f"{{{ns}}}loc").text = root + path
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(urlset, encoding="unicode") + "\n"
+
+
+def robots_txt(root: str) -> str:
+    """Crawl everything; the sitemap lists the pages. The publish workflow adds the PR-preview block."""
+    return f"User-agent: *\nAllow: /\nSitemap: {root}sitemap.xml\n"
+
+
 def write_extras(site: Site, env: Environment, out_dir: Path, site_url: str, base: str) -> None:
-    """Search, the bot corpus, the 404 page, the feed and the forwarding pages."""
+    """Search, the bot corpus, the 404 page, the feed, the sitemap, robots.txt and the forwarding pages."""
     write(out_dir / "search" / "index.html", env.get_template("search.html").render(share_page={"path": "search/"}))
     write(out_dir / "search-index.json", build_search_index(site.posts, site.pages))
     write(out_dir / "bot" / "corpus.json", build_bot_corpus(site.posts, site.pages, site_url + base))
     write(out_dir / "404.html", env.get_template("404.html").render())
     write(out_dir / "feed.xml", build_feed(site.posts, site_url + base))
+    write(out_dir / "sitemap.xml", build_sitemap(sitemap_paths(site), site_url + base))
+    write(out_dir / "robots.txt", robots_txt(site_url + base))
     redirects = site.map_file.parent / "redirects.yaml"
     write_redirects(out_dir, load_redirects(redirects), site.posts, base, load_redirects(redirects, "wiki"), site.pages)
 

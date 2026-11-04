@@ -348,6 +348,107 @@ def test_page_view_counter_rejects_a_bad_code(content, tmp_path, monkeypatch):
         build.build(content, tmp_path / "public")
 
 
+def test_google_analytics_only_when_configured(content, tmp_path, monkeypatch):
+    """Google Analytics 4 runs beside GoatCounter (Chris, 2026-11-04), turned on only by the publish
+    workflow's GOOGLE_ANALYTICS measurement id, so local builds and previews never count."""
+    monkeypatch.delenv("GOOGLE_ANALYTICS", raising=False)
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    build.build(content, tmp_path / "plain", site_url="https://log.example")
+    plain = (tmp_path / "plain" / "index.html").read_text(encoding="utf-8")
+    assert "googletagmanager" not in plain and "gtag(" not in plain
+    assert "https://owlbear.goatcounter.com/count?p=" in plain
+
+    monkeypatch.setenv("GOOGLE_ANALYTICS", "G-TEST123AB")
+    build.build(content, tmp_path / "both", site_url="https://log.example")
+    for page in ("index.html", "posts/first/index.html", "wiki/index.html", "404.html"):
+        html = (tmp_path / "both" / page).read_text(encoding="utf-8")
+        head = html.split("</head>")[0]
+        assert '<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST123AB"></script>' in head, page
+        assert 'gtag("config", "G-TEST123AB")' in head, page
+        assert "https://owlbear.goatcounter.com/count?p=" in html, page  # GoatCounter stays as it was
+
+
+def test_google_analytics_can_run_without_goatcounter(content, tmp_path, monkeypatch):
+    monkeypatch.delenv("GOATCOUNTER", raising=False)
+    monkeypatch.setenv("GOOGLE_ANALYTICS", "G-TEST123AB")
+    build.build(content, tmp_path / "public", site_url="https://log.example")
+    html = (tmp_path / "public" / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    assert "googletagmanager.com/gtag/js" in html and "goatcounter" not in html
+    assert 'gtag("event", "read_" + step' in html  # the reading events still go to Google
+
+
+@pytest.mark.parametrize("bad", ["UA-12345-1", "G-abc def", "G-X\"><script>", "https://g.co/G-1"])
+def test_google_analytics_rejects_a_bad_id(content, tmp_path, monkeypatch, bad):
+    monkeypatch.setenv("GOOGLE_ANALYTICS", bad)
+    with pytest.raises(ValueError, match="GOOGLE_ANALYTICS"):
+        build.build(content, tmp_path / "public")
+
+
+def test_read_and_vote_events_also_go_to_google_analytics(content, tmp_path, monkeypatch):
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    monkeypatch.setenv("GOOGLE_ANALYTICS", "G-TEST123AB")
+    static = tmp_path / "static"
+    folder = static / "slides" / "2026-09-01-third"
+    (folder / "gemini").mkdir(parents=True)
+    for name in ("01.webp", "gemini/01.webp"):
+        (folder / name).write_bytes(b"")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example", slides_static=static)
+    html = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    reading = html.split("// Reading:")[1].split("</script>")[0]
+    assert '"/read" + path' in reading and 'gtag("event", "read_" + step' in reading
+    assert 'gtag("event", "vote"' in html and '"/vote" + path' in html
+
+
+def test_sitemap_lists_every_page_worth_finding(content, tmp_path):
+    """Search engines (Chris, 2026-11-04): sitemap.xml lists the home page, every post, the wiki and
+    each wiki page, the map and tags pages, at their full addresses; never search, 404 or forwarding pages."""
+    import xml.etree.ElementTree as ET
+    out = tmp_path / "public"
+    posts = build.build(content, out, site_url="https://log.example", base_path="/strahd-log/")
+    tree = ET.fromstring((out / "sitemap.xml").read_text(encoding="utf-8"))
+    assert tree.tag == "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset"
+    urls = [u.text for u in tree.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+    root = "https://log.example/strahd-log/"
+    assert urls[0] == root
+    assert {root + p.path for p in posts} <= set(urls)
+    assert root + "wiki/" in urls and root + "tags/" in urls
+    assert len(urls) == len(set(urls))
+    assert not any(u.endswith(("search/", "404.html")) for u in urls)
+    for url in urls:  # every listed address is a real page in the build
+        page = out / url.removeprefix(root) / "index.html"
+        assert page.is_file(), url
+
+
+def test_robots_txt_points_search_engines_at_the_sitemap(content, tmp_path):
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example")
+    robots = (out / "robots.txt").read_text(encoding="utf-8")
+    assert "User-agent: *" in robots and "Disallow: /\n" not in robots
+    assert "Sitemap: https://log.example/sitemap.xml" in robots
+
+
+def test_posts_describe_themselves_to_search_engines(content, tmp_path):
+    """Each post carries schema.org BlogPosting data (headline, date, picture, address) so Google can
+    show it as an article; the home page names the site."""
+    import json
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example")
+    html = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    block = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
+    data = json.loads(block.group(1))
+    assert data["@context"] == "https://schema.org" and data["@type"] == "BlogPosting"
+    assert data["mainEntityOfPage"] == data["url"] == "https://log.example/posts/third/"
+    assert data["headline"] and data["datePublished"].startswith("2026-09-01")
+    assert data["image"].startswith("https://log.example/") and data["description"]
+    assert data["publisher"]["name"] == build.SITE_TITLE
+    home = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',
+                                (out / "index.html").read_text(encoding="utf-8"), re.S).group(1))
+    assert home["@type"] == "WebSite" and home["url"] == "https://log.example/" and home["name"] == build.SITE_TITLE
+    wiki_index = (out / "wiki" / "index.html").read_text(encoding="utf-8")
+    assert "application/ld+json" not in wiki_index
+
+
 def test_note_paragraphs_become_table_notes_in_the_margin():
     import article
     html = article.margin_notes("<p>We ran.</p><p>Note: [Meta details] The table laughed.</p><p>Not a Note: here</p>")

@@ -2,7 +2,8 @@
   // tab in front), /halfway (all of Malron's Account has been on screen, down to the bottom of its last
   // paragraph or margin note) and /finished (reached the map, "Where we were", after at least half the
   // "min read" time). A post without a map finishes at the end of its text. Each is sent at most once
-  // per visit; nothing is stored in the browser. Wiki pages send none.
+  // per visit; nothing is stored in the browser. Wiki pages send none. With Google Analytics on, each
+  // is also a GA4 event: read_started, read_halfway, read_finished.
   (function () {
     var prose = document.querySelector(".prose[data-read-minutes]");
     if (!prose) return;
@@ -26,9 +27,14 @@
     function send(step) {
       if (sent[step]) return;
       sent[step] = true;
+{% if counter %}
       new Image().src = "https://{{ counter }}.goatcounter.com/count?e=true&p=" +
         encodeURIComponent("/read" + path + step) + "&t=" + encodeURIComponent("Read " + step + ": " + document.title) +
         "&rnd=" + Math.random().toString(36).slice(2);
+{% endif %}
+{% if ga %}
+      if (window.gtag) gtag("event", "read_" + step);
+{% endif %}
     }
     function inView(bottom) { return window.innerHeight >= bottom; }
     function storyBottom() {
