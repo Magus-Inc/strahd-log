@@ -25,6 +25,11 @@ Sir Godfrey told us how the Order fell and how Strahd took the skull of Argynvos
 
 We came back with the skull at a run, fought a revenant bound in black wire in the foyer, and found Vladimir Horngaard waiting in the cemetery. Shabasta stepped through the air into the mausoleum with Aera, Zorya harried Horngaard's face, and Aera set the skull on its mount without a fight. Argynvost rose as a great silver ghost, Horngaard took his hand and went to his rest, and the knights were freed. We swore the Order's oath. Argynvost now burns as a silver beacon in the tallest tower, for some seven days ([The Beacon of Argynvostholt](/posts/the-beacon-of-argynvostholt/)).
 
+## What the beacon does
+
+* While it shines, the party and every other creature that opposes Strahd get +1 to AC and +1 to saving throws, as long as they {?stay in Barovia?}.
+* It won't shine for long: Argynvost warned that his flame would not last.
+
 <!-- from-the-log -->
 ## From the adventure log
 

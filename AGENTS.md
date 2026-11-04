@@ -48,6 +48,10 @@
   shared", "shared at the table"): that goes in the hidden `sources:` ids. Wiki pages show no source
   line. The table-talk margin notes may say "the DM" or "Shabasta's player". `tests/test_player_mentions.py`
   checks the built site.
+- Hard-to-hear words (Chris, 2026-11-04): when a transcript may have misheard a number or phrase that
+  goes on the site, keep it and mark it `{?a d2?}` instead of leaving it out or guessing. The site
+  shows it underlined with a "?" and a tooltip saying it isn't confirmed yet (`suspect.py`), and the
+  Discord bot's corpus spells that out. Drop the braces once Chris or the DM confirms it.
 - Wiki aliases are linked automatically everywhere, so an alias must not be an ordinary word
   ("Abbot", "Manor" in another town); `tools/wiki_from_extract.py` keeps a list of words to refuse.
 - Posts are the players' own writing. Fix conversion problems in `tools/import_op.py`, not by

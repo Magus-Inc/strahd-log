@@ -36,6 +36,7 @@ import poststyle
 import sources as source_list
 import share
 import start
+import suspect
 import wiki
 import wikistyle
 
@@ -219,7 +220,7 @@ def parse_post(path: Path) -> Post:
 
 
 def render_markdown(text: str) -> str:
-    return markdown.markdown(text, extensions=["extra", "sane_lists", "smarty"], output_format="html")
+    return markdown.markdown(suspect.to_html(text), extensions=["extra", "sane_lists", "smarty"], output_format="html")
 
 
 def rebase(html: str, prefix: str) -> str:
@@ -560,9 +561,9 @@ def build_bot_corpus(posts: list[Post], pages: list[wiki.WikiPage], root: str) -
         "posts": [{"title": p.title, "date": p.date.date().isoformat(), "url": root + p.path,
                    "glance": [wiki.plain_text(g) for g in p.glance], "wiki": sorted(p.mentions),
                    "cast": sorted(p.listed),
-                   "text": p.body_md.strip()} for p in reversed(posts)],
+                   "text": suspect.plain(p.body_md).strip()} for p in reversed(posts)],
         "wiki": [{"slug": w.slug, "title": w.title, "type": "dm" if w.dm else w.type, "aliases": w.aliases, "summary": w.summary,
-                  "url": root + w.path, "text": w.body_md.strip()} for w in pages],
+                  "url": root + w.path, "text": suspect.plain(w.body_md).strip()} for w in pages],
     }, ensure_ascii=False, separators=(",", ":"))
 
 

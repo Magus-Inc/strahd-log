@@ -17,6 +17,12 @@ Clovin Belview's reward for news of his brother. He led us up into the tower abo
 
 Olfin flew on the eagle wings against the Fallen Star ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/)).
 
+## What it does
+
+* A wondrous item that needs attunement.
+* As an action, speak its command word (the wearer picks the word): the wings unfold for one minute and give a flying speed of 60 feet.
+* Once a day.
+
 <!-- from-the-log -->
 ## From the adventure log
 
