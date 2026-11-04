@@ -109,3 +109,14 @@ def test_the_golem_picture_says_the_flowers_are_aeras_illusion(site_pages, path)
     alts = re.findall(r'<img[^>]*src="/images/the-flesh-golem-ai\.jpg"[^>]*>', site_pages[path])
     assert alts, path
     assert all("Aera" in a and "illusion" in a for a in alts), alts
+
+
+@pytest.mark.parametrize("path", ["wiki/the-flesh-golem", "posts/the-abbot-unveiled-wings-lies-and-the-fallen-star"])
+def test_the_golem_picture_caption_says_the_flowers_are_aeras_illusion(site_pages, path):
+    """Chris (2026-11-04): the little line under the picture (the one that links the wiki page in a
+    post) is where this detail goes, so readers see it, not just screen readers."""
+    html = site_pages[path].replace("&rsquo;", "’").replace("&#x27;", "’").replace("'", "’")
+    pic = html.index('src="/images/the-flesh-golem-ai.jpg"')
+    credit = re.search(r'<p class="ai-credit">(.*?)</p>', html[pic:], re.S)
+    text = re.sub(r"<[^>]+>", "", credit.group(1)) if credit else ""
+    assert "Aera’s illusion" in text, text

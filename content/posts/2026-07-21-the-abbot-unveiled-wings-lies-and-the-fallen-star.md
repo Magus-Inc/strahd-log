@@ -57,7 +57,7 @@ Ethereal seized Olfin and carried him thirty feet into the air. Then the flesh g
 
 ![The Abbot's flesh golem in Aera's rope crown, with her illusion of a flower crown shimmering above it, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art. The flowers above its rope crown are Aera’s illusion.*
 
 Ethereal answered with a burst of divine light. I could not resist it and was charmed, and fell on my face to grovel before him, until the next ray of light broke the spell. When Ethereal reached for a mighty healing touch, Crusty undid the spell, and the Abbot gave up trying to heal himself. Shabasta sang to Olfin and kept the gauntlets burning, until Ethereal seized him too, turned his hand into a mace, beat him in the air and dropped him from thirty feet. I laid a ward against evil on myself to guard against more charms. Olfin whispered “America!” to unfurl his eagle wings, drank a potion of fire breathing and took to the air.
 

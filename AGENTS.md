@@ -71,7 +71,9 @@
   own after the paragraph it shows (after that paragraph's `Note:` margin notes), with words between
   two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line, model and month only:
   `*AI-generated image (Google Gemini, November 2026). Not official art.*` (a PC's portrait says
-  "Not player art."), never what it was drawn from. A post with more than one picture names its feature picture in
+  "Not player art."), never what it was drawn from. After "Not official art." it may add one short sentence a reader needs to
+  read the picture right, e.g. the golem's "The flowers above its rope crown are Aera’s illusion." (Chris,
+  2026-11-04): that line is the caption readers see, and in a post it links the wiki page. A post with more than one picture names its feature picture in
   the front matter (`feature: name.jpg`): it gives the link preview and the home page card, and goes first under `picture: top`. When the post has an AI picture the feature is one of them, never a photo of the table (Chris, 2026-11-04).
   Check pictures against the story for spoilers: no form, identity or outcome before the story reveals
   it. Reuse a wiki picture before making one. `tests/test_post_format.py` checks the rules.
