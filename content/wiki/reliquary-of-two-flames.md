@@ -15,7 +15,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 All that is left of Liren and Gumbo. When the spirits rose out of the abbey and our two friends began to fade, they became small flames and sank into the remains of the Abbot's first vessel. Aera searched there and found a silver reliquary the size of her palm, shaped like a tiny gothic chapel, with two small silver flames inside that give off no heat: the lingering echoes of the friends Barovia gave back to us for a little while ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
-A couple of times a day, the flames can help someone nearby who has just failed at something. And once, only once, the reliquary can be crushed to give up one of the flames and bring a fallen companion back to life ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
+Twice between one long rest and the next, the flames can help someone nearby who has just failed at something. And once, only once, the reliquary can be crushed to give up one of the flames and bring a fallen companion back to life ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
 ## What it does
 
