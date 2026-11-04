@@ -38,10 +38,11 @@
             <h3>{{ c.title }}</h3>
             <div class="prose">{{ c.html | rebase | safe }}</div>
 {% if c.moments %}
-            <p class="moments">{% for m in c.moments %}{% if m.kind == "won" %}<a class="won-tag" href="{{ base }}{{ m.page.path }}">{{ m.label }}</a>{% else %}<span class="life-tag {{ m.kind }}-tag">{{ badges.life_icon(m.kind) }}{{ m.label }}</span>{% endif %}{% endfor %}</p>
+            <p class="moments">{% for m in c.moments %}{% if m.kind == "won" %}<a class="won-tag" href="{{ base }}{{ m.page.path }}"><span aria-hidden="true">&#10022; </span>{{ m.label }}</a>{% else %}<span class="life-tag {{ m.kind }}-tag">{{ badges.life_icon(m.kind) }}{{ m.label }}</span>{% endif %}{% endfor %}</p>
 {% endif %}
+            <p class="chapter-start">Start with <a href="{{ base }}{{ c.first.path }}">{{ c.first.title }}</a></p>
             <details class="chapter-sessions">
-              <summary>Start with <a href="{{ base }}{{ c.first.path }}">{{ c.first.title }}</a>, or see all {{ c.posts | length }}</summary>
+              <summary>All {{ c.posts | length }} sessions in this chapter</summary>
               <ol>
 {% for p in c.posts %}
                 <li><a href="{{ base }}{{ p.path }}">{{ p.title }}</a>{% if p.tagline %} <span class="muted">{{ p.tagline }}</span>{% endif %}</li>
@@ -113,7 +114,7 @@
 {% if all_places %}
     <section class="start-section" id="map" aria-labelledby="map-title">
       <h2 id="map-title">Where we have been</h2>
-      <a class="map-teaser" href="{{ base }}map/"><img src="{{ base }}images/map-teaser.jpg" alt="Our map of Barovia with the party's road in red" width="960" height="720" loading="lazy" decoding="async"><span>Open the map</span></a>
+      <a class="map-teaser" href="{{ base }}map/"><img src="{{ base }}images/map-teaser.jpg" alt="Our map of Barovia" width="960" height="720" loading="lazy" decoding="async"><span>Open the map</span></a>
     </section>
 {% endif %}
 

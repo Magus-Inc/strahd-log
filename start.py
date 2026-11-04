@@ -12,10 +12,13 @@ from pathlib import Path
 
 import yaml
 
-# Party changes shown as a chapter's big moments, in this order, as (tag kind, words for one, several).
-# A character who leaves is shown on the party list instead, so "left" is not a big moment.
-MOMENTS = (("died", "died", ("died", "died")), ("revived", "revived", ("is brought back", "are brought back")),
-           ("joined", "party", ("joins", "join")), ("returned", "party", ("returns", "return")))
+# Party changes shown as a chapter's big moments, in the order they happen within one session, as
+# (data/party.yaml key, tag kind, words for one, several). The same order settles who is in the party
+# when one session has two changes for a character (Gumbo and Liren returned and left in one night).
+MOMENTS = (("joined", "party", ("joins", "join")), ("returned", "party", ("returns", "return")),
+           ("died", "died", ("died", "died")), ("revived", "revived", ("is brought back", "are brought back")),
+           ("left", "left", ("leaves", "leave")))
+NEEDED = ("title", "from", "through", "picture")
 
 
 @dataclass
@@ -107,6 +110,10 @@ def plan(data: dict, posts: list, pages: list, static_dir: Path, render=lambda m
 
     chapters, next_index = [], 0
     for entry in data.get("chapters") or []:
+        missing = [key for key in NEEDED if not entry.get(key)]
+        if missing:
+            raise ValueError(f"data/start-here.yaml: a chapter ({entry.get('title', 'no title')}) has no "
+                             + ", ".join(missing))
         title = entry["title"]
         first, last = post_named(entry["from"], title), post_named(entry["through"], title)
         if where[first.slug] != next_index:
@@ -131,15 +138,13 @@ def plan(data: dict, posts: list, pages: list, static_dir: Path, render=lambda m
         chapters.append(chapter)
         next_index = where[last.slug] + 1
 
-    newest = oldest[-1] if oldest else None
-    party = [by_page[s] for s in (newest.listed if newest else []) if s in by_page]
-    party.sort(key=lambda w: not getattr(w, "narrator", False))  # Malron, who writes it, first
+    # Who is with us: every player character whose last change in data/party.yaml is not a death or a
+    # leaving (died, then brought back or returned, is with us again). The narrator is always with us.
     status: dict[str, str] = {}
-    for post in oldest:  # the last change counts: died, then brought back or returned, is with us again
-        for key, people in post.party.items():
-            for person in people:
+    for post in oldest:
+        for key, _, _ in MOMENTS:
+            for person in post.party.get(key) or []:
                 status[person.slug] = {"died": "died", "left": "left"}.get(key, "with us")
-    in_party = {p.slug for p in party}
     seen = []
     for post in oldest:
         for slug in post.listed:
@@ -148,7 +153,9 @@ def plan(data: dict, posts: list, pages: list, static_dir: Path, render=lambda m
     # Every player character, played now or before (a few early ones have no player on their page).
     players = [w for w in pages if w.type == "character" and not getattr(w, "dm", False)]
     players.sort(key=lambda w: seen.index(w.slug) if w.slug in seen else len(seen))
-    past = [Member(w, "died" if status.get(w.slug) == "died" else "left") for w in players if w.slug not in in_party]
+    party = [w for w in players if getattr(w, "narrator", False) or status.get(w.slug, "with us") == "with us"]
+    party.sort(key=lambda w: not getattr(w, "narrator", False))  # Malron, who writes it, first
+    past = [Member(w, status[w.slug]) for w in players if w not in party]
 
     fortune = []
     for entry in data.get("fortune") or []:

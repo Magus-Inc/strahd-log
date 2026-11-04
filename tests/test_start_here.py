@@ -92,16 +92,40 @@ def test_the_big_moments_come_from_the_party_data_and_the_won_list(world):
     assert [(m.kind, m.label) for m in second.moments] == [("died", "Veyren died"), ("won", "Tome")]
 
 
+def test_leaving_is_a_moment_too(world):
+    world.posts[0].party = {"left": [world.pages[1]]}
+    assert ("left", "Veyren leaves") in [(m.kind, m.label) for m in load(world).chapters[1].moments]
+
+
 def test_todays_party_is_the_newest_sessions_cast_and_the_rest_came_and_went(world):
     plan = load(world)
     assert [p.slug for p in plan.party] == ["olfin"]
     assert [(m.page.slug, m.status) for m in plan.past] == [("veyren", "died")]
 
 
-def test_a_character_brought_back_or_returned_counts_by_their_last_change(world):
+def test_a_character_brought_back_is_in_the_party_again(world):
     veyren = world.pages[1]
     world.posts[0].party = {"revived": [veyren]}
+    plan = load(world)
+    assert [p.slug for p in plan.party] == ["olfin", "veyren"] and plan.past == []
+
+
+def test_one_nights_changes_count_in_story_order_not_file_order(world):
+    """Gumbo and Liren returned and left in one session: they have left, whatever order the keys are in."""
+    veyren = world.pages[1]
+    world.posts[0].party = {"left": [veyren], "returned": [veyren]}
     assert [(m.page.slug, m.status) for m in load(world).past] == [("veyren", "left")]
+
+
+def test_a_player_who_misses_the_latest_session_is_still_in_the_party(world):
+    world.posts[0].listed = []
+    assert [p.slug for p in load(world).party] == ["olfin"]
+
+
+def test_a_chapter_missing_a_key_says_which(world):
+    del world.data["chapters"][0]["picture"]
+    with pytest.raises(ValueError, match="First.*has no picture"):
+        load(world)
 
 
 def test_the_fortune_says_found_with_the_session_or_still_looking(world):

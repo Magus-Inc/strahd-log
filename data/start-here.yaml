@@ -13,7 +13,7 @@
 # won in it), faces (wiki slugs), fortune (Madam Eva's cards at Tser Pool: card, told, points_to: wiki
 # slug, found_in: the post where we found it, or status: what stands instead), how_to_read, about.
 hero: castle-ravenloft-ai.jpg
-hook: Five strangers followed the fog into a land ruled by a vampire. {sessions} sessions later, we are still trying to leave.
+hook: Five strangers followed the fog into a land ruled by a vampire. We are still trying to leave.
 premise: >-
   I am Malron, a cleric of Lathander, and this is our record. Five of us met in a barn loft in
   Daggerford and followed a floating tooth into the fog. The fog brought us to Barovia, a valley
@@ -25,8 +25,8 @@ chapters:
     through: walter-we-are-coming-for-you
     picture: durst-manor-ai.jpg
     text: >-
-      Two glowing relics led us out of Daggerford and through the fog to a manor that was waiting for
-      us. Its ghosts and the cult beneath it wanted us dead. We learned the Durst family's secret,
+      A floating tooth and a glowing pendant led us out of Daggerford and through the fog to a manor
+      that was waiting for us. Its ghosts and the horrors in its cellars wanted us dead. We learned the Durst family's secret,
       fought the mound of flesh at the bottom of the well, and climbed out a window as the house sank
       into the ground behind us.
   - title: The Village Under the Castle
@@ -53,7 +53,8 @@ chapters:
     through: echoes-of-the-silver-dragon
     picture: wizard-of-wines-ai.jpg
     text: >-
-      Ireena asked to fight beside us. We saved the Wizard of Wines vineyard from the druids, stopped
+      Ireena asked to fight beside us. We found Davian hiding at the Wizard of Wines and fought the
+      druids around his vineyard, stopped
       Winter Splinter, and reached Krezk and the abbey above it, where we found Ezmerelda. Together we
       raided the werewolf den, and Zuleika gave Olfin the Symbol of Ravenkind. At Argynvostholt we
       met the ghosts of the Order of the Silver Dragon.
@@ -107,5 +108,5 @@ how_to_read:
   - The map shows every session where it happened, with the road the party took.
 about: >-
   This is the record of a Curse of Strahd campaign that began in November 2023. Malron's player keeps
-  it, from notes and recordings of each session, and the Dungeon Master runs the game. The pictures are made with AI from the posts and the wiki; they are not official art
-  and not the players' own drawings.
+  it, from notes and recordings of each session, and the Dungeon Master runs the game. Most pictures are made with AI from the posts and the wiki; they are not official
+  art. A few are the players' own drawings.
