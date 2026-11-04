@@ -47,7 +47,7 @@ A room to the north held dusty shelves and a broom. When Olfin tried to pick up 
 
 The last room was the master bedroom. A silhouette behind its closed doors chilled us all. It turned toward us with an amber glow, then vanished.
 
-The master bedroom held another full-length mirror and a button beside the dumbwaiter, a portrait of the Dursts, a table of belongings, and a silver jewelry box with a soft amber glow. A large bloodstained kitchen knife had been driven into one of the pillows. Aera opened the box and found some grain, an amber shard and a note.
+The master bedroom held another full-length mirror and a button beside the dumbwaiter, a portrait of the Dursts, a table of belongings, and a silver jewelry box with a soft amber glow. A large bloodstained kitchen knife had been driven into one of the pillows. Aera opened the box and found some grain, an [amber shard](/wiki/durst-amber-shard/) and a note.
 
 > Drasha,
 >
@@ -76,7 +76,7 @@ We began to suspect that the beast might be the baby, Walter.
 
 ## Loot
 
-* **Amber shard**: In a silver jewelry box, with some grain and Elisabeth’s note to Drasha.
+* **Durst Amber Shard**: In a silver jewelry box, with some grain and Elisabeth’s note to Drasha.
 * **Blue blooded lips**: A yellow book, a romance about an affair with a wealthy duke.
 
 ## Notable NPCs
