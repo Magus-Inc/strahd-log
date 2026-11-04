@@ -91,7 +91,7 @@ Deals were struck:
     * 3 charges, regenerates one at dawn.
     * **Day**: Cast **Aid**.
     * **Night**: Cast **Spirit Guardians**, necrotic.
-    * **Full Charge**: Cast **Innervation**, prevents recharging for three days.
+    * **Full Charge**: Cast **Enervation**, prevents recharging for three days.
 * **Merchant’s Wares**:
 * **Cloak of Elvenkind**: Gumbo’s.
 * **Half Plate**: Bought by Liren and Malron.

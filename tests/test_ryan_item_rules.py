@@ -45,3 +45,33 @@ def test_khazans_ring_is_the_signet_ring():
     # Ryan's art for "Khazan's Ring" (8/13/2024) is the sigil ring Kasimir held that night
     meta, _ = _parts("signet-ring")
     assert "Khazan's Ring" in (meta.get("aliases") or [])
+
+
+def test_izeks_battleaxe_went_to_liren():
+    # Ryan's 12/10/2024 post: Izek carried a silvered +2 battleaxe; Chris: Liren took it
+    meta, body = _parts("silvered-battleaxe")
+    assert meta.get("type") == "item" and any(s.startswith("discord-") for s in meta.get("sources") or [])
+    assert "Liren" in body and "+2" in body
+    post = (WIKI.parent / "posts" / "2024-12-10-the-fall-of-izek.md").read_text(encoding="utf-8")
+    loot = post.split("## Loot", 1)[1].split("\n## ", 1)[0]
+    assert "Silvered Battleaxe" in loot and "Liren" in loot
+
+
+def test_hell_hound_whisperer_is_the_amber_shard():
+    # Ryan: "an amber shard of Seriach, the Hell Hound Whisperer" is one item, not two
+    assert not (WIKI / "hell-hound-whisperer.md").exists()
+    meta, body = _parts("amber-shard-of-seriach")
+    assert "Hell Hound Whisperer" in (meta.get("aliases") or [])
+    redirects = yaml.safe_load((WIKI.parent.parent / "data" / "redirects.yaml").read_text(encoding="utf-8"))
+    assert redirects["wiki"]["hell-hound-whisperer"] == "amber-shard-of-seriach"
+
+
+def test_twilight_crest_spell_is_enervation():
+    for path in (WIKI.parent / "posts").glob("*.md"):
+        assert "Innervation" not in path.read_text(encoding="utf-8"), path.name
+
+
+def test_glamour_weave_pelt_has_the_book_rules_marked_standard():
+    _, body = _parts("glamour-weave-pelt")
+    rules = body.split("## What it does", 1)[1].split("<!-- from-the-log -->", 1)[0]
+    assert "Standard rules from the book" in rules and "bonus action" in rules and "d4" in rules
