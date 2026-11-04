@@ -105,3 +105,11 @@ def test_durst_shard_has_its_picture():
     assert "/images/durst-amber-shard-ai.jpg" in body
     root = WIKI.parent.parent / "static" / "images"
     assert (root / "durst-amber-shard-ai.jpg").exists() and (root / "full" / "durst-amber-shard-ai.jpg").exists()
+
+
+def test_seriach_shard_has_its_picture():
+    # Chris asked for one repaint (clear amber, silvered war axe), 2026-11-04
+    _, body = _parts("amber-shard-of-seriach")
+    assert "/images/amber-shard-of-seriach-ai.jpg" in body
+    root = WIKI.parent.parent / "static" / "images"
+    assert (root / "amber-shard-of-seriach-ai.jpg").exists() and (root / "full" / "amber-shard-of-seriach-ai.jpg").exists()
