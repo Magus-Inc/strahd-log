@@ -177,6 +177,13 @@ WIKI_PICTURE = re.compile(r"!\[[^\]]*\]\((/images/[^)\s]+)")
 LONE_PICTURE = re.compile(r'<p>(<img [^>]*src="([^"]+)"[^>]*>)</p>(\s*<p class="ai-credit">AI-generated images?)\b')
 
 
+def name_ai_subjects(html: str, title: str) -> str:
+    """On a wiki page, an AI credit that doesn't yet say what it shows names the page:
+    "AI-generated image of The Flesh Golem (Google Gemini)." (Chris, 2026-11-04)."""
+    return re.sub(r'(<p class="ai-credit">AI-generated (?:image|images|portrait))(?! of )',
+                  lambda m: f"{m.group(1)} of {escape(title)}", html)
+
+
 def ai_picture_owners(pages: list[wiki.WikiPage]) -> dict[str, wiki.WikiPage]:
     """Each AI picture (name-ai.jpg, name-ai-2.jpg, name-ai-portrait.jpg) maps to the wiki page that
     shows it. The file name need not match the slug, so the wiki page's own pictures decide."""

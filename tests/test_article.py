@@ -223,3 +223,14 @@ def test_hover_titles_copy_the_alt_text_once():
     assert '<img alt="Ismark in a tavern" src="/images/i.jpg" title="Ismark in a tavern">' in out
     assert '<img alt="" src="/images/x.jpg">' in out  # nothing to show
     assert article.hover_titles(out) == out
+
+
+def test_wiki_picture_credits_name_the_page():
+    """Chris (2026-11-04): every AI credit says in a few words what the picture is of."""
+    html = ('<p><img alt="x" src="/images/the-flesh-golem-ai.jpg"></p>\n'
+            '<p class="ai-credit">AI-generated image (Google Gemini). The flowers are an illusion.</p>\n'
+            '<p class="ai-credit">AI-generated portrait of Someone Else (Google Gemini).</p>')
+    out = article.name_ai_subjects(html, "The Flesh Golem")
+    assert '<p class="ai-credit">AI-generated image of The Flesh Golem (Google Gemini). The flowers' in out
+    assert "AI-generated portrait of Someone Else (Google Gemini)." in out  # already named
+    assert article.name_ai_subjects(out, "The Flesh Golem") == out

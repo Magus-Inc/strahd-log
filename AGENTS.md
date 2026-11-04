@@ -74,7 +74,9 @@
   "Not official art" or "Not player art": "AI-generated" already says it (Chris, 2026-11-04). Never what it
   was drawn from. It may add one short sentence a reader needs to read the picture right, e.g. the
   golem's "The flowers above its rope crown are Aera’s illusion." (Chris, 2026-11-04): that line is the
-  caption readers see, and in a post it links the wiki page. A picture's alt text also shows on hover. A post with more than one picture names its feature picture in
+  caption readers see. Every credit names what it shows in a few words: in a post the build adds
+  "of <wiki page>" (linked), on a wiki page "of <page title>" (`article.name_ai_subjects`); a picture with
+  no wiki page writes its own "*AI-generated image of <1-5 words> (Google Gemini).*". A picture's alt text also shows on hover. A post with more than one picture names its feature picture in
   the front matter (`feature: name.jpg`): it gives the link preview and the home page card, and goes first under `picture: top`. When the post has an AI picture the feature is one of them, never a photo of the table (Chris, 2026-11-04).
   Check pictures against the story for spoilers: no form, identity or outcome before the story reveals
   it. Reuse a wiki picture before making one. `tests/test_post_format.py` checks the rules.

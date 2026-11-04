@@ -104,3 +104,14 @@ def test_picture_credits_do_not_repeat_that_the_art_is_not_ours():
              for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
              if re.search(r"\*AI-generated[^*]*Not (?:official|player) art", p.read_text(encoding="utf-8"))]
     assert not extra, extra
+
+
+def test_every_picture_credit_says_what_it_shows(real_build):
+    """Chris (2026-11-04): each AI credit names its subject in a few words, linked where it can be."""
+    bare = []
+    for kind in ("posts", "wiki"):
+        for f in sorted((real_build.out / kind).glob("*/index.html")):
+            for credit in re.findall(r'<p class="ai-credit">(.*?)</p>', f.read_text(encoding="utf-8"), re.S):
+                if not re.match(r"AI-generated (?:image|images|portrait) of \S", credit):
+                    bare.append(f"{kind}/{f.parent.name}: {credit}")
+    assert not bare, "\n".join(bare[:20])

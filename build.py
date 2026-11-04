@@ -250,8 +250,8 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(
-            article.hover_titles(article.full_size(render_markdown(page.body_md), ROOT / "static")))), self_slug=page.slug)
+        page.html, _ = linker.link(article.name_ai_subjects(article.ai_credits(article.add_image_votes(
+            article.hover_titles(article.full_size(render_markdown(page.body_md), ROOT / "static")))), page.title), self_slug=page.slug)
 
 
 def apply_style(posts: list[Post], style: dict) -> None:
