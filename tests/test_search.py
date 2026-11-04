@@ -147,11 +147,70 @@ def test_exact_matching_is_unchanged():
     assert result["close"] == {}
 
 
-def test_the_search_page_inlines_the_matcher_and_says_when_it_guessed():
+def test_the_search_page_uses_the_shared_matcher_and_cards():
+    # One copy of the matcher and the cards, inlined by the header's search panel on every page.
     page = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
-    assert '{% include "_search_match.js" %}' in page
-    assert "SearchMatch.search(" in page
-    assert "close spelling" in page
+    panel = (build.ROOT / "templates" / "_search_panel.html").read_text(encoding="utf-8")
+    assert '{% include "_search_match.js" %}' in panel and '{% include "_search_results.js" %}' in panel
+    assert "_search_match.js" not in page
+    for code in (page, panel):
+        assert "SearchMatch.search(" in code and "SearchResults.show(" in code
+
+
+RESULTS_JS = build.ROOT / "templates" / "_search_results.js"
+RESULTS_RUNNER = """
+const r = require(process.argv[1]);
+let input = "";
+process.stdin.on("data", d => input += d);
+process.stdin.on("end", () => {
+  const {found, base} = JSON.parse(input);
+  process.stdout.write(JSON.stringify({summary: r.summary(found), cards: found.hits.map(h => r.card(h, base))}));
+});
+"""
+
+
+def show_results(found: dict, base: str = "/") -> dict:
+    done = subprocess.run([NODE, "-e", RESULTS_RUNNER, str(RESULTS_JS)], input=json.dumps({"found": found, "base": base}),
+                          capture_output=True, text=True, encoding="utf-8", check=True)
+    return json.loads(done.stdout)
+
+
+def hit(**e) -> dict:
+    e = {"t": "Ilya", "u": "wiki/ilya/", "l": "NPC", "x": "The runaway son.", **e}
+    e["f"] = e["x"].lower()
+    return {"e": e, "mark": "son"}
+
+
+@needs_node
+def test_the_status_line_counts_matches_and_names_close_spellings():
+    assert show_results({"hits": [], "close": {}})["summary"] == "No matches."
+    assert show_results({"hits": [hit()], "close": {}})["summary"] == "1 match"
+    assert show_results({"hits": [hit(), hit()], "close": {"ilia": ["ilya"]}})["summary"] == \
+        "2 matches, with close spellings: “ilia” → ilya."
+
+
+@needs_node
+def test_a_card_links_under_the_base_path_and_marks_the_word():
+    [card] = show_results({"hits": [hit()], "close": {}}, base="/pr-preview/pr-7/")["cards"]
+    assert card["className"] == "card result"
+    assert '<a class="stretched" href="/pr-preview/pr-7/wiki/ilya/">Ilya</a>' in card["html"]
+    assert "runaway <mark>son</mark>." in card["html"]
+
+
+@needs_node
+def test_a_card_escapes_page_text():
+    [card] = show_results({"hits": [hit(t="<b>Ilya</b>", x='A "son" & <heir>')], "close": {}})["cards"]
+    assert "<b>" not in card["html"] and "&lt;b&gt;Ilya&lt;/b&gt;" in card["html"]
+    assert "&lt;heir&gt;" in card["html"] and "&amp;" in card["html"]
+
+
+@needs_node
+def test_a_card_shows_a_thumbnail_and_counts_only_two_or_more_pictures():
+    one, two = show_results({"hits": [hit(p="images/thumbs/ilya.webp", n=1), hit(p="images/thumbs/ilya.webp", n=2)],
+                             "close": {}})["cards"]
+    assert one["className"] == two["className"] == "card result has-pic"
+    assert 'src="/images/thumbs/ilya.webp"' in one["html"] and "pic-count" not in one["html"]
+    assert 'aria-label="2 pictures"' in two["html"]
 
 
 @pytest.fixture(scope="module")

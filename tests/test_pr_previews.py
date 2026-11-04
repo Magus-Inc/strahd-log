@@ -51,7 +51,7 @@ def test_mark_page_adds_noindex_and_banner_once():
 def internal_links(site: Path) -> list[str]:
     links = []
     for page in site.rglob("*.html"):
-        text = re.sub(r"<script>.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
+        text = re.sub(r"<script\b[^>]*>.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
         links += [l for l in re.findall(r'(?:href|src)="([^"]*)"', text)
                   if not l.startswith(("http://", "https://", "#", "mailto:"))]
     return links

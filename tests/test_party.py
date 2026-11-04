@@ -99,7 +99,7 @@ def test_search_index_carries_the_badges(party_site):
 
 
 def test_search_and_map_pages_draw_every_badge():
-    for name in ("search.html", "map.html"):
+    for name in ("_search_results.js", "map.html"):  # the search page's and panel's cards
         text = (ROOT / "templates" / name).read_text(encoding="utf-8")
         assert "lifeTags" in text and "life-tag" in text
         for kind in ("died", "revived", "party", "left"):
