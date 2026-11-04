@@ -97,3 +97,11 @@ def test_durst_shard_is_named_apart_from_seriach():
     assert "/wiki/amber-shard-of-seriach/" in body
     _, seriach = _parts("amber-shard-of-seriach")
     assert "/wiki/durst-amber-shard/" in seriach and "Aera" in seriach
+
+
+def test_durst_shard_has_its_picture():
+    # Chris picked option D, 2026-11-04
+    _, body = _parts("durst-amber-shard")
+    assert "/images/durst-amber-shard-ai.jpg" in body
+    root = WIKI.parent.parent / "static" / "images"
+    assert (root / "durst-amber-shard-ai.jpg").exists() and (root / "full" / "durst-amber-shard-ai.jpg").exists()
