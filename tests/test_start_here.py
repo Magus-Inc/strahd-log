@@ -253,9 +253,12 @@ def test_the_menu_links_to_start_here_on_every_page(real_build):
     assert '<a href="/start/" aria-current="page">Start here</a>' in start_page
 
 
-def test_the_home_page_has_one_line_for_new_readers(real_build):
+def test_the_home_page_has_a_banner_for_new_readers_that_they_can_close(real_build):
     html = (real_build.out / "index.html").read_text(encoding="utf-8")
-    assert re.search(r'<p class="new-here">New here\? <a href="/start/">', html)
+    banner = re.search(r'<aside class="new-here".*?</aside>', html, re.S).group(0)
+    assert 'href="/start/"' in banner and "New here?" in banner
+    assert banner.count("<img") == 5  # today's party
+    assert 'class="new-here-close"' in banner and "localStorage" in html
 
 
 def test_the_tips_on_the_page_look_like_what_they_describe(start_html):

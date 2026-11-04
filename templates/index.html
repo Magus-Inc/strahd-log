@@ -8,7 +8,26 @@
         <p class="muted">{{ count }} sessions, newest first</p>
       </div>
 {% if has_start %}
-      <p class="new-here">New here? <a href="{{ base }}start/">Start here</a> for the party and the story so far.</p>
+      {# For first-time readers (Chris, 2026-11-04): a banner with the party's faces that a reader can close;
+         their browser remembers. Without the script it simply stays. #}
+      <aside class="new-here" id="new-here" aria-label="New readers">
+        <a class="new-here-link" href="{{ base }}start/">
+          <span class="new-here-faces" aria-hidden="true">{% for p in start_party %}{% if p.thumb %}<img src="{{ base }}{{ p.thumb }}" alt="" width="40" height="40" decoding="async">{% endif %}{% endfor %}</span>
+          <span class="new-here-text"><strong>New here?</strong> Meet the party and catch up on the story so far.</span>
+          <span class="new-here-go">Start here</span>
+        </a>
+        <button class="new-here-close" type="button" aria-label="Hide this banner">&times;</button>
+      </aside>
+      <script>
+        (function () {
+          var box = document.getElementById("new-here");
+          try { if (localStorage.getItem("hide-new-here")) box.hidden = true; } catch (e) {}
+          box.querySelector(".new-here-close").addEventListener("click", function () {
+            try { localStorage.setItem("hide-new-here", "1"); } catch (e) {}
+            box.hidden = true;
+          });
+        })();
+      </script>
 {% endif %}
 {% if years %}
       <nav class="year-chips" aria-label="Jump to a year">

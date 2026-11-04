@@ -566,8 +566,19 @@ html.search-open, html.search-open body { overflow: hidden; }
 
 /* Start here (start/, Chris's picks 2026-11-04): a castle picture with a two-line hook, four big ways in,
    then the sections. Story text keeps to the reading measure; the party and faces use the width. */
-.new-here { margin: 0.6rem 0 0; color: var(--muted); }
-.new-here a { font-weight: 600; }
+.new-here { position: relative; margin: 1rem 0 0.5rem; border: 1px solid var(--gold); border-radius: var(--radius); background: var(--surface-2); }
+.new-here[hidden] { display: none; }
+.new-here-link { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; padding: 0.8rem 3rem 0.8rem 1rem; color: var(--text); text-decoration: none; }
+.new-here-link:hover { color: var(--text); }
+.new-here-faces { display: flex; flex: none; }
+.new-here-faces img { width: 2.5rem; height: 2.5rem; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--surface-2); margin-left: -0.6rem; }
+.new-here-faces img:first-child { margin-left: 0; }
+.new-here-text { flex: 1 1 14rem; min-width: 0; }
+.new-here-text strong { font-family: var(--serif); color: var(--gold); font-size: 1.1rem; }
+.new-here-go { flex: none; padding: 0.4rem 0.9rem; border-radius: 999px; background: var(--accent-deep); color: #fff; font-weight: 600; font-size: 0.95rem; }
+.new-here-link:hover .new-here-go { background: var(--accent); }
+.new-here-close { position: absolute; top: 0.35rem; right: 0.35rem; width: 2.2rem; height: 2.2rem; border: 0; border-radius: 50%; background: none; color: var(--muted); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.new-here-close:hover, .new-here-close:focus-visible { color: var(--text); background: var(--surface); }
 .start-hero { position: relative; display: flex; align-items: flex-end; min-height: 20rem; margin: -2rem -1.25rem 0; background: var(--surface) center 30% / cover no-repeat; }
 .start-hero-text { width: 100%; padding: 5rem 1.25rem 1.25rem; background: linear-gradient(rgba(18, 16, 20, 0), rgba(18, 16, 20, 0.92) 45%); }
 .start-hero .eyebrow { color: var(--gold); }

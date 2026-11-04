@@ -688,6 +688,7 @@ def make_env(site: Site, site_url: str, base: str) -> Environment:
     env.globals["map_sprites"] = site.sprites
     env.globals["all_places"] = site.places
     env.globals["has_start"] = site.start is not None
+    env.globals["start_party"] = site.start.party if site.start else []
     return env
 
 
