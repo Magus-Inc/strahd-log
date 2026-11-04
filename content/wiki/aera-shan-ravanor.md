@@ -17,7 +17,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 A wood-elf rogue and the party's lead scout. Aera is a deadly archer with her "turbo bow" and Uncanny Dodge, and later Evasion. She is legendary at finding and disarming traps, and she is usually first into the dark, probing murky water for hazards with her rapier. Sharp-witted and calm, she would rather outsmart an enemy than meet it head on, though she has taken a meat cleaver to vampire spawn when it suited her.
 
-Barovia has marked her. Strahd's blood game turned her fully into a werewolf. Zorya, a pseudodragon spirit she found at Argynvostholt, scouts for her, and she left the Abbey of St. Markovia with bat wings of bone. Beneath the Abbey she walked through a false door hoping to reach her lost husband and children.
+Barovia has marked her. A werewolf bit her in the fight at the Lake Baratok den, and Oogway cast Remove Curse on her to lift the curse. Even so, when she drank the blood in Strahd's hourglass game she turned fully into a werewolf, so something stronger than his spell was at work ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). Zorya, a pseudodragon spirit she found at Argynvostholt, scouts for her, and she left the Abbey of St. Markovia with bat wings of bone. Beneath the Abbey she walked through a false door hoping to reach her lost husband and children.
 
 <!-- from-the-log -->
 ## From the adventure log
@@ -38,7 +38,7 @@ Barovia has marked her. Strahd's blood game turned her fully into a werewolf. Zo
 * Stole Izek's old bottle of wine. ([Shadows Over Vallaki](/posts/shadows-over-vallaki/))
 * Bought a Shades Ring from Minofaustus and owes him 500 more gold. ([The Whispering Wall](/posts/the-whispering-wall/))
 * Was detected while invisible, starting the fight in the werewolf cave. ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/))
-* Drank the blood in Strahd's game and fully transformed into a werewolf. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
+* Drank the blood in Strahd's game and fully transformed into a werewolf, though Oogway had cast Remove Curse on her beforehand. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Gained a pseudodragon companion, Zorya, at Argynvostholt and found hidden relics behind a painting. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
 * Recited the knight's oath that awakened Horngaard's prophecy and received Arrigal's secret note. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Reached Level 7 and gained Evasion; scouted the Heart of Sorrow alone and met Strahd. ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/))
