@@ -34,7 +34,7 @@ def test_only_branches_of_this_repository_get_previews():
 
 def test_preview_build_never_sees_the_token_or_the_counter():
     env = pr_previews.preview_env({"PATH": "/bin", "GH_TOKEN": "x", "GITHUB_TOKEN": "y", "GOATCOUNTER": "owlbear",
-                                   "BASE_PATH": "/"}, "https://owlbear.dicelore.quest/", "", 62)
+                                   "GOOGLE_ANALYTICS": "G-TEST123AB", "BASE_PATH": "/"}, "https://owlbear.dicelore.quest/", "", 62)
     assert env == {"PATH": "/bin", "URL": "https://owlbear.dicelore.quest", "BASE_PATH": "/pr-preview/pr-62/"}
 
 
@@ -189,6 +189,8 @@ def test_workflow_deploys_main_and_previews_from_main_only():
     steps = {s.get("name") or s.get("id") or s["uses"]: s for s in jobs["build"]["steps"]}
     assert steps["Build"]["env"]["GOATCOUNTER"] == "owlbear"
     assert "GOATCOUNTER" not in steps["Build pull request previews"]["env"]
+    assert steps["Build"]["env"]["GOOGLE_ANALYTICS"] == "G-7CE3V3QTJ8"  # Chris's GA4 stream, 2026-11-04
+    assert "GOOGLE_ANALYTICS" not in steps["Build pull request previews"]["env"]
     assert "tools/pr_previews.py build" in steps["Build pull request previews"]["run"]
     assert jobs["deploy"]["permissions"] == {"pages": "write", "id-token": "write"}
     assert jobs["deploy"]["environment"]["name"] == "github-pages"

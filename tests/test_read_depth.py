@@ -25,10 +25,10 @@ POST = "echoes-of-the-black-terro"  # has Malron's Account, recap lists and the 
 NOTED = "the-abbot-unveiled-wings-lies-and-the-fallen-star"  # its last margin note hangs past the account
 
 
-def reading_js() -> str:
-    """templates/_read_depth.js as a post page renders it with the counter on."""
+def reading_js(counter: str = "owlbear", ga: str = "") -> str:
+    """templates/_read_depth.js as a post page renders it with the counter (and Google Analytics) on."""
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(build.ROOT / "templates"))
-    return env.get_template("_read_depth.js").render(base="/", counter="owlbear")
+    return env.get_template("_read_depth.js").render(base="/", counter=counter, ga=ga)
 
 
 def has_playwright() -> bool:
@@ -215,6 +215,7 @@ const context = {
     createTreeWalker: () => { const c = kids.filter(k => k.nodeType === 8); let i = 0; return {nextNode: () => c[i++] || null}; },
   },
   Image: class { set src(url) { sent.push(new URL(url).searchParams.get("p").split("/").pop()); } },
+  gtag: (kind, name) => sent.push("ga:" + kind + ":" + name),
   setInterval: f => { timers.push(f); return timers.length; },
   clearInterval: id => { timers[id - 1] = null; },
   Math, Number, String, encodeURIComponent, URL,
@@ -236,10 +237,10 @@ ACCOUNT = [{"comment": "story"}, {"box": [0, 900]}, {"box": [900, 1500]}, {"box"
            {"comment": "story-end"}, {"box": [1550, 2200]}]
 
 
-def fake_read(steps, nodes=ACCOUNT, map_box=(2400, 2900), prose=(0, 2200)) -> list[list[str]]:
+def fake_read(steps, nodes=ACCOUNT, map_box=(2400, 2900), prose=(0, 2200), script=None) -> list[list[str]]:
     page = {"minutes": 1, "prose": list(prose), "nodes": nodes, "map": list(map_box) if map_box else None,
             "steps": steps}
-    done = subprocess.run([NODE, "-e", FAKE_PAGE, reading_js(), json.dumps(page)], capture_output=True,
+    done = subprocess.run([NODE, "-e", FAKE_PAGE, script or reading_js(), json.dumps(page)], capture_output=True,
                           text=True, encoding="utf-8", timeout=60)
     assert done.returncode == 0, done.stderr
     return json.loads(done.stdout)
@@ -275,3 +276,21 @@ def test_without_a_map_or_marks_the_end_of_the_text_counts():
                     nodes=[{"box": [0, 2200]}], map_box=None)
     assert got[0] == ["started"]
     assert got[1] == ["halfway", "finished"]
+
+
+@needs_node
+def test_each_read_event_also_goes_to_google_analytics_once():
+    """With GA4 on (Chris, 2026-11-04) every GoatCounter read event is also a GA4 event: read_started,
+    read_halfway, read_finished, each still once a visit."""
+    script = reading_js(ga="G-TEST123AB")
+    got = fake_read([{"scroll": 1500, "wait": 40}, {"scroll": 1601, "wait": 1}, {"scroll": 0, "wait": 1}],
+                    script=script)
+    assert got[0] == ["halfway", "ga:event:read_halfway", "started", "ga:event:read_started"]
+    assert got[1] == ["finished", "ga:event:read_finished"]
+    assert got[2] == []
+
+
+@needs_node
+def test_google_analytics_alone_still_gets_read_events():
+    got = fake_read([{"scroll": 1700, "wait": 31}], script=reading_js(counter="", ga="G-TEST123AB"))
+    assert got[0] == ["ga:event:read_halfway", "ga:event:read_started", "ga:event:read_finished"]

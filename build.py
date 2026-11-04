@@ -49,6 +49,9 @@ DEFAULT_BASE_PATH = "/"
 # GoatCounter site code for page-view counts (https://CODE.goatcounter.com). The publish workflow sets
 # GOATCOUNTER, so local builds and previews never count visits.
 COUNTER_CODE = re.compile(r"[a-z0-9-]+")
+# Google Analytics 4 measurement id (Chris, 2026-11-04), beside GoatCounter. Like GOATCOUNTER it comes
+# only from the publish workflow's GOOGLE_ANALYTICS, so local builds and previews never count.
+GA_ID = re.compile(r"G-[A-Z0-9]+")
 
 
 @dataclass
@@ -666,8 +669,11 @@ def make_env(site: Site, site_url: str, base: str) -> Environment:
     counter = os.environ.get("GOATCOUNTER", "").strip().lower()
     if counter and not COUNTER_CODE.fullmatch(counter):
         raise ValueError(f"GOATCOUNTER must be a GoatCounter site code like 'owlbear', not {counter!r}")
+    ga = os.environ.get("GOOGLE_ANALYTICS", "").strip()
+    if ga and not GA_ID.fullmatch(ga):
+        raise ValueError(f"GOOGLE_ANALYTICS must be a GA4 measurement id like 'G-AB12CD34EF', not {ga!r}")
     env.globals.update(site_title=SITE_TITLE, site_subtitle=SITE_SUBTITLE, site_url=site_url, base=base,
-                       types=wiki.TYPES, counter=counter,
+                       types=wiki.TYPES, counter=counter, ga=ga,
                        css_version=hashlib.sha256((ROOT / "static" / "style.css").read_bytes()).hexdigest()[:10])
     env.globals["has_tags"] = bool(tag_index(site.posts))
     env.globals["post_style"] = site.style

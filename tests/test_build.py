@@ -348,6 +348,58 @@ def test_page_view_counter_rejects_a_bad_code(content, tmp_path, monkeypatch):
         build.build(content, tmp_path / "public")
 
 
+def test_google_analytics_only_when_configured(content, tmp_path, monkeypatch):
+    """Google Analytics 4 runs beside GoatCounter (Chris, 2026-11-04), turned on only by the publish
+    workflow's GOOGLE_ANALYTICS measurement id, so local builds and previews never count."""
+    monkeypatch.delenv("GOOGLE_ANALYTICS", raising=False)
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    build.build(content, tmp_path / "plain", site_url="https://log.example")
+    plain = (tmp_path / "plain" / "index.html").read_text(encoding="utf-8")
+    assert "googletagmanager" not in plain and "gtag(" not in plain
+    assert "https://owlbear.goatcounter.com/count?p=" in plain
+
+    monkeypatch.setenv("GOOGLE_ANALYTICS", "G-TEST123AB")
+    build.build(content, tmp_path / "both", site_url="https://log.example")
+    for page in ("index.html", "posts/first/index.html", "wiki/index.html", "404.html"):
+        html = (tmp_path / "both" / page).read_text(encoding="utf-8")
+        head = html.split("</head>")[0]
+        assert '<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST123AB"></script>' in head, page
+        assert 'gtag("config", "G-TEST123AB")' in head, page
+        assert "https://owlbear.goatcounter.com/count?p=" in html, page  # GoatCounter stays as it was
+
+
+def test_google_analytics_can_run_without_goatcounter(content, tmp_path, monkeypatch):
+    monkeypatch.delenv("GOATCOUNTER", raising=False)
+    monkeypatch.setenv("GOOGLE_ANALYTICS", "G-TEST123AB")
+    build.build(content, tmp_path / "public", site_url="https://log.example")
+    html = (tmp_path / "public" / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    assert "googletagmanager.com/gtag/js" in html and "goatcounter" not in html
+    assert 'gtag("event", "read_" + step' in html  # the reading events still go to Google
+
+
+@pytest.mark.parametrize("bad", ["UA-12345-1", "G-abc def", "G-X\"><script>", "https://g.co/G-1"])
+def test_google_analytics_rejects_a_bad_id(content, tmp_path, monkeypatch, bad):
+    monkeypatch.setenv("GOOGLE_ANALYTICS", bad)
+    with pytest.raises(ValueError, match="GOOGLE_ANALYTICS"):
+        build.build(content, tmp_path / "public")
+
+
+def test_read_and_vote_events_also_go_to_google_analytics(content, tmp_path, monkeypatch):
+    monkeypatch.setenv("GOATCOUNTER", "owlbear")
+    monkeypatch.setenv("GOOGLE_ANALYTICS", "G-TEST123AB")
+    static = tmp_path / "static"
+    folder = static / "slides" / "2026-09-01-third"
+    (folder / "gemini").mkdir(parents=True)
+    for name in ("01.webp", "gemini/01.webp"):
+        (folder / name).write_bytes(b"")
+    out = tmp_path / "public"
+    build.build(content, out, site_url="https://log.example", slides_static=static)
+    html = (out / "posts" / "third" / "index.html").read_text(encoding="utf-8")
+    reading = html.split("// Reading:")[1].split("</script>")[0]
+    assert '"/read" + path' in reading and 'gtag("event", "read_" + step' in reading
+    assert 'gtag("event", "vote"' in html and '"/vote" + path' in html
+
+
 def test_note_paragraphs_become_table_notes_in_the_margin():
     import article
     html = article.margin_notes("<p>We ran.</p><p>Note: [Meta details] The table laughed.</p><p>Not a Note: here</p>")

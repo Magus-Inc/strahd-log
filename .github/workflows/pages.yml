@@ -57,6 +57,8 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
           # Page-view counts at https://owlbear.goatcounter.com (no cookies); remove to stop counting.
           GOATCOUNTER: owlbear
+          # Google Analytics 4 (G-7CE3V3QTJ8, Chris, 2026-11-04); remove to stop sending to Google.
+          GOOGLE_ANALYTICS: G-7CE3V3QTJ8
       - name: Build pull request previews
         id: previews
         run: python tools/pr_previews.py build --origin "$ORIGIN" --base-path "$BASE_PATH" --skip "$SKIP"

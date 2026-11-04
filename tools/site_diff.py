@@ -96,7 +96,7 @@ def build_ref(ref: str, out: Path, work: Path) -> None:
 
 
 def build_checkout(checkout: Path, out: Path) -> None:
-    env = {k: v for k, v in os.environ.items() if k not in ("GOATCOUNTER", "URL", "BASE_PATH")}
+    env = {k: v for k, v in os.environ.items() if k not in ("GOATCOUNTER", "GOOGLE_ANALYTICS", "URL", "BASE_PATH")}
     code = ("import sys; from pathlib import Path; import build; "
             f"build.build(out_dir=Path(sys.argv[1]), site_url={SITE_URL!r}, base_path='/')")
     subprocess.run([sys.executable, "-c", code, str(out)], cwd=checkout, env=env, check=True)
