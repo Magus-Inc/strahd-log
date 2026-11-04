@@ -1,7 +1,8 @@
 """Aera's werewolf curse (Chris, 2026-11-04: "I thought we undid that with a spell"). Chris's notes
 for 5/13/2025 say Oogway cast Remove Curse on her before she drank the blood in Strahd's hourglass
-game, and the blood turned her fully into a werewolf anyway. Nothing later records a cure, so her
-page tells the spell and the change in that order, each citing the session."""
+game, and the blood turned her fully into a werewolf anyway. Nothing later records a cure or a
+change, and Chris is not sure (2026-11-04: "leave it open"), so her page tells the spell and the
+change in that order, each citing the session, and says nobody knows whether the curse still holds."""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -30,3 +31,8 @@ def test_aera_log_line_keeps_the_spell():
 def test_oogway_log_has_the_spell():
     _, log = _parts("oogway")
     assert any("Remove Curse" in l and "Aera" in l and POST in l for l in log.splitlines())
+
+
+def test_aera_story_leaves_the_curse_open():
+    story, _ = _parts("aera-shan-ravanor")
+    assert "whether the curse still holds" in story
