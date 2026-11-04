@@ -18,6 +18,12 @@ source: Compiled from the adventure log, with a description written for the site
 
 A silver statuette, alive, a shard of the divinity of an angelic servant of the Morning Lord. Ezmerelda's séance first told us of it ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)). I found it in Saint Markovia's robes in her crypt, and it spoke to me mind to mind ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)). It told us the Abbot's history and warned us to ready our steel ([The Shard’s Warning and the Abbot’s Madness](/posts/the-shard-s-warning-and-the-abbot-s-madness/)). Through it we reached the Abbot's soul and Saint Markovia restored him ([The Fallen Star: Ape, Sacrifice and Redemption](/posts/the-fallen-star-ape-sacrifice-and-redemption/)). It has not spoken since ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
+## What it does
+
+* Its powers work only for a creature attuned to it.
+* As an action, present the icon: you and each creature within 30 feet of you get the effect of *protection from evil and good* against fiends and undead until the start of your next turn. It can't be used again until the next dawn.
+* It is sentient and lawful good. It hears and sees in the dark out to 120 feet, understands all languages, and speaks mind to mind with whoever carries it.
+
 <!-- from-the-log -->
 ## From the adventure log
 

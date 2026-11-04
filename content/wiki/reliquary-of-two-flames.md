@@ -17,6 +17,12 @@ All that is left of Liren and Gumbo. When the spirits rose out of the abbey and 
 
 A couple of times a day, the flames can help someone nearby who has just failed at something. And once, only once, the reliquary can be crushed to give up one of the flames and bring a fallen companion back to life ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
+## What it does
+
+* 2 charges. It regains both after a long rest.
+* When a creature you can see within 30 feet fails an attack roll, ability check or saving throw, you can use your reaction and 1 charge to help it with that roll.
+* Once ever: when a companion dies, crush the reliquary as an action and give up one of the two flames to bring them back to life.
+
 <!-- from-the-log -->
 ## From the adventure log
 

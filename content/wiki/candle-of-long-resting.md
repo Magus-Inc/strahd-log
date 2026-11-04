@@ -11,6 +11,11 @@ source: Compiled from the adventure log, with a description written for the site
 
 A candle that burns only once and gives a good rest in a short time. We were given it to help us through Castle Ravenloft ([Depths of Ravenloft](/posts/depths-of-ravenloft/)).
 
+## What it does
+
+* Light it during a short rest to get the benefits of a long rest instead.
+* It burns only for that one short rest, so it can be used once.
+
 <!-- from-the-log -->
 ## From the adventure log
 

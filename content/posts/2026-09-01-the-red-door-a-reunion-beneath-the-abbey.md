@@ -93,7 +93,7 @@ Outside, a black carriage waited on the road, its door open and no driver in sig
 
 ## Loot
 
-* **Reliquary of Two Flames**: Aera’s. A palm-sized silver reliquary shaped like a gothic chapel, holding two silver flames, the lingering echoes of Liren and Gumbo. Two charges, regained on a long rest: when a creature you can see within 30 feet fails an attack roll, ability check or saving throw, spend your reaction and a charge to help it (the DM’s exact wording on the bonus was hard to hear; confirm with him). Once ever: when a character dies, crush it as an action and sacrifice one flame to return a companion to life.
+* **Reliquary of Two Flames**: Aera’s. A palm-sized silver reliquary shaped like a gothic chapel, holding two silver flames, the lingering echoes of Liren and Gumbo. Two charges, regained on a long rest: when a creature you can see within 30 feet fails an attack roll, ability check or saving throw, spend your reaction and a charge to help it with that roll (the exact bonus was hard to hear). Once ever: when a character dies, crush it as an action and sacrifice one flame to return a companion to life.
 * **Strahd’s letter**, left in a black carriage.
 
 Note: Aera’s search for the reliquary was a 24.
