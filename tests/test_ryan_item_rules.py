@@ -85,3 +85,15 @@ def test_ryans_march_18_loot_is_in_the_march_11_post():
     loot = post.split("## Loot", 1)[1].split("\n## ", 1)[0]
     for words in ("greater healing", "dust of disappearance", "75 gold"):
         assert words in loot.lower()
+
+
+def test_durst_shard_is_named_apart_from_seriach():
+    # Chris, 2026-11-04: two amber shards, Aera carries both; name Elisabeth's by the house
+    assert not (WIKI / "amber-shard.md").exists()
+    meta, body = _parts("durst-amber-shard")
+    assert meta["title"] == "Durst Amber Shard"
+    redirects = yaml.safe_load((WIKI.parent.parent / "data" / "redirects.yaml").read_text(encoding="utf-8"))
+    assert redirects["wiki"]["amber-shard"] == "durst-amber-shard"
+    assert "/wiki/amber-shard-of-seriach/" in body
+    _, seriach = _parts("amber-shard-of-seriach")
+    assert "/wiki/durst-amber-shard/" in seriach and "Aera" in seriach
