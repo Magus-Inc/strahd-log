@@ -21,7 +21,9 @@ wiki:
   # The amber shard of Seriach is the hell hound whisperer, one item (the DM's Discord post; Chris, 2026-11-04).
   hell-hound-whisperer: amber-shard-of-seriach
   # Elisabeth's shard, named by the house to tell it from the Seriach shard (Chris, 2026-11-04).
-  amber-shard: durst-amber-shard
+  amber-shard: amber-shard-of-durst-manor
+  # Renamed so both shards sit together in the wiki list (Chris, 2026-11-04).
+  durst-amber-shard: amber-shard-of-durst-manor
   becephalus: beucephalus
   billdrath: bildrath
   carl: karl
