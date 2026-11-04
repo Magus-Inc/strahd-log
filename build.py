@@ -35,6 +35,7 @@ import barovia_map
 import poststyle
 import sources as source_list
 import share
+import start
 import wiki
 import wikistyle
 
@@ -582,6 +583,7 @@ class Site:
     landmarks: dict = field(default_factory=dict)
     legs: list = field(default_factory=list)
     sprites: list = field(default_factory=list)
+    start: start.StartPage | None = None  # the Start here page, from data/start-here.yaml
 
 
 # --- the stages: each takes the Site and changes it in place ------------------------------------
@@ -637,9 +639,20 @@ def lay_out_map(site: Site) -> None:
     site.sprites = barovia_map.load_sprites(site.map_file, ROOT / "static" / "images" / "map" / "sprites")
 
 
+def plan_start(site: Site) -> None:
+    """The Start here page: chapters, party and fortune; needs the party data and the cast."""
+    path = site.data_dir / "start-here.yaml"
+    if not path.exists():
+        return
+    linker = wiki.Linker(site.pages, wiki.load_phrases(site.data_dir / "described-places.yaml", site.pages),
+                         wiki.load_exact_names(site.data_dir / "name-case.yaml"))
+    site.start = start.plan(start.load(path), site.posts, site.pages, site.static_dir,
+                            lambda md: linker.link(render_markdown(md))[0] if md else "")
+
+
 # The only place the order lives (tests/test_stages.py).
 STAGES = (style_posts, number_posts, link_names, cite_wiki, style_wiki, attach_slides, attach_party,
-          reading_aids, lay_out_map)
+          reading_aids, lay_out_map, plan_start)
 
 
 def prepare(content_dir: Path = ROOT / "content" / "posts", wiki_dir: Path | None = None,
@@ -680,6 +693,10 @@ def make_env(site: Site, site_url: str, base: str) -> Environment:
     env.globals["wiki_style"] = site.wiki_style
     env.globals["map_sprites"] = site.sprites
     env.globals["all_places"] = site.places
+    env.globals["has_start"] = site.start is not None
+    env.globals["start_party"] = site.start.party if site.start else []
+    env.globals["start_fortune"] = bool(site.start and site.start.fortune)
+    env.globals["start_first"] = site.posts[-1] if site.posts else None  # the first session, for the banner
     return env
 
 
@@ -789,6 +806,9 @@ def write_extras(site: Site, env: Environment, out_dir: Path, site_url: str, bas
     write(out_dir / "search-index.json", build_search_index(site.posts, site.pages))
     write(out_dir / "bot" / "corpus.json", build_bot_corpus(site.posts, site.pages, site_url + base))
     write(out_dir / "404.html", env.get_template("404.html").render())
+    if site.start:
+        write(out_dir / "start" / "index.html",
+              env.get_template("start.html").render(share_page={"path": "start/"}, start=site.start))
     write(out_dir / "feed.xml", build_feed(site.posts, site_url + base))
     write(out_dir / "sitemap.xml", build_sitemap(sitemap_paths(site), site_url + base))
     write(out_dir / "robots.txt", robots_txt(site_url + base))

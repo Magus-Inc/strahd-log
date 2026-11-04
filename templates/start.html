@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% import "_badges.html" as badges with context %}
+{# Start here (Chris's picks, 2026-11-04): a castle picture with a two-line hook, the party
+   (moved above the story by Chris; the ways in moved to the home page banner), then the story so far in six chapters, Madam Eva's fortune, the map, tips and about.
+   The words live in data/start-here.yaml; start.py works out the rest. #}
+{% set section = "start" %}
+{% block title %}Start here | {{ site_title }}{% endblock %}
+{% block content %}
+{% set s = start %}
+    <header class="start-hero"{% if s.hero %} style="background-image: url('{{ base }}{{ s.hero }}')"{% endif %}>
+      <div class="start-hero-text">
+        <p class="eyebrow">New here?</p>
+        <h1>Welcome to Barovia</h1>
+        <p class="lede">{{ s.hook }}</p>
+      </div>
+    </header>
+
+    <section class="start-section" id="party" aria-labelledby="party-title">
+      <h2 id="party-title">The party</h2>
+      <ul class="party-grid">
+{% for p in s.party %}
+        <li><a href="{{ base }}{{ p.path }}">{% if p.pictures %}<img src="{{ base }}{{ p.pictures[0] | replace('/', '', 1) }}" alt="" loading="lazy" decoding="async">{% endif %}<strong>{{ p.title.split()[0] }}</strong><span>{{ p.summary }}</span></a></li>
+{% endfor %}
+      </ul>
+{% if s.past %}
+      <h3>Who came and went</h3>
+      <ul class="past-party">
+{% for m in s.past %}
+        <li class="{{ m.status }}"><a href="{{ base }}{{ m.page.path }}">{% if m.page.thumb %}<img src="{{ base }}{{ m.page.thumb }}" alt="" loading="lazy" decoding="async">{% endif %}<span class="past-name">{{ m.page.title.split()[0] }}</span><span class="life-tag {{ m.status }}-tag">{{ badges.life_icon(m.status) }}{{ m.status }}</span></a></li>
+{% endfor %}
+      </ul>
+{% endif %}
+    </section>
+
+    <section class="start-section" id="story" aria-labelledby="story-title">
+      <h2 id="story-title">The story so far</h2>
+      <div class="prose start-premise">{{ s.premise_html | rebase | safe }}</div>
+      <ol class="chapters">
+{% for c in s.chapters %}
+        <li class="chapter">
+          <img class="chapter-pic" src="{{ base }}{{ c.picture }}" alt="" loading="lazy" decoding="async">
+          <div class="chapter-text">
+            <p class="chapter-meta">Chapter {{ loop.index }} &middot; {{ c.span }} &middot; {{ c.posts | length }} session{{ "s" if c.posts | length != 1 }}</p>
+            <h3>{{ c.title }}</h3>
+            <div class="prose">{{ c.html | rebase | safe }}</div>
+{% if c.moments %}
+            <p class="moments">{% for m in c.moments %}{% if m.kind == "won" %}<a class="won-tag" href="{{ base }}{{ m.page.path }}"><span aria-hidden="true">&#10022; </span>{{ m.label }}</a>{% else %}<span class="life-tag {{ m.kind }}-tag">{{ badges.life_icon(m.kind) }}{{ m.label }}</span>{% endif %}{% endfor %}</p>
+{% endif %}
+            <p class="chapter-start">Start with <a href="{{ base }}{{ c.first.path }}">{{ c.first.title }}</a></p>
+            <details class="chapter-sessions">
+              <summary>All {{ c.posts | length }} sessions in this chapter</summary>
+              <ol>
+{% for p in c.posts %}
+                <li><a href="{{ base }}{{ p.path }}">{{ p.title }}</a>{% if p.tagline %} <span class="muted">{{ p.tagline }}</span>{% endif %}</li>
+{% endfor %}
+              </ol>
+            </details>
+          </div>
+        </li>
+{% endfor %}
+{% if s.uncovered %}
+        <li class="chapter chapter-newest">
+          <div class="chapter-text">
+            <h3>Since then</h3>
+            <ol>
+{% for p in s.uncovered %}
+              <li><a href="{{ base }}{{ p.path }}">{{ p.title }}</a></li>
+{% endfor %}
+            </ol>
+          </div>
+        </li>
+{% endif %}
+      </ol>
+    </section>
+
+{% if s.fortune %}
+    <section class="start-section" id="fortune" aria-labelledby="fortune-title">
+      <h2 id="fortune-title">Madam Eva's fortune</h2>
+      <p class="muted">At Tser Pool she drew five cards for us. What each one pointed to, and where we stand.</p>
+      <ol class="fortune">
+{% for c in s.fortune %}
+        <li class="{{ 'found' if c.found_in else 'looking' }}">
+          <p class="card-name">{{ c.card }}</p>
+          <p>{{ c.told }} <a href="{{ base }}{{ c.page.path }}">{{ c.page.title }}</a></p>
+          <p class="card-status">{% if c.found_in %}Found in <a href="{{ base }}{{ c.found_in.path }}">{{ c.found_in.title }}</a>{% else %}{{ c.status or "Still looking." }}{% endif %}</p>
+        </li>
+{% endfor %}
+      </ol>
+    </section>
+{% endif %}
+
+{% if all_places %}
+    <section class="start-section" id="map" aria-labelledby="map-title">
+      <h2 id="map-title">Where we have been</h2>
+      <a class="map-teaser" href="{{ base }}map/"><img src="{{ base }}images/map-teaser.jpg" alt="Our map of Barovia" width="960" height="720" loading="lazy" decoding="async"><span>Open the map</span></a>
+    </section>
+{% endif %}
+
+    <section class="start-section" id="how-to-read" aria-labelledby="how-title">
+      <h2 id="how-title">How to read this blog</h2>
+      <ul class="how-to-read prose">
+{% for tip in s.how_to_read %}
+        <li>{{ tip.html | rebase | safe }}{% if tip.note %}<aside class="margin-note" aria-label="From the table"><p>{{ tip.note | safe }}</p></aside>{% endif %}</li>
+{% endfor %}
+      </ul>
+    </section>
+
+    <section class="start-section" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About this record</h2>
+      <p>{{ s.about }} <a href="{{ base }}wiki/dungeon-master/">About the Dungeon Master</a></p>
+    </section>
+{% endblock %}

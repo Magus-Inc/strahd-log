@@ -7,6 +7,37 @@
         <h2 id="chronicle-title">The chronicle</h2>
         <p class="muted">{{ count }} sessions, newest first</p>
       </div>
+{% if has_start %}
+      {# For first-time readers (Chris, 2026-11-04): a banner with five ways in that a reader can close; their
+         browser remembers. Without the script it simply stays. The party's faces are the first button. #}
+      <aside class="new-here" id="new-here" aria-label="New readers">
+        <p class="new-here-text"><strong>New here?</strong> Pick a way in, or <a href="{{ base }}start/">open the start page</a>.</p>
+        <nav class="doors" aria-label="Ways in">
+          <a class="door" href="{{ base }}start/#party"><span class="new-here-faces" aria-hidden="true">{% for p in start_party %}{% if p.thumb %}<img src="{{ base }}{{ p.thumb }}" alt="" width="40" height="40" decoding="async">{% endif %}{% endfor %}</span><span><strong>Meet the party</strong><span>Who is with us now, and who came before</span></span></a>
+          <a class="door" href="{{ base }}start/#story"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h12M6 21h12M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9"/></svg></span><span><strong>Catch up in 3 minutes</strong><span>The story so far, one short paragraph per chapter</span></span></a>
+{% if start_fortune %}
+          <a class="door" href="{{ base }}start/#fortune"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M7 3h10v18H7zM12 8l2 4-2 4-2-4z"/></svg></span><span><strong>What we are hunting</strong><span>Madam Eva's five cards, and which we have found</span></span></a>
+{% endif %}
+{% if start_first %}
+          <a class="door" href="{{ base }}{{ start_first.path }}"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h10l3 3v15H6zM9 9h7M9 13h7M9 17h4"/></svg></span><span><strong>Read from the beginning</strong><span>{{ start_first.title }}, {{ start_first.date | nice_date }}</span></span></a>
+{% endif %}
+{% if all_places %}
+          <a class="door" href="{{ base }}map/"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></svg></span><span><strong>See where we have been</strong><span>The map, with every session marked</span></span></a>
+{% endif %}
+        </nav>
+        <button class="new-here-close" type="button" aria-label="Hide this banner">&times;</button>
+      </aside>
+      <script>
+        (function () {
+          var box = document.getElementById("new-here");
+          try { if (localStorage.getItem("hide-new-here")) box.hidden = true; } catch (e) {}
+          box.querySelector(".new-here-close").addEventListener("click", function () {
+            try { localStorage.setItem("hide-new-here", "1"); } catch (e) {}
+            box.hidden = true;
+          });
+        })();
+      </script>
+{% endif %}
 {% if years %}
       <nav class="year-chips" aria-label="Jump to a year">
 {% for year, _ in years %}
