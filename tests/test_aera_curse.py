@@ -42,3 +42,12 @@ def test_malron_remembers_that_night_as_a_blur():
     """Chris, 2026-11-04: play the gap off as Malron's hazy, shaken memory of Strahd's game."""
     story, _ = _parts("aera-shan-ravanor")
     assert "blur" in story and "bad dream" in story
+
+
+def test_malron_tells_his_price_and_lathanders_help():
+    """Chris, 2026-11-04: Malron was told he would lose his spells for three days, and he believes
+    Lathander heard his silent prayers and meditation, lifted the curse and rewarded his faith."""
+    story, log = _parts("malron-lichtstrahl")
+    assert "three days" in story and "Lathander" in story and POST in story
+    line = next(l for l in log.splitlines() if "Strahd's game" in l)
+    assert "three days" in line and "Lathander" in line
