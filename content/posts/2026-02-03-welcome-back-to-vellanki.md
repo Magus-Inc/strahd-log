@@ -9,7 +9,7 @@ sources: ["notes-15w78b", "notes-p72csq", "transcript-529b59", "recording-2ky28j
 feature: rahadin-ai.jpg
 ---
 
-Note: This session was written up twice on Obsidian Portal: as “Welcome Back To Vallaki” and as “Shadows and Steel—The Ravenloft Infiltration Plan” (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both, checked against the session notes and the recording of the night.
+Note: This session was written up twice on Obsidian Portal: as “Welcome Back To Vallaki” and as “Shadows and Steel—The Ravenloft Infiltration Plan” (the [notebook](https://curseofstrahdowlbear.obsidianportal.com/adventure-log/notebook) version). This post combines both.
 
 ## At a Glance
 

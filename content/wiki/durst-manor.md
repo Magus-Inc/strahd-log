@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/durst
 
 ![Durst Manor, four stories with a third-floor balcony, looming out of the mist at dusk, a girl and a little boy waiting near the front](/images/durst-manor-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
@@ -22,7 +22,7 @@ The mists brought us from Daggerford to this house, the first place we came to i
 
 ![A suit of black plate armor shoving Olfin back over the stair rail on the third floor of Durst Manor](/images/black-armor-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from the Deeper into the Manor log. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 A hidden stair led down into a cult's dungeon. We fought what was left of Gustav, a mimic and the cult's horrors, and at the bottom destroyed Walter in a mound of flesh. Gustav let us go to give his children peace, and the house fell into the ground behind us ([Finishing the Manor?](/posts/finishing-the-manor/), [Walter, we are coming for you!](/posts/walter-we-are-coming-for-you/)). We buried Rose and Thorn by a nearby tower the next morning ([Barovia, Barovia](/posts/barovia-barovia/)).
 

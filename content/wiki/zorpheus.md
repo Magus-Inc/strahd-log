@@ -11,13 +11,13 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Zorpheus, a hooded bard with a lute, fortune cards and a thief's dagger](/images/zorpheus-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs.*
 
 A mysterious wanderer and bard, a former thief, drawn to fate and prophecy. At the Whispering Wall he heard the prophecy confirmed and barely escaped. Minofaustus then handed him to Gumbo as a servant. He chose blood in Strahd's hourglass game and explored Argynvostholt with Aera and Malron. At Castle Ravenloft he helped Sasha clean up spilled wine, which earned a tip about the organ's sixth pedal and a plea to rescue Gertruda.
 
-Zorpheus never died. Over the 2025 holidays the DM let Grant set Zorpheus aside and bring Shabasta back, and Shabasta rejoined the party in February 2026.
+Zorpheus never died. Over the 2025 holidays the DM let his player set Zorpheus aside and bring Shabasta back, and Shabasta rejoined the party in February 2026.
 
 <!-- from-the-log -->
 ## From the adventure log

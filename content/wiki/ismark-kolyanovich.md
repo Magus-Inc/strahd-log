@@ -15,7 +15,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/ismar
 
 ![Ismark, a tired young man in a cloak with a longsword, in a dim tavern](/images/ismark-kolyanovich-ai-2.jpg)
 
-*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated images (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

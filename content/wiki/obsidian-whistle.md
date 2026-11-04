@@ -13,15 +13,13 @@ sources:
 
 ![The Keeper's Whistle: a black obsidian raven with an open beak, its mouthpiece bound with cord, on a candlelit table](/images/obsidian-whistle-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
 A whistle of black obsidian shaped like a raven. Davian of the Keepers of the Feather gave it to us at the Wizard of Wines, as thanks for recovering the gem the winery needs to make its wine ([Welcome to Krezk](/posts/welcome-to-krezk/)). One note calls a wereraven of the Keepers to our side.
 
 ## What it does
-
-*Ryan shared the Keeper's Whistle rules on 22 April 2025. In short:*
 
 * **Once a day**, blowing it calls the nearest wereraven agent of the Keepers of the Feather within five miles, if there is one. The agent flies in, in raven form, which can take a while.
 * **One task, within reason:**

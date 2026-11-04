@@ -68,8 +68,11 @@ def test_story_cites_a_post(stem):
 
 
 @pytest.mark.parametrize("stem", ["bracelet-of-warding", "amulet-of-knights-passage"])
-def test_rules_from_the_item_card_are_dated(stem):
-    assert "*From the item card shared at the table (3 June 2025). In short:*" in _ours(stem)
+def test_rules_from_the_item_card_keep_their_source_hidden(stem):
+    # Chris, 2026-11-04: no visible "From the item card shared at the table" line; the card is a
+    # hidden discord- id in the page's sources (tests/test_player_mentions.py).
+    assert "## What it does" in _ours(stem) and "shared at the table" not in _ours(stem)
+    assert any(s.startswith("discord-") for s in _page(WIKI / f"{stem}.md").sources)
 
 
 def test_heart_stone_post_has_ryans_second_paragraph():

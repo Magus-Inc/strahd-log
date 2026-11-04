@@ -13,7 +13,7 @@ so the boon went to Olfin's sword until the party finds the Sunsword.
 
 ## Stats
 
-As Ryan posted them on Discord after the session (2026-09-29): a +1 magic weapon with 3 charges,
+A +1 magic weapon with 3 charges,
 all regained at dawn.
 
 * **1 charge, bonus action:** silver flames wreathe the blade for 1 minute. Each attack deals an

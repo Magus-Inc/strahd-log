@@ -13,15 +13,13 @@ sources:
 
 ![The Staff of Khazan, a plain platinum staff wrapped in blue-white lightning, hovering above the skeleton on the slab in Khazan's tomb](/images/staff-of-khazan-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
 An elegant staff of platinum, sparkling with arcane energy. Victor first told us of it: a powerful wizard's staff, magically bound so that Khazan could call it to him by speaking his own name, and he wanted us to fetch it from Khazan's tower ([Whispers in the Baron's Mansion](/posts/whispers-in-the-barons-mansion/)). We set out to find Szoldar to guide us to the tower that held it ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/)). In the end it turned out to be in Khazan's tomb in the catacombs of Ravenloft. When we solved the puzzle of runes for the eight schools of magic, the staff appeared, and Crusty bound himself to it, though arcane lightning surged through his veins ([The Master of Runes and the Hellborn’s Spear](/posts/the-master-of-runes-and-the-hellborn-s-spear/)).
 
 ## What it does
-
-*Ryan shared the staff's rules on 14 April 2026. In short:*
 
 * **Legendary staff.** Only a sorcerer, warlock or wizard can attune to it. It weighs 4 lb.
 * **As a weapon** it is a +2 magic quarterstaff (1d6 bludgeoning, or 1d8 two-handed).

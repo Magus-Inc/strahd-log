@@ -11,8 +11,6 @@ sources:
 
 ## What she is
 
-*Ryan shared Zorya's stat block on 27 May 2025. In short:*
-
 * **Tiny undead, neutral good.** AC 13, 7 hit points, walks 15 feet and hovers in flight at 60 feet.
 * **Hard to hurt.** Immune to most elemental damage, poison and nonmagical weapons, and to nearly every condition; advantage on saves against magic.
 * **A ghost.** She drifts through creatures and objects, and once a day, instead of dropping to 0 hit points, she slips into the Ethereal Plane and returns a minute later.
@@ -24,7 +22,7 @@ sources:
 
 ![Zorya, a tiny ghostly pseudodragon, hovering in a ruined hall at Argynvostholt](/images/zorya-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

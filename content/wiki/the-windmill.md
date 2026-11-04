@@ -13,7 +13,7 @@ heard_of_in:
 
 ![A decrepit wooden windmill with broken sails on a forest road at dusk, a rope hanging from its tower, a hand cart and a stone well by the door](/images/the-windmill-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

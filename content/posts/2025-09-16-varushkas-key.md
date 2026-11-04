@@ -8,8 +8,6 @@ sources: ["notes-eiyw1l", "notes-hw5ma8"]
 feature: varushka-ai.jpg
 ---
 
-Note: Written from the session notes; there is no recording.
-
 ## Story
 
 ### Cold at Our Necks

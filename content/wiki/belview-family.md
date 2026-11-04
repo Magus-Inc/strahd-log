@@ -12,7 +12,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Two of the Belviews waiting outside the abbey's north gate for news of Cyrus](/images/belview-family-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

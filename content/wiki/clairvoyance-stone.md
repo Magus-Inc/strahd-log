@@ -9,8 +9,6 @@ sources:
 
 ## What it does
 
-*Ryan shared the stone's rules on 10 February 2026. In short:*
-
 * A smooth, palm-sized stone carved with a bird's eye.
 * Hold it to your eye and whisper a place as an action to gain the effects of the clairvoyance spell.
 * It works three times; after the third, it crumbles to dust.

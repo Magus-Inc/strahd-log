@@ -16,7 +16,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Strahd on a misty forest road at night with two dire wolves](/images/strahd-von-zarovich-ai-2.jpg)
 
-*AI-generated images (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated images (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

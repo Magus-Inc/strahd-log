@@ -13,15 +13,13 @@ sources:
 
 ![The Symbol of Ravenkind, a silver sunburst amulet with a red crystal at its heart, on dark velvet beside a candle](/images/symbol-of-ravenkind-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from a picture of the amulet shared at the table. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
 A sunburst amulet of pale silver with a red crystal at its heart. Elizabella's song of the ravens first pointed us toward it ([Tser Pool](/posts/tser-pool/)), and Davian told us its history and its tie to Strahd ([Welcome to Krezk](/posts/welcome-to-krezk/)). Zuleika gave it to Olfin when we swore to free Emil ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/)). Olfin carried it into Castle Ravenloft, where it is one of our best weapons against vampires, and he turned its light on Volenta ([Shadows and Steel: The Ravenloft Infiltration Plan](/posts/welcome-back-to-vellanki/), [The Fall of Volenta Popofsky](/posts/the-fall-of-volenta-popofsky/)).
 
 ## What it does
-
-*Ryan shared the item's rules on 10 March 2026. In short:*
 
 * **Legendary wondrous item.** Only a creature of good alignment can attune to it.
 * **Charges.** It holds 5 charges and regains 1d4 + 1 each dawn.

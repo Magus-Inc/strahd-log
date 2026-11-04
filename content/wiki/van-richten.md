@@ -19,7 +19,7 @@ sources:
 
 ![Van Richten as Rictavio, a colourful half-elf showman in a big hat beside his yellow wagon](/images/van-richten-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

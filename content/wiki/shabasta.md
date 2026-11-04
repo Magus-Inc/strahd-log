@@ -14,11 +14,11 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Shabasta, porcupine bard, playing the lute at a Vistani camp](/images/shabasta-ai-portrait.jpg)
 
-*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+*AI-generated portrait (Google Gemini, October 2026). Not player art.*
 
 A porcupine bard with a flair for the dramatic, Shabasta combines enchanting music with prickly wit. Their spiny nature extends beyond appearance, as they excel at weaving biting satire into their performances. Shabasta’s unusual form surprises friend and foe alike, and their sharp melodies inspire courage in allies while disheartening enemies.
 
-Shabasta died in the battle with the spirits at the gallows ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/), February 2025). Grant went on to play Shabasta's brother Veyren, then Zorpheus. Zorpheus never died: over the 2025 holidays the DM let Grant set Zorpheus aside and bring Shabasta back. Shabasta, who had died a year before, returned in February 2026.
+Shabasta died in the battle with the spirits at the gallows ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/), February 2025). His player went on to play Shabasta's brother Veyren, then Zorpheus. Zorpheus never died: over the 2025 holidays the DM let his player set Zorpheus aside and bring Shabasta back. Shabasta, who had died a year before, returned in February 2026.
 
 <!-- from-the-log -->
 ## From the adventure log

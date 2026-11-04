@@ -13,7 +13,7 @@ sources:
 
 ![Lake Baratok in the mist, a stone tower on one shore and a wolf at a cave mouth on the far shore](/images/lake-baratok-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
