@@ -32,6 +32,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import article
 import barovia_map
+import headings
 import poststyle
 import sources as source_list
 import share
@@ -576,6 +577,8 @@ def build_feed(posts: list[Post], root: str, limit: int = 20) -> str:
 
 def write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.suffix == ".html":
+        text = headings.link_headings(text)
     path.write_text(text, encoding="utf-8", newline="\n")
 
 

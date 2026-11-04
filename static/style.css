@@ -39,6 +39,12 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.2; 
 h1 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem); margin: 0.2rem 0 0.6rem; }
 h2 { font-size: clamp(1.4rem, 1.15rem + 1vw, 1.75rem); margin: 2.4rem 0 0.8rem; }
 h3 { font-size: 1.25rem; margin: 1.8rem 0 0.6rem; }
+/* Each section heading links to itself so readers can share it (Chris, 2026-11-04). Faint until
+   hovered so it doesn't compete with the words, but always there for phones, which have no hover. */
+.heading-link { display: inline-flex; vertical-align: middle; margin-left: 0.3rem; padding: 0.35rem; border-radius: 6px; color: var(--muted); opacity: 0.45; text-decoration: none; position: relative; transition: opacity 0.15s, color 0.15s; }
+.heading-link svg { width: 0.8em; height: 0.8em; min-width: 14px; min-height: 14px; }
+h2:hover > .heading-link, h3:hover > .heading-link, .heading-link:hover, .heading-link:focus-visible, .heading-link[data-copied] { opacity: 1; color: var(--gold); }
+.heading-link[data-copied]::after { content: "Link copied"; position: absolute; right: 0; top: 100%; z-index: 3; white-space: nowrap; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0; color: var(--text); background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 0.15rem 0.45rem; }
 code { background: var(--surface-2); padding: 0.1em 0.35em; border-radius: 5px; font-size: 0.9em; }
 .muted { color: var(--muted); }
 .skip { position: absolute; left: -999px; top: 0.5rem; background: var(--accent); color: #fff; padding: 0.4rem 0.8rem; border-radius: 6px; z-index: 10; }
@@ -376,6 +382,7 @@ a.place-num { text-decoration: none; } a.place-num:hover { background: var(--acc
   .site-header, .site-footer, .toc, .pager, .where-we-were, .map-controls, .skip { display: none !important; }
   .prose a { color: #111; } h1, h2, h3, .prose strong { color: #111; }
   .callout.glance, .prose blockquote { background: none; }
+  .heading-link { display: none; }
 }
 .map .labels a { cursor: pointer; }
 .map .labels a:hover text { fill: var(--accent); text-decoration: underline; }

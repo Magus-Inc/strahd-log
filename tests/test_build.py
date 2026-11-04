@@ -71,7 +71,7 @@ def test_build_writes_pages_feed_and_links(content, tmp_path):
     assert 'href="/posts/second/"' in newest and "Next &rarr;" not in newest
 
     first = (out / "posts" / "first" / "index.html").read_text(encoding="utf-8")
-    assert '<h2 id="arrival">Arrival</h2>' in first and "<blockquote>" in first and "<table>" in first
+    assert '<h2 id="arrival">Arrival<a class="heading-link" href="#arrival"' in first and "<blockquote>" in first and "<table>" in first
 
     tags = (out / "tags" / "index.html").read_text(encoding="utf-8")
     assert 'id="barovia"' in tags and 'id="wolves"' in tags

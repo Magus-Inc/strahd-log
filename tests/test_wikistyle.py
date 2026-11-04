@@ -196,7 +196,7 @@ def test_zorya_reads_picture_story_stats_then_folded_notes(site):
     """The page Chris asked about: picture and facts under the title, the story once, notes folded."""
     html = page(site, "zorya")
     assert html.index('class="infobox"') < html.index("zorya-ai.jpg") < html.index('<div class="prose">') \
-        < html.index("<h2>Malron’s Account</h2>") < html.index("What she is") < html.index('<details class="log-notes">')
+        < html.index('<h2 id="malron-s-account">Malron’s Account<') < html.index("What she is") < html.index('<details class="log-notes">')
     assert ">First seen<" in html and ">Last seen<" in html and "Also known as" in html
     assert "Written from the session logs" not in html and ">Description<" not in html
     lede_and_body = html[html.index('<div class="prose">'):]
@@ -217,8 +217,8 @@ def test_no_wiki_page_tells_its_story_under_description_any_more(site):
     for d in (site / "wiki").iterdir():
         if (d / "index.html").is_file():
             html = (d / "index.html").read_text(encoding="utf-8")
-            assert "<h2>Description</h2>" not in html, d.name
-            if "<h2>Malron’s Account</h2>" in html and "From the adventure log" in html:
+            assert not re.search(r"<h2[^>]*>Description<", html), d.name
+            if re.search(r"<h2[^>]*>Malron’s Account<", html) and "From the adventure log" in html:
                 assert '<details class="log-notes">' in html, d.name
 
 
