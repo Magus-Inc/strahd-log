@@ -42,14 +42,14 @@
 {{ body | safe }}
       </div>
 {% if place %}
-      <section class="where-we-were">
+      <section class="where-we-were" id="on-the-map">
         <h2>On the map</h2>
         <p class="muted">{% if place.slug != page.slug %}In <a href="{{ base }}{{ place.path }}">{{ place.title }}</a> &middot; {% endif %}<a href="{{ base }}map/">Open the map</a></p>
         {{ barovia([place], label="Where " ~ page.title ~ " is", focus=place) }}
       </section>
 {% endif %}
 {% if page.mentioned_in %}
-      <section class="appears-in">
+      <section class="appears-in" id="appears-in">
         <h2>Appears in {{ page.mentioned_in | length }} session{{ "s" if page.mentioned_in | length != 1 }}</h2>
         <ol class="session-list numbered">
 {% for post in page.mentioned_in %}

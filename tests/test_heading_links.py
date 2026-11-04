@@ -97,3 +97,39 @@ def test_tapping_a_heading_link_copies_the_address():
     assert "a.heading-link" in base and "clipboard" in base
     css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
     assert ".heading-link" in css
+
+
+# --- found in review --------------------------------------------------------------------------
+
+def test_a_section_with_an_id_is_the_target_even_without_aria_labelledby():
+    # The tags page: <section id="wolves"><h2>Wolves</h2>; its tag cloud links to #wolves.
+    html = headings.link_headings('<main><section class="tag-section" id="wolves">\n  <h2>Wolves</h2>\n</section></main>')
+    assert LINK.findall(html) == ["wolves"]
+    assert 'aria-labelledby="wolves-title-name"' in html and '<h2 id="wolves-title">' in html
+
+
+def test_a_section_is_still_named_by_its_heading_words_alone():
+    # Screen readers name a region from aria-labelledby: the link's label must not be read twice.
+    html = headings.link_headings('<main><section id="story" aria-labelledby="story-title">'
+                                  '<h2 id="story-title">The story so far</h2></section></main>')
+    label = re.search(r'aria-labelledby="([^"]+)"', html).group(1)
+    named = re.search(rf'id="{label}"[^>]*>(.*?)</', html).group(1)
+    assert named == "The story so far"
+
+
+def test_single_quoted_ids_and_empty_headings():
+    html = headings.link_headings("<main><h2 id='b'>B</h2><h3><img src=x alt=''></h3></main>")
+    assert LINK.findall(html) == ["b"] and html.count("id=") == 1
+
+
+def test_the_wiki_pages_lists_keep_the_same_address_as_sessions_are_added(real_build):
+    html = (real_build.out / "wiki" / "castle-ravenloft" / "index.html").read_text(encoding="utf-8")
+    links = LINK.findall(html)
+    assert "appears-in" in links and "on-the-map" in links
+    assert not any(re.search(r"\d", t) for t in links)
+
+
+def test_the_icon_is_bright_enough_to_see_on_a_phone():
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    rule = re.search(r"\.heading-link \{([^}]*)\}", css).group(1)
+    assert float(re.search(r"opacity: ([\d.]+)", rule).group(1)) >= 0.75
