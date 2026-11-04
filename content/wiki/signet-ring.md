@@ -9,6 +9,10 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
+![A worn silver signet ring leaning against a dark wooden plank, its tall face engraved with the sigil of dots, a triangle, a pointed square and crossing lines that opened the red seal of Khazan's tower](/images/signet-ring-ai.jpg)
+
+*AI-generated image (Google Gemini).*
+
 *Written from the session logs, in Malron's words.*
 
 A ring Kasimir held, bearing a sigil of connected symbols and lines. Its design mixed necromancy and evocation, and we hoped to research it in the Baron's library ([A doll for Arabelle](/posts/a-doll-for-arabelle/)). There we found that its symbol matched Victor's spellbook ([Whispers in the Barons Mansion](/posts/whispers-in-the-barons-mansion/)). At Khazan's tower the door had no handles, only a red seal. Olfin traced the ring's pattern on the seal, pressed the right places, and the door opened ([Looking for Khazan's Tower](/posts/looking-for-zoldars-tower/)).
