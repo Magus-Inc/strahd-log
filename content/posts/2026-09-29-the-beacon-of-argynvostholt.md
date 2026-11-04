@@ -26,7 +26,7 @@ As we woke, a revenant found us: Harkus Grishenko, a guard of the Order, sent to
 
 ![Vladimir Horngaard, an undead knight, waiting in the mausoleum at dusk](/images/vladimir-horngaard-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Drained on the Road
 
@@ -44,7 +44,7 @@ Note: The party’s initiative rolls were bad enough that the DM, who had planne
 
 ![A revenant knight bound in black spiked wire in the foyer of Argynvostholt](/images/revenants-of-argynvostholt-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 It moved before any of us. Its glare locked Aera rigid where she stood, and the fear stayed on her after the paralysis passed. Its blade bit into Olfin. Crusty’s Scorching Ray, his owl harrying the thing, burned it twice. I laid my hand on Aera and set Lathander’s ward against evil upon her. Shabasta’s frost struck it, and Olfin cut it twice; when it tried to step past him toward Shabasta, Olfin’s blade caught it again and held it there, forcing it to keep fighting him. Free of the paralysis, Aera put an arrow deep into it from where it could not see her. Crusty’s Fire Bolt scorched it; my Sacred Flame washed off it; Shabasta’s Chromatic Orb burned. It struck Olfin again as one of his swings went wide, Aera hit once more, and Crusty finished it with one last Fire Bolt that took the revenant’s head off: “Just like Kamehameha.” Before it fell, the revenant warned us that Commander Horngaard waits in the cemetery: “May the Morning Lord protect you.”
 
@@ -64,7 +64,7 @@ Silver light rose through the mist toward the skull, and pricks of light flared 
 
 ![Argynvost, a vast ghostly silver dragon, over Argynvostholt with kneeling knights below](/images/argynvost-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Shabasta spoke: “Although your efforts to prevent us from doing this were good-hearted, we knew that you truly wanted this done. And so we did it in the same heart that you had.” Vladimir placed his hand in the dragon’s palm. “From this until the end of days.” With a single claw on the knight’s cheek, Argynvost told him, “Your watch has ended,” and Vladimir crumbled away like fine ash, his empty armor falling beside his sword.
 
@@ -86,7 +86,7 @@ Note: When asked to take the oath, the table wanted it in writing and a lawyer f
 
 ![Argynvostholt in ruins, its beacon tower glowing silver over a knights' graveyard](/images/argynvostholt-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 His spirit, he warned, will burn as a beacon to tell the valley the final conflict is at hand, but not for long: perhaps half a cycle of the moon, about seven days, before it is consumed. We must make haste. A chorus of thousands of distant voices rose, the silver flames devoured the dragon’s form, and the blaze surged like a comet into the manor’s tallest tower. For an instant the land for miles was painted silver. The light found Sasha alone on the rooftops of Castle Ravenloft, her face twisted with sudden hope; Kavan’s spirit at his lonely cairn, lifting his head in remembrance; and Lady Fiona Wachter on the sagging doorstep of her manor, tears on her cheeks. The beacon still shines over the valleys.
 

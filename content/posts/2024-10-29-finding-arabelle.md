@@ -21,7 +21,7 @@ Szoldar went back to his hut, and we found Ireena again at the gate. At the Blue
 
 ![Danika in the firelit common room of the Blue Water Inn, giving a hooded traveller directions, a raven on the beam above](/images/danika-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Rictavio van Richten
 
@@ -31,7 +31,7 @@ He had been lying low in the tower at Lake Baratok until he saw a Vistana bring 
 
 ![Arabelle, a Vistani girl with lavender eyes, sitting in a painted wagon's doorway](/images/arabelle-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 The tower holds a permanent field that blocks magic, and so Strahd’s scrying, but he reasoned that Strahd knows this and would look there first. So he gave Arabelle a spare amulet that guards against detection and location. He wears one himself. He admitted the spare once belonged to Ezmerelda d’Avenir, his former apprentice, but would say no more about her.
 
@@ -73,7 +73,7 @@ A window in the chapel is broken, and a man named Milivoj was up a stepladder me
 
 ![The Church of Saint Andral the morning we brought Ireena, its doors open on the pews and a bare altar, as Milivoj mends a broken window and Henrik unloads planks](/images/church-of-saint-andral-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 We asked the priest, Father Lucian, whether he could help us honor Ismark’s wish to protect Ireena. He offered her shelter for good.
 

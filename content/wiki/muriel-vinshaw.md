@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Muriel Vinshaw leading the way with a lantern on a misty road toward the vineyard](/images/muriel-vinshaw-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

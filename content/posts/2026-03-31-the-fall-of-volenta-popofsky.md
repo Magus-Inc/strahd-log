@@ -20,7 +20,7 @@ It was a grueling battle of magic and steel. Volenta fought with poisoned dagger
 
 ![Volenta with bat wings and a dagger in each hand, burning oil on the water](/images/volenta-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Note: Meta talk during the fight ranged from how Uncanny Dodge and Haste work to a long, funny tangent on the “Ant-Man vs. Thanos” theory and the benefits of hiring a good CPA for tax season.
 

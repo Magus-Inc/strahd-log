@@ -21,7 +21,7 @@ In the shack we met Szoldar and his brother, Yevgeni. Aera bought Shabasta a wol
 
 ![Szoldar the hunter at the door of his small shack by a misty lake at dusk, wolf pelts drying beside it](/images/szoldar-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Before we left, we looked over the stone slab, an ancient monument to the Dreamer and the Ladies Three. The brothers warned us that a werewolf pack prowls the area, led by a new and reckless alpha.
 
@@ -45,7 +45,7 @@ The way into the tower stands open.
 
 ![A stone tower by a misty lake, a purple and gold Vistani wagon at its foot](/images/tower-of-khazan-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

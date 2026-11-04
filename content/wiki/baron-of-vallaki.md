@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Baron of Vallaki in a fur-trimmed coat and chain of office, leading a procession with Izek through the silent town square](/images/baron-of-vallaki-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

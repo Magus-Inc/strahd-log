@@ -42,7 +42,7 @@ We crossed a wooden bridge and came across some charred piles of who knows what.
 
 ![The village of Barovia in fog, a raven flying over the bridge, the castle on the cliff above](/images/barovia-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Blood on the Vine
 
@@ -52,7 +52,7 @@ The tavern had villagers, a fire in the hearth, a barkeep behind the counter, th
 
 ![Ismark, a tired young man in a cloak with a longsword, in a dim tavern](/images/ismark-kolyanovich-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Ismark warned us of spies for Strahd in the form of bats, wolves, humans, and even Vistani. He then asked us for help on a mission; to help his sister hide at a church in Vallaki. It would be a full days journey, and we are welcome to spend the night at his fathers place.
 
@@ -66,7 +66,7 @@ We walked to the mayors mansion at the south end of the village, and when Ismark
 
 ![Ireena, red-haired, in a breastplate and crimson scarf, a rapier in hand on a misty forest road](/images/ireena-kolyana-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Ireena asks us to help the villagers that retreated to Vallaki. First they must bury their father, who died in the attack.
 

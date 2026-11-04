@@ -78,7 +78,7 @@ def test_glance_none_removes_the_box():
 
 def test_picture_top_moves_the_feature_picture_and_credit_first():
     text = ("## Story\n\nOne.\n\nTwo.\n\n![Horngaard](/images/vladimir-horngaard-ai.jpg)\n\n"
-            "*AI-generated image (Google Gemini). Not official art.*\n\nThree.\n")
+            "*AI-generated image (Google Gemini).*\n\nThree.\n")
     html = poststyle.apply(md(text), {"picture": "top"})
     assert html.startswith('<p><img alt="Horngaard" src="/images/vladimir-horngaard-ai.jpg"></p>\n<p><em>AI-generated')
     assert html.index("One.") < html.index("Two.") < html.index("Three.")

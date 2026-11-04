@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Vallaki, a walled town on a misty lakeshore with refugee tents outside the gate](/images/vallaki-ai-2.jpg)
 
-*AI-generated images (Google Gemini). Not official art.*
+*AI-generated images (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

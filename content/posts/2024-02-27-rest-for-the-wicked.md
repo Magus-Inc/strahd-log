@@ -25,13 +25,13 @@ Father Donavich was inside the church, but he looked out of sorts and depressed.
 
 ![Father Donavich praying in his church beside the latched trapdoor](/images/father-donavich-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Father Donavich said that his son Doru came back, as a vampire, and that Doru took the holy symbol, but that Father Donavich was able to trap him beneath the church.
 
 ![Doru as a vampire spawn, crouched in the dark beneath the church](/images/doru-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 We offered to venture down and retrieve the symbol from Doru. Perhaps we could reason with him, but we would need to be prepared to fight. Ismark and Ireena made it clear that they would stay with their father above.
 

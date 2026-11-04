@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Arturi Vedonavich up a tree in the night forest, twelve zombies reaching for him below](/images/arturi-vedonavich-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

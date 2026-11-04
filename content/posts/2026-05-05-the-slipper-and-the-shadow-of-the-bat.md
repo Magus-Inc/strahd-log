@@ -25,7 +25,7 @@ Note: \[Players debated what the bracelet means, and the lore of Strahd’s brot
 
 ![A portrait of Tatyana, red-haired, wearing a silver moon-and-stars bracelet](/images/tatyana-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Gertruda, Found
 
@@ -33,7 +33,7 @@ Deeper in the bedchamber we found Gertruda, sleeping fitfully beneath silk curta
 
 ![Gertruda waking in the King's Bedchamber, Tatyana's portrait above the hearth](/images/gertruda-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Note: \[The DM and players checked how the “Charm” effect works and the DC 17 Wisdom save to break it. The ward was Protection from Evil and Good.\]
 
@@ -45,7 +45,7 @@ Note: \[The table talked about the “two-part” nature of the fight and how de
 
 ![Anastrasya, a sharp-featured vampire bride in a dark gown, Sasha cowering behind her](/images/anastrasya-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Calling Olfin Back
 

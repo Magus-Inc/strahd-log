@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![A Vistani camp by a misty pool at night, painted wagons and dancers around a fire](/images/vistani-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

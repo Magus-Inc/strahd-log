@@ -19,7 +19,7 @@ Strahd told us Winter Splinter is a giant twig blight. When Veyren asked why som
 
 ![Winter Splinter, a giant tree blight, striding out of a burning forest toward the vineyard](/images/winter-splinter-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Ritual on Yester Hill
 
@@ -27,7 +27,7 @@ At Yester Hill lightning struck the boulder-ringed summit. On top stood a fifty-
 
 ![Lightning over Yester Hill, druids bound in vines chanting around a giant statue in a ring of stones](/images/yester-hill-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Strahd hovered above the ground watching the ritual, turning a small thing in his hands. Ludmilla saw us and in a blink was close by. Strahd idly toyed with a pawn from a chess set. Ludmilla went cold at the sight of it, displeased that he was playing a game with her. Then he vanished into the ethereal plane.
 
@@ -37,7 +37,7 @@ Ludmilla made no secret of her contempt for Volenta and warned that she would no
 
 ![Ludmilla, a vampire bride in a dark gown, on Yester Hill by firelight](/images/ludmilla-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Muriel trembled at this. She fears the wereraven was one of Davian’s sons, her lover. Ludmilla also told us that Baba Lysaga helped her take the winery, and that Baba Lysaga lives in Berez.
 

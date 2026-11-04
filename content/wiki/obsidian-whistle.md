@@ -13,7 +13,7 @@ sources:
 
 ![The Keeper's Whistle: a black obsidian raven with an open beak, its mouthpiece bound with cord, on a candlelit table](/images/obsidian-whistle-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

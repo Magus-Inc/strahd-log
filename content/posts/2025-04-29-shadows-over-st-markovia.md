@@ -23,7 +23,7 @@ Inside we met Clovin, and learned that all three are Belviews, of one family. Le
 
 ![Clovin Belview carrying bowls of cold porridge to the padlocked shed](/images/clovin-belview-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### A Bride for Strahd
 
@@ -43,7 +43,7 @@ Inside, a half-finished chalk circle lay in the middle of the floor, and a Vista
 
 ![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Séance
 
@@ -55,7 +55,7 @@ There we met [Bianca](/wiki/bianca-werewolf/), who lives in the woods nearby wit
 
 ![The Abbey of Saint Markovia on a mountain ledge above Krezk](/images/abbey-of-saint-markovia-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

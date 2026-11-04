@@ -13,7 +13,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Castle Ravenloft on its cliff, the drawbridge spanning the chasm from the road, the village in the valley below](/images/castle-ravenloft-ai-2.jpg)
 
-*AI-generated images (Google Gemini). Not official art.*
+*AI-generated images (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

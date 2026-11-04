@@ -37,7 +37,7 @@ Note: Meta details: rules questions came up about Misty Step as a bonus action u
 
 ![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Argynvost’s Skull
 
@@ -45,7 +45,7 @@ With the spawn destroyed, we went into the Hall of Bones, where human remains se
 
 ![Argynvost's silver skull over the doors of the Hall of Bones](/images/argynvosts-skull-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

@@ -33,7 +33,7 @@ The streets were empty but for one cloaked figure walking away from us. Several 
 
 ![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 The bard was almost a ringmaster, and very entertaining. His name is Rictavio, and he went upstairs. There was some unease when talk turned to the Baron and anyone criticizing him.
 
@@ -43,7 +43,7 @@ We rented rooms at one gold each. Vallaki demands care, with its harsh laws and 
 
 ![Vallaki, a walled town on a misty lakeshore with refugee tents outside the gate](/images/vallaki-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 The barkeep passed a parcel from under the bar to Rictavio, who tucked it under his cloak and walked out. When we asked about Blinsky’s toys, Rictavio told us he is a secret agent of the Keepers of the Feather, a secret society set against Strahd. Then we lost him in the crowd.
 
@@ -55,7 +55,7 @@ Note: LEVEL 4!!!
 
 ![The Baron of Vallaki in a fur-trimmed coat and chain of office, leading a procession with Izek through the silent town square](/images/baron-of-vallaki-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

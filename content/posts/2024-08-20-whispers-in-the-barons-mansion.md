@@ -17,7 +17,7 @@ We were shown into the Baron’s den, all padded chairs, and told to wait for hi
 
 ![The Baron of Vallaki in a fur-trimmed coat and chain of office, leading a procession with Izek through the silent town square](/images/baron-of-vallaki-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 The Baron, it turned out, walked straight past me and into the den. He cannot be a very busy man. That left the others no time to look around on their own, but it gave us a chance to talk him into letting us see the rest of the mansion, and with luck the library.
 
@@ -51,7 +51,7 @@ Under the rug, etched into the floor, was a circle with sequences of sigils: a t
 
 ![Victor drawing a glowing teleportation circle on his attic floor](/images/victor-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Khazan’s Staff
 
@@ -65,7 +65,7 @@ We left the mansion and headed north and west to find Szoldar. Ireena chose to s
 
 ![Victor fading into view out of invisibility in the Baron's mansion library, a spellbook in hand, a ghostly cat at his feet and a face in the mirror](/images/baron-s-mansion-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

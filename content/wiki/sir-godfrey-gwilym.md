@@ -10,7 +10,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/sir-g
 
 ![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

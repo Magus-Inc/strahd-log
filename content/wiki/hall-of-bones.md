@@ -10,7 +10,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Hall of Bones: Argynvost's silver skull over the steel-banded double doors in the side wall, a long table of bones with ten bone chairs, mounds of bones in the corners, and a wooden cooking spoon held upright in the bony fist of one chair](/images/hall-of-bones-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

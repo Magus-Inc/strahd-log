@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Church of Saint Andral the morning we brought Ireena, its doors open on the pews and a bare altar, as Milivoj mends a broken window and Henrik unloads planks](/images/church-of-saint-andral-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

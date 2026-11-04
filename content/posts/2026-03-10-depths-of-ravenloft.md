@@ -15,7 +15,7 @@ The air of Castle Ravenloft has changed utterly. We have come down from the wind
 
 ![The flooded Larders of Ill Omen, a servant with a lantern leading the way](/images/larders-of-ill-omen-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Hunting the Sunsword
 
@@ -29,7 +29,7 @@ Note: \[Meta details\] The “Spoon Comedy” was a moment of levity at the tabl
 
 ![Cyrus Belview, the hunchbacked castle cook, holding up an oversized yellow spoon](/images/cyrus-belview-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Forty Zombies and a Spoon
 
@@ -49,7 +49,7 @@ It was Emil Toranescu, the werewolf we came for. He has been locked in that cell
 
 ![Emil in a silver thorn collar, chained in the flooded Drowning Cells](/images/emil-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

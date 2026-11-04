@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Victor fading into view out of invisibility in the Baron's mansion library, a spellbook in hand, a ghostly cat at his feet and a face in the mirror](/images/baron-s-mansion-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

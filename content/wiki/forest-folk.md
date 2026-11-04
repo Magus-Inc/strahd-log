@@ -13,7 +13,7 @@ sources:
 
 ![Ragged druids of the forest folk in a misty wood, one holding a raven, twig blights at their feet and another druid watching from a branch](/images/forest-folk-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 

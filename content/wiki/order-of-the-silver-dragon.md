@@ -14,7 +14,7 @@ sources:
 
 ![Ghostly knights of the Order of the Silver Dragon in the cemetery as a silver light frees them](/images/order-of-the-silver-dragon-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 

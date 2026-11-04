@@ -18,7 +18,7 @@ sources:
 
 ![Madam Eva, an old Vistani seer, laying out cards in her candlelit tent](/images/madam-eva-ai-2.jpg)
 
-*AI-generated images (Google Gemini). Not official art.*
+*AI-generated images (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

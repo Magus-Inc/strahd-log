@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Stella Wachter, a hollow-eyed young woman in a nightgown, in a dark hallway](/images/stella-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

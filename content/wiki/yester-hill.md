@@ -11,7 +11,7 @@ sources:
 
 ![Lightning over Yester Hill, druids bound in vines chanting around a giant statue in a ring of stones](/images/yester-hill-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

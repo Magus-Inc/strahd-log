@@ -19,7 +19,7 @@ Victor used the hag’s heart stone to transport us to the ethereal realm. A tee
 
 ![Victor raises the glowing heart stone over the pentagram in the Wachter cellar as the walls fade into ethereal mist](/images/wachter-cellar-crossing-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Ten Minutes to Hold
 
@@ -33,7 +33,7 @@ Victor’s spell acted as a beacon, attracting spirits intent on stealing Stella
 
 ![The Ethereal Plane, pale translucent spirits drifting through green-grey mist as the stone walls of a cellar fade away](/images/ethereal-plane-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Then the gallows speaker came for us. “I am Leo Dilisnya,” he said. He carried a tome marked with the symbol of Ravenloft, and he pointed at Stella Wachter. He means to take what is his, he said, pointing at Stella and Lady Fiona. He looked at us and made it plain he bore us no ill will, and would let us go if we let him take the Wachters. He told us he was once a guard of Castle Ravenloft, and that he gave the order to kill Strahd after Strahd assaulted Tatyana, the bride of his brother Sergei. We would not give them up.
 
@@ -43,7 +43,7 @@ A great fight followed, and we won it, at a heavy cost. Shabasta died in the bat
 
 ![The gallows speaker, a shrouded spectre trailing nooses in the ethereal mist](/images/gallows-speaker-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

@@ -9,7 +9,7 @@ source: Compiled from the adventure log
 
 ![Elvir Martikov with a torch among the rebels marching up a misty road to Castle Ravenloft, a raven above him](/images/elvir-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

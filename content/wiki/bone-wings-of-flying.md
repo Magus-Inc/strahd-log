@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Clovin's gift: a pair of eagle wings and a pair of bat wings, made of bone, on a rack in the abbey tower](/images/bone-wings-of-flying-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Gertruda waking in the King's Bedchamber, Tatyana's portrait above the hearth](/images/gertruda-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

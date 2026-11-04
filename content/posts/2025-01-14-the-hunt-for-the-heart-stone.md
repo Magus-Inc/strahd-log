@@ -19,7 +19,7 @@ Victor showed us a picture of a binding circle, though he was unclear how to mak
 
 ![Stella Wachter, a hollow-eyed young woman in a nightgown, in a dark hallway](/images/stella-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Lady Fiona Lowers the Circle
 
@@ -33,7 +33,7 @@ We rested and made ready for the journey. In the night someone scratched words o
 
 ![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Forest Folk
 
@@ -41,7 +41,7 @@ On the way we met a druid of the Forest Folk, hermits of the Svalich Woods who s
 
 ![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone, an egg-sized polished oval, has slipped from her robe onto the mud](/images/heart-stone-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Lady Wachter first learned of the druids as a student of her mentor, Lysa, a woods-witch of the Berez swamps who worshipped Mother Night, goddess of darkness, trickery and the occult. Lady Wachter never heard Mother Night’s “voice”, as Lysa called it, and took up the faith of Ezra soon after she came back to Vallaki.
 

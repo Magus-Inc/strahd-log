@@ -11,7 +11,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Schlopkht, a russet tabaxi monk carrying the bronze sunburst to the village church](/images/schlopkht-ai-6.jpg)
 
-*AI-generated image (Google Gemini). Not player art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs.*
 

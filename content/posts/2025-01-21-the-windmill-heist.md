@@ -23,7 +23,7 @@ First, the greeting. Shabasta knocked on the windmill door, and he and Olfin wer
 
 ![Two hag sisters, Bella and Offalia, coming down the stair beside the millstone in the windmill](/images/belladonna-sunbane-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Up the Tower
 
@@ -31,7 +31,7 @@ Then, the break-in. Our rogues used their conjured hands to fix a rope to the to
 
 ![A decrepit wooden windmill with broken sails on a forest road at dusk, a rope hanging from its tower, a hand cart and a stone well by the door](/images/the-windmill-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Takedown
 

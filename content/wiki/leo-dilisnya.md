@@ -11,7 +11,7 @@ sources:
 
 ![The gallows speaker, a shrouded spectre trailing nooses in the ethereal mist](/images/gallows-speaker-ai.jpg)
 
-*AI-generated image (Google Gemini). Leo came to us as the gallows speaker. Not official art.*
+*AI-generated image (Google Gemini). Leo came to us as the gallows speaker.*
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 

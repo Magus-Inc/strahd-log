@@ -25,7 +25,7 @@ At the Blue Water Inn, Aera was slipped a secret note from Arrigal:
 
 ![Arrigal, a Vistani man in a tavern corner, folding a secret note](/images/arrigal-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 > **“Spy in castle. Seek a meeting to discuss an opportunity. Find the victim amidst the court. Burn this — A”**
 
@@ -37,7 +37,7 @@ On the road east we met a skeletal rider, whom we believe to be Sergei von Zarov
 
 ![Sergei's ghost as the skeletal rider, holding a lantern on a misty road](/images/sergei-von-zarovich-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 > **Q: Are you working for Strahd?**  
 > **A: No**  
@@ -95,7 +95,7 @@ The chest opened, and inside it holds far more than it should, like a bag of hol
 
 ![The Chest of Holding open on a carriage seat, a starry space inside](/images/chest-of-holding-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

@@ -17,7 +17,7 @@ It was evening when we entered the cloaked figure’s hiding place and found Dav
 
 ![The Wizard of Wines winery among misty vineyards, blights lurking at the edge](/images/wizard-of-wines-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 He laid out what waits ahead: four druids, eight needle blights, three greater strix and eight vine blights. The druids’ leader carries a magical staff that commands these creatures, and it must be destroyed or stolen. He advised us to go underground into the cellar to find it.
 
@@ -27,7 +27,7 @@ Davian told us of his family’s grief. Ten years ago, while Urwin was on watch,
 
 ![Davian Martikov in a dark hooded cloak at a trapdoor among the vines, ravens around him](/images/davian-martikov-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Wolf Teeth and Brown Mold
 
@@ -41,7 +41,7 @@ Veyren became a mouse and overheard a druid torturing a raven for word of someth
 
 ![Veyren, a hare-folk druid with a staff, a mouse on his shoulder](/images/veyren-ai.jpg)
 
-*AI-generated image (Google Gemini). Not player art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

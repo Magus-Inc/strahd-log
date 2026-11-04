@@ -23,7 +23,7 @@ Note: The party briefly debated a “Trojan Bunny” strategy, or stealing the V
 
 ![A Vistani camp by a misty pool at night, painted wagons and dancers around a fire](/images/vistani-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Strahd Rides Out
 
@@ -31,7 +31,7 @@ At the edge of the precipice we watched Strahd von Zarovich ride out of the cast
 
 ![Strahd on Beucephalus, a black nightmare with a burning mane, flying at night over the narrow chasm before Castle Ravenloft, its drawbridge raised in the outer wall at the end of the road](/images/beucephalus-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Note: She rolled a 1 on the somersault. The DM gave Aera back a Luck Point afterward, saying the sentries were “low-level annoyances” next to what waits deeper in.
 

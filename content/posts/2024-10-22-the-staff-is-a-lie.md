@@ -17,7 +17,7 @@ Aera opened the wagon carefully with a conjured hand, standing aside as crossbow
 
 ![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### A Hunter’s Treasure Trove
 
@@ -41,7 +41,7 @@ We rested a while before going in. Four statues stood around a central platform,
 
 ![A stone tower by a misty lake, a purple and gold Vistani wagon at its foot](/images/tower-of-khazan-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Van Richten’s Journal
 
@@ -49,7 +49,7 @@ The journal tells of a man haunted by his pursuit of darkness, which began when 
 
 ![Van Richten as Rictavio, a colourful half-elf showman in a big hat beside his yellow wagon](/images/van-richten-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Trappers Turn to Wolves
 

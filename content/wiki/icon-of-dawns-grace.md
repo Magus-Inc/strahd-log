@@ -12,7 +12,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Icon of Dawn's Grace, a silver winged statuette glowing in Saint Markovia's crypt](/images/icon-of-dawns-grace-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

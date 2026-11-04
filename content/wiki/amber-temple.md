@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Amber Temple glowing gold in a cliff near a snowy mountain peak](/images/amber-temple-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

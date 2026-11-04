@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![A revenant knight raising a hand in greeting at the crossroads by the one stone bridge over the Raven River](/images/raven-river-crossroads-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

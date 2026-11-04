@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Minofaustus, a smiling merchant, beside his wagon of a magical market on a misty road](/images/minofaustus-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

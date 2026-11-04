@@ -17,7 +17,7 @@ heard_of_in:
 
 ![The Abbey of Saint Markovia on a mountain ledge above Krezk](/images/abbey-of-saint-markovia-ai-2.jpg)
 
-*AI-generated images (Google Gemini). Not official art.*
+*AI-generated images (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

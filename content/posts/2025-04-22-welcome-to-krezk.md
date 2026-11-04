@@ -15,7 +15,7 @@ Oogway tried to buy a cloak of invincibility from the wandering merchant, but co
 
 ![Minofaustus, a smiling merchant, beside his wagon of a magical market on a misty road](/images/minofaustus-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Spies, Not an Army
 
@@ -33,13 +33,13 @@ In Krezk we saw the abbey above the town and met the Krezkovs. Dmitri Krezkov is
 
 ![Krezk, a walled village in snowy mountains below the abbey on its cliff](/images/krezk-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 We had heard of a Vistana here who could help us. The Krezkovs know of one at the abbey who could, if we are allowed in. Her name is Ezmerelda d’Avenir.
 
 ![Dmitri Krezkov at the snowy gate of Krezk](/images/dmitri-krezkov-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## The Reading
 

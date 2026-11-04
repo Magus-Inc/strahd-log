@@ -82,7 +82,7 @@ def test_wiki_pages_show_no_gray_source_line(real_build):
 
 
 def test_picture_credits_name_only_the_model():
-    """No month or year either (Chris, 2026-11-04): "AI-generated image (Google Gemini). Not official art."."""
+    """No month or year either (Chris, 2026-11-04): "AI-generated image (Google Gemini)."."""
     credit = re.compile(r"AI-generated (?:image|images|portrait) \(([^)]*)\)")
     dated = [f"{p.relative_to(ROOT).as_posix()}: {m.group(0)}"
              for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
@@ -96,3 +96,11 @@ def test_picture_credits_say_nothing_about_where_the_picture_came_from():
              for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
              if re.search(r"\*AI-generated[^*]*drawn from", p.read_text(encoding="utf-8"))]
     assert not drawn, drawn
+
+
+def test_picture_credits_do_not_repeat_that_the_art_is_not_ours():
+    """Chris (2026-11-04): "AI-generated" already says it, so no "Not official art." or "Not player art."."""
+    extra = [p.relative_to(ROOT).as_posix()
+             for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
+             if re.search(r"\*AI-generated[^*]*Not (?:official|player) art", p.read_text(encoding="utf-8"))]
+    assert not extra, extra

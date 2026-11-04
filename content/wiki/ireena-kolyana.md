@@ -13,7 +13,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/ireen
 
 ![Ireena, red-haired, in a breastplate and crimson scarf, a rapier in hand on a misty forest road](/images/ireena-kolyana-ai.jpg)
 
-*AI-generated image (Google Gemini). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 
