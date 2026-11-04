@@ -11,7 +11,7 @@ sources:
 
 *Written from the session logs, in Malron's words.*
 
-A charm that fills everyone near its bearer with courage. Gumbo found it in the windmill during our heist, in a tube in the millstone that the key from the gnarled arm opened. It lay beside the hags' contract and six pieces of cheap jewelry ([The Windmill Heist](/posts/the-windmill-heist/)).
+A charm that fills everyone near its bearer with courage. Gumbo found it in the windmill during our heist, in a tube in the millstone that the key from the gnarled arm opened. It lay beside the hags' contract and six pieces of cheap jewelry ([The Windmill Heist](/posts/the-windmill-heist/)). Last seen with Gumbo.
 
 ## What it does
 

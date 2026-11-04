@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-A candle that burns only once and gives a good rest in a short time. We were given it to help us through Castle Ravenloft ([Depths of Ravenloft](/posts/depths-of-ravenloft/)).
+A candle that burns only once and gives a good rest in a short time. We were given it to help us through Castle Ravenloft ([Depths of Ravenloft](/posts/depths-of-ravenloft/)). We lit it in the little magic hut Crusty raised in the catacombs, and it is used up ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).
 
 ## What it does
 

@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-A telescope that can see around corners. Grom won it in a game at the Vistani camp by Tser Pool, along with a manuscript on werewolves and a deck of special cards ([Tser Pool](/posts/tser-pool/)).
+A telescope that can see around corners. Grom won it in a game at the Vistani camp by Tser Pool, along with a manuscript on werewolves and a deck of special cards ([Tser Pool](/posts/tser-pool/)). Last seen with Grom.
 
 <!-- from-the-log -->
 ## From the adventure log

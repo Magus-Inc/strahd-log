@@ -19,3 +19,4 @@ sources:
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Given to the party by Stanimir. ([Unwelcome Guests](/posts/unwelcome-guests/))
+* Aera carries it. ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/))

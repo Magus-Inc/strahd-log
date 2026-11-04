@@ -19,3 +19,4 @@ A rapier that glows faintly in the dark. When Aera took down a painting at Argyn
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * Found by Aera behind a painting at Argynvostholt. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))
+* Aera took it, and she carries it. ([Echoes of the Silver Dragon](/posts/echoes-of-the-silver-dragon/))

@@ -11,7 +11,7 @@ sources:
 
 *Written from the session logs, in Malron's words.*
 
-A strange locket that gives off a child's laughter. Liren found it in Lady Fiona's armory at Wachterhaus, where we went for our reward after bringing her Izek's head ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)).
+A strange locket that gives off a child's laughter. Liren found it in Lady Fiona's armory at Wachterhaus, where we went for our reward after bringing her Izek's head ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/)). Last seen with Liren.
 
 ## What it does
 
