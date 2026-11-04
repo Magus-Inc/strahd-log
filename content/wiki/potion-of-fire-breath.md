@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 *Written from the session logs, in Malron's words.*
 
-A potion that lets its drinker breathe fire. Varushka's shadow led us through the trap door in the guest closet, where we found it with two potions of healing, a satin pouch and a copy of the Seer card ([Varushka's Key](/posts/varushkas-key/)). Much later, in the fight with the Abbot, Olfin drank a potion of fire breathing he already carried and breathed fire from the air ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)). Whether it was this one, the log does not say.
+A potion that lets its drinker breathe fire. Varushka's shadow led us through the trap door in the guest closet, where we found it with two potions of healing, a satin pouch and a copy of the Seer card ([Varushka's Key](/posts/varushkas-key/)). Much later, in the fight with the Abbot, Olfin drank a potion of fire breathing he already carried and breathed fire from the air ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)). Whether it was this one, the log does not say. It has since been used up.
 
 <!-- from-the-log -->
 ## From the adventure log

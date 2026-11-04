@@ -11,7 +11,7 @@ sources:
 
 *Written from the session logs, in Malron's words.*
 
-Izek's own battleaxe, edged with silver. We took it from his body after the fight at the lake, with thirty-five gold and the amber shard of Seriach, and Liren made it hers ([The Fall of Izek](/posts/the-fall-of-izek/)).
+Izek's own battleaxe, edged with silver. We took it from his body after the fight at the lake, with thirty-five gold and the amber shard of Seriach, and Liren made it hers ([The Fall of Izek](/posts/the-fall-of-izek/)). Last seen with Liren.
 
 ## What it does
 

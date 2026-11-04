@@ -11,7 +11,7 @@ sources:
 
 *Written from the session logs, in Malron's words.*
 
-A moth-shaped artifact full of powerful magic. Strahd brought it out at the Whispering Wall, after he gave us his gray and silver stones ([The Whispering Wall](/posts/the-whispering-wall/)). By day it can strengthen our friends; by night it calls up guardian spirits of shadow. Why Strahd parted with it, we do not know.
+A moth-shaped artifact full of powerful magic. Strahd brought it out at the Whispering Wall, after he gave us his gray and silver stones ([The Whispering Wall](/posts/the-whispering-wall/)). By day it can strengthen our friends; by night it calls up guardian spirits of shadow. Why Strahd parted with it, we do not know. In the catacombs of Ravenloft, in the middle of a fight, Aera threw it to Shabasta so he could use its enervation ([The Echoing Choirs of Ravenloft](/posts/the-echoing-choirs-of-ravenloft/)).
 
 ## What it does
 
