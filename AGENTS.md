@@ -42,6 +42,12 @@
   reword text someone else wrote, such as the Obsidian Portal pages. The one exception (Chris,
   2026-11-02): a few loose Obsidian Portal lines left under the story, or a pasted `## As “…”` section
   from a merge, are folded into the story with every fact kept, so the page reads as one article.
+- Player names and sources (Chris, 2026-11-04): a player's real name shows only in a PC page's
+  Player box, on the Dungeon Master page and in an art credit ("drawn by ..."); story text says "his
+  player". No visible line says where text came from (session logs, notes, recordings, Discord, "Ryan
+  shared", "shared at the table"): that goes in the hidden `sources:` ids. Wiki pages show no source
+  line. The table-talk margin notes may say "the DM" or "Shabasta's player". `tests/test_player_mentions.py`
+  checks the built site.
 - Wiki aliases are linked automatically everywhere, so an alias must not be an ordinary word
   ("Abbot", "Manor" in another town); `tools/wiki_from_extract.py` keeps a list of words to refuse.
 - Posts are the players' own writing. Fix conversion problems in `tools/import_op.py`, not by
@@ -63,8 +69,9 @@
   picture and any maps included; the slides are a deck and do not count. A post Chris names may hold 4
   (`picture-cap: 4` in its front matter, never more). They go only in the story, each on a line of its
   own after the paragraph it shows (after that paragraph's `Note:` margin notes), with words between
-  two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line (a PC's
-  portrait says "Not player art."). A post with more than one picture names its feature picture in
+  two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line, model and month only:
+  `*AI-generated image (Google Gemini, November 2026). Not official art.*` (a PC's portrait says
+  "Not player art."), never what it was drawn from. A post with more than one picture names its feature picture in
   the front matter (`feature: name.jpg`): it gives the link preview and the home page card, and goes first under `picture: top`. When the post has an AI picture the feature is one of them, never a photo of the table (Chris, 2026-11-04).
   Check pictures against the story for spoilers: no form, identity or outcome before the story reveals
   it. Reuse a wiki picture before making one. `tests/test_post_format.py` checks the rules.

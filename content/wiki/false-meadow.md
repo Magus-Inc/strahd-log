@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The false meadow: a vision St. Markovia showed us, with a door out of Barovia standing in the grass](/images/false-meadow-ai.jpg)
 
-*A vision St. Markovia showed us beneath the abbey, with its door out of Barovia. AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*A vision St. Markovia showed us beneath the abbey, with its door out of Barovia. AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

@@ -58,8 +58,6 @@
         </ol>
       </section>
 {% endif %}
-{% if page.source %}
-      <p class="source muted">{{ page.source }}{% if page.obsidian_portal_url %} (<a href="{{ page.obsidian_portal_url }}">original</a>){% endif %}.</p>
-{% endif %}
+{# No line saying where a page came from (Chris, 2026-11-04); its sources stay hidden in front matter. #}
     </article>
 {% endblock %}

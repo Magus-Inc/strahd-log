@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Anastrasya, a sharp-featured vampire bride in a dark gown, Sasha cowering behind her](/images/anastrasya-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

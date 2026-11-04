@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Kavan the Blood Drinker's spirit rising from his cairn, holding a long wooden spear](/images/kavan-the-blood-drinker-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

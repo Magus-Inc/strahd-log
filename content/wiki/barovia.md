@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/barov
 
 ![The village of Barovia in fog, a raven flying over the bridge, the castle on the cliff above](/images/barovia-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Malron Lichtstrahl, Reborn cleric of Lathander, with the Icon of Dawn's Grace and the elf spirit who shares his body](/images/malron-ai-portrait.jpg)
 
-*AI-generated portrait (Google Gemini, October 2026), drawn from this page and the session logs. Not player art.*
+*AI-generated portrait (Google Gemini, October 2026). Not player art.*
 
 [Character Sheet](https://www.dndbeyond.com/characters/110929059)
 

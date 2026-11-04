@@ -12,7 +12,7 @@ sources:
 
 ![Arabelle, a Vistani girl with lavender eyes, sitting in a painted wagon's doorway](/images/arabelle-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

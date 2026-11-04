@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Abbot as a young man, weeping in the void inside the Icon of Dawn's Grace, his wings chained down with mist](/images/the-void-ai.jpg)
 
-*The Abbot as he once was, weeping in the void inside the Icon of Dawn's Grace. AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*The Abbot as he once was, weeping in the void inside the Icon of Dawn's Grace. AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

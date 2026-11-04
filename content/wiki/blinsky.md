@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Blinsky the toymaker grinning in his shop full of creepy toys](/images/blinsky-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

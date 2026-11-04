@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Tser Pool at dusk: a dark lake with a Vistani camp and a glowing tent on the shore](/images/tser-pool-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, October 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

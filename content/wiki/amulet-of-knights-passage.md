@@ -16,8 +16,6 @@ Behind a painting at Argynvostholt, Aera found a hidden stone shelf of the Order
 
 ## What it does
 
-*From the item card shared at the table (3 June 2025). In short:*
-
 * A carved block of white stone, the key to the gatehouse at Tsolenka Pass.
 * Shown to the gatehouse's curtain of green flame, it suppresses the curtain for 1 minute, and while it does the petrified vrocks there don't animate or attack.
 * An identify spell shows only that it is a key of some kind, not what it opens.

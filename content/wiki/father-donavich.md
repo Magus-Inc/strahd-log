@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/fathe
 
 ![Father Donavich praying in his church beside the latched trapdoor](/images/father-donavich-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

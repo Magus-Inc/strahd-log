@@ -9,8 +9,6 @@ sources:
 
 ## What it does
 
-*From the item card shared at the table (29 October 2024). In short:*
-
 * A rare wondrous item with 4 charges.
 * As an action, spend 1 charge to cast gentle repose, or 2 to cast speak with dead (without that spell's usual ten-day limit).
 * It regains 1d4 charges each dawn. Spend the last charge and roll a d20: on a 1 it crumbles to ash.

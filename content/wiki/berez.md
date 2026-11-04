@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The drowned huts of Berez in the swamp south of Vallaki](/images/berez-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

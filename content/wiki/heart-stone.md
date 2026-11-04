@@ -9,11 +9,11 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![A beaten hag lies by the windmill's pie cart, and her black onyx heart stone, an egg-sized polished oval, has slipped from her robe onto the mud](/images/heart-stone-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 ![Victor raises the glowing heart stone over the pentagram in the Wachter cellar as the walls fade into ethereal mist](/images/wachter-cellar-crossing-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026), drawn from this page and the session logs. Not official art.*
+*AI-generated image (Google Gemini, November 2026). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 
