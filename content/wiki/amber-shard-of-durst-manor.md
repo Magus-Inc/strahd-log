@@ -1,5 +1,7 @@
 ---
-title: Durst Amber Shard
+title: Amber Shard of Durst Manor
+aliases:
+- Durst Amber Shard
 type: item
 summary: An amber shard meant to soothe the Beast beneath Durst Manor.
 source: Compiled from the adventure log, with a description written for the site
@@ -7,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![A raw amber shard glowing on grain in Elisabeth Durst's open silver jewelry box, beside her rolled note](/images/durst-amber-shard-ai.jpg)
+![A raw amber shard glowing on grain in Elisabeth Durst's open silver jewelry box, beside her rolled note](/images/amber-shard-of-durst-manor-ai.jpg)
 
 *AI-generated image (Google Gemini).*
 

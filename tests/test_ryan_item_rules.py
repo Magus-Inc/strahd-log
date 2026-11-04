@@ -90,21 +90,23 @@ def test_ryans_march_18_loot_is_in_the_march_11_post():
 def test_durst_shard_is_named_apart_from_seriach():
     # Chris, 2026-11-04: two amber shards, Aera carries both; name Elisabeth's by the house
     assert not (WIKI / "amber-shard.md").exists()
-    meta, body = _parts("durst-amber-shard")
-    assert meta["title"] == "Durst Amber Shard"
+    meta, body = _parts("amber-shard-of-durst-manor")
+    # Chris, 2026-11-04: named so both shards sit together in the wiki list
+    assert meta["title"] == "Amber Shard of Durst Manor" and "Durst Amber Shard" in meta["aliases"]
     redirects = yaml.safe_load((WIKI.parent.parent / "data" / "redirects.yaml").read_text(encoding="utf-8"))
-    assert redirects["wiki"]["amber-shard"] == "durst-amber-shard"
+    assert redirects["wiki"]["amber-shard"] == "amber-shard-of-durst-manor"
+    assert redirects["wiki"]["durst-amber-shard"] == "amber-shard-of-durst-manor"
     assert "/wiki/amber-shard-of-seriach/" in body
     _, seriach = _parts("amber-shard-of-seriach")
-    assert "/wiki/durst-amber-shard/" in seriach and "Aera" in seriach
+    assert "/wiki/amber-shard-of-durst-manor/" in seriach and "Aera" in seriach
 
 
 def test_durst_shard_has_its_picture():
     # Chris picked option D, 2026-11-04
-    _, body = _parts("durst-amber-shard")
-    assert "/images/durst-amber-shard-ai.jpg" in body
+    _, body = _parts("amber-shard-of-durst-manor")
+    assert "/images/amber-shard-of-durst-manor-ai.jpg" in body
     root = WIKI.parent.parent / "static" / "images"
-    assert (root / "durst-amber-shard-ai.jpg").exists() and (root / "full" / "durst-amber-shard-ai.jpg").exists()
+    assert (root / "amber-shard-of-durst-manor-ai.jpg").exists() and (root / "full" / "amber-shard-of-durst-manor-ai.jpg").exists()
 
 
 def test_seriach_shard_has_its_picture():
