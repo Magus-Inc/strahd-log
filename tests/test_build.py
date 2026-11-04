@@ -711,3 +711,72 @@ def test_place_card_close_button_stays_in_view_while_the_card_scrolls():
     rule = re.search(r"\n\.place-close \{([^}]*)\}", css).group(1)
     assert "position: sticky" in rule and "top: 0" in rule and "z-index" in rule
     assert "position: absolute" not in rule
+
+
+@pytest.fixture
+def picture_site(tmp_path):
+    """Two posts with pictures (one names its feature picture) and one without."""
+    from PIL import Image
+    root = tmp_path / "site"
+    posts = root / "content" / "posts"
+    write_post(posts, "2026-01-01-one.md", "title: One Picture\ndate: '2026-01-01'\n",
+               "## Story\n\nWe walked.\n\n![A misty road](/images/road.jpg)\n")
+    write_post(posts, "2026-02-01-two.md", "title: Two Pictures\ndate: '2026-02-01'\nfeature: hag.jpg\n",
+               "## Story\n\nWe ran.\n\n![A crow](/images/crow.jpg)\n\nThen we fought.\n\n![The hag](/images/hag.jpg)\n")
+    write_post(posts, "2026-03-01-none.md", "title: No Picture\ndate: '2026-03-01'\n", "## Story\n\nWe slept.\n")
+    static = root / "static"
+    (static / "images").mkdir(parents=True)
+    Image.new("RGB", (1200, 900), "gray").save(static / "images" / "road.jpg")
+    Image.new("RGB", (800, 1000), "black").save(static / "images" / "crow.jpg")
+    Image.new("RGB", (800, 1000), "green").save(static / "images" / "hag.jpg")
+    out = root / "public"
+    build.build(posts, out, site_url="https://x.example", wiki_dir=root / "content" / "wiki", slides_static=static)
+    return out
+
+
+def test_home_cards_show_the_posts_feature_picture(picture_site):
+    """Idea 1 of the blog review (Chris, 2026-11-04): each session card shows its feature picture."""
+    from PIL import Image
+    home = read(picture_site / "index.html")
+    one = card_for(home, "One Picture")
+    assert 'class="card-pic"' in one and 'src="/images/cards/post-one.webp"' in one
+    assert 'alt=""' in one and 'loading="lazy"' in one  # the title next to it says what it is
+    two = card_for(home, "Two Pictures")
+    assert 'src="/images/cards/post-two.webp"' in two
+    with Image.open(picture_site / "images" / "cards" / "post-two.webp") as pic:
+        assert pic.getpixel((pic.width // 2, pic.height // 2))[1] > 100  # the green hag, not the black crow
+        assert pic.width <= build.CARD_PIC_WIDTH
+    assert "card-pic" not in card_for(home, "No Picture")
+
+
+def test_card_pictures_are_styled_to_sit_on_top_of_the_card():
+    css = (build.ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    assert re.search(r"\.card-pic\s*\{[^}]*aspect-ratio", css)
+    assert re.search(r"\.card-pic img\s*\{[^}]*object-fit:\s*cover", css)
+
+
+def test_card_pictures_follow_the_base_path_and_load_the_first_one_first(picture_site, tmp_path):
+    posts = picture_site.parent / "content" / "posts"
+    out = tmp_path / "preview"
+    build.build(posts, out, site_url="https://x.example", base_path="/pr-preview/pr-1/",
+                wiki_dir=picture_site.parent / "content" / "wiki", slides_static=picture_site.parent / "static")
+    home = read(out / "index.html")
+    assert 'src="/pr-preview/pr-1/images/cards/post-one.webp"' in card_for(home, "One Picture")
+    # The newest card with a picture sits above the fold: fetched at once, the rest lazily.
+    first = re.findall(r'<div class="card-pic"><img [^>]*>', home)
+    assert 'loading="eager"' in first[0] and all('loading="lazy"' in tag for tag in first[1:])
+
+
+def test_card_picture_of_a_see_through_png_sits_on_the_dark_background(tmp_path):
+    from PIL import Image
+    posts = tmp_path / "content" / "posts"
+    write_post(posts, "2026-01-01-ghost.md", "title: Ghost\ndate: '2026-01-01'\nfeature: missing.jpg\n",
+               "## Story\n\nBoo.\n\n![A ghost](/images/ghost.png)\n")
+    static = tmp_path / "static"
+    (static / "images").mkdir(parents=True)
+    Image.new("RGBA", (400, 300), (255, 255, 255, 0)).save(static / "images" / "ghost.png")
+    out = tmp_path / "public"
+    build.build(posts, out, site_url="https://x.example", wiki_dir=tmp_path / "content" / "wiki", slides_static=static)
+    # A feature name that matches no picture falls back to the first picture.
+    with Image.open(out / "images" / "cards" / "post-ghost.webp") as pic:
+        assert sum(pic.convert("RGB").getpixel((10, 10))) < 150  # dark, not white or garbage
