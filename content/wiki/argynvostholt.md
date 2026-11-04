@@ -27,7 +27,7 @@ We came back with the skull at a run, fought a revenant bound in black wire in t
 
 ## What the beacon does
 
-* While it shines, the party and every other creature that opposes Strahd get +1 to AC and +1 to saving throws, as long as they stay in Barovia.
+* While it shines, the party and every other creature that opposes Strahd get +1 to AC and +1 to saving throws, as long as they {?stay in Barovia?}.
 * It won't shine for long: Argynvost warned that his flame would not last.
 
 <!-- from-the-log -->

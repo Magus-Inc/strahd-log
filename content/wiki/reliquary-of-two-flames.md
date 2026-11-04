@@ -20,7 +20,7 @@ Twice between one long rest and the next, the flames can help someone nearby who
 ## What it does
 
 * 2 charges. It regains both after a long rest.
-* When a creature you can see within 30 feet fails an attack roll, ability check or saving throw, you can use your reaction and 1 charge to help it with that roll.
+* When a creature you can see within 30 feet fails an attack roll, ability check or saving throw, you can use your reaction and 1 charge to help it with that roll by rolling {?a d2?}.
 * Once ever: when a companion dies, crush the reliquary as an action and give up one of the two flames to bring them back to life.
 
 <!-- from-the-log -->
