@@ -563,3 +563,69 @@ html.search-open, html.search-open body { overflow: hidden; }
 @media (max-width: 719px) {
   dialog.search-panel { width: 100vw; height: 100vh; height: 100dvh; max-height: none; margin: 0; border: 0; border-radius: 0; }
 }
+
+/* Start here (start/, Chris's picks 2026-11-04): a castle picture with a two-line hook, four big ways in,
+   then the sections. Story text keeps to the reading measure; the party and faces use the width. */
+.new-here { margin: 0.6rem 0 0; color: var(--muted); }
+.new-here a { font-weight: 600; }
+.start-hero { position: relative; display: flex; align-items: flex-end; min-height: 20rem; margin: -2rem -1.25rem 0; background: var(--surface) center 30% / cover no-repeat; }
+.start-hero-text { width: 100%; padding: 5rem 1.25rem 1.25rem; background: linear-gradient(rgba(18, 16, 20, 0), rgba(18, 16, 20, 0.92) 45%); }
+.start-hero .eyebrow { color: var(--gold); }
+.start-hero h1 { margin: 0.2rem 0 0.3rem; }
+@media (max-width: 719px) { .start-hero { margin-top: -1.25rem; } }
+.doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0.75rem; margin: 1.5rem 0 1rem; }
+.door { display: flex; align-items: center; gap: 0.9rem; padding: 0.85rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); color: var(--text); text-decoration: none; }
+.door:hover, .door:focus-visible { border-color: var(--accent); color: var(--text); }
+.door-icon { display: grid; place-items: center; flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--accent-deep); color: #fff; }
+.door-icon svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.door strong { display: block; font-family: var(--serif); font-size: 1.1rem; }
+.door span span { display: block; font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
+.start-section { margin: 2.5rem 0 0; }
+.start-section > h2 { margin-top: 0; }
+.start-premise { max-width: var(--measure); font-size: 1.05rem; }
+.chapters { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1.25rem; }
+.chapter { display: grid; grid-template-columns: minmax(0, 1fr); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+.chapter-pic { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.chapter-text { padding: 0.9rem 1rem 1rem; min-width: 0; }
+@media (min-width: 760px) {
+  .chapter { grid-template-columns: 22rem minmax(0, 1fr); }
+  .chapter-pic { height: 100%; aspect-ratio: auto; min-height: 14rem; }
+  .chapter-newest { grid-template-columns: minmax(0, 1fr); }
+}
+.chapter-meta { margin: 0; font-size: 0.85rem; color: var(--muted); }
+.chapter h3 { margin: 0.2rem 0 0.4rem; }
+.chapter .prose p { margin: 0 0 0.6rem; }
+.moments { display: flex; flex-wrap: wrap; gap: 0.35rem 0.8rem; margin: 0.4rem 0 0.6rem; }
+.won-tag { font-size: 0.82rem; font-weight: 600; color: var(--gold); text-decoration: none; }
+.won-tag::before { content: "\2726  "; }
+.chapter-sessions summary { cursor: pointer; font-size: 0.92rem; color: var(--muted); }
+.chapter-sessions ol { margin: 0.5rem 0 0; padding-left: 1.4rem; font-size: 0.92rem; }
+.party-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 0.75rem; }
+.party-grid a, .faces a { display: block; height: 100%; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; text-align: center; text-decoration: none; color: var(--text); }
+.party-grid a:hover, .faces a:hover { border-color: var(--gold); }
+.party-grid img { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; }
+.party-grid strong, .faces strong { display: block; padding: 0.4rem 0.3rem 0; font-family: var(--serif); color: var(--gold); }
+.party-grid span, .faces span { display: block; padding: 0 0.4rem 0.5rem; font-size: 0.8rem; line-height: 1.35; color: var(--muted); }
+.past-party { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.past-party a { display: flex; flex-direction: column; align-items: center; width: 4.6rem; text-align: center; text-decoration: none; color: var(--text); font-size: 0.85rem; }
+.past-party img { width: 3.6rem; height: 3.6rem; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--line); }
+.past-party .died img { filter: grayscale(1) brightness(0.8); }
+.past-party .life-tag { font-size: 0.75rem; }
+.faces { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: 0.75rem; }
+.faces img { display: block; width: 5rem; height: 5rem; margin: 0.8rem auto 0; border-radius: 50%; object-fit: cover; object-position: top; }
+.fortune { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
+.fortune li { padding: 0.7rem 0.9rem; border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 10px; background: var(--surface); }
+.fortune li.found { border-left-color: #7cc39a; }
+.fortune li.looking { border-left-color: var(--gold); }
+.fortune p { margin: 0; }
+.fortune .card-name { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; }
+.fortune .card-status { margin-top: 0.25rem; font-size: 0.9rem; color: var(--muted); }
+.fortune li.found .card-status { color: #7cc39a; }
+.map-teaser { display: block; position: relative; max-width: 46rem; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+.map-teaser img { display: block; width: 100%; max-width: 100%; height: auto; }
+.map-teaser span { position: absolute; right: 0.75rem; bottom: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 999px; background: var(--accent-deep); color: #fff; font-weight: 600; font-size: 0.9rem; }
+.how-to-read { max-width: var(--measure); padding-left: 1.2rem; }
+#about p { max-width: var(--measure); }
+.fortune a[href*="/wiki/"] { color: var(--gold); text-decoration: none; }
+.fortune a[href*="/wiki/"]:hover { text-decoration: underline; }
+.start-section .prose { margin-left: 0; margin-right: 0; }

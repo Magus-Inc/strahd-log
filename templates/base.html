@@ -51,6 +51,9 @@
       <label for="menu-toggle" class="menu-button" aria-label="Menu"><span class="menu-icon" aria-hidden="true"></span></label>
         <nav class="site-nav" aria-label="Main">
           <a href="{{ base }}"{% if section == "chronicle" %} aria-current="page"{% endif %}>Chronicle</a>
+{% if has_start %}
+          <a href="{{ base }}start/"{% if section == "start" %} aria-current="page"{% endif %}>Start here</a>
+{% endif %}
           <a href="{{ base }}wiki/"{% if section == "wiki" %} aria-current="page"{% endif %}>Wiki</a>
 {% if all_places %}
           <a href="{{ base }}map/"{% if section == "map" %} aria-current="page"{% endif %}>Map</a>

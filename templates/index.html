@@ -7,6 +7,9 @@
         <h2 id="chronicle-title">The chronicle</h2>
         <p class="muted">{{ count }} sessions, newest first</p>
       </div>
+{% if has_start %}
+      <p class="new-here">New here? <a href="{{ base }}start/">Start here</a> for the party and the story so far.</p>
+{% endif %}
 {% if years %}
       <nav class="year-chips" aria-label="Jump to a year">
 {% for year, _ in years %}

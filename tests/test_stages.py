@@ -12,7 +12,7 @@ import build
 ROOT = Path(__file__).resolve().parent.parent
 
 ORDER = ["style_posts", "number_posts", "link_names", "cite_wiki", "style_wiki", "attach_slides",
-         "attach_party", "reading_aids", "lay_out_map"]
+         "attach_party", "reading_aids", "lay_out_map", "plan_start"]
 
 
 def write_post(folder: Path, name: str, front: str, body: str = "Body.\n") -> None:

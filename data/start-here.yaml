@@ -1,0 +1,111 @@
+# The Start here page (start/), for readers who land on the blog cold. Chris picked its shape on the
+# start here pick page, 2026-11-04: the "choose your way in" layout, six chapters by place, each a short
+# paragraph in Malron's voice with tags for the big moments, today's party and everyone who came and
+# went, and the extras below. Tips and labels use the site's plain voice.
+#
+# Upkeep: every session belongs to a chapter. When a new post goes up, move the last chapter's
+# `through:` to it (or start a new chapter) and adjust that chapter's text in the same pull request;
+# tests/test_start_here.py fails until you do. Text follows the posts only: what happened comes from
+# them, never from the book. No player names here (they live on each PC's wiki page).
+#
+# Keys: hero (a picture in static/images), hook (two lines under the title; {sessions} is the count), premise (Markdown, Malron),
+# chapters (title, from and through: post slugs, picture, text: Markdown, won: wiki slugs of key things
+# won in it), faces (wiki slugs), fortune (Madam Eva's cards at Tser Pool: card, told, points_to: wiki
+# slug, found_in: the post where we found it, or status: what stands instead), how_to_read, about.
+hero: castle-ravenloft-ai.jpg
+hook: Five strangers followed the fog into a land ruled by a vampire. {sessions} sessions later, we are still trying to leave.
+premise: >-
+  I am Malron, a cleric of Lathander, and this is our record. Five of us met in a barn loft in
+  Daggerford and followed a floating tooth into the fog. The fog brought us to Barovia, a valley
+  ruled by the vampire Strahd von Zarovich, and it has not let us leave. Madam Eva read our fortune
+  and named what might end him. We are still looking.
+chapters:
+  - title: The House in the Fog
+    from: session-zero
+    through: walter-we-are-coming-for-you
+    picture: durst-manor-ai.jpg
+    text: >-
+      Two glowing relics led us out of Daggerford and through the fog to a manor that was waiting for
+      us. Its ghosts and the cult beneath it wanted us dead. We learned the Durst family's secret,
+      fought the mound of flesh at the bottom of the well, and climbed out a window as the house sank
+      into the ground behind us.
+  - title: The Village Under the Castle
+    from: barovia-barovia
+    through: dream-pies
+    picture: barovia-ai.jpg
+    text: >-
+      The fog drove us into the village of Barovia, under the shadow of Castle Ravenloft. We buried
+      Rose and Thorn, met Ismark and his sister Ireena, and staked Doru, the priest's son, in the
+      cellar under the church. Then we set out to take Ireena somewhere safe. Strahd stopped his
+      carriage on the road to say hello, and at Tser Pool Madam Eva read our fortune in five cards.
+  - title: Vallaki
+    from: welcome-to-vellaki-
+    through: entering-the-spirit-realm
+    picture: vallaki-ai.jpg
+    text: >-
+      Vallaki is a walled town where the guards take your silver and the festivals never stop. We found the lost girl Arabelle,
+      brought back the stolen bones that guard the church, and saw Izek fall. Then we beat the hags
+      of the windmill with their own true names, and crossed into the spirit realm under Lady Fiona's
+      house to bring Stella home. Shabasta did not come back with us.
+    won: [tome-of-strahd]
+  - title: The Broken Land
+    from: act-3-the-broken-land
+    through: echoes-of-the-silver-dragon
+    picture: wizard-of-wines-ai.jpg
+    text: >-
+      Ireena asked to fight beside us. We saved the Wizard of Wines vineyard from the druids, stopped
+      Winter Splinter, and reached Krezk and the abbey above it, where we found Ezmerelda. Together we
+      raided the werewolf den, and Zuleika gave Olfin the Symbol of Ravenkind. At Argynvostholt we
+      met the ghosts of the Order of the Silver Dragon.
+    won: [symbol-of-ravenkind]
+  - title: Castle Ravenloft
+    from: the-oath-the-spy-and-the-silver-moon
+    through: the-slipper-and-the-shadow-of-the-bat
+    picture: castle-ravenloft-ai-2.jpg
+    text: >-
+      Strahd invited us to dinner, then kept us in his guest tower for a night that kept starting
+      over. We left as his guests and came back as thieves while he rode out. We took Argynvost's
+      skull, destroyed Volenta and Anastrasya, two of his brides, found the Icon of Dawn's Grace in
+      Saint Markovia's tomb, and freed Gertruda. Olfin died there, and I called him back.
+    won: [argynvosts-skull, spear-of-the-huntress, icon-of-dawns-grace]
+  - title: The Abbey and the Beacon
+    from: the-shard-s-warning-and-the-abbot-s-madness
+    through: the-beacon-of-argynvostholt
+    picture: argynvostholt-ai.jpg
+    text: >-
+      We took Gertruda home, then climbed back to the abbey in Krezk to stop the Abbot. With the Icon
+      of Dawn's Grace we cleansed him, and Olfin fell and was brought back again. Under the abbey we
+      opened the red door and freed hundreds of trapped souls. At Argynvostholt we returned the silver
+      dragon's skull, his knights found rest, and we swore the Order's oath.
+faces: [strahd-von-zarovich, ireena-kolyana, ismark-kolyanovich, rahadin, madam-eva, ezmerelda-d-avenir]
+fortune:
+  - card: Traitor
+    told: Of history. Knowledge of the ancient will help against our enemy.
+    points_to: tome-of-strahd
+    found_in: entering-the-spirit-realm
+  - card: Myrmidon
+    told: A powerful force of good and protection.
+    points_to: symbol-of-ravenkind
+    found_in: blood-and-oaths-under-moonligh
+  - card: Bishop
+    told: A weapon of vengeance, the sword of sunlight.
+    points_to: sunsword
+    status: Still looking. The cards say it lies beyond a set of amber doors.
+  - card: Mists
+    told: The one who will help us greatly in the battle.
+    points_to: ezmerelda-d-avenir
+    found_in: shadows-over-st-markovia
+  - card: Marionette
+    told: Where we will find our enemy when we are ready for judgment.
+    points_to: heart-of-sorrow
+    status: Not yet. The cards point to the castle's heights and its beating heart.
+how_to_read:
+  - Each session is told by Malron, the party's cleric, in his own words.
+  - Gold names open the wiki, where every person, place and thing we met has a page.
+  - Red titles open a session.
+  - A handwritten note in the margin is the table talking, not Malron.
+  - The map shows every session where it happened, with the road the party took.
+about: >-
+  This is the record of a Curse of Strahd campaign that began in November 2023. Malron's player keeps
+  it, from notes and recordings of each session, and the Dungeon Master runs the game. The pictures are made with AI from the posts and the wiki; they are not official art
+  and not the players' own drawings.
