@@ -55,7 +55,7 @@ Aera opened with her moon-touched blade, struck deep where he was unguarded and 
 
 Ethereal seized Olfin and carried him thirty feet into the air. Then the flesh golem joined the fight on our side, hurling a chalice at the Abbot and soaking his face in wine. We cheered it on, and were already talking of taking it with us for the rest of Barovia. From the ground Aera shot him with her short bow, a terrible wound. Ethereal flew over her and dropped Olfin on top of her. Aera, lifted by Shabasta’s song, dodged aside, and Olfin took the whole fall.
 
-![The Abbot's flesh golem in a rope crown dressed up as flowers, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
+![The Abbot's flesh golem in Aera's rope crown, with her illusion of a flower crown shimmering above it, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
 
 *AI-generated image (Google Gemini, October 2026). Not official art.*
 

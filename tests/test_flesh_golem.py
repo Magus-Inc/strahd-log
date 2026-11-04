@@ -100,3 +100,12 @@ def test_no_page_says_marzena_made_the_garland(site_pages, path):
 
 def test_marzena_is_the_flying_belview(site_pages):
     assert "Belview" in site_pages["wiki/marzena"]
+
+
+@pytest.mark.parametrize("path", ["wiki/the-flesh-golem", "posts/the-abbot-unveiled-wings-lies-and-the-fallen-star"])
+def test_the_golem_picture_says_the_flowers_are_aeras_illusion(site_pages, path):
+    """The picture shows a rope crown with flowers floating above it: the flowers are Aera's
+    Silent Image over plain rope, and the picture's description says so (Chris, 2026-11-04)."""
+    alts = re.findall(r'<img[^>]*src="/images/the-flesh-golem-ai\.jpg"[^>]*>', site_pages[path])
+    assert alts, path
+    assert all("Aera" in a and "illusion" in a for a in alts), alts
