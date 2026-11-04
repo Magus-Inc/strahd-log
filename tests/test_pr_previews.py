@@ -20,6 +20,12 @@ def test_preview_address_follows_the_site_base_path():
         "https://owlbear.dicelore.quest/pr-preview/pr-62/"
 
 
+def test_robots_keeps_the_sitemap_line_from_the_main_build():
+    main = "User-agent: *\nAllow: /\nSitemap: https://owlbear.dicelore.quest/sitemap.xml\n"
+    assert pr_previews.robots_txt("", main) == ("User-agent: *\nDisallow: /pr-preview/\n"
+                                                "Sitemap: https://owlbear.dicelore.quest/sitemap.xml\n")
+
+
 def test_robots_blocks_previews_only():
     assert pr_previews.robots_txt("") == "User-agent: *\nDisallow: /pr-preview/\n"
     assert pr_previews.robots_txt("/strahd-log/") == "User-agent: *\nDisallow: /strahd-log/pr-preview/\n"
@@ -69,6 +75,7 @@ def test_real_site_built_as_a_preview_works_under_its_folder(tmp_path, monkeypat
     pr_previews.mark_preview(site, 62, REPO)
 
     assert not (site / "CNAME").exists()
+    assert not (site / "robots.txt").exists() and not (site / "sitemap.xml").exists()  # only the real site's count
     pages = list(site.rglob("*.html"))
     assert len(pages) > 20
     for page in pages:

@@ -40,6 +40,16 @@
   <link rel="stylesheet" href="{{ base }}style.css?v={{ css_version }}">
   <link rel="icon" href="{{ base }}favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ base }}feed.xml">
+{% if sh.published %}
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "BlogPosting",
+    "headline": sh_title, "description": sh_desc, "image": sh_image, "datePublished": sh.published,
+    "url": site_url ~ base ~ sh.path, "mainEntityOfPage": site_url ~ base ~ sh.path,
+    "author": {"@type": "Organization", "name": "The Owlbear Party"},
+    "publisher": {"@type": "Organization", "name": site_title}} | tojson }}</script>
+{% elif sh.path == "" %}
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "WebSite",
+    "name": site_title, "description": sh_desc, "url": site_url ~ base} | tojson }}</script>
+{% endif %}
 {% if ga %}
   <!-- Google Analytics 4 (Chris, 2026-11-04), beside GoatCounter. Google's own tag; it sets cookies. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga }}"></script>
