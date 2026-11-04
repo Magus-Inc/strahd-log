@@ -124,11 +124,14 @@ def test_build_previews_builds_each_pull_request_and_survives_a_broken_one(repo_
     public = tmp_path / "public"
     public.mkdir()
     (public / "index.html").write_text("main", encoding="utf-8")
+    (public / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://owlbear.dicelore.quest/sitemap.xml\n",
+                                       encoding="utf-8")
     results = pr_previews.build_previews(public, "https://owlbear.dicelore.quest", "", REPO,
                                          [{"number": 1}, {"number": 2}], tmp_path / "work", repo_with_pulls)
     assert results["built"] == [1] and results["failed"] == [2]
     assert (public / "index.html").read_text(encoding="utf-8") == "main"
-    assert (public / "robots.txt").read_text(encoding="utf-8") == "User-agent: *\nDisallow: /pr-preview/\n"
+    assert (public / "robots.txt").read_text(encoding="utf-8") == (
+        "User-agent: *\nDisallow: /pr-preview/\nSitemap: https://owlbear.dicelore.quest/sitemap.xml\n")
     preview = (public / "pr-preview" / "pr-1" / "index.html").read_text(encoding="utf-8")
     assert "/pr-preview/pr-1/|</body>" in preview  # right base path; no counter, no token
     assert "noindex" in preview and "pull request #1" in preview

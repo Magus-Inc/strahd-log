@@ -33,7 +33,7 @@
         "&rnd=" + Math.random().toString(36).slice(2);
 {% endif %}
 {% if ga %}
-      gtag("event", "read_" + step);
+      if (window.gtag) gtag("event", "read_" + step);
 {% endif %}
     }
     function inView(bottom) { return window.innerHeight >= bottom; }

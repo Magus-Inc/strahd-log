@@ -173,14 +173,14 @@ the next publish leaves it out, so the preview goes away. Pull requests from for
 since their code would run with the repository's token.
 
 `tools/pr_previews.py` does the work. Previews carry a red "Preview of pull request #N" banner and a
-`noindex` tag, `robots.txt` blocks `/pr-preview/`, and they are built without `GOATCOUNTER`, so
-search engines and page-view counts skip them. The workflow uses `pull_request_target`, which runs
+`noindex` tag, `robots.txt` blocks `/pr-preview/`, and they are built without `GOATCOUNTER` or
+`GOOGLE_ANALYTICS`, so search engines and page-view counts skip them. The workflow uses `pull_request_target`, which runs
 the copy of `pages.yml` on `main`; changes to the workflow itself only take effect once merged.
 
 ## Page views
 
 [GoatCounter](https://www.goatcounter.com) counts visits per page: free for a site like this, no
-cookies, nothing stored in the visitor's browser, and no cookie banner needed. The publish workflow
+cookies and nothing stored in the visitor's browser. The publish workflow
 sets `GOATCOUNTER: owlbear`, which adds a few lines of our own script to every page that report the
 page's path, title and referring site to <https://owlbear.goatcounter.com>. Local builds, `just
 serve` and pull-request checks leave `GOATCOUNTER` unset, so they never count. To use a different
@@ -196,3 +196,21 @@ next to the page views):
 
 Each is sent at most once per visit. Compare `finished` with the post's views to see how many visitors
 read it all.
+
+### Google Analytics
+
+Google Analytics 4 runs beside GoatCounter (Chris, 2026-11-04). The publish workflow sets
+`GOOGLE_ANALYTICS: G-7CE3V3QTJ8`, which loads Google's own tag (`googletagmanager.com/gtag/js`) on
+every page; unlike GoatCounter it sets Google's `_ga` cookies. Every count still goes to GoatCounter
+too. The read events above also go to Google as `read_started`, `read_halfway` and `read_finished`,
+and picture and deck votes as a `vote` event (its `vote_choice` is the page path and choice). Local
+builds, previews and site diffs leave `GOOGLE_ANALYTICS` unset; to stop sending to Google, delete
+that line.
+
+## Search engines
+
+The build writes `sitemap.xml` (the home page, every post, the wiki and its pages, the map and tags
+pages) and a `robots.txt` that points to it; the publish workflow adds the `/pr-preview/` block and
+keeps the `Sitemap:` line. Posts carry schema.org `BlogPosting` data and the home page `WebSite`
+data, so Google can show them as articles. Google Search Console verifies the domain with a DNS TXT
+record at Porkbun, so the site needs no verification file.

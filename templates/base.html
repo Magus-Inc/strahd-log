@@ -48,7 +48,7 @@
     "publisher": {"@type": "Organization", "name": site_title}} | tojson }}</script>
 {% elif sh.path == "" %}
   <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "WebSite",
-    "name": site_title, "description": sh_desc, "url": site_url ~ base} | tojson }}</script>
+    "name": site_title, "description": site_subtitle, "url": site_url ~ base} | tojson }}</script>
 {% endif %}
 {% if ga %}
   <!-- Google Analytics 4 (Chris, 2026-11-04), beside GoatCounter. Google's own tag; it sets cookies. -->
@@ -120,7 +120,7 @@
             "&rnd=" + Math.random().toString(36).slice(2);
 {% endif %}
 {% if ga %}
-          gtag("event", "vote", {vote_choice: path + b.dataset.vote});
+          if (window.gtag) gtag("event", "vote", {vote_choice: path + b.dataset.vote});
 {% endif %}
           try { localStorage.setItem(key, b.dataset.label); } catch (e) {}
           thank(b.dataset.label);

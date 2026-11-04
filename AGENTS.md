@@ -11,7 +11,8 @@
   Checks workflow prints the site diff for every pull request.
 - The site build needs only `requirements.txt`; keep importer and test packages in `requirements-dev.txt`.
 - Scripts (Chris, 2026-11-02): the site runs its own JavaScript plus libraries copied into
-  `static/vendor/`; it never loads a script, stylesheet or font from another site (no CDNs), so
+  `static/vendor/`; apart from Google Analytics' tag (below) it never loads a script, stylesheet or
+  font from another site (no CDNs), so
   readers' browsers talk only to the blog, GoatCounter and Google Analytics. The one outside script
   is Google Analytics 4's own tag (`googletagmanager.com/gtag/js`, Chris asked for it beside
   GoatCounter, 2026-11-04), turned on only by `GOOGLE_ANALYTICS` in the publish workflow; it sets

@@ -209,17 +209,20 @@ const context = {
   NodeFilter: {SHOW_COMMENT: 128},
   location: {pathname: "/posts/x/"},
   window: {innerHeight: 800, addEventListener: (name, f) => handlers.push(f)},
+
   document: {
     title: "X", visibilityState: "visible", addEventListener: () => {},
     querySelector: sel => sel === ".prose[data-read-minutes]" ? prose : sel === ".where-we-were .map-figure" ? map : null,
     createTreeWalker: () => { const c = kids.filter(k => k.nodeType === 8); let i = 0; return {nextNode: () => c[i++] || null}; },
   },
   Image: class { set src(url) { sent.push(new URL(url).searchParams.get("p").split("/").pop()); } },
-  gtag: (kind, name) => sent.push("ga:" + kind + ":" + name),
+
   setInterval: f => { timers.push(f); return timers.length; },
   clearInterval: id => { timers[id - 1] = null; },
   Math, Number, String, encodeURIComponent, URL,
 };
+context.gtag = (kind, name) => sent.push("ga:" + kind + ":" + name);
+if (page.gtag !== false) context.window.gtag = context.gtag; else delete context.gtag;
 vm.runInNewContext(script, context);
 const out = [];
 for (const step of page.steps) {
@@ -294,3 +297,14 @@ def test_each_read_event_also_goes_to_google_analytics_once():
 def test_google_analytics_alone_still_gets_read_events():
     got = fake_read([{"scroll": 1700, "wait": 31}], script=reading_js(counter="", ga="G-TEST123AB"))
     assert got[0] == ["ga:event:read_halfway", "ga:event:read_started", "ga:event:read_finished"]
+
+
+@needs_node
+def test_read_events_without_googles_tag_still_reach_goatcounter():
+    """If the inline GA setup is ever missing, the reading script keeps going instead of throwing."""
+    page = {"minutes": 1, "prose": [0, 2200], "nodes": ACCOUNT, "map": [2400, 2900], "gtag": False,
+            "steps": [{"scroll": 1700, "wait": 31}]}
+    done = subprocess.run([NODE, "-e", FAKE_PAGE, reading_js(ga="G-TEST123AB"), json.dumps(page)],
+                          capture_output=True, text=True, encoding="utf-8", timeout=60)
+    assert done.returncode == 0, done.stderr
+    assert json.loads(done.stdout) == [["halfway", "started", "finished"]]
