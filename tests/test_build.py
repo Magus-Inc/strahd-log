@@ -882,3 +882,21 @@ def test_card_picture_of_a_see_through_png_sits_on_the_dark_background(tmp_path)
     # A feature name that matches no picture falls back to the first picture.
     with Image.open(out / "images" / "cards" / "post-ghost.webp") as pic:
         assert sum(pic.convert("RGB").getpixel((10, 10))) < 150  # dark, not white or garbage
+
+
+def test_small_copy_makes_a_webp_no_wider_than_asked(tmp_path):
+    from PIL import Image
+    source = tmp_path / "big.png"
+    Image.new("RGBA", (1200, 1600), (200, 30, 60, 128)).save(source)
+    rel = build.small_copy(source, tmp_path / "out", 400)
+    assert rel == "images/small/big-400.webp"
+    with Image.open(tmp_path / "out" / rel) as image:
+        assert image.format == "WEBP" and image.size == (400, 533) and image.mode == "RGB"
+
+
+def test_small_copy_never_makes_a_picture_bigger(tmp_path):
+    from PIL import Image
+    source = tmp_path / "little.jpg"
+    Image.new("RGB", (300, 200), "red").save(source)
+    with Image.open(tmp_path / "out" / build.small_copy(source, tmp_path / "out", 800)) as image:
+        assert image.size == (300, 200)

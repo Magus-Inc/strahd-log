@@ -391,10 +391,26 @@ def make_thumbnails(pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path)
 CARD_PIC_WIDTH = 640  # px; home cards are about 17-20rem wide, so this stays sharp on phones
 
 
+def flat_rgb(image, width: int):
+    """A picture ready to save small: turned the right way up, see-through parts laid on the site's dark
+    background, and shrunk to at most width pixels wide (never made bigger)."""
+    from PIL import Image, ImageOps  # only the build needs it
+    image.draft("RGB", (width, width * 4))
+    image = ImageOps.exif_transpose(image)
+    if image.mode in ("RGBA", "LA", "P"):
+        image = image.convert("RGBA")
+        flat = Image.new("RGB", image.size, share.BACKGROUND)
+        flat.paste(image, mask=image.getchannel("A"))
+        image = flat
+    image = image.convert("RGB")
+    image.thumbnail((width, width * 4))
+    return image
+
+
 def make_card_pictures(posts: list[Post], static_dir: Path, out_dir: Path) -> None:
     """Give each post a small copy of its feature picture (the `feature:` one, else the first) for its
     home page card (blog review idea 1, Chris 2026-11-04). Only pictures on the site get one."""
-    from PIL import Image, ImageOps  # only the build needs it
+    from PIL import Image  # only the build needs it
     for post in posts:
         picture = share.first_picture(post.body_md, static_dir, prefer=post.feature)
         if picture is None or isinstance(picture[0], str):
@@ -402,17 +418,43 @@ def make_card_pictures(posts: list[Post], static_dir: Path, out_dir: Path) -> No
         rel = f"images/cards/post-{post.slug}.webp"
         (out_dir / rel).parent.mkdir(parents=True, exist_ok=True)
         with Image.open(picture[0]) as image:
-            image.draft("RGB", (CARD_PIC_WIDTH, CARD_PIC_WIDTH * 2))
-            image = ImageOps.exif_transpose(image)
-            if image.mode in ("RGBA", "LA", "P"):  # see-through parts go on the site's dark background
-                image = image.convert("RGBA")
-                flat = Image.new("RGB", image.size, share.BACKGROUND)
-                flat.paste(image, mask=image.getchannel("A"))
-                image = flat
-            image = image.convert("RGB")
-            image.thumbnail((CARD_PIC_WIDTH, CARD_PIC_WIDTH * 2))
-            image.save(out_dir / rel, "WEBP", quality=78)
+            flat_rgb(image, CARD_PIC_WIDTH).save(out_dir / rel, "WEBP", quality=78)
         post.card_pic = rel
+
+
+def small_copy(source: Path, out_dir: Path, width: int) -> str:
+    """A small WebP copy of a site picture, at most width pixels wide, for pages full of pictures
+    (Chris, 2026-11-04: Start here loaded 1.5 MB of full-size pictures). Wiki articles and session
+    logs keep the full-size picture. Returns its path under the site (images/small/<name>-<width>.webp)."""
+    from PIL import Image  # only the build needs it
+    rel = f"images/small/{source.stem}-{width}.webp"
+    (out_dir / rel).parent.mkdir(parents=True, exist_ok=True)
+    with Image.open(source) as image:
+        flat_rgb(image, width).save(out_dir / rel, "WEBP", quality=78)
+    return rel
+
+
+PORTRAIT_WIDTH = 400  # px; a party cell is up to about 180 CSS px wide, so this stays sharp on phones
+CHAPTER_WIDTHS = (800, 1100)  # px; a chapter picture is 22rem beside its text, or the page's width
+HERO_WIDTH = 1100  # px; the castle at the top of Start here, as wide as its original
+
+
+def make_start_pictures(page: start.StartPage | None, static_dir: Path, out_dir: Path) -> None:
+    """Small copies of the Start here pictures: party portraits, chapter pictures and the castle.
+    page.small maps each picture (images/...) to its copies, smallest first."""
+    if page is None:
+        return
+    def copies(rel: str, widths) -> None:
+        source = static_dir / rel
+        if rel not in page.small and source.is_file():
+            page.small[rel] = [(small_copy(source, out_dir, w), w) for w in widths]
+    for member in page.party:
+        if member.pictures:
+            copies(member.pictures[0].lstrip("/"), (PORTRAIT_WIDTH,))
+    for chapter in page.chapters:
+        copies(chapter.picture, CHAPTER_WIDTHS)
+    if page.hero:
+        copies(page.hero, (HERO_WIDTH,))
 
 
 def picture_card(stem: str, picture, title: str, out_dir: Path, site: dict) -> dict:
@@ -831,6 +873,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
     shutil.copytree(ROOT / "static", out_dir)
     make_thumbnails(site.pages, site.static_dir, out_dir)
     make_card_pictures(site.posts, site.static_dir, out_dir)
+    make_start_pictures(site.start, site.static_dir, out_dir)
     shares = share_cards(site.posts, site.pages, site.static_dir, out_dir)
     env.globals.update(site_card=shares.pop(None), card_size=(share.CARD_W, share.CARD_H))
     write_posts(site, env, out_dir, shares, base)
