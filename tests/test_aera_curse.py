@@ -51,3 +51,14 @@ def test_malron_tells_his_price_and_lathanders_help():
     assert "three days" in story and "Lathander" in story and POST in story
     line = next(l for l in log.splitlines() if "Strahd's game" in l)
     assert "three days" in line and "Lathander" in line
+
+
+def test_post_matches_and_tells_malrons_anguish():
+    """Chris, 2026-11-04: the session post matches the wiki and holds the most of Malron's inner
+    thoughts, which explain why the rest of that night's record is hazy."""
+    text = (ROOT / "content" / "posts" / "2025-05-13-blood-and-oaths-under-moonligh.md").read_text(encoding="utf-8")
+    story = text.split("## Key Locations")[0]
+    assert "a day of silence" not in story
+    assert "three days" in story and "Lathander" in story
+    assert "blur" in story and "bad dream" in story
+    assert "whether her curse still holds" in story
