@@ -882,3 +882,44 @@ def test_card_picture_of_a_see_through_png_sits_on_the_dark_background(tmp_path)
     # A feature name that matches no picture falls back to the first picture.
     with Image.open(out / "images" / "cards" / "post-ghost.webp") as pic:
         assert sum(pic.convert("RGB").getpixel((10, 10))) < 150  # dark, not white or garbage
+
+
+def test_small_copy_makes_a_webp_no_wider_than_asked(tmp_path):
+    from PIL import Image
+    source = tmp_path / "big.png"
+    Image.new("RGBA", (1200, 1600), (200, 30, 60, 128)).save(source)
+    rel = build.small_copy(source, tmp_path / "out", 400)
+    assert rel == "images/small/big-400.webp"
+    with Image.open(tmp_path / "out" / rel) as image:
+        assert image.format == "WEBP" and image.size == (400, 533) and image.mode == "RGB"
+
+
+def test_small_copy_never_makes_a_picture_bigger(tmp_path):
+    from PIL import Image
+    source = tmp_path / "little.jpg"
+    Image.new("RGB", (300, 200), "red").save(source)
+    with Image.open(tmp_path / "out" / build.small_copy(source, tmp_path / "out", 800)) as image:
+        assert image.size == (300, 200)
+
+
+def test_start_pictures_with_the_same_name_get_their_own_copies(tmp_path):
+    """images/full/x.jpg and images/x.png must not overwrite one small copy (review, 2026-11-04)."""
+    from types import SimpleNamespace
+    from PIL import Image
+    static = tmp_path / "static"
+    (static / "images" / "full").mkdir(parents=True)
+    Image.new("RGB", (900, 600), "red").save(static / "images" / "x.png")
+    Image.new("RGB", (900, 600), "blue").save(static / "images" / "full" / "x.jpg")
+    page = SimpleNamespace(small={}, hero="images/x.png", chapters=[SimpleNamespace(picture="images/full/x.jpg")],
+                           party=[])
+    build.make_start_pictures(page, static, tmp_path / "out")
+    files = [f for copies in page.small.values() for f, _ in copies]
+    assert len(files) == len(set(files)) == 3
+    with Image.open(tmp_path / "out" / page.small["images/x.png"][0][0]) as image:
+        assert image.getpixel((5, 5))[0] > 200  # still the red one
+
+
+def test_a_tall_feature_picture_card_stays_at_most_twice_as_tall_as_wide(tmp_path):
+    from PIL import Image
+    with Image.new("RGB", (1000, 5000), "red") as image:
+        assert build.flat_rgb(image, build.CARD_PIC_WIDTH, build.CARD_PIC_WIDTH * 2).size == (256, 1280)

@@ -7,7 +7,7 @@
 {% block title %}Start here | {{ site_title }}{% endblock %}
 {% block content %}
 {% set s = start %}
-    <header class="start-hero"{% if s.hero %} style="background-image: url('{{ base }}{{ s.hero }}')"{% endif %}>
+    <header class="start-hero"{% if s.hero %} style="background-image: url('{{ base }}{{ (s.small[s.hero] | last)[0] if s.hero in s.small else s.hero }}')"{% endif %}>
       <div class="start-hero-text">
         <p class="eyebrow">New here?</p>
         <h1>Welcome to Barovia</h1>
@@ -19,7 +19,7 @@
       <h2 id="party-title">The party</h2>
       <ul class="party-grid">
 {% for p in s.party %}
-        <li><a href="{{ base }}{{ p.path }}">{% if p.pictures %}<img src="{{ base }}{{ p.pictures[0] | replace('/', '', 1) }}" alt="" loading="lazy" decoding="async">{% endif %}<strong>{{ p.title.split()[0] }}</strong><span>{{ p.summary }}</span></a></li>
+        <li><a href="{{ base }}{{ p.path }}">{% if p.pictures %}{% set pic = p.pictures[0] | replace('/', '', 1) %}<img src="{{ base }}{{ (s.small[pic] | first)[0] if pic in s.small else pic }}" alt="" loading="lazy" decoding="async">{% endif %}<strong>{{ p.title.split()[0] }}</strong><span>{{ p.summary }}</span></a></li>
 {% endfor %}
       </ul>
 {% if s.past %}
@@ -38,7 +38,7 @@
       <ol class="chapters">
 {% for c in s.chapters %}
         <li class="chapter">
-          <img class="chapter-pic" src="{{ base }}{{ c.picture }}" alt="" loading="lazy" decoding="async">
+          {% set copies = s.small.get(c.picture, []) %}<img class="chapter-pic" src="{{ base }}{{ (copies | first)[0] if copies else c.picture }}"{% if copies | length > 1 %} srcset="{% for f, w in copies %}{{ base }}{{ f }} {{ w }}w{{ ', ' if not loop.last }}{% endfor %}" sizes="(min-width: 760px) 22rem, 100vw"{% endif %} alt="" loading="lazy" decoding="async">
           <div class="chapter-text">
             <p class="chapter-meta">Chapter {{ loop.index }} &middot; {{ c.span }} &middot; {{ c.posts | length }} session{{ "s" if c.posts | length != 1 }}</p>
             <h3>{{ c.title }}</h3>

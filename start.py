@@ -88,6 +88,7 @@ class StartPage:
     fortune: list[Card]
     how_to_read: list[Tip]
     about: str
+    small: dict = field(default_factory=dict)  # images/... -> [(small copy, width)], smallest first; set by the build
 
 
 def first_name(page) -> str:

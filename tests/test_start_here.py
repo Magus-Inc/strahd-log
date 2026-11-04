@@ -297,3 +297,52 @@ def test_a_pcs_first_picture_is_the_ai_one(path):
     ai = [p for p in pictures if "-ai" in p]
     if ai:
         assert pictures[0] in ai, f"put {ai[0]} before {pictures[0]}"
+
+
+# Picture weight (Chris, 2026-11-04): Start here showed the full-size portraits and chapter pictures
+# (about 1.5 MB). Pages full of pictures get small WebP copies; wiki articles and session logs keep
+# the full-size ones.
+def pictures_on(html: str) -> list[str]:
+    found = re.findall(r'<img[^>]*\ssrc="/([^"]+)"', html)
+    found += re.findall(r"url\('/([^']+)'\)", html)
+    return found
+
+
+def srcset_files(html: str) -> list[str]:
+    return [part.split()[0].lstrip("/") for srcset in re.findall(r'srcset="([^"]+)"', html)
+            for part in srcset.split(",")]
+
+
+def test_the_party_and_chapters_and_hero_use_small_webp_copies(start_html):
+    party = start_html.split('id="party"', 1)[1].split('</ul>', 1)[0]
+    chapters = start_html.split('class="chapters"', 1)[1].split('</ol>', 1)[0]
+    hero = start_html.split('class="start-hero"', 1)[1].split('>', 1)[0]
+    for part in (party, chapters, hero):
+        pictures = pictures_on(part)
+        assert pictures and all(p.endswith(".webp") for p in pictures), pictures
+
+
+def test_every_small_copy_on_the_page_exists(real_build, start_html):
+    for target in srcset_files(start_html) + pictures_on(start_html):
+        assert (real_build.out / target).is_file(), target
+
+
+def test_the_page_loads_under_700_kb_of_pictures(real_build, start_html):
+    """It loaded about 1.5 MB before the small copies (2026-11-04)."""
+    total = sum((real_build.out / p).stat().st_size for p in set(pictures_on(start_html)))
+    assert total < 700_000, total
+
+
+def test_a_party_portrait_is_small_but_sharp_on_a_phone(real_build, start_html):
+    party = start_html.split('id="party"', 1)[1].split('</ul>', 1)[0]
+    from PIL import Image
+    for rel in pictures_on(party):
+        path = real_build.out / rel
+        assert path.stat().st_size < 60_000, rel
+        with Image.open(path) as image:
+            assert image.width >= 360, rel  # a cell is up to about 180 CSS px wide, twice that on a phone
+
+
+def test_wiki_articles_keep_the_full_size_portrait(real_build):
+    html = (real_build.out / "wiki" / "malron-lichtstrahl" / "index.html").read_text(encoding="utf-8")
+    assert 'src="/images/malron-ai-portrait.jpg"' in html
