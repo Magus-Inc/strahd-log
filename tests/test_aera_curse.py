@@ -36,3 +36,9 @@ def test_oogway_log_has_the_spell():
 def test_aera_story_leaves_the_curse_open():
     story, _ = _parts("aera-shan-ravanor")
     assert "whether the curse still holds" in story
+
+
+def test_malron_remembers_that_night_as_a_blur():
+    """Chris, 2026-11-04: play the gap off as Malron's hazy, shaken memory of Strahd's game."""
+    story, _ = _parts("aera-shan-ravanor")
+    assert "blur" in story and "bad dream" in story
