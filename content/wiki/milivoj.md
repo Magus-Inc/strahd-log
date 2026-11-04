@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Milivoj, black-haired in a grey cloak, carrying planks past St. Andral's Church](/images/milivoj-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

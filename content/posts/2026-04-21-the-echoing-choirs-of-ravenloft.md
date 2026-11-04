@@ -23,7 +23,7 @@ The Icon is alive, and it spoke to me mind to mind. It named itself a shard of t
 
 ![The Icon of Dawn's Grace, a silver winged statuette glowing in Saint Markovia's crypt](/images/icon-of-dawns-grace-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Note: \[The DM gave a long lore dump on the Icon’s history, spanning 400 years, and its tie to the Abbot’s fall into madness. The players briefly debated the merits of Fortnite, and the value of eating a dead gecko for $20 (a story Crusty shared from his past).\]
 
@@ -33,7 +33,7 @@ We searched on and came to Crypt 37, the tomb of the wizard Growmor Nimblenobs. 
 
 ![Growmor Nimblenobs on his marble slab, clutching his staff](/images/growmor-nimblenobs-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 At the far end of the catacombs stands the greatest tomb of all. A heavy portcullis bars its archway, and beyond it black marble steps go down into a dark vault thirty feet high. We are all but sure it is Strahd’s own, the place where he sleeps. We left it alone; our business here is the relics and Gertruda.
 
@@ -53,7 +53,7 @@ The battle was brutal. Rahadin’s very presence is agony to the mind, and his s
 
 ![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ## Key Locations
 

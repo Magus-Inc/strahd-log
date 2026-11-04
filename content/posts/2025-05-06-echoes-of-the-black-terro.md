@@ -17,13 +17,13 @@ As we made ready, Ezmerelda led us to a hidden hollow near the mouth of the were
 
 ![Kiril Stoyanovich, a huge grey werewolf, at the mouth of his den by a lake](/images/kiril-stoyanovich-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 While we waited for nightfall she told us of her past: how she lost her leg to the Black Terror, and the shocking truth that her own family had a hand in taking van Richten’s son.
 
 ![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### The Werewolf Den
 

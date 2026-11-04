@@ -23,13 +23,13 @@ Then the forest folk attacked, and their hatred for Davian showed. He belongs to
 
 ![Ravens of the Keepers of the Feather watching travellers from a vineyard fence at dusk](/images/keepers-of-the-feather-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Davian told us of his younger son, Elvir, who defied his father’s warning and joined Doru’s doomed assault on Castle Ravenloft.
 
 ![Elvir Martikov with a torch among the rebels marching up a misty road to Castle Ravenloft, a raven above him](/images/elvir-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Three Green Gems
 
@@ -43,7 +43,7 @@ After a long rest we were woken two hours before dawn and set out. Mira has secr
 
 ![Kavan the Blood Drinker's spirit rising from his cairn, holding a long wooden spear](/images/kavan-the-blood-drinker-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Veyren read druidic runes telling of Kavan the Blood Drinker, and Mira, who heals herself of any wound, called Kavan up by dripping her blood. Kavan appeared, holding a long wooden spear.
 

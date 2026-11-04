@@ -28,7 +28,7 @@ The man, or creature, was none other than Count Strahd von Zarovich and he calle
 
 ![Strahd on a misty forest road at night with two dire wolves](/images/strahd-von-zarovich-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Strahd was upset about some vassal of his, which I first thought was some peasant and a case of mistaken identity, but later came to realize that he was talking about the Durst Manor and their supply of grain from the [windmill](/wiki/durst-mill/). He indicated that he has plenty of wine and the vineyard was not of concern to him.
 
@@ -50,7 +50,7 @@ We continued along the wagon path until we found a clearing by a lake. There wer
 
 ![Tser Pool at dusk: a dark lake with a Vistani camp and a glowing tent on the shore](/images/tser-pool-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ## Key Locations
 

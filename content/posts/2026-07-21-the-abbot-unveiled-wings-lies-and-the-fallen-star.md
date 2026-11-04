@@ -35,7 +35,7 @@ We found the Abbot in the asylum, a lightless corridor of cells whose prisoners 
 
 ![Vasilka, a stitched bride in a white gown, tending a mongrelfolk in the asylum](/images/vasilka-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Our reason was grim. In Vallaki, at the Blue Water Inn, Baron Dmitri Krezkov of Krezk had begged us to stop the Abbot, who means to kill his wife Anna Krezkova tonight and take her heart for Vasilka. I remembered what Ezmerelda told us: only by defeating the Abbot and unlocking his soul with the Icon of Dawn’s Grace can his corruption be cleansed and his mind restored. We talked of luring the Abbot away from the golem, but the corridor was tight and the cells might hold allies for either side. Aera took rope from her pack, used an illusion to make it look like a new crown of flowers, and walked up and gave it to the golem.
 
@@ -47,7 +47,7 @@ Olfin ended the talking. He told the golem, “We’re here to destroy your mast
 
 ![The Abbot, a handsome young monk, faint wings of fallen light behind him](/images/the-abbot-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Aera opened with her moon-touched blade, struck deep where he was unguarded and slipped away. Ethereal flew at her and loosed a ray of light from his hands. Shabasta lifted Aera’s spirit with a song and set Ethereal’s golden gauntlets glowing hot. I spotted a lever that opens the cells, and Olfin later pulled it, freeing four weak, blighted mongrelfolk. I began to doubt that our tale of Cyrus had fooled the Belviews as well as it seemed. Ethereal smashed me in the face, though Lathander’s flare spoiled his aim, and Crusty answered with fire while his owl distracted the angel.
 
@@ -57,7 +57,7 @@ Ethereal seized Olfin and carried him thirty feet into the air. Then the flesh g
 
 ![The Abbot's flesh golem in Aera's rope crown, with her illusion of a flower crown shimmering above it, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art. The flowers above its rope crown are Aera’s illusion.*
+*AI-generated image (Google Gemini). Not official art. The flowers above its rope crown are Aera’s illusion.*
 
 Ethereal answered with a burst of divine light. I could not resist it and was charmed, and fell on my face to grovel before him, until the next ray of light broke the spell. When Ethereal reached for a mighty healing touch, Crusty undid the spell, and the Abbot gave up trying to heal himself. Shabasta sang to Olfin and kept the gauntlets burning, until Ethereal seized him too, turned his hand into a mace, beat him in the air and dropped him from thirty feet. I laid a ward against evil on myself to guard against more charms. Olfin whispered “America!” to unfurl his eagle wings, drank a potion of fire breathing and took to the air.
 

@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Varushka's ghost floating in a tower bedroom, a half pendant glowing in her hands](/images/varushka-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

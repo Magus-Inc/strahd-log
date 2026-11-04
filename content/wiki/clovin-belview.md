@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Clovin Belview carrying bowls of cold porridge to the padlocked shed](/images/clovin-belview-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

@@ -19,7 +19,7 @@ Note: The fight on Yester Hill ran over two nights, 4/8 and 4/15; the 4/8 sessio
 
 ![Winter Splinter, a giant tree blight, striding out of a burning forest toward the vineyard](/images/winter-splinter-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 We destroyed Winter Splinter and took the gemheart from it, but at a heavy cost: it burst apart as it died, and nothing was left of Veyren’s body.
 
@@ -29,7 +29,7 @@ Then Muriel confessed. She is a wereraven, and it was Elvir Martikov, her betrot
 
 ![Muriel Vinshaw leading the way with a lantern on a misty road toward the vineyard](/images/muriel-vinshaw-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### “The Way Back Comes but Once”
 
@@ -37,7 +37,7 @@ We went to the Whispering Wall to meet Strahd and claim our reward. On the way w
 
 ![The Whispering Wall across misty mountains, Strahd waiting at its western door](/images/whispering-wall-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Three of us took the dare:  
 \- Zorpheus heard the prophecy confirmed.  

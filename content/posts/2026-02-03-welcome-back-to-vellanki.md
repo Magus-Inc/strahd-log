@@ -26,7 +26,7 @@ We began by going back over our last morning at Castle Ravenloft. After Aera’s
 
 ![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### A Plan at the Blue Water
 
@@ -34,7 +34,7 @@ On the road back to Vallaki each of us felt our strength grow. We gathered under
 
 ![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 We will not wait for him. Using what we learned of the castle (not from Doru) and the castle maps of Rudolph van Richten, we mean to strike during Strahd’s fourteen-day hunting cycle, while he should be away from the castle, slip into the catacombs, and take the relics and free the allies we need.
 

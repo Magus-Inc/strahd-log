@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Victor drawing a glowing teleportation circle on his attic floor](/images/victor-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

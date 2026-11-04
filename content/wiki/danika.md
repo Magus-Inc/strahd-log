@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Danika in the firelit common room of the Blue Water Inn, giving a hooded traveller directions, a raven on the beam above](/images/danika-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

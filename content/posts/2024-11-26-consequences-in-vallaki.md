@@ -19,7 +19,7 @@ Back at the Blue Water Inn we found the doors shut, the shutters closed and a wi
 
 ![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 A messenger came from Fiona Wachter with an invitation for Aera to dine the next night, the same night as the blessing.
 
@@ -27,7 +27,7 @@ We had a choice to make: go to the dinner, look into Izek, or see to the trouble
 
 ![Blinsky the toymaker grinning in his shop full of creepy toys](/images/blinsky-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Blinsky’s Shop Burns
 
@@ -41,7 +41,7 @@ Then we went to Wachterhaus, where the invitation got us in. We were shown to a 
 
 ![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ## Key Locations
 

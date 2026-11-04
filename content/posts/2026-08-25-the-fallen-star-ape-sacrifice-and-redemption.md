@@ -59,7 +59,7 @@ The Icon of Dawn’s Grace stirred. Motes of golden light gathered over the fall
 
 ![The Abbot as a young man, weeping in the void inside the Icon of Dawn's Grace, his wings chained down with mist](/images/the-void-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Saint Markovia Returns
 
@@ -69,7 +69,7 @@ Note: Crusty took zero damage the entire fight. Inspiration for the session went
 
 ![Saint Markovia as a glowing spirit in a simple white robe, holding out her hand](/images/saint-markovia-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ## Key Locations
 

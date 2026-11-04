@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Zorpheus, a hooded bard with a lute, fortune cards and a thief's dagger](/images/zorpheus-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs.*
 

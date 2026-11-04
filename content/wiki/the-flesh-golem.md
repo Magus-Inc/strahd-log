@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Abbot's flesh golem in Aera's rope crown, with her illusion of a flower crown shimmering above it, hurling a chalice of wine down the asylum corridor](/images/the-flesh-golem-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art. The flowers above its rope crown are Aera’s illusion.*
+*AI-generated image (Google Gemini). Not official art. The flowers above its rope crown are Aera’s illusion.*
 
 *Written from the session logs, in Malron's words.*
 

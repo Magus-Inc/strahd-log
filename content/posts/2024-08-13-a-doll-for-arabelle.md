@@ -21,7 +21,7 @@ Among the cluttered shelves of Blinsky’s Toy Store was a doll that looked eeri
 
 ![Blinsky the toymaker grinning in his shop full of creepy toys](/images/blinsky-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Arabelle Is Missing
 
@@ -29,7 +29,7 @@ At the encampment we met Shabasta the Great, a porcupine of a bard, whose lute c
 
 ![The Vistani camp by Vallaki at dusk: painted wagons round a fire, broken pots, a whip cracking, dusk elves sitting apart, the Luna River to the west, the main road, and Vallaki's palisade with refugee tents beyond](/images/vallaki-vistani-camp-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 But the camp seethed with tension: broken pottery, cracking whips. Alexi begged for help finding his missing daughter, Arabelle. Accusations flew. Alexi claimed Yann drugged him and took her. Yann had met a grisly end: a dusk elf found his severed head nearby, toward the Luna River.
 
@@ -37,7 +37,7 @@ Kasimir held a signet ring bearing a sigil of connected symbols and lines, its d
 
 ![Kasimir Velikov, a grey-skinned dusk elf, clutching a glowing signet ring in the Vistani camp](/images/kasimir-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Alexi offered us five hundred gold pieces if we bring Arabelle back alive.
 

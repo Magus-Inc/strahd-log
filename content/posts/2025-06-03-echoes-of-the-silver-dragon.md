@@ -17,13 +17,13 @@ We went on exploring Argynvostholt, finding lingering spirits and relics of the 
 
 ![Argynvost, a vast ghostly silver dragon, over Argynvostholt with kneeling knights below](/images/argynvost-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Aera found [a pseudodragon](/wiki/zorya/), which now follows her, drawn to her somehow.
 
 ![Zorya, a tiny ghostly pseudodragon, hovering in a ruined hall at Argynvostholt](/images/zorya-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Minodora’s Plea
 

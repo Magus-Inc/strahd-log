@@ -17,7 +17,7 @@ We came to Castle Ravenloft in the black carriage, having solved the puzzle ches
 
 ![Castle Ravenloft on its cliff, the drawbridge spanning the chasm from the road, the village in the valley below](/images/castle-ravenloft-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 **Rahadin** and Anastrasya greeted us and ushered us into the castle’s grand halls. The air was tense and theatrical, a strange mix of elegance and dread.
 
@@ -31,7 +31,7 @@ A masked servant came in, shaking, his fingers cut off at the first knuckle and 
 
 ![Strahd's three brides at his reception: Volenta in a wine-stained white dress, Anastrasya and Ludmilla](/images/brides-of-strahd-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Below the Hall
 
@@ -39,7 +39,7 @@ Zorpheus and Sasha offered to clean it up and went for mops. Sasha took him down
 
 ![Sasha, a castle servant with a candle, whispering by the great organ](/images/sasha-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Sasha quietly told Zorpheus how to open it:
 

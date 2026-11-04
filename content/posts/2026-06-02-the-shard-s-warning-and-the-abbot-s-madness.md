@@ -25,7 +25,7 @@ Note: \[There was a meta-discussion about leveling up. The DM explained that whi
 
 ![Ismark, a tired young man in a cloak with a longsword, in a dim tavern](/images/ismark-kolyanovich-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### An Unkindness of Ravens
 
@@ -39,7 +39,7 @@ In Vallaki, Baron Dmitri Krezkov was waiting for us at the Blue Water Inn. Despe
 
 ![Dmitri Krezkov at the snowy gate of Krezk](/images/dmitri-krezkov-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### The Abbot’s Sad History
 
@@ -47,7 +47,7 @@ At the gates of Krezk, Anna Krezkova met us, grateful and terrified. As we made 
 
 ![The Abbot, a handsome young monk, faint wings of fallen light behind him](/images/the-abbot-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ## Key Locations
 

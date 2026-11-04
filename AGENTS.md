@@ -69,8 +69,8 @@
   picture and any maps included; the slides are a deck and do not count. A post Chris names may hold 4
   (`picture-cap: 4` in its front matter, never more). They go only in the story, each on a line of its
   own after the paragraph it shows (after that paragraph's `Note:` margin notes), with words between
-  two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line, model and month only:
-  `*AI-generated image (Google Gemini, November 2026). Not official art.*` (a PC's portrait says
+  two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line, the model only (no month or year, Chris 2026-11-04):
+  `*AI-generated image (Google Gemini). Not official art.*` (a PC's portrait says
   "Not player art."), never what it was drawn from. After "Not official art." it may add one short sentence a reader needs to
   read the picture right, e.g. the golem's "The flowers above its rope crown are Aera’s illusion." (Chris,
   2026-11-04): that line is the caption readers see, and in a post it links the wiki page. A post with more than one picture names its feature picture in

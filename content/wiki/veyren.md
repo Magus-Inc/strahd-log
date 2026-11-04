@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Veyren, a hare-folk druid with a staff, a mouse on his shoulder](/images/veyren-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not player art.*
+*AI-generated image (Google Gemini). Not player art.*
 
 *Written from the session logs.*
 

@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Zuleika and Ilya in silver thorn collars, Zuleika offering the Symbol of Ravenkind by the fire](/images/zuleika-and-ilya-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

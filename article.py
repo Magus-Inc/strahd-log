@@ -226,6 +226,16 @@ def escape(text: str) -> str:
     return htmllib.escape(text, quote=True)
 
 
+def hover_titles(html: str) -> str:
+    """A picture's description (its alt text) also shows as a tooltip on mouse hover (Chris, 2026-11-04)."""
+    def add(m: re.Match) -> str:
+        tag, alt = m.group(0), m.group(1)
+        if not alt or re.search(r'\btitle="', tag):
+            return tag
+        return re.sub(r"\s*/?>$", f' title="{alt}">', tag)
+    return re.sub(r'<img\b[^>]*\balt="([^"]*)"[^>]*>', add, html)
+
+
 def full_size(html: str, static_dir: Path) -> str:
     """Give each picture that has a bigger copy in static/images/full/ a data-full address, which the
     picture viewer loads only when a reader opens it (Chris, 2026-11-02). Pages keep the small file."""

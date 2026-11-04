@@ -11,7 +11,7 @@ source: Compiled from the adventure log
 
 ![Two hag sisters, Bella and Offalia, coming down the stair beside the millstone in the windmill](/images/belladonna-sunbane-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

@@ -17,7 +17,7 @@ We spoke with the two children outside the [Manor](/wiki/durst-manor/). They are
 
 ![Rose and Thorn Durst, two ghost children side by side at the manor gate, Thorn hugging a stuffed toy](/images/rose-and-thorn-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Six Chimes and a Verse
 

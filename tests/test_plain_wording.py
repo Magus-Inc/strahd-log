@@ -80,7 +80,7 @@ def test_the_name_fact_check_catches_brackets_after_names():
     for line in ["* **Khazan (Deceased)**: An archmage.", "* **Ezmerelda** (mentioned): She told us.",
                  "* **Rahadin**: (Mentioned) Strahd's chamberlain.", "In the courtyard (S12) we met Clovin."]:
         assert NAME_FACT.search(line), line
-    assert not NAME_FACT.search("*AI-generated image (Google Gemini, November 2026).*")
+    assert not NAME_FACT.search("*AI-generated image (Google Gemini).*")
     assert not NAME_FACT.search("We consulted the map Ismark gave us (I’ve made a crude copy).")
 
 

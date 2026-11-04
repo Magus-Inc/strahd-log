@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Ethereal Plane, pale translucent spirits drifting through green-grey mist as the stone walls of a cellar fade away](/images/ethereal-plane-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

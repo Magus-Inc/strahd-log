@@ -18,7 +18,7 @@ Izek went to the eastern gate, where refugees sick with longing for dream pastri
 
 ![Izek, a scarred guard captain with a burning demonic right arm, at a town gate](/images/izek-strahsne-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Izek Falls
 

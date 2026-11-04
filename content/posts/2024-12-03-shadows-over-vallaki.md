@@ -17,7 +17,7 @@ At Wachterhaus a young woman in a nightgown appeared in the hallway with a hollo
 
 ![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Lady Fiona told us she follows Ezra, goddess of the mists, who teaches endurance. Her older brother Frederick was meant to be the heir, until Lysa rescued Lady Fiona from the woods when she was young. She prays and hears Ezra answer, though I suspect the voice may be an imposter.
 
@@ -29,7 +29,7 @@ Stella has been sick for six months, since she began visiting Victor, the Baronâ
 
 ![Stella Wachter, a hollow-eyed young woman in a nightgown, in a dark hallway](/images/stella-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Strahd at the Window
 

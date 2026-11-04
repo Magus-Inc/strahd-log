@@ -70,7 +70,7 @@ The mass was a mound of flesh, and it began moving toward Aera at the altar. Wee
 
 ![A mound of rotting flesh and roots in the cult's cellar, a ghostly child glowing inside](/images/walter-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### The House Comes Down
 
@@ -78,7 +78,7 @@ The apparition of [Elisabeth Durst](/wiki/elisabeth-durst/) appeared and vowed t
 
 ![Elisabeth Durst in a black gown, an amber shard glowing at her throat](/images/elisabeth-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Spectral things lashed at us on the way up, but we dodged them and the falling rocks and ran up a secret ladder into the room with the stuffed wolves. Schlopkht broke a window and we climbed out of the house. Behind us it collapsed into the ground and was gone.
 

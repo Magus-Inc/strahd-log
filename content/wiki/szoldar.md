@@ -9,7 +9,7 @@ source: Compiled from the adventure log
 
 ![Szoldar the hunter at the door of his small shack by a misty lake at dusk, wolf pelts drying beside it](/images/szoldar-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

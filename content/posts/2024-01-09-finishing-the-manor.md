@@ -31,7 +31,7 @@ From the letter we concluded that the monster must be [Elisabeth Durst](/wiki/el
 
 ![Elisabeth Durst in a black gown, an amber shard glowing at her throat](/images/elisabeth-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### The Locked Attic
 
@@ -51,7 +51,7 @@ Another bedroom held nothing of interest, so we unlocked the last door and found
 
 ![Rose and Thorn Durst, two ghost children side by side at the manor gate, Thorn hugging a stuffed toy](/images/rose-and-thorn-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 From Rose we learned that the nursemaid who looked after Walter was not [Klara](/wiki/klara/), but we did conclude that Walter was Klara’s son. Rose asked [Weeble Wobleston](/wiki/weeble-wobleston/) to promise to bury their bones in the garden, and in return she showed us a secret stairway down to the basement. Then Thorn asked whether he and Rose could come with us as spirits joined to our bodies. Thorn joined with [Olfin Darning](/wiki/olfin-darning/), and Rose with Aera.
 

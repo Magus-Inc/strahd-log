@@ -130,3 +130,14 @@ def test_every_ai_picture_on_the_site_keeps_its_full_size_original():
 def test_agents_md_states_the_full_size_rule():
     text = " ".join((ROOT / "AGENTS.md").read_text(encoding="utf-8").split())
     assert "static/images/full/" in text and "full-size original" in text
+
+
+def test_hovering_a_picture_shows_its_description(site):
+    """Chris (2026-11-04): a picture's description (its alt text) shows as a tooltip on mouse hover."""
+    for path in ("wiki/the-flesh-golem", "posts/the-abbot-unveiled-wings-lies-and-the-fallen-star",
+                 "wiki/zorya", "posts/a-doll-for-arabelle"):
+        imgs = [i for i in re.findall(r"<img\b[^>]*>", read(site, path)) if re.search(r'\balt="[^"]+"', i)]
+        assert imgs, path
+        for img in imgs:
+            alt = re.search(r'\balt="([^"]*)"', img).group(1)
+            assert f'title="{alt}"' in img, (path, img)

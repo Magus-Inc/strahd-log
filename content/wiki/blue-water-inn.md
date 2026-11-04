@@ -13,7 +13,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai-2.jpg)
 
-*AI-generated images (Google Gemini, October 2026). Not official art.*
+*AI-generated images (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

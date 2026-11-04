@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Strahd on Beucephalus, a black nightmare with a burning mane, flying at night over the narrow chasm before Castle Ravenloft, its drawbridge raised in the outer wall at the end of the road](/images/beucephalus-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

@@ -13,7 +13,7 @@ sources:
 
 ![The Staff of Khazan, a plain platinum staff wrapped in blue-white lightning, hovering above the skeleton on the slab in Khazan's tomb](/images/staff-of-khazan-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

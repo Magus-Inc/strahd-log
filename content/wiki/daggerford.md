@@ -10,7 +10,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/dagge
 
 ![Five strangers sheltering in a straw-covered barn loft in Daggerford, lit by a glowing beam](/images/session-zero-barn-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

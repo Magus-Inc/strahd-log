@@ -19,7 +19,7 @@ In the cave we found the Shrine of Mother Night, with a ruby medallion, gems and
 
 ![Zuleika and Ilya in silver thorn collars, Zuleika offering the Symbol of Ravenkind by the fire](/images/zuleika-and-ilya-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Ilya’s story laid bare a conspiracy. The Abbot deceived him, and Strahd and Baba Lysaga helped Kiril capture Emil, their missing leader, and lock him in Ravenloft’s dungeons. Zuleika swore to free Emil and asked for our help.
 
@@ -27,7 +27,7 @@ We took the oath, and in return Zuleika gave Olfin the Symbol of Ravenkind.
 
 ![The Symbol of Ravenkind, a silver sunburst amulet with a red crystal at its heart, on dark velvet beside a candle](/images/symbol-of-ravenkind-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Strahd’s Hourglass of Blood
 
@@ -49,7 +49,7 @@ When Strahd’s game was done we pressed on to Argynvostholt, the ruined mansion
 
 ![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 Strahd stole the skull of Argynvost, desecrating their memory, and Rahadin slew their commander, Horngaard. Sir Godfrey warned us to keep out of Horngaard’s chamber, to avoid the fourth floor, and to beware the phase spiders in the ruins. Horngaard is very powerful and does not want anyone moving against Strahd. A mass grave north of Berez bears the symbol of the Silver Dragon, which will protect us.
 

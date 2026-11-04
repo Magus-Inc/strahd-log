@@ -13,7 +13,7 @@ sources:
 
 ![The Symbol of Ravenkind, a silver sunburst amulet with a red crystal at its heart, on dark velvet beside a candle](/images/symbol-of-ravenkind-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 *Written from the session logs, in Malron's words.*
 

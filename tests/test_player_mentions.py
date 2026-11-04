@@ -81,9 +81,18 @@ def test_wiki_pages_show_no_gray_source_line(real_build):
     assert not shown, shown
 
 
-def test_picture_credits_name_only_the_model_and_date():
-    credit = re.compile(r"AI-generated (?:image|images|portrait) \(Google Gemini, \w+ \d{4}\)([^.*]*)")
-    long = [f"{p.relative_to(ROOT).as_posix()}: {m.group(0)}"
-            for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
-            for m in credit.finditer(p.read_text(encoding="utf-8")) if m.group(1).strip()]
-    assert not long, "\n".join(long)
+def test_picture_credits_name_only_the_model():
+    """No month or year either (Chris, 2026-11-04): "AI-generated image (Google Gemini). Not official art."."""
+    credit = re.compile(r"AI-generated (?:image|images|portrait) \(([^)]*)\)")
+    dated = [f"{p.relative_to(ROOT).as_posix()}: {m.group(0)}"
+             for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
+             for m in credit.finditer(p.read_text(encoding="utf-8")) if m.group(1) != "Google Gemini"]
+    assert not dated, "\n".join(dated)
+
+
+def test_picture_credits_say_nothing_about_where_the_picture_came_from():
+    """At most one short sentence after the credit that helps read the picture, never "drawn from"."""
+    drawn = [p.relative_to(ROOT).as_posix()
+             for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
+             if re.search(r"\*AI-generated[^*]*drawn from", p.read_text(encoding="utf-8"))]
+    assert not drawn, drawn

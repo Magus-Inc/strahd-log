@@ -23,7 +23,7 @@ A revenant guarded the bridge and asked whether we served *him*. He named himsel
 
 ![Sir Godfrey Gwilym, a revenant knight, guarding the bridge at Tser Falls](/images/sir-godfrey-gwilym-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### The Seeker’s Stone
 
@@ -37,7 +37,7 @@ At the windmill we met [Morgantha](/wiki/morgantha/), a fiend who sells Dream Pa
 
 ![Morgantha, an old woman at her pastry cart on a forest road, the windmill behind her](/images/morgantha-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ### Hundreds of Ravens
 
@@ -49,7 +49,7 @@ Eight wolves attacked us, one of them perhaps a werewolf. The ravens swarmed tha
 
 ![Dream pastries, a few golden pies giving off a dreamy shimmer on an old hand cart on a misty forest road, a broken windmill behind](/images/dream-pastries-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini). Not official art.*
 
 ## Key Locations
 
