@@ -5,7 +5,7 @@ tagline: Shabasta needed a hand. Izek no longer did.
 slug: the-fall-of-izek
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fall-of-izek
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Shabasta"]
-sources: ["notes-cq4cry"]
+sources: ["notes-cq4cry", "discord-m9qupc"]
 ---
 
 ## Story
@@ -24,7 +24,7 @@ Izek went to the eastern gate, where refugees sick with longing for dream pastri
 
 A long and epic fight followed, and in the end we won it.
 
-On him we found an amber shard of Seriach, thirty-five gold and a hell hound whisperer. Shabasta wanted Izek’s arm and asked whether it could be attached to him. Liren cut off Izek’s right arm with her axe, and with Lathander’s help I joined the magical arm to Shabasta.
+On him we found a silvered battleaxe, thirty-five gold and an amber shard of Seriach, the hell hound whisperer. Shabasta wanted Izek’s arm and asked whether it could be attached to him. Liren cut off Izek’s right arm with her axe, and with Lathander’s help I joined the magical arm to Shabasta.
 
 Note: The party leveled up.
 
@@ -38,3 +38,9 @@ Note: The party leveled up.
 * **Trailing Izek**: We overheard him with his spy.
 * **The mastiff**: One blow from Aera.
 * **The poisoned wine**: Izek drank it before the fight.
+
+## Loot
+
+* **Silvered Battleaxe**: Izek’s +2 silvered battleaxe; Liren took it.
+* **Amber Shard of Seriach**: The hell hound whisperer.
+* **35 gold**: From Izek’s pouch.

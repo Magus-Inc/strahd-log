@@ -5,7 +5,7 @@ tagline: The druid would like a word with the mouse
 slug: wizard-of-wines-vineyard
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/wizard-of-wines-vineyard
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Veyren"]
-sources: ["notes-2t4keb"]
+sources: ["notes-2t4keb", "discord-usjbfd"]
 feature: wizard-of-wines-ai.jpg
 ---
 
@@ -57,6 +57,9 @@ Veyren became a mouse and overheard a druid torturing a raven for word of someth
 ## Loot
 
 * **Winter Wolf Teeth**: Three enchanted teeth that loose freezing blasts or grant immunity to cold.
+* **Three Potions of Greater Healing**: The DM posted these in the loot channel on 3/18/2025.
+* **Dust of Disappearance**: A packet, posted with the potions.
+* **75 gold**: A pouch, posted with the potions.
 
 ## Notable NPCs
 
