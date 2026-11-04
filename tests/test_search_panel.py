@@ -55,15 +55,11 @@ def test_every_page_carries_one_search_panel_and_one_matcher(site):
         assert re.search(r'<input id="site-search-q" name="q" type="search" enterkeyhint="search"', panel)
 
 
-def test_the_index_is_fetched_only_when_search_is_used():
-    """search-index.json is over half a megabyte: reading a post must not download it."""
-    panel = (TEMPLATES / "_search_panel.html").read_text(encoding="utf-8")
-    script = panel.split("<script data-search-panel>")[1]
-    own = script.split('{% endfilter %}')[1]
-    assert own.count('fetch(base + "search-index.json")') == 1
-    load = re.search(r"function load\(\) \{.*?\n      \}", own, re.S).group(0)
-    assert "fetch(" in load
-    assert "load()" not in own.replace(load, "").split("function open()")[0], "nothing calls load() before open()"
+def test_the_panel_fetches_the_index_in_one_place():
+    """search-index.json is over half a megabyte: only load() fetches it, and the browser test below checks
+    that reading a post does not call it."""
+    own = (TEMPLATES / "_search_panel.html").read_text(encoding="utf-8").split("{% endfilter %}")[1]
+    assert own.count("fetch(") == 1 and 'fetch(base + "search-index.json")' in own
 
 
 def test_phones_show_the_magnifier_and_drop_search_from_the_menu():
@@ -116,6 +112,9 @@ const [root, post] = process.argv.slice(1);
     await page.locator(".search-button").tap();
     out.panelOpen = await page.locator("dialog.search-panel").evaluate(d => d.open);
     out.focused = await page.evaluate(() => document.activeElement && document.activeElement.id);
+    await page.touchscreen.tap(195, 600);  // blank space inside the panel, under the box
+    out.openAfterBlankTap = await page.locator("dialog.search-panel").evaluate(d => d.open);
+    await page.locator("#site-search-q").focus();
     await page.keyboard.type("Ireena");
     await page.locator(".search-panel-results li").first().waitFor();
     out.results = await page.locator(".search-panel-results li").count();
@@ -143,15 +142,31 @@ const [root, post] = process.argv.slice(1);
     out.deskButtonShown = await wide.locator(".search-button").isVisible();
     await wide.locator(".site-nav .nav-search").click();
     out.deskPanelOpen = await wide.locator("dialog.search-panel").evaluate(d => d.open);
-    await wide.keyboard.press("Escape");
+    await wide.keyboard.type("strahd castle");
+    await wide.keyboard.press("Escape");  // one Esc closes, and keeps the words
     out.deskClosedByEsc = await wide.locator("dialog.search-panel").evaluate(d => !d.open);
+    out.deskKeptWords = await wide.locator("#site-search-q").inputValue();
+    // Selecting text and letting go over the dimmed page must not close it.
+    await wide.locator(".site-nav .nav-search").click();
+    const box = await wide.locator("#site-search-q").boundingBox();
+    await wide.mouse.move(box.x + 20, box.y + box.height / 2);
+    await wide.mouse.down();
+    await wide.mouse.move(box.x + 20, 880, {steps: 5});
+    await wide.mouse.up();
+    out.deskOpenAfterDrag = await wide.locator("dialog.search-panel").evaluate(d => d.open);
+    await wide.mouse.click(30, 880);  // a real tap outside closes it
+    out.deskClosedByOutside = await wide.locator("dialog.search-panel").evaluate(d => !d.open);
     await wide.keyboard.press("/");
     out.slashOpens = await wide.locator("dialog.search-panel").evaluate(d => d.open);
     // On the search page itself the button uses the page's own box.
+    const fetched = [];
+    wide.on("request", r => { if (r.url().endsWith("/search-index.json")) fetched.push(r.url()); });
     await wide.goto(root + "search/?q=strahd");
+    await wide.locator("#results li").first().waitFor();
     await wide.locator(".site-nav .nav-search").click();
     out.searchPageFocus = await wide.evaluate(() => document.activeElement.id);
     out.searchPagePanel = await wide.locator("dialog.search-panel").evaluate(d => d.open);
+    out.searchPageFetches = fetched.length;
     await desk.close();
 
     // No script: the magnifier is a link to the search page.
@@ -183,19 +198,22 @@ def served(site):
 def test_search_in_a_browser(served, real_build):
     post = f"posts/{real_build.posts[0].slug}/"
     done = subprocess.run([NODE, "-e", BROWSER, served, post], capture_output=True, text=True, encoding="utf-8", timeout=180)
-    assert done.returncode == 0, done.stderr
+    assert done.returncode == 0, done.stderr[-3000:]
     out = json.loads(done.stdout)
     # Phone: one tap opens the panel with the keyboard's box focused, and nothing big loads before it.
     assert out["buttonShown"] and not out["menuSearchShown"]
     assert not out["indexBeforeTap"]
     assert out["panelOpen"] and out["focused"] == "site-search-q"
+    assert out["openAfterBlankTap"], "a tap on blank space inside the panel keeps it open"
     assert out["results"] > 0 and "match" in out["status"]
     assert out["sameUrlAfterEnter"] and out["focusedAfterEnter"] != "site-search-q"  # Enter just hides the keyboard
     assert out["closed"]
     assert out["remembered"] == "Ireena"
     # Wide screen.
     assert not out["deskButtonShown"]
-    assert out["deskPanelOpen"] and out["deskClosedByEsc"] and out["slashOpens"]
+    assert out["deskPanelOpen"] and out["deskClosedByEsc"] and out["deskKeptWords"] == "strahd castle"
+    assert out["deskOpenAfterDrag"] and out["deskClosedByOutside"] and out["slashOpens"]
     assert out["searchPageFocus"] == "q" and not out["searchPagePanel"]
+    assert out["searchPageFetches"] == 1, "the search page's own copy of the index is enough"
     # No script.
     assert out["noScriptLandsOn"] == "/search/"

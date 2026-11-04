@@ -23,15 +23,16 @@
       if (!box || !box.showModal) return;
       var input = box.querySelector("input"), list = box.querySelector("ol"), status = box.querySelector("[role=status]");
       var EMPTY = status.textContent, KEY = "search:q";
-      var entries = null, loading = null;
+      var entries = null, loading = null, failed = false, pressed = false;
       function load() {
         if (!loading) {
           loading = fetch(base + "search-index.json").then(function (r) {
             if (!r.ok) throw new Error(r.status);
             return r.json();
-          }).then(function (data) { entries = data; });
+          }).then(function (data) { entries = data; failed = false; });
           loading.catch(function () {
-            loading = null;  // try again next time
+            loading = null;  // the next keystroke tries again
+            failed = true;
             status.innerHTML = 'Search could not load. Try the <a href="' + base + 'search/">search page</a>.';
           });
         }
@@ -41,7 +42,11 @@
         var q = input.value.trim();
         try { sessionStorage.setItem(KEY, input.value); } catch (e) {}
         if (!q) { list.innerHTML = ""; status.textContent = EMPTY; return; }
-        if (!entries) { status.textContent = "Loading search…"; return; }
+        if (!entries) {
+          if (!failed) status.textContent = "Loading search…";
+          load().then(run, function () {});
+          return;
+        }
         SearchResults.show(SearchMatch.search(entries, q), list, status, base);
       }
       function open() {
@@ -59,19 +64,29 @@
         input.focus();  // in the same tap, so phones bring up the keyboard
         input.select();
         run();
-        load().then(run, function () {});
       }
       document.querySelectorAll("[data-search-open]").forEach(function (a) {
         a.addEventListener("click", function (e) {
           if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;  // a new tab still gets the search page
           e.preventDefault(); open();
         });
-        a.addEventListener("pointerdown", function () { load(); }, { once: true });  // a head start on the index
+        a.addEventListener("pointerdown", function () {  // a head start on the index
+          if (!document.getElementById("q")) load();  // the search page has its own copy
+        }, { once: true });
       });
       input.addEventListener("input", run);
+      input.addEventListener("keydown", function (e) {  // one Esc closes and keeps the words (a search box would clear them first)
+        if (e.key === "Escape") { e.preventDefault(); box.close(); }
+      });
       box.querySelector("form").addEventListener("submit", function (e) { e.preventDefault(); input.blur(); });  // Enter or Search hides the keyboard
       box.querySelector(".search-panel-close").addEventListener("click", function () { box.close(); });
-      box.addEventListener("click", function (e) { if (e.target === box) box.close(); });  // a tap outside the panel
+      // A tap outside the panel closes it; a drag that starts inside (selecting words) and ends outside does not.
+      box.addEventListener("pointerdown", function (e) { pressed = e.target === box && outside(e); });
+      box.addEventListener("click", function (e) { if (pressed && e.target === box && outside(e)) box.close(); pressed = false; });
+      function outside(e) {
+        var r = box.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      }
       box.addEventListener("close", function () { document.documentElement.classList.remove("search-open"); });
       document.addEventListener("keydown", function (e) {
         var t = e.target, typing = t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));

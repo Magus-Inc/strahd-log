@@ -555,8 +555,8 @@ dialog.search-panel[open] { display: flex; flex-direction: column; overflow: hid
 .search-panel-close:hover, .search-panel-close:focus-visible { color: var(--text); }
 .search-panel-status { margin: 0; padding: 0.7rem 1rem 0.2rem; font-size: 0.9rem; }
 .search-panel-status a { color: var(--accent-hi); }
-.search-panel-results { margin: 0; padding: 0.5rem 1rem 1.2rem; overflow-y: auto; overscroll-behavior: contain; max-width: none; }
-html.search-open { overflow: hidden; }
+.search-panel-results { flex: 1 1 auto; min-height: 0; margin: 0; padding: 0.5rem 1rem 1.2rem; overflow-y: auto; overscroll-behavior: contain; max-width: none; }
+html.search-open, html.search-open body { overflow: hidden; }
 @media (max-width: 719px) {
   dialog.search-panel { width: 100vw; height: 100vh; height: 100dvh; max-height: none; margin: 0; border: 0; border-radius: 0; }
 }
