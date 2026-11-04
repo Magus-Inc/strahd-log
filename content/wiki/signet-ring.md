@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ## Description
 
-![A worn silver signet ring standing on dark wooden planks, its tall face engraved with the sigil of dots, a triangle, a pointed square and crossing lines that opened the red seal of Khazan's tower](/images/signet-ring-ai.jpg)
+![A worn silver signet ring leaning against a dark wooden plank, its tall face engraved with the sigil of dots, a triangle, a pointed square and crossing lines that opened the red seal of Khazan's tower](/images/signet-ring-ai.jpg)
 
 *AI-generated image (Google Gemini).*
 
