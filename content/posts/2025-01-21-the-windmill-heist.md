@@ -6,7 +6,7 @@ slug: the-windmill-heist
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-windmill-heist
 cast: ["Aera shan Ravanór", "Gumbo", "Liren", "Malron Lichtstrahl", "Olfin Darning", "Oogway", "Shabasta"]
 sources: ["notes-b95mcl"]
-feature: the-windmill-heist-1.jpg
+feature: the-windmill-ai.jpg
 ---
 
 ## Story

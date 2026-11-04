@@ -184,11 +184,26 @@ def picture_problems(body: str, cap: int = MAX_PICTURES) -> list[str]:
     return problems
 
 
+CREDITED_PICTURE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)[^)]*\)\s*\n\s*\n\*AI-generated")
+
+
+def ai_pictures(body: str) -> list[str]:
+    """File names of the pictures in a post body that carry an "AI-generated ..." credit line."""
+    return [src.rsplit("/", 1)[-1] for src in CREDITED_PICTURE.findall(re.sub(r"<!--.*?-->", "", body, flags=re.S))]
+
+
 def feature_problems(meta: dict, body: str) -> list[str]:
     """A post with more than one picture names its feature picture (`feature: name.jpg`), which gives
     its link preview and goes first under `picture: top`; it must be one of the post's pictures."""
     names = [src.rsplit("/", 1)[-1] for src in ANY_PICTURE.findall(re.sub(r"<!--.*?-->", "", body, flags=re.S))]
     feature = meta.get("feature")
     if feature:
-        return [] if feature in names else [f"feature {feature} is not a picture in the post"]
+        if feature not in names:
+            return [f"feature {feature} is not a picture in the post"]
+        # Chris, 2026-11-04: the feature fronts the home page card and the link preview, so it is an
+        # AI picture whenever the post has one; a photo of the table looks out of place among them.
+        ai = ai_pictures(body)
+        if ai and feature not in ai:
+            return [f"feature {feature} is a photo, not an AI picture: feature one of the post's AI pictures ({', '.join(ai)})"]
+        return []
     return ["more than one picture: name the feature picture (feature: name.jpg)"] if len(names) > 1 else []

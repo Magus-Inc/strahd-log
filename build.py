@@ -82,6 +82,7 @@ class Post:
     # (sources.py). The site never shows them; dnd-scribe's private table says what each id is.
     sources: list[str] = field(default_factory=list)
     feature: str = ""  # front matter `feature:`: the feature picture's file name, when the story has several
+    card_pic: str = ""  # images/cards/post-<slug>.webp: the feature picture, small, for the home page card
 
     @property
     def path(self) -> str:
@@ -382,6 +383,33 @@ def make_thumbnails(pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path)
             break
 
 
+CARD_PIC_WIDTH = 640  # px; home cards are about 17-20rem wide, so this stays sharp on phones
+
+
+def make_card_pictures(posts: list[Post], static_dir: Path, out_dir: Path) -> None:
+    """Give each post a small copy of its feature picture (the `feature:` one, else the first) for its
+    home page card (blog review idea 1, Chris 2026-11-04). Only pictures on the site get one."""
+    from PIL import Image, ImageOps  # only the build needs it
+    for post in posts:
+        picture = share.first_picture(post.body_md, static_dir, prefer=post.feature)
+        if picture is None or isinstance(picture[0], str):
+            continue
+        rel = f"images/cards/post-{post.slug}.webp"
+        (out_dir / rel).parent.mkdir(parents=True, exist_ok=True)
+        with Image.open(picture[0]) as image:
+            image.draft("RGB", (CARD_PIC_WIDTH, CARD_PIC_WIDTH * 2))
+            image = ImageOps.exif_transpose(image)
+            if image.mode in ("RGBA", "LA", "P"):  # see-through parts go on the site's dark background
+                image = image.convert("RGBA")
+                flat = Image.new("RGB", image.size, share.BACKGROUND)
+                flat.paste(image, mask=image.getchannel("A"))
+                image = flat
+            image = image.convert("RGB")
+            image.thumbnail((CARD_PIC_WIDTH, CARD_PIC_WIDTH * 2))
+            image.save(out_dir / rel, "WEBP", quality=78)
+        post.card_pic = rel
+
+
 def picture_card(stem: str, picture, title: str, out_dir: Path, site: dict) -> dict:
     """The card for a page's picture: made on the site from a local file, or the outside address as is."""
     if picture is None:
@@ -665,6 +693,7 @@ def write_posts(site: Site, env: Environment, out_dir: Path, shares: dict, base:
         years.setdefault(post.date.year, []).append(post)
     write(out_dir / "index.html",
           env.get_template("index.html").render(share_page={"path": ""}, latest=posts[0] if posts else None, years=list(years.items()),
+                                                first_with_pic=next((p for p in posts if p.card_pic), None),
                                                 count=len(posts)))
     for i, post in enumerate(posts):
         newer = posts[i - 1] if i > 0 else None
@@ -746,6 +775,7 @@ def build(content_dir: Path = ROOT / "content" / "posts", out_dir: Path = ROOT /
         shutil.rmtree(out_dir)
     shutil.copytree(ROOT / "static", out_dir)
     make_thumbnails(site.pages, site.static_dir, out_dir)
+    make_card_pictures(site.posts, site.static_dir, out_dir)
     shares = share_cards(site.posts, site.pages, site.static_dir, out_dir)
     env.globals.update(site_card=shares.pop(None), card_size=(share.CARD_W, share.CARD_H))
     write_posts(site, env, out_dir, shares, base)

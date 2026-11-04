@@ -18,7 +18,10 @@
       <h3 class="year" id="y{{ year }}">{{ year }}</h3>
       <ol class="card-grid">
 {% for post in posts %}
-        <li class="card session-card{% if post is sameas latest %} latest{% endif %}">
+        <li class="card session-card{% if post is sameas latest %} latest{% endif %}{% if post.card_pic %} has-pic{% endif %}">
+{% if post.card_pic %}
+          <div class="card-pic"><img src="{{ base }}{{ post.card_pic }}" alt=""{% if post is sameas first_with_pic %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async"></div>
+{% endif %}
           <p class="card-chips">{% if post is sameas latest %}<span class="chip latest-chip">Latest</span> {% endif %}<time class="chip date" datetime="{{ post.date.isoformat() }}">{{ post.date | nice_date }}</time></p>
           <h4><a class="stretched" href="{{ base }}{{ post.path }}">{{ post.title }}</a></h4>
 {% if post.tagline and post_style['card-tagline'] != "hide" %}
