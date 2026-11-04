@@ -2,8 +2,14 @@
 title: Candle of Long Resting
 type: item
 summary: A one-use candle that gives a long rest during a short rest.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+A candle that burns only once and gives a good rest in a short time. We were given it to help us through Castle Ravenloft ([Depths of Ravenloft](/posts/depths-of-ravenloft/)).
 
 <!-- from-the-log -->
 ## From the adventure log

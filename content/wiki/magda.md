@@ -2,8 +2,14 @@
 title: Magda
 type: npc
 summary: A refugee at the camp outside Vallaki.
-source: Compiled from the adventure log
+source: Compiled from the adventure log, with a description written for the site
 ---
+
+## Description
+
+*Written from the session logs, in Malron's words.*
+
+A refugee at the camp outside Vallaki. She and Emerik greeted us when we came to the camp, where we met Franz and heard how he sold his children for Morgantha's dream pastries ([Helping Victor](/posts/helping-victor/)).
 
 <!-- from-the-log -->
 ## From the adventure log
