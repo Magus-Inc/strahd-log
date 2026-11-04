@@ -11,7 +11,7 @@ heard_of_in:
 
 ![Argynvostholt in ruins, its beacon tower glowing silver over a knights' graveyard](/images/argynvostholt-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

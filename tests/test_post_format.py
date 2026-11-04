@@ -199,7 +199,7 @@ def test_no_scene_heading_list_outside_the_posts():
 
 # --- pictures in the story ---------------------------------------------------------------------
 
-CREDIT = "*AI-generated image (Google Gemini, November 2026). Not official art.*"
+CREDIT = "*AI-generated image (Google Gemini).*"
 
 
 def pic(name: str) -> str:

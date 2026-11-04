@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Volenta with bat wings and a dagger in each hand, burning oil on the water](/images/volenta-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

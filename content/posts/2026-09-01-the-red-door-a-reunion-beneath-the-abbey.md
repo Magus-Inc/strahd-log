@@ -34,7 +34,7 @@ The walls of the chamber below are lined with niches full of small things: a chi
 
 ![The Hall of Niches beneath the abbey, full of lost keepsakes, as the shadows peel off its walls](/images/hall-of-niches-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Six Shadows
 
@@ -48,7 +48,7 @@ Beyond, a hallway ended in a spiked gate that lifted on its own. Olfin made sure
 
 ![The false meadow: a vision St. Markovia showed us, with a door out of Barovia standing in the grass](/images/false-meadow-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 I tried to ask the icon of St. Markovia, but it has not answered since the fight with the Abbot. One by one we refused. Shabasta has grown to love us (and his sweet arm), Olfin stayed, Liren likes to fight, Crusty has mysteries to uncover, and Gumbo loves his way of life too much to give it up. I warned Aera that it felt like a trap: “From everything you’ve told me about your family, this wouldn’t be your family.” Aera, whose husband and children were lost, walked through the door anyway.
 
@@ -60,7 +60,7 @@ The meadow faded back into stone. From behind another door came Aera’s muffled
 
 ![The Abbot's first vessel, six-armed with a golden halo nailed into its skull, facing a warrior with a battleaxe](/images/the-abbots-first-vessel-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Liren readied her battleaxe. The thing charged Olfin and struck him hard. I dropped a burst of fire behind our line, Crusty bent fate with his foreseeing, and Gumbo’s blade found a weak spot. Olfin struck with shining light that left it open to all of us, and all three of Crusty’s rays of fire hit. Shabasta curved an orb of acid around his friends into it. Then Liren’s battleaxe went straight through the thing and it burst apart.
 
@@ -72,7 +72,7 @@ Hundreds of spirits streamed up through the ceiling, and the abbey seemed to cru
 
 ![The palm-sized silver reliquary holding the two flames of Liren and Gumbo, on a cloth beside two old copper coins](/images/reliquary-of-two-flames-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### An Encore from Strahd
 

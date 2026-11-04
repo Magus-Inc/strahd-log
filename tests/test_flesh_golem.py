@@ -1,5 +1,7 @@
 """The flesh golem (Chris, 2026-11-03): its page is one tap away wherever the posts and the wiki name it,
-and its crown is the garland Marzena sent her "sibling" in the east wing (Chris's notes from 4/29/2025)."""
+and its crown is the garland Vasilka made for her "sibling" in the east wing. Chris's 4/29/2025 notes
+named the maker Marzena; the DM said twice on 7/21/2026 that it came from Vasilka, and Chris agreed
+that both are the Abbot's creations, hence "siblings" (2026-11-04)."""
 import re
 
 import pytest
@@ -70,9 +72,51 @@ def test_the_bride_the_abbot_is_building_is_not_linked_as_the_golem(site_pages):
     assert len(re.findall(r'href="/wiki/vasilka/"[^>]*>flesh golem<', html)) == 3
 
 
-def test_the_golem_links_vasilka_and_marzena(site_pages):
+def test_the_golem_page_says_vasilka_made_its_garland(site_pages):
     golem = site_pages["wiki/the-flesh-golem"]
     assert 'href="/wiki/vasilka/"' in golem
     story = re.sub(r"<[^>]+>", "", golem.split("From the adventure log")[0])
-    assert 'href="/wiki/marzena/"' in golem
+    assert "Vasilka had made a necklace of flowers" in story
     assert "I gave the garland to the golem" in story
+
+
+@pytest.mark.parametrize("path", [
+    "posts/shadows-over-st-markovia",
+    "wiki/the-flesh-golem",
+    "wiki/vasilka",
+    "wiki/necklace-of-flowers",
+    "wiki/abbey-of-saint-markovia",
+    "wiki/malron-lichtstrahl",
+    "wiki/marzena",
+])
+def test_no_page_says_marzena_made_the_garland(site_pages, path):
+    """Marzena is the flying Belview the Abbot fetched; the garland is Vasilka's (Chris, 2026-11-04)."""
+    text = re.sub(r"<(/?(h[1-6]|p|li|div)\b)[^>]*>", "\n", site_pages[path])
+    text = re.sub(r"<[^>]+>", "", text)
+    for sentence in re.split(r"(?<=[.!?])\s+|\n", text):
+        if re.search(r"necklace|garland", sentence, re.I):
+            assert "Marzena" not in sentence, (path, sentence)
+
+
+def test_marzena_is_the_flying_belview(site_pages):
+    assert "Belview" in site_pages["wiki/marzena"]
+
+
+@pytest.mark.parametrize("path", ["wiki/the-flesh-golem", "posts/the-abbot-unveiled-wings-lies-and-the-fallen-star"])
+def test_the_golem_picture_says_the_flowers_are_aeras_illusion(site_pages, path):
+    """The picture shows a rope crown with flowers floating above it: the flowers are Aera's
+    Silent Image over plain rope, and the picture's description says so (Chris, 2026-11-04)."""
+    alts = re.findall(r'<img[^>]*src="/images/the-flesh-golem-ai\.jpg"[^>]*>', site_pages[path])
+    assert alts, path
+    assert all("Aera" in a and "illusion" in a for a in alts), alts
+
+
+@pytest.mark.parametrize("path", ["wiki/the-flesh-golem", "posts/the-abbot-unveiled-wings-lies-and-the-fallen-star"])
+def test_the_golem_picture_caption_says_the_flowers_are_aeras_illusion(site_pages, path):
+    """Chris (2026-11-04): the little line under the picture (the one that links the wiki page in a
+    post) is where this detail goes, so readers see it, not just screen readers."""
+    html = site_pages[path].replace("&rsquo;", "’").replace("&#x27;", "’").replace("'", "’")
+    pic = html.index('src="/images/the-flesh-golem-ai.jpg"')
+    credit = re.search(r'<p class="ai-credit">(.*?)</p>', html[pic:], re.S)
+    text = re.sub(r"<[^>]+>", "", credit.group(1)) if credit else ""
+    assert "Aera’s illusion" in text, text

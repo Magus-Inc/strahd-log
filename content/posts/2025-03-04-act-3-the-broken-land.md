@@ -17,7 +17,7 @@ We woke at the Blue Water Inn, and Urwin, the innkeeper, called each of us to th
 
 ![Inside the Blue Water Inn: firelight, wine casks and a frosted blue window](/images/blue-water-inn-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 First he introduced Veyren, a hare of a fellow and Shabasta’s brother. We gave Veyren the letter we found on Shabasta’s body, telling of his journey with us.
 
@@ -35,7 +35,7 @@ Further south we met a mountain woman with a stone axe, who warned us to keep cl
 
 ![A woman of the mountain folk with a stone axe on a rocky mountain path, raising a hand in warning above a misty forested valley](/images/mountain-folk-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 At another crossroads a revenant guarded a bridge to the west. He urged us to visit Argynvostholt and warned of blights at the vineyard, which can be neither blinded nor deafened. The mountain folk, he told us, worship the ancient goddesses of the valley, not Strahd as the forest folk do.
 
@@ -47,7 +47,7 @@ A dark-cloaked figure appeared and beckoned, and dozens of ravens watched in sil
 
 ![Davian Martikov in a dark hooded cloak at a trapdoor among the vines, ravens around him](/images/davian-martikov-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

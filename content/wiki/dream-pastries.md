@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Dream pastries, a few golden pies giving off a dreamy shimmer on an old hand cart on a misty forest road, a broken windmill behind](/images/dream-pastries-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

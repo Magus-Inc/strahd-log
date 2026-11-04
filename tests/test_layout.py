@@ -23,7 +23,7 @@ def styled(text: str, **picks) -> str:
 # A post in the one post format (tests/test_post_format.py); the story's opening lines and
 # pictures are all under "## Story".
 OPENING = ("## Story\n\nThe air of Castle Ravenloft has changed.\n\n"
-           "![The flooded larders](/images/larders-ai.jpg)\n\n*AI-generated image (Google Gemini). Not official art.*\n\n"
+           "![The flooded larders](/images/larders-ai.jpg)\n\n*AI-generated image (Google Gemini).*\n\n"
            "### A Turning Point\n\nWe are at a turning point.\n\n"
            "## Key Locations\n\n* **Larders**: Cold.\n")
 

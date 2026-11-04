@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Khazan's tomb: a skeleton with opal eyes, eight glowing runes and the platinum staff appearing](/images/khazan-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

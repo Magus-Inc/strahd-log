@@ -37,7 +37,7 @@ Note: The party held a long “Above the Table” debate on whether a hot dog is
 
 ![The Staff of Khazan, a plain platinum staff wrapped in blue-white lightning, hovering above the skeleton on the slab in Khazan's tomb](/images/staff-of-khazan-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 In the row beside Khazan’s tomb, Crypt 18 is marked “Ireena Kolyana, wife.” Its door had been carefully laid to one side, and the crypt stood empty and swept clean, as though it waits for her.
 
@@ -47,7 +47,7 @@ Further south we found Crypt 34, the tomb of King Dostron the Hellborn. A spectr
 
 ![King Dostron's ghost rising red over his sarcophagus and the Spear of the Huntress](/images/king-dostron-the-hellborn-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Note: Shabasta said they would “draw their own version” of the new staff, with lightning effects, for the group’s records.
 

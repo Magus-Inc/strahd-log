@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Davian Martikov in a dark hooded cloak at a trapdoor among the vines, ravens around him](/images/davian-martikov-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

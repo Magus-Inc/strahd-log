@@ -17,13 +17,13 @@ Father Lucian helped us find the home of Milivoj, a leaning, decrepit house with
 
 ![Milivoj, black-haired in a grey cloak, carrying planks past St. Andral's Church](/images/milivoj-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Liren saw through him and frightened him into confessing. His parents are lost to dream pastries, and he must keep his brothers and sisters fed. He sold the bones to Henrik the day before.
 
 ![The Church of Saint Andral the morning we brought Ireena, its doors open on the pews and a bare altar, as Milivoj mends a broken window and Henrik unloads planks](/images/church-of-saint-andral-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Henrik’s Wardrobe
 
@@ -33,7 +33,7 @@ I opened the wardrobe and a poisoned dart struck me. I could not move for ten mi
 
 ![Henrik the coffin maker in his workshop, hiding something as guards come to the door](/images/henrik-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

@@ -41,7 +41,7 @@ def test_snippet_keeps_short_text_and_cuts_long_text_at_a_word():
 
 
 def test_wiki_snippet_adds_the_first_prose_paragraph_without_citations_or_captions():
-    html = ('<h2>Description</h2>\n<p><img alt="x" src="/images/x.jpg"></p>\n<p><em>AI-generated image. Not official art.</em></p>\n'
+    html = ('<h2>Description</h2>\n<p><img alt="x" src="/images/x.jpg"></p>\n<p><em>AI-generated image.</em></p>\n'
             '<p>Ismark\'s sister. Strahd has bitten her (<a href="/posts/a/">Barovia, Barovia</a>, '
             '<a href="/posts/b/">Leaving</a>). She is brave (<a href="/posts/c/">3</a>, 3 June 2025).</p>\n<p>Second paragraph.</p>')
     text = share.wiki_snippet("Ismark's adopted sister.", html)

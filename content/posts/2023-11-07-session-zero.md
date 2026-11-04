@@ -17,7 +17,7 @@ On a dark and gloomy evening, a ragtag group of strangers, each with our own rea
 
 ![Five strangers sheltering in a straw-covered barn loft, lit by a glowing beam](/images/session-zero-barn-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Relics Pull
 
@@ -25,7 +25,7 @@ After a time a thick fog settled over the town. Soon after, the tooth necklace [
 
 ![Weeble Wobleston, a high-elf fighter, his pendant glowing and pulling on its chain](/images/weeble-wobleston-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not player art.*
+*AI-generated image (Google Gemini).*
 
 We did not know what to do, but we felt compelled to follow those relics as they led us through the mists. The fog was so thick that those of us without a relic had to stay close or fall behind and be lost.
 
@@ -35,7 +35,7 @@ After we could not say how long in the mists, we came upon a [four-story manor](
 
 ![A four-story manor looming out of the mist at dusk, a girl and a little boy waiting near the front](/images/durst-manor-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 

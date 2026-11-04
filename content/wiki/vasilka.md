@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Vasilka, a stitched bride in a white gown, tending a mongrelfolk in the asylum](/images/vasilka-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 
@@ -17,11 +17,14 @@ The "perfect bride" the Abbot of Saint Markovia built from flesh for Strahd. The
 
 We found her in the [Abbey](/wiki/abbey-of-saint-markovia/)'s asylum, a lightless corridor of cells, being scolded by the Abbot for tending the blighted mongrelfolk on the very day of her "operation", while the flesh golem loomed behind them. He soothed her with talk of the Morning Lord's grace and everyone's proper place. When the fight began and he threw off his robes for his celestial form, Vasilka fled in terror ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/)). Beneath the Abbey we later met the vessel he had made before her, which had failed ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/)).
 
+On our first visit she had made a necklace of flowers for the creature in the east wing she thinks of as her sibling, since the Abbot made them both. I gave it to the golem, which wears it still as a crown ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/)).
+
 <!-- from-the-log -->
 ## From the adventure log
 
 *Compiled from the session posts. Each line links to the session it comes from.*
 
 * The Abbot believes she can break the land's curse. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
+* Made a necklace of flowers for her sibling in the East Wing. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
 * Was scolded by the Abbot for tending the mongrelfolk, and fled when the fight began. ([The Abbot Unveiled: Wings, Lies and the Fallen Star](/posts/the-abbot-unveiled-wings-lies-and-the-fallen-star/))
 * Was made after the Abbot's first, failed vessel. ([The Red Door: A Reunion Beneath the Abbey](/posts/the-red-door-a-reunion-beneath-the-abbey/))

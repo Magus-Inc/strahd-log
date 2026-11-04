@@ -12,7 +12,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

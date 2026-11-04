@@ -14,7 +14,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Shabasta, porcupine bard, playing the lute at a Vistani camp](/images/shabasta-ai-portrait.jpg)
 
-*AI-generated portrait (Google Gemini, October 2026). Not player art.*
+*AI-generated portrait (Google Gemini).*
 
 A porcupine bard with a flair for the dramatic, Shabasta combines enchanting music with prickly wit. Their spiny nature extends beyond appearance, as they excel at weaving biting satire into their performances. Shabasta’s unusual form surprises friend and foe alike, and their sharp melodies inspire courage in allies while disheartening enemies.
 

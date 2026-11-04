@@ -11,7 +11,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![Wachterhaus at dusk, a grand old manor in its overgrown walled garden grounds near the town palisade](/images/wachterhaus-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

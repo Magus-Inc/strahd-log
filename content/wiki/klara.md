@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/klara
 
 ![Klara's ghost, a sorrowful young nanny, looking out of a bedroom mirror](/images/klara-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/elisa
 
 ![Elisabeth Durst in a black gown, an amber shard glowing at her throat](/images/elisabeth-durst-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

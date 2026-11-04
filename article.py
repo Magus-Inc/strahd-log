@@ -177,6 +177,13 @@ WIKI_PICTURE = re.compile(r"!\[[^\]]*\]\((/images/[^)\s]+)")
 LONE_PICTURE = re.compile(r'<p>(<img [^>]*src="([^"]+)"[^>]*>)</p>(\s*<p class="ai-credit">AI-generated images?)\b')
 
 
+def name_ai_subjects(html: str, title: str) -> str:
+    """On a wiki page, an AI credit that doesn't yet say what it shows names the page:
+    "AI-generated image of The Flesh Golem (Google Gemini)." (Chris, 2026-11-04)."""
+    return re.sub(r'(<p class="ai-credit">AI-generated (?:image|images|portrait))(?! of )',
+                  lambda m: f"{m.group(1)} of {escape(title)}", html)
+
+
 def ai_picture_owners(pages: list[wiki.WikiPage]) -> dict[str, wiki.WikiPage]:
     """Each AI picture (name-ai.jpg, name-ai-2.jpg, name-ai-portrait.jpg) maps to the wiki page that
     shows it. The file name need not match the slug, so the wiki page's own pictures decide."""
@@ -224,6 +231,16 @@ def cast(post_mentions: set[str], pages: list[wiki.WikiPage]) -> list[wiki.WikiP
 
 def escape(text: str) -> str:
     return htmllib.escape(text, quote=True)
+
+
+def hover_titles(html: str) -> str:
+    """A picture's description (its alt text) also shows as a tooltip on mouse hover (Chris, 2026-11-04)."""
+    def add(m: re.Match) -> str:
+        tag, alt = m.group(0), m.group(1)
+        if not alt or re.search(r'\btitle="', tag):
+            return tag
+        return re.sub(r"\s*/?>$", f' title="{alt}">', tag)
+    return re.sub(r'<img\b[^>]*\balt="([^"]*)"[^>]*>', add, html)
 
 
 def full_size(html: str, static_dir: Path) -> str:

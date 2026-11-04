@@ -15,7 +15,7 @@ sources:
 
 ![The Vistani camp by Vallaki at dusk: painted wagons round a fire, broken pots, a whip cracking, dusk elves sitting apart, the Luna River to the west, the main road, and Vallaki's palisade with refugee tents beyond](/images/vallaki-vistani-camp-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

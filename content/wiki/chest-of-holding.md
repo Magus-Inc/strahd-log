@@ -12,7 +12,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Chest of Holding open on a carriage seat, a starry space inside](/images/chest-of-holding-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

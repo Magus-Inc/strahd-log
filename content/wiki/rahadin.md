@@ -13,7 +13,7 @@ sources:
 
 ![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

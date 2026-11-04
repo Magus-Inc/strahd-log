@@ -12,7 +12,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![King Dostron's ghost rising red over his sarcophagus and the Spear of the Huntress](/images/king-dostron-the-hellborn-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

@@ -11,7 +11,7 @@ sources:
 
 ![The Shrine of Mother Night, a stone altar in a dark cave heaped with gold coins and gems around a ruby medallion, in a faint sickly glow](/images/mother-night-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 

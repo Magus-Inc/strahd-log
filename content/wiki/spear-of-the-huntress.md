@@ -9,7 +9,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Spear of the Huntress glowing red on King Dostron's open sarcophagus](/images/spear-of-the-huntress-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

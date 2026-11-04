@@ -22,7 +22,7 @@ sources:
 
 ![Zorya, a tiny ghostly pseudodragon, hovering in a ruined hall at Argynvostholt](/images/zorya-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

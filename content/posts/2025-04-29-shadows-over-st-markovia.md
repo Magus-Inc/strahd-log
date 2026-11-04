@@ -23,19 +23,19 @@ Inside we met Clovin, and learned that all three are Belviews, of one family. Le
 
 ![Clovin Belview carrying bowls of cold porridge to the padlocked shed](/images/clovin-belview-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### A Bride for Strahd
 
 Then we met a young man wearing the Morning Lord’s symbol: the Abbot himself, who wants this to be a place of healing. His skin glows a little. He first met Strahd four hundred years ago, and on his second meeting learned that Strahd is cursed. He believes Strahd lacks love and companionship, and he showed us Vasilka, a woman in a red dress, who he thinks will be the perfect companion for Strahd and so lift the curse on the land.
 
-### Marzena’s Necklace
+### Vasilka’s Necklace
 
-The Abbot went to fetch Marzena, who seems able to fly. To reach her he became an eagle and took to the sky. She brought a necklace of flowers and told us of another creature like her in the east wing, where she is not allowed to go. She thinks of it as her sibling and wanted it to have the necklace as a gift. I took the necklace and promised to deliver it.
+The Abbot went to fetch Marzena, a Belview who seems able to fly, and to reach her he became an eagle and took to the sky. Vasilka had made a necklace of flowers, and she told us of another creature like her in the east wing, where she is not allowed to go. She thinks of it as her sibling, since the Abbot made them both, and wanted it to have the necklace as a gift. I took the necklace and promised to deliver it.
 
 ### The Golem in the East Wing
 
-The Abbot took us to the east wing, where a seven-foot flesh golem stood with no light in its eyes. He told it to take us to Ezmerelda, and it led us to an office. We passed scarecrows on the abbey walls. The golem would not enter the barracks, but pointed us in, and I gave it Marzena’s garland. It stared at us in silence.
+The Abbot took us to the east wing, where a seven-foot flesh golem stood with no light in its eyes. He told it to take us to Ezmerelda, and it led us to an office. We passed scarecrows on the abbey walls. The golem would not enter the barracks, but pointed us in, and I gave it Vasilka’s garland. It stared at us in silence.
 
 ### Ezmerelda
 
@@ -43,7 +43,7 @@ Inside, a half-finished chalk circle lay in the middle of the floor, and a Vista
 
 ![Ezmerelda d'Avenir in a wide hat and long coat, leaning on her trapped wagon](/images/ezmerelda-d-avenir-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Séance
 
@@ -55,7 +55,7 @@ There we met [Bianca](/wiki/bianca-werewolf/), who lives in the woods nearby wit
 
 ![The Abbey of Saint Markovia on a mountain ledge above Krezk](/images/abbey-of-saint-markovia-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ## Key Locations
 
@@ -71,7 +71,7 @@ There we met [Bianca](/wiki/bianca-werewolf/), who lives in the woods nearby wit
 
 ## Loot
 
-* **Necklace of Flowers**: A gift from Marzena to a sibling in the East Wing. I carried it there and gave it to the flesh golem.
+* **Necklace of Flowers**: A gift from Vasilka to her sibling in the East Wing. I carried it there and gave it to the flesh golem.
 * **Magical Rapier & Hand-Axe**: Weapons laid near Ezmerelda during the séance.
 * **Holy Symbol Disc**: Engraved with a sun, perhaps the Morning Lord’s.
 
@@ -79,7 +79,7 @@ There we met [Bianca](/wiki/bianca-werewolf/), who lives in the woods nearby wit
 
 * **Ezmerelda**: A skilled monster hunter, seeking answers about the Abbot’s growing madness.
 * **The Abbot**: An angelic being tainted by Strahd, who believes Vasilka can break the land’s curse.
-* **The Flesh Golem**: The Abbot’s seven-foot servant in the east wing, Marzena’s “sibling”. I gave it her garland of flowers.
+* **The Flesh Golem**: The Abbot’s seven-foot servant in the east wing, Vasilka’s “sibling”. I gave it her garland of flowers.
 * **Kiril Stoyanovich**: The Black Terror, the ruthless leader of the werewolf pack, empowered by Baba Lysaga.
 * **[Bianca](/wiki/bianca-werewolf/)**: A conflicted werewolf tied to Kiril, who told us something of the pack.
 

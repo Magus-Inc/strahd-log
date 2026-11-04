@@ -250,8 +250,8 @@ def link_wiki(posts: list[Post], pages: list[wiki.WikiPage], relink: str = "once
         for slug in sorted(post.mentions):
             by_slug[slug].mentioned_in.append(post)
     for page in pages:
-        page.html, _ = linker.link(article.ai_credits(article.add_image_votes(
-            article.full_size(render_markdown(page.body_md), ROOT / "static"))), self_slug=page.slug)
+        page.html, _ = linker.link(article.name_ai_subjects(article.ai_credits(article.add_image_votes(
+            article.hover_titles(article.full_size(render_markdown(page.body_md), ROOT / "static")))), page.title), self_slug=page.slug)
 
 
 def apply_style(posts: list[Post], style: dict) -> None:
@@ -455,7 +455,7 @@ def add_reading_aids(posts: list[Post], pages: list[wiki.WikiPage]) -> None:
         post.teaser = article.teaser(post.html)
         post.cast = article.cast(set(post.listed) or post.mentions, pages) if post.show_cast else []
         post.html, post.toc = article.add_heading_ids(article.margin_notes(
-            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(article.full_size(post.html, ROOT / "static")), owners)), post.decks, post.slides_at)))
+            article.add_decks(article.wrap_glance(article.link_ai_pictures(article.ai_credits(article.hover_titles(article.full_size(post.html, ROOT / "static"))), owners)), post.decks, post.slides_at)))
 
 
 def load_posts(content_dir: Path) -> list[Post]:

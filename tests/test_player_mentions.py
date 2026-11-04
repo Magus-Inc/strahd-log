@@ -81,9 +81,37 @@ def test_wiki_pages_show_no_gray_source_line(real_build):
     assert not shown, shown
 
 
-def test_picture_credits_name_only_the_model_and_date():
-    credit = re.compile(r"AI-generated (?:image|images|portrait) \(Google Gemini, \w+ \d{4}\)([^.*]*)")
-    long = [f"{p.relative_to(ROOT).as_posix()}: {m.group(0)}"
-            for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
-            for m in credit.finditer(p.read_text(encoding="utf-8")) if m.group(1).strip()]
-    assert not long, "\n".join(long)
+def test_picture_credits_name_only_the_model():
+    """No month or year either (Chris, 2026-11-04): "AI-generated image (Google Gemini)."."""
+    credit = re.compile(r"AI-generated (?:image|images|portrait) \(([^)]*)\)")
+    dated = [f"{p.relative_to(ROOT).as_posix()}: {m.group(0)}"
+             for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
+             for m in credit.finditer(p.read_text(encoding="utf-8")) if m.group(1) != "Google Gemini"]
+    assert not dated, "\n".join(dated)
+
+
+def test_picture_credits_say_nothing_about_where_the_picture_came_from():
+    """At most one short sentence after the credit that helps read the picture, never "drawn from"."""
+    drawn = [p.relative_to(ROOT).as_posix()
+             for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
+             if re.search(r"\*AI-generated[^*]*drawn from", p.read_text(encoding="utf-8"))]
+    assert not drawn, drawn
+
+
+def test_picture_credits_do_not_repeat_that_the_art_is_not_ours():
+    """Chris (2026-11-04): "AI-generated" already says it, so no "Not official art." or "Not player art."."""
+    extra = [p.relative_to(ROOT).as_posix()
+             for folder in ("posts", "wiki") for p in sorted((ROOT / "content" / folder).glob("*.md"))
+             if re.search(r"\*AI-generated[^*]*Not (?:official|player) art", p.read_text(encoding="utf-8"))]
+    assert not extra, extra
+
+
+def test_every_picture_credit_says_what_it_shows(real_build):
+    """Chris (2026-11-04): each AI credit names its subject in a few words, linked where it can be."""
+    bare = []
+    for kind in ("posts", "wiki"):
+        for f in sorted((real_build.out / kind).glob("*/index.html")):
+            for credit in re.findall(r'<p class="ai-credit">(.*?)</p>', f.read_text(encoding="utf-8"), re.S):
+                if not re.match(r"AI-generated (?:image|images|portrait) of \S", credit):
+                    bare.append(f"{kind}/{f.parent.name}: {credit}")
+    assert not bare, "\n".join(bare[:20])

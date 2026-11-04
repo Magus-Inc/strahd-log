@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/wikis/morga
 
 ![Morgantha, an old hag at her pastry cart on a forest road, the windmill behind her](/images/morgantha-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

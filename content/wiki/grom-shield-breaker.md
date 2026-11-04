@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Grom Shield-Breaker, a hill dwarf fighter with shield and axe, holding up his family tooth](/images/grom-shield-breaker-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not player art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs.*
 

@@ -147,10 +147,10 @@ def test_deck_has_no_count_or_hint_text():
 def test_ai_disclaimer_line_becomes_a_quiet_credit():
     # 2026-10-31 Chris: the AI disclaimer under pictures was distracting; it gets its own small gray style.
     html = build.render_markdown("![Ismark](/images/ismark-ai.jpg)\n\n"
-                                 "*AI-generated image (Google Gemini, October 2026). Not official art.*\n\n"
+                                 "*AI-generated image (Google Gemini).*\n\n"
                                  "*Ordinary italic text stays as it is.*\n")
     quiet = article.ai_credits(html)
-    assert '<p class="ai-credit">AI-generated image (Google Gemini, October 2026). Not official art.</p>' in quiet
+    assert '<p class="ai-credit">AI-generated image (Google Gemini).</p>' in quiet
     assert "<p><em>Ordinary italic text stays as it is.</em></p>" in quiet
     assert article.ai_credits(quiet) == quiet
 
@@ -194,19 +194,19 @@ def test_post_ai_picture_links_to_its_wiki_page_and_the_credit_names_who_it_is()
     # is pictured, with the name linking to the wiki too.
     html = article.ai_credits(build.render_markdown(
         "Before.\n\n![Ismark in a tavern](/images/ismark-kolyanovich-ai.jpg)\n\n"
-        "*AI-generated image (Google Gemini, October 2026). Not official art.*\n\nAfter.\n"))
+        "*AI-generated image (Google Gemini).*\n\nAfter.\n"))
     linked = article.link_ai_pictures(html, article.ai_picture_owners([ISMARK, IZEK]))
     assert re.search(r'<a class="ai-picture" href="/wiki/ismark-kolyanovich/"[^>]*>'
                      r'<img [^>]*src="/images/ismark-kolyanovich-ai.jpg"[^>]*></a>', linked)
     assert ('<p class="ai-credit">AI-generated image of '
             '<a class="wiki-link" href="/wiki/ismark-kolyanovich/">Ismark Kolyanovich</a> '
-            '(Google Gemini, October 2026). Not official art.</p>') in linked
+            '(Google Gemini).</p>') in linked
     assert article.link_ai_pictures(linked, article.ai_picture_owners([ISMARK])) == linked  # safe to re-run
 
 
 def test_pictures_with_no_wiki_page_are_left_alone():
     html = article.ai_credits(build.render_markdown(
-        "![A wolf](/images/wolf-ai.jpg)\n\n*AI-generated image (Google Gemini). Not official art.*\n\n"
+        "![A wolf](/images/wolf-ai.jpg)\n\n*AI-generated image (Google Gemini).*\n\n"
         "![Ismark by Ryan](/images/ismark-by-ryan.webp)\n"))
     assert article.link_ai_pictures(html, article.ai_picture_owners([ISMARK])) == html
 
@@ -215,3 +215,22 @@ def test_linked_picture_has_no_underline_and_shows_it_can_be_clicked():
     css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
     assert re.search(r"\.prose a\.ai-picture\s*\{[^}]*text-decoration:\s*none", css)
     assert re.search(r"\.prose a\.ai-picture:hover img\s*\{", css)
+
+
+def test_hover_titles_copy_the_alt_text_once():
+    html = '<p><img alt="Ismark in a tavern" src="/images/i.jpg"></p><p><img alt="" src="/images/x.jpg"></p>'
+    out = article.hover_titles(html)
+    assert '<img alt="Ismark in a tavern" src="/images/i.jpg" title="Ismark in a tavern">' in out
+    assert '<img alt="" src="/images/x.jpg">' in out  # nothing to show
+    assert article.hover_titles(out) == out
+
+
+def test_wiki_picture_credits_name_the_page():
+    """Chris (2026-11-04): every AI credit says in a few words what the picture is of."""
+    html = ('<p><img alt="x" src="/images/the-flesh-golem-ai.jpg"></p>\n'
+            '<p class="ai-credit">AI-generated image (Google Gemini). The flowers are an illusion.</p>\n'
+            '<p class="ai-credit">AI-generated portrait of Someone Else (Google Gemini).</p>')
+    out = article.name_ai_subjects(html, "The Flesh Golem")
+    assert '<p class="ai-credit">AI-generated image of The Flesh Golem (Google Gemini). The flowers' in out
+    assert "AI-generated portrait of Someone Else (Google Gemini)." in out  # already named
+    assert article.name_ai_subjects(out, "The Flesh Golem") == out

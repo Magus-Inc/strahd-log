@@ -16,7 +16,7 @@ We saw a skeletal rider on a horse wearing chain mail and holding a rusty lanter
 
 ![A skeletal rider in chain mail on a misty road, holding a lantern that gives no light](/images/skeletal-rider-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Back to the Main Road
 

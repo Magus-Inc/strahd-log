@@ -12,7 +12,7 @@ source: Compiled from the adventure log, with a description written for the site
 
 ![The Sunsword, a blade of blazing sunlight in an amber-lit vault](/images/sunsword-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

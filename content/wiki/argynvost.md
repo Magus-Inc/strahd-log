@@ -13,7 +13,7 @@ sources:
 
 ![Argynvost, a vast ghostly silver dragon, over Argynvostholt with kneeling knights below](/images/argynvost-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs and the texts shared at the table, in Malron's words.*
 

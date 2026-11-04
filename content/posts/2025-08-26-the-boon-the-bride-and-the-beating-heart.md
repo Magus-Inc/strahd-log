@@ -41,7 +41,7 @@ Later, Escher brought Zorpheus upstairs to the rest of us. Rahadin entered with 
 
 ![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 > **“The prisoner waits your judgment, my lord.”**
 
@@ -61,13 +61,13 @@ We were offered guest quarters, with the promise that no servant would lay hands
 
 ![Escher, a golden-haired vampire spawn, guarding a guest room in the castle](/images/escher-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Inside, Gumbo searched a clock and found a map showing that the beating heart of the castle lies in the north tower.
 
 ![The Heart of Sorrow, a giant red crystal heart hanging in a tower above a spiral stair](/images/heart-of-sorrow-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 We tried to stay awake, but one by one we were all pulled into unconsciousness. When we woke, something had changed…
 

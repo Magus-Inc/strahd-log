@@ -17,7 +17,7 @@ feature: ireena-kolyana-ai.jpg
 
 ![Grom Shield-Breaker, a hill dwarf fighter with shield and axe, holding up his family tooth](/images/grom-shield-breaker-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not player art.*
+*AI-generated image (Google Gemini).*
 
 Schlopkht volunteered to bring the sunburst relic back to [Father Donavich](/wiki/father-donavich/) and side-step the part where we killed his undead son, and that we plan to kill him for good so that we may learn how to be rid of vampires.
 
@@ -31,7 +31,7 @@ Ismark asked us to escort [Ireena](/wiki/ireena-kolyana/) to the Abbey of Saint 
 
 ![Ireena, red-haired, in a breastplate and crimson scarf, a rapier in hand on a misty forest road](/images/ireena-kolyana-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 Ismark recommended stopping by the Tser Pool which is just a two hour journey west of here. We were to leave at noon, which gives us some time to shop or wander around.
 

@@ -14,7 +14,7 @@ sources:
 
 ![Kasimir Velikov, a grey-skinned dusk elf, clutching a glowing signet ring in the Vistani camp](/images/kasimir-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs, in Malron's words.*
 

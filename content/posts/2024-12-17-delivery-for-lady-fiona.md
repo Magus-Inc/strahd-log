@@ -35,7 +35,7 @@ Gumbo asked Lady Fiona whether she has any natural-born enemies. She took us to 
 
 ![Lady Fiona Wachter in a dark gown in her candlelit study, her imp on the chair](/images/lady-fiona-wachter-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### “Help Victor”
 
@@ -43,7 +43,7 @@ We went back to the inn to rest. In the night we woke to a window gone cold with
 
 ![The faint spirit of a boy at a frosted inn window in Vallaki](/images/erasmus-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### Rahadin’s Invitation
 
@@ -51,7 +51,7 @@ At breakfast an elf rode past the inn’s window on a phantom steed. A powerful 
 
 ![Rahadin, a grey-skinned dusk elf in black, holding a sealed invitation in a castle hall](/images/rahadin-ai.jpg)
 
-*AI-generated image (Google Gemini, October 2026). Not official art.*
+*AI-generated image (Google Gemini).*
 
 ### The Gallows
 

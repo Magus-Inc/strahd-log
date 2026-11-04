@@ -12,7 +12,7 @@ obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/characters/
 
 ![Weeble Wobleston, a high-elf fighter, his pendant glowing and pulling on its chain](/images/weeble-wobleston-ai.jpg)
 
-*AI-generated image (Google Gemini, November 2026). Not player art.*
+*AI-generated image (Google Gemini).*
 
 *Written from the session logs.*
 

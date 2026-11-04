@@ -70,7 +70,7 @@ def test_first_picture_and_its_credit_move_to_the_top(top):
 
 def test_a_drawing_keeps_its_own_caption_and_the_second_picture_stays_in_the_text():
     page = ("## Description\n\n![Crusty, drawn by Grant](/images/crusty-by-grant.jpg)\n\n*Crusty, drawn by Grant Haseloff.*\n\n"
-            "![Crusty, AI](/images/crusty-ai-portrait.jpg)\n\n*AI-generated portrait. Not player art.*\n\nCrusty stands tall.\n")
+            "![Crusty, AI](/images/crusty-ai-portrait.jpg)\n\n*AI-generated portrait.*\n\nCrusty stands tall.\n")
     out = wikistyle.apply(md(page), style(top="picture"), "character")
     assert "crusty-by-grant.jpg" in out.picture and "drawn by Grant Haseloff" in out.picture
     assert "crusty-ai-portrait.jpg" in out.html and "crusty-ai-portrait.jpg" not in out.picture
