@@ -196,40 +196,7 @@
 {% endif %}
 {% if counter %}
   <script>
-  // Reading: did anyone read this post? GoatCounter events at /read/<page>/started (30 seconds with the
-  // tab in front), /halfway (scrolled past the middle) and /finished (reached the end after at least half
-  // the "min read" time). Each is sent at most once per visit; nothing is stored in the browser.
-  (function () {
-    var prose = document.querySelector(".prose[data-read-minutes]");
-    if (!prose) return;
-    var path = location.pathname, base = "{{ base }}";
-    if (path.indexOf(base) === 0) path = "/" + path.slice(base.length);
-    if (path.slice(-1) !== "/") path += "/";
-    var needed = Math.max(30, Number(prose.dataset.readMinutes) * 30), seconds = 0, sent = {}, timer;
-    function send(step) {
-      if (sent[step]) return;
-      sent[step] = true;
-      new Image().src = "https://{{ counter }}.goatcounter.com/count?e=true&p=" +
-        encodeURIComponent("/read" + path + step) + "&t=" + encodeURIComponent("Read " + step + ": " + document.title) +
-        "&rnd=" + Math.random().toString(36).slice(2);
-    }
-    function seen(fraction) {
-      var box = prose.getBoundingClientRect();
-      return window.innerHeight >= box.top + box.height * fraction;
-    }
-    function check() {
-      if (seen(0.5)) send("halfway");
-      if (seconds >= 30) send("started");
-      if (seen(1)) sent.end = true;
-      if (sent.end && seconds >= needed) { send("finished"); clearInterval(timer); }
-    }
-    timer = setInterval(function () {
-      if (document.visibilityState === "visible") seconds += 1;
-      check();
-    }, 1000);
-    window.addEventListener("scroll", check, {passive: true});
-    document.addEventListener("visibilitychange", check);
-  })();
+{% include "_read_depth.js" %}
   </script>
 {% endif %}
 {% endblock %}

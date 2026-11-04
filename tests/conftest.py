@@ -1,6 +1,6 @@
 """Shared fixtures. The real blog takes about 5 seconds to build, so it is built once per test run
 and every test file that checks the real site reads the same copy. Tests must not change it."""
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import pytest
@@ -13,7 +13,7 @@ SITE_URL = "https://owlbear.dicelore.quest"
 @dataclass(frozen=True)
 class RealBuild:
     out: Path
-    posts: tuple  # build.Post, newest first
+    posts: tuple = field(repr=False)  # build.Post, newest first; too big to print in a failure
     site_url: str = SITE_URL
     base_path: str = "/"
 
