@@ -26,6 +26,7 @@ The old walking stick he leans on is the sheath of his rapier, and he draws the 
 * Learned from Erasmus that the gallows speaker had no weaknesses. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))
 * Bought potions of healing from the wandering merchant. ([Welcome to Krezk](/posts/welcome-to-krezk/))
 * Killed the last werewolf with a delayed Booming Blade. ([Echoes of the Black Terror](/posts/echoes-of-the-black-terro/))
+* Cast Remove Curse on Aera before Strahd's game, though the blood she drank turned her into a werewolf anyway. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Gave up his name in Strahd's game. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Was part of the party at Argynvostholt and on the road east. ([The Oath, the Spy, and the Silver Moon](/posts/the-oath-the-spy-and-the-silver-moon/))
 * Arrived at Castle Ravenloft with the party. ([Velvet, Vintages, and Veiled Intentions](/posts/velvet-vintages-and-veiled-intentions/))

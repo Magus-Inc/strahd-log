@@ -36,8 +36,12 @@ We escaped the cave and made camp in the forest, and Strahd himself appeared. Hi
 * **Zorpheus and Liren chose blood.**
 * **Aera drank the blood and turned fully into a werewolf.** Oogway swears he had lifted her curse beforehand, so something stronger was at work.
 * **Oogway gave up his name.**
-* **I chose a day of silence rather than abandon my faith.**
+* **I gave up my voice for three days rather than abandon my faith.**
 * **Olfin let his weapon be cursed rather than swear fealty to Strahd.**
+
+I have to be honest about what came after. Without a voice, nearly every prayer I know was out of my reach, because Lathander’s gifts must be spoken. Strahd said three days. I sat in the dark with my mouth shut and prayed the only way I could, inside my own head, over and over, begging the Morninglord not to leave me. My voice came back long before Strahd promised. I believe Lathander heard those silent prayers, lifted the curse and rewarded my faith.
+
+Still, that night is a blur to me. I keep going back over my choice and wondering whether I chose right, and part of me still hopes it was all a bad dream. I saw Aera change, but I cannot say what came of it, and none of us knows whether her curse still holds. What I remember of the road after that comes in pieces, and I have written down what I can.
 
 ### Sir Godfrey’s Tale
 
