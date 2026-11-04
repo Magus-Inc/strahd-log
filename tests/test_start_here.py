@@ -29,7 +29,7 @@ def post(slug, day, listed=(), party=None):
 
 
 def page(slug, kind="character", player="", dm=False, picture=""):
-    return SimpleNamespace(slug=slug, title=slug.title(), type=kind, player=player, dm=dm, summary="",
+    return SimpleNamespace(slug=slug, title=slug.title(), type=kind, player=player, dm=dm, summary="", path=f"wiki/{slug}/",
                            pictures=[f"/images/{picture}"] if picture else [], thumb="", names=[slug.title()])
 
 
@@ -50,7 +50,11 @@ def world(tmp_path):
             "faces": ["ireena"],
             "fortune": [{"card": "Traitor", "told": "Of history.", "points_to": "tome", "found_in": "three"},
                         {"card": "Bishop", "told": "A sword.", "points_to": "tome"}],
-            "how_to_read": ["Gold names open the wiki."], "about": "About."}
+            "how_to_read": [{"text": "Plain words."}, {"text": "Gold names, like {example}, open the wiki.", "wiki": "ireena"},
+                            {"text": "Red titles, like {example}, open a session.", "post": "one"},
+                            {"text": "This hand is the table.", "note": "We wanted a lawyer."},
+                            {"text": "A dotted red line, like {example}, is our road.", "map": True}],
+            "about": "About."}
     return SimpleNamespace(posts=posts, pages=pages, data=data, static=static)
 
 
@@ -134,6 +138,22 @@ def test_the_fortune_says_found_with_the_session_or_still_looking(world):
         ("Traitor", "tome", "three"), ("Bishop", "tome", None)]
 
 
+def test_each_tip_shows_an_example_in_the_style_it_describes(world):
+    """Chris, 2026-11-04: How to read this blog should use the styling it describes, with examples."""
+    plain, gold, red, note, road = load(world).how_to_read
+    assert plain.html == "Plain words." and plain.note == ""
+    assert '<a class="wiki-link" href="/wiki/ireena/">Ireena</a>' in gold.html
+    assert '<a class="session-link" href="/posts/one/">One</a>' in red.html
+    assert note.note == "We wanted a lawyer."
+    assert '<svg class="crumb-sample"' in road.html
+
+
+def test_a_tip_with_a_bad_example_stops_the_build(world):
+    world.data["how_to_read"][1]["wiki"] = "nobody"
+    with pytest.raises(ValueError, match="no wiki page nobody"):
+        load(world)
+
+
 # --- the real blog -------------------------------------------------------------------------------
 
 @pytest.fixture(scope="module")
@@ -164,7 +184,7 @@ def test_each_chapter_is_a_short_paragraph(real_plan):
 
 def test_the_text_we_wrote_uses_plain_words():
     data = yaml.safe_load(DATA.read_text(encoding="utf-8"))
-    texts = [data["hook"], data["premise"], data["about"], *data["how_to_read"],
+    texts = [data["hook"], data["premise"], data["about"], *[t["text"] for t in data["how_to_read"]],
              *[c["text"] for c in data["chapters"]], *[f["told"] for f in data["fortune"]]]
     assert [hit for text in texts for hit in stiff(text)] == []
 
@@ -238,7 +258,28 @@ def test_the_home_page_has_one_line_for_new_readers(real_build):
     assert re.search(r'<p class="new-here">New here\? <a href="/start/">', html)
 
 
+def test_the_tips_on_the_page_look_like_what_they_describe(start_html):
+    tips = start_html.split('id="how-to-read"')[1].split('id="about"')[0]
+    assert re.search(r'<a class="wiki-link" href="/wiki/[^"]+/">', tips)
+    assert re.search(r'<a class="session-link" href="/posts/[^"]+/">', tips)
+    assert '<aside class="margin-note"' in tips
+    assert '<svg class="crumb-sample"' in tips
+
+
 def test_chapter_names_link_to_the_wiki(start_html):
     story = start_html.split('id="story"')[1].split('id="party"')[0]
     assert 'href="/wiki/ireena-kolyana/"' in story
     assert 'href="/wiki/vallaki/"' in story
+
+
+@pytest.mark.parametrize("path", sorted((ROOT / "content" / "wiki").glob("*.md")), ids=lambda p: p.stem)
+def test_a_pcs_first_picture_is_the_ai_one(path):
+    """Chris, 2026-11-04: Crusty's default picture should be the AI one, like the blog posts, for
+    consistency. A player's own drawing stays on the page, after the AI portrait."""
+    meta, body = build.split_front_matter(path.read_text(encoding="utf-8"))
+    if meta.get("type") != "character" or meta.get("dm"):
+        return
+    pictures = re.findall(r"!\[[^\]]*\]\(/images/([^)\s]+)\)", body)
+    ai = [p for p in pictures if "-ai" in p]
+    if ai:
+        assert pictures[0] in ai, f"put {ai[0]} before {pictures[0]}"

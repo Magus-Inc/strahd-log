@@ -8,6 +8,7 @@ pick page, 2026-11-04.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from html import escape
 from pathlib import Path
 
 import yaml
@@ -63,6 +64,19 @@ class Card:
 
 
 @dataclass
+class Tip:
+    """One line of How to read this blog, showing its own example (Chris, 2026-11-04): a gold wiki name,
+    a red session title, a margin note in the table's hand, or a stretch of the map's dotted red road."""
+    html: str
+    note: str = ""  # a margin note shown after the line, in the table's handwriting
+
+
+# A short stretch of the map's breadcrumb road, drawn like the map draws it (.map .crumb in style.css).
+CRUMB_SAMPLE = ('<svg class="crumb-sample" width="64" height="14" viewBox="0 0 64 14" aria-hidden="true" '
+                'focusable="false"><path d="M2 10 C 16 2, 30 2, 40 7 S 58 12, 62 4"/></svg>')
+
+
+@dataclass
 class StartPage:
     hero: str
     hook: str
@@ -73,7 +87,7 @@ class StartPage:
     past: list[Member]
     faces: list
     fortune: list[Card]
-    how_to_read: list[str]
+    how_to_read: list[Tip]
     about: str
 
 
@@ -163,6 +177,21 @@ def plan(data: dict, posts: list, pages: list, static_dir: Path, render=lambda m
         fortune.append(Card(entry["card"], entry["told"], wiki_page(entry["points_to"], entry["card"]), found,
                             entry.get("status", "")))
 
+    tips = []
+    for entry in data.get("how_to_read") or []:
+        text = escape(str(entry["text"]), quote=False)
+        if entry.get("wiki"):
+            w = wiki_page(entry["wiki"], "how_to_read")
+            example = f'<a class="wiki-link" href="/{w.path}">{escape(w.title)}</a>'
+        elif entry.get("post"):
+            p = post_named(entry["post"], "how_to_read")
+            example = f'<a class="session-link" href="/{p.path}">{escape(p.title)}</a>'
+        elif entry.get("map"):
+            example = CRUMB_SAMPLE
+        else:
+            example = ""
+        tips.append(Tip(text.replace("{example}", example), escape(str(entry.get("note", "")), quote=False)))
+
     count = len(posts)
     return StartPage(
         hero=picture(data["hero"], "hero") if data.get("hero") else "",
@@ -174,6 +203,6 @@ def plan(data: dict, posts: list, pages: list, static_dir: Path, render=lambda m
         past=past,
         faces=[wiki_page(s, "faces") for s in data.get("faces") or []],
         fortune=fortune,
-        how_to_read=list(data.get("how_to_read") or []),
+        how_to_read=tips,
         about=str(data.get("about", "")),
     )

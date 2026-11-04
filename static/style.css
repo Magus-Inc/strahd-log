@@ -629,3 +629,7 @@ html.search-open, html.search-open body { overflow: hidden; }
 .fortune a[href*="/wiki/"] { color: var(--gold); text-decoration: none; }
 .fortune a[href*="/wiki/"]:hover { text-decoration: underline; }
 .start-section .prose { margin-left: 0; margin-right: 0; }
+.how-to-read a.session-link { color: var(--link-red); }
+.how-to-read .margin-note { float: none; width: auto; margin: 0.4rem 0 0.2rem 0.5rem; transform: rotate(-0.6deg); }
+.crumb-sample { display: inline-block; vertical-align: middle; margin: 0 0.15rem; padding: 0 0.2rem; border-radius: 4px; background: #d9c49a; }
+.crumb-sample path { fill: none; stroke: #b3122e; stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; }

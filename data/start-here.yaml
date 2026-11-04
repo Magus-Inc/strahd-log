@@ -100,12 +100,19 @@ fortune:
     told: Where we will find our enemy when we are ready for judgment.
     points_to: heart-of-sorrow
     status: Not yet. The cards point to the castle's heights and its beating heart.
+# Each tip shows its own example: wiki: a page (a gold name), post: a session (a red title), note: a
+# margin note copied from a post (the table's handwriting), map: true (the dotted red road). {example}
+# marks where the name, title or road goes in the line.
 how_to_read:
-  - Each session is told by Malron, the party's cleric, in his own words.
-  - Gold names open the wiki, where every person, place and thing we met has a page.
-  - Red titles open a session.
-  - A handwritten note in the margin is the table talking, not Malron.
-  - The map shows every session where it happened, with the road the party took.
+  - text: Each session is told by Malron, the party's cleric, in his own words.
+  - text: Gold names, like {example}, open the wiki, where every person, place and thing we met has a page.
+    wiki: ireena-kolyana
+  - text: Red titles, like {example}, open a session.
+    post: session-zero
+  - text: "A note in this handwriting is the table talking, not Malron:"
+    note: When asked to take the oath, the table wanted it in writing and a lawyer first.
+  - text: On the map, a dotted red line like {example} is the road the party took, and each number marks where a session happened.
+    map: true
 about: >-
   This is the record of a Curse of Strahd campaign that began in November 2023. Malron's player keeps
   it, from notes and recordings of each session, and the Dungeon Master runs the game. Most pictures are made with AI from the posts and the wiki; they are not official

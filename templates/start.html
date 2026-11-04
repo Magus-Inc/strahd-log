@@ -120,9 +120,9 @@
 
     <section class="start-section" id="how-to-read" aria-labelledby="how-title">
       <h2 id="how-title">How to read this blog</h2>
-      <ul class="how-to-read">
-{% for line in s.how_to_read %}
-        <li>{{ line }}</li>
+      <ul class="how-to-read prose">
+{% for tip in s.how_to_read %}
+        <li>{{ tip.html | rebase | safe }}{% if tip.note %}<aside class="margin-note" aria-label="From the table"><p>{{ tip.note | safe }}</p></aside>{% endif %}</li>
 {% endfor %}
       </ul>
     </section>
