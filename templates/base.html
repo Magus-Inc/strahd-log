@@ -46,6 +46,7 @@
   <header class="site-header">
     <div class="bar">
       <a class="brand" href="{{ base }}"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">{{ site_title }}</span></a>
+      <a class="search-button" href="{{ base }}search/" aria-label="Search" data-search-open><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></a>
       <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Show the menu">
       <label for="menu-toggle" class="menu-button" aria-label="Menu"><span class="menu-icon" aria-hidden="true"></span></label>
         <nav class="site-nav" aria-label="Main">
@@ -54,7 +55,7 @@
 {% if all_places %}
           <a href="{{ base }}map/"{% if section == "map" %} aria-current="page"{% endif %}>Map</a>
 {% endif %}
-          <a href="{{ base }}search/"{% if section == "search" %} aria-current="page"{% endif %}>Search</a>
+          <a class="nav-search" href="{{ base }}search/" data-search-open{% if section == "search" %} aria-current="page"{% endif %}>Search</a>
 {% if has_tags %}
           <a href="{{ base }}tags/"{% if section == "tags" %} aria-current="page"{% endif %}>Tags</a>
 {% endif %}
@@ -72,6 +73,7 @@
       <p class="legal">The chronicle&rsquo;s text and AI art are shared under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>; drawings by the players and the DM belong to their artists. The site&rsquo;s code is all rights reserved.</p>
     </div>
   </footer>
+{% include "_search_panel.html" %}
 {% block scripts %}{% endblock %}
   <script>
     // Votes: slide decks and pairs of AI pictures. Each vote is a GoatCounter event (no cookies, no login),

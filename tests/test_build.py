@@ -144,7 +144,8 @@ def test_no_images_on_links_that_expire(real_site):
 def test_every_image_in_posts_and_wiki_has_alt_text(real_site):
     bare = set()
     for page in [*real_site.glob("posts/*/index.html"), *real_site.glob("wiki/*/index.html")]:
-        for img in re.findall(r"<img\b[^>]*>", page.read_text(encoding="utf-8")):
+        html = re.sub(r"<script\b[^>]*>.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)  # search cards are built in a script
+        for img in re.findall(r"<img\b[^>]*>", html):
             if not re.search(r'\balt="[^"]', img) and "aria-hidden" not in img and "deck" not in img:
                 bare.add(f"{page.relative_to(real_site).as_posix()}: {img[:120]}")
     assert not bare, sorted(bare)
@@ -230,7 +231,7 @@ def test_normalize_base_path():
 def site_links(out: Path) -> list[str]:
     links = []
     for page in out.rglob("*.html"):
-        text = re.sub(r"<script>.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
+        text = re.sub(r"<script\b[^>]*>.*?</script>", "", page.read_text(encoding="utf-8"), flags=re.S)
         links += re.findall(r'(?:href|src)="([^"]*)"', text)
     return links
 
@@ -623,7 +624,7 @@ def test_search_index_carries_slides_and_thumbnails(badge_site):
 
 
 def test_search_and_map_pages_draw_the_badges():
-    search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
+    search = (build.ROOT / "templates" / "_search_results.js").read_text(encoding="utf-8")  # the search page's and panel's cards
     assert "slides-tag" in search and "pic-thumb" in search
     assert "slides-tag" in (build.ROOT / "templates" / "map.html").read_text(encoding="utf-8")
 
@@ -645,7 +646,7 @@ def test_stylesheet_link_changes_when_the_css_changes(content, tmp_path):
 
 def test_badge_icons_stay_small_even_without_the_stylesheet():
     """An old cached stylesheet must not turn an icon into a big black box."""
-    for name in ("_badges.html", "search.html", "map.html"):
+    for name in ("_badges.html", "_search_results.js", "_search_panel.html", "base.html", "map.html"):
         text = (build.ROOT / "templates" / name).read_text(encoding="utf-8")
         for svg in re.findall(r'<svg class="badge-icon"[^>]*>', text):
             assert 'width="14"' in svg and 'height="14"' in svg and 'fill="none"' in svg and 'stroke="currentColor"' in svg
@@ -669,7 +670,7 @@ def test_picture_count_shows_under_the_thumbnail_only_for_two_or_more(badge_site
 
 
 def test_search_shows_the_picture_count_only_for_two_or_more():
-    search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
+    search = (build.ROOT / "templates" / "_search_results.js").read_text(encoding="utf-8")
     assert "h.e.n > 1" in search
 
 
@@ -678,7 +679,7 @@ def test_picture_count_is_the_icon_and_number_only(badge_site):
     count = re.search(r'<span class="pic-count"([^>]*)>(.*?)</span>', aera, re.S)
     assert 'aria-label="2 pictures"' in count.group(1)
     assert re.fullmatch(r"<svg[^>]*>.*</svg>2", count.group(2), re.S)  # no word, just icon and number
-    search = (build.ROOT / "templates" / "search.html").read_text(encoding="utf-8")
+    search = (build.ROOT / "templates" / "_search_results.js").read_text(encoding="utf-8")
     assert "PICTURE_ICON + h.e.n + \"</span>\"" in search
 
 
