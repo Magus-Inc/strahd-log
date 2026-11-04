@@ -1,6 +1,8 @@
 ---
 title: Signet ring
 type: item
+aliases:
+- Khazan's Ring
 summary: A sigil-bearing ring linked to Khazan.
 source: Compiled from the adventure log, with a description written for the site
 ---
