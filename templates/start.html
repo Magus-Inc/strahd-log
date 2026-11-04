@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% import "_badges.html" as badges with context %}
-{# Start here (Chris's picks, 2026-11-04): a castle picture with a two-line hook, four big ways in, then the
-   story so far in six chapters, the party, faces to know, Madam Eva's fortune, the map, tips and about.
+{# Start here (Chris's picks, 2026-11-04): a castle picture with a two-line hook, the party
+   (moved above the story by Chris; the ways in moved to the home page banner), then the story so far in six chapters, Madam Eva's fortune, the map, tips and about.
    The words live in data/start-here.yaml; start.py works out the rest. #}
 {% set section = "start" %}
 {% block title %}Start here | {{ site_title }}{% endblock %}
@@ -15,16 +15,22 @@
       </div>
     </header>
 
-    <nav class="doors" aria-label="Ways in">
-      <a class="door" href="#story"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h12M6 21h12M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9"/></svg></span><span><strong>Catch up in 3 minutes</strong><span>The story so far, one short paragraph per chapter</span></span></a>
-      <a class="door" href="#party"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/></svg></span><span><strong>Meet the party</strong><span>Who is with us now, and who came before</span></span></a>
-{% if first %}
-      <a class="door" href="{{ base }}{{ first.path }}"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h10l3 3v15H6zM9 9h7M9 13h7M9 17h4"/></svg></span><span><strong>Read from the beginning</strong><span>{{ first.title }}, {{ first.date | nice_date }}</span></span></a>
+    <section class="start-section" id="party" aria-labelledby="party-title">
+      <h2 id="party-title">The party</h2>
+      <ul class="party-grid">
+{% for p in s.party %}
+        <li><a href="{{ base }}{{ p.path }}">{% if p.pictures %}<img src="{{ base }}{{ p.pictures[0] | replace('/', '', 1) }}" alt="" loading="lazy" decoding="async">{% endif %}<strong>{{ p.title.split()[0] }}</strong><span>{{ p.summary }}</span></a></li>
+{% endfor %}
+      </ul>
+{% if s.past %}
+      <h3>Who came and went</h3>
+      <ul class="past-party">
+{% for m in s.past %}
+        <li class="{{ m.status }}"><a href="{{ base }}{{ m.page.path }}">{% if m.page.thumb %}<img src="{{ base }}{{ m.page.thumb }}" alt="" loading="lazy" decoding="async">{% endif %}<span class="past-name">{{ m.page.title.split()[0] }}</span><span class="life-tag {{ m.status }}-tag">{{ badges.life_icon(m.status) }}{{ m.status }}</span></a></li>
+{% endfor %}
+      </ul>
 {% endif %}
-{% if all_places %}
-      <a class="door" href="{{ base }}map/"><span class="door-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></svg></span><span><strong>See where we have been</strong><span>The map, with every session marked</span></span></a>
-{% endif %}
-    </nav>
+    </section>
 
     <section class="start-section" id="story" aria-labelledby="story-title">
       <h2 id="story-title">The story so far</h2>
@@ -66,34 +72,6 @@
 {% endif %}
       </ol>
     </section>
-
-    <section class="start-section" id="party" aria-labelledby="party-title">
-      <h2 id="party-title">The party</h2>
-      <ul class="party-grid">
-{% for p in s.party %}
-        <li><a href="{{ base }}{{ p.path }}">{% if p.pictures %}<img src="{{ base }}{{ p.pictures[0] | replace('/', '', 1) }}" alt="" loading="lazy" decoding="async">{% endif %}<strong>{{ p.title.split()[0] }}</strong><span>{{ p.summary }}</span></a></li>
-{% endfor %}
-      </ul>
-{% if s.past %}
-      <h3>Who came and went</h3>
-      <ul class="past-party">
-{% for m in s.past %}
-        <li class="{{ m.status }}"><a href="{{ base }}{{ m.page.path }}">{% if m.page.thumb %}<img src="{{ base }}{{ m.page.thumb }}" alt="" loading="lazy" decoding="async">{% endif %}<span class="past-name">{{ m.page.title.split()[0] }}</span><span class="life-tag {{ m.status }}-tag">{{ badges.life_icon(m.status) }}{{ m.status }}</span></a></li>
-{% endfor %}
-      </ul>
-{% endif %}
-    </section>
-
-{% if s.faces %}
-    <section class="start-section" id="faces" aria-labelledby="faces-title">
-      <h2 id="faces-title">Faces to know</h2>
-      <ul class="faces">
-{% for f in s.faces %}
-        <li><a href="{{ base }}{{ f.path }}">{% if f.thumb %}<img src="{{ base }}{{ f.thumb }}" alt="" loading="lazy" decoding="async">{% endif %}<strong>{{ f.title }}</strong><span>{{ f.summary }}</span></a></li>
-{% endfor %}
-      </ul>
-    </section>
-{% endif %}
 
 {% if s.fortune %}
     <section class="start-section" id="fortune" aria-labelledby="fortune-title">

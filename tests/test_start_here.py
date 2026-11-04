@@ -47,7 +47,6 @@ def world(tmp_path):
             "chapters": [{"title": "First", "from": "one", "through": "two", "picture": "a.jpg", "text": "Text one."},
                          {"title": "Second", "from": "three", "through": "four", "picture": "b.jpg", "text": "Text two.",
                           "won": ["tome"]}],
-            "faces": ["ireena"],
             "fortune": [{"card": "Traitor", "told": "Of history.", "points_to": "tome", "found_in": "three"},
                         {"card": "Bishop", "told": "A sword.", "points_to": "tome"}],
             "how_to_read": [{"text": "Plain words."}, {"text": "Gold names, like {example}, open the wiki.", "wiki": "ireena"},
@@ -80,7 +79,6 @@ def test_a_new_post_after_the_last_chapter_is_listed_as_uncovered(world):
     (lambda d: d["chapters"][0].update({"from": "two"}), "must start at the first session, one"),
     (lambda d: d["chapters"][0].update({"through": "nowhere"}), "unknown post nowhere"),
     (lambda d: d["chapters"][0].update({"picture": "missing.jpg"}), "no picture static/images/missing.jpg"),
-    (lambda d: d.update({"faces": ["nobody"]}), "no wiki page nobody"),
     (lambda d: d["fortune"][0].update({"points_to": "nobody"}), "no wiki page nobody"),
     (lambda d: d["chapters"][1].update({"won": ["nobody"]}), "no wiki page nobody"),
 ])
@@ -216,13 +214,22 @@ def start_html(real_build):
     return (real_build.out / "start" / "index.html").read_text(encoding="utf-8")
 
 
-def test_the_page_opens_with_a_hook_and_four_ways_in(start_html):
+def test_no_faces_to_know_section(start_html):
+    """Chris dropped it (2026-11-04): a fixed list of NPCs did not earn its place."""
+    assert 'id="faces"' not in start_html
+
+
+def test_the_page_opens_with_a_hook_then_the_party(start_html):
+    """The party sits right under the castle picture, above the story (Chris, 2026-11-04); the ways in
+    moved to the home page banner."""
     assert "<h1" in start_html and "Welcome to Barovia" in start_html
-    doors = re.findall(r'<a class="door" href="([^"]+)"', start_html)
-    assert doors == ["#story", "#party", "/posts/session-zero/", "/map/"]
+    assert 'class="door"' not in start_html
+    after_hero = start_html.split('class="start-hero"', 1)[1].split("</header>", 1)[1].lstrip()
+    assert after_hero.startswith('<section class="start-section" id="party"')
+    assert start_html.index('id="party"') < start_html.index('id="story"')
 
 
-@pytest.mark.parametrize("section", ["story", "party", "faces", "fortune", "map", "how-to-read", "about"])
+@pytest.mark.parametrize("section", ["story", "party", "fortune", "map", "how-to-read", "about"])
 def test_every_picked_section_is_on_the_page(start_html, section):
     assert f'id="{section}"' in start_html
 
@@ -257,7 +264,11 @@ def test_the_home_page_has_a_banner_for_new_readers_that_they_can_close(real_bui
     html = (real_build.out / "index.html").read_text(encoding="utf-8")
     banner = re.search(r'<aside class="new-here".*?</aside>', html, re.S).group(0)
     assert 'href="/start/"' in banner and "New here?" in banner
-    assert banner.count("<img") == 5  # today's party
+    party_door = re.search(r'<a class="door" href="/start/#party">.*?</a>', banner).group(0)
+    assert party_door.count("<img") == 5  # today's faces are the Meet the party button's picture
+    # The ways in live here (Chris, 2026-11-04), not on the start page; the fortune shows our big goals.
+    doors = re.findall(r'<a class="door" href="([^"]+)"', banner)
+    assert doors == ["/start/#party", "/start/#story", "/start/#fortune", "/posts/session-zero/", "/map/"]
     assert 'class="new-here-close"' in banner and "localStorage" in html
 
 

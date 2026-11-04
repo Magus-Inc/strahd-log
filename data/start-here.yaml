@@ -10,7 +10,7 @@
 #
 # Keys: hero (a picture in static/images), hook (two lines under the title; {sessions} is the count), premise (Markdown, Malron),
 # chapters (title, from and through: post slugs, picture, text: Markdown, won: wiki slugs of key things
-# won in it), faces (wiki slugs), fortune (Madam Eva's cards at Tser Pool: card, told, points_to: wiki
+# won in it), fortune (Madam Eva's cards at Tser Pool: card, told, points_to: wiki
 # slug, found_in: the post where we found it, or status: what stands instead), how_to_read, about.
 hero: castle-ravenloft-ai.jpg
 hook: Five strangers followed the fog into a land ruled by a vampire. We are still trying to leave.
@@ -78,7 +78,6 @@ chapters:
       of Dawn's Grace we cleansed him, and Olfin fell and was brought back again. Under the abbey we
       opened the red door and freed hundreds of trapped souls. At Argynvostholt we returned the silver
       dragon's skull, his knights found rest, and we swore the Order's oath.
-faces: [strahd-von-zarovich, ireena-kolyana, ismark-kolyanovich, rahadin, madam-eva, ezmerelda-d-avenir]
 fortune:
   - card: Traitor
     told: Of history. Knowledge of the ancient will help against our enemy.

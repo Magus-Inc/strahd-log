@@ -85,7 +85,6 @@ class StartPage:
     uncovered: list  # sessions after the last chapter, oldest first: data/start-here.yaml needs them
     party: list  # wiki pages of today's party
     past: list[Member]
-    faces: list
     fortune: list[Card]
     how_to_read: list[Tip]
     about: str
@@ -201,7 +200,6 @@ def plan(data: dict, posts: list, pages: list, static_dir: Path, render=lambda m
         uncovered=oldest[next_index:],
         party=party,
         past=past,
-        faces=[wiki_page(s, "faces") for s in data.get("faces") or []],
         fortune=fortune,
         how_to_read=tips,
         about=str(data.get("about", "")),

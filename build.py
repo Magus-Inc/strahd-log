@@ -689,6 +689,8 @@ def make_env(site: Site, site_url: str, base: str) -> Environment:
     env.globals["all_places"] = site.places
     env.globals["has_start"] = site.start is not None
     env.globals["start_party"] = site.start.party if site.start else []
+    env.globals["start_fortune"] = bool(site.start and site.start.fortune)
+    env.globals["start_first"] = site.posts[-1] if site.posts else None  # the first session, for the banner
     return env
 
 
@@ -774,8 +776,7 @@ def write_extras(site: Site, env: Environment, out_dir: Path, site_url: str, bas
     write(out_dir / "404.html", env.get_template("404.html").render())
     if site.start:
         write(out_dir / "start" / "index.html",
-              env.get_template("start.html").render(share_page={"path": "start/"}, start=site.start,
-                                                    first=site.posts[-1] if site.posts else None))
+              env.get_template("start.html").render(share_page={"path": "start/"}, start=site.start))
     write(out_dir / "feed.xml", build_feed(site.posts, site_url + base))
     redirects = site.map_file.parent / "redirects.yaml"
     write_redirects(out_dir, load_redirects(redirects), site.posts, base, load_redirects(redirects, "wiki"), site.pages)

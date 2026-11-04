@@ -565,18 +565,20 @@ html.search-open, html.search-open body { overflow: hidden; }
 }
 
 /* Start here (start/, Chris's picks 2026-11-04): a castle picture with a two-line hook, four big ways in,
-   then the sections. Story text keeps to the reading measure; the party and faces use the width. */
-.new-here { position: relative; margin: 1rem 0 0.5rem; border: 1px solid var(--gold); border-radius: var(--radius); background: var(--surface-2); }
+   then the sections. Story text keeps to the reading measure; the party uses the width. */
+.new-here { position: relative; margin: 1rem 0 0.5rem; padding: 0.8rem 1rem 1rem; border: 1px solid var(--gold); border-radius: var(--radius); background: var(--surface-2); }
 .new-here[hidden] { display: none; }
-.new-here-link { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; padding: 0.8rem 3rem 0.8rem 1rem; color: var(--text); text-decoration: none; }
-.new-here-link:hover { color: var(--text); }
+.new-here-text { margin: 0 2.4rem 0.7rem 0; }
+.new-here-text strong { font-family: var(--serif); color: var(--gold); font-size: 1.15rem; margin-right: 0.3rem; }
+.new-here .doors { grid-template-columns: 1fr; gap: 0.6rem; margin: 0; }
+@media (min-width: 720px) { .new-here .doors { grid-template-columns: repeat(4, 1fr); } }
+.new-here .door strong { font-size: 1rem; }
+.new-here .door:first-child { grid-column: 1 / -1; }  /* Meet the party: a wide strip with everyone's faces */
+.new-here .door { background: var(--surface); padding: 0.7rem 0.9rem; }
 .new-here-faces { display: flex; flex: none; }
-.new-here-faces img { width: 2.5rem; height: 2.5rem; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--surface-2); margin-left: -0.6rem; }
+.new-here-faces img { width: 2.2rem; height: 2.2rem; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--surface); margin-left: -0.8rem; }
+@media (min-width: 720px) { .new-here-faces img { width: 2.6rem; height: 2.6rem; } }
 .new-here-faces img:first-child { margin-left: 0; }
-.new-here-text { flex: 1 1 14rem; min-width: 0; }
-.new-here-text strong { font-family: var(--serif); color: var(--gold); font-size: 1.1rem; }
-.new-here-go { flex: none; padding: 0.4rem 0.9rem; border-radius: 999px; background: var(--accent-deep); color: #fff; font-weight: 600; font-size: 0.95rem; }
-.new-here-link:hover .new-here-go { background: var(--accent); }
 .new-here-close { position: absolute; top: 0.35rem; right: 0.35rem; width: 2.2rem; height: 2.2rem; border: 0; border-radius: 50%; background: none; color: var(--muted); font-size: 1.4rem; line-height: 1; cursor: pointer; }
 .new-here-close:hover, .new-here-close:focus-visible { color: var(--text); background: var(--surface); }
 .start-hero { position: relative; display: flex; align-items: flex-end; min-height: 20rem; margin: -2rem -1.25rem 0; background: var(--surface) center 30% / cover no-repeat; }
@@ -612,18 +614,16 @@ html.search-open, html.search-open body { overflow: hidden; }
 .chapter-sessions summary { cursor: pointer; font-size: 0.92rem; color: var(--muted); }
 .chapter-sessions ol { margin: 0.5rem 0 0; padding-left: 1.4rem; font-size: 0.92rem; }
 .party-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 0.75rem; }
-.party-grid a, .faces a { display: block; height: 100%; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; text-align: center; text-decoration: none; color: var(--text); }
-.party-grid a:hover, .faces a:hover { border-color: var(--gold); }
+.party-grid a { display: block; height: 100%; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; text-align: center; text-decoration: none; color: var(--text); }
+.party-grid a:hover { border-color: var(--gold); }
 .party-grid img { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; }
-.party-grid strong, .faces strong { display: block; padding: 0.4rem 0.3rem 0; font-family: var(--serif); color: var(--gold); }
-.party-grid span, .faces span { display: block; padding: 0 0.4rem 0.5rem; font-size: 0.8rem; line-height: 1.35; color: var(--muted); }
+.party-grid strong { display: block; padding: 0.4rem 0.3rem 0; font-family: var(--serif); color: var(--gold); }
+.party-grid span { display: block; padding: 0 0.4rem 0.5rem; font-size: 0.8rem; line-height: 1.35; color: var(--muted); }
 .past-party { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .past-party a { display: flex; flex-direction: column; align-items: center; width: 4.6rem; text-align: center; text-decoration: none; color: var(--text); font-size: 0.85rem; }
 .past-party img { width: 3.6rem; height: 3.6rem; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--line); }
 .past-party .died img { filter: grayscale(1) brightness(0.8); }
 .past-party .life-tag { font-size: 0.75rem; }
-.faces { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: 0.75rem; }
-.faces img { display: block; width: 5rem; height: 5rem; margin: 0.8rem auto 0; border-radius: 50%; object-fit: cover; object-position: top; }
 .fortune { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .fortune li { padding: 0.7rem 0.9rem; border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 10px; background: var(--surface); }
 .fortune li.found { border-left-color: #7cc39a; }
