@@ -46,7 +46,7 @@ At times Malron hears the voice of the long dead Elf, and benefits from the know
 * Used the Talisman of Echoes to speak with Izek's head. ([Delivery for Lady Fiona](/posts/delivery-for-lady-fiona/))
 * Was once poisoned by a Giant Spider; a resurrection let an Elf spirit into his body. ([Entering the Spirit Realm](/posts/entering-the-spirit-realm/))
 * Learned in the Whispering Wall that he is tied to an ancient line of elven kings. ([The Whispering Wall](/posts/the-whispering-wall/))
-* Promised to deliver Marzena's flower necklace. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
+* Promised to deliver Vasilka's flower necklace. ([Shadows Over St. Markovia](/posts/shadows-over-st-markovia/))
 * Gave up his voice in Strahd's game rather than abandon his faith, and was told he would be silent, and so without most of his spells, for three days. He believes Lathander lifted the curse early. ([Blood and Oaths Under Moonlight](/posts/blood-and-oaths-under-moonligh/))
 * Noticed pulleys and a Strahd mannequin used to scare intruders at Castle Ravenloft. ([The Boon, the Bride, and the Beating Heart](/posts/the-boon-the-bride-and-the-beating-heart/))
 * Was brought back by a botched resurrection that let an elven spirit share his body; needs no breath or food. ([Depths of Ravenloft](/posts/depths-of-ravenloft/))

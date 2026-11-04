@@ -1,5 +1,7 @@
 """The flesh golem (Chris, 2026-11-03): its page is one tap away wherever the posts and the wiki name it,
-and its crown is the garland Marzena sent her "sibling" in the east wing (Chris's notes from 4/29/2025)."""
+and its crown is the garland Vasilka made for her "sibling" in the east wing. Chris's 4/29/2025 notes
+named the maker Marzena; the DM said twice on 7/21/2026 that it came from Vasilka, and Chris agreed
+that both are the Abbot's creations, hence "siblings" (2026-11-04)."""
 import re
 
 import pytest
@@ -70,9 +72,31 @@ def test_the_bride_the_abbot_is_building_is_not_linked_as_the_golem(site_pages):
     assert len(re.findall(r'href="/wiki/vasilka/"[^>]*>flesh golem<', html)) == 3
 
 
-def test_the_golem_links_vasilka_and_marzena(site_pages):
+def test_the_golem_page_says_vasilka_made_its_garland(site_pages):
     golem = site_pages["wiki/the-flesh-golem"]
     assert 'href="/wiki/vasilka/"' in golem
     story = re.sub(r"<[^>]+>", "", golem.split("From the adventure log")[0])
-    assert 'href="/wiki/marzena/"' in golem
+    assert "Vasilka had made a necklace of flowers" in story
     assert "I gave the garland to the golem" in story
+
+
+@pytest.mark.parametrize("path", [
+    "posts/shadows-over-st-markovia",
+    "wiki/the-flesh-golem",
+    "wiki/vasilka",
+    "wiki/necklace-of-flowers",
+    "wiki/abbey-of-saint-markovia",
+    "wiki/malron-lichtstrahl",
+    "wiki/marzena",
+])
+def test_no_page_says_marzena_made_the_garland(site_pages, path):
+    """Marzena is the flying Belview the Abbot fetched; the garland is Vasilka's (Chris, 2026-11-04)."""
+    text = re.sub(r"<(/?(h[1-6]|p|li|div)\b)[^>]*>", "\n", site_pages[path])
+    text = re.sub(r"<[^>]+>", "", text)
+    for sentence in re.split(r"(?<=[.!?])\s+|\n", text):
+        if re.search(r"necklace|garland", sentence, re.I):
+            assert "Marzena" not in sentence, (path, sentence)
+
+
+def test_marzena_is_the_flying_belview(site_pages):
+    assert "Belview" in site_pages["wiki/marzena"]

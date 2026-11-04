@@ -26,7 +26,7 @@
 {"text":"Used the Talisman of Echoes to speak with Izek's head.","post":"2024-12-17-delivery-for-lady-fiona"},
 {"text":"Was once poisoned by a Giant Spider; a resurrection let an Elf spirit into his body.","post":"2025-02-11-entering-the-spirit-realm"},
 {"text":"Learned in the Whispering Wall that he is tied to an ancient line of elven kings.","post":"2025-04-15-the-whispering-wall"},
-{"text":"Promised to deliver Marzena's flower necklace.","post":"2025-04-29-shadows-over-st-markovia"},
+{"text":"Promised to deliver Vasilka's flower necklace.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Silenced himself for a day in Strahd's game rather than abandon his faith.","post":"2025-05-13-blood-and-oaths-under-moonligh"}]},
 {"name":"Shabasta","type":"character","aliases":[],"summary":"A porcupine bard in the party with a flair for disguise and dramatic speeches.","facts":[
 {"text":"Disguised himself as Father Lucian to get guards to arrest Milivoj.","post":"2024-11-19-the-quest-for-the-missing-bones"},
@@ -389,7 +389,8 @@
 {"text":"The Abbot has taken it over.","post":"2025-04-22-welcome-to-krezk"},
 {"text":"The party held a séance there with Ezmerelda.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Vasilka","type":"npc","aliases":[],"summary":"A flesh golem the Abbot is building for Strahd.","facts":[
-{"text":"The Abbot believes she can break the land's curse.","post":"2025-04-29-shadows-over-st-markovia"}]},
+{"text":"The Abbot believes she can break the land's curse.","post":"2025-04-29-shadows-over-st-markovia"},
+{"text":"Made a necklace of flowers for her sibling in the East Wing.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Ezmerelda","type":"npc","aliases":[],"summary":"A monster hunter who lost her leg to the Black Terror.","facts":[
 {"text":"Held a séance with the party at the abbey.","post":"2025-04-29-shadows-over-st-markovia"},
 {"text":"Led the party to the werewolf den and gave Malron Darkvision.","post":"2025-05-06-echoes-of-the-black-terro"}]},
@@ -401,11 +402,11 @@
 {"text":"Met at the abbey.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Clovin","type":"npc","aliases":[],"summary":"A mutated member of the Belview family.","facts":[
 {"text":"Met at the abbey.","post":"2025-04-29-shadows-over-st-markovia"}]},
+{"name":"Marzena","type":"npc","aliases":[],"summary":"A Belview at the abbey who seems able to fly.","facts":[
+{"text":"The Abbot became an eagle to fetch her.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Cyrus Belview","type":"npc","aliases":[],"summary":"A Belview held in Ravenloft.","facts":[
 {"text":"May bring rewards if rescued from Ravenloft.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Marzena","type":"npc","aliases":[],"summary":"A woman at the abbey who sent a flower necklace to a sibling.","facts":[
-{"text":"Gave a necklace for her sibling in the East Wing.","post":"2025-04-29-shadows-over-st-markovia"}]},
-{"name":"Necklace of Flowers","type":"item","aliases":[],"summary":"Marzena's gift for her sibling.","facts":[
+{"name":"Necklace of Flowers","type":"item","aliases":[],"summary":"Vasilka's gift for her sibling.","facts":[
 {"text":"Malron carries it.","post":"2025-04-29-shadows-over-st-markovia"}]},
 {"name":"Lake Baratok Cave","type":"place","aliases":["Werewolf Cave"],"summary":"The werewolf den near Lake Baratok.","facts":[
 {"text":"Holds the kidnapped Ilya.","post":"2025-04-29-shadows-over-st-markovia"},
