@@ -6,7 +6,7 @@ slug: the-fallen-star-ape-sacrifice-and-redemption
 obsidian_portal_url: https://curseofstrahdowlbear.obsidianportal.com/adventure-log/the-fallen-star-ape-sacrifice-and-redemption
 cast: ["Aera shan Ravanór", "Crusty", "Malron Lichtstrahl", "Olfin Darning", "Shabasta"]
 sources: ["transcript-62p022", "transcript-et32hj", "recording-7iph97"]
-feature: the-fallen-star-1.jpg
+feature: the-void-ai.jpg
 ---
 
 ## At a Glance

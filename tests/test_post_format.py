@@ -250,6 +250,18 @@ def test_a_post_with_more_than_one_picture_names_its_feature_picture():
     assert poststyle.feature_problems({"feature": "c-ai.jpg"}, two) == ["feature c-ai.jpg is not a picture in the post"]
 
 
+def test_the_feature_picture_is_an_ai_picture_when_the_post_has_one():
+    # Chris, 2026-11-04: the home page cards and link previews show the feature picture, and a photo
+    # of the table among the AI art looks out of place there. A table photo can stay in the story.
+    photo = "![The table](/images/the-table-1.jpg)\n\n"
+    body = "## Story\n\n" + photo + "We ran.\n\n" + pic("b")
+    assert poststyle.feature_problems({"feature": "the-table-1.jpg"}, body) == [
+        "feature the-table-1.jpg is a photo, not an AI picture: feature one of the post's AI pictures (b-ai.jpg)"]
+    assert poststyle.feature_problems({"feature": "b-ai.jpg"}, body) == []
+    only_photos = "## Story\n\n" + photo + "We ran.\n\n![More](/images/the-table-2.jpg)\n\n"
+    assert poststyle.feature_problems({"feature": "the-table-1.jpg"}, only_photos) == []
+
+
 def test_picture_top_moves_the_named_feature_picture():
     text = "## Story\n\nOne.\n\n" + pic("a") + "Two.\n\n" + pic("b") + "Three.\n"
     html = poststyle.apply(md(text), {"picture": "top"}, feature="b-ai.jpg")

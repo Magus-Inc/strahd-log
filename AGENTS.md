@@ -61,7 +61,7 @@
   own after the paragraph it shows (after that paragraph's `Note:` margin notes), with words between
   two pictures, none twice, and an AI picture keeps its `*AI-generated ...*` credit line (a PC's
   portrait says "Not player art."). A post with more than one picture names its feature picture in
-  the front matter (`feature: name.jpg`): it gives the link preview and goes first under `picture: top`.
+  the front matter (`feature: name.jpg`): it gives the link preview and the home page card, and goes first under `picture: top`. When the post has an AI picture the feature is one of them, never a photo of the table (Chris, 2026-11-04).
   Check pictures against the story for spoilers: no form, identity or outcome before the story reveals
   it. Reuse a wiki picture before making one. `tests/test_post_format.py` checks the rules.
 - The look settings in `data/post-style.yaml` (Chris's picks) decide how that format becomes a page
