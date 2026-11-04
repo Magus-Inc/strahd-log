@@ -121,3 +121,11 @@
   smaller copy in `static/images/` (720px wide portraits, 1100px landscapes) and the original
   Gemini picture, full size as a JPEG, goes in `static/images/full/` under the same name. The build gives the picture a
   `data-full` address and the picture viewer loads it only when a reader taps the picture.
+- Pages full of pictures load small copies (Chris, 2026-11-04: Start here loaded 1.5 MB of full-size
+  pictures). The build makes them; never commit or link a hand-made small copy. Home cards use
+  `images/cards/` (`make_card_pictures`), wiki list cards and faces `images/thumbs/` (`make_thumbnails`),
+  Start here `images/small/` (`make_start_pictures`: 400px portraits, 800/1100px chapter pictures in a
+  `srcset`, the castle at 1100px). Wiki articles and session logs keep the full-size pictures. A new
+  page with a grid of pictures goes in `GRID_PAGES` in `tests/test_picture_weight.py` and gets small
+  copies the same way; that test fails when a grid page loads a full-size picture or one over 100 KB,
+  or when any other page that is not an article shows more than 6 pictures.

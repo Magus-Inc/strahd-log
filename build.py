@@ -391,11 +391,11 @@ def make_thumbnails(pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path)
 CARD_PIC_WIDTH = 640  # px; home cards are about 17-20rem wide, so this stays sharp on phones
 
 
-def flat_rgb(image, width: int):
+def flat_rgb(image, width: int, height: int):
     """A picture ready to save small: turned the right way up, see-through parts laid on the site's dark
-    background, and shrunk to at most width pixels wide (never made bigger)."""
+    background, and shrunk to fit width x height (never made bigger)."""
     from PIL import Image, ImageOps  # only the build needs it
-    image.draft("RGB", (width, width * 4))
+    image.draft("RGB", (width, height))
     image = ImageOps.exif_transpose(image)
     if image.mode in ("RGBA", "LA", "P"):
         image = image.convert("RGBA")
@@ -403,7 +403,7 @@ def flat_rgb(image, width: int):
         flat.paste(image, mask=image.getchannel("A"))
         image = flat
     image = image.convert("RGB")
-    image.thumbnail((width, width * 4))
+    image.thumbnail((width, height))
     return image
 
 
@@ -418,19 +418,20 @@ def make_card_pictures(posts: list[Post], static_dir: Path, out_dir: Path) -> No
         rel = f"images/cards/post-{post.slug}.webp"
         (out_dir / rel).parent.mkdir(parents=True, exist_ok=True)
         with Image.open(picture[0]) as image:
-            flat_rgb(image, CARD_PIC_WIDTH).save(out_dir / rel, "WEBP", quality=78)
+            flat_rgb(image, CARD_PIC_WIDTH, CARD_PIC_WIDTH * 2).save(out_dir / rel, "WEBP", quality=78)
         post.card_pic = rel
 
 
-def small_copy(source: Path, out_dir: Path, width: int) -> str:
+def small_copy(source: Path, out_dir: Path, width: int, name: str = "") -> str:
     """A small WebP copy of a site picture, at most width pixels wide, for pages full of pictures
     (Chris, 2026-11-04: Start here loaded 1.5 MB of full-size pictures). Wiki articles and session
-    logs keep the full-size picture. Returns its path under the site (images/small/<name>-<width>.webp)."""
+    logs keep the full-size picture. Returns its path under the site (images/small/<name>-<width>.webp);
+    name defaults to the file's stem, and two pictures need different names."""
     from PIL import Image  # only the build needs it
-    rel = f"images/small/{source.stem}-{width}.webp"
+    rel = f"images/small/{name or source.stem}-{width}.webp"
     (out_dir / rel).parent.mkdir(parents=True, exist_ok=True)
     with Image.open(source) as image:
-        flat_rgb(image, width).save(out_dir / rel, "WEBP", quality=78)
+        flat_rgb(image, width, width * 4).save(out_dir / rel, "WEBP", quality=78)
     return rel
 
 
@@ -441,13 +442,15 @@ HERO_WIDTH = 1100  # px; the castle at the top of Start here, as wide as its ori
 
 def make_start_pictures(page: start.StartPage | None, static_dir: Path, out_dir: Path) -> None:
     """Small copies of the Start here pictures: party portraits, chapter pictures and the castle.
-    page.small maps each picture (images/...) to its copies, smallest first."""
+    page.small maps each picture (images/...) to its copies, smallest first. A copy's name keeps the
+    picture's folder and type (images/full/a.png -> full-a-png), so two pictures never share one."""
     if page is None:
         return
     def copies(rel: str, widths) -> None:
         source = static_dir / rel
         if rel not in page.small and source.is_file():
-            page.small[rel] = [(small_copy(source, out_dir, w), w) for w in widths]
+            name = rel.removeprefix("images/").replace("/", "-").replace(".", "-")
+            page.small[rel] = [(small_copy(source, out_dir, w, name), w) for w in widths]
     for member in page.party:
         if member.pictures:
             copies(member.pictures[0].lstrip("/"), (PORTRAIT_WIDTH,))
