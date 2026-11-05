@@ -460,10 +460,11 @@ def make_start_pictures(page: start.StartPage | None, static_dir: Path, out_dir:
         copies(page.hero, (HERO_WIDTH,))
 
 
-def picture_card(stem: str, picture, title: str, out_dir: Path, site: dict) -> dict:
-    """The card for a page's picture: made on the site from a local file, or the outside address as is."""
+def picture_card(stem: str, picture, title: str, out_dir: Path) -> dict:
+    """The card for a page's picture: made on the site from a local file, or the outside address as is.
+    A page with no picture of its own shares as text only (Chris, 2026-11-05), not the site's castle card."""
     if picture is None:
-        return site
+        return {"no_picture": True}
     source, alt = picture
     if isinstance(source, str):
         return {"image_url": source, "alt": share.alt_text(alt, title)}
@@ -472,7 +473,8 @@ def picture_card(stem: str, picture, title: str, out_dir: Path, site: dict) -> d
 
 def share_cards(posts: list[Post], pages: list[wiki.WikiPage], static_dir: Path, out_dir: Path) -> dict:
     """Link-preview details for each post and wiki page, by path: title, snippet, card picture (made
-    from the page's first picture, else the site's card) and its alt text. Key None is the site's card."""
+    from the page's first picture; none when it has no picture) and its alt text. Key None is the site's
+    card, which list pages such as the home page share."""
     default = next(p for p in (static_dir / share.DEFAULT_PICTURE, ROOT / "static" / share.DEFAULT_PICTURE)
                    if p.is_file())
     site = {"image": share.card("site", default, out_dir), "alt": share.DEFAULT_ALT}
@@ -482,13 +484,13 @@ def share_cards(posts: list[Post], pages: list[wiki.WikiPage], static_dir: Path,
         cards[post.path] = {
             "path": post.path, "title": post.title, "type": "article", "published": post.date.isoformat(),
             "description": share.post_snippet(post.tagline, post.html) or post.title,
-            **picture_card(f"post-{post.slug}", picture, post.title, out_dir, site)}
+            **picture_card(f"post-{post.slug}", picture, post.title, out_dir)}
     for page in pages:
         picture = share.first_picture(page.body_md, static_dir)
         cards[page.path] = {
             "path": page.path, "title": page.title,
             "description": share.wiki_snippet(page.summary, page.html) or page.title,
-            **picture_card(f"wiki-{page.slug}", picture, page.title, out_dir, site)}
+            **picture_card(f"wiki-{page.slug}", picture, page.title, out_dir)}
     return cards
 
 

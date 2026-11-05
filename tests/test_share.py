@@ -1,5 +1,6 @@
 """Link previews: Open Graph and Twitter card tags, with a snippet and a 1200x630 picture per page."""
 import html as htmllib
+import json
 import re
 from pathlib import Path
 
@@ -196,13 +197,28 @@ def test_post_shares_its_title_snippet_feature_picture_and_date(site):
         assert card.size == (1200, 630)
     page = (site / "posts" / "first" / "index.html").read_text(encoding="utf-8")
     assert f'<link rel="canonical" href="{SITE}/posts/first/">' in page
+    data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page, re.S).group(1))
+    assert data["image"] == tags["og:image"]
 
 
-def test_post_tagline_is_its_snippet_and_a_post_without_a_picture_uses_the_site_card(site):
-    tags = meta((site / "posts" / "second" / "index.html").read_text(encoding="utf-8"))
+NO_PICTURE_TAGS = ("og:image", "og:image:type", "og:image:width", "og:image:height", "og:image:alt",
+                   "twitter:image", "twitter:image:alt")
+
+
+def assert_text_only(tags: dict[str, str]) -> None:
+    """A page with no picture of its own shares as text (Chris, 2026-11-05): no picture tags, so no
+    castle card that reads as if the page were about Castle Ravenloft, and the small text card."""
+    assert [t for t in NO_PICTURE_TAGS if t in tags] == []
+    assert tags["twitter:card"] == "summary"
+
+
+def test_post_tagline_is_its_snippet_and_a_post_without_a_picture_shares_text_only(site):
+    page = (site / "posts" / "second" / "index.html").read_text(encoding="utf-8")
+    tags = meta(page)
     assert tags["og:description"] == "Wolves love them. Nothing drawn."
-    assert "/images/share/site-" in tags["og:image"] and tags["og:image:alt"] == share.DEFAULT_ALT
-    assert local(site, tags["og:image"], SITE).is_file()
+    assert_text_only(tags)
+    data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page, re.S).group(1))
+    assert data["@type"] == "BlogPosting" and "image" not in data
 
 
 def test_wiki_page_shares_summary_paragraph_and_first_picture(site):
@@ -212,7 +228,8 @@ def test_wiki_page_shares_summary_paragraph_and_first_picture(site):
     assert "/images/share/wiki-ireena-" in tags["og:image"] and tags["og:image:alt"] == "Ireena, red-haired"
     assert local(site, tags["og:image"], SITE).is_file()
     grom = meta((site / "wiki" / "grom" / "index.html").read_text(encoding="utf-8"))
-    assert grom["og:description"] == "No art yet." and "/images/share/site-" in grom["og:image"]
+    assert grom["og:description"] == "No art yet."
+    assert_text_only(grom)
 
 
 def test_post_whose_picture_lives_elsewhere_shares_that_address(site):
@@ -255,6 +272,10 @@ def test_every_real_post_and_wiki_page_has_a_good_preview(real_site):
         if re.search(r"[<>\[\]*]|\]\(|\(\s*\)|^- | - \w+:|^Note:|[:;,]$", text):
             problems.append(f"{name}: markup left in snippet: {text!r}")
         image = tags.get("og:image", "")
+        if not image:  # a page with no picture shares as text only
+            if [t for t in NO_PICTURE_TAGS if t in tags] or tags.get("twitter:card") != "summary":
+                problems.append(f"{name}: no picture but picture tags left: {tags}")
+            continue
         if image.startswith("https://publish-01.obsidian.md/"):  # two 2024 posts show the old blog's art
             pass
         elif not image.startswith("https://owlbear.dicelore.quest/images/share/") or not local(
@@ -266,8 +287,10 @@ def test_every_real_post_and_wiki_page_has_a_good_preview(real_site):
 
 
 def test_every_real_post_shares_its_own_feature_picture(real_site):
-    generic = [p.parent.name for p in real_pages(real_site) if p.parent.parent.name == "posts"
-               if "/images/share/site-" in meta(p.read_text(encoding="utf-8"))["og:image"]]
+    def own_picture(page: Path) -> bool:
+        image = meta(page.read_text(encoding="utf-8")).get("og:image", "")  # none: shared as text only
+        return bool(image) and "/images/share/site-" not in image
+    generic = [p.parent.name for p in real_pages(real_site) if p.parent.parent.name == "posts" if not own_picture(p)]
     assert not generic, generic
 
 

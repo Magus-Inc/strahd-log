@@ -429,7 +429,7 @@ def test_robots_txt_points_search_engines_at_the_sitemap(content, tmp_path):
 
 
 def test_posts_describe_themselves_to_search_engines(content, tmp_path):
-    """Each post carries schema.org BlogPosting data (headline, date, picture, address) so Google can
+    """Each post carries schema.org BlogPosting data (headline, date, address, and its picture when it has one) so Google can
     show it as an article; the home page names the site."""
     import json
     out = tmp_path / "public"
@@ -440,7 +440,7 @@ def test_posts_describe_themselves_to_search_engines(content, tmp_path):
     assert data["@context"] == "https://schema.org" and data["@type"] == "BlogPosting"
     assert data["mainEntityOfPage"] == data["url"] == "https://log.example/posts/third/"
     assert data["headline"] and data["datePublished"].startswith("2026-09-01")
-    assert data["image"].startswith("https://log.example/") and data["description"]
+    assert data["description"] and "image" not in data  # no picture in this post: no image (test_share.py)
     assert data["publisher"]["name"] == build.SITE_TITLE
     home = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',
                                 (out / "index.html").read_text(encoding="utf-8"), re.S).group(1))
