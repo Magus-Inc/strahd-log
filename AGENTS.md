@@ -129,3 +129,7 @@
   page with a grid of pictures goes in `GRID_PAGES` in `tests/test_picture_weight.py` and gets small
   copies the same way; that test fails when a grid page loads a full-size picture or one over 100 KB,
   or when any other page that is not an article shows more than 6 pictures.
+- Section links (Chris, 2026-11-04): every h2 and h3 in a page's `<main>` gets a link icon to its own
+  section (`headings.py`, run by `build.write` on every page), pointing at the `<section>` it labels
+  when there is one (/start/#story). Tapping it copies the address. Don't hand-add heading links.
+  `tests/test_heading_links.py` checks it.

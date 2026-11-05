@@ -105,6 +105,20 @@
 {% include "_search_panel.html" %}
 {% block scripts %}{% endblock %}
   <script>
+    // Section links (Chris, 2026-11-04): tapping the link icon by a heading jumps there as usual and
+    // also copies the section's address, so it can be pasted into Discord. No script, no copy: the
+    // address bar still shows it.
+    document.querySelectorAll("a.heading-link").forEach(function (a) {
+      a.addEventListener("click", function () {
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(a.href).then(function () {
+          a.setAttribute("data-copied", "");
+          setTimeout(function () { a.removeAttribute("data-copied"); }, 1800);
+        }, function () {});
+      });
+    });
+  </script>
+  <script>
     // Votes: slide decks and pairs of AI pictures. Each vote is a GoatCounter event (no cookies, no login),
     // counted under /vote/<page>/<choice> on the dashboard. The browser remembers its own vote so the
     // buttons stay thanked on a return visit.

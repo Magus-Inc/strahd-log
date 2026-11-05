@@ -124,7 +124,7 @@ def test_every_story_has_its_parent_heading_and_long_ones_their_scenes(site):
     problems = []
     for slug, _ in posts:
         page = (out / "posts" / slug / "index.html").read_text(encoding="utf-8")
-        if page.count(">Malron’s Account</h2>") != 1:
+        if page.count(">Malron’s Account<a class=\"heading-link\"") != 1:
             problems.append(f"{slug}: no Malron’s Account heading")
     assert problems == []
     beacon = (out / "posts" / "the-beacon-of-argynvostholt" / "index.html").read_text(encoding="utf-8")
