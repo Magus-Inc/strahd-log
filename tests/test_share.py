@@ -287,9 +287,10 @@ def test_every_real_post_and_wiki_page_has_a_good_preview(real_site):
 
 
 def test_every_real_post_shares_its_own_feature_picture(real_site):
-    generic = [p.parent.name for p in real_pages(real_site) if p.parent.parent.name == "posts"
-               if meta(p.read_text(encoding="utf-8")).get("og:image", "/images/share/site-")
-               .count("/images/share/site-")]
+    def own_picture(page: Path) -> bool:
+        image = meta(page.read_text(encoding="utf-8")).get("og:image", "")  # none: shared as text only
+        return bool(image) and "/images/share/site-" not in image
+    generic = [p.parent.name for p in real_pages(real_site) if p.parent.parent.name == "posts" if not own_picture(p)]
     assert not generic, generic
 
 
