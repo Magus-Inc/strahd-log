@@ -363,8 +363,10 @@ def test_google_analytics_only_when_configured(content, tmp_path, monkeypatch):
     for page in ("index.html", "posts/first/index.html", "wiki/index.html", "404.html"):
         html = (tmp_path / "both" / page).read_text(encoding="utf-8")
         head = html.split("</head>")[0]
-        assert '<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST123AB"></script>' in head, page
+        # The tag loads only after the bot and ?notrack check (tests/test_no_count.py, Chris 2026-11-08).
+        assert 's.src = "https://www.googletagmanager.com/gtag/js?id=G-TEST123AB";' in head, page
         assert 'gtag("config", "G-TEST123AB")' in head, page
+        assert head.index("window.dontCount =") < head.index("googletagmanager"), page
         assert "https://owlbear.goatcounter.com/count?p=" in html, page  # GoatCounter stays as it was
 
 
