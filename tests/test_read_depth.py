@@ -240,9 +240,9 @@ ACCOUNT = [{"comment": "story"}, {"box": [0, 900]}, {"box": [900, 1500]}, {"box"
            {"comment": "story-end"}, {"box": [1550, 2200]}]
 
 
-def fake_read(steps, nodes=ACCOUNT, map_box=(2400, 2900), prose=(0, 2200), script=None) -> list[list[str]]:
+def fake_read(steps, nodes=ACCOUNT, map_box=(2400, 2900), prose=(0, 2200), script=None, gtag=True) -> list[list[str]]:
     page = {"minutes": 1, "prose": list(prose), "nodes": nodes, "map": list(map_box) if map_box else None,
-            "steps": steps}
+            "steps": steps, "gtag": gtag}
     done = subprocess.run([NODE, "-e", FAKE_PAGE, script or reading_js(), json.dumps(page)], capture_output=True,
                           text=True, encoding="utf-8", timeout=60)
     assert done.returncode == 0, done.stderr

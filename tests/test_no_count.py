@@ -98,7 +98,8 @@ def test_blocked_storage_does_not_break_the_page_or_stop_counting():
 def test_every_counter_checks_dont_count():
     base = (build.ROOT / "templates" / "base.html").read_text(encoding="utf-8")
     reading = (build.ROOT / "templates" / "_read_depth.js").read_text(encoding="utf-8")
-    assert base.count("if (!window.dontCount)") == 2  # GA's loader and the vote event
+    assert "if (!window.dontCount)" in base.split("<head>")[1].split("googletagmanager")[0]  # GA's loader
+    assert "if (!window.dontCount) new Image()" in base.split("// Votes:")[1].split("</script>")[0]
     assert "if (window.dontCount) return;" in base.split("// Page-view count")[1]
     assert "if (!window.dontCount)" in reading
     head = base.split("</head>")[0]
@@ -110,9 +111,9 @@ def test_every_counter_checks_dont_count():
 @needs_node
 def test_read_events_go_nowhere_when_not_counting():
     script = reading_js(ga="G-TEST123AB")
-    got = fake_read([{"scroll": 1500, "wait": 40}], script="window.dontCount = true;\n" + script)
-    # GA's gtag is never defined when not counting, so only GoatCounter's pixel needs the check.
-    assert not [e for e in got[0] if not e.startswith("ga:")]
+    # GA's gtag is never defined when not counting (gtag False), so nothing at all is sent.
+    got = fake_read([{"scroll": 1500, "wait": 40}], script="window.dontCount = true;\n" + script, gtag=False)
+    assert got == [[]]
 
 
 # The whole page in Chromium, built with both counters on.
@@ -136,7 +137,9 @@ const {chromium} = require("playwright");
     await page.goto(root + step.path);
     await page.waitForLoadState("load");
     await page.waitForTimeout(300);
-    out.push({sent: [...new Set(sent.splice(0))].sort(), dontCount: await page.evaluate(() => window.dontCount)});
+    // gtag.js reads its queue only as Arguments objects; arrays would be ignored.
+    const queue = await page.evaluate(() => (window.dataLayer || []).map(e => [Object.prototype.toString.call(e), e[0]]));
+    out.push({sent: [...new Set(sent.splice(0))].sort(), dontCount: await page.evaluate(() => window.dontCount), queue});
   }
   await browser.close();
   process.stdout.write(JSON.stringify(out));
@@ -174,7 +177,7 @@ def run_pages(root, steps):
 @needs_browser
 def test_a_headless_scanner_loads_no_analytics(counted):
     got = run_pages(counted, [{"path": "/posts/first/"}])  # Playwright's Chromium reports webdriver
-    assert got == [{"sent": [], "dontCount": True}]
+    assert got == [{"sent": [], "dontCount": True, "queue": []}]
 
 
 @needs_browser
@@ -182,7 +185,8 @@ def test_a_reader_counts_and_notrack_turns_it_off_and_on(counted):
     got = run_pages(counted, [{"path": "/posts/first/", "human": True}, {"path": "/?notrack=1"},
                               {"path": "/posts/first/"}, {"path": "/?notrack=0"}, {"path": "/posts/first/"}])
     assert got[0]["sent"] == ["goatcounter", "gtag.js"] and got[0]["dontCount"] is False
-    assert got[1] == {"sent": [], "dontCount": True}
-    assert got[2] == {"sent": [], "dontCount": True}  # remembered on a later page
+    assert got[0]["queue"][:2] == [["[object Arguments]", "js"], ["[object Arguments]", "config"]]
+    assert got[1] == {"sent": [], "dontCount": True, "queue": []}
+    assert got[2] == {"sent": [], "dontCount": True, "queue": []}  # remembered on a later page
     assert got[3]["sent"] == ["goatcounter", "gtag.js"]
     assert got[4]["sent"] == ["goatcounter", "gtag.js"]
