@@ -16,7 +16,10 @@
   readers' browsers talk only to the blog, GoatCounter and Google Analytics. The one outside script
   is Google Analytics 4's own tag (`googletagmanager.com/gtag/js`, Chris asked for it beside
   GoatCounter, 2026-11-04), turned on only by `GOOGLE_ANALYTICS` in the publish workflow; it sets
-  Google's cookies, and every count still goes to GoatCounter too. Reach for a library when our own code
+  Google's cookies, and every count still goes to GoatCounter too. Neither counts a browser that reports
+  `navigator.webdriver` (scanners, test tools) or one opened once with `?notrack=1` (Chris's own; `?notrack=0`
+  undoes it): `templates/_no_count.js` sets `window.dontCount` and every counter checks it (Chris, 2026-11-08,
+  `tests/test_no_count.py`). Reach for a library when our own code
   would pass about 150 lines or the problem is a known hard one; small helpers stay hand-written,
   and working code is left alone. Each library: a permissive license (MIT, BSD, ISC, Apache-2.0; OFL
   for fonts) with its text beside the file, at most 30 KB zipped (60 KB for all libraries on one

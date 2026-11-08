@@ -28,7 +28,7 @@
       if (sent[step]) return;
       sent[step] = true;
 {% if counter %}
-      new Image().src = "https://{{ counter }}.goatcounter.com/count?e=true&p=" +
+      if (!window.dontCount) new Image().src = "https://{{ counter }}.goatcounter.com/count?e=true&p=" +
         encodeURIComponent("/read" + path + step) + "&t=" + encodeURIComponent("Read " + step + ": " + document.title) +
         "&rnd=" + Math.random().toString(36).slice(2);
 {% endif %}
