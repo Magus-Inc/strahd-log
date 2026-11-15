@@ -826,9 +826,11 @@ def write_map(site: Site, env: Environment, out_dir: Path) -> None:
 
 
 def sitemap_paths(site: Site) -> list[str]:
-    """Every page worth finding in a search engine, relative to the site root: the home page, posts
-    (newest first), the wiki and its pages, the map and tags pages. Not search, 404 or forwarding pages."""
-    paths = [""] + [p.path for p in site.posts] + ["wiki/"] + [w.path for w in site.pages]
+    """Every page worth finding in a search engine, relative to the site root: the home page, Start
+    here, posts (newest first), the wiki and its pages, the map and tags pages. Not search, 404 or
+    forwarding pages."""
+    paths = [""] + (["start/"] if site.start else []) + [p.path for p in site.posts] + ["wiki/"]
+    paths += [w.path for w in site.pages]
     if site.places:
         paths.append("map/")
     if tag_index(site.posts):
