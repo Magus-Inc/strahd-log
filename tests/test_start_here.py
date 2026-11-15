@@ -346,3 +346,9 @@ def test_a_party_portrait_is_small_but_sharp_on_a_phone(real_build, start_html):
 def test_wiki_articles_keep_the_full_size_portrait(real_build):
     html = (real_build.out / "wiki" / "malron-lichtstrahl" / "index.html").read_text(encoding="utf-8")
     assert 'src="/images/malron-ai-portrait.jpg"' in html
+
+
+def test_sitemap_lists_the_start_here_page(real_build):
+    """Chris, 2026-11-15 ("we need a sitemap"): the live sitemap left out Start here."""
+    sitemap = (real_build.out / "sitemap.xml").read_text(encoding="utf-8")
+    assert "<loc>https://owlbear.dicelore.quest/start/</loc>" in sitemap

@@ -923,3 +923,20 @@ def test_a_tall_feature_picture_card_stays_at_most_twice_as_tall_as_wide(tmp_pat
     from PIL import Image
     with Image.new("RGB", (1000, 5000), "red") as image:
         assert build.flat_rgb(image, build.CARD_PIC_WIDTH, build.CARD_PIC_WIDTH * 2).size == (256, 1280)
+
+
+def test_sitemap_lists_every_real_page(real_build):
+    """Every page the real build writes is in sitemap.xml, so a new kind of page can't be left out
+    again (Start here was, until 2026-11-15). Only search, 404 and forwarding pages stay out."""
+    import re
+    sitemap = (real_build.out / "sitemap.xml").read_text(encoding="utf-8")
+    listed = set(re.findall(r"<loc>(.*?)</loc>", sitemap))
+    pages = set()
+    for page in real_build.out.rglob("index.html"):
+        if 'http-equiv="refresh"' in page.read_text(encoding="utf-8"):
+            continue  # a forwarding page from an old address
+        path = page.parent.relative_to(real_build.out).as_posix()
+        pages.add(real_build.site_url + "/" + ("" if path == "." else path + "/"))
+    pages.discard(real_build.site_url + "/search/")
+    assert sorted(pages - listed) == []
+    assert sorted(listed - pages) == []
